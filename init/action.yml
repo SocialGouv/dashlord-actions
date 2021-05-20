@@ -1,0 +1,20 @@
+name: "DashLord init action"
+description: "Parse dashlord config files"
+inputs:
+  url:
+    description: "Single url to scan or scan all urls"
+    required: false
+    default: ""
+outputs:
+  urls:
+    description: List of urls to scan as plain text
+    value: ${{ steps.init.outputs.urls }}
+  urls_json:
+    description: List of urls to scan as json
+    value: ${{ steps.init.outputs.urls_json }}
+  json:
+    description: Full dashlord.yaml config
+    value: ${{ steps.init.outputs.json }}
+runs:
+  using: "node12"
+  main: "dist/index.js"

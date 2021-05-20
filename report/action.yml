@@ -1,0 +1,38 @@
+name: "DashLord report Action"
+description: "Generate a dashlord report"
+
+inputs:
+  public-url:
+    description: "PUBLIC_URL for the build. see https://create-react-app.dev/docs/using-the-public-folder/#adding-assets-outside-of-the-module-system"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Build
+      id: build
+      shell: bash
+      env:
+        SKIP_PREFLIGHT_CHECK: "true"
+      run: |
+        export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
+        export DASHLORD_REPO_PATH=${{ github.workspace }};
+        export PUBLIC_URL=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
+
+        echo "REPOSITORY_NAME: $REPOSITORY_NAME"
+        echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
+        echo "PUBLIC_URL: $PUBLIC_URL"
+
+        cd ${{ github.action_path }}
+        yarn
+        # this create a report.json to build the website
+        node src > www/src/report.json
+        cd www
+        yarn
+        CI=false yarn build
+        # prevent gh-pages jekyll build
+        touch build/.nojekyll
+        # save report in workspace for artifact
+        cp src/report.json ${{ github.workspace }}/report.json
+        # save the build for gh-pages publication
+        mv build ${{ github.workspace }}/build

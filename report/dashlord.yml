@@ -1,0 +1,7 @@
+title: Dashboard title
+urls:
+  - url: https://www.free.fr
+    title: Homepage free.fr
+    tags:
+      - telecom
+      - provider

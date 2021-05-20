@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should parse dashlord config when multiple urls input 1`] = `
+Array [
+  Object {
+    "repositories": Array [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "title": "Free",
+    "url": "https://www.free.fr",
+  },
+  Object {
+    "repositories": Array [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "url": "http://chez.com",
+  },
+]
+`;
+
+exports[`should parse dashlord config when no input 1`] = `
+Array [
+  Object {
+    "repositories": Array [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "title": "Free",
+    "url": "https://www.free.fr",
+  },
+  Object {
+    "repositories": Array [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "url": "http://chez.com",
+  },
+  Object {
+    "url": "https://voila.fr",
+  },
+]
+`;
+
+exports[`should parse dashlord config when single invalid url input 1`] = `Array []`;
+
+exports[`should parse dashlord config when single valid url input 1`] = `
+Array [
+  Object {
+    "repositories": Array [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "title": "Free",
+    "url": "https://www.free.fr",
+  },
+]
+`;

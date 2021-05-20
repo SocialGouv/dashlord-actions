@@ -1,0 +1,89 @@
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Single url to scan or scan all urls"
+        required: false
+        default: ""
+
+name: Test init matrix
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    name: Prepare full scan
+    outputs:
+      urls: ${{ steps.init.outputs.urls }}
+      urls_json: ${{ steps.init.outputs.urls_json }}
+      json: ${{ steps.init.outputs.json }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cd init
+      - id: init
+        uses: "./init"
+      - id: test
+        run: |
+          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api]},{url:http://chez.com,repositories:[chez/chez-ui,chez/chez-api]},{url:https://voila.fr}]'
+          RESULT="${{ steps.init.outputs.urls_json }}"
+          [[ "$EXPECTED" == "$RESULT" ]]
+
+  scans:
+    runs-on: ubuntu-latest
+    name: Scan
+    needs: test1
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        urls: ${{ fromJson(needs.test1.outputs.urls_json) }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          echo "${{ matrix.urls.url }}"
+          echo "${{ join(matrix.urls.repositories) }}"
+  test2:
+    runs-on: ubuntu-latest
+    name: Prepare scan with url input
+    outputs:
+      urls: ${{ steps.init.outputs.urls }}
+      urls_json: ${{ steps.init.outputs.urls_json }}
+      json: ${{ steps.init.outputs.json }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cd init
+      - id: init
+        uses: "./"
+        with:
+          # fake manual url input
+          url: "https://www.free.fr,https://voila.fr"
+      - id: test
+        run: |
+          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api]},{url:https://voila.fr}]'
+          RESULT="${{ steps.init.outputs.urls_json }}"
+          [[ "$EXPECTED" == "$RESULT" ]]
+
+  scans2:
+    runs-on: ubuntu-latest
+    name: Scan
+    needs: test2
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        urls: ${{ fromJson(needs.test2.outputs.urls_json) }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          echo "${{ matrix.urls.url }}"
+          echo "${{ join(matrix.urls.repositories) }}"
+      - if: ${{ matrix.urls.repositories }}
+        run: |
+          echo "for ${{ matrix.urls.url }}"
+          echo "if ${{ join(matrix.urls.repositories) }}"

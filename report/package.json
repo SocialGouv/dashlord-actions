@@ -1,0 +1,32 @@
+{
+  "name": "dashlord-report-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "Apache-2.0",
+  "types": "index.d.ts",
+  "dependencies": {
+    "lodash.omit": "^4.5.0",
+    "lodash.pick": "^4.4.0",
+    "yaml": "^1.10.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": ["<rootDir>/www"]
+  },
+  "devDependencies": {
+    "@socialgouv/eslint-config-strict": "^1.0.0-beta.5",
+    "@types/jest": "^26.0.22",
+    "@types/lodash.omit": "^4.5.6",
+    "@types/lodash.pick": "^4.4.6",
+    "@types/node": "^14.14.37",
+    "@types/node-fetch": "^2.5.10",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  }
+}

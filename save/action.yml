@@ -1,0 +1,75 @@
+name: "DashLord save action"
+description: "Save dashlord results"
+
+inputs:
+  url:
+    description: URL to save data for
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        URL=${{ inputs.url }}
+        HOSTNAME=$(echo "${{ inputs.url }}" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
+        DASHLORD_REPO_PATH=${{ github.workspace }};
+        # store results in a folder with then base64 encoded url
+        URL_BASE64=$(printf "%s" "$URL" | base64 -w 500) # default is wrap at 76
+        NOW=$(date +"%Y%m%d_%H%M%S")
+        OUT_PATH="./results/${URL_BASE64}/${NOW}"
+
+        echo "URL: $URL"
+        echo "URL base 64: $URL_BASE64"
+        echo "HOSTNAME: $HOSTNAME"
+        echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
+        echo "NOW: $NOW"
+        echo "OUT_PATH: $OUT_PATH"
+
+        cd $DASHLORD_REPO_PATH
+
+        mkdir -p $OUT_PATH || true
+
+        ls -la scans
+
+        ###### filter and jsonify nuclei logs ######
+        if [[ -e "scans/nuclei.log" ]]
+        then
+          cat scans/nuclei.log | jq -s > scans/nuclei.json || true
+          rm scans/nuclei.log || true
+        fi
+
+        ###### rename testssl.sh reports ######
+        # html, json, csv
+        for TESTSSL_PATH in ./scans/${HOSTNAME}_p*; do
+          EXTENSION=$(echo "$TESTSSL_PATH" | sed 's/^.*\.//')
+          mv $TESTSSL_PATH ./scans/testssl.${EXTENSION} || true
+        done
+
+        ###### archive results in repo folder ######
+        mv scans/* $OUT_PATH/ || true
+
+        mv report_json.json $OUT_PATH/zap.json || true
+        mv report_md.md $OUT_PATH/zap.md || true
+        mv report_html.html $OUT_PATH/zap.html || true
+
+        ###### put screenshot if any ######
+        mv $RUNNER_TEMP/screenshot.png $OUT_PATH/screenshot.png || true
+
+        ###### copy LHR reports ######
+
+        # todo: summarize multiple LHR runs
+        # if multiple scans detected we dont want to duplicate the whole data, do we ?
+
+        # https://stackoverflow.com/a/29438087/174027
+        shopt -s nullglob
+
+        if [[ -e "./.lighthouseci" ]]
+        then
+            for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
+                LHR_TIMESTAMP=$(basename $LHR_JSON_PATH | sed -e "s/lhr-\([0-9]*\)\.json/\1/")
+                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.json $OUT_PATH/lhr.json
+                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr.html
+            done
+        fi
+      

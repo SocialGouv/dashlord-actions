@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render empty Dashboard 1`] = `
+<div
+  style={
+    Object {
+      "height": "calc(100vh - 30px)",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "overflow": "visible",
+        "width": 0,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Should render full Dashboard 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "height": "calc(100vh - 30px)",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    />
+  </div>,
+  " ",
+]
+`;
+
+exports[`Tools config Should render Dashboard with limited tools 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "height": "calc(100vh - 30px)",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    />
+  </div>,
+  " ",
+]
+`;
