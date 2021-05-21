@@ -1,6 +1,13 @@
-title: DashLord example
+title: Test 1
 urls:
-  - url: https://www.fabrique.social.gouv.fr
+  - url: https://www.free.fr
+    title: Free
     repositories:
-      - socialgouv/socialgouv.github.io
-  - url: https://beta.gouv.fr/
+      - iliad/free-ui
+      - iliad/free-api
+  - url: invalid-url
+  - url: http://chez.com
+    repositories:
+      - chez/chez-ui
+      - chez/chez-api
+  - url: https://voila.fr
