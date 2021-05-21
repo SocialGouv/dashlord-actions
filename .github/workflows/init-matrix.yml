@@ -58,7 +58,7 @@ jobs:
       - run: |
           cd init
       - id: init
-        uses: "./"
+        uses: "./init"
         with:
           # fake manual url input
           url: "https://www.free.fr,https://voila.fr"
