@@ -18,6 +18,6 @@ jobs:
           yarn test
       - shell: bash
         run: |
-          cd www
+          cd report/www
           yarn
           SKIP_PREFLIGHT_CHECK=true yarn test
