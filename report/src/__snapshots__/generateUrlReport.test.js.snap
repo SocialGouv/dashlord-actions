@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateUrlReport should generate latest report for a valid url 1`] = `
+Object {
+  "codescan": Object {
+    "data": "codescanalerts.json",
+  },
+  "dependabot": Object {
+    "data": "dependabotalerts.json",
+  },
+  "http": Object {
+    "data": "http.json",
+  },
+  "lhr": Object {
+    "audits": Object {},
+    "categories": Object {},
+    "fetchTime": undefined,
+    "finalUrl": undefined,
+    "requestedUrl": undefined,
+    "runWarnings": undefined,
+  },
+  "nmap": Object {
+    "data": "nmapvuln.json",
+  },
+  "nuclei": Array [],
+  "screenshot": false,
+  "testssl": Object {
+    "data": "testssl.json",
+  },
+  "thirdparties": Object {
+    "data": "thirdparties.json",
+  },
+  "updownio": Object {
+    "data": "updownio.json",
+  },
+  "url": "https://www.test.com",
+  "wappalyzer": Object {
+    "data": "wappalyzer.json",
+  },
+  "zap": Object {
+    "data": "zap.json",
+    "site": undefined,
+  },
+}
+`;
+
+exports[`generateUrlReport should skip scans if some not found 1`] = `
+Object {
+  "codescan": Object {
+    "data": "codescanalerts.json",
+  },
+  "dependabot": null,
+  "http": null,
+  "lhr": null,
+  "nmap": null,
+  "nuclei": null,
+  "screenshot": false,
+  "testssl": null,
+  "thirdparties": null,
+  "updownio": null,
+  "url": "https://www.test.com",
+  "wappalyzer": Object {
+    "data": "wappalyzer.json",
+  },
+  "zap": null,
+}
+`;
