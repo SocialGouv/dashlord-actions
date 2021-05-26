@@ -1,3 +1,5 @@
+/// <reference path="./grades.d.ts" />
+
 type UrlConfig = {
   url: string;
   category?: string;
