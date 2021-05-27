@@ -5,6 +5,7 @@ const omit = require("lodash.omit");
 const YAML = require("yaml");
 
 const { readFile, writeFile } = require("./utils");
+const { computeScores } = require("./scores");
 
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
 
@@ -133,7 +134,7 @@ const tools = {
   nuclei: { data: requireToolData("nuclei.json"), cleanup: nucleiCleanup },
   lhr: { data: requireToolData("lhr.json"), cleanup: lhrCleanup },
   screenshot: {
-    //@ts-expect-error
+    /** @param {string} basePath scan directory */
     data: (basePath) => fs.existsSync(path.join(basePath, "screenshot.jpeg")),
   },
 };
@@ -160,9 +161,11 @@ const generateUrlReport = (url) => {
       return null;
     }
     const latestFilesPath = path.join(urlPath, lastScan);
-    const urlData = {
-      ...url,
-      ...Object.keys(tools).reduce((keys, key) => {
+
+    // compile all tools data
+    /** @type {UrlReport} toolsData */
+    const toolsData = Object.keys(tools).reduce(
+      (keys, key) => {
         //@ts-expect-error
         const data = (tools[key].cleanup || noop)(
           //@ts-expect-error
@@ -173,7 +176,14 @@ const generateUrlReport = (url) => {
           ...keys,
           [key]: data,
         };
-      }, {}),
+      },
+      { url: url.url }
+    );
+
+    const urlData = {
+      ...url,
+      ...toolsData,
+      scores: computeScores(toolsData),
     };
 
     // copy lhr, zap and testssl.sh static reports
