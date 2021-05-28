@@ -5,7 +5,7 @@ const omit = require("lodash.omit");
 const YAML = require("yaml");
 
 const { readFile, writeFile } = require("./utils");
-const { computeScores } = require("./scores");
+const { computeSummary } = require("./summary");
 
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
 
@@ -20,7 +20,7 @@ const requireJson = (jsonPath) => {
   try {
     return require(jsonPath);
   } catch (e) {
-    console.error("e", e);
+    console.error(`error loading ${jsonPath}`);
     return null;
   }
 };
@@ -111,12 +111,6 @@ const lhrCleanup = (result) => {
   };
 };
 
-const cleanups = {
-  nuclei: nucleiCleanup,
-  zap: zapCleanup,
-  lhr: lhrCleanup,
-};
-
 //@ts-expect-error
 const requireToolData = (filename) => (basePath) =>
   requireJson(path.join(basePath, filename));
@@ -183,7 +177,7 @@ const generateUrlReport = (url) => {
     const urlData = {
       ...url,
       ...toolsData,
-      scores: computeScores(toolsData),
+      summary: computeSummary(toolsData),
     };
 
     // copy lhr, zap and testssl.sh static reports

@@ -25,7 +25,6 @@ const unMockJson = (name, data) => jest.unmock(`results/${b64}/9876/${name}`);
 describe("generateUrlReport", () => {
   beforeEach(() => {
     jest.resetAllMocks();
-    jest.resetModules();
   });
 
   test(`should return null on invalid url`, () => {
@@ -93,7 +92,7 @@ describe("generateUrlReport", () => {
     unMockJson("wappalyzer.json");
     
   });
-  
+
   test(`should detect screenshot if any`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => true); // screenshot
