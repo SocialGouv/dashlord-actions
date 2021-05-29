@@ -11,11 +11,12 @@ const tests = [
     report: {
       uptime: 1,
       metrics:{
-        apdex: 42
+        apdex: 1
       }
     },
     expected: {
-      apdex: 42,
+      apdex: 1,
+      apdexGrade: 'A',
       uptime: 1,
       uptimeGrade: "A"
     },
@@ -25,11 +26,12 @@ const tests = [
     report: {
       uptime: 0.9,
       metrics:{
-        apdex: 42
+        apdex: 0.8
       }
     },
     expected: {
-      apdex: 42,
+      apdex: 0.8,
+      apdexGrade: 'B',
       uptime: 0.9,
       uptimeGrade: "F"
     },

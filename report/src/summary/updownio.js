@@ -1,3 +1,6 @@
+const { scoreToGrade } = require("../utils");
+
+
 /** @param {number} uptime */
 const getGradeUpdownio = (uptime) => {
   return uptime > 0.99
@@ -12,6 +15,8 @@ const getGradeUpdownio = (uptime) => {
     ? "E"
     : "F";
 };
+
+
 /** @param {UpDownReport} report */
 const summary = (report) => {
   if (report) {
@@ -20,6 +25,7 @@ const summary = (report) => {
     if (uptime !== undefined) {
       return {
         apdex,
+        apdexGrade: apdex && scoreToGrade(apdex),
         uptime,
         uptimeGrade: getGradeUpdownio(uptime),
       };

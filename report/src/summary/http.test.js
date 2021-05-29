@@ -9,7 +9,7 @@ const tests = [
   {
     title: "sample report",
     report: { grade: "X" },
-    expected: { http: "X" },
+    expected: { httpGrade: "X" },
   },
 ];
 

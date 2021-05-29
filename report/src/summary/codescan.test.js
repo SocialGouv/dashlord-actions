@@ -9,7 +9,7 @@ const tests = [{
   report: [{
     alerts: []
   }],
-  expected: {"codescan": "A"}
+  expected: {"codescanGrade": "A", codescanCount: 0}
 },{
   title: "single medium alert",
   report: [{
@@ -19,7 +19,21 @@ const tests = [{
       }
     }]
   }],
-  expected: {"codescan": "B"}
+  expected: {"codescanGrade": "B", codescanCount: 1}
+},{
+  title: "multiple medium alert",
+  report: [{
+    alerts: [{
+      rule: {
+        severity: "medium"
+      }
+    },{
+      rule: {
+        severity: "medium"
+      }
+    }]
+  }],
+  expected: {"codescanGrade": "B", codescanCount: 2}
 },{
   title: "single error alert",
   report: [{
@@ -29,7 +43,7 @@ const tests = [{
       }
     }]
   }],
-  expected: {"codescan": "F"}
+  expected: {"codescanGrade": "F", codescanCount: 1}
 }]
 
 describe("codescan", () => {

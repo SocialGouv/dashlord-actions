@@ -68,4 +68,28 @@ const getUrls = () => {
   }
 };
 
-module.exports = { readFile, writeFile, toHostname, getUrls };
+
+/**
+ * @param {number} value
+ * @param {number} x1
+ * @param {number} y1
+ * @param {number} x2
+ * @param {number} y2
+ *
+ */
+const remap = (value, x1, y1, x2, y2) =>
+  ((value - x1) * (y2 - x2)) / (y1 - x1) + x2;
+
+/** @param {number} score */
+const scoreToGrade = (score) => {
+  const grades = "A,B,C,D,E,F".split(",");
+
+  const newGrade = Math.min(
+    grades.length - 1,
+    Math.floor(remap(1 - score, 0, 1, 0, 6))
+  );
+
+  return grades[newGrade];
+};
+
+module.exports = { readFile, writeFile, toHostname, getUrls, scoreToGrade };

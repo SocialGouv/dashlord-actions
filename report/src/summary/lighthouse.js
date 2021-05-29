@@ -1,3 +1,5 @@
+const {scoreToGrade} = require("../utils");
+
 // compute a performance score from 0 to 100 from lighthouse report
 /**
  * @param {LighthouseReport} report
@@ -36,6 +38,7 @@ const getPerformanceScore = (report) => {
   return score;
 };
 
+
 /** @param {LighthouseReport} report */
 const summary = (report) => {
   if (report && report.categories) {
@@ -44,14 +47,15 @@ const summary = (report) => {
       lhrCategories["performance"].score = getPerformanceScore(report);
     }
 
-    return Object.keys(lhrCategories).reduce(
-      (scores, key) => ({
+    return Object.keys(lhrCategories).reduce((scores, key) => {
+      //@ts-expect-error
+      const score = lhrCategories[key].score;
+      return {
         ...scores,
-        //@ts-expect-error
-        [`lighthouse_${key}`]: lhrCategories[key].score,
-      }),
-      {}
-    );
+        [`lighthouse_${key}`]: score,
+        [`lighthouse_${key}Grade`]: scoreToGrade(score),
+      };
+    }, {});
   }
 };
 

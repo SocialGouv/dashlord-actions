@@ -15,7 +15,7 @@ const tests = [
     title: "sample report",
     report: [{id:"overall_grade", finding:"X"}],
     expected: {
-      testssl: "X"
+      testsslGrade: "X"
     },
   }
 ];

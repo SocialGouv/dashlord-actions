@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 const fs = require("fs");
-const { toHostname, getUrls } = require("./utils");
+const { scoreToGrade, toHostname, getUrls } = require("./utils");
 
 jest.mock("fs");
 
@@ -86,5 +86,27 @@ url3
     fs.readFileSync.mockReturnValueOnce(sampleConfig);
 
     expect(getUrls()).toMatchSnapshot();
+  });
+});
+
+describe("scoreToGrade", () => {
+  const tests = [
+    {
+      score: 1,
+      expected: "A",
+    },
+    {
+      score: 0.5,
+      expected: "D",
+    },
+    {
+      score: 0,
+      expected: "F",
+    },
+  ];
+  tests.forEach((t) => {
+    test(`${t.score} should return ${t.expected}`, () => {
+      expect(scoreToGrade(t.score)).toEqual(t.expected);
+    });
   });
 });

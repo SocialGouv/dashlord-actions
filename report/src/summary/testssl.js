@@ -8,7 +8,7 @@ const summary = (report) => {
     const value = overallGrade && overallGrade.finding;
     if (value) {
       return {
-        testssl: value,
+        testsslGrade: value,
       };
     }
   }

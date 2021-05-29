@@ -11,15 +11,15 @@ const codescanSummary = require("./codescan");
 // each tool can output multiple scores
 const tools = {
   /** @param {CodescanReport} report */
-  codescan: (report) =>codescanSummary(report),
+  codescan: (report) => codescanSummary(report),
   /** @param {DependabotReport} report */
   dependabot: (report) => dependabotSummary(report),
   /** @param {HttpReport} report */
   http: (report) => {
-    if (report) {
+    if (report && report.grade) {
       return {
-        http: report.grade
-      }
+        http: report.grade,
+      };
     }
   },
   /** @param {LighthouseReport} report */

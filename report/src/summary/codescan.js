@@ -45,7 +45,8 @@ const summary = (report) => {
     const codescanGrade = grades && grades.reduce(maxGrade);
     if (codescanGrade) {
       return {
-        codescan: codescanGrade,
+        codescanCount,
+        codescanGrade
       };
     }
   }

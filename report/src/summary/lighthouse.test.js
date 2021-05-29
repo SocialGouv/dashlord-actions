@@ -11,20 +11,23 @@ const tests = [
     report: {
       categories: {
         performance: {
-          score: 42,
+          score: 1,
         },
         seo: {
-          score: 43,
+          score: 1,
         },
         stuff: {
-          score: 44,
+          score: 1,
         },
       },
     },
     expected: {
       lighthouse_performance: 1,
-      lighthouse_seo: 43,
-      lighthouse_stuff: 44,
+      lighthouse_performanceGrade: "A",
+      lighthouse_seo: 1,
+      lighthouse_seoGrade: "A",
+      lighthouse_stuff: 1,
+      lighthouse_stuffGrade: "A",
     },
   },
   {
@@ -35,10 +38,10 @@ const tests = [
           score: 42,
         },
         seo: {
-          score: 43,
+          score: 0.5,
         },
         stuff: {
-          score: 44,
+          score: 0.2,
         },
       },
       audits: {
@@ -56,8 +59,11 @@ const tests = [
     },
     expected: {
       lighthouse_performance: 1,
-      lighthouse_seo: 43,
-      lighthouse_stuff: 44,
+      lighthouse_performanceGrade: "A",
+      lighthouse_seo: 0.5,
+      lighthouse_seoGrade: "D",
+      lighthouse_stuff: 0.2,
+      lighthouse_stuffGrade: "E",
     },
   },
   {
@@ -68,10 +74,10 @@ const tests = [
           score: 42,
         },
         seo: {
-          score: 43,
+          score: 0.1,
         },
         stuff: {
-          score: 44,
+          score: 0,
         },
       },
       audits: {
@@ -89,8 +95,11 @@ const tests = [
     },
     expected: {
       lighthouse_performance: 0.3,
-      lighthouse_seo: 43,
-      lighthouse_stuff: 44,
+      lighthouse_performanceGrade: "E",
+      lighthouse_seo: 0.1,
+      lighthouse_seoGrade: "F",
+      lighthouse_stuff: 0,
+      lighthouse_stuffGrade: "F",
     },
   },
 ];

@@ -1,4 +1,4 @@
-/// <reference path="./grades.d.ts" />
+/// <reference path="./summary.d.ts" />
 
 type UrlConfig = {
   url: string;
@@ -321,6 +321,7 @@ type UrlReport = UrlConfig & {
   dependabot?: DependabotReport | null;
   codescan?: CodescanReport | null;
   screenshot?: boolean | null;
+  summary: UrlReportSummary
 }
 
 type DashLordReport = UrlReport[]

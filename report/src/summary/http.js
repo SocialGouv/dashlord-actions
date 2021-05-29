@@ -2,7 +2,7 @@
 const summary = (report) => {
   if (report && report.grade) {
     return {
-      http: report.grade,
+      httpGrade: report.grade,
     };
   }
 };
