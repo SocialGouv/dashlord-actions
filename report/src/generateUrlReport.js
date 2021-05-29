@@ -158,6 +158,7 @@ const generateUrlReport = (url) => {
 
     // compile all tools data
     /** @type {UrlReport} toolsData */
+    //@ts-expect-error
     const toolsData = Object.keys(tools).reduce(
       (keys, key) => {
         //@ts-expect-error
@@ -202,7 +203,7 @@ const generateUrlReport = (url) => {
 
     // copy dashlord config YAML as JSON for the report
     writeFile(
-      path.join("www", "src", "config.json"),
+      path.join(__dirname, "..", "www", "src", "config.json"),
       JSON.stringify(dashlordConfig)
     );
 

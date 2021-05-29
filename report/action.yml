@@ -25,7 +25,7 @@ runs:
 
         cd ${{ github.action_path }}
         yarn
-        # this create a report.json to build the website
+        # this creates a report.json to build the website
         node src > www/src/report.json
         cd www
         yarn

@@ -41,28 +41,6 @@ beforeEach(() => {
 });
 
 describe("getUrls", () => {
-  test("should parse urls.txt files correctly", () => {
-    fs.existsSync
-      //@ts-expect-error
-      .mockImplementationOnce(() => false) // yaml
-      .mockImplementationOnce(() => false) // yml
-      .mockImplementationOnce(() => true); // txt
-
-    fs.readFileSync.mockReturnValueOnce(`
-
-url1
-url2
-# comment
-url3
-
-`);
-
-    expect(getUrls()).toEqual([
-      { url: "url1" },
-      { url: "url2" },
-      { url: "url3" },
-    ]);
-  });
 
   test("should parse dashlord.yaml file correctly", () => {
     fs.existsSync

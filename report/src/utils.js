@@ -47,29 +47,22 @@ const writeFile = (filePath, content) => fs.writeFileSync(filePath, content);
  * @returns {UrlConfig[]} a list of urls
  */
 const getUrls = () => {
-  if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {
+  if (process.env.DASHLORD_URLS) {
+    return process.env.DASHLORD_URLS.split(",").map((url) => ({ url }));
+  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {
     return YAML.parse(readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yaml")))
       .urls;
   } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))) {
     return YAML.parse(readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml")))
       .urls;
-  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "urls.txt"))) {
-    return readFile(path.join(DASHLORD_REPO_PATH, "urls.txt"))
-      .split("\n")
-      .filter((r) => !r.match(/^\s*#/)) // remove comments
-      .filter(Boolean) // remove noise
-      .map((url) => url.toLowerCase())
-      .map((url) => ({
-        url,
-      }));
   } else {
     console.error("Cannot find dashlord.yaml or urls.txt");
     return [];
   }
 };
 
-
-/**
+/** remaps a value from a range to another range
+ *
  * @param {number} value
  * @param {number} x1
  * @param {number} y1
@@ -80,7 +73,11 @@ const getUrls = () => {
 const remap = (value, x1, y1, x2, y2) =>
   ((value - x1) * (y2 - x2)) / (y1 - x1) + x2;
 
-/** @param {number} score */
+/** Returns a grade based on a 0-1 number, 1 being A
+ * @param {number} score
+ *
+ * @returns {string}
+ */
 const scoreToGrade = (score) => {
   const grades = "A,B,C,D,E,F".split(",");
 

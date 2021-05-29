@@ -13,14 +13,18 @@ const mockJson = (name, data) =>
   jest.mock(
     `results/${b64}/9876/${name}`,
     () =>
-      data || {
-        data: name,
-      },
+      data
+        ? data
+        : {
+            data: name,
+          },
     { virtual: true }
   );
 
 // for some reason jest.resetModules doesnt work with virtual mocks
-const unMockJson = (name, data) => jest.unmock(`results/${b64}/9876/${name}`);
+const unMockJson = (name) => {
+  jest.unmock(`results/${b64}/9876/${name}`);
+};
 
 describe("generateUrlReport", () => {
   beforeEach(() => {
@@ -71,10 +75,8 @@ describe("generateUrlReport", () => {
     unMockJson("updownio.json");
     unMockJson("wappalyzer.json");
     unMockJson("zap.json");
-
-
   });
-  test(`should skip scans if some not found`, () => {
+  test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => false); // screenshot
     fs.readdirSync.mockImplementationOnce(() => ["9876", "1234", "5678"]); // assume scans folders use a sortable date-format
@@ -90,7 +92,6 @@ describe("generateUrlReport", () => {
 
     unMockJson("codescanalerts.json");
     unMockJson("wappalyzer.json");
-    
   });
 
   test(`should detect screenshot if any`, () => {
