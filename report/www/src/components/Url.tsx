@@ -73,6 +73,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           {report.screenshot && (
             <a href={url} rel="noreferrer noopener" target="_blank">
               <img
+                alt={`Copie d'écran de ${url}`}
                 style={{
                   position: "relative",
                   top: 0,
@@ -142,7 +143,12 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("nmap") && report.nmap && (
         <React.Fragment>
-          <Nmap data={report.nmap} />
+          <Nmap
+            data={report.nmap}
+            url={`${process.env.PUBLIC_URL}/report/${window.btoa(
+              url
+            )}/nmapvuln.json`}
+          />
           <br />
         </React.Fragment>
       )) ||

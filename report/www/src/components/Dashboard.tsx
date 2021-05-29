@@ -1,80 +1,19 @@
-import * as React from "react";
-import { useState, useMemo } from "react";
-import { Slash, Info, Search, AlertTriangle } from "react-feather";
-import { Link } from "react-router-dom";
-import Tooltip from "rc-tooltip";
 import orderBy from "lodash.orderby";
-
-import BaseTable, { AutoResizer, Column, SortOrder } from "react-base-table";
-
-import { Grade } from "./Grade";
-import { smallUrl, isToolEnabled, letterGradeValue } from "../utils";
-import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
-import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-import { apdexToGrade } from "./UpdownIo";
-
-import "react-base-table/styles.css";
+import Tooltip from "rc-tooltip";
 import "rc-tooltip/assets/bootstrap.css";
+import * as React from "react";
+import { useMemo, useState } from "react";
+import BaseTable, { AutoResizer, Column, SortOrder } from "react-base-table";
+import "react-base-table/styles.css";
+import { AlertTriangle, Info, Search, Slash } from "react-feather";
+import { Link } from "react-router-dom";
+import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
+import { isToolEnabled, smallUrl, letterGradeValue } from "../utils";
+import { Grade } from "./Grade";
 
 type DashboardProps = { report: DashLordReport };
 
-const remap = (value: number, x1: number, y1: number, x2: number, y2: number) =>
-  ((value - x1) * (y2 - x2)) / (y1 - x1) + x2;
-
-const scoreToGrade = (score: number) => {
-  const grades = "A,B,C,D,E,F".split(",");
-
-  const newGrade = Math.min(
-    grades.length - 1,
-    Math.floor(remap(score, 0, 1, 0, 6))
-  );
-
-  return grades[newGrade];
-};
-
 const IconUnknown = () => <Slash size={20} />;
-
-const getGradeTrackers = (count: number) => {
-  return count > 10 ? "F" : count > 2 ? "C" : count > 0 ? "B" : "A";
-};
-
-const getGradeCookies = (count: number) => {
-  return count > 10
-    ? "F"
-    : count > 5
-    ? "E"
-    : count > 2
-    ? "C"
-    : count > 0
-    ? "B"
-    : "A";
-};
-
-const getGradeUpdownio = (uptime: number) => {
-  return uptime > 0.99
-    ? "A"
-    : uptime > 0.98
-    ? "B"
-    : uptime > 0.97
-    ? "C"
-    : uptime > 0.96
-    ? "D"
-    : uptime > 0.95
-    ? "E"
-    : "F";
-};
-
-const getDependabotNodeGrade = (nodes: DependabotNode[]) => {
-  return nodes.filter(
-    (a) =>
-      a.securityVulnerability.severity === "CRITICAL" ||
-      a.securityVulnerability.severity === "HIGH"
-  ).length
-    ? "F"
-    : nodes.length
-    ? "B"
-    : "A";
-};
 
 type ColumnHeaderProps = {
   title: string;
@@ -119,237 +58,6 @@ const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   </div>
 );
 
-type BadgeProps = { report: UrlReport };
-type LightHouseBadgeProps = BadgeProps & {
-  category: LighthouseReportCategoryKey;
-};
-
-const LightHouseBadge: React.FC<LightHouseBadgeProps> = ({
-  report,
-  category,
-}) => {
-  const lhrCategories = report.lhr && report.lhr.categories;
-  if (!report.lhr || !lhrCategories) {
-    return <IconUnknown />;
-  }
-  // use custom scoring
-  lhrCategories["performance"].score = getPerformanceScore(report.lhr);
-
-  const value =
-    lhrCategories &&
-    lhrCategories[category] &&
-    (lhrCategories[category].score as number);
-  return (
-    <Grade
-      small
-      grade={scoreToGrade(1 - value)}
-      label={(value * 100).toFixed() + " %"}
-    />
-  );
-};
-
-const SSLBadge: React.FC<BadgeProps> = ({ report }) => {
-  const overallGrade =
-    report.testssl &&
-    report.testssl.find((entry) => entry.id === "overall_grade");
-  const value = overallGrade && overallGrade.finding;
-  if (!value) {
-    return <IconUnknown />;
-  }
-  return <Grade small grade={value} />;
-};
-
-const HTTPBadge: React.FC<BadgeProps> = ({ report }) => {
-  const value = report.http && report.http.grade;
-  if (!value) {
-    return <IconUnknown />;
-  }
-  return <Grade small grade={value} />;
-};
-
-const ThirdPartiesTrackersBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.thirdparties) {
-    return <IconUnknown />;
-  }
-  const trackersCount =
-    (report.thirdparties &&
-      report.thirdparties.trackers &&
-      report.thirdparties.trackers.length) ||
-    0;
-  const trackersGrade = getGradeTrackers(trackersCount);
-  return <Grade small grade={trackersGrade} label={trackersCount} />;
-};
-
-const ThirdPartiesCookiesBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.thirdparties) {
-    return <IconUnknown />;
-  }
-  const cookiesCount =
-    (report.thirdparties &&
-      report.thirdparties.cookies &&
-      report.thirdparties.cookies.length) ||
-    0;
-  const cookiesGrade = getGradeCookies(cookiesCount);
-  return <Grade small grade={cookiesGrade} label={cookiesCount} />;
-};
-
-const getNmapOpenPortGrade = (vulnerabilities: NmapVulnerability[]) => {
-  return vulnerabilities.filter(
-    (a) =>
-      a.is_exploit &&
-      Number.parseFloat(a.cvss) > 7
-  ).length
-    ? "F"
-    : vulnerabilities.length
-    ? "B"
-    : "A";
-};
-
-const NmapBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.nmap) {
-    return <IconUnknown />;
-  }
-
-  // nmap
-  const nmapCount =
-    report.nmap &&
-    report.nmap.open_ports ?
-    report.nmap.open_ports
-      .filter(Boolean)
-      .map((port) => port.service.vulnerabilities.length)
-      .reduce((prev, curr) => prev + curr, 0) : 0;
-  const maxGrade = (a: "F" | "B" | "A", b: "F" | "B" | "A") => {
-    const grades = new Map();
-    grades.set("F", 3);
-    grades.set("B", 2);
-    grades.set("A", 1);
-    const orders = new Map();
-    orders.set(3, "F");
-    orders.set(2, "B");
-    orders.set(1, "A");
-    return orders.get(Math.max(grades.get(a), grades.get(b)));
-  };
-  const grades =
-    report.nmap &&
-    report.nmap.open_ports ?
-    report.nmap.open_ports
-      .filter(Boolean)
-      .map((port) => getNmapOpenPortGrade(port.service.vulnerabilities)) : [];
-
-  if (!grades.length) {
-    return <IconUnknown />;
-  }
-
-  const nmapGrade = grades.reduce(maxGrade);
-  return <Grade small grade={nmapGrade} label={nmapCount} />;
-};
-
-const DependabotBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.dependabot) {
-    return <IconUnknown />;
-  }
-
-  // dependabot
-  const dependabotCount =
-    report.dependabot &&
-    report.dependabot
-      .filter(Boolean)
-      .map((repo) => repo.vulnerabilityAlerts.totalCount)
-      .reduce((prev, curr) => prev + curr, 0);
-  const maxGrade = (a: "F" | "B" | "A", b: "F" | "B" | "A") => {
-    const grades = new Map();
-    grades.set("F", 3);
-    grades.set("B", 2);
-    grades.set("A", 1);
-    const orders = new Map();
-    orders.set(3, "F");
-    orders.set(2, "B");
-    orders.set(1, "A");
-    return orders.get(Math.max(grades.get(a), grades.get(b)));
-  };
-  const grades =
-    report.dependabot &&
-    report.dependabot
-      .filter(Boolean)
-      .map((repo) => getDependabotNodeGrade(repo.vulnerabilityAlerts.nodes));
-
-  if (!grades.length) {
-    return <IconUnknown />;
-  }
-
-  const dependabotGrade = grades.reduce(maxGrade);
-  return <Grade small grade={dependabotGrade} label={dependabotCount} />;
-};
-
-const getCodescanAlertGrade = (alerts: CodescanAlert[]) => {
-  return alerts.filter((a) => a.rule.severity === "error").length
-    ? "F"
-    : alerts.length
-    ? "B"
-    : "A";
-};
-
-const CodescanBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.codescan) {
-    return <IconUnknown />;
-  }
-
-  // codescan
-  const codescanCount =
-    report.codescan &&
-    report.codescan
-      .filter(Boolean)
-      .map((repo) => (repo ? (repo.alerts ? repo.alerts.length : 0) : 0))
-      .reduce((prev, curr) => prev + curr, 0);
-  const maxGrade = (a: "F" | "B" | "A", b: "F" | "B" | "A") => {
-    const grades = new Map();
-    grades.set("F", 3);
-    grades.set("B", 2);
-    grades.set("A", 1);
-    const orders = new Map();
-    orders.set(3, "F");
-    orders.set(2, "B");
-    orders.set(1, "A");
-    return orders.get(Math.max(grades.get(a), grades.get(b)));
-  };
-  const grades =
-    report.codescan &&
-    report.codescan
-      .filter(Boolean)
-      .map((repo) =>
-        repo ? (repo.alerts ? getCodescanAlertGrade(repo.alerts) : "A") : "A"
-      );
-
-  if (!grades.length) {
-    return <IconUnknown />;
-  }
-
-  const codescanGrade = grades.reduce(maxGrade);
-  return <Grade small grade={codescanGrade} label={codescanCount} />;
-};
-
-const UpDownIoUptimeBadge: React.FC<BadgeProps> = ({ report }) => {
-  if (!report.updownio) {
-    return <IconUnknown />;
-  }
-  const updownio = report.updownio && report.updownio.uptime;
-  const updownioGrade = getGradeUpdownio(updownio);
-  return (
-    <Grade small grade={updownioGrade} label={updownio.toFixed() + " %"} />
-  );
-};
-
-const UpDownIoApDexBadge: React.FC<BadgeProps> = ({ report }) => {
-  const apdex =
-    report.updownio && report.updownio.metrics && report.updownio.metrics.apdex;
-  if (apdex === undefined || apdex === null) {
-    return <IconUnknown />;
-  }
-
-  const updownioGrade = apdexToGrade(apdex);
-  return <Grade small grade={updownioGrade} label={apdex} />;
-};
-
 type SortState = {
   key: string;
   order: SortOrder;
@@ -362,9 +70,68 @@ const defaultSort = {
   column: { dataKey: "url" },
 } as SortState;
 
+const percent = (num: number | undefined): string =>
+  (num !== undefined && Math.floor(num * 100) + " %") || "-";
+
+const defaultColumnProps = {
+  width: 120,
+  sortable: true,
+  align: "center",
+} as {
+  width: number;
+  sortable: boolean;
+  align: "center" | "left" | "right";
+};
+
+const lighthouseColumnProps = ({
+  id,
+  title,
+  info,
+  warning,
+}: {
+  id: string;
+  title: string;
+  info: string;
+  warning?: any;
+}) => ({
+  headerRenderer: () => {
+    return <ColumnHeader title={title} info={info} warning={warning} />;
+  },
+  dataGetter: ({ rowData }: { rowData: any }) => {
+    const summary = (rowData as UrlReport).summary;
+    const scoreKey = `lighthouse_${id}`;
+    //@ts-expect-error
+    if (summary[scoreKey] === undefined) {
+      return -1;
+    }
+    //@ts-expect-error
+    return summary[scoreKey];
+  },
+  cellRenderer: ({ rowData }: { rowData: any }) => {
+    const summary = (rowData as UrlReport).summary;
+    const gradeKey = `lighthouse_${id}Grade`;
+    const scoreKey = `lighthouse_${id}`;
+    return (
+      <GradeBadge
+        //@ts-expect-error
+        grade={summary[gradeKey]}
+        //@ts-expect-error
+        label={percent(summary[scoreKey])}
+      />
+    );
+  },
+});
+
+const GradeBadge = ({
+  grade,
+  label,
+}: {
+  grade: string | undefined;
+  label?: string | number | undefined;
+}) => (grade ? <Grade small grade={grade} label={label} /> : <IconUnknown />);
+
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const [sortBy, setSortBy] = useState(defaultSort);
-
   const onColumnSort = (column: any) => {
     setSortBy(column);
   };
@@ -387,16 +154,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
     return getSortedRows(report);
   }, [sortBy, report]);
-
-  const defaultColumnProps = {
-    width: 120,
-    sortable: true,
-    align: "center",
-  } as {
-    width: number;
-    sortable: boolean;
-    align: "center" | "left" | "right";
-  };
 
   return (
     <div style={{ width: "100%", height: "calc(100vh - 30px)" }}>
@@ -428,77 +185,34 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               <Column
                 {...defaultColumnProps}
                 key="accessibility"
-                dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (
-                    (report &&
-                      report.lhr &&
-                      report.lhr.categories.accessibility.score) ||
-                    0
-                  );
-                }}
-                headerRenderer={() => (
-                  <ColumnHeader
-                    title="Accessibilité"
-                    info="Bonnes pratiques en matière d'accessibilité web (LightHouse)"
-                    warning={<AccessibilityWarnings />}
-                  />
-                )}
-                cellRenderer={({ rowData }) => (
-                  <LightHouseBadge
-                    report={rowData as UrlReport}
-                    category="accessibility"
-                  />
-                )}
+                {...lighthouseColumnProps({
+                  id: "accessibility",
+                  title: "Accessibilité",
+                  info: "Bonnes pratiques en matière d'accessibilité web (LightHouse)",
+                  warning: <AccessibilityWarnings />,
+                })}
               />
             )}
-
             {isToolEnabled("lighthouse") && (
               <Column
                 {...defaultColumnProps}
                 key="performance"
-                dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (report.lhr && getPerformanceScore(report.lhr)) || 0;
-                }}
-                headerRenderer={() => (
-                  <ColumnHeader
-                    title="Performance"
-                    info="Performances de chargement des pages web (LightHouse)"
-                  />
-                )}
-                cellRenderer={({ rowData }) => (
-                  <LightHouseBadge
-                    report={rowData as UrlReport}
-                    category="performance"
-                  />
-                )}
+                {...lighthouseColumnProps({
+                  id: "performance",
+                  title: "Performance",
+                  info: "Performances de chargement des pages web (LightHouse)",
+                })}
               />
             )}
-
             {isToolEnabled("lighthouse") && (
               <Column
                 {...defaultColumnProps}
                 key="seo"
-                dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (
-                    (report && report.lhr && report.lhr.categories.seo.score) ||
-                    0
-                  );
-                }}
-                headerRenderer={() => (
-                  <ColumnHeader
-                    title="SEO"
-                    info="Bonnes pratiques en matière de référencement naturel (LightHouse)"
-                  />
-                )}
-                cellRenderer={({ rowData }) => (
-                  <LightHouseBadge
-                    report={rowData as UrlReport}
-                    category="seo"
-                  />
-                )}
+                {...lighthouseColumnProps({
+                  id: "seo",
+                  title: "SEO",
+                  info: "Bonnes pratiques en matière de référencement naturel (LightHouse)",
+                })}
               />
             )}
 
@@ -506,14 +220,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               <Column
                 {...defaultColumnProps}
                 key="ssl"
-                dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  const overallGrade =
-                    report.testssl &&
-                    report.testssl.find(
-                      (entry) => entry.id === "overall_grade"
-                    );
-                  return overallGrade && letterGradeValue(overallGrade.finding);
+                dataGetter={({ rowData }: { rowData: any }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    (summary.testsslGrade &&
+                      letterGradeValue(summary.testsslGrade)) ||
+                    -1
+                  );
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -521,9 +234,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Niveau de confiance du certificat SSL (testssl.sh)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <SSLBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return <GradeBadge grade={summary.testsslGrade} />;
+                }}
               />
             )}
 
@@ -532,8 +246,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 {...defaultColumnProps}
                 key="http"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return report.http && letterGradeValue(report.http.grade);
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    (summary.httpGrade &&
+                      letterGradeValue(summary.httpGrade)) ||
+                    -1
+                  );
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -541,9 +259,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Bonnes pratiques de configuration HTTP (Mozilla observatory)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <HTTPBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return <GradeBadge grade={summary.httpGrade} />;
+                }}
               />
             )}
 
@@ -552,8 +271,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 {...defaultColumnProps}
                 key="updownio"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return report.updownio && report.updownio.uptime;
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.uptime || -1;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -561,23 +280,24 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Disponibilité du service (updown.io)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <UpDownIoUptimeBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.uptimeGrade}
+                      label={percent((summary.uptime || 0) / 100)}
+                    />
+                  );
+                }}
               />
             )}
-
             {isToolEnabled("updownio") && (
               <Column
                 {...defaultColumnProps}
                 key="updownio2"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (
-                    report.updownio &&
-                    report.updownio.metrics &&
-                    report.updownio.metrics.apdex
-                  );
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.apdex || -1;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -585,9 +305,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Apdex: Application Performance Index : indice de satisfaction des attentes de performance (updown.io)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <UpDownIoApDexBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.apdexGrade}
+                      label={summary.apdex}
+                    />
+                  );
+                }}
               />
             )}
 
@@ -596,14 +322,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 {...defaultColumnProps}
                 key="dependabot"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  const dependabotCount =
-                    report.dependabot &&
-                    report.dependabot
-                      .filter(Boolean)
-                      .map((repo) => repo.vulnerabilityAlerts.totalCount)
-                      .reduce((prev, curr) => prev + curr, 0);
-                  return dependabotCount;
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.dependabotCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -611,27 +331,25 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Vulnérabilités applicatives detectées dans les dépendances du code (dependabot)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <DependabotBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.dependabotGrade}
+                      label={summary.dependabotCount}
+                    />
+                  );
+                }}
               />
             )}
-
 
             {isToolEnabled("nmap") && (
               <Column
                 {...defaultColumnProps}
                 key="nmap"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  const nmapCount =
-                    report.nmap &&
-                    report.nmap.open_ports &&
-                    report.nmap.open_ports
-                      .filter(Boolean)
-                      .map((port) => port.service.vulnerabilities.length)
-                      .reduce((prev, curr) => prev + curr, 0);
-                  return nmapCount;
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.nmapCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -639,9 +357,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Vulnérabilités réseau detectées par Nmap"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <NmapBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.nmapGrade}
+                      label={summary.nmapCount}
+                    />
+                  );
+                }}
               />
             )}
 
@@ -650,16 +374,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 {...defaultColumnProps}
                 key="codescan"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  const codescanCount =
-                    report.codescan &&
-                    report.codescan
-                      .filter(Boolean)
-                      .map((repo) =>
-                        repo ? (repo.alerts ? repo.alerts.length : 0) : 0
-                      )
-                      .reduce((prev, curr) => prev + curr, 0);
-                  return codescanCount;
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.codescanCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -667,9 +383,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Potentielles vulnérabilités ou erreurs detectées dans les codes sources (codescan)"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <CodescanBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.codescanGrade}
+                      label={summary.codescanCount}
+                    />
+                  );
+                }}
               />
             )}
 
@@ -678,10 +400,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 {...defaultColumnProps}
                 key="trackers"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (
-                    report.thirdparties && report.thirdparties.trackers.length
-                  );
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.trackersCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -695,21 +415,24 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     }
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <ThirdPartiesTrackersBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.trackersGrade}
+                      label={summary.trackersCount}
+                    />
+                  );
+                }}
               />
             )}
-
             {isToolEnabled("thirdparties") && (
               <Column
                 {...defaultColumnProps}
                 key="cookies"
                 dataGetter={({ rowData }) => {
-                  const report = rowData as UrlReport;
-                  return (
-                    report.thirdparties && report.thirdparties.cookies.length
-                  );
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.cookiesCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -717,9 +440,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     info="Nombre de cookies présents"
                   />
                 )}
-                cellRenderer={({ rowData }) => (
-                  <ThirdPartiesCookiesBadge report={rowData as UrlReport} />
-                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.cookiesGrade}
+                      label={summary.cookiesCount}
+                    />
+                  );
+                }}
               />
             )}
           </BaseTable>

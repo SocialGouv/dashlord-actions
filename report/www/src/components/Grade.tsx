@@ -3,7 +3,7 @@ import * as React from "react";
 import { Badge } from "react-bootstrap";
 
 type GradeProps = {
-  grade: string | number;
+  grade: string;
   label?: string | number | null;
   small?: boolean;
 };

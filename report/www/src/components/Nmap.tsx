@@ -31,9 +31,9 @@ const NmapBadge = (open_port: NmapOpenPort) => {
   );
 };
 
-type NmapProps = { data: NmapReport; };
+type NmapProps = { data: NmapReport; url: string; };
 
-export const Nmap: React.FC<NmapProps> = ({ data }) => {
+export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
   const open_ports =
     data && data.open_ports.length > 0
       ? data.open_ports
@@ -43,7 +43,7 @@ export const Nmap: React.FC<NmapProps> = ({ data }) => {
     (data.open_ports.length > 0 && (
       <Panel
         title="Nmap"
-        url={'https://' + data.host}
+        url={url}
         info={
           <span>
             Scan des vulnérabiliés nmap {" "}
