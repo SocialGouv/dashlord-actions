@@ -11,7 +11,7 @@ Actions
 | report  | build a report.json from latest scans      |
 | website | build a website from report.json           |
 
-![](./workflows.png)
+[![](./workflows.png)](https://excalidraw.com/#json=5097005936279552,BIdgMf7vmfpdFCKoCVegXg)
 
 ## Usage
 
