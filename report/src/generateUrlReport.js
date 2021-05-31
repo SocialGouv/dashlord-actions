@@ -225,6 +225,7 @@ const generateUrlReport = (url) => {
     copyForWebsite("testssl.html");
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");
+    copyForWebsite("nmapvuln.html");
 
     return urlData;
   } else {

@@ -5,39 +5,44 @@ import { Table, Badge } from "react-bootstrap";
 import { Panel } from "./Panel";
 
 const sumCvss = (total: number, vulnerability: NmapVulnerability) => {
-   return total + Number.parseFloat(vulnerability.cvss);
-}
+  return total + Number.parseFloat(vulnerability.cvss);
+};
 
 const orderByCvss = (a: NmapOpenPort, b: NmapOpenPort) => {
-  return b.service.vulnerabilities.reduce(sumCvss, 0) - a.service.vulnerabilities.reduce(sumCvss, 0);
+  return (
+    b.service.vulnerabilities.reduce(sumCvss, 0) -
+    a.service.vulnerabilities.reduce(sumCvss, 0)
+  );
 };
 
 const hasExploit = (open_port: NmapOpenPort) => {
-  return open_port.service.vulnerabilities.filter((vulnerability) => vulnerability.is_exploit).length > 0;
+  return (
+    open_port.service.vulnerabilities.filter(
+      (vulnerability) => vulnerability.is_exploit
+    ).length > 0
+  );
 };
 
 const NmapBadge = (open_port: NmapOpenPort) => {
   const max = open_port.service.vulnerabilities.reduce(sumCvss, 0);
   const variant =
-  !hasExploit(open_port) && max > 5 * open_port.service.vulnerabilities.length
-      ? "warning" :
-      hasExploit(open_port) && max > 5 * open_port.service.vulnerabilities.length
-        ? "danger"
-        : "info";
+    !hasExploit(open_port) && max > 5 * open_port.service.vulnerabilities.length
+      ? "warning"
+      : hasExploit(open_port) &&
+        max > 5 * open_port.service.vulnerabilities.length
+      ? "danger"
+      : "info";
   return (
     <Badge className="w-100" variant={variant}>
-      {open_port.service.vulnerabilities.length}
+      {variant}
     </Badge>
   );
 };
 
-type NmapProps = { data: NmapReport; url: string; };
+type NmapProps = { data: NmapReport; url: string };
 
 export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
-  const open_ports =
-    data && data.open_ports.length > 0
-      ? data.open_ports
-      : [];
+  const open_ports = data && data.open_ports.length > 0 ? data.open_ports : [];
   data.open_ports.sort(orderByCvss);
   return (
     (data.open_ports.length > 0 && (
@@ -46,14 +51,14 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
         url={url}
         info={
           <span>
-            Scan des vulnérabiliés nmap {" "}
+            Scan des vulnérabiliés nmap{" "}
             <a
               style={{ color: "white" }}
-              href={'https://' + data.host}
+              href={"https://" + data.host}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {'https://' + data.host}
+              {"https://" + data.host}
             </a>
           </span>
         }
@@ -64,7 +69,7 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
               <th style={{ width: 100 }} className="text-center">
                 Sévérité
               </th>
-              <th>Service vulnérable</th>
+              <th>Service à l'écoute</th>
               <th>Vulnérabilités</th>
             </tr>
           </thead>
@@ -75,13 +80,24 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
                   <td className="text-center">
                     <NmapBadge {...open_port} />
                   </td>
-                  <td>{open_port.service.name + ' (port:' + open_port.service.id + ')'}</td>
+                  <td>
+                    {open_port.service.name +
+                      " (port:" +
+                      open_port.service.id +
+                      ")"}
+                  </td>
                   <td>
                     {open_port.service.vulnerabilities.map(
                       (vulnerability, i: number) => {
                         return (
                           <p key={vulnerability.id + i}>
-                            <a target="_blank" href={'https://vulners.com/cve/' + vulnerability.id} rel="noopener noreferrer">
+                            <a
+                              target="_blank"
+                              href={
+                                "https://vulners.com/cve/" + vulnerability.id
+                              }
+                              rel="noopener noreferrer"
+                            >
                               {vulnerability.id}
                             </a>
                             <br />

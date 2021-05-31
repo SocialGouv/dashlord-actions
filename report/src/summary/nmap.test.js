@@ -9,6 +9,7 @@ const tests = [
   {
     title: "sample report",
     report: {
+      grade: "B",
       open_ports: [
         {
           service: {
@@ -18,14 +19,34 @@ const tests = [
       ],
     },
     expected: {
-      nmapGrade: "A",
-      nmapCount: 0
+      nmapGrade: "B",
+      nmapOpenPortsCount: 1,
+      nmapOpenPortsGrade: "A",
     },
   },
   {
-    title: "not exploitable vuln",
+    title: "3 open ports",
     report: {
+      grade: "F",
       open_ports: [
+        {
+          service: {
+            vulnerabilities: [
+              {
+                is_exploit: false,
+              },
+            ],
+          },
+        },
+        {
+          service: {
+            vulnerabilities: [
+              {
+                is_exploit: false,
+              },
+            ],
+          },
+        },
         {
           service: {
             vulnerabilities: [
@@ -38,50 +59,9 @@ const tests = [
       ],
     },
     expected: {
-      nmapGrade: "B",
-      nmapCount: 1
-    },
-  },
-  {
-    title: "exploitable vuln, low cvss",
-    report: {
-      open_ports: [
-        {
-          service: {
-            vulnerabilities: [
-              {
-                is_exploit: true,
-                cvss: 5,
-              },
-            ],
-          },
-        },
-      ],
-    },
-    expected: {
-      nmapGrade: "B",
-      nmapCount: 1
-    },
-  },
-  {
-    title: "exploitable vuln, high cvss",
-    report: {
-      open_ports: [
-        {
-          service: {
-            vulnerabilities: [
-              {
-                is_exploit: true,
-                cvss: 8,
-              },
-            ],
-          },
-        },
-      ],
-    },
-    expected: {
       nmapGrade: "F",
-      nmapCount: 1
+      nmapOpenPortsCount: 3,
+      nmapOpenPortsGrade: "F",
     },
   },
 ];

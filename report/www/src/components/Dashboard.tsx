@@ -343,32 +343,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("nmap") && (
-              <Column
-                {...defaultColumnProps}
-                key="nmap"
-                dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
-                  return summary.nmapCount;
-                }}
-                headerRenderer={() => (
-                  <ColumnHeader
-                    title="Nmap"
-                    info="Vulnérabilités réseau detectées par Nmap"
-                  />
-                )}
-                cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
-                  return (
-                    <GradeBadge
-                      grade={summary.nmapGrade}
-                      label={summary.nmapCount}
-                    />
-                  );
-                }}
-              />
-            )}
-
             {isToolEnabled("codescan") && (
               <Column
                 {...defaultColumnProps}
@@ -389,6 +363,58 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                     <GradeBadge
                       grade={summary.codescanGrade}
                       label={summary.codescanCount}
+                    />
+                  );
+                }}
+              />
+            )}
+
+            {isToolEnabled("nmap") && (
+              <Column
+                {...defaultColumnProps}
+                key="nmap"
+                dataGetter={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    (summary.nmapGrade &&
+                      letterGradeValue(summary.nmapGrade)) ||
+                    -1
+                  );
+                }}
+                headerRenderer={() => (
+                  <ColumnHeader
+                    title="Nmap"
+                    info="Vulnérabilités réseau detectées par Nmap"
+                  />
+                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  console.log("summary", summary);
+                  return <GradeBadge grade={summary.nmapGrade} />;
+                }}
+              />
+            )}
+
+            {isToolEnabled("nmap") && (
+              <Column
+                {...defaultColumnProps}
+                key="nmap2"
+                dataGetter={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.nmapOpenPortsCount;
+                }}
+                headerRenderer={() => (
+                  <ColumnHeader
+                    title="Ports ouverts"
+                    info="Ports TCP ouverts détectés par nmap"
+                  />
+                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <GradeBadge
+                      grade={summary.nmapOpenPortsGrade}
+                      label={summary.nmapOpenPortsCount}
                     />
                   );
                 }}

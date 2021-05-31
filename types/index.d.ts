@@ -25,12 +25,12 @@ type DashlordConfig = {
   title: string;
   tools?: DashlordTool[];
   urls: UrlConfig[];
-} 
+};
 
 type LighthouseReportCategory = {
   title: string;
   id: string;
-  score: number|null;
+  score: number | null;
   description?: string;
 };
 
@@ -48,25 +48,25 @@ type LighthouseReportCategories = Record<
 
 type LighthouseReportAudits = {
   metrics: {
-      details?: {
-          items?: any[]
-      }
+    details?: {
+      items?: any[];
+    };
   };
   diagnostics: {
-      details?: {
-          items?: any[]
-      }
-  }
-}
+    details?: {
+      items?: any[];
+    };
+  };
+};
 
 type LighthouseReport = {
   requestedUrl: string;
   finalUrl: string;
   runWarnings: string[];
-  categories: LighthouseReportCategories
-  fetchTime: string
-  audits: LighthouseReportAudits
-}
+  categories: LighthouseReportCategories;
+  fetchTime: string;
+  audits: LighthouseReportAudits;
+};
 
 type SslTestReportEntry = {
   id: string;
@@ -76,20 +76,20 @@ type SslTestReportEntry = {
   finding: string;
 };
 
-type SslTestReport = SslTestReportEntry[]
+type SslTestReport = SslTestReportEntry[];
 
 type HttpTestReport = {
-  name: string
-  score_description: string
-  pass: boolean
-  score_modifier: number
-}
+  name: string;
+  score_description: string;
+  pass: boolean;
+  score_modifier: number;
+};
 
 type HttpReport = {
-  details: Record<any, HttpTestReport>
-  url: string
-  grade: string
-}
+  details: Record<any, HttpTestReport>;
+  url: string;
+  grade: string;
+};
 
 type ZapReportSiteAlert = {
   name: string;
@@ -125,188 +125,189 @@ type NucleiReportEntry = {
   host: string;
   matched: string;
   templateID: string;
-  matcher_name?: string
+  matcher_name?: string;
 };
 
 type NucleiReport = NucleiReportEntry[];
 
-type DependabotPackage ={
-  name: string
+type DependabotPackage = {
+  name: string;
 };
 
 type DependabotVulnerabilityAlerts = {
-  totalCount: number,
-  nodes: DependabotNode[]
+  totalCount: number;
+  nodes: DependabotNode[];
 };
 
 type DependabotAdvisoryIdentifier = {
-  type: string,
-  value: string
+  type: string;
+  value: string;
 };
 
 type DependabotAdvisoryReference = {
-  url: string
+  url: string;
 };
 
 type DependabotAdvisory = {
-  references: DependabotAdvisoryReference[],
-  identifiers: DependabotAdvisoryIdentifier[]
+  references: DependabotAdvisoryReference[];
+  identifiers: DependabotAdvisoryIdentifier[];
 };
 
 type DependabotSecurityVulnerability = {
-  severity: string,
-  package: DependabotPackage,
-  advisory: DependabotAdvisory
+  severity: string;
+  package: DependabotPackage;
+  advisory: DependabotAdvisory;
 };
 
 type DependabotNode = {
-  createdAt: string,
-  dismissedAt?: string,
-  securityVulnerability: DependabotSecurityVulnerability
+  createdAt: string;
+  dismissedAt?: string;
+  securityVulnerability: DependabotSecurityVulnerability;
 };
 
 type DependabotRepository = {
-  url: string,
-  vulnerabilityAlerts: DependabotVulnerabilityAlerts
+  url: string;
+  vulnerabilityAlerts: DependabotVulnerabilityAlerts;
 };
 
-type DependabotReport =  DependabotRepository[];
+type DependabotReport = DependabotRepository[];
 
 type CodescanRule = {
-  severity: string,
-  name: string,
-  description: string
+  severity: string;
+  name: string;
+  description: string;
 };
 
 type CodescanAlert = {
-  html_url: string,
-  rule: CodescanRule
+  html_url: string;
+  rule: CodescanRule;
 };
 
 type CodescanRepository = {
-  url: string,
-  alerts: CodescanAlert[]
+  url: string;
+  alerts: CodescanAlert[];
 };
 
-type CodescanReport =  CodescanRepository[];
+type CodescanReport = CodescanRepository[];
 
 type NmapVulnerability = {
-  is_exploit: boolean,
-  cvss: string,
-  id: string
+  is_exploit: boolean;
+  cvss: string;
+  id: string;
 };
 
 type NmapService = {
-  id: string,
-  product: string,
-  name: string,
-  vulnerabilities: NmapVulnerability[]
+  id: string;
+  product: string;
+  name: string;
+  vulnerabilities: NmapVulnerability[];
 };
 
 type NmapOpenPort = {
-  service: NmapService
+  service: NmapService;
 };
 
-type NmapReport =  {
-  protocol: string,
-  host: string,
-  closed_ports: number,
-  open_ports: NmapOpenPort[]
+type NmapReport = {
+  grade?: string;
+  protocol: string;
+  host: string;
+  closed_ports: number;
+  open_ports: NmapOpenPort[];
 };
 
 type ThirdPartyTracker = {
-  type: string
-  url: string
+  type: string;
+  url: string;
   details?: {
-      id: string
-      message?: string
-  }
-}
+    id: string;
+    message?: string;
+  };
+};
 
 type ThirdPartyCookie = {
-  name: string
-  value: string
-  domain: string
-  path: string
-  expires: number
-  size: number
-  httpOnly: boolean
-  secure: boolean
-  session: boolean
-  sameParty: boolean
-  sourceScheme: string
-  sourcePort: number
-}
+  name: string;
+  value: string;
+  domain: string;
+  path: string;
+  expires: number;
+  size: number;
+  httpOnly: boolean;
+  secure: boolean;
+  session: boolean;
+  sameParty: boolean;
+  sourceScheme: string;
+  sourcePort: number;
+};
 
 type GeoIpEndpoint = {
   country?: {
-      iso_code: string
-      names: {
-          fr: string
-      }
-  }
+    iso_code: string;
+    names: {
+      fr: string;
+    };
+  };
   city?: {
-      names: {
-          fr?: string
-      }
-  }
-}
+    names: {
+      fr?: string;
+    };
+  };
+};
 
 type ThirdPartyEndpoint = {
-  hostname: string
-  ip?: string | null
-  geoip: GeoIpEndpoint| null
-}
+  hostname: string;
+  ip?: string | null;
+  geoip: GeoIpEndpoint | null;
+};
 
-type ThirdPartiesReportCookies = ThirdPartyCookie[]
-type ThirdPartiesReportTrackers = ThirdPartyTracker[]
-type ThirdPartiesReportEndpoints = ThirdPartyEndpoint[]
+type ThirdPartiesReportCookies = ThirdPartyCookie[];
+type ThirdPartiesReportTrackers = ThirdPartyTracker[];
+type ThirdPartiesReportEndpoints = ThirdPartyEndpoint[];
 
 type ThirdPartiesReport = {
-  cookies: ThirdPartiesReportCookies
-  trackers: ThirdPartiesReportTrackers
-  endpoints: ThirdPartiesReportEndpoints
-}
+  cookies: ThirdPartiesReportCookies;
+  trackers: ThirdPartiesReportTrackers;
+  endpoints: ThirdPartiesReportEndpoints;
+};
 
 type WappalyzerCategory = {
-  id: number
-  slug: string
-  name: string
-}
+  id: number;
+  slug: string;
+  name: string;
+};
 
 type WappalyzerTechnology = {
-  slug: string
-  name: string
-  confidence: number
-  website: string
-  categories: WappalyzerCategory[]
-}
+  slug: string;
+  name: string;
+  confidence: number;
+  website: string;
+  categories: WappalyzerCategory[];
+};
 
 type WappalyzerUrl = {
   status: number;
-  error?: string
-}
+  error?: string;
+};
 
 type WappalyzerReport = {
-  urls: Record<string, WappalyzerUrl|undefined>
-  technologies: WappalyzerTechnology[]
-}
+  urls: Record<string, WappalyzerUrl | undefined>;
+  technologies: WappalyzerTechnology[];
+};
 
 type UpDownReport = {
-  token: string,
-  url: string,
-  uptime:number,
+  token: string;
+  url: string;
+  uptime: number;
   ssl?: {
-    valid: boolean,
-    expires_at: string
-  }
-  metrics?:{
-    apdex?:number,
-    timings:{
-      total:number
-    }
-  }
-}
+    valid: boolean;
+    expires_at: string;
+  };
+  metrics?: {
+    apdex?: number;
+    timings: {
+      total: number;
+    };
+  };
+};
 
 type UrlReport = UrlConfig & {
   lhr?: LighthouseReport | null;
@@ -321,9 +322,7 @@ type UrlReport = UrlConfig & {
   dependabot?: DependabotReport | null;
   codescan?: CodescanReport | null;
   screenshot?: boolean | null;
-  summary: UrlReportSummary
-}
+  summary: UrlReportSummary;
+};
 
-type DashLordReport = UrlReport[]
-
-
+type DashLordReport = UrlReport[];
