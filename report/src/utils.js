@@ -49,16 +49,32 @@ const writeFile = (filePath, content) => fs.writeFileSync(filePath, content);
 const getUrls = () => {
   if (process.env.DASHLORD_URLS) {
     return process.env.DASHLORD_URLS.split(",").map((url) => ({ url }));
-  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {
-    return YAML.parse(readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yaml")))
-      .urls;
-  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))) {
-    return YAML.parse(readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml")))
-      .urls;
-  } else {
-    console.error("Cannot find dashlord.yaml or urls.txt");
-    return [];
   }
+  return getConfig().urls;
+};
+
+/**
+ * Get dashlord config
+ *
+ *
+ * @returns {DashlordConfig} full dashlord config
+ */
+const getConfig = () => {
+  let dashlordConfig = {
+    title: "DashLord report",
+    urls: [],
+  };
+
+  if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {
+    dashlordConfig = YAML.parse(
+      readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))
+    );
+  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))) {
+    dashlordConfig = YAML.parse(
+      readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))
+    );
+  }
+  return dashlordConfig;
 };
 
 /** remaps a value from a range to another range
@@ -89,4 +105,11 @@ const scoreToGrade = (score) => {
   return grades[newGrade];
 };
 
-module.exports = { readFile, writeFile, toHostname, getUrls, scoreToGrade };
+module.exports = {
+  readFile,
+  writeFile,
+  toHostname,
+  getUrls,
+  scoreToGrade,
+  getConfig,
+};

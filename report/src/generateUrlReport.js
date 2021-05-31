@@ -2,9 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const pick = require("lodash.pick");
 const omit = require("lodash.omit");
-const YAML = require("yaml");
 
-const { readFile, writeFile } = require("./utils");
 const { computeSummary } = require("./summary");
 
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
@@ -185,27 +183,6 @@ const generateUrlReport = (url) => {
     const publicReportsUrlPath = path.join("www", "public", "report", urlb64);
 
     fs.mkdirSync(publicReportsUrlPath, { recursive: true });
-
-    /** @type {DashlordConfig} */
-    let dashlordConfig = {
-      title: "DashLord report",
-      urls: [],
-    };
-    if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {
-      dashlordConfig = YAML.parse(
-        readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))
-      );
-    } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))) {
-      dashlordConfig = YAML.parse(
-        readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))
-      );
-    }
-
-    // copy dashlord config YAML as JSON for the report
-    writeFile(
-      path.join(__dirname, "..", "www", "src", "config.json"),
-      JSON.stringify(dashlordConfig)
-    );
 
     /**
      *
