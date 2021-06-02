@@ -167,6 +167,7 @@ type DependabotNode = {
 
 type DependabotRepository = {
   url: string;
+  grade: string;
   vulnerabilityAlerts: DependabotVulnerabilityAlerts;
 };
 
@@ -208,7 +209,7 @@ type NmapOpenPort = {
 };
 
 type NmapReport = {
-  grade?: string;
+  grade: string;
   protocol: string;
   host: string;
   closed_ports: number;

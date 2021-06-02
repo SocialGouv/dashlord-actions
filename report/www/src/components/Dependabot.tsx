@@ -4,6 +4,7 @@ import { Table, Badge } from "react-bootstrap";
 import { getLastUrlSegment } from "../utils";
 
 import { Panel } from "./Panel";
+import { Grade } from "./Grade";
 
 const orderBySeverity = (a: DependabotNode, b: DependabotNode) => {
   // high criticity first
@@ -64,6 +65,10 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
           </span>
         }
       >
+      <h3>
+        Scan Summary : <Grade small grade={data.grade} />
+      </h3>
+      <br />
         <Table striped bordered hover>
           <thead>
             <tr>
