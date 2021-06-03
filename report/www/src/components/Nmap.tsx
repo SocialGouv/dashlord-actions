@@ -3,6 +3,7 @@ import * as React from "react";
 import { Table, Badge } from "react-bootstrap";
 
 import { Panel } from "./Panel";
+import { Grade } from "./Grade";
 
 const sumCvss = (total: number, vulnerability: NmapVulnerability) => {
   return total + Number.parseFloat(vulnerability.cvss);
@@ -63,6 +64,10 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
           </span>
         }
       >
+      <h3>
+        Scan Summary : <Grade small grade={data.grade} />
+      </h3>
+      <br />
         <Table striped bordered hover>
           <thead>
             <tr>
