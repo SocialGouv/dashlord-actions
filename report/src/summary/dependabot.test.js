@@ -10,6 +10,7 @@ const tests = [
     title: "no alert",
     report: [
       {
+        grade: "A",
         vulnerabilityAlerts: {
           totalCount: 0,
           nodes: [],
@@ -22,6 +23,7 @@ const tests = [
     title: "single alert",
     report: [
       {
+        grade: "A",
         vulnerabilityAlerts: {
           totalCount: 1,
           nodes: [],
@@ -34,6 +36,7 @@ const tests = [
     title: "single MEDIUM alert",
     report: [
       {
+        grade: "B",
         vulnerabilityAlerts: {
           totalCount: 1,
           nodes: [
@@ -52,6 +55,7 @@ const tests = [
     title: "single CRITICAL alert",
     report: [
       {
+        grade: "F",
         vulnerabilityAlerts: {
           totalCount: 1,
           nodes: [

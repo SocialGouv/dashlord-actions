@@ -1,16 +1,3 @@
-/** @param {DependabotNode[]} nodes */
-const getDependabotNodeGrade = (nodes) => {
-  return nodes.filter(
-    (a) =>
-      a.securityVulnerability.severity === "CRITICAL" ||
-      a.securityVulnerability.severity === "HIGH"
-  ).length
-    ? "F"
-    : nodes.length
-    ? "B"
-    : "A";
-};
-
 /** @param {DependabotReport} report */
 const summary = (report) => {
   if (report) {
@@ -42,7 +29,7 @@ const summary = (report) => {
       report.filter &&
       report
         .filter(Boolean)
-        .map((repo) => getDependabotNodeGrade(repo.vulnerabilityAlerts.nodes));
+        .map((repo) => repo.grade);
 
     const dependabotGrade = grades && grades.reduce(maxGrade);
     if (dependabotGrade) {
