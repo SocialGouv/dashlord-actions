@@ -47,7 +47,10 @@ Object {
   },
   "nuclei": Array [],
   "screenshot": false,
-  "summary": Object {},
+  "summary": Object {
+    "dependabotCount": undefined,
+    "dependabotGrade": undefined,
+  },
   "testssl": Object {
     "data": "testssl.json",
   },
