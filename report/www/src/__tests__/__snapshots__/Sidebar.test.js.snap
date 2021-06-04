@@ -353,7 +353,7 @@ exports[`Should render full Sidebar 1`] = `
         <a
           aria-current={null}
           className="nav-link"
-          href="/url/https://adoption.gouv.fr"
+          href="/url/https://acceslibre.beta.gouv.fr"
           onClick={[Function]}
         >
           <svg
@@ -385,7 +385,7 @@ exports[`Should render full Sidebar 1`] = `
               y2="16.65"
             />
           </svg>
-          adoption.gouv.fr
+          acceslibre.beta.gouv.fr
         </a>
       </li>
       <li
@@ -399,7 +399,7 @@ exports[`Should render full Sidebar 1`] = `
         <a
           aria-current={null}
           className="nav-link"
-          href="/url/https://alternance.emploi.gouv.fr"
+          href="/url/https://adock.beta.gouv.fr"
           onClick={[Function]}
         >
           <svg
@@ -431,7 +431,7 @@ exports[`Should render full Sidebar 1`] = `
               y2="16.65"
             />
           </svg>
-          alternance.emploi.gouv.fr
+          adock.beta.gouv.fr
         </a>
       </li>
       <li
@@ -445,7 +445,7 @@ exports[`Should render full Sidebar 1`] = `
         <a
           aria-current={null}
           className="nav-link"
-          href="/url/https://arretonslesviolences.gouv.fr"
+          href="/url/https://aides-territoires.beta.gouv.fr"
           onClick={[Function]}
         >
           <svg
@@ -477,7 +477,7 @@ exports[`Should render full Sidebar 1`] = `
               y2="16.65"
             />
           </svg>
-          arretonslesviolences.gouv.fr
+          aides-territoires.beta.gouv.fr
         </a>
       </li>
       <li
@@ -491,7 +491,7 @@ exports[`Should render full Sidebar 1`] = `
         <a
           aria-current={null}
           className="nav-link"
-          href="/url/https://bonusmalus.travail-emploi.gouv.fr"
+          href="/url/https://api.camino.beta.gouv.fr"
           onClick={[Function]}
         >
           <svg
@@ -523,7 +523,7 @@ exports[`Should render full Sidebar 1`] = `
               y2="16.65"
             />
           </svg>
-          bonusmalus.travail-emploi.gouv.fr
+          api.camino.beta.gouv.fr
         </a>
       </li>
       <li
@@ -537,7 +537,7 @@ exports[`Should render full Sidebar 1`] = `
         <a
           aria-current={null}
           className="nav-link"
-          href="/url/https://boussole.jeunes.gouv.fr"
+          href="/url/https://api.dossierfacile.fr"
           onClick={[Function]}
         >
           <svg
@@ -569,7 +569,743 @@ exports[`Should render full Sidebar 1`] = `
               y2="16.65"
             />
           </svg>
-          boussole.jeunes.gouv.fr
+          api.dossierfacile.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://api.resorption-bidonvilles.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          api.resorption-bidonvilles.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://api.trackdechets.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          api.trackdechets.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://bo-v2.dossierfacile.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          bo-v2.dossierfacile.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://bo.dossierfacile.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          bo.dossierfacile.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://camino.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          camino.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://carbure.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          carbure.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://chauffage-urbain.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          chauffage-urbain.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://locataire.dossierfacile.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          locataire.dossierfacile.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://mobilic.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          mobilic.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://partaj.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          partaj.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://potentiel.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          potentiel.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://proprietaire.dossierfacile.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          proprietaire.dossierfacile.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://resorption-bidonvilles.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          resorption-bidonvilles.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://trackdechets.beta.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          trackdechets.beta.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://transport.data.gouv.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          transport.data.gouv.fr
+        </a>
+      </li>
+      <li
+        className="nav-item"
+        style={
+          Object {
+            "whiteSpace": "pre",
+          }
+        }
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="/url/https://www.dossierfacile.fr"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 5,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+          www.dossierfacile.fr
         </a>
       </li>
     </ul>
@@ -692,7 +1428,7 @@ Array [
           <a
             aria-current={null}
             className="nav-link"
-            href="/url/https://adoption.gouv.fr"
+            href="/url/https://acceslibre.beta.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -724,7 +1460,7 @@ Array [
                 y2="16.65"
               />
             </svg>
-            adoption.gouv.fr
+            acceslibre.beta.gouv.fr
           </a>
         </li>
         <li
@@ -738,7 +1474,7 @@ Array [
           <a
             aria-current={null}
             className="nav-link"
-            href="/url/https://alternance.emploi.gouv.fr"
+            href="/url/https://adock.beta.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -770,7 +1506,7 @@ Array [
                 y2="16.65"
               />
             </svg>
-            alternance.emploi.gouv.fr
+            adock.beta.gouv.fr
           </a>
         </li>
         <li
@@ -784,7 +1520,7 @@ Array [
           <a
             aria-current={null}
             className="nav-link"
-            href="/url/https://arretonslesviolences.gouv.fr"
+            href="/url/https://aides-territoires.beta.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -816,7 +1552,7 @@ Array [
                 y2="16.65"
               />
             </svg>
-            arretonslesviolences.gouv.fr
+            aides-territoires.beta.gouv.fr
           </a>
         </li>
         <li
@@ -830,7 +1566,7 @@ Array [
           <a
             aria-current={null}
             className="nav-link"
-            href="/url/https://bonusmalus.travail-emploi.gouv.fr"
+            href="/url/https://api.camino.beta.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -862,7 +1598,7 @@ Array [
                 y2="16.65"
               />
             </svg>
-            bonusmalus.travail-emploi.gouv.fr
+            api.camino.beta.gouv.fr
           </a>
         </li>
         <li
@@ -876,7 +1612,7 @@ Array [
           <a
             aria-current={null}
             className="nav-link"
-            href="/url/https://boussole.jeunes.gouv.fr"
+            href="/url/https://api.dossierfacile.fr"
             onClick={[Function]}
           >
             <svg
@@ -908,7 +1644,743 @@ Array [
                 y2="16.65"
               />
             </svg>
-            boussole.jeunes.gouv.fr
+            api.dossierfacile.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://api.resorption-bidonvilles.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            api.resorption-bidonvilles.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://api.trackdechets.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            api.trackdechets.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://bo-v2.dossierfacile.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            bo-v2.dossierfacile.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://bo.dossierfacile.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            bo.dossierfacile.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://camino.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            camino.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://carbure.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            carbure.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://chauffage-urbain.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            chauffage-urbain.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://locataire.dossierfacile.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            locataire.dossierfacile.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://mobilic.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            mobilic.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://partaj.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            partaj.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://potentiel.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            potentiel.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://proprietaire.dossierfacile.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            proprietaire.dossierfacile.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://resorption-bidonvilles.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            resorption-bidonvilles.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://trackdechets.beta.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            trackdechets.beta.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://transport.data.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            transport.data.gouv.fr
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/url/https://www.dossierfacile.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            www.dossierfacile.fr
           </a>
         </li>
       </ul>

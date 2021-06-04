@@ -323,7 +323,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 key="dependabot"
                 dataGetter={({ rowData }) => {
                   const summary = (rowData as UrlReport).summary;
-                  return summary.dependabotCount;
+                  return summary.dependabotGrade;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
@@ -389,7 +389,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 )}
                 cellRenderer={({ rowData }) => {
                   const summary = (rowData as UrlReport).summary;
-                  console.log("summary", summary);
                   return <GradeBadge grade={summary.nmapGrade} />;
                 }}
               />
