@@ -12,7 +12,9 @@ const tests = [
       uptime: 1,
       metrics:{
         apdex: 1
-      }
+      },
+      apdexGrade: 'A',
+      uptimeGrade: 'A'
     },
     expected: {
       apdex: 1,
@@ -27,7 +29,9 @@ const tests = [
       uptime: 0.9,
       metrics:{
         apdex: 0.8
-      }
+      },
+      apdexGrade: 'B',
+      uptimeGrade: 'F'
     },
     expected: {
       apdex: 0.8,
