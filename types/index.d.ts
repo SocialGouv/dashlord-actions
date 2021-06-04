@@ -190,10 +190,15 @@ type CodescanAlert = {
 
 type CodescanRepository = {
   url: string;
+  grade: string;
   alerts: CodescanAlert[];
 };
 
-type CodescanReport = CodescanRepository[];
+type CodescanReport = {
+  grade: string;
+  totalCount: number;
+  repositories: CodescanRepository[];
+};
 
 type NmapVulnerability = {
   is_exploit: boolean;

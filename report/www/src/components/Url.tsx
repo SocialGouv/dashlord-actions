@@ -113,7 +113,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("codescan") && report.codescan && (
         <React.Fragment>
-          {report.codescan.filter(Boolean).map((repository) => {
+          {report.codescan.repositories.filter(Boolean).map((repository) => {
             return (
               <Codescan key={repository.url} data={repository} url={url} />
             );
