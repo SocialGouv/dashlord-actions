@@ -100,7 +100,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         </React.Fragment>
       )) ||
         null}
-      {(isToolEnabled("dependabot") && report.dependabot && (
+      {(isToolEnabled("dependabot") && report.dependabot && report.dependabot.repositories && (
         <React.Fragment>
           {report.dependabot.repositories.filter(Boolean).map((repository) => {
             return (
@@ -111,7 +111,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         </React.Fragment>
       )) ||
         null}
-      {(isToolEnabled("codescan") && report.codescan && (
+      {(isToolEnabled("codescan") && report.codescan && report.codescan.repositories && (
         <React.Fragment>
           {report.codescan.repositories.filter(Boolean).map((repository) => {
             return (
