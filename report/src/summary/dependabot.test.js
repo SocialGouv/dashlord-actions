@@ -8,7 +8,10 @@ const tests = [
   },
   {
     title: "no alert",
-    report: [
+    report: {
+      grade: "A",
+      totalCount: 0,
+      repositories: [
       {
         grade: "A",
         vulnerabilityAlerts: {
@@ -16,12 +19,15 @@ const tests = [
           nodes: [],
         },
       },
-    ],
+    ]},
     expected: { dependabotGrade: "A", dependabotCount: 0 },
   },
   {
     title: "single alert",
-    report: [
+    report: {
+      grade: "A",
+      totalCount: 1,
+      repositories: [
       {
         grade: "A",
         vulnerabilityAlerts: {
@@ -29,12 +35,15 @@ const tests = [
           nodes: [],
         },
       },
-    ],
+    ]},
     expected: { dependabotGrade: "A", dependabotCount: 1 },
   },
   {
     title: "single MEDIUM alert",
-    report: [
+    report: {
+      grade: "B",
+      totalCount: 1,
+      repositories: [
       {
         grade: "B",
         vulnerabilityAlerts: {
@@ -48,12 +57,15 @@ const tests = [
           ],
         },
       },
-    ],
+    ]},
     expected: { dependabotGrade: "B", dependabotCount: 1 },
   },
   {
     title: "single CRITICAL alert",
-    report: [
+    report: {
+      grade: "F",
+      totalCount: 1,
+      repositories: [
       {
         grade: "F",
         vulnerabilityAlerts: {
@@ -67,7 +79,7 @@ const tests = [
           ],
         },
       },
-    ],
+    ]},
     expected: { dependabotGrade: "F", dependabotCount: 1 },
   },
 ];

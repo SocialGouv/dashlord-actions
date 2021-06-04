@@ -2200,7 +2200,10 @@
       }
     },
     "updownio": null,
-    "dependabot": [
+    "dependabot": {
+      "totalCount": 5,
+      "grade": "F",
+      "repositories": [
       {
         "grade": "F",
         "url": "https://github.com/MTES-MCT/aides-territoires",
@@ -2359,7 +2362,7 @@
             }
           ]
         }
-    }],
+    }]},
     "codescan": [
       {
         "url": "https://github.com/SocialGouv/alternance",

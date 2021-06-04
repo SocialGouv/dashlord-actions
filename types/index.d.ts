@@ -171,7 +171,11 @@ type DependabotRepository = {
   vulnerabilityAlerts: DependabotVulnerabilityAlerts;
 };
 
-type DependabotReport = DependabotRepository[];
+type DependabotReport = {
+  totalCount: number,
+  grade: string,
+  repositories: DependabotRepository[]
+};
 
 type CodescanRule = {
   severity: string;

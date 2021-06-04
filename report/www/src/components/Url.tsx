@@ -102,7 +102,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("dependabot") && report.dependabot && (
         <React.Fragment>
-          {report.dependabot.filter(Boolean).map((repository) => {
+          {report.dependabot.repositories.filter(Boolean).map((repository) => {
             return (
               <Dependabot key={repository.url} data={repository} url={url} />
             );
