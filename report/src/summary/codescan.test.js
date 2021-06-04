@@ -6,23 +6,35 @@ const tests = [{
   expected: undefined
 },{
   title: "no alert",
-  report: [{
-    alerts: []
-  }],
-  expected: {"codescanGrade": "A", codescanCount: 0}
+  report: {
+    grade: "A",
+    totalCount: 0,
+    repositories: [{
+      grade: 'A',
+      alerts: []
+    }]},
+  expected: {codescanGrade: "A", codescanCount: 0}
 },{
   title: "single medium alert",
-  report: [{
+  report: {
+    grade: "B",
+    totalCount: 1,
+    repositories: [{
+    grade: 'B',
     alerts: [{
       rule: {
         severity: "medium"
       }
     }]
-  }],
-  expected: {"codescanGrade": "B", codescanCount: 1}
+  }]},
+  expected: {codescanGrade: "B", codescanCount: 1}
 },{
   title: "multiple medium alert",
-  report: [{
+  report: {
+    grade: "B",
+    totalCount: 2,
+    repositories: [{
+      grade: "B",
     alerts: [{
       rule: {
         severity: "medium"
@@ -32,17 +44,21 @@ const tests = [{
         severity: "medium"
       }
     }]
-  }],
+  }]},
   expected: {"codescanGrade": "B", codescanCount: 2}
 },{
   title: "single error alert",
-  report: [{
+  report: {
+    grade: "F",
+    totalCount: 1,
+    repositories: [{
+      grade: "F",
     alerts: [{
       rule: {
         severity: "error"
       }
     }]
-  }],
+  }]},
   expected: {"codescanGrade": "F", codescanCount: 1}
 }]
 

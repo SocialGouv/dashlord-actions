@@ -3,6 +3,7 @@ import * as React from "react";
 import { Table, Badge } from "react-bootstrap";
 
 import { Panel } from "./Panel";
+import { Grade } from "./Grade";
 
 const orderBySeverity = (a: CodescanAlert, b: CodescanAlert) => {
   // high criticity first
@@ -18,11 +19,11 @@ const orderBySeverity = (a: CodescanAlert, b: CodescanAlert) => {
 const CodescanBadge = (alert: CodescanAlert) => {
   const severity = alert.rule.severity;
   const variant =
-      severity === "warning"
+    severity === "warning"
       ? "warning"
       : severity === "error"
-      ? "danger"
-      : "info";
+        ? "danger"
+        : "info";
   return (
     <Badge className="w-100" variant={variant}>
       {severity}
@@ -57,6 +58,10 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
           </span>
         }
       >
+        <h3>
+          Scan Summary : <Grade small grade={data.grade} />
+        </h3>
+        <br />
         <Table striped bordered hover>
           <thead>
             <tr>
