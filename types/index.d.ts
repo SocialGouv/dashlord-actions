@@ -312,6 +312,8 @@ type UpDownReport = {
       total: number;
     };
   };
+  uptimeGrade: string;
+  apdexGrade: string;
 };
 
 type UrlReport = UrlConfig & {

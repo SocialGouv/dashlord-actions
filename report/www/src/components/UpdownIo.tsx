@@ -10,20 +10,6 @@ import { smallUrl } from "../utils";
 
 type UpDownIoProps = { data: UpDownReport; url: string };
 
-export const apdexToGrade = (apdex: number) => {
-  return apdex === 1
-    ? "A"
-    : apdex >= 0.8
-    ? "B"
-    : apdex > 0.6
-    ? "C"
-    : apdex > 0.4
-    ? "D"
-    : apdex > 0.2
-    ? "E"
-    : "F";
-};
-
 export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
   const urlUpdownio = (data && `https://updown.io/${data.token}`) || null;
 
@@ -92,7 +78,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                   <Card.Title>APDEX</Card.Title>
                   <div>
                     <Grade
-                      grade={apdexToGrade(data.metrics.apdex)}
+                      grade={data.apdexGrade}
                       label={data.metrics.apdex}
                     />
                   </div>
