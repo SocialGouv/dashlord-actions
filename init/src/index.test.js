@@ -13,11 +13,37 @@ urls:
     repositories:
       - iliad/free-ui
       - iliad/free-api
+    tools:
+      screenshot: true
+      nmap: true
+      zaproxy: true
+      wappalyzer: true
+      httpobs: true
+      testssl: true
+      lighthouse: true
+      thirdparties: true
+      nuclei: true
+      updownio: true
+      dependabot: true
+      codescan: true
   - url: invalid-url
   - url: http://chez.com
     repositories:
       - chez/chez-ui
       - chez/chez-api
+    tools:
+      screenshot: false
+      nmap: true
+      zaproxy: true
+      wappalyzer: true
+      httpobs: true
+      testssl: true
+      lighthouse: true
+      thirdparties: true
+      nuclei: true
+      updownio: false
+      dependabot: true
+      codescan: true
   - url: https://voila.fr
 `;
 
@@ -38,7 +64,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single invalid url input", async () => {
@@ -46,7 +72,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single valid url input", async () => {
@@ -54,7 +80,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
     test("when multiple urls input", async () => {
@@ -62,7 +88,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
 });

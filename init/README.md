@@ -4,7 +4,7 @@ Parse a `dashlord.yaml` or `urls.txt` file to generate a list of urls to use in 
 
 ## Usage
 
-See how `needs.init.outputs.urls_json` is used in the matrix definition
+See how `needs.init.outputs.sites` is used in the matrix definition
 
 ```yaml
 jobs:
@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       urls: ${{ steps.init.outputs.urls }}
-      urls_json: ${{ steps.init.outputs.urls_json }}
-      json: ${{ steps.init.outputs.json }}
+      sites: ${{ steps.init.outputs.sites }}
+      config: ${{ steps.init.outputs.config }}
     steps:
       - uses: actions/checkout@v2
       - id: init
-        uses: "socialgouv/dashlord-init-action@master"
+        uses: "socialgouv/dashlord-actions/init@main"
 
   scans:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        urls: ${{ fromJson(needs.init.outputs.urls_json) }}
+        sites: ${{ fromJson(needs.init.outputs.sites) }}
     steps: ...
 ```
 
@@ -40,25 +40,23 @@ urls:
     repositories:
       - iliad/free-ui
       - iliad/free-api
+    tools:
+      enabled:
+        - screenshot
   - url: http://chez.com
     repositories:
       - ici/chez-ui
       - ici/chez-api
+    tools:
+      disabled:
+        - nmap
+        - zaproxy
 ```
 
 ## Hacking
 
-Prerequisite: docker installed.
-Test action locally with [act](https://github.com/nektos/act):
-
-from files (no url):
-
 ```shell
-act -j action -e no-url.json
-```
-
-from url input (workflow_dispatch):
-
-```shell
-act -j action -e url.json
+cd init/
+npm run all
+npm test -- -u # update jest snapshots
 ```

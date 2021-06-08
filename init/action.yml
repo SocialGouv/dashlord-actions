@@ -9,12 +9,12 @@ outputs:
   urls:
     description: List of urls to scan as plain text
     value: ${{ steps.init.outputs.urls }}
-  urls_json:
-    description: List of urls to scan as json
-    value: ${{ steps.init.outputs.urls_json }}
-  json:
+  sites:
+    description: List of sites with repositories and tools to scan as json
+    value: ${{ steps.init.outputs.sites }}
+  config:
     description: Full dashlord.yaml config
-    value: ${{ steps.init.outputs.json }}
+    value: ${{ steps.init.outputs.config }}
 runs:
   using: "node12"
   main: "dist/index.js"

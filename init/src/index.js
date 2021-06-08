@@ -26,24 +26,26 @@ const getOutputs = () => {
   }
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
-  const urls_json = dashlordConfig.urls
+  const sites = dashlordConfig.urls
     .filter(isValid)
     .filter((url) =>
       urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
     );
-  const urls = urls_json.map((u) => u.url).join("\n");
+  const urls = sites.map((u) => u.url).join("\n");
 
   core.info(`urls :${urls}`);
+  core.info(`sites :${JSON.stringify(sites)}`);
+  core.info(`config :${JSON.stringify(dashlordConfig)}`);
 
-  return { urls, urls_json, json: dashlordConfig };
+  return { urls, sites, config: dashlordConfig };
 };
 
 async function run() {
   try {
     const outputs = getOutputs();
     core.setOutput("urls", outputs.urls); // legacy ?
-    core.setOutput("urls_json", JSON.stringify(outputs.urls_json)); // useful for matrix jobs
-    core.setOutput("json", JSON.stringify(outputs.json)); // full dashloard config
+    core.setOutput("sites", JSON.stringify(outputs.sites)); // useful for matrix jobs
+    core.setOutput("config", JSON.stringify(outputs.config)); // full dashloard config
   } catch (error) {
     core.setFailed(error.message);
   }
