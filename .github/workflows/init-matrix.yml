@@ -27,7 +27,7 @@ jobs:
         uses: "./init"
       - id: test
         run: |
-          EXPECTED='[{"url":"https://www.free.fr","title":"Free","repositories":["iliad/free-ui","iliad/free-api"],"tools":{"screenshot":true,"nmap":true,"zaproxy":true,"wappalyzer":true,"httpobs":true,"testssl":true,"lighthouse":true,"thirdparties":true,"nuclei":true,"updownio":true,"dependabot":true,"codescan":true}},{"url":"http://chez.com","repositories":["chez/chez-ui","chez/chez-api"],"tools":{"screenshot":false,"nmap":true,"zaproxy":true,"wappalyzer":true,"httpobs":true,"testssl":true,"lighthouse":true,"thirdparties":true,"nuclei":true,"updownio":false,"dependabot":true,"codescan":true}},{"url":"https://voila.fr"}]'
+          EXPECTED='[{"url":"https://www.free.fr","title":"Free","repositories":["iliad/free-ui","iliad/free-api"],"tools":{"screenshot":true,"nmap":true,"zaproxy":true,"wappalyzer":true,"httpobs":true,"testssl":true,"lighthouse":true,"thirdparties":true,"nuclei":true,"updownio":true,"dependabot":true,"codescan":true}},{"url":"https://voila.fr"}]'
           RESULT="${{ steps.init.outputs.sites }}"
           [[ "$EXPECTED" == "$RESULT" ]]
 
