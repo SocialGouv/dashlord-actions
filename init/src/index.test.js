@@ -1,52 +1,13 @@
 const fs = require("fs");
+const path = require("path");
 const core = require("@actions/core");
+
+const sampleConfig = jest.requireActual('fs').readFileSync(path.join(__dirname, "..", "dashlord.yml")).toString()
 
 jest.mock("fs");
 
 const { getOutputs } = require("./index");
-
-const sampleConfig = `
-title: Test 1
-urls:
-  - url: https://www.free.fr
-    title: Free
-    repositories:
-      - iliad/free-ui
-      - iliad/free-api
-    tools:
-      screenshot: true
-      nmap: true
-      zaproxy: true
-      wappalyzer: true
-      httpobs: true
-      testssl: true
-      lighthouse: true
-      thirdparties: true
-      nuclei: true
-      updownio: true
-      dependabot: true
-      codescan: true
-  - url: invalid-url
-  - url: http://chez.com
-    repositories:
-      - chez/chez-ui
-      - chez/chez-api
-    tools:
-      screenshot: false
-      nmap: true
-      zaproxy: true
-      wappalyzer: true
-      httpobs: true
-      testssl: true
-      lighthouse: true
-      thirdparties: true
-      nuclei: true
-      updownio: false
-      dependabot: true
-      codescan: true
-  - url: https://voila.fr
-`;
-
+ 
 let inputs = {};
 
 describe("should parse dashlord config", () => {

@@ -7056,12 +7056,28 @@ const getOutputs = () => {
     throw new Error("Cannot load dashlord.yml");
   }
 
+  const getSiteTools = (site) => {
+    if (!site.tools) {
+      return dashlordConfig.tools
+    }
+    return Object.keys(dashlordConfig.tools).reduce((allTools, tool) => {
+      const isToolEnabled = !(dashlordConfig.tools[tool]===false || site.tools[tool]===false);
+      return {
+        ...allTools,
+        [tool]: isToolEnabled
+      }
+    }, {})
+  }
+
   const isValid = (u) => u.url.match(/^https?:\/\//);
   const sites = dashlordConfig.urls
     .filter(isValid)
     .filter((url) =>
       urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
-    );
+    ).map(site => ({
+      ...site,
+      tools: getSiteTools(site)
+    }))
   const urls = sites.map((u) => u.url).join("\n");
 
   core.info(`urls :${urls}`);

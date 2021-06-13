@@ -1,23 +1,23 @@
 title: Test 1
+tools:
+  screenshot: true
+  nmap: true
+  zaproxy: true
+  wappalyzer: true
+  httpobs: true
+  testssl: true
+  lighthouse: true
+  thirdparties: true
+  nuclei: false
+  updownio: true
+  dependabot: true
+  codescan: true
 urls:
   - url: https://www.free.fr
     title: Free
     repositories:
       - iliad/free-ui
       - iliad/free-api
-    tools:
-      screenshot: true
-      nmap: true
-      zaproxy: true
-      wappalyzer: true
-      httpobs: true
-      testssl: true
-      lighthouse: true
-      thirdparties: true
-      nuclei: true
-      updownio: true
-      dependabot: true
-      codescan: true
   - url: invalid-url
   - url: http://chez.com
     repositories:
@@ -25,15 +25,5 @@ urls:
       - chez/chez-api
     tools:
       screenshot: false
-      nmap: true
-      zaproxy: true
-      wappalyzer: true
-      httpobs: true
-      testssl: true
-      lighthouse: true
-      thirdparties: true
-      nuclei: true
       updownio: false
-      dependabot: true
-      codescan: true
   - url: https://voila.fr

@@ -1,4 +1,4 @@
-# socialgouv/dashlord-init-action
+# socialgouv/dashlord-actions/init
 
 Parse a `dashlord.yaml` or `urls.txt` file to generate a list of urls to use in a GitHub action jobs matrix.
 
@@ -11,7 +11,6 @@ jobs:
   init:
     runs-on: ubuntu-latest
     outputs:
-      urls: ${{ steps.init.outputs.urls }}
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
@@ -27,30 +26,50 @@ jobs:
       max-parallel: 3
       matrix:
         sites: ${{ fromJson(needs.init.outputs.sites) }}
-    steps: ...
+    steps:
+      # example steps
+      - name: Mozilla HTTP Observatory
+        if: ${{ matrix.sites.tools.httpobs }}
+        continue-on-error: true
+        timeout-minutes: 15
+        uses: SocialGouv/httpobs-action@master
+        with:
+          url: "${{ matrix.sites.url }}"
+          output: "scans/http.json"
 ```
 
 ### Expected dashlord.yaml
 
 ```yml
-title: My dashlord
+title: Test 1
+tools:
+  screenshot: true
+  nmap: true
+  zaproxy: true
+  wappalyzer: true
+  httpobs: true
+  testssl: true
+  lighthouse: true
+  thirdparties: true
+  nuclei: false
+  updownio: true
+  dependabot: true
+  codescan: true
 urls:
   - url: https://www.free.fr
-    title: Some website
+    title: Free
     repositories:
       - iliad/free-ui
       - iliad/free-api
-    tools:
-      enabled:
-        - screenshot
+  - url: invalid-url
   - url: http://chez.com
     repositories:
-      - ici/chez-ui
-      - ici/chez-api
+      - chez/chez-ui
+      - chez/chez-api
     tools:
-      disabled:
-        - nmap
-        - zaproxy
+      screenshot: false
+      updownio: false
+  - url: https://voila.fr
 ```
 
 ## Hacking
