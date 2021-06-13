@@ -1,3 +1,4 @@
+import path from "path"
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
@@ -8,7 +9,14 @@ jest.useFakeTimers("modern");
 jest.setSystemTime(new Date("2021-04-06").getTime());
 
 const report = require("../report.json").find(
-  (r) => r.url === "https://www.fabrique.social.gouv.fr"
+  (r) => r.url === "https://adoption.gouv.fr"
+);
+
+const mockSampleConfig = JSON.parse(
+  jest
+    .requireActual("fs")
+    .readFileSync(path.join(__dirname, "config.json"))
+    .toString()
 );
 
 it("Should render empty Url", () => {
@@ -18,7 +26,7 @@ it("Should render empty Url", () => {
 });
 
 it("Should render full Url", () => {
-  const props = { report, url: "https://www.fabrique.social.gouv.fr" };
+  const props = { report, url: "https://adoption.gouv.fr" };
   const tree = renderer
     .create(
       <MemoryRouter>
@@ -34,7 +42,7 @@ it("Should render full Url with screenshot", () => {
     ...report,
     screenshot: true,
   };
-  const props = { report: report2, url: "https://www.fabrique.social.gouv.fr" };
+  const props = { report: report2, url: "https://adoption.gouv.fr" };
   const tree = renderer
     .create(
       <MemoryRouter>
@@ -48,7 +56,8 @@ it("Should render full Url with screenshot", () => {
 describe("Tools config", () => {
   beforeEach(() => {
     jest.mock("../config.json", () => ({
-      tools: ["http", "zap"],
+      ...mockSampleConfig,
+      tools: { http: false, zap: true, lighthouse: false },
     }));
   });
 
