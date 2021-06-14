@@ -55,6 +55,7 @@ runs:
 
         ###### put screenshot if any ######
         mv $RUNNER_TEMP/screenshot.png $OUT_PATH/screenshot.png || true
+        mv $RUNNER_TEMP/screenshot.jpeg $OUT_PATH/screenshot.jpeg || true
 
         ###### copy LHR reports ######
 
