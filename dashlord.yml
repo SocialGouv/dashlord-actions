@@ -1,4 +1,17 @@
 title: Test 1
+tools:
+  screenshot: true
+  nmap: true
+  zaproxy: true
+  wappalyzer: true
+  httpobs: true
+  testssl: true
+  lighthouse: true
+  thirdparties: true
+  nuclei: true
+  updownio: true
+  dependabot: true
+  codescan: true
 urls:
   - url: https://www.free.fr
     title: Free
