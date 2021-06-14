@@ -25,12 +25,31 @@ const getOutputs = () => {
     throw new Error("Cannot load dashlord.yml");
   }
 
+  const getSiteTools = (site) => {
+    if (!site.tools) {
+      return dashlordConfig.tools;
+    }
+    return Object.keys(dashlordConfig.tools).reduce((siteTools, tool) => {
+      // tool can be disabled at global or site level
+      const isToolDisabled =
+        dashlordConfig.tools[tool] === false || site.tools[tool] === false;
+      return {
+        ...siteTools,
+        [tool]: !isToolDisabled,
+      };
+    }, {});
+  };
+
   const isValid = (u) => u.url.match(/^https?:\/\//);
   const sites = dashlordConfig.urls
     .filter(isValid)
     .filter((url) =>
       urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
-    );
+    )
+    .map((site) => ({
+      ...site,
+      tools: getSiteTools(site),
+    }));
   const urls = sites.map((u) => u.url).join("\n");
 
   core.info(`urls :${urls}`);
