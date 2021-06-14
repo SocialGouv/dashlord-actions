@@ -3,7 +3,12 @@ import Tooltip from "rc-tooltip";
 import "rc-tooltip/assets/bootstrap.css";
 import * as React from "react";
 import { useMemo, useState } from "react";
-import BaseTable, { AutoResizer, Column, SortOrder } from "react-base-table";
+import {
+  default as BaseTable,
+  AutoResizer,
+  Column,
+  SortOrder,
+} from "react-base-table";
 import "react-base-table/styles.css";
 import { AlertTriangle, Info, Search, Slash } from "react-feather";
 import { Link } from "react-router-dom";
@@ -154,7 +159,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
     return getSortedRows(report);
   }, [sortBy, report]);
-
   return (
     <div style={{ width: "100%", height: "calc(100vh - 30px)" }}>
       <AutoResizer>

@@ -24,10 +24,16 @@ export const sortByKey = (key: string) => (a: any, b: any) => {
 
 export const isToolEnabled = (name: DashlordTool): boolean => {
   const dashlordConfig: DashlordConfig = require("./config.json");
-  const hasTools = dashlordConfig.tools && dashlordConfig.tools.length;
-  return (
-    !hasTools || !!(dashlordConfig.tools && dashlordConfig.tools.includes(name))
-  );
+  if (!dashlordConfig.tools) return true;
+  if (Array.isArray(dashlordConfig.tools)) {
+    const hasTools = dashlordConfig.tools && dashlordConfig.tools.length;
+    return (
+      !hasTools ||
+      !!(dashlordConfig.tools && dashlordConfig.tools.includes(name))
+    );
+  } else {
+    return dashlordConfig.tools[name] === true;
+  }
 };
 
 export const letterGradeValue = (grade: string): number => {
