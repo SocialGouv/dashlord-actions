@@ -15,8 +15,12 @@ const getOutputs = () => {
 
   let dashlordConfig;
   if (fs.existsSync("./dashlord.yml")) {
+    core.info('----')
     core.info(`load dashlord.yml`);
-    dashlordConfig = YAML.parse(fs.readFileSync("./dashlord.yml", "utf8"));
+    core.info('----')
+    const content = fs.readFileSync("./dashlord.yml", "utf8").toString();
+    core.info(content)
+    dashlordConfig = YAML.parse();
   } else if (fs.existsSync("./dashlord.yaml")) {
     core.info(`load dashlord.yaml`);
     dashlordConfig = YAML.parse(fs.readFileSync("./dashlord.yaml", "utf8"));
@@ -25,7 +29,7 @@ const getOutputs = () => {
     throw new Error("Cannot load dashlord.yml");
   }
 
-  core.info("dashlordConfig", dashlordConfig)
+  core.info(dashlordConfig)
 
   const getSiteTools = (site) => {
     if (!site.tools) {
