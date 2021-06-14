@@ -1,26 +1,13 @@
 const fs = require("fs");
+const path = require("path");
 const core = require("@actions/core");
+
+const sampleConfig = jest.requireActual('fs').readFileSync(path.join(__dirname, "..", "dashlord.yml")).toString()
 
 jest.mock("fs");
 
 const { getOutputs } = require("./index");
-
-const sampleConfig = `
-title: Test 1
-urls:
-  - url: https://www.free.fr
-    title: Free
-    repositories:
-      - iliad/free-ui
-      - iliad/free-api
-  - url: invalid-url
-  - url: http://chez.com
-    repositories:
-      - chez/chez-ui
-      - chez/chez-api
-  - url: https://voila.fr
-`;
-
+ 
 let inputs = {};
 
 describe("should parse dashlord config", () => {
@@ -38,7 +25,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single invalid url input", async () => {
@@ -46,7 +33,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single valid url input", async () => {
@@ -54,7 +41,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
     test("when multiple urls input", async () => {
@@ -62,7 +49,7 @@ describe("should parse dashlord config", () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
-    expect(outputs.urls_json).toMatchSnapshot();
+    expect(outputs.sites).toMatchSnapshot();
   });
 
 });

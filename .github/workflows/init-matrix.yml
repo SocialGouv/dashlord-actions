@@ -17,8 +17,8 @@ jobs:
     name: Prepare full scan
     outputs:
       urls: ${{ steps.init.outputs.urls }}
-      urls_json: ${{ steps.init.outputs.urls_json }}
-      json: ${{ steps.init.outputs.json }}
+      sites: ${{ steps.init.outputs.sites }}
+      config: ${{ steps.init.outputs.config }}
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -27,8 +27,9 @@ jobs:
         uses: "./init"
       - id: test
         run: |
-          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api]},{url:http://chez.com,repositories:[chez/chez-ui,chez/chez-api]},{url:https://voila.fr}]'
-          RESULT="${{ steps.init.outputs.urls_json }}"
+          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api],tools:{screenshot:true,nmap:true,zaproxy:true,wappalyzer:true,httpobs:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true}},{url:http://chez.com,repositories:[chez/chez-ui,chez/chez-api],tools:{screenshot:false,nmap:true,zaproxy:true,wappalyzer:true,httpobs:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:false,dependabot:true,codescan:true}},{url:https://voila.fr,tools:{screenshot:true,nmap:true,zaproxy:true,wappalyzer:true,httpobs:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true}}]'
+          RESULT="${{ steps.init.outputs.sites }}"
+          echo $RESULT
           [[ "$EXPECTED" == "$RESULT" ]]
 
   scans:
@@ -40,19 +41,19 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        urls: ${{ fromJson(needs.test1.outputs.urls_json) }}
+        sites: ${{ fromJson(needs.test1.outputs.sites) }}
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "${{ matrix.urls.url }}"
-          echo "${{ join(matrix.urls.repositories) }}"
+          echo "${{ matrix.sites.url }}"
+          echo "${{ join(matrix.sites.repositories) }}"
   test2:
     runs-on: ubuntu-latest
     name: Prepare scan with url input
     outputs:
       urls: ${{ steps.init.outputs.urls }}
-      urls_json: ${{ steps.init.outputs.urls_json }}
-      json: ${{ steps.init.outputs.json }}
+      sites: ${{ steps.init.outputs.sites }}
+      config: ${{ steps.init.outputs.config }}
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -64,8 +65,9 @@ jobs:
           url: "https://www.free.fr,https://voila.fr"
       - id: test
         run: |
-          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api]},{url:https://voila.fr}]'
-          RESULT="${{ steps.init.outputs.urls_json }}"
+          EXPECTED='[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api],tools:{screenshot:true,nmap:true,zaproxy:true,wappalyzer:true,httpobs:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true}},{url:https://voila.fr,tools:{screenshot:true,nmap:true,zaproxy:true,wappalyzer:true,httpobs:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true}}]'
+          RESULT="${{ steps.init.outputs.sites }}"
+          echo $RESULT
           [[ "$EXPECTED" == "$RESULT" ]]
 
   scans2:
@@ -77,13 +79,13 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        urls: ${{ fromJson(needs.test2.outputs.urls_json) }}
+        sites: ${{ fromJson(needs.test2.outputs.sites) }}
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "${{ matrix.urls.url }}"
-          echo "${{ join(matrix.urls.repositories) }}"
-      - if: ${{ matrix.urls.repositories }}
+          echo "${{ matrix.sites.url }}"
+          echo "${{ join(matrix.sites.repositories) }}"
+      - if: ${{ matrix.sites.repositories }}
         run: |
-          echo "for ${{ matrix.urls.url }}"
-          echo "if ${{ join(matrix.urls.repositories) }}"
+          echo "for ${{ matrix.sites.url }}"
+          echo "if ${{ join(matrix.sites.repositories) }}"

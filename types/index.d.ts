@@ -23,7 +23,7 @@ type DashlordTool =
 
 type DashlordConfig = {
   title: string;
-  tools?: DashlordTool[];
+  tools?: DashlordTool[] | Record<DashlordTool, boolean>;
   urls: UrlConfig[];
 };
 

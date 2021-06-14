@@ -1,4 +1,4 @@
-# dashlord-report-action
+# socialgouv/dashlord-actions/report
 
 This GitHub action build a web report based on some [dashlord](https://github.com/socialgouv/dashlord) content.
 
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - id: dashlord-report
-        uses: SocialGouv/dashlord-report-action@master
+        uses: SocialGouv/dashlord-actions/report@main
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
@@ -37,5 +37,11 @@ jobs:
 
 - A first step is to build a light index of latest scans in `www/src/report.json`. this is done by [`./src/index.js`](./src/index.js).
 - The report website itself live in the `www` folder.
+
+```sh
+cd www
+yarn
+yarn start
+```
 
 💡 To work with fresh data, get the `report` artifact from some of your `Build website` dashlord job.

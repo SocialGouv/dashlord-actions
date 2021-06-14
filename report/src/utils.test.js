@@ -47,7 +47,6 @@ describe("getUrls", () => {
       //@ts-expect-error
       .mockImplementationOnce(() => true) // yaml
       .mockImplementationOnce(() => false) // yml
-      .mockImplementationOnce(() => false); //txt
 
     fs.readFileSync.mockReturnValueOnce(sampleConfig);
 
@@ -59,7 +58,6 @@ describe("getUrls", () => {
       //@ts-expect-error
       .mockImplementationOnce(() => false) // yaml
       .mockImplementationOnce(() => true) // yml
-      .mockImplementationOnce(() => false); //txt
 
     fs.readFileSync.mockReturnValueOnce(sampleConfig);
 
