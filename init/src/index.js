@@ -29,9 +29,12 @@ const getOutputs = () => {
     throw new Error("Cannot load dashlord.yml");
   }
 
-  core.info(dashlordConfig)
+  core.info(JSON.stringify(dashlordConfig))
 
   const getSiteTools = (site) => {
+    if (!dashlordConfig.tools) {
+      return {}
+    }
     if (!site.tools) {
       return dashlordConfig.tools;
     }
