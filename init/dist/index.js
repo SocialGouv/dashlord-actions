@@ -7051,7 +7051,7 @@ const getOutputs = () => {
     core.info('----')
     const content = fs.readFileSync("./dashlord.yml", "utf8").toString();
     core.info(content)
-    dashlordConfig = YAML.parse();
+    dashlordConfig = YAML.parse(content);
   } else if (fs.existsSync("./dashlord.yaml")) {
     core.info(`load dashlord.yaml`);
     dashlordConfig = YAML.parse(fs.readFileSync("./dashlord.yaml", "utf8"));
