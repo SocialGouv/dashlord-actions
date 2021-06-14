@@ -1,0 +1,44 @@
+{
+  "title": "Test 1",
+  "tools": {
+    "screenshot": true,
+    "nmap": true,
+    "zaproxy": true,
+    "wappalyzer": true,
+    "httpobs": true,
+    "testssl": true,
+    "lighthouse": true,
+    "thirdparties": true,
+    "nuclei": false,
+    "updownio": true,
+    "dependabot": true,
+    "codescan": true
+  },
+  "urls": [
+    {
+      "url": "https://www.free.fr",
+      "title": "Free",
+      "repositories": [
+        "iliad/free-ui",
+        "iliad/free-api"
+      ]
+    },
+    {
+      "url": "invalid-url"
+    },
+    {
+      "url": "http://chez.com",
+      "repositories": [
+        "chez/chez-ui",
+        "chez/chez-api"
+      ],
+      "tools": {
+        "screenshot": false,
+        "updownio": false
+      }
+    },
+    {
+      "url": "https://voila.fr"
+    }
+  ]
+}
