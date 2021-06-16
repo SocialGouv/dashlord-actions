@@ -292,7 +292,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                         hash: "http",
                       }}
                     >
-                      <GradeBadge grade={summary.httpGrade} />;
+                      <GradeBadge grade={summary.httpGrade} />
                     </Link>
                   );
                 }}
