@@ -60,7 +60,6 @@ const nucleiCleanup = (result, url) =>
   result.map &&
   result
     .map((r) => omit(r, ["request", "response"]))
-    .filter((entry) => entry.host === url);
 
 /**
  * Minify Lighthouse JSON data
