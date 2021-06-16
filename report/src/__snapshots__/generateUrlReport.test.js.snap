@@ -3,7 +3,8 @@
 exports[`generateUrlReport should allow empty/invalid reports 1`] = `
 Object {
   "codescan": Object {
-    "data": "codescanalerts.json",
+    "report": "codescanalerts.json",
+    "totalCount": 42,
   },
   "dependabot": null,
   "http": null,
@@ -12,7 +13,7 @@ Object {
   "nuclei": null,
   "screenshot": false,
   "summary": Object {
-    "codescanCount": undefined,
+    "codescanCount": 42,
     "codescanGrade": undefined,
   },
   "testssl": null,
@@ -20,7 +21,7 @@ Object {
   "updownio": null,
   "url": "https://www.test.com",
   "wappalyzer": Object {
-    "data": "wappalyzer.json",
+    "report": "wappalyzer.json",
   },
   "zap": null,
 }
@@ -29,13 +30,14 @@ Object {
 exports[`generateUrlReport should generate latest report for a valid url 1`] = `
 Object {
   "codescan": Object {
-    "data": "codescanalerts.json",
+    "report": "codescanalerts.json",
+    "totalCount": 42,
   },
   "dependabot": Object {
-    "data": "dependabotalerts.json",
+    "report": "dependabotalerts.json",
   },
   "http": Object {
-    "data": "http.json",
+    "report": "http.json",
   },
   "lhr": Object {
     "audits": Object {},
@@ -46,29 +48,35 @@ Object {
     "runWarnings": undefined,
   },
   "nmap": Object {
-    "data": "nmapvuln.json",
+    "report": "nmap.json",
   },
-  "nuclei": Array [],
+  "nuclei": Array [
+    Object {
+      "report": "nuclei.json",
+    },
+  ],
   "screenshot": false,
   "summary": Object {
-    "codescanCount": undefined,
+    "codescanCount": 42,
     "codescanGrade": undefined,
   },
-  "testssl": Object {
-    "data": "testssl.json",
-  },
+  "testssl": Array [
+    Object {
+      "report": "testssl.json",
+    },
+  ],
   "thirdparties": Object {
-    "data": "thirdparties.json",
+    "report": "thirdparties.json",
   },
   "updownio": Object {
-    "data": "updownio.json",
+    "report": "updownio.json",
   },
   "url": "https://www.test.com",
   "wappalyzer": Object {
-    "data": "wappalyzer.json",
+    "report": "wappalyzer.json",
   },
   "zap": Object {
-    "data": "zap.json",
+    "report": "zap.json",
     "site": undefined,
   },
 }

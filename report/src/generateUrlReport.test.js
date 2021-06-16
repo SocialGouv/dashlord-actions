@@ -21,7 +21,7 @@ const mockJson = (name, data) =>
     { virtual: true }
   );
 
-// for some reason jest.resetModules doesnt work with virtual mocks
+// for some reason jest.resetModules doesnt work with virtual JSON mocks
 const unMockJson = (name) => {
   jest.unmock(`results/${b64}/9876/${name}`);
 };
@@ -45,17 +45,17 @@ describe("generateUrlReport", () => {
     fs.readdirSync.mockImplementationOnce(() => ["9876", "1234", "5678"]); // assume scans folders use a sortable date-format
 
     // mock all required files
-    mockJson("codescanalerts.json");
-    mockJson("dependabotalerts.json");
-    mockJson("http.json");
-    mockJson("lhr.json");
-    mockJson("nmapvuln.json");
-    mockJson("nuclei.json", []);
-    mockJson("testssl.json");
-    mockJson("thirdparties.json");
-    mockJson("updownio.json");
-    mockJson("wappalyzer.json");
-    mockJson("zap.json");
+    mockJson("codescanalerts.json", {report: "codescanalerts.json", totalCount: 42});
+    mockJson("dependabotalerts.json", {report: "dependabotalerts.json"});
+    mockJson("http.json", {report: "http.json"});
+    mockJson("lhr.json", {report: "lhr.json"});
+    mockJson("nmapvuln.json", {report: "nmap.json"});
+    mockJson("nuclei.json", [{report: "nuclei.json"}]);
+    mockJson("testssl.json", [{report: "testssl.json"}]);
+    mockJson("thirdparties.json", {report: "thirdparties.json"});
+    mockJson("updownio.json", {report: "updownio.json"});
+    mockJson("wappalyzer.json", {report: "wappalyzer.json"});
+    mockJson("zap.json", {report: "zap.json"});
 
     expect(
       generateUrlReport({
