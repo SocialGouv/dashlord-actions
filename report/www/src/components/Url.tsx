@@ -20,8 +20,22 @@ import { Nmap } from "./Nmap";
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
+const Anchor = ({ id }: { id: string }) => (
+  <div id={id} style={{ marginBottom: 30 }}></div>
+);
+
 export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
+  React.useEffect(() => {
+    const hash = document.location.hash.split("#");
+    if (hash.length === 3) {
+      // double hash + HashRouter workaround
+      const target = document.getElementById(hash[2]);
+      if (target) {
+        target.scrollIntoView();
+      }
+    }
+  }, [report]);
   if (!report) {
     return <div>No data available for {url}</div>;
   }
@@ -90,6 +104,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
       </Jumbotron>
       {(isToolEnabled("lighthouse") && report.lhr && (
         <React.Fragment>
+          <Anchor id="lighthouse" />
           <LightHouse
             data={report.lhr}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
@@ -100,30 +115,43 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         </React.Fragment>
       )) ||
         null}
-      {(isToolEnabled("dependabot") && report.dependabot && report.dependabot.repositories && (
-        <React.Fragment>
-          {report.dependabot.repositories.filter(Boolean).map((repository) => {
-            return (
-              <Dependabot key={repository.url} data={repository} url={url} />
-            );
-          })}
-          <br />
-        </React.Fragment>
-      )) ||
+      {(isToolEnabled("dependabot") &&
+        report.dependabot &&
+        report.dependabot.repositories && (
+          <React.Fragment>
+            <Anchor id="dependabot" />
+            {report.dependabot.repositories
+              .filter(Boolean)
+              .map((repository) => {
+                return (
+                  <Dependabot
+                    key={repository.url}
+                    data={repository}
+                    url={url}
+                  />
+                );
+              })}
+            <br />
+          </React.Fragment>
+        )) ||
         null}
-      {(isToolEnabled("codescan") && report.codescan && report.codescan.repositories && (
-        <React.Fragment>
-          {report.codescan.repositories.filter(Boolean).map((repository) => {
-            return (
-              <Codescan key={repository.url} data={repository} url={url} />
-            );
-          })}
-          <br />
-        </React.Fragment>
-      )) ||
+      {(isToolEnabled("codescan") &&
+        report.codescan &&
+        report.codescan.repositories && (
+          <React.Fragment>
+            <Anchor id="codescan" />
+            {report.codescan.repositories.filter(Boolean).map((repository) => {
+              return (
+                <Codescan key={repository.url} data={repository} url={url} />
+              );
+            })}
+            <br />
+          </React.Fragment>
+        )) ||
         null}
       {(isToolEnabled("updownio") && report.updownio && (
         <React.Fragment>
+          <Anchor id="updownio" />
           <UpdownIo data={report.updownio} url={url} />
           <br />
         </React.Fragment>
@@ -131,6 +159,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("testssl") && report.testssl && (
         <React.Fragment>
+          <Anchor id="testssl" />
           <TestSSL
             data={report.testssl}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
@@ -143,6 +172,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("nmap") && report.nmap && (
         <React.Fragment>
+          <Anchor id="nmap" />
           <Nmap
             data={report.nmap}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
@@ -155,6 +185,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("http") && report.http && (
         <React.Fragment>
+          <Anchor id="http" />
           <HTTP data={report.http} />
           <br />
         </React.Fragment>
@@ -162,6 +193,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("thirdparties") && report.thirdparties && (
         <React.Fragment>
+          <Anchor id="thirdparties" />
           <Trackers data={report.thirdparties} />
           <br />
         </React.Fragment>
@@ -169,6 +201,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("zap") && report.zap && (
         <React.Fragment>
+          <Anchor id="zap" />
           <Owasp
             data={report.zap}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
@@ -181,6 +214,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("nuclei") && report.nuclei && (
         <React.Fragment>
+          <Anchor id="nuclei" />
           <Nuclei data={report.nuclei} />
           <br />
         </React.Fragment>
@@ -188,6 +222,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         null}
       {(isToolEnabled("wappalyzer") && report.wappalyzer && (
         <React.Fragment>
+          <Anchor id="wappalyzer" />
           <Wappalyzer data={report.wappalyzer} />
           <br />
         </React.Fragment>
