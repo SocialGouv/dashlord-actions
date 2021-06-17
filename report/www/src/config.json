@@ -3,13 +3,13 @@
   "tools": {
     "screenshot": true,
     "nmap": true,
-    "zaproxy": true,
+    "zap": true,
     "wappalyzer": true,
     "httpobs": true,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,
-    "nuclei": false,
+    "nuclei": true,
     "updownio": true,
     "dependabot": true,
     "codescan": true
