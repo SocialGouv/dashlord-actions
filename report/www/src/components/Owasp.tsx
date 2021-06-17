@@ -20,12 +20,12 @@ const OwaspBadge = (row: ZapReportSiteAlert) => {
     severity === "0"
       ? "info"
       : severity === "1"
-        ? "warning"
-        : severity === "2"
-          ? "danger"
-          : severity === "3"
-            ? "danger"
-            : "info";
+      ? "info"
+      : severity === "2"
+      ? "warning"
+      : severity === "3"
+      ? "danger"
+      : "info";
   return (
     <Badge className="w-100" variant={variant}>
       {row.riskdesc}
@@ -37,7 +37,7 @@ type OwaspProps = { data: ZapReport; url: string };
 
 export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
   const alerts =
-    data && data.site && data.site.flatMap((site) => site.alerts) || [];
+    (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
   alerts.sort(orderBySeverity);
   return (
     (alerts.length && (
