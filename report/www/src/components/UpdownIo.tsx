@@ -19,6 +19,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
         title="Temps de réponse"
         info="Informations collectées par updown.io"
         url={urlUpdownio}
+        isExternal={true}
       >
         <Row>
           <Col xs={12} md={4} className="text-center mb-3">
@@ -77,10 +78,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                 <Card.Body style={{ padding: 5 }}>
                   <Card.Title>APDEX</Card.Title>
                   <div>
-                    <Grade
-                      grade={data.apdexGrade}
-                      label={data.metrics.apdex}
-                    />
+                    <Grade grade={data.apdexGrade} label={data.metrics.apdex} />
                   </div>
                 </Card.Body>
               </Card>

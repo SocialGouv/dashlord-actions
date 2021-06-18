@@ -11,6 +11,7 @@ type PanelProps = {
   url?: string;
   style?: object;
   className?: string;
+  isExternal?: boolean;
 };
 
 export const Panel: React.FC<PanelProps> = ({
@@ -20,6 +21,7 @@ export const Panel: React.FC<PanelProps> = ({
   url,
   style,
   className,
+  isExternal = false,
 }) => (
   <Card style={{ marginBottom: 20, ...style }} className={className}>
     <Card.Title style={{ background: "#000091", color: "white", padding: 10 }}>
@@ -32,11 +34,7 @@ export const Panel: React.FC<PanelProps> = ({
         </span>
       )}
       {url &&
-        (url.startsWith("/") ? (
-          <Link to={url} style={{ color: "white", float: "right" }}>
-            <Search />
-          </Link>
-        ) : (
+        (isExternal ? (
           <a
             style={{ color: "white", float: "right" }}
             href={url}
@@ -45,6 +43,10 @@ export const Panel: React.FC<PanelProps> = ({
           >
             <ExternalLink />
           </a>
+        ) : (
+          <Link to={url} style={{ color: "white", float: "right" }}>
+            <Search />
+          </Link>
         ))}
     </Card.Title>
     <Card.Body>{children}</Card.Body>
