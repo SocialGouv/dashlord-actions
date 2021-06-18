@@ -157,6 +157,59 @@ exports[`Should render empty Sidebar 1`] = `
             Technologies
           </a>
         </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/trends"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="20"
+                y2="10"
+              />
+              <line
+                x1="18"
+                x2="18"
+                y1="20"
+                y2="4"
+              />
+              <line
+                x1="6"
+                x2="6"
+                y1="20"
+                y2="16"
+              />
+            </svg>
+            Évolutions
+          </a>
+        </li>
       </ul>
     </div>
     <h6
@@ -328,6 +381,59 @@ exports[`Should render full Sidebar 1`] = `
               />
             </svg>
             Technologies
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          style={
+            Object {
+              "whiteSpace": "pre",
+            }
+          }
+        >
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/trends"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginRight": 5,
+                  "marginTop": -5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="20"
+                y2="10"
+              />
+              <line
+                x1="18"
+                x2="18"
+                y1="20"
+                y2="4"
+              />
+              <line
+                x1="6"
+                x2="6"
+                y1="20"
+                y2="16"
+              />
+            </svg>
+            Évolutions
           </a>
         </li>
       </ul>

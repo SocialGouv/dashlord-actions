@@ -166,14 +166,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/lhr.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -186,17 +185,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -760,14 +758,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/testssl.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -780,17 +777,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -879,14 +875,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/nmapvuln.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -899,17 +894,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -1288,14 +1282,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/zap.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -1308,17 +1301,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -2063,14 +2055,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/lhr.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -2083,17 +2074,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -2657,14 +2647,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/testssl.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -2677,17 +2666,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -2776,14 +2764,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/nmapvuln.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -2796,17 +2783,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -3185,14 +3171,13 @@ Array [
         </span>
         <a
           href="/report/aHR0cHM6Ly9hZG9wdGlvbi5nb3V2LmZy/zap.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -3205,17 +3190,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
@@ -3938,14 +3922,13 @@ Array [
         </span>
         <a
           href="/report/dW5kZWZpbmVk/zap.html"
-          rel="noreferrer noopener"
+          onClick={[Function]}
           style={
             Object {
               "color": "white",
               "float": "right",
             }
           }
-          target="_blank"
         >
           <svg
             fill="none"
@@ -3958,17 +3941,16 @@ Array [
             width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-            />
-            <polyline
-              points="15 3 21 3 21 9"
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
             />
             <line
-              x1="10"
-              x2="21"
-              y1="14"
-              y2="3"
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
             />
           </svg>
         </a>
