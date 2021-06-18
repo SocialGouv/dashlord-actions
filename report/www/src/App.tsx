@@ -12,14 +12,15 @@ import {
 import { Sidebar } from "./components/Sidebar";
 import { Topbar } from "./components/Topbar";
 import { Dashboard } from "./components/Dashboard";
+import { Trends } from "./components/Trends";
 import { Url } from "./components/Url";
 import { Intro } from "./components/Intro";
-import { ScrollToTop } from  "./components/ScrollToTop";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { About } from "./components/About";
 import { WappalyzerDashboard } from "./components/WappalyzerDashboard";
 
 const report: DashLordReport = require("./report.json");
-
+const trends: Trends = require("./trends.json");
 type CategoryRouteProps = { report: DashLordReport };
 
 // for some reason react-router `:url*` didnt work, use `*` only
@@ -30,11 +31,13 @@ interface CategoryParamTypes {
 const CategoryRoute: React.FC<CategoryRouteProps> = (props) => {
   const params = useParams<CategoryParamTypes>();
   const category = window.decodeURIComponent(params.category);
-  const urls = props.report.filter((u) => u.category === category)
+  const urls = props.report.filter((u) => u.category === category);
   return (
     <React.Fragment>
       <br />
-      <h3>{category} : {urls.length} urls</h3>
+      <h3>
+        {category} : {urls.length} urls
+      </h3>
       <Dashboard report={urls} />
     </React.Fragment>
   );
@@ -49,11 +52,13 @@ type TagRouteProps = { report: DashLordReport };
 const TagRoute: React.FC<TagRouteProps> = (props) => {
   const params = useParams<TagParamTypes>();
   const tag = window.decodeURIComponent(params.tag);
-  const urls = props.report.filter((u) => u.tags && u.tags.includes(tag))
+  const urls = props.report.filter((u) => u.tags && u.tags.includes(tag));
   return (
     <React.Fragment>
       <br />
-      <h3>{tag} : {urls.length} urls</h3>
+      <h3>
+        {tag} : {urls.length} urls
+      </h3>
       <Dashboard report={urls} />
     </React.Fragment>
   );
@@ -70,10 +75,14 @@ const UrlRoute: React.FC<UrlRouteProps> = (props) => {
   const url = window.decodeURIComponent(params["0"]);
   const urlData = props.report.find((u) => u.url === url);
   if (!urlData) {
-    return <Alert variant="danger">Impossible de trouver le rapport pour {url}</Alert>
+    return (
+      <Alert variant="danger">
+        Impossible de trouver le rapport pour {url}
+      </Alert>
+    );
   }
-  return <Url url={url} report={urlData} />
-}
+  return <Url url={url} report={urlData} />;
+};
 
 const App = () => {
   return (
@@ -91,6 +100,9 @@ const App = () => {
                 </Route>
                 <Route path="/dashboard">
                   <Dashboard report={report} />
+                </Route>
+                <Route path="/trends">
+                  <Trends trends={trends} />
                 </Route>
                 <Route path="/category/:category">
                   <CategoryRoute report={report} />

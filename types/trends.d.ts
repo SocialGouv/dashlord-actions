@@ -16,4 +16,6 @@ type GitHistory = GitHistoryEntry[];
 
 type UrlMetricsHistoryValue = { date: string; value: string | number };
 type UrlMetricsHistoryValues = Record<string, UrlMetricsHistoryValue[]>;
-type UrlMetricsHistory = Record<string, UrlMetricsHistoryValues>;
+
+
+type Trends = Record<string, UrlMetricsHistoryValues>;

@@ -8,7 +8,7 @@ const { Repository } = require("nodegit");
  * @param {DashLordReport} latestReport latest report (as its not yet in GIT)
  * @param {number} maxDaysHistory GIT history depth in days
  *
- * @returns {Promise<UrlMetricsHistory>} minified JSON content
+ * @returns {Promise<Trends>} minified JSON content
  */
 async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
   const repo = await Repository.open(gitPath);
@@ -61,13 +61,13 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
       })
   );
 
-  /** @type UrlMetricsHistory */
+  /** @type Trends */
   const urlsHistory = {};
 
   // add the latest report first as a commit
   const allCommits = [
     {
-      date: new Date().toISOString(),
+      date: new Date(),
       summaries: latestReport.map(({ url, summary }) => ({
         url,
         summary,
@@ -75,6 +75,8 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
     },
     ...commits,
   ];
+
+  allCommits.reverse();
 
   // compile history of values for each url and metric
   allCommits.forEach(({ date, summaries }) => {
@@ -102,21 +104,3 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
 
 module.exports = generateTrends;
 
-// const uniqify = (/** @type {any[]} */ arr) => Array.from(new Set(arr));
-
-// const gitPath = "/Users/julienb/projects/mas/dashlord/dashlord-fabrique";
-
-// getSummaries(gitPath).then((results) => {
-//   console.log(JSON.stringify(results, null, 2));
-//   Object.keys(results).forEach((url) => {
-//     let hasChanges = false;
-//     Object.keys(results[url]).forEach((key) => {
-//       const values = results[url][key].map(({ date, value }) => value);
-//       const uniqueValues = uniqify(values);
-//       if (uniqueValues.length > 1) {
-//         hasChanges = true;
-//         console.log(`${url}, ${key} : ${uniqueValues.reverse()}`);
-//       }
-//     });
-//   });
-// });

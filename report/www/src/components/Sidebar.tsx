@@ -75,7 +75,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ report }) => {
         )) ||
           null}
 
-        {isToolEnabled("wappalyzer") && (
+        {(isToolEnabled("wappalyzer") && (
           <div>
             <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Rapports</span>
@@ -100,9 +100,29 @@ export const Sidebar: React.FC<SidebarProps> = ({ report }) => {
                   Technologies
                 </NavLink>
               </li>
+              <li
+                className="nav-item"
+                style={{
+                  whiteSpace: "pre",
+                }}
+              >
+                <NavLink
+                  className="nav-link"
+                  to={`/trends`}
+                  activeClassName="active"
+                  exact={true}
+                >
+                  <BarChart
+                    size={16}
+                    style={{ marginTop: -5, marginRight: 5 }}
+                  />
+                  Évolutions
+                </NavLink>
+              </li>
             </ul>
           </div>
-        )||null}
+        )) ||
+          null}
 
         <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
           <span>Urls</span>
