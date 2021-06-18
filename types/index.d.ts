@@ -1,4 +1,5 @@
 /// <reference path="./summary.d.ts" />
+/// <reference path="./trends.d.ts" />
 
 type UrlConfig = {
   url: string;

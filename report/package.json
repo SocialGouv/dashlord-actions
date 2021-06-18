@@ -6,15 +6,19 @@
   "license": "Apache-2.0",
   "types": "index.d.ts",
   "dependencies": {
+    "file-util-git-history": "^3.0.1",
     "lodash.omit": "^4.5.0",
     "lodash.pick": "^4.4.0",
+    "nodegit": "^0.27.0",
     "yaml": "^1.10.2"
   },
   "scripts": {
     "test": "jest"
   },
   "jest": {
-    "modulePathIgnorePatterns": ["<rootDir>/www"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/www"
+    ]
   },
   "devDependencies": {
     "@socialgouv/eslint-config-strict": "^1.0.0-beta.5",
@@ -23,6 +27,7 @@
     "@types/lodash.pick": "^4.4.6",
     "@types/node": "^14.14.37",
     "@types/node-fetch": "^2.5.10",
+    "@types/nodegit": "^0.27.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.23.0",
     "jest": "^26.6.3",
