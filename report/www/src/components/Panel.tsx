@@ -1,7 +1,8 @@
 import * as React from "react";
 
 import { Card } from "react-bootstrap";
-import { ExternalLink } from "react-feather";
+import { ExternalLink, Search } from "react-feather";
+import { Link } from "react-router-dom";
 
 type PanelProps = {
   title: string;
@@ -9,10 +10,19 @@ type PanelProps = {
   info?: string | React.ReactNode;
   url?: string;
   style?: object;
-  className?:string;
+  className?: string;
+  isExternal?: boolean;
 };
 
-export const Panel: React.FC<PanelProps> = ({ title, children, info, url, style, className }) => (
+export const Panel: React.FC<PanelProps> = ({
+  title,
+  children,
+  info,
+  url,
+  style,
+  className,
+  isExternal = false,
+}) => (
   <Card style={{ marginBottom: 20, ...style }} className={className}>
     <Card.Title style={{ background: "#000091", color: "white", padding: 10 }}>
       {title}
@@ -23,16 +33,21 @@ export const Panel: React.FC<PanelProps> = ({ title, children, info, url, style,
           {info}
         </span>
       )}
-      {url && (
-        <a
-          style={{ color: "white", float: "right" }}
-          href={url}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <ExternalLink />
-        </a>
-      )}
+      {url &&
+        (isExternal ? (
+          <a
+            style={{ color: "white", float: "right" }}
+            href={url}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <ExternalLink />
+          </a>
+        ) : (
+          <Link to={url} style={{ color: "white", float: "right" }}>
+            <Search />
+          </Link>
+        ))}
     </Card.Title>
     <Card.Body>{children}</Card.Body>
   </Card>

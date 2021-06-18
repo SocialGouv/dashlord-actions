@@ -42,6 +42,7 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
   return (
     (alerts.length && (
       <Panel
+        isExternal={true}
         title="OWASP"
         url={url}
         info="Scan de vulnérabiliés OWASP baseline"

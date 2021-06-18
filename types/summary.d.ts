@@ -11,8 +11,12 @@ type UrlReportSummary = {
   lighthouse_performanceGrade?: string;
   lighthouse_seo?: number;
   lighthouse_seoGrade?: string;
+  lighthouse_pwa?: number;
+  lighthouse_pwaGrade?: string;
   lighthouse_accessibility?: number;
   lighthouse_accessibilityGrade?: string;
+  "lighthouse_best-practices"?: number;
+  "lighthouse_best-practicesGrade"?: string;
   nmapGrade?: string;
   nmapOpenPortsCount?: number;
   nmapOpenPortsGrade?: string;

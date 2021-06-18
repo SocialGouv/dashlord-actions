@@ -4,6 +4,7 @@ const YAML = require("yaml");
 
 const { getUrls, writeFile, getConfig } = require("./utils");
 const generateUrlReport = require("./generateUrlReport");
+const generateTrends = require("./trends");
 
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
 
@@ -20,7 +21,7 @@ const generateReport = () => {
   return urls;
 };
 
-if (require.main === module) {
+const generateJsons = async () => {
   const report = generateReport();
 
   const dashlordConfig = getConfig();
@@ -36,8 +37,20 @@ if (require.main === module) {
     path.join(__dirname, "..", "www", "src", "report.json"),
     JSON.stringify(report, null, 2)
   );
-}
+
+  const trends = await generateTrends(DASHLORD_REPO_PATH, report);
+
+  // copy dashlord trends.json for the website
+  writeFile(
+    path.join(__dirname, "..", "www", "src", "trends.json"),
+    JSON.stringify(trends, null, 2)
+  );
+};
 
 module.exports = {
   generateReport,
 };
+
+if (require.main === module) {
+  generateJsons();
+}
