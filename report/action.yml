@@ -18,15 +18,17 @@ runs:
         export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
         export DASHLORD_REPO_PATH=${{ github.workspace }};
         export PUBLIC_URL=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
+        export ACTION_PATH=${{ github.action_path }}
 
         echo "REPOSITORY_NAME: $REPOSITORY_NAME"
+        echo "ACTION_PATH: $ACTION_PATH"
         echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
         echo "PUBLIC_URL: $PUBLIC_URL"
 
         cd ${{ github.action_path }}
         yarn
         # this creates a report.json to build the website
-        node src > www/src/report.json
+        node src
         cd www
         yarn
         CI=false yarn build

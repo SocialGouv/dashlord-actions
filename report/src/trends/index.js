@@ -1,5 +1,6 @@
 const { gitHistory } = require("file-util-git-history");
 const { Repository } = require("nodegit");
+const core = require("@actions/core");
 
 /**
  * Get history of urls metrics based on report.json GIT changes
@@ -11,9 +12,11 @@ const { Repository } = require("nodegit");
  * @returns {Promise<Trends>} minified JSON content
  */
 async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
+  core.info(`Open GIT repo ${gitPath}`);
   const repo = await Repository.open(gitPath);
 
   // get history for the report file
+  core.info(`Open GIT history for report.json`);
   /** @type {GitHistory} */
   const history = await gitHistory(`${gitPath}/report.json`);
 
@@ -49,6 +52,7 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
       // extract summary content for each commit
       .map(async ({ /** @type {Commit} */ commit }) => {
         commit.repo = repo; // for some reason this is not populated by default and prevents `getEntry`
+        core.info(`Get GIT entry for ${commit.sha()}`);
         const treeEntry = await commit.getEntry("report.json");
         const blob = await treeEntry.getBlob();
         /** @type {DashLordReport} */
@@ -78,6 +82,8 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
 
   allCommits.reverse();
 
+  core.info(`Compile values`);
+
   // compile history of values for each url and metric
   allCommits.forEach(({ date, summaries }) => {
     summaries &&
@@ -103,4 +109,3 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
 }
 
 module.exports = generateTrends;
-
