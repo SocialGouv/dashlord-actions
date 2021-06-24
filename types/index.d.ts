@@ -20,7 +20,8 @@ type DashlordTool =
   | "wappalyzer"
   | "dependabot"
   | "codescan"
-  | "zap";
+  | "zap"
+  | "stats";
 
 type DashlordConfig = {
   title: string;
@@ -336,6 +337,12 @@ type UrlReport = UrlConfig & {
   codescan?: CodescanReport | null;
   screenshot?: boolean | null;
   summary: UrlReportSummary;
+  stats?: StatsReport | null;
 };
 
 type DashLordReport = UrlReport[];
+
+type StatsReport = {
+  grade: string;
+  uri: string;
+};

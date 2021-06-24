@@ -56,6 +56,7 @@ describe("generateUrlReport", () => {
     mockJson("updownio.json", {report: "updownio.json"});
     mockJson("wappalyzer.json", {report: "wappalyzer.json"});
     mockJson("zap.json", {report: "zap.json"});
+    mockJson("stats.json", {report: "stats.json"});
 
     expect(
       generateUrlReport({
@@ -75,6 +76,7 @@ describe("generateUrlReport", () => {
     unMockJson("updownio.json");
     unMockJson("wappalyzer.json");
     unMockJson("zap.json");
+    unMockJson("stats.json");
   });
   test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder

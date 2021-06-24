@@ -1194,6 +1194,90 @@ exports[`Should render empty Dashboard 1`] = `
                 ↑
               </div>
             </div>
+            <div
+              className="BaseTable__header-cell BaseTable__header-cell--align-center BaseTable__header-cell--sortable"
+              data-key="stats"
+              onClick={[Function]}
+              role="gridcell"
+              style={
+                Object {
+                  "WebkitFlex": "0 1 auto",
+                  "flex": "0 1 auto",
+                  "msFlex": "0 1 auto",
+                  "overflow": "hidden",
+                  "width": 120,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "fontSize": "0.9em",
+                    }
+                  }
+                >
+                  Stats
+                  <br />
+                  <svg
+                    fill="none"
+                    height={16}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="16"
+                      y2="12"
+                    />
+                    <line
+                      x1="12"
+                      x2="12.01"
+                      y1="8"
+                      y2="8"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="BaseTable__sort-indicator BaseTable__sort-indicator"
+                style={
+                  Object {
+                    "height": "16px",
+                    "lineHeight": "16px",
+                    "textAlign": "center",
+                    "userSelect": "none",
+                    "width": "16px",
+                  }
+                }
+              >
+                ↑
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1692,6 +1776,36 @@ Array [
                   </span>
                 </a>
               </div>
+              <div
+                className="BaseTable__row-cell BaseTable__row-cell--align-center"
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <a
+                  href="/url/https%3A%2F%2Fadoption.gouv.fr#stats"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="badge badge-success"
+                    style={
+                      Object {
+                        "fontSize": "1.1em",
+                        "minWidth": 60,
+                      }
+                    }
+                  >
+                    A
+                  </span>
+                </a>
+              </div>
             </div>
             <div
               className="BaseTable__row"
@@ -2145,6 +2259,48 @@ Array [
                   >
                     2
                   </span>
+                </a>
+              </div>
+              <div
+                className="BaseTable__row-cell BaseTable__row-cell--align-center"
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <a
+                  href="/url/https%3A%2F%2Falternance.emploi.gouv.fr#stats"
+                  onClick={[Function]}
+                >
+                  <svg
+                    fill="none"
+                    height={20}
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="4.93"
+                      x2="19.07"
+                      y1="4.93"
+                      y2="19.07"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -2626,6 +2782,48 @@ Array [
                   </span>
                 </a>
               </div>
+              <div
+                className="BaseTable__row-cell BaseTable__row-cell--align-center"
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <a
+                  href="/url/https%3A%2F%2Farretonslesviolences.gouv.fr#stats"
+                  onClick={[Function]}
+                >
+                  <svg
+                    fill="none"
+                    height={20}
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="4.93"
+                      x2="19.07"
+                      y1="4.93"
+                      y2="19.07"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
             <div
               className="BaseTable__row"
@@ -3105,6 +3303,48 @@ Array [
                   </span>
                 </a>
               </div>
+              <div
+                className="BaseTable__row-cell BaseTable__row-cell--align-center"
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <a
+                  href="/url/https%3A%2F%2Fbonusmalus.travail-emploi.gouv.fr#stats"
+                  onClick={[Function]}
+                >
+                  <svg
+                    fill="none"
+                    height={20}
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="4.93"
+                      x2="19.07"
+                      y1="4.93"
+                      y2="19.07"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
             <div
               className="BaseTable__row"
@@ -3582,6 +3822,48 @@ Array [
                   >
                     2
                   </span>
+                </a>
+              </div>
+              <div
+                className="BaseTable__row-cell BaseTable__row-cell--align-center"
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <a
+                  href="/url/https%3A%2F%2Fboussole.jeunes.gouv.fr#stats"
+                  onClick={[Function]}
+                >
+                  <svg
+                    fill="none"
+                    height={20}
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width={20}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="4.93"
+                      x2="19.07"
+                      y1="4.93"
+                      y2="19.07"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -4679,6 +4961,90 @@ Array [
                     }
                   >
                     Cookies
+                    <br />
+                    <svg
+                      fill="none"
+                      height={16}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width={16}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                      />
+                      <line
+                        x1="12"
+                        x2="12"
+                        y1="16"
+                        y2="12"
+                      />
+                      <line
+                        x1="12"
+                        x2="12.01"
+                        y1="8"
+                        y2="8"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  className="BaseTable__sort-indicator BaseTable__sort-indicator"
+                  style={
+                    Object {
+                      "height": "16px",
+                      "lineHeight": "16px",
+                      "textAlign": "center",
+                      "userSelect": "none",
+                      "width": "16px",
+                    }
+                  }
+                >
+                  ↑
+                </div>
+              </div>
+              <div
+                className="BaseTable__header-cell BaseTable__header-cell--align-center BaseTable__header-cell--sortable"
+                data-key="stats"
+                onClick={[Function]}
+                role="gridcell"
+                style={
+                  Object {
+                    "WebkitFlex": "0 1 auto",
+                    "flex": "0 1 auto",
+                    "msFlex": "0 1 auto",
+                    "overflow": "hidden",
+                    "width": 120,
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "0.9em",
+                      }
+                    }
+                  >
+                    Stats
                     <br />
                     <svg
                       fill="none"

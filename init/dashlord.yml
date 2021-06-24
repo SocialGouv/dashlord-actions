@@ -12,6 +12,7 @@ tools:
   updownio: true
   dependabot: true
   codescan: true
+  stats: true
 urls:
   - url: https://www.free.fr
     title: Free
@@ -26,4 +27,5 @@ urls:
     tools:
       screenshot: false
       updownio: false
+      stats: false
   - url: https://voila.fr

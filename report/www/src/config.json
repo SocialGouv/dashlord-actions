@@ -12,7 +12,8 @@
     "nuclei": true,
     "updownio": true,
     "dependabot": true,
-    "codescan": true
+    "codescan": true,
+    "stats": true
   },
   "urls": [
     {
