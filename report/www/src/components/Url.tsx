@@ -17,6 +17,7 @@ import { UpdownIo } from "./UpdownIo";
 import { Dependabot } from "./Dependabot";
 import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
+import { Stats } from "./Stats";
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
@@ -228,6 +229,14 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         </React.Fragment>
       )) ||
         null}
+        {(isToolEnabled("stats") && report.stats && (
+          <React.Fragment>
+            <Anchor id="stats" />
+            <Stats data={report.stats} url={url} />
+            <br />
+          </React.Fragment>
+        )) ||
+          null}
     </div>
   );
 };

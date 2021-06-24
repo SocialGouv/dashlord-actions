@@ -28,4 +28,5 @@ type UrlReportSummary = {
   uptimeGrade?: string;
   apdex?: number;
   apdexGrade?: string;
+  statsGrade?: string;
 };

@@ -270,6 +270,17 @@ export const Intro: React.FC = () => {
         </Button>
       </Panel>}
 
+      {isToolEnabled("stats") && <Panel title="Statistiques">
+        Vérifie si la page /stats existe
+        <br />
+        <br />
+        <li>Par exemple:</li>
+        <br />
+        <Button variant="dark" href="https://beta.gouv.fr/stats">
+          Beta.gouv.fr
+        </Button>
+      </Panel>}
+
     </div>
   );
 };

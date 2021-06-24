@@ -26,7 +26,8 @@
       "uptime": 100,
       "uptimeGrade": "A",
       "apdex": 0.998,
-      "apdexGrade": "A"
+      "apdexGrade": "A",
+      "statsGrade": "A"
     },
     "category": "dnum",
     "tags": [
@@ -236,6 +237,7 @@
       }
     },
     "updownio": {"apdexGrade": "F", "uptimeGrade": "A", "token":"rt57","url":"https://adoption.gouv.fr","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":60,"apdex_t":0.5,"string_match":"","enabled":true,"published":true,"disabled_locations":[],"last_check_at":"2021-05-07T23:01:13Z","next_check_at":"2021-05-07T23:02:13Z","mute_until":null,"favicon_url":"https://www.fabrique.social.gouv.fr/images/favicons/favicon-16x16.png","custom_headers":{},"http_verb":"GET/HEAD","http_body":"","ssl":{"tested_at":"2021-05-07T22:53:18Z","expires_at":"2021-06-21T16:16:37Z","valid":true,"error":null},"metrics":{"apdex":0.8,"timings":{"redirect":0,"namelookup":124,"connection":129,"handshake":268,"response":134,"total":655}}},
+    "stats": {"grade": "A", "url": "https://adoption.gouv.fr", "uri": "stats"},
     "dependabot": null,
     "codescan": null,
     "nmap": {

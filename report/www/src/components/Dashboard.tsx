@@ -583,6 +583,40 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 }}
               />
             )}
+            {isToolEnabled("stats") && (
+              <Column
+                {...defaultColumnProps}
+                key="stats"
+                dataGetter={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return summary.statsGrade;
+                }}
+                headerRenderer={() => (
+                  <ColumnHeader
+                    title="Stats"
+                    info="Présence de la page des statistiques"
+                  />
+                )}
+                cellRenderer={({ rowData }) => {
+                  const summary = (rowData as UrlReport).summary;
+                  return (
+                    <Link
+                      to={{
+                        pathname: `/url/${encodeURIComponent(
+                          (rowData as UrlReport).url
+                        )}`,
+                        hash: "stats",
+                      }}
+                    >
+                      <GradeBadge
+                        grade={summary.statsGrade}
+                        label={summary.statsGrade}
+                      />
+                    </Link>
+                  );
+                }}
+              />
+            )}
           </BaseTable>
         )}
       </AutoResizer>
