@@ -9,23 +9,13 @@ const tests = [
   {
     title: "sample report",
     report: {
-      grade: "B",
-      uri: "statistiques"
-    },
-    expected: {
-      statsGrade: "B"
-    },
-  },
-  {
-    title: "3 open ports",
-    report: {
-      grade: "F",
+      grade: "A",
       uri: "stats"
     },
     expected: {
-      statsGrade: "F"
+      statsGrade: "A"
     },
-  },
+  }
 ];
 
 describe("stats", () => {
