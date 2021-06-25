@@ -17,6 +17,8 @@ const tools = {
   thirdparties: (report) => require("./thirdparties")(report),
   /** @param {UpDownReport} report */
   updownio: (report) => require("./updownio")(report),
+  /** @param {StatsReport} report */
+  stats: (report) => require("./stats")(report),
 };
 
 /**
