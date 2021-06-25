@@ -2,28 +2,28 @@ import * as React from "react";
 import * as renderer from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
 
-import { Sidebar } from "../components/Sidebar";
+import { Topbar } from "../components/Topbar";
 
 const report = require("../report.json");
 
-it("Should render empty Sidebar", () => {
+it("Should render empty Topbar", () => {
   const props = {};
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Sidebar {...props} />
+        <Topbar {...props} />
       </MemoryRouter>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-it("Should render full Sidebar", () => {
+it("Should render full Topbar", () => {
   const props = { report };
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Sidebar {...props} />
+        <Topbar {...props} />
       </MemoryRouter>
     )
     .toJSON();
@@ -37,12 +37,12 @@ describe("Tools config", () => {
     }));
   });
 
-  it("Should render Sidebar with limited tools", () => {
+  it("Should render Topbar with limited tools", () => {
     const props = { report };
     const tree = renderer
       .create(
         <MemoryRouter>
-          <Sidebar {...props} />{" "}
+          <Topbar {...props} />{" "}
         </MemoryRouter>
       )
       .toJSON();
