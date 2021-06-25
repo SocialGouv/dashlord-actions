@@ -1,0 +1,757 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render empty Topbar 1`] = `
+<nav
+  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  style={
+    Object {
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="#"
+  >
+    <svg
+      fill="none"
+      height={16}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": -5,
+        }
+      }
+      viewBox="0 0 24 24"
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+      />
+      <polyline
+        points="9 22 9 12 15 12 15 22"
+      />
+    </svg>
+    DashLord
+  </a>
+  <button
+    aria-controls="responsive-navbar-nav"
+    aria-label="Toggle navigation"
+    className="navbar-toggler collapsed"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    aria-expanded={null}
+    className="navbar-collapse collapse"
+    id="responsive-navbar-nav"
+  >
+    <div
+      className="mr-auto my-2 my-lg-0 navbar-nav navbar-nav-scroll"
+      onKeyDown={[Function]}
+      style={
+        Object {
+          "maxHeight": "100px",
+        }
+      }
+    >
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="agregats"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Agrégats
+        </a>
+      </div>
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="details"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Détails
+        </a>
+      </div>
+    </div>
+    <div
+      className="navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/intro"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
+          />
+          <line
+            x1="4.93"
+            x2="9.17"
+            y1="4.93"
+            y2="9.17"
+          />
+          <line
+            x1="14.83"
+            x2="19.07"
+            y1="14.83"
+            y2="19.07"
+          />
+          <line
+            x1="14.83"
+            x2="19.07"
+            y1="9.17"
+            y2="4.93"
+          />
+          <line
+            x1="14.83"
+            x2="18.36"
+            y1="9.17"
+            y2="5.64"
+          />
+          <line
+            x1="4.93"
+            x2="9.17"
+            y1="19.07"
+            y2="14.83"
+          />
+        </svg>
+        Aide
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/about"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="16"
+            y2="12"
+          />
+          <line
+            x1="12"
+            x2="12.01"
+            y1="8"
+            y2="8"
+          />
+        </svg>
+        À propos
+      </a>
+      <a
+        className="nav-link"
+        data-rb-event-key="https://github.com/SocialGouv/dashlord"
+        href="https://github.com/SocialGouv/dashlord"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+          />
+        </svg>
+        Source
+      </a>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Should render full Topbar 1`] = `
+<nav
+  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  style={
+    Object {
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="#"
+  >
+    <svg
+      fill="none"
+      height={16}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "marginRight": 10,
+          "marginTop": -5,
+        }
+      }
+      viewBox="0 0 24 24"
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+      />
+      <polyline
+        points="9 22 9 12 15 12 15 22"
+      />
+    </svg>
+    DashLord
+  </a>
+  <button
+    aria-controls="responsive-navbar-nav"
+    aria-label="Toggle navigation"
+    className="navbar-toggler collapsed"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    aria-expanded={null}
+    className="navbar-collapse collapse"
+    id="responsive-navbar-nav"
+  >
+    <div
+      className="mr-auto my-2 my-lg-0 navbar-nav navbar-nav-scroll"
+      onKeyDown={[Function]}
+      style={
+        Object {
+          "maxHeight": "100px",
+        }
+      }
+    >
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="agregats"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Agrégats
+        </a>
+      </div>
+      <div
+        className="nav-item dropdown"
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          data-rb-event-key={null}
+          href="#"
+          id="details"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+        >
+          Détails
+        </a>
+      </div>
+    </div>
+    <div
+      className="navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/intro"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
+          />
+          <line
+            x1="4.93"
+            x2="9.17"
+            y1="4.93"
+            y2="9.17"
+          />
+          <line
+            x1="14.83"
+            x2="19.07"
+            y1="14.83"
+            y2="19.07"
+          />
+          <line
+            x1="14.83"
+            x2="19.07"
+            y1="9.17"
+            y2="4.93"
+          />
+          <line
+            x1="14.83"
+            x2="18.36"
+            y1="9.17"
+            y2="5.64"
+          />
+          <line
+            x1="4.93"
+            x2="9.17"
+            y1="19.07"
+            y2="14.83"
+          />
+        </svg>
+        Aide
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/about"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="16"
+            y2="12"
+          />
+          <line
+            x1="12"
+            x2="12.01"
+            y1="8"
+            y2="8"
+          />
+        </svg>
+        À propos
+      </a>
+      <a
+        className="nav-link"
+        data-rb-event-key="https://github.com/SocialGouv/dashlord"
+        href="https://github.com/SocialGouv/dashlord"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+          />
+        </svg>
+        Source
+      </a>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Tools config Should render Topbar with limited tools 1`] = `
+Array [
+  <nav
+    className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+    style={
+      Object {
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <a
+      className="navbar-brand"
+      href="#"
+    >
+      <svg
+        fill="none"
+        height={16}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "marginRight": 10,
+            "marginTop": -5,
+          }
+        }
+        viewBox="0 0 24 24"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+        />
+        <polyline
+          points="9 22 9 12 15 12 15 22"
+        />
+      </svg>
+      DashLord
+    </a>
+    <button
+      aria-controls="responsive-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+      id="responsive-navbar-nav"
+    >
+      <div
+        className="mr-auto my-2 my-lg-0 navbar-nav navbar-nav-scroll"
+        onKeyDown={[Function]}
+        style={
+          Object {
+            "maxHeight": "100px",
+          }
+        }
+      >
+        <div
+          className="nav-item dropdown"
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            data-rb-event-key={null}
+            href="#"
+            id="agregats"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+          >
+            Agrégats
+          </a>
+        </div>
+        <div
+          className="nav-item dropdown"
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            data-rb-event-key={null}
+            href="#"
+            id="details"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+          >
+            Détails
+          </a>
+        </div>
+      </div>
+      <div
+        className="navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          data-rb-event-key={null}
+          disabled={false}
+          href="/intro"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 10,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            />
+            <line
+              x1="4.93"
+              x2="9.17"
+              y1="4.93"
+              y2="9.17"
+            />
+            <line
+              x1="14.83"
+              x2="19.07"
+              y1="14.83"
+              y2="19.07"
+            />
+            <line
+              x1="14.83"
+              x2="19.07"
+              y1="9.17"
+              y2="4.93"
+            />
+            <line
+              x1="14.83"
+              x2="18.36"
+              y1="9.17"
+              y2="5.64"
+            />
+            <line
+              x1="4.93"
+              x2="9.17"
+              y1="19.07"
+              y2="14.83"
+            />
+          </svg>
+          Aide
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          data-rb-event-key={null}
+          disabled={false}
+          href="/about"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 10,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="16"
+              y2="12"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="8"
+              y2="8"
+            />
+          </svg>
+          À propos
+        </a>
+        <a
+          className="nav-link"
+          data-rb-event-key="https://github.com/SocialGouv/dashlord"
+          href="https://github.com/SocialGouv/dashlord"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 10,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            />
+          </svg>
+          Source
+        </a>
+      </div>
+    </div>
+  </nav>,
+  " ",
+]
+`;
