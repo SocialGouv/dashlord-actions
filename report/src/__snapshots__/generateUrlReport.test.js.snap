@@ -12,6 +12,7 @@ Object {
   "nmap": null,
   "nuclei": null,
   "screenshot": false,
+  "stats": null,
   "summary": Object {
     "codescanCount": 42,
     "codescanGrade": undefined,
@@ -56,6 +57,9 @@ Object {
     },
   ],
   "screenshot": false,
+  "stats": Object {
+    "report": "stats.json",
+  },
   "summary": Object {
     "codescanCount": 42,
     "codescanGrade": undefined,

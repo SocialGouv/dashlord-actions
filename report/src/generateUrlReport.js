@@ -128,6 +128,7 @@ const tools = {
     /** @param {string} basePath scan directory */
     data: (basePath) => fs.existsSync(path.join(basePath, "screenshot.jpeg")),
   },
+  stats: { data: requireToolData("stats.json") }
 };
 
 //@ts-expect-error
