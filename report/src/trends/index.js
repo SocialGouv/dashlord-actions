@@ -51,6 +51,7 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
       )
       // extract summary content for each commit
       .map(async ({ commit }) => {
+        //@ts-expect-error
         commit.repo = repo; // for some reason this is not populated by default and prevents `getEntry`
         core.info(`Get GIT entry for ${commit.sha()}`);
         const treeEntry = await commit.getEntry("report.json");
