@@ -17,40 +17,41 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
 
   // get history for the report file
   core.info(`Open GIT history for report.json`);
-  /** @type {GitHistory} */
   const history = await gitHistory(`${gitPath}/report.json`);
 
   // ensure git history is sorted from latest to oldest commit
-  history.sort((a, b) => b.commit.date() - a.commit.date());
+  history.sort((a, b) => b.commit.date().valueOf() - a.commit.date().valueOf());
 
   // will only extract N days of history
   const startDate = new Date(
     new Date().getTime() - maxDaysHistory * 24 * 60 * 60 * 1000
   );
 
+  /** @type {import("nodegit").Revwalk.HistoryEntry[]} */
+  const reduceInit = [];
   // compile summary contents from reports
   const commits = await Promise.all(
     history
       // include only relevant commits (in the date range)
       .reduce(
-        /** @param {GitHistoryEntry[]} filteredCommits*/ (
+       (
           filteredCommits,
           entry,
-          i,
-          all
+          i
         ) => {
           const isAfter = entry.commit.date() >= startDate;
           const isFirstBefore = !isAfter && i === filteredCommits.length;
-          // include relvant commits
+          // include relevant commits
           if (isAfter || isFirstBefore) {
             filteredCommits.push(entry);
           }
           return filteredCommits;
         },
-        []
+        reduceInit
       )
       // extract summary content for each commit
-      .map(async ({ /** @type {Commit} */ commit }) => {
+      .map(async ({ commit }) => {
+        //@ts-expect-error
         commit.repo = repo; // for some reason this is not populated by default and prevents `getEntry`
         core.info(`Get GIT entry for ${commit.sha()}`);
         const treeEntry = await commit.getEntry("report.json");
@@ -65,7 +66,7 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
       })
   );
 
-  /** @type Trends */
+  /** @type {Trends} */
   const urlsHistory = {};
 
   // add the latest report first as a commit
