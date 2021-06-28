@@ -106,3 +106,7 @@ body {
   font-family: courier;
   background: #efefef;
 }
+
+.badge {
+  transition: none !important;
+}
