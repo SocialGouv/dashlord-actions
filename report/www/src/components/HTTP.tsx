@@ -140,6 +140,7 @@ export const HTTP = ({ data }: HTTPProps) => {
         title="HTTP"
         info="Informations collectées par le Mozilla HTTP observatory"
         url={url}
+        isExternal={true}
       >
         <h3>
           Scan Summary : <Grade small grade={data.grade} />
