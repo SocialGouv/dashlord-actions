@@ -2,7 +2,7 @@
 
 exports[`Should render empty Topbar 1`] = `
 <nav
-  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-light bg-light sticky-top"
   style={
     Object {
       "justifyContent": "space-between",
@@ -64,45 +64,108 @@ exports[`Should render empty Topbar 1`] = `
         }
       }
     >
-      <div
-        className="nav-item dropdown"
+      <form
+        className="form-inline"
       >
-        <a
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="dropdown-toggle nav-link"
-          data-rb-event-key={null}
-          href="#"
-          id="agregats"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
+        <label
+          className="form-label"
         >
-          Agrégats
-        </a>
-      </div>
-      <div
-        className="nav-item dropdown"
-      >
-        <a
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="dropdown-toggle nav-link"
-          data-rb-event-key={null}
-          href="#"
-          id="details"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
+          URL
+        </label>
+        <select
+          className="form-control"
         >
-          Détails
-        </a>
-      </div>
+          <option
+            className=""
+            href="/#"
+            onClick={[Function]}
+          >
+            
+          </option>
+        </select>
+      </form>
     </div>
     <div
       className="navbar-nav"
       onKeyDown={[Function]}
     >
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/wappalyzer"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+          />
+        </svg>
+        Technologies
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/trends"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="12"
+            x2="12"
+            y1="20"
+            y2="10"
+          />
+          <line
+            x1="18"
+            x2="18"
+            y1="20"
+            y2="4"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="20"
+            y2="16"
+          />
+        </svg>
+        Évolutions
+      </a>
       <a
         aria-current={null}
         className="nav-link"
@@ -253,7 +316,7 @@ exports[`Should render empty Topbar 1`] = `
 
 exports[`Should render full Topbar 1`] = `
 <nav
-  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-light bg-light sticky-top"
   style={
     Object {
       "justifyContent": "space-between",
@@ -315,45 +378,143 @@ exports[`Should render full Topbar 1`] = `
         }
       }
     >
-      <div
-        className="nav-item dropdown"
+      <form
+        className="form-inline"
       >
-        <a
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="dropdown-toggle nav-link"
-          data-rb-event-key={null}
-          href="#"
-          id="agregats"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
+        <label
+          className="form-label"
         >
-          Agrégats
-        </a>
-      </div>
-      <div
-        className="nav-item dropdown"
-      >
-        <a
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="dropdown-toggle nav-link"
-          data-rb-event-key={null}
-          href="#"
-          id="details"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
+          URL
+        </label>
+        <select
+          className="form-control"
         >
-          Détails
-        </a>
-      </div>
+          <option
+            className=""
+            href="/#"
+            onClick={[Function]}
+          >
+            
+          </option>
+          <option
+            className=""
+            href="/url/https://adoption.gouv.fr"
+            onClick={[Function]}
+          >
+            adoption.gouv.fr
+          </option>
+          <option
+            className=""
+            href="/url/https://alternance.emploi.gouv.fr"
+            onClick={[Function]}
+          >
+            alternance.emploi.gouv.fr
+          </option>
+          <option
+            className=""
+            href="/url/https://arretonslesviolences.gouv.fr"
+            onClick={[Function]}
+          >
+            arretonslesviolences.gouv.fr
+          </option>
+          <option
+            className=""
+            href="/url/https://bonusmalus.travail-emploi.gouv.fr"
+            onClick={[Function]}
+          >
+            bonusmalus.travail-emploi.gouv.fr
+          </option>
+          <option
+            className=""
+            href="/url/https://boussole.jeunes.gouv.fr"
+            onClick={[Function]}
+          >
+            boussole.jeunes.gouv.fr
+          </option>
+        </select>
+      </form>
     </div>
     <div
       className="navbar-nav"
       onKeyDown={[Function]}
     >
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/wappalyzer"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+          />
+        </svg>
+        Technologies
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        data-rb-event-key={null}
+        disabled={false}
+        href="/trends"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "marginRight": 10,
+              "marginTop": -5,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="12"
+            x2="12"
+            y1="20"
+            y2="10"
+          />
+          <line
+            x1="18"
+            x2="18"
+            y1="20"
+            y2="4"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="20"
+            y2="16"
+          />
+        </svg>
+        Évolutions
+      </a>
       <a
         aria-current={null}
         className="nav-link"
@@ -505,7 +666,7 @@ exports[`Should render full Topbar 1`] = `
 exports[`Tools config Should render Topbar with limited tools 1`] = `
 Array [
   <nav
-    className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+    className="p-0 flex-md-nowrap shadow navbar navbar-expand-lg navbar-light bg-light sticky-top"
     style={
       Object {
         "justifyContent": "space-between",
@@ -567,45 +728,143 @@ Array [
           }
         }
       >
-        <div
-          className="nav-item dropdown"
+        <form
+          className="form-inline"
         >
-          <a
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="dropdown-toggle nav-link"
-            data-rb-event-key={null}
-            href="#"
-            id="agregats"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            role="button"
+          <label
+            className="form-label"
           >
-            Agrégats
-          </a>
-        </div>
-        <div
-          className="nav-item dropdown"
-        >
-          <a
-            aria-expanded={false}
-            aria-haspopup={true}
-            className="dropdown-toggle nav-link"
-            data-rb-event-key={null}
-            href="#"
-            id="details"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            role="button"
+            URL
+          </label>
+          <select
+            className="form-control"
           >
-            Détails
-          </a>
-        </div>
+            <option
+              className=""
+              href="/#"
+              onClick={[Function]}
+            >
+              
+            </option>
+            <option
+              className=""
+              href="/url/https://adoption.gouv.fr"
+              onClick={[Function]}
+            >
+              adoption.gouv.fr
+            </option>
+            <option
+              className=""
+              href="/url/https://alternance.emploi.gouv.fr"
+              onClick={[Function]}
+            >
+              alternance.emploi.gouv.fr
+            </option>
+            <option
+              className=""
+              href="/url/https://arretonslesviolences.gouv.fr"
+              onClick={[Function]}
+            >
+              arretonslesviolences.gouv.fr
+            </option>
+            <option
+              className=""
+              href="/url/https://bonusmalus.travail-emploi.gouv.fr"
+              onClick={[Function]}
+            >
+              bonusmalus.travail-emploi.gouv.fr
+            </option>
+            <option
+              className=""
+              href="/url/https://boussole.jeunes.gouv.fr"
+              onClick={[Function]}
+            >
+              boussole.jeunes.gouv.fr
+            </option>
+          </select>
+        </form>
       </div>
       <div
         className="navbar-nav"
         onKeyDown={[Function]}
       >
+        <a
+          aria-current={null}
+          className="nav-link"
+          data-rb-event-key={null}
+          disabled={false}
+          href="/wappalyzer"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 10,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+            />
+          </svg>
+          Technologies
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          data-rb-event-key={null}
+          disabled={false}
+          href="/trends"
+          onClick={[Function]}
+        >
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginRight": 10,
+                "marginTop": -5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="20"
+              y2="10"
+            />
+            <line
+              x1="18"
+              x2="18"
+              y1="20"
+              y2="4"
+            />
+            <line
+              x1="6"
+              x2="6"
+              y1="20"
+              y2="16"
+            />
+          </svg>
+          Évolutions
+        </a>
         <a
           aria-current={null}
           className="nav-link"
