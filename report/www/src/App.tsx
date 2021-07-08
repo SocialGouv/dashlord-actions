@@ -86,45 +86,45 @@ const UrlRoute: React.FC<UrlRouteProps> = (props) => {
 const App = () => {
   return (
     <Router>
-      <div>
-        <ScrollToTop />
-        <Topbar report={report} />
-        <Container fluid>
-          <Row>
-            <main role="main" className="col-md ml-sm-auto col-lg px-md-4">
-              <Switch>
-                <Route path="/url/*">
-                  <UrlRoute report={report} />
-                </Route>
-                <Route path="/dashboard">
-                  <Dashboard report={report} />
-                </Route>
-                <Route path="/trends">
-                  <Trends trends={trends} />
-                </Route>
-                <Route path="/category/:category">
-                  <CategoryRoute report={report} />
-                </Route>
-                <Route path="/tag/:tag">
-                  <TagRoute report={report} />
-                </Route>
-                <Route path="/wappalyzer">
-                  <WappalyzerDashboard report={report} />
-                </Route>
-                <Route path="/intro">
-                  <Intro />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="/">
-                  <Dashboard report={report} />
-                </Route>
-              </Switch>
-            </main>
-          </Row>
-        </Container>
-      </div>
+          <div>
+            <ScrollToTop />
+            <Topbar report={report} />
+            <Container fluid>
+              <Row>
+                <main role="main" className="col-md ml-sm-auto col-lg px-md-4">
+                  <Switch>
+                    <Route path="/url/*">
+                      <UrlRoute report={report} />
+                    </Route>
+                    <Route path="/dashboard">
+                      <Dashboard report={report} />
+                    </Route>
+                    <Route path="/trends">
+                      <Trends trends={trends} />
+                    </Route>
+                    <Route path="/category/:category">
+                      <CategoryRoute report={report} />
+                    </Route>
+                    <Route path="/tag/:tag">
+                      <TagRoute report={report} />
+                    </Route>
+                    <Route path="/wappalyzer">
+                      <WappalyzerDashboard report={report} />
+                    </Route>
+                    <Route path="/intro">
+                      <Intro />
+                    </Route>
+                    <Route path="/about">
+                      <About />
+                    </Route>
+                    <Route path="/">
+                      <Dashboard report={report} />
+                    </Route>
+                  </Switch>
+                </main>
+              </Row>
+            </Container>
+          </div>
     </Router>
   );
 };
