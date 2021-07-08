@@ -757,7 +757,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz"
   integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
 
-"@types/nodegit@^0.27.2":
+"@types/nodegit@^0.27.0", "@types/nodegit@^0.27.2":
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/@types/nodegit/-/nodegit-0.27.2.tgz#f7db4728786e050751b210d0489a9ec2248030c5"
   integrity sha512-8UCRm0BOXNTq+KRHq1AC4hZ7SrVuPQYfTsBApRYXgRNNjAicn2CYyMccty5SPoSUx2JfmVD6j+F4uX4XhOQwMw==
@@ -2085,11 +2085,12 @@ file-entry-cache@^6.0.1:
   dependencies:
     flat-cache "^3.0.4"
 
-file-util-git-history@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/file-util-git-history/-/file-util-git-history-3.0.1.tgz#110d2e507592e276a323f3bf32ecad95cff6d42d"
-  integrity sha512-aiiRNQEtqEyq9oDLSfd4Z/pBeGR3Z89wGL9nvTxQq584ww08LZN43CmvfJZPhH82LQU6nqRUsmI2HdwLW1jEnA==
+file-util-git-history@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/file-util-git-history/-/file-util-git-history-3.1.0.tgz#ebaea1d132a7ab67e4f993f3ef3c51c8c57d4aa4"
+  integrity sha512-6HqWb7gkVpdbrhzjL2kSsQ6kXhY3Jcqow4rhY+SxyMj2lhnDHxlwEquHjOtWEtoueXaAX5rNBnOmwVKydJ2/sA==
   dependencies:
+    "@types/nodegit" "^0.27.0"
     nodegit "^0.27.0"
 
 fill-range@^4.0.0:
