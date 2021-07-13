@@ -9,7 +9,8 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Topbar } from "./components/Topbar";
+import { HeaderSite } from "./components/HeaderSite";
+import { FooterSite } from "./components/FooterSite";
 import { Dashboard } from "./components/Dashboard";
 import { Trends } from "./components/Trends";
 import { Url } from "./components/Url";
@@ -88,7 +89,7 @@ const App = () => {
     <Router>
           <div>
             <ScrollToTop />
-            <Topbar report={report} />
+            <HeaderSite report={report} />
             <Container fluid>
               <Row>
                 <main role="main" className="col-md ml-sm-auto col-lg px-md-4">
@@ -124,6 +125,7 @@ const App = () => {
                 </main>
               </Row>
             </Container>
+            <FooterSite />
           </div>
     </Router>
   );
