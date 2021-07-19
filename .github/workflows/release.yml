@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "14.x"
       - run: npx semantic-release --plugins "@semantic-release/commit-analyzer,@semantic-release/release-notes-generator,@semantic-release/github"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
