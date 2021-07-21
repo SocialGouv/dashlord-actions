@@ -1,36 +1,35 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Table, Badge } from "react-bootstrap";
-import { getLastUrlSegment } from "../utils";
+import { Table, Badge } from 'react-bootstrap';
+import { getLastUrlSegment } from '../utils';
 
-import { Panel } from "./Panel";
-import { Grade } from "./Grade";
+import { Panel } from './Panel';
+import { Grade } from './Grade';
 
 const orderBySeverity = (a: DependabotNode, b: DependabotNode) => {
   // high criticity first
   const severities = new Map();
-  severities.set("CRITICAL", 3);
-  severities.set("HIGH", 2);
-  severities.set("MODERATE", 1);
-  severities.set("LOW", 0);
+  severities.set('CRITICAL', 3);
+  severities.set('HIGH', 2);
+  severities.set('MODERATE', 1);
+  severities.set('LOW', 0);
   return (
-    severities.get(b.securityVulnerability.severity) -
-    severities.get(a.securityVulnerability.severity)
+    severities.get(b.securityVulnerability.severity)
+    - severities.get(a.securityVulnerability.severity)
   );
 };
 
 const DependabotBadge = (node: DependabotNode) => {
-  const severity = node.securityVulnerability.severity;
-  const variant =
-    severity === "LOW"
-      ? "info"
-      : severity === "MODERATE"
-      ? "warning"
-      : severity === "HIGH"
-      ? "danger"
-      : severity === "CRITICAL"
-      ? "danger"
-      : "info";
+  const { severity } = node.securityVulnerability;
+  const variant = severity === 'LOW'
+    ? 'info'
+    : severity === 'MODERATE'
+      ? 'warning'
+      : severity === 'HIGH'
+        ? 'danger'
+        : severity === 'CRITICAL'
+          ? 'danger'
+          : 'info';
   return (
     <Badge className="w-100" variant={variant}>
       {severity}
@@ -41,21 +40,21 @@ const DependabotBadge = (node: DependabotNode) => {
 type DependabotProps = { data: DependabotRepository; url: string };
 
 export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
-  const nodes =
-    data && data.vulnerabilityAlerts.totalCount > 0
-      ? data.vulnerabilityAlerts.nodes
-      : [];
+  const nodes = data && data.vulnerabilityAlerts.totalCount > 0
+    ? data.vulnerabilityAlerts.nodes
+    : [];
   data.vulnerabilityAlerts.nodes.sort(orderBySeverity);
   return (
     (data.vulnerabilityAlerts.totalCount > 0 && (
       <Panel
         title="Dependabot"
-        url={data.url + '/security/dependabot'}
-        info={
+        url={`${data.url}/security/dependabot`}
+        info={(
           <span>
-            Scan des vulnérabiliés du dépôt Github{" "}
+            Scan des vulnérabiliés du dépôt Github
+            {' '}
             <a
-              style={{ color: "white" }}
+              style={{ color: 'white' }}
               href={data.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -63,12 +62,14 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
               {data.url}
             </a>
           </span>
-        }
+        )}
       >
-      <h3>
-        Scan Summary : <Grade small grade={data.grade} />
-      </h3>
-      <br />
+        <h3>
+          Scan Summary :
+          {' '}
+          <Grade small grade={data.grade} />
+        </h3>
+        <br />
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -80,34 +81,30 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
             </tr>
           </thead>
           <tbody>
-            {nodes.map((node, i: number) => {
-              return (
-                <tr key={node.securityVulnerability.package.name + i}>
-                  <td className="text-center">
-                    <DependabotBadge {...node} />
-                  </td>
-                  <td>{node.securityVulnerability.package.name}</td>
-                  <td>
-                    {node.securityVulnerability.advisory.references.map(
-                      (reference, i: number) => {
-                        return (
-                          <p key={getLastUrlSegment(reference.url) + i}>
-                            <a target="_blank" href={reference.url} rel="noopener noreferrer">
-                              {getLastUrlSegment(reference.url)}
-                            </a>
-                            <br />
-                          </p>
-                        );
-                      }
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
+            {nodes.map((node, i: number) => (
+              <tr key={node.securityVulnerability.package.name + i}>
+                <td className="text-center">
+                  <DependabotBadge {...node} />
+                </td>
+                <td>{node.securityVulnerability.package.name}</td>
+                <td>
+                  {node.securityVulnerability.advisory.references.map(
+                    (reference, i: number) => (
+                      <p key={getLastUrlSegment(reference.url) + i}>
+                        <a target="_blank" href={reference.url} rel="noopener noreferrer">
+                          {getLastUrlSegment(reference.url)}
+                        </a>
+                        <br />
+                      </p>
+                    ),
+                  )}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Panel>
-    )) ||
-    null
+    ))
+    || null
   );
 };

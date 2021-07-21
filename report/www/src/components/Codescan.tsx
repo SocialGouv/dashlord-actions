@@ -1,29 +1,28 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Table, Badge } from "react-bootstrap";
+import { Table, Badge } from 'react-bootstrap';
 
-import { Panel } from "./Panel";
-import { Grade } from "./Grade";
+import { Panel } from './Panel';
+import { Grade } from './Grade';
 
 const orderBySeverity = (a: CodescanAlert, b: CodescanAlert) => {
   // high criticity first
   const severities = new Map();
-  severities.set("error", 1);
-  severities.set("warning", 0);
+  severities.set('error', 1);
+  severities.set('warning', 0);
   return (
-    severities.get(b.rule.severity) -
-    severities.get(a.rule.severity)
+    severities.get(b.rule.severity)
+    - severities.get(a.rule.severity)
   );
 };
 
 const CodescanBadge = (alert: CodescanAlert) => {
-  const severity = alert.rule.severity;
-  const variant =
-    severity === "warning"
-      ? "warning"
-      : severity === "error"
-        ? "danger"
-        : "info";
+  const { severity } = alert.rule;
+  const variant = severity === 'warning'
+    ? 'warning'
+    : severity === 'error'
+      ? 'danger'
+      : 'info';
   return (
     <Badge className="w-100" variant={variant}>
       {severity}
@@ -34,21 +33,21 @@ const CodescanBadge = (alert: CodescanAlert) => {
 type CodescanProps = { data: CodescanRepository; url: string };
 
 export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
-  const alerts =
-    data && data.alerts.length > 0
-      ? data.alerts
-      : [];
+  const alerts = data && data.alerts.length > 0
+    ? data.alerts
+    : [];
   alerts.sort(orderBySeverity);
   return (
     (alerts.length > 0 && (
       <Panel
         title="Codescan"
-        url={data.url + '/security/code-scanning'}
-        info={
+        url={`${data.url}/security/code-scanning`}
+        info={(
           <span>
-            Scan du code du dépôt Github{" "}
+            Scan du code du dépôt Github
+            {' '}
             <a
-              style={{ color: "white" }}
+              style={{ color: 'white' }}
               href={data.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -56,10 +55,12 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
               {data.url}
             </a>
           </span>
-        }
+        )}
       >
         <h3>
-          Scan Summary : <Grade small grade={data.grade} />
+          Scan Summary :
+          {' '}
+          <Grade small grade={data.grade} />
         </h3>
         <br />
         <Table striped bordered hover>
@@ -73,25 +74,23 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
             </tr>
           </thead>
           <tbody>
-            {alerts.map((alert, i: number) => {
-              return (
-                <tr key={alert.rule.name + i}>
-                  <td className="text-center">
-                    <CodescanBadge {...alert} />
-                  </td>
-                  <td>{alert.rule.name}</td>
-                  <td>
-                    <a target="_blank" href={alert.html_url} rel="noopener noreferrer">
-                      {alert.rule.description}
-                    </a>
-                  </td>
-                </tr>
-              );
-            })}
+            {alerts.map((alert, i: number) => (
+              <tr key={alert.rule.name + i}>
+                <td className="text-center">
+                  <CodescanBadge {...alert} />
+                </td>
+                <td>{alert.rule.name}</td>
+                <td>
+                  <a target="_blank" href={alert.html_url} rel="noopener noreferrer">
+                    {alert.rule.description}
+                  </a>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Panel>
-    )) ||
-    null
+    ))
+    || null
   );
 };

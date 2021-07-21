@@ -1,12 +1,14 @@
-import * as React from "react";
-import { Row, Col, Alert, Card } from "react-bootstrap";
-import { format } from "date-fns";
-import frLocale from "date-fns/locale/fr";
+import * as React from 'react';
+import {
+  Row, Col, Alert, Card,
+} from 'react-bootstrap';
+import { format } from 'date-fns';
+import frLocale from 'date-fns/locale/fr';
 
-import { Panel } from "./Panel";
-import { Gauge } from "./Gauge";
-import { Grade } from "./Grade";
-import { smallUrl } from "../utils";
+import { Panel } from './Panel';
+import { Gauge } from './Gauge';
+import { Grade } from './Grade';
+import { smallUrl } from '../utils';
 
 type UpDownIoProps = { data: UpDownReport; url: string };
 
@@ -19,7 +21,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
         title="Temps de réponse"
         info="Informations collectées par updown.io"
         url={urlUpdownio}
-        isExternal={true}
+        isExternal
       >
         <Row>
           <Col xs={12} md={4} className="text-center mb-3">
@@ -36,8 +38,8 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                 <Card.Title>
                   Taux de disponibilité sur un mois glissant
                 </Card.Title>
-                <Card.Title style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                  {data.uptime + "%"}
+                <Card.Title style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+                  {`${data.uptime}%`}
                 </Card.Title>
               </Card.Body>
             </Card>
@@ -55,17 +57,17 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                   animationSpeed={32}
                   options={{
                     percentColors: [
-                      [0, "#0CCE6B"],
-                      [0.4, "#0CCE6B"],
-                      [0.6, "#ffa400"],
-                      [0.8, "#FF4E42"],
+                      [0, '#0CCE6B'],
+                      [0.4, '#0CCE6B'],
+                      [0.6, '#ffa400'],
+                      [0.8, '#FF4E42'],
                     ],
                   }}
                 />
                 <Card.Body>
                   <Card.Title>Temps de réponse</Card.Title>
-                  <Card.Title style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                    {data.metrics.timings.total + "ms"}
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+                    {`${data.metrics.timings.total}ms`}
                   </Card.Title>
                 </Card.Body>
               </Card>
@@ -88,16 +90,18 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
               <Card>
                 <Card.Body style={{ padding: 5 }}>
                   <Card.Title>
-                    Certificat TLS{" "}
+                    Certificat TLS
+                    {' '}
                     {data.ssl.valid ? (
                       <Grade small grade="A+" label="valide" />
                     ) : (
                       <Grade small grade="F" label="invalide" />
                     )}
                   </Card.Title>
-                  <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-                    expire le{" "}
-                    {format(new Date(data.ssl.expires_at), "dd/MM/yyyy", {
+                  <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+                    expire le
+                    {' '}
+                    {format(new Date(data.ssl.expires_at), 'dd/MM/yyyy', {
                       locale: frLocale,
                     })}
                   </div>

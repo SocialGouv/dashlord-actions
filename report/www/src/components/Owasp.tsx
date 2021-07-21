@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Table, Badge } from "react-bootstrap";
+import { Table, Badge } from 'react-bootstrap';
 
-import { Panel } from "./Panel";
+import { Panel } from './Panel';
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first
@@ -16,16 +16,15 @@ const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
 
 const OwaspBadge = (row: ZapReportSiteAlert) => {
   const severity = row.riskcode;
-  const variant =
-    severity === "0"
-      ? "info"
-      : severity === "1"
-      ? "info"
-      : severity === "2"
-      ? "warning"
-      : severity === "3"
-      ? "danger"
-      : "info";
+  const variant = severity === '0'
+    ? 'info'
+    : severity === '1'
+      ? 'info'
+      : severity === '2'
+        ? 'warning'
+        : severity === '3'
+          ? 'danger'
+          : 'info';
   return (
     <Badge className="w-100" variant={variant}>
       {row.riskdesc}
@@ -36,13 +35,12 @@ const OwaspBadge = (row: ZapReportSiteAlert) => {
 type OwaspProps = { data: ZapReport; url: string };
 
 export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
-  const alerts =
-    (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
+  const alerts = (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
   alerts.sort(orderBySeverity);
   return (
     (alerts.length && (
       <Panel
-        isExternal={true}
+        isExternal
         title="OWASP"
         url={url}
         info="Scan de vulnérabiliés OWASP baseline"
@@ -57,20 +55,18 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
             </tr>
           </thead>
           <tbody>
-            {alerts.map((alert, i: number) => {
-              return (
-                <tr key={alert.name + i}>
-                  <td className="text-center">
-                    <OwaspBadge {...alert} />
-                  </td>
-                  <td>{alert.name}</td>
-                </tr>
-              );
-            })}
+            {alerts.map((alert, i: number) => (
+              <tr key={alert.name + i}>
+                <td className="text-center">
+                  <OwaspBadge {...alert} />
+                </td>
+                <td>{alert.name}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Panel>
-    )) ||
-    null
+    ))
+    || null
   );
 };

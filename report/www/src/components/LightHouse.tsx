@@ -1,14 +1,14 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Row, Col } from "@dataesr/react-dsfr";
-import { Gauge } from "./Gauge";
-import { Panel } from "./Panel";
-import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
-import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
+import { Row, Col } from '@dataesr/react-dsfr';
+import { Gauge } from './Gauge';
+import { Panel } from './Panel';
+import { getPerformanceScore } from '../lib/lighthouse/getPerformanceScore';
+import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
 
 const toTime = (ms: number) => {
-  let minutes = 0,
-    seconds = 0;
+  let minutes = 0;
+  let seconds = 0;
   let rest = ms;
   if (rest > 60 * 1000) {
     minutes = Math.floor(rest / 60000);
@@ -26,8 +26,8 @@ const toTime = (ms: number) => {
 
 const toSize = (bytes: number) => {
   const factor = 1000;
-  let mb = 0,
-    kb = 0;
+  let mb = 0;
+  let kb = 0;
   let rest = bytes;
   if (rest > factor * factor) {
     mb = Math.floor(rest / (factor * factor));
@@ -51,38 +51,38 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
   }
 
   const highlights = {
-    "First contentful Paint":
-      data.audits.metrics.details &&
-      data.audits.metrics.details.items &&
-      toTime(data.audits.metrics.details.items[0].firstContentfulPaint),
-    "Time to interactive":
-      data.audits.metrics.details &&
-      data.audits.metrics.details.items &&
-      toTime(data.audits.metrics.details.items[0].interactive),
-    "Total requests":
-      data.audits.diagnostics.details &&
-      data.audits.diagnostics.details.items &&
-      data.audits.diagnostics.details.items[0].numRequests,
-    "Total weight":
-      data.audits.diagnostics.details &&
-      data.audits.diagnostics.details.items &&
-      toSize(data.audits.diagnostics.details.items[0].totalByteWeight),
+    'First contentful Paint':
+      data.audits.metrics.details
+      && data.audits.metrics.details.items
+      && toTime(data.audits.metrics.details.items[0].firstContentfulPaint),
+    'Time to interactive':
+      data.audits.metrics.details
+      && data.audits.metrics.details.items
+      && toTime(data.audits.metrics.details.items[0].interactive),
+    'Total requests':
+      data.audits.diagnostics.details
+      && data.audits.diagnostics.details.items
+      && data.audits.diagnostics.details.items[0].numRequests,
+    'Total weight':
+      data.audits.diagnostics.details
+      && data.audits.diagnostics.details.items
+      && toSize(data.audits.diagnostics.details.items[0].totalByteWeight),
     // "Max server Latency": toTime(
     //   data.audits.diagnostics.details.items[0].maxServerLatency
     //   ),
   } as object;
 
-  const order = ["accessibility", "performance", "seo", "best-practices"];
+  const order = ['accessibility', 'performance', 'seo', 'best-practices'];
 
   // use custom scoring
-  data.categories["performance"].score = getPerformanceScore(data);
+  data.categories.performance.score = getPerformanceScore(data);
 
   return (
     <Panel
       title="LightHouse"
       info="Informations collectées par l'outil Google LightHouse"
       url={url}
-      isExternal={true}
+      isExternal
     >
       <Row>
         <Col>
@@ -94,13 +94,13 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
           const category = data.categories[key as LighthouseReportCategoryKey];
           const score = category.score as number;
           return (
-            (!isNaN(score) && (
+            (!Number.isNaN(score) && (
               <Col
                 key={category.title + i}
                 n="12 sm-12 md-6 lg-3"
                 className="fr-mb-2w"
               >
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center"}} >
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <Gauge
                     width={100}
                     height={60}
@@ -111,39 +111,37 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                   />
                   <div>{category.title}</div>
                   <div
-                    style={{ fontSize: "2rem", fontWeight: "bold" }}
+                    style={{ fontSize: '2rem', fontWeight: 'bold' }}
                   >
-                    {(score * 100).toFixed() + "%"}
+                    {`${(score * 100).toFixed()}%`}
                   </div>
                 </div>
               </Col>
-            )) ||
-            null
+            ))
+            || null
           );
         })}
       </Row>
       <Row>
-        {Object.keys(highlights).map((label) => {
-          return (
-            <Col 
-              n="12 sm-12 md-6 lg-3"
-              key={label} 
-              className="fr-mb-2w"
-            >
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center"}} >
-                <div style={{ fontSize: "0.9rem" }}>
-                  {label}
-                </div>
-                <div
-                  style={{ fontSize: "1.5rem", fontWeight: "bold" }}
-                >
-                  {/* @ts-expect-error */}
-                  {highlights[label]}
-                </div>
+        {Object.keys(highlights).map((label) => (
+          <Col
+            n="12 sm-12 md-6 lg-3"
+            key={label}
+            className="fr-mb-2w"
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ fontSize: '0.9rem' }}>
+                {label}
               </div>
-            </Col>
-          );
-        })}
+              <div
+                style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+              >
+                {/* @ts-expect-error */}
+                {highlights[label]}
+              </div>
+            </div>
+          </Col>
+        ))}
       </Row>
     </Panel>
   );

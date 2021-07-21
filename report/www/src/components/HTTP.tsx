@@ -1,24 +1,23 @@
-import * as React from "react";
-import { Table, Badge } from "react-bootstrap";
+import * as React from 'react';
+import { Table, Badge } from 'react-bootstrap';
 
-import { smallUrl } from "../utils";
-import { Panel } from "./Panel";
-import { Grade } from "./Grade";
+import { smallUrl } from '../utils';
+import { Panel } from './Panel';
+import { Grade } from './Grade';
 
 type HTTPProps = { data: HttpReport };
 
 const HttpRowBadge = (row: HttpTestReport) => {
   const scoreModifier = row.score_modifier;
-  const variant =
-    scoreModifier < -50
-      ? "danger"
-      : scoreModifier < -30
-      ? "danger"
+  const variant = scoreModifier < -50
+    ? 'danger'
+    : scoreModifier < -30
+      ? 'danger'
       : scoreModifier < -20
-      ? "warning"
-      : scoreModifier < -10
-      ? "info"
-      : "success";
+        ? 'warning'
+        : scoreModifier < -10
+          ? 'info'
+          : 'success';
   return (
     <Badge className="w-100" variant={variant}>
       {scoreModifier}
@@ -28,8 +27,8 @@ const HttpRowBadge = (row: HttpTestReport) => {
 
 // some help for remediation
 const helpDocs = {
-  "content-security-policy": (
-    <React.Fragment>
+  'content-security-policy': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -37,19 +36,21 @@ const helpDocs = {
       >
         Doc Content Security Policy
       </a>
-      . L'extension{" "}
+      . L'extension
+      {' '}
       <a
         href="https://github.com/april/laboratory"
         rel="noopener noreferrer"
         target="_blank"
       >
         github.com/april/laboratory
-      </a>{" "}
+      </a>
+      {' '}
       permet de générer la CSP pour votre application.
-    </React.Fragment>
+    </>
   ),
-  "x-frame-options": (
-    <React.Fragment>
+  'x-frame-options': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -58,10 +59,10 @@ const helpDocs = {
         Doc header X-Frame-Options
       </a>
       .
-    </React.Fragment>
+    </>
   ),
-  "strict-transport-security": (
-    <React.Fragment>
+  'strict-transport-security': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -70,10 +71,10 @@ const helpDocs = {
         Doc header Strict-Transport-Security (HSTS)
       </a>
       .
-    </React.Fragment>
+    </>
   ),
-  "x-content-type-options": (
-    <React.Fragment>
+  'x-content-type-options': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -82,10 +83,10 @@ const helpDocs = {
         Doc header X-Content-Type-Options
       </a>
       .
-    </React.Fragment>
+    </>
   ),
-  "x-xss-protection": (
-    <React.Fragment>
+  'x-xss-protection': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -94,10 +95,10 @@ const helpDocs = {
         Doc header X-XSS-Protection
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   cookies: (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -106,10 +107,10 @@ const helpDocs = {
         OWASP Session Management Cheat Sheet
       </a>
       .
-    </React.Fragment>
+    </>
   ),
-  "subresource-integrity": (
-    <React.Fragment>
+  'subresource-integrity': (
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -118,7 +119,7 @@ const helpDocs = {
         Doc Subresource Integrity
       </a>
       .
-    </React.Fragment>
+    </>
   ),
 };
 
@@ -126,9 +127,8 @@ export const HTTP = ({ data }: HTTPProps) => {
   if (!data.url) {
     return null;
   }
-  const url =
-    (data && `https://observatory.mozilla.org/analyze/${smallUrl(data.url)}`) ||
-    null;
+  const url = (data && `https://observatory.mozilla.org/analyze/${smallUrl(data.url)}`)
+    || null;
   const failures = Object.keys(data.details)
     .filter((key) => !data.details[key].pass)
     .map((key) => data.details[key]);
@@ -140,14 +140,16 @@ export const HTTP = ({ data }: HTTPProps) => {
         title="HTTP"
         info="Informations collectées par le Mozilla HTTP observatory"
         url={url}
-        isExternal={true}
+        isExternal
       >
         <h3>
-          Scan Summary : <Grade small grade={data.grade} />
+          Scan Summary :
+          {' '}
+          <Grade small grade={data.grade} />
         </h3>
         <br />
         {(failures.length && (
-          <React.Fragment>
+          <>
             <br />
             <Table striped bordered hover>
               <thead>
@@ -167,18 +169,18 @@ export const HTTP = ({ data }: HTTPProps) => {
                     <td>
                       {
                         // @ts-expect-error
-                        helpDocs[failure.name] || "-"
+                        helpDocs[failure.name] || '-'
                       }
                     </td>
                   </tr>
                 ))}
               </tbody>
             </Table>
-          </React.Fragment>
-        )) ||
-          null}
+          </>
+        ))
+          || null}
       </Panel>
-    )) ||
-    null
+    ))
+    || null
   );
 };

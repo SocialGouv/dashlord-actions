@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   BarChart,
   Bar,
@@ -7,45 +7,42 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
 
-import { Jumbotron, CardColumns } from "react-bootstrap";
-import uniq from "lodash.uniq";
+import { Jumbotron, CardColumns } from 'react-bootstrap';
+import uniq from 'lodash.uniq';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { Panel } from "./Panel";
+import { Panel } from './Panel';
 
 type UsageChartProps = { data: any };
 
-const UsageChart: React.FC<UsageChartProps> = ({ data }) => {
-  return (
-      <BarChart
-        width={300}
-        height={200}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="count" fill="#82ca9d" />
-      </BarChart>
-  );
-};
+const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
+  <BarChart
+    width={300}
+    height={200}
+    data={data}
+    margin={{
+      top: 5,
+      right: 30,
+      left: 20,
+      bottom: 5,
+    }}
+  >
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis dataKey="name" />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <Bar dataKey="count" fill="#82ca9d" />
+  </BarChart>
+);
 
-const toChartData = (category: WappalyzerParsedCategory) =>
-  category.items.map((item) => ({
-    name: item.name,
-    count: item.urls.length,
-  }));
+const toChartData = (category: WappalyzerParsedCategory) => category.items.map((item) => ({
+  name: item.name,
+  count: item.urls.length,
+}));
 
 type WappalyzerDashboardProps = { report: DashLordReport };
 
@@ -63,26 +60,24 @@ const getCategoriesByUrl = (report: DashLordReport) => {
     .flatMap((url) => ({ url, wappalyzer: url.wappalyzer }))
     .filter(({ url, wappalyzer }) => !!wappalyzer)
     .flatMap(
-      ({ url, wappalyzer }) =>
-        (wappalyzer &&
-          wappalyzer.technologies.map((details) => ({
+      ({ url, wappalyzer }) => (wappalyzer
+          && wappalyzer.technologies.map((details) => ({
             ...details,
             url: url.url,
-          }))) ||
-        []
+          })))
+        || [],
     );
   const categoriesNames = uniq(
     allTechnologies.flatMap(
-      (t) => t.categories && t.categories.map((c) => c.name)
-    )
+      (t) => t.categories && t.categories.map((c) => c.name),
+    ),
   );
 
-  const getTechUrl = (name: string) =>
-    allTechnologies.find((t) => t.name === name)?.website;
+  const getTechUrl = (name: string) => allTechnologies.find((t) => t.name === name)?.website;
 
   const categories = categoriesNames.map((name) => {
     const categoryTechs = allTechnologies.filter(
-      (t) => t.categories && t.categories.find((c) => c.name === name)
+      (t) => t.categories && t.categories.find((c) => c.name === name),
     );
 
     // group techs by name and sort by count desc
@@ -117,14 +112,14 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
   return (
     <div>
       <br />
-      <Jumbotron style={{ padding: "2em" }}>
+      <Jumbotron style={{ padding: '2em' }}>
         <h1>Wappalyzer : technologies détectées</h1>
       </Jumbotron>
       <CardColumns>
         {categories.map((category) => (
           <Panel key={category.name} title={category.name}>
             <UsageChart data={toChartData(category)} />
-            <br/>
+            <br />
             {category.items.map((item) => (
               <div key={item.name}>
                 <b>
@@ -133,7 +128,11 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {item.name} ({item.urls.length})
+                    {item.name}
+                    {' '}
+                    (
+                    {item.urls.length}
+                    )
                   </a>
                 </b>
                 <ul>

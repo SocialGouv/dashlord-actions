@@ -1,6 +1,6 @@
 // @ts-nocheck
-import React, { useRef, useEffect } from "react";
-import { Gauge as CanvasGauge, Donut } from "gaugeJS/dist/gauge.min";
+import React, { useRef, useEffect } from 'react';
+import { Gauge as CanvasGauge, Donut } from 'gaugeJS/dist/gauge.min';
 
 // copied from https://unpkg.com/react-gaugejs@1.2.1/Gauge.js due to bad transpilation
 
@@ -77,8 +77,8 @@ export const Gauge: React.FC<GaugeProps> = (props) => {
         ref={canvas}
         className="gauge-canvas"
         {...passThroughProps}
-      ></canvas>
-      <span ref={span} style={{ display: "none" }}></span>
+      />
+      <span ref={span} style={{ display: 'none' }} />
     </>
   );
 };
@@ -95,13 +95,13 @@ Gauge.defaultProps = {
     //   fractionDigits: 0, // Optional: Numerical precision. 0=round off.
     // },
     percentColors: [
-      [0.0, "#FF4E42"],
-      [0.5, "#ffa400"],
-      [0.9, "#0CCE6B"],
-      //[0.90, "#ffa400"],
+      [0.0, '#FF4E42'],
+      [0.5, '#ffa400'],
+      [0.9, '#0CCE6B'],
+      // [0.90, "#ffa400"],
       //  [0.3, "#ff0000"],
       // [0.5, "#f9c802"],
-      [1, "#0CCE6B"],
+      [1, '#0CCE6B'],
     ],
     angle: 0.25,
     lineWidth: 0.44,
@@ -109,13 +109,13 @@ Gauge.defaultProps = {
     pointer: {
       length: 0.6,
       strokeWidth: 0.035,
-      color: "#333",
+      color: '#333',
     },
-    //limitMax: false,
-    //limitMin: false,
-    //colorStart: "red",
-    //colorStop: "pink",
-    strokeColor: "#FF4E42",
+    // limitMax: false,
+    // limitMin: false,
+    // colorStart: "red",
+    // colorStop: "pink",
+    strokeColor: '#FF4E42',
     generateGradient: true,
     highDpiSupport: true,
   },

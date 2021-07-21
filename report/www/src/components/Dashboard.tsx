@@ -1,20 +1,22 @@
-import orderBy from "lodash.orderby";
-import Tooltip from "rc-tooltip";
-import "rc-tooltip/assets/bootstrap.css";
-import * as React from "react";
-import { useMemo, useState } from "react";
+import orderBy from 'lodash.orderby';
+import Tooltip from 'rc-tooltip';
+import 'rc-tooltip/assets/bootstrap.css';
+import * as React from 'react';
+import { useMemo, useState } from 'react';
 import {
   default as BaseTable,
   AutoResizer,
   Column,
   SortOrder,
-} from "react-base-table";
-import "react-base-table/styles.css";
-import { AlertTriangle, Info, Search, Slash } from "react-feather";
-import { Link } from "react-router-dom";
-import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-import { isToolEnabled, smallUrl, letterGradeValue } from "../utils";
-import { Grade } from "./Grade";
+} from 'react-base-table';
+import 'react-base-table/styles.css';
+import {
+  AlertTriangle, Info, Search, Slash,
+} from 'react-feather';
+import { Link } from 'react-router-dom';
+import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
+import { isToolEnabled, smallUrl, letterGradeValue } from '../utils';
+import { Grade } from './Grade';
 
 type DashboardProps = { report: DashLordReport };
 
@@ -31,31 +33,31 @@ const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   info,
   warning,
 }) => (
-  <div style={{ textAlign: "center" }}>
-    <span style={{ fontSize: "0.9em" }}>
+  <div style={{ textAlign: 'center' }}>
+    <span style={{ fontSize: '0.9em' }}>
       {title}
       <br />
       <Tooltip
         placement="bottom"
-        trigger={["hover"]}
+        trigger={['hover']}
         overlay={<div style={{ maxWidth: 300 }}>{info}</div>}
       >
-        <Info size={16} style={{ cursor: "pointer" }} />
+        <Info size={16} style={{ cursor: 'pointer' }} />
       </Tooltip>
     </span>
 
     {warning && (
       <Tooltip
         placement="bottom"
-        trigger={["hover"]}
+        trigger={['hover']}
         overlay={<div style={{ maxWidth: 300 }}>{warning}</div>}
       >
         <AlertTriangle
           size={16}
           style={{
-            stroke: "var(--danger)",
+            stroke: 'var(--danger)',
             marginLeft: 5,
-            cursor: "pointer",
+            cursor: 'pointer',
           }}
         />
       </Tooltip>
@@ -70,22 +72,21 @@ type SortState = {
 };
 
 const defaultSort = {
-  key: "url",
-  order: "asc",
-  column: { dataKey: "url" },
+  key: 'url',
+  order: 'asc',
+  column: { dataKey: 'url' },
 } as SortState;
 
-const percent = (num: number | undefined): string =>
-  (num !== undefined && Math.floor(num * 100) + " %") || "-";
+const percent = (num: number | undefined): string => (num !== undefined && `${Math.floor(num * 100)} %`) || '-';
 
 const defaultColumnProps = {
   width: 120,
   sortable: true,
-  align: "center",
+  align: 'center',
 } as {
   width: number;
   sortable: boolean;
-  align: "center" | "left" | "right";
+  align: 'center' | 'left' | 'right';
 };
 
 const lighthouseColumnProps = ({
@@ -99,34 +100,32 @@ const lighthouseColumnProps = ({
   info: string;
   warning?: any;
 }) => ({
-  headerRenderer: () => {
-    return <ColumnHeader title={title} info={info} warning={warning} />;
-  },
+  headerRenderer: () => <ColumnHeader title={title} info={info} warning={warning} />,
   dataGetter: ({ rowData }: { rowData: any }) => {
-    const summary = (rowData as UrlReport).summary;
+    const { summary } = rowData as UrlReport;
     const scoreKey = `lighthouse_${id}`;
-    //@ts-expect-error
+    // @ts-expect-error
     if (summary[scoreKey] === undefined) {
       return -1;
     }
-    //@ts-expect-error
+    // @ts-expect-error
     return summary[scoreKey];
   },
   cellRenderer: ({ rowData }: { rowData: any }) => {
-    const summary = (rowData as UrlReport).summary;
+    const { summary } = rowData as UrlReport;
     const gradeKey = `lighthouse_${id}Grade`;
     const scoreKey = `lighthouse_${id}`;
     return (
       <Link
         to={{
           pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
-          hash: "lighthouse",
+          hash: 'lighthouse',
         }}
       >
         <GradeBadge
-          //@ts-expect-error
+          // @ts-expect-error
           grade={summary[gradeKey]}
-          //@ts-expect-error
+          // @ts-expect-error
           label={percent(summary[scoreKey])}
         />
       </Link>
@@ -149,25 +148,23 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   };
 
   const sortedReport = useMemo(() => {
-    const getSortedRows = (rows: any) => {
-      return orderBy(
-        rows,
-        (row) => {
-          if (sortBy.column.dataGetter) {
-            //@ts-expect-error
-            return sortBy.column.dataGetter({ rowData: row });
-          } else if (sortBy.column.key) {
-            return row[sortBy.column.key];
-          }
-        },
-        sortBy.order
-      );
-    };
+    const getSortedRows = (rows: any) => orderBy(
+      rows,
+      (row) => {
+        if (sortBy.column.dataGetter) {
+          // @ts-expect-error
+          return sortBy.column.dataGetter({ rowData: row });
+        } if (sortBy.column.key) {
+          return row[sortBy.column.key];
+        }
+      },
+      sortBy.order,
+    );
 
     return getSortedRows(report);
   }, [sortBy, report]);
   return (
-    <div style={{ width: "100%", height: "calc(100vh - 30px)" }}>
+    <div style={{ width: '100%', height: 'calc(100vh - 30px)' }}>
       <AutoResizer>
         {({ width, height }) => (
           <BaseTable
@@ -180,7 +177,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             <Column
               key="url"
               title="url"
-              sortable={true}
+              sortable
               width={300}
               flexGrow={1}
               cellRenderer={({ rowData }) => (
@@ -188,55 +185,56 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   to={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}
                 >
                   <Search size={16} />
-                  &nbsp;{smallUrl((rowData as UrlReport).url)}
+                  &nbsp;
+                  {smallUrl((rowData as UrlReport).url)}
                 </Link>
               )}
             />
-            {isToolEnabled("lighthouse") && (
+            {isToolEnabled('lighthouse') && (
               <Column
                 {...defaultColumnProps}
                 key="accessibility"
                 {...lighthouseColumnProps({
-                  id: "accessibility",
-                  title: "Accessibilité",
+                  id: 'accessibility',
+                  title: 'Accessibilité',
                   info: "Bonnes pratiques en matière d'accessibilité web (LightHouse)",
                   warning: <AccessibilityWarnings />,
                 })}
               />
             )}
-            {isToolEnabled("lighthouse") && (
+            {isToolEnabled('lighthouse') && (
               <Column
                 {...defaultColumnProps}
                 key="performance"
                 {...lighthouseColumnProps({
-                  id: "performance",
-                  title: "Performance",
-                  info: "Performances de chargement des pages web (LightHouse)",
+                  id: 'performance',
+                  title: 'Performance',
+                  info: 'Performances de chargement des pages web (LightHouse)',
                 })}
               />
             )}
-            {isToolEnabled("lighthouse") && (
+            {isToolEnabled('lighthouse') && (
               <Column
                 {...defaultColumnProps}
                 key="seo"
                 {...lighthouseColumnProps({
-                  id: "seo",
-                  title: "SEO",
-                  info: "Bonnes pratiques en matière de référencement naturel (LightHouse)",
+                  id: 'seo',
+                  title: 'SEO',
+                  info: 'Bonnes pratiques en matière de référencement naturel (LightHouse)',
                 })}
               />
             )}
 
-            {isToolEnabled("testssl") && (
+            {isToolEnabled('testssl') && (
               <Column
                 {...defaultColumnProps}
                 key="ssl"
                 dataGetter={({ rowData }: { rowData: any }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
-                    (summary.testsslGrade &&
-                      letterGradeValue(summary.testsslGrade)) ||
-                    -1
+                    (summary.testsslGrade
+                      && letterGradeValue(summary.testsslGrade))
+                    || -1
                   );
                 }}
                 headerRenderer={() => (
@@ -246,14 +244,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "testssl",
+                        hash: 'testssl',
                       }}
                     >
                       <GradeBadge grade={summary.testsslGrade} />
@@ -263,16 +261,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("http") && (
+            {isToolEnabled('http') && (
               <Column
                 {...defaultColumnProps}
                 key="http"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
-                    (summary.httpGrade &&
-                      letterGradeValue(summary.httpGrade)) ||
-                    -1
+                    (summary.httpGrade
+                      && letterGradeValue(summary.httpGrade))
+                    || -1
                   );
                 }}
                 headerRenderer={() => (
@@ -282,14 +280,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "http",
+                        hash: 'http',
                       }}
                     >
                       <GradeBadge grade={summary.httpGrade} />
@@ -299,12 +297,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("updownio") && (
+            {isToolEnabled('updownio') && (
               <Column
                 {...defaultColumnProps}
                 key="updownio"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.uptime || -1;
                 }}
                 headerRenderer={() => (
@@ -314,14 +312,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "updownio",
+                        hash: 'updownio',
                       }}
                     >
                       <GradeBadge
@@ -333,12 +331,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 }}
               />
             )}
-            {isToolEnabled("updownio") && (
+            {isToolEnabled('updownio') && (
               <Column
                 {...defaultColumnProps}
                 key="updownio2"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.apdex || -1;
                 }}
                 headerRenderer={() => (
@@ -348,14 +346,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "updownio",
+                        hash: 'updownio',
                       }}
                     >
                       <GradeBadge
@@ -368,12 +366,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("dependabot") && (
+            {isToolEnabled('dependabot') && (
               <Column
                 {...defaultColumnProps}
                 key="dependabot"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.dependabotGrade;
                 }}
                 headerRenderer={() => (
@@ -383,14 +381,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "dependabot",
+                        hash: 'dependabot',
                       }}
                     >
                       <GradeBadge
@@ -403,12 +401,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("codescan") && (
+            {isToolEnabled('codescan') && (
               <Column
                 {...defaultColumnProps}
                 key="codescan"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.codescanCount;
                 }}
                 headerRenderer={() => (
@@ -418,14 +416,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "codescan",
+                        hash: 'codescan',
                       }}
                     >
                       <GradeBadge
@@ -438,16 +436,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("nmap") && (
+            {isToolEnabled('nmap') && (
               <Column
                 {...defaultColumnProps}
                 key="nmap"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
-                    (summary.nmapGrade &&
-                      letterGradeValue(summary.nmapGrade)) ||
-                    -1
+                    (summary.nmapGrade
+                      && letterGradeValue(summary.nmapGrade))
+                    || -1
                   );
                 }}
                 headerRenderer={() => (
@@ -457,14 +455,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "nmap",
+                        hash: 'nmap',
                       }}
                     >
                       <GradeBadge grade={summary.nmapGrade} />
@@ -474,12 +472,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("nmap") && (
+            {isToolEnabled('nmap') && (
               <Column
                 {...defaultColumnProps}
                 key="nmap2"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.nmapOpenPortsCount;
                 }}
                 headerRenderer={() => (
@@ -489,14 +487,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "nmap",
+                        hash: 'nmap',
                       }}
                     >
                       <GradeBadge
@@ -509,35 +507,35 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               />
             )}
 
-            {isToolEnabled("thirdparties") && (
+            {isToolEnabled('thirdparties') && (
               <Column
                 {...defaultColumnProps}
                 key="trackers"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.trackersCount;
                 }}
                 headerRenderer={() => (
                   <ColumnHeader
                     title="Trackers"
                     info="Nombre de scripts externes détectés"
-                    warning={
+                    warning={(
                       <div>
                         Certains scripts externes légitimes peuvent être
                         considérés comme trackers.
                       </div>
-                    }
+                    )}
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "thirdparties",
+                        hash: 'thirdparties',
                       }}
                     >
                       <GradeBadge
@@ -549,12 +547,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 }}
               />
             )}
-            {isToolEnabled("thirdparties") && (
+            {isToolEnabled('thirdparties') && (
               <Column
                 {...defaultColumnProps}
                 key="cookies"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.cookiesCount;
                 }}
                 headerRenderer={() => (
@@ -564,14 +562,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "thirdparties",
+                        hash: 'thirdparties',
                       }}
                     >
                       <GradeBadge
@@ -583,12 +581,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 }}
               />
             )}
-            {isToolEnabled("stats") && (
+            {isToolEnabled('stats') && (
               <Column
                 {...defaultColumnProps}
                 key="stats"
                 dataGetter={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return summary.statsGrade;
                 }}
                 headerRenderer={() => (
@@ -598,14 +596,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   />
                 )}
                 cellRenderer={({ rowData }) => {
-                  const summary = (rowData as UrlReport).summary;
+                  const { summary } = rowData as UrlReport;
                   return (
                     <Link
                       to={{
                         pathname: `/url/${encodeURIComponent(
-                          (rowData as UrlReport).url
+                          (rowData as UrlReport).url,
                         )}`,
-                        hash: "stats",
+                        hash: 'stats',
                       }}
                     >
                       <GradeBadge

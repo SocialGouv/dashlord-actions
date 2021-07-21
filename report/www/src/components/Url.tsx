@@ -1,35 +1,35 @@
-import * as React from "react";
-import { formatDistanceToNow } from "date-fns";
-import frLocale from "date-fns/locale/fr";
-import { Link } from "react-router-dom";
-import { Clock } from "react-feather";
-import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr"
-import { Badge } from "react-bootstrap";
+import * as React from 'react';
+import { formatDistanceToNow } from 'date-fns';
+import frLocale from 'date-fns/locale/fr';
+import { Link } from 'react-router-dom';
+import { Clock } from 'react-feather';
+import { Callout, CalloutTitle, CalloutText } from '@dataesr/react-dsfr';
+import { Badge } from 'react-bootstrap';
 
-import { isToolEnabled } from "../utils";
-import { HTTP } from "./HTTP";
-import { LightHouse } from "./LightHouse";
-import { Nuclei } from "./Nuclei";
-import { Owasp } from "./Owasp";
-import { TestSSL } from "./TestSSL";
-import { Trackers } from "./Trackers";
-import { Wappalyzer } from "./Wappalyzer";
-import { UpdownIo } from "./UpdownIo";
-import { Dependabot } from "./Dependabot";
-import { Codescan } from "./Codescan";
-import { Nmap } from "./Nmap";
-import { Stats } from "./Stats";
+import { isToolEnabled } from '../utils';
+import { HTTP } from './HTTP';
+import { LightHouse } from './LightHouse';
+import { Nuclei } from './Nuclei';
+import { Owasp } from './Owasp';
+import { TestSSL } from './TestSSL';
+import { Trackers } from './Trackers';
+import { Wappalyzer } from './Wappalyzer';
+import { UpdownIo } from './UpdownIo';
+import { Dependabot } from './Dependabot';
+import { Codescan } from './Codescan';
+import { Nmap } from './Nmap';
+import { Stats } from './Stats';
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
 const Anchor = ({ id }: { id: string }) => (
-  <div id={id} style={{ marginBottom: 30 }}></div>
+  <div id={id} style={{ marginBottom: 30 }} />
 );
 
 export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
-    const hash = document.location.hash.split("#");
+    const hash = document.location.hash.split('#');
     if (hash.length === 3) {
       // double hash + HashRouter workaround
       const target = document.getElementById(hash[2]);
@@ -39,7 +39,12 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
     }
   }, [report]);
   if (!report) {
-    return <div>No data available for {url}</div>;
+    return (
+      <div>
+        No data available for
+        {url}
+      </div>
+    );
   }
   return (
     <>
@@ -57,8 +62,8 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
               </Badge>
             </Link>
           )}
-          {report.tags &&
-            report.tags.map((tag: string) => (
+          {report.tags
+            && report.tags.map((tag: string) => (
               <Link key={tag} to={`/tag/${tag}`}>
                 <Badge style={{ marginRight: 5 }} variant="info">
                   {tag}
@@ -68,160 +73,157 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           {updateDate && (
             <span title={updateDate}>
               <Clock size={12} style={{ marginRight: 5 }} />
-              Mise à jour il y a :{" "}
+              Mise à jour il y a :
+              {' '}
               {formatDistanceToNow(new Date(updateDate), {
                 locale: frLocale,
               })}
             </span>
           )}
         </CalloutText>
-        <div style={{ position: "absolute", top: 28, right: 48}}>
-            <img
-              alt={`Copie d'écran de ${url}`}
-              style={{
-                position: "relative",
-                top: 0,
-                maxHeight: 80,
-                border: "1px solid var(--dark)",
-              }}
-              src={`https://dashlord.incubateur.net/report/aHR0cHM6Ly9hY2Nlc2xpYnJlLmJldGEuZ291di5mcg==/screenshot.jpeg`}
-            />
-          </div>
+        <div style={{ position: 'absolute', top: 28, right: 48 }}>
+          <img
+            alt={`Copie d'écran de ${url}`}
+            style={{
+              position: 'relative',
+              top: 0,
+              maxHeight: 80,
+              border: '1px solid var(--dark)',
+            }}
+            src="https://dashlord.incubateur.net/report/aHR0cHM6Ly9hY2Nlc2xpYnJlLmJldGEuZ291di5mcg==/screenshot.jpeg"
+          />
+        </div>
       </Callout>
-      {(isToolEnabled("lighthouse") && report.lhr && (
-        <React.Fragment>
+      {(isToolEnabled('lighthouse') && report.lhr && (
+        <>
           <Anchor id="lighthouse" />
           <LightHouse
             data={report.lhr}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
-              url
+              url,
             )}/lhr.html`}
           />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("dependabot") &&
-        report.dependabot &&
-        report.dependabot.repositories && (
-          <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('dependabot')
+        && report.dependabot
+        && report.dependabot.repositories && (
+          <>
             <Anchor id="dependabot" />
             {report.dependabot.repositories
               .filter(Boolean)
-              .map((repository) => {
-                return (
-                  <Dependabot
-                    key={repository.url}
-                    data={repository}
-                    url={url}
-                  />
-                );
-              })}
+              .map((repository) => (
+                <Dependabot
+                  key={repository.url}
+                  data={repository}
+                  url={url}
+                />
+              ))}
             <br />
-          </React.Fragment>
-        )) ||
-        null}
-      {(isToolEnabled("codescan") &&
-        report.codescan &&
-        report.codescan.repositories && (
-          <React.Fragment>
+          </>
+      ))
+        || null}
+      {(isToolEnabled('codescan')
+        && report.codescan
+        && report.codescan.repositories && (
+          <>
             <Anchor id="codescan" />
-            {report.codescan.repositories.filter(Boolean).map((repository) => {
-              return (
-                <Codescan key={repository.url} data={repository} url={url} />
-              );
-            })}
+            {report.codescan.repositories.filter(Boolean).map((repository) => (
+              <Codescan key={repository.url} data={repository} url={url} />
+            ))}
             <br />
-          </React.Fragment>
-        )) ||
-        null}
-      {(isToolEnabled("updownio") && report.updownio && (
-        <React.Fragment>
+          </>
+      ))
+        || null}
+      {(isToolEnabled('updownio') && report.updownio && (
+        <>
           <Anchor id="updownio" />
           <UpdownIo data={report.updownio} url={url} />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("testssl") && report.testssl && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('testssl') && report.testssl && (
+        <>
           <Anchor id="testssl" />
           <TestSSL
             data={report.testssl}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
-              url
+              url,
             )}/testssl.html`}
           />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("nmap") && report.nmap && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('nmap') && report.nmap && (
+        <>
           <Anchor id="nmap" />
           <Nmap
             data={report.nmap}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
-              url
+              url,
             )}/nmapvuln.html`}
           />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("http") && report.http && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('http') && report.http && (
+        <>
           <Anchor id="http" />
           <HTTP data={report.http} />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("thirdparties") && report.thirdparties && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('thirdparties') && report.thirdparties && (
+        <>
           <Anchor id="thirdparties" />
           <Trackers data={report.thirdparties} />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("zap") && report.zap && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('zap') && report.zap && (
+        <>
           <Anchor id="zap" />
           <Owasp
             data={report.zap}
             url={`${process.env.PUBLIC_URL}/report/${window.btoa(
-              url
+              url,
             )}/zap.html`}
           />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("nuclei") && report.nuclei && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('nuclei') && report.nuclei && (
+        <>
           <Anchor id="nuclei" />
           <Nuclei data={report.nuclei} />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-      {(isToolEnabled("wappalyzer") && report.wappalyzer && (
-        <React.Fragment>
+        </>
+      ))
+        || null}
+      {(isToolEnabled('wappalyzer') && report.wappalyzer && (
+        <>
           <Anchor id="wappalyzer" />
           <Wappalyzer data={report.wappalyzer} />
           <br />
-        </React.Fragment>
-      )) ||
-        null}
-        {(isToolEnabled("stats") && report.stats && (
-          <React.Fragment>
-            <Anchor id="stats" />
-            <Stats data={report.stats} url={url} />
-            <br />
-          </React.Fragment>
-        )) ||
-          null}
+        </>
+      ))
+        || null}
+      {(isToolEnabled('stats') && report.stats && (
+      <>
+        <Anchor id="stats" />
+        <Stats data={report.stats} url={url} />
+        <br />
+      </>
+      ))
+          || null}
     </>
   );
 };

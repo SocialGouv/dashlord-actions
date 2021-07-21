@@ -11,8 +11,7 @@ import {
   Link,
 } from '@dataesr/react-dsfr';
 
-export const FooterSite: React.FC = () => {
-  return (
+export const FooterSite: React.FC = () => (
   <Footer>
     <FooterBody
       description=""
@@ -29,4 +28,4 @@ export const FooterSite: React.FC = () => {
       <FooterCopy href="https://solidarites-sante.gouv.fr">© Ministères Sociaux 2021</FooterCopy>
     </FooterBottom>
   </Footer>
-)};
+);

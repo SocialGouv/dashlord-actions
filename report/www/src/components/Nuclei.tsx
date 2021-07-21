@@ -1,22 +1,20 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Table, Badge } from "react-bootstrap";
+import { Table, Badge } from 'react-bootstrap';
 
-import { Panel } from "./Panel";
-
+import { Panel } from './Panel';
 
 const NucleiBadge = (row: NucleiReportEntry) => {
-  const severity = (row.info && row.info.severity) || "critical";
-  const variant =
-    severity === "critical"
-      ? "danger"
-      : severity === "high"
-        ? "danger"
-        : severity === "medium"
-          ? "warning"
-          : severity === "low"
-            ? "info"
-            : "success";
+  const severity = (row.info && row.info.severity) || 'critical';
+  const variant = severity === 'critical'
+    ? 'danger'
+    : severity === 'high'
+      ? 'danger'
+      : severity === 'medium'
+        ? 'warning'
+        : severity === 'low'
+          ? 'info'
+          : 'success';
   return (
     <Badge className="w-100" variant={variant}>
       {severity}
@@ -24,13 +22,12 @@ const NucleiBadge = (row: NucleiReportEntry) => {
   );
 };
 
-const nucleiSeverities = "info,low,medium,high,critical".split(",");
+const nucleiSeverities = 'info,low,medium,high,critical'.split(',');
 
 const nucleiOrder = (a: NucleiReportEntry, b: NucleiReportEntry) => (
-  nucleiSeverities.indexOf(a.info.severity) -
-  nucleiSeverities.indexOf(b.info.severity)
+  nucleiSeverities.indexOf(a.info.severity)
+  - nucleiSeverities.indexOf(b.info.severity)
 );
-
 
 type NucleiProps = { data: NucleiReport };
 
@@ -53,22 +50,20 @@ export const Nuclei: React.FC<NucleiProps> = ({ data }) => {
             </tr>
           </thead>
           <tbody>
-            {rows.map((failure: NucleiReportEntry, i: number) => {
-              return (
-                <tr key={failure.templateID + i}>
-                  <td>
-                    <NucleiBadge {...failure} />
-                  </td>
-                  <td>{failure.templateID}</td>
-                  <td>{failure.info.name}</td>
-                  <td>{failure.matcher_name}</td>
-                </tr>
-              );
-            })}
+            {rows.map((failure: NucleiReportEntry, i: number) => (
+              <tr key={failure.templateID + i}>
+                <td>
+                  <NucleiBadge {...failure} />
+                </td>
+                <td>{failure.templateID}</td>
+                <td>{failure.info.name}</td>
+                <td>{failure.matcher_name}</td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Panel>
-    )) ||
-    null
+    ))
+    || null
   );
 };

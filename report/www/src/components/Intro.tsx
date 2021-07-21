@@ -1,49 +1,51 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Button, Jumbotron, Alert } from "react-bootstrap";
-import { AlertTriangle, Info } from "react-feather";
+import { Button, Jumbotron, Alert } from 'react-bootstrap';
+import { AlertTriangle, Info } from 'react-feather';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { isToolEnabled } from "../utils";
+import { isToolEnabled } from '../utils';
 
-import { Panel } from "./Panel";
+import { Panel } from './Panel';
 
-const dashlordConfig: DashlordConfig  = require("../config.json");
+const dashlordConfig: DashlordConfig = require('../config.json');
 
-export const Intro: React.FC = () => {
-  return (
-    <div>
+export const Intro: React.FC = () => (
+  <div>
+    <br />
+    <Jumbotron style={{ padding: '2em' }}>
+      <h1>{dashlordConfig.title || 'DashLord'}</h1>
       <br />
-      <Jumbotron style={{ padding: "2em" }}>
-        <h1>{dashlordConfig.title || "DashLord"}</h1>
-        <br />
-        Le tableau de bord aggrège les données issues de plusieurs
-        outils qui évaluent chaque URL indépendamment.
-        <br />
-        <br />
-        L'évaluation des outils ne remplace en aucun cas une expertise manuelle,
-        et seule la page d'accueil du site est ici évaluée.
-        <br />
-        <br />
-        Vous pouvez soumettre de nouvelles URLs, proposer des corrections ou
-        consulter la roadmap en{" "}
-        <a
-          href="https://github.com/SocialGouv/dashlord/issues/new"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          cliquant ici
-        </a>
-        .
-        <br /><br />
-        <br />
-        <Link to="/dashboard">
-          <Button variant="dark">Accéder au tableau de bord</Button>
-        </Link>
-      </Jumbotron>
+      Le tableau de bord aggrège les données issues de plusieurs
+      outils qui évaluent chaque URL indépendamment.
+      <br />
+      <br />
+      L'évaluation des outils ne remplace en aucun cas une expertise manuelle,
+      et seule la page d'accueil du site est ici évaluée.
+      <br />
+      <br />
+      Vous pouvez soumettre de nouvelles URLs, proposer des corrections ou
+      consulter la roadmap en
+      {' '}
+      <a
+        href="https://github.com/SocialGouv/dashlord/issues/new"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        cliquant ici
+      </a>
+      .
+      <br />
+      <br />
+      <br />
+      <Link to="/dashboard">
+        <Button variant="dark">Accéder au tableau de bord</Button>
+      </Link>
+    </Jumbotron>
 
-      {isToolEnabled("lighthouse") && <Panel title="Google Lighthouse">
+    {isToolEnabled('lighthouse') && (
+      <Panel title="Google Lighthouse">
         Permet un audit automatique de page web :
         <br />
         <br />
@@ -62,8 +64,11 @@ export const Intro: React.FC = () => {
           Les mesures de performance, sont un instantané, donc pas forcément
           représentatives
           <br />
-          <AlertTriangle size={16} style={{ marginRight: 5 }} /> Les mesures
-          d'accessibilité n'abordent pas du tout{" "}
+          <AlertTriangle size={16} style={{ marginRight: 5 }} />
+          {' '}
+          Les mesures
+          d'accessibilité n'abordent pas du tout
+          {' '}
           <a
             href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/"
             rel="noopener noreferrer"
@@ -79,9 +84,11 @@ export const Intro: React.FC = () => {
         >
           Site officiel
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("dependabot") && <Panel title="Dependabot">
+    {isToolEnabled('dependabot') && (
+      <Panel title="Dependabot">
         Recense les vulnérabilités de tes dépendances dans ton code
         <br />
         <br />
@@ -97,9 +104,11 @@ export const Intro: React.FC = () => {
         >
           Security scans
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("codescan") && <Panel title="Codescan">
+    {isToolEnabled('codescan') && (
+      <Panel title="Codescan">
         Recense les potentielles vulnérabilités dans ton code
         <br />
         <br />
@@ -110,24 +119,31 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://docs.github.com/en/code-security/secure-coding/about-code-scanning">
           Documentation
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("nmap") && <Panel title="Nmap">
+    {isToolEnabled('nmap') && (
+      <Panel title="Nmap">
         Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine
         <br />
         <br />
         <li>Scan des ports ouverts avec vulnérabilités grâce au script vulners</li>
         <br />
-        <Button variant="dark" href="https://nmap.org"
-          style={{ marginLeft: 5 }}>
+        <Button
+          variant="dark"
+          href="https://nmap.org"
+          style={{ marginLeft: 5 }}
+        >
           Nmap
         </Button>
         <Button variant="dark" href="https://nmap.org/nsedoc/scripts/vulners.html">
           NSE vulners
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("zap") && <Panel title="OWASP Zed Attack Proxy">
+    {isToolEnabled('zap') && (
+      <Panel title="OWASP Zed Attack Proxy">
         Scan de vulnérabilités passif "baseline" qui permet de détecter des
         risques de sécurité.
         <br />
@@ -146,9 +162,11 @@ export const Intro: React.FC = () => {
         >
           Site officiel
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("testssl") && <Panel title="testssl.sh">
+    {isToolEnabled('testssl') && (
+      <Panel title="testssl.sh">
         Évalue le niveau de confiance d'un certificat SSL
         <br />
         <br />
@@ -170,9 +188,11 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://github.com/drwetter/testssl.sh">
           Code source
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("http") && <Panel title="Mozilla HTTP observatory">
+    {isToolEnabled('http') && (
+      <Panel title="Mozilla HTTP observatory">
         Évalue le niveau de qualité/sécurité de la page web et de son serveur
         <br />
         <br />
@@ -190,9 +210,11 @@ export const Intro: React.FC = () => {
         >
           Méthodologie
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("updownio") && <Panel title="Updown.io">
+    {isToolEnabled('updownio') && (
+      <Panel title="Updown.io">
         Évalue les temps de réponse de son serveur
         <br />
         <br />
@@ -209,9 +231,11 @@ export const Intro: React.FC = () => {
         >
           APDEX
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("nuclei") && <Panel title="Nucléi">
+    {isToolEnabled('nuclei') && (
+      <Panel title="Nucléi">
         Détecte plus de 700 erreurs de configuration courantes sur les
         applications webs.
         <br />
@@ -222,9 +246,11 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://nuclei.projectdiscovery.io/">
           Site officiel
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("thirdparties") && <Panel title="Third-parties">
+    {isToolEnabled('thirdparties') && (
+      <Panel title="Third-parties">
         Liste tous les scripts externes chargés par une URL et qui peuvent avoir
         un impact sur :
         <br />
@@ -244,9 +270,11 @@ export const Intro: React.FC = () => {
         >
           Code source
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("thirdparties") && <Panel title="GeoIP2">
+    {isToolEnabled('thirdparties') && (
+      <Panel title="GeoIP2">
         Géolocalise tous les serveurs contactés lors de l'ouverture d'une URL.
         <br />
         <br />
@@ -255,9 +283,11 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://www.maxmind.com/en/geoip-demo">
           Site officiel
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("wappalyzer") && <Panel title="Wappalyzer">
+    {isToolEnabled('wappalyzer') && (
+      <Panel title="Wappalyzer">
         Wappalyzer reconnait +1500 technologies web, Javascript, CMS, outillage...
         <br />
         <br />
@@ -268,9 +298,11 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://www.wappalyzer.com/">
           Site officiel
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-      {isToolEnabled("stats") && <Panel title="Statistiques">
+    {isToolEnabled('stats') && (
+      <Panel title="Statistiques">
         Vérifie si la page /stats existe
         <br />
         <br />
@@ -279,8 +311,8 @@ export const Intro: React.FC = () => {
         <Button variant="dark" href="https://beta.gouv.fr/stats">
           Beta.gouv.fr
         </Button>
-      </Panel>}
+      </Panel>
+    )}
 
-    </div>
-  );
-};
+  </div>
+);

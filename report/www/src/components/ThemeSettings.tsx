@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
   ToolItem,
   Modal,
@@ -7,17 +7,17 @@ import {
   RadioGroup,
   Radio,
   Button,
-} from "@dataesr/react-dsfr";
+} from '@dataesr/react-dsfr';
 
 type ThemeSettingsProps = {
 };
 
-const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-const initialTheme = darkModeQuery.matches ? "light" : "light";
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const initialTheme = darkModeQuery.matches ? 'light' : 'light';
 
 const themes = [
-  { label: "Thème clair", value: "light" },
-  { label: "Thème sombre", value: "dark" },
+  { label: 'Thème clair', value: 'light' },
+  { label: 'Thème sombre', value: 'dark' },
 ];
 
 export const ThemeSettings: React.FC<ThemeSettingsProps> = () => {
@@ -25,7 +25,7 @@ export const ThemeSettings: React.FC<ThemeSettingsProps> = () => {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-fr-theme", currentTheme);
+    document.documentElement.setAttribute('data-fr-theme', currentTheme);
   }, [currentTheme]);
 
   return (
@@ -43,25 +43,25 @@ export const ThemeSettings: React.FC<ThemeSettingsProps> = () => {
         </Button>
       </ToolItem>
       <Modal isOpen={isOpenModal} hide={() => setIsOpenModal(false)}>
-      <ModalTitle>Paramètres d"affichage</ModalTitle>
-      <ModalContent id="fr-switch-theme" className="fr-switch-theme">
-        <RadioGroup
-          className="fr-text--regular"
-          legend="Choisissez un thème pour personnaliser l’apparence du site."
-          value={currentTheme}
-          onChange={setCurrentTheme}
-        >
-          {themes.map((theme) => (
-            <Radio
-              key={theme.value}
-              label={theme.label}
-              value={theme.value}
-              isExtended
-            />
-          ))}
-        </RadioGroup>
-      </ModalContent>
-    </Modal>
-  </>
+        <ModalTitle>Paramètres d"affichage</ModalTitle>
+        <ModalContent id="fr-switch-theme" className="fr-switch-theme">
+          <RadioGroup
+            className="fr-text--regular"
+            legend="Choisissez un thème pour personnaliser l’apparence du site."
+            value={currentTheme}
+            onChange={setCurrentTheme}
+          >
+            {themes.map((theme) => (
+              <Radio
+                key={theme.value}
+                label={theme.label}
+                value={theme.value}
+                isExtended
+              />
+            ))}
+          </RadioGroup>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
