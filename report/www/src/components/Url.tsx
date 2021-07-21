@@ -99,7 +99,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           <Anchor id="lighthouse" />
           <LightHouse
             data={report.lhr}
-            url={`${process.env.PUBLIC_URL}/report/${window.btoa(
+            url={`${__PUBLIC_URL__}/report/${window.btoa(
               url,
             )}/lhr.html`}
           />
@@ -150,7 +150,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           <Anchor id="testssl" />
           <TestSSL
             data={report.testssl}
-            url={`${process.env.PUBLIC_URL}/report/${window.btoa(
+            url={`${__PUBLIC_URL__}/report/${window.btoa(
               url,
             )}/testssl.html`}
           />
@@ -163,7 +163,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           <Anchor id="nmap" />
           <Nmap
             data={report.nmap}
-            url={`${process.env.PUBLIC_URL}/report/${window.btoa(
+            url={`${__PUBLIC_URL__}/report/${window.btoa(
               url,
             )}/nmapvuln.html`}
           />
@@ -192,7 +192,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           <Anchor id="zap" />
           <Owasp
             data={report.zap}
-            url={`${process.env.PUBLIC_URL}/report/${window.btoa(
+            url={`${__PUBLIC_URL__}/report/${window.btoa(
               url,
             )}/zap.html`}
           />

@@ -4,6 +4,9 @@ module.exports = {
     es2021: true,
     'jest/globals': true,
   },
+  globals: {
+    __PUBLIC_URL__: false,
+  },
   settings: {
     'import/resolver': {
       node: {
