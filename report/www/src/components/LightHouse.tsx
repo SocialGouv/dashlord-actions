@@ -6,6 +6,8 @@ import { Panel } from './Panel';
 import { getPerformanceScore } from '../lib/lighthouse/getPerformanceScore';
 import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
 
+import styles from './lightHouse.cssmodule.scss';
+
 const toTime = (ms: number) => {
   let minutes = 0;
   let seconds = 0;
@@ -86,21 +88,21 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
     >
       <Row>
         <Col>
-          <AccessibilityWarnings style={{ marginBottom: 20 }} />
+          <AccessibilityWarnings className={styles.accesibility} />
         </Col>
       </Row>
       <Row>
-        {order.map((key, i: number) => {
+        {order.map((key) => {
           const category = data.categories[key as LighthouseReportCategoryKey];
           const score = category.score as number;
           return (
             (!Number.isNaN(score) && (
               <Col
-                key={category.title + i}
+                key={category.id}
                 n="12 sm-12 md-6 lg-3"
                 className="fr-mb-2w"
               >
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className={styles.card}>
                   <Gauge
                     width={100}
                     height={60}
@@ -109,10 +111,10 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                     maxValue={100}
                     animationSpeed={32}
                   />
-                  <div>{category.title}</div>
-                  <div
-                    style={{ fontSize: '2rem', fontWeight: 'bold' }}
-                  >
+                  <div className={styles.cardTitle}>
+                    {category.title}
+                  </div>
+                  <div className={styles.cardValue}>
                     {`${(score * 100).toFixed()}%`}
                   </div>
                 </div>
@@ -129,13 +131,11 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
             key={label}
             className="fr-mb-2w"
           >
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div style={{ fontSize: '0.9rem' }}>
+            <div className={styles.card}>
+              <div className={styles.cardTitle}>
                 {label}
               </div>
-              <div
-                style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
-              >
+              <div className={styles.cardValue}>
                 {/* @ts-expect-error */}
                 {highlights[label]}
               </div>

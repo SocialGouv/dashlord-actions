@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 type AccessibilityWarningProps = {
-  style?: React.CSSProperties;
+  className?: string;
 };
 
-export const AccessibilityWarnings = ({ style }: AccessibilityWarningProps) => (
-  <div style={style}>
+export const AccessibilityWarnings = ({ className }: AccessibilityWarningProps) => (
+  <div className={className}>
     Moins de 25% des critères d'accessibilité peuvent être testés
     automatiquement,
     {' '}

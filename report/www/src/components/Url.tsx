@@ -20,13 +20,15 @@ import { Codescan } from './Codescan';
 import { Nmap } from './Nmap';
 import { Stats } from './Stats';
 
+import * as styles from './url.cssmodule.scss';
+
 type UrlDetailProps = { url: string; report: UrlReport };
 
 const Anchor = ({ id }: { id: string }) => (
   <div id={id} style={{ marginBottom: 30 }} />
 );
 
-export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
+const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
     const hash = document.location.hash.split('#');
@@ -57,7 +59,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
         <CalloutText>
           {report.category && (
             <Link to={`/category/${report.category}`}>
-              <Badge style={{ marginRight: 5 }} variant="success">
+              <Badge className={styles.badge} variant="success">
                 {report.category}
               </Badge>
             </Link>
@@ -65,31 +67,27 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           {report.tags
             && report.tags.map((tag: string) => (
               <Link key={tag} to={`/tag/${tag}`}>
-                <Badge style={{ marginRight: 5 }} variant="info">
+                <Badge className={styles.badge} variant="info">
                   {tag}
                 </Badge>
               </Link>
             ))}
           {updateDate && (
-            <span title={updateDate}>
-              <Clock size={12} style={{ marginRight: 5 }} />
-              Mise à jour il y a :
-              {' '}
-              {formatDistanceToNow(new Date(updateDate), {
-                locale: frLocale,
-              })}
-            </span>
+            <>
+              <Clock size={12} />
+              <span title={updateDate} className={styles.clock}>
+                Mise à jour il y a :
+                {' '}
+                {formatDistanceToNow(new Date(updateDate), {
+                  locale: frLocale,
+                })}
+              </span>
+            </>
           )}
         </CalloutText>
-        <div style={{ position: 'absolute', top: 28, right: 48 }}>
+        <div className={styles.image}>
           <img
             alt={`Copie d'écran de ${url}`}
-            style={{
-              position: 'relative',
-              top: 0,
-              maxHeight: 80,
-              border: '1px solid var(--dark)',
-            }}
             src="https://dashlord.incubateur.net/report/aHR0cHM6Ly9hY2Nlc2xpYnJlLmJldGEuZ291di5mcg==/screenshot.jpeg"
           />
         </div>
@@ -227,3 +225,5 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
     </>
   );
 };
+
+export default Url;

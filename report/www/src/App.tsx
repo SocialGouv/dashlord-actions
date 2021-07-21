@@ -15,7 +15,7 @@ import { HeaderSite } from './components/HeaderSite';
 import { FooterSite } from './components/FooterSite';
 import { Dashboard } from './components/Dashboard';
 import { Trends } from './components/Trends';
-import { Url } from './components/Url';
+import Url from './components/Url';
 import { Intro } from './components/Intro';
 import { ScrollToTop } from './components/ScrollToTop';
 import { About } from './components/About';

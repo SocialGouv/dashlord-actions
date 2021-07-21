@@ -2,7 +2,7 @@ import React from 'react';
 import path from 'path';
 import * as renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import { Url } from '../components/Url';
+import Url from '../components/Url';
 
 jest.mock('../components/Gauge', () => ({ Gauge: () => <div>io</div> }));
 jest.useFakeTimers('modern');
