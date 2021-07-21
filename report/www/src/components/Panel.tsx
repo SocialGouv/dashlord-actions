@@ -1,7 +1,6 @@
 import * as React from "react";
 
-import { Card } from "react-bootstrap";
-import { ExternalLink, Search } from "react-feather";
+import { Search } from "react-feather";
 import { Link } from "react-router-dom";
 
 type PanelProps = {
@@ -23,9 +22,9 @@ export const Panel: React.FC<PanelProps> = ({
   className,
   isExternal = false,
 }) => (
-  <Card style={{ marginBottom: 20, ...style }} className={className}>
-    <Card.Title style={{ background: "#000091", color: "white", padding: 10 }}>
-      {title}
+  <div style={{ marginBottom: 20, border: '1px solid var(--g300)', ...style }} className={className}>
+    <div style={{ backgroundColor: "var(--g200)", color: "var(--g700)", padding: 16 }}>
+      <h5 style={{ display: "inline-block", margin: 0 }}>{title}</h5>
       {info && (
         <span
           style={{ fontWeight: "normal", fontSize: "0.6em", marginLeft: 10 }}
@@ -36,19 +35,18 @@ export const Panel: React.FC<PanelProps> = ({
       {url &&
         (isExternal ? (
           <a
-            style={{ color: "white", float: "right" }}
+            style={{ float: "right"}}
             href={url}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <ExternalLink />
           </a>
         ) : (
           <Link to={url} style={{ color: "white", float: "right" }}>
             <Search />
           </Link>
         ))}
-    </Card.Title>
-    <Card.Body>{children}</Card.Body>
-  </Card>
+    </div>
+    <div style={{ padding: 16 }}>{children}</div>
+  </div>
 );

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "@dataesr/react-dsfr";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
 import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
@@ -85,9 +85,11 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       isExternal={true}
     >
       <Row>
-        <Col xs={12}>
+        <Col>
           <AccessibilityWarnings style={{ marginBottom: 20 }} />
         </Col>
+      </Row>
+      <Row>
         {order.map((key, i: number) => {
           const category = data.categories[key as LighthouseReportCategoryKey];
           const score = category.score as number;
@@ -95,12 +97,10 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
             (!isNaN(score) && (
               <Col
                 key={category.title + i}
-                xs={12}
-                md={6}
-                lg={3}
-                className="text-center mb-3"
+                n="12 sm-12 md-6 lg-3"
+                className="fr-mb-2w"
               >
-                <Card>
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center"}} >
                   <Gauge
                     width={100}
                     height={60}
@@ -109,15 +109,13 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                     maxValue={100}
                     animationSpeed={32}
                   />
-                  <Card.Body>
-                    <Card.Title>{category.title}</Card.Title>
-                    <Card.Title
-                      style={{ fontSize: "2rem", fontWeight: "bold" }}
-                    >
-                      {(score * 100).toFixed() + "%"}
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
+                  <div>{category.title}</div>
+                  <div
+                    style={{ fontSize: "2rem", fontWeight: "bold" }}
+                  >
+                    {(score * 100).toFixed() + "%"}
+                  </div>
+                </div>
               </Col>
             )) ||
             null
@@ -127,20 +125,22 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       <Row>
         {Object.keys(highlights).map((label) => {
           return (
-            <Col xs={12} md={6} lg={3} key={label} className="text-center mb-3">
-              <Card className="text-center">
-                <Card.Body>
-                  <Card.Title style={{ fontSize: "0.9rem" }}>
-                    {label}
-                  </Card.Title>
-                  <Card.Title
-                    style={{ fontSize: "1.5rem", fontWeight: "bold" }}
-                  >
-                    {/* @ts-expect-error */}
-                    {highlights[label]}
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+            <Col 
+              n="12 sm-12 md-6 lg-3"
+              key={label} 
+              className="fr-mb-2w"
+            >
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center"}} >
+                <div style={{ fontSize: "0.9rem" }}>
+                  {label}
+                </div>
+                <div
+                  style={{ fontSize: "1.5rem", fontWeight: "bold" }}
+                >
+                  {/* @ts-expect-error */}
+                  {highlights[label]}
+                </div>
+              </div>
             </Col>
           );
         })}

@@ -3,7 +3,8 @@ import { formatDistanceToNow } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Link } from "react-router-dom";
 import { Clock } from "react-feather";
-import { Jumbotron, Badge } from "react-bootstrap";
+import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr"
+import { Badge } from "react-bootstrap";
 
 import { isToolEnabled } from "../utils";
 import { HTTP } from "./HTTP";
@@ -41,68 +42,52 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
     return <div>No data available for {url}</div>;
   }
   return (
-    <div>
-      <Jumbotron
-        style={{
-          height: 100,
-          marginTop: 10,
-          paddingTop: 20,
-          marginBottom: 10,
-          display: "flex",
-        }}
-      >
-        <div style={{ flex: "1 0 auto" }}>
-          <h4>
-            <a href={url} rel="noreferrer noopener" target="_blank">
-              {url}
-            </a>
-          </h4>
-          <p>
-            {report.category && (
-              <Link to={`/category/${report.category}`}>
-                <Badge style={{ marginRight: 5 }} variant="success">
-                  {report.category}
+    <>
+      <Callout hasInfoIcon={false}>
+        <CalloutTitle as="h4">
+          <a href={url} rel="noreferrer noopener" target="_blank">
+            {url}
+          </a>
+        </CalloutTitle>
+        <CalloutText>
+          {report.category && (
+            <Link to={`/category/${report.category}`}>
+              <Badge style={{ marginRight: 5 }} variant="success">
+                {report.category}
+              </Badge>
+            </Link>
+          )}
+          {report.tags &&
+            report.tags.map((tag: string) => (
+              <Link key={tag} to={`/tag/${tag}`}>
+                <Badge style={{ marginRight: 5 }} variant="info">
+                  {tag}
                 </Badge>
               </Link>
-            )}
-            {report.tags &&
-              report.tags.map((tag: string) => (
-                <Link key={tag} to={`/tag/${tag}`}>
-                  <Badge style={{ marginRight: 5 }} variant="info">
-                    {tag}
-                  </Badge>
-                </Link>
-              ))}
-            {updateDate && (
-              <span title={updateDate}>
-                <Clock size={12} style={{ marginRight: 5 }} />
-                Mise à jour il y a :{" "}
-                {formatDistanceToNow(new Date(updateDate), {
-                  locale: frLocale,
-                })}
-              </span>
-            )}
-          </p>
-        </div>
-        <div style={{ flex: "0 0 100px", marginTop: -10 }}>
-          {report.screenshot && (
-            <a href={url} rel="noreferrer noopener" target="_blank">
-              <img
-                alt={`Copie d'écran de ${url}`}
-                style={{
-                  position: "relative",
-                  top: 0,
-                  maxHeight: 80,
-                  border: "1px solid var(--dark)",
-                }}
-                src={`${process.env.PUBLIC_URL}/report/${window.btoa(
-                  url
-                )}/screenshot.jpeg`}
-              />
-            </a>
+            ))}
+          {updateDate && (
+            <span title={updateDate}>
+              <Clock size={12} style={{ marginRight: 5 }} />
+              Mise à jour il y a :{" "}
+              {formatDistanceToNow(new Date(updateDate), {
+                locale: frLocale,
+              })}
+            </span>
           )}
-        </div>
-      </Jumbotron>
+        </CalloutText>
+        <div style={{ position: "absolute", top: 28, right: 48}}>
+            <img
+              alt={`Copie d'écran de ${url}`}
+              style={{
+                position: "relative",
+                top: 0,
+                maxHeight: 80,
+                border: "1px solid var(--dark)",
+              }}
+              src={`https://dashlord.incubateur.net/report/aHR0cHM6Ly9hY2Nlc2xpYnJlLmJldGEuZ291di5mcg==/screenshot.jpeg`}
+            />
+          </div>
+      </Callout>
       {(isToolEnabled("lighthouse") && report.lhr && (
         <React.Fragment>
           <Anchor id="lighthouse" />
@@ -237,6 +222,6 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, ...props }) => {
           </React.Fragment>
         )) ||
           null}
-    </div>
+    </>
   );
 };

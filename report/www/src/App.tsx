@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Container, Row, Alert } from "react-bootstrap";
+import {Container, Row, Col, Alert} from "@dataesr/react-dsfr"
 
 import {
   useParams,
@@ -76,9 +76,7 @@ const UrlRoute: React.FC<UrlRouteProps> = (props) => {
   const urlData = props.report.find((u) => u.url === url);
   if (!urlData) {
     return (
-      <Alert variant="danger">
-        Impossible de trouver le rapport pour {url}
-      </Alert>
+      <Alert type="error" title={`Impossible de trouver le rapport pour ${url}`} />
     );
   }
   return <Url url={url} report={urlData} />;
@@ -90,9 +88,9 @@ const App = () => {
           <div>
             <ScrollToTop />
             <HeaderSite report={report} />
-            <Container fluid>
+            <Container>
               <Row>
-                <main role="main" className="col-md ml-sm-auto col-lg px-md-4">
+                <Col role="main" className="fr-my-4w">
                   <Switch>
                     <Route path="/url/*">
                       <UrlRoute report={report} />
@@ -122,7 +120,7 @@ const App = () => {
                       <Dashboard report={report} />
                     </Route>
                   </Switch>
-                </main>
+                </Col>
               </Row>
             </Container>
             <FooterSite />
