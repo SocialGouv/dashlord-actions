@@ -2,6 +2,8 @@ import orderBy from 'lodash.orderby';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
 import * as React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as H from 'history';
 import { useMemo, useState } from 'react';
 import {
   default as BaseTable,
@@ -116,19 +118,16 @@ const lighthouseColumnProps = ({
     const gradeKey = `lighthouse_${id}Grade`;
     const scoreKey = `lighthouse_${id}`;
     return (
-      <Link
+      <GradeBadge
+          // @ts-expect-error
+        grade={summary[gradeKey]}
+          // @ts-expect-error
+        label={percent(summary[scoreKey])}
         to={{
           pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
           hash: 'lighthouse',
         }}
-      >
-        <GradeBadge
-          // @ts-expect-error
-          grade={summary[gradeKey]}
-          // @ts-expect-error
-          label={percent(summary[scoreKey])}
-        />
-      </Link>
+      />
     );
   },
 });
@@ -136,10 +135,12 @@ const lighthouseColumnProps = ({
 const GradeBadge = ({
   grade,
   label,
+  to,
 }: {
   grade: string | undefined;
   label?: string | number | undefined;
-}) => (grade ? <Grade small grade={grade} label={label} /> : <IconUnknown />);
+  to?: H.LocationDescriptor<unknown> | undefined;
+}) => (grade ? <Grade small grade={grade} label={label} to={to} /> : <IconUnknown />);
 
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const [sortBy, setSortBy] = useState(defaultSort);
@@ -246,16 +247,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.testsslGrade}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'testssl',
                       }}
-                    >
-                      <GradeBadge grade={summary.testsslGrade} />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -282,16 +282,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.httpGrade}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'http',
                       }}
-                    >
-                      <GradeBadge grade={summary.httpGrade} />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -314,19 +313,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.uptimeGrade}
+                      label={percent((summary.uptime || 0) / 100)}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'updownio',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.uptimeGrade}
-                        label={percent((summary.uptime || 0) / 100)}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -348,19 +344,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.apdexGrade}
+                      label={summary.apdex}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'updownio',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.apdexGrade}
-                        label={summary.apdex}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -383,19 +376,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.dependabotGrade}
+                      label={summary.dependabotCount}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'dependabot',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.dependabotGrade}
-                        label={summary.dependabotCount}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -418,19 +408,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.codescanGrade}
+                      label={summary.codescanCount}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'codescan',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.codescanGrade}
-                        label={summary.codescanCount}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -457,16 +444,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                      <GradeBadge grade={summary.nmapGrade}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'nmap',
-                      }}
-                    >
-                      <GradeBadge grade={summary.nmapGrade} />
-                    </Link>
+                      }} />
                   );
                 }}
               />
@@ -489,19 +473,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.nmapOpenPortsGrade}
+                      label={summary.nmapOpenPortsCount}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'nmap',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.nmapOpenPortsGrade}
-                        label={summary.nmapOpenPortsCount}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -530,19 +511,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.trackersGrade}
+                      label={summary.trackersCount}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'thirdparties',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.trackersGrade}
-                        label={summary.trackersCount}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -564,19 +542,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.cookiesGrade}
+                      label={summary.cookiesCount}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'thirdparties',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.cookiesGrade}
-                        label={summary.cookiesCount}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />
@@ -598,19 +573,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 cellRenderer={({ rowData }) => {
                   const { summary } = rowData as UrlReport;
                   return (
-                    <Link
+                    <GradeBadge
+                      grade={summary.statsGrade}
+                      label={summary.statsGrade}
                       to={{
                         pathname: `/url/${encodeURIComponent(
                           (rowData as UrlReport).url,
                         )}`,
                         hash: 'stats',
                       }}
-                    >
-                      <GradeBadge
-                        grade={summary.statsGrade}
-                        label={summary.statsGrade}
-                      />
-                    </Link>
+                    />
                   );
                 }}
               />

@@ -37,6 +37,8 @@ export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) => (
   (data && data.technologies && data.technologies.length && (
   <Panel title="Wappalyzer" info="Détection des technologies">
     <Table
+      caption="Wappalyzer"
+      captionPosition="none"
       rowKey="name"
       columns={columns}
       data={data.technologies}

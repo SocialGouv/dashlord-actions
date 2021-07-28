@@ -51,6 +51,8 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
         info="Scan de vulnérabiliés OWASP baseline"
       >
         <Table
+          caption="Owasp"
+          captionPosition="none"
           columns={columns}
           data={alerts}
           rowKey="name"

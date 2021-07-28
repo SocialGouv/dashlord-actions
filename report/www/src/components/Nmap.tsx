@@ -99,7 +99,8 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
           <Grade small grade={data.grade} />
         </h3>
         <Table
-          caption=""
+          caption="NMap"
+          captionPosition="none"
           columns={columns}
           data={open_ports.map((x) => x.service)}
           rowKey="id"

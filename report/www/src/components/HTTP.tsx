@@ -157,6 +157,8 @@ export const HTTP = ({ data }: HTTPProps) => {
         </h3>
         {(failures.length && (
         <Table
+          caption="HTTP"
+          captionPosition="none"
           rowKey="name"
           columns={columns}
           data={failures}
