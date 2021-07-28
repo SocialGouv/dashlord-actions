@@ -22,8 +22,6 @@ export const Stats: React.FC<StatsProps> = ({ data, url }) => (
       {' '}
       <Grade small grade={data.grade} />
     </h3>
-    <br />
-
   </Panel>
   ))
     || null

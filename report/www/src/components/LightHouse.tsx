@@ -7,6 +7,7 @@ import { getPerformanceScore } from '../lib/lighthouse/getPerformanceScore';
 import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
 
 import styles from './lightHouse.cssmodule.scss';
+import Card from './Card';
 
 const toTime = (ms: number) => {
   let minutes = 0;
@@ -102,7 +103,10 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                 n="12 sm-12 md-6 lg-3"
                 className="fr-mb-2w"
               >
-                <div className={styles.card}>
+                <Card
+                  title={category.title}
+                  value={`${(score * 100).toFixed()}%`}
+                >
                   <Gauge
                     width={100}
                     height={60}
@@ -111,16 +115,9 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                     maxValue={100}
                     animationSpeed={32}
                   />
-                  <div className={styles.cardTitle}>
-                    {category.title}
-                  </div>
-                  <div className={styles.cardValue}>
-                    {`${(score * 100).toFixed()}%`}
-                  </div>
-                </div>
+                </Card>
               </Col>
             ))
-            || null
           );
         })}
       </Row>
@@ -131,15 +128,8 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
             key={label}
             className="fr-mb-2w"
           >
-            <div className={styles.card}>
-              <div className={styles.cardTitle}>
-                {label}
-              </div>
-              <div className={styles.cardValue}>
-                {/* @ts-expect-error */}
-                {highlights[label]}
-              </div>
-            </div>
+            {/* @ts-expect-error */}
+            <Card title={label} value={highlights[label]} />
           </Col>
         ))}
       </Row>

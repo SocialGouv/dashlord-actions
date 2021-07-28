@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Table, Badge } from 'react-bootstrap';
+import { Table } from '@dataesr/react-dsfr';
+import Badge from './Badge';
 
 import { smallUrl } from '../utils';
 import { Panel } from './Panel';
@@ -123,6 +124,13 @@ const helpDocs = {
   ),
 };
 
+const columns = [
+  { name: 'impact', label: 'Impact', render: (failure) => <HttpRowBadge {...failure} /> },
+  { name: 'score_description', label: 'Description' },
+  // @ts-expect-error
+  { name: 'documentation', label: 'Documentation', render: ({ name }) => helpDocs[name] || '-' },
+];
+
 export const HTTP = ({ data }: HTTPProps) => {
   if (!data.url) {
     return null;
@@ -135,7 +143,7 @@ export const HTTP = ({ data }: HTTPProps) => {
   failures.sort((a, b) => a.score_modifier - b.score_modifier);
 
   return (
-    (url && (
+    (url ? (
       <Panel
         title="HTTP"
         info="Informations collectées par le Mozilla HTTP observatory"
@@ -147,40 +155,14 @@ export const HTTP = ({ data }: HTTPProps) => {
           {' '}
           <Grade small grade={data.grade} />
         </h3>
-        <br />
         {(failures.length && (
-          <>
-            <br />
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th style={{ width: 100 }}>impact</th>
-                  <th>description</th>
-                  <th>documentation</th>
-                </tr>
-              </thead>
-              <tbody>
-                {failures.map((failure, i) => (
-                  <tr key={failure.name + i}>
-                    <td>
-                      <HttpRowBadge {...failure} />
-                    </td>
-                    <td>{failure.score_description}</td>
-                    <td>
-                      {
-                        // @ts-expect-error
-                        helpDocs[failure.name] || '-'
-                      }
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </>
-        ))
-          || null}
+        <Table
+          rowKey="name"
+          columns={columns}
+          data={failures}
+        />
+        ))}
       </Panel>
-    ))
-    || null
+    ) : <></>)
   );
 };

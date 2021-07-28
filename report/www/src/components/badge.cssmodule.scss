@@ -1,0 +1,25 @@
+.success,
+.info,
+.warning,
+.danger {
+    display: inline-block;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: var(--success);
+}
+
+.info {
+    background-color: var(--info);
+}
+
+.warning {
+    background-color: #FF6F4C;
+}
+
+.danger {
+    background-color: var(--error);
+}

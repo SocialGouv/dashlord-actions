@@ -4,7 +4,7 @@ import frLocale from 'date-fns/locale/fr';
 import { Link } from 'react-router-dom';
 import { Clock } from 'react-feather';
 import { Callout, CalloutTitle, CalloutText } from '@dataesr/react-dsfr';
-import { Badge } from 'react-bootstrap';
+import Badge from './Badge';
 
 import { isToolEnabled } from '../utils';
 import { HTTP } from './HTTP';
@@ -58,19 +58,19 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         </CalloutTitle>
         <CalloutText>
           {report.category && (
+          <Badge className={styles.badge} variant="success">
             <Link to={`/category/${report.category}`}>
-              <Badge className={styles.badge} variant="success">
-                {report.category}
-              </Badge>
+              {report.category}
             </Link>
+          </Badge>
           )}
           {report.tags
             && report.tags.map((tag: string) => (
-              <Link key={tag} to={`/tag/${tag}`}>
-                <Badge className={styles.badge} variant="info">
+              <Badge className={styles.badge} variant="info">
+                <Link key={tag} to={`/tag/${tag}`}>
                   {tag}
-                </Badge>
-              </Link>
+                </Link>
+              </Badge>
             ))}
           {updateDate && (
             <>
@@ -101,10 +101,8 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               url,
             )}/lhr.html`}
           />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('dependabot')
         && report.dependabot
         && report.dependabot.repositories && (
@@ -119,10 +117,8 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
                   url={url}
                 />
               ))}
-            <br />
           </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('codescan')
         && report.codescan
         && report.codescan.repositories && (
@@ -131,18 +127,14 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
             {report.codescan.repositories.filter(Boolean).map((repository) => (
               <Codescan key={repository.url} data={repository} url={url} />
             ))}
-            <br />
           </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('updownio') && report.updownio && (
         <>
           <Anchor id="updownio" />
           <UpdownIo data={report.updownio} url={url} />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('testssl') && report.testssl && (
         <>
           <Anchor id="testssl" />
@@ -152,10 +144,8 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               url,
             )}/testssl.html`}
           />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('nmap') && report.nmap && (
         <>
           <Anchor id="nmap" />
@@ -165,26 +155,20 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               url,
             )}/nmapvuln.html`}
           />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('http') && report.http && (
         <>
           <Anchor id="http" />
           <HTTP data={report.http} />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('thirdparties') && report.thirdparties && (
         <>
           <Anchor id="thirdparties" />
           <Trackers data={report.thirdparties} />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('zap') && report.zap && (
         <>
           <Anchor id="zap" />
@@ -194,34 +178,26 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               url,
             )}/zap.html`}
           />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('nuclei') && report.nuclei && (
         <>
           <Anchor id="nuclei" />
           <Nuclei data={report.nuclei} />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('wappalyzer') && report.wappalyzer && (
         <>
           <Anchor id="wappalyzer" />
           <Wappalyzer data={report.wappalyzer} />
-          <br />
         </>
-      ))
-        || null}
+      ))}
       {(isToolEnabled('stats') && report.stats && (
       <>
         <Anchor id="stats" />
         <Stats data={report.stats} url={url} />
-        <br />
       </>
-      ))
-          || null}
+      ))}
     </>
   );
 };

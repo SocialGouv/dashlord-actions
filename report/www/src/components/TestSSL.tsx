@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Row, Col, Alert } from 'react-bootstrap';
+import { Row, Col, Alert } from '@dataesr/react-dsfr';
 import { Info } from 'react-feather';
 
 import { Panel } from './Panel';
@@ -46,7 +46,7 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
               {' '}
               <Grade small grade={grade} />
             </h3>
-            <br />
+            {capReasons.length > 0 && <br />}
             {capReasons.map((reason: any, i: number) => (
               <Alert key={reason.id + i} variant="info">
                 <Info style={{ marginRight: 5 }} />
