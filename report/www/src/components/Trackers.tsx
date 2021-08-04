@@ -106,7 +106,7 @@ const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) => (endpoi
   || null;
 
 export const Trackers: React.FC<TrackersProps> = ({ data }) => {
-  const hasIssues = [];
+  const hasIssues: (ThirdPartyCookie | ThirdPartyTracker)[] = [];
   if (data.cookies && data.cookies.length) {
     hasIssues.push(...data.cookies);
   }

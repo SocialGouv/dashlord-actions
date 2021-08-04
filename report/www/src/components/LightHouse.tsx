@@ -128,7 +128,6 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
             key={label}
             className="fr-mb-2w"
           >
-            {/* @ts-expect-error */}
             <Card title={label} value={highlights[label]} />
           </Col>
         ))}

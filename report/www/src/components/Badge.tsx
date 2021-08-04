@@ -3,7 +3,12 @@ import React from 'react';
 
 import styles from './badge.cssmodule.scss';
 
-const Badge = ({ children, variant, className }) => (
+type BadgeProps = {
+  variant: string,
+  className?: string,
+};
+
+const Badge : React.FC<BadgeProps> = ({ children, variant, className }) => (
   <div className={classNames(className, styles[variant])}>
     {children}
   </div>

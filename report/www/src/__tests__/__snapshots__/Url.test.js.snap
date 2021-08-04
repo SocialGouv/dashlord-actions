@@ -2,7 +2,7 @@
 
 exports[`Should render empty Url 1`] = `
 <div>
-  No data available for 
+  No data available for
 </div>
 `;
 

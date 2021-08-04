@@ -1,12 +1,8 @@
-import orderBy from 'lodash.orderby';
 import Tooltip from 'rc-tooltip';
-import 'rc-tooltip/assets/bootstrap.css';
 import * as React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as H from 'history';
-import { useMemo, useState } from 'react';
 import { Table } from '@dataesr/react-dsfr';
-import 'react-base-table/styles.css';
 import {
   AlertTriangle, Info, Search, Slash,
 } from 'react-feather';
@@ -62,70 +58,7 @@ const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   </div>
 );
 
-type SortState = {
-  key: string;
-  order: SortOrder;
-  column: { [column: string]: string };
-};
-
-const defaultSort = {
-  key: 'url',
-  order: 'asc',
-  column: { dataKey: 'url' },
-} as SortState;
-
 const percent = (num: number | undefined): string => (num !== undefined && `${Math.floor(num * 100)} %`) || '-';
-
-const defaultColumnProps = {
-  width: 120,
-  sortable: true,
-  align: 'center',
-} as {
-  width: number;
-  sortable: boolean;
-  align: 'center' | 'left' | 'right';
-};
-
-const lighthouseColumnProps = ({
-  id,
-  title,
-  info,
-  warning,
-}: {
-  id: string;
-  title: string;
-  info: string;
-  warning?: any;
-}) => ({
-  headerRenderer: () => <ColumnHeader title={title} info={info} warning={warning} />,
-  dataGetter: ({ rowData }: { rowData: any }) => {
-    const { summary } = rowData as UrlReport;
-    const scoreKey = `lighthouse_${id}`;
-    // @ts-expect-error
-    if (summary[scoreKey] === undefined) {
-      return -1;
-    }
-    // @ts-expect-error
-    return summary[scoreKey];
-  },
-  cellRenderer: ({ rowData }: { rowData: any }) => {
-    const { summary } = rowData as UrlReport;
-    const gradeKey = `lighthouse_${id}Grade`;
-    const scoreKey = `lighthouse_${id}`;
-    return (
-      <GradeBadge
-          // @ts-expect-error
-        grade={summary[gradeKey]}
-          // @ts-expect-error
-        label={percent(summary[scoreKey])}
-        to={{
-          pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
-          hash: 'lighthouse',
-        }}
-      />
-    );
-  },
-});
 
 const GradeBadge = ({
   grade,
@@ -138,28 +71,6 @@ const GradeBadge = ({
 }) => (grade ? <Grade small grade={grade} label={label} to={to} /> : <IconUnknown />);
 
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
-  const [sortBy, setSortBy] = useState(defaultSort);
-  const onColumnSort = (column: any) => {
-    setSortBy(column);
-  };
-
-  const sortedReport = useMemo(() => {
-    const getSortedRows = (rows: any) => orderBy(
-      rows,
-      (row) => {
-        if (sortBy.column.dataGetter) {
-          // @ts-expect-error
-          return sortBy.column.dataGetter({ rowData: row });
-        } if (sortBy.column.key) {
-          return row[sortBy.column.key];
-        }
-      },
-      sortBy.order,
-    );
-
-    return getSortedRows(report);
-  }, [sortBy, report]);
-
   const getSummaryData = (rowData, grade) => {
     const { summary } = rowData as UrlReport;
     return (
@@ -169,7 +80,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   };
 
-  const getColumn = (id, title, info, warning, hash, gradeKey, gradeLabel = undefined) => ({
+  const getColumn = (
+    id: string,
+    title: string,
+    info: string,
+    warning: JSX.Element | undefined,
+    hash: string,
+    gradeKey: string,
+    gradeLabel: ((s: UrlReportSummary) => string| number | undefined) | undefined = undefined,
+  ) => ({
     name: id,
     sortable: true,
     sortMethod: (a, b) => getSummaryData(a, 'httpGrade') - getSummaryData(b, 'httpGrade'),
@@ -360,7 +279,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
   return (
     <Table
-      data={sortedReport}
+      data={report}
       columns={columns}
       rowKey="url"
     />

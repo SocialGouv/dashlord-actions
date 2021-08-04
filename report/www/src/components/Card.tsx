@@ -1,7 +1,12 @@
 import React from 'react';
 import styles from './card.cssmodule.scss';
 
-const Card = ({ children, title, value }) => (
+type CardProps = {
+  title?: string | React.ReactNode;
+  value?: string | React.ReactNode;
+};
+
+const Card: React.FC<CardProps> = ({ children, title, value }) => (
   <div className={styles.card}>
     {children}
     {title && (

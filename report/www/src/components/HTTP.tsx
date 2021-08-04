@@ -127,7 +127,6 @@ const helpDocs = {
 const columns = [
   { name: 'impact', label: 'Impact', render: (failure) => <HttpRowBadge {...failure} /> },
   { name: 'score_description', label: 'Description' },
-  // @ts-expect-error
   { name: 'documentation', label: 'Documentation', render: ({ name }) => helpDocs[name] || '-' },
 ];
 

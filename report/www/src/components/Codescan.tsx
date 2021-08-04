@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { Table, Badge } from 'react-bootstrap';
+import { Table } from '@dataesr/react-dsfr';
 
+import Badge from './Badge';
 import { Panel } from './Panel';
 import { Grade } from './Grade';
 
@@ -31,6 +32,21 @@ const CodescanBadge = (alert: CodescanAlert) => {
 };
 
 type CodescanProps = { data: CodescanRepository; url: string };
+
+const columns = [
+  { name: 'severity', label: 'Sévérité', render: (alert) => <CodescanBadge {...alert} /> },
+  { name: 'rule', label: 'Règle', render: (alert) => alert.rule.name },
+  {
+    name: 'description',
+    label: 'Description',
+    render: (alert) => (
+      <a target="_blank" href={alert.html_url} rel="noopener noreferrer">
+        {alert.rule.description}
+      </a>
+    )
+    ,
+  },
+];
 
 export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
   const alerts = data && data.alerts.length > 0
@@ -62,33 +78,10 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
           {' '}
           <Grade small grade={data.grade} />
         </h3>
-        <br />
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th style={{ width: 100 }} className="text-center">
-                Sévérité
-              </th>
-              <th>Règle</th>
-              <th>Descritpion</th>
-            </tr>
-          </thead>
-          <tbody>
-            {alerts.map((alert, i: number) => (
-              <tr key={alert.rule.name + i}>
-                <td className="text-center">
-                  <CodescanBadge {...alert} />
-                </td>
-                <td>{alert.rule.name}</td>
-                <td>
-                  <a target="_blank" href={alert.html_url} rel="noopener noreferrer">
-                    {alert.rule.description}
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        <Table
+          columns={columns}
+          data={alerts}
+        />
       </Panel>
     ))
     || null

@@ -4,6 +4,8 @@ import * as H from 'history';
 import { Link } from 'react-router-dom';
 import Badge from './Badge';
 
+import styles from './grade.cssmodule.scss';
+
 type GradeProps = {
   grade: string;
   label?: string | number | null;
@@ -31,7 +33,7 @@ export const Grade: React.FC<GradeProps> = ({
   return (
     <Badge
       variant={variant}
-      style={{ minWidth: 60, fontSize: small ? '1.1em' : '2em' }}
+      className={styles[small ? 'small' : 'big']}
     >
       {to ? <Link to={to}>{title}</Link> : title }
     </Badge>
