@@ -9,12 +9,16 @@ import {
   Legend,
 } from 'recharts';
 
-import { Jumbotron, CardColumns } from 'react-bootstrap';
+import {
+  Callout, CalloutTitle,
+} from '@dataesr/react-dsfr';
 import uniq from 'lodash.uniq';
 
 import { Link } from 'react-router-dom';
 
 import { Panel } from './Panel';
+
+import styles from './wappalyzerDashboard.cssmodule.scss';
 
 type UsageChartProps = { data: any };
 
@@ -110,12 +114,11 @@ const getCategoriesByUrl = (report: DashLordReport) => {
 export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
   const categories = getCategoriesByUrl(report);
   return (
-    <div>
-      <br />
-      <Jumbotron style={{ padding: '2em' }}>
-        <h1>Wappalyzer : technologies détectées</h1>
-      </Jumbotron>
-      <CardColumns>
+    <>
+      <Callout hasInfoIcon={false} className="fr-mb-3w">
+        <CalloutTitle as="h1">Wappalyzer : technologies détectées</CalloutTitle>
+      </Callout>
+      <div className={styles.columns}>
         {categories.map((category) => (
           <Panel key={category.name} title={category.name}>
             <UsageChart data={toChartData(category)} />
@@ -147,7 +150,7 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
             ))}
           </Panel>
         ))}
-      </CardColumns>
-    </div>
+      </div>
+    </>
   );
 };

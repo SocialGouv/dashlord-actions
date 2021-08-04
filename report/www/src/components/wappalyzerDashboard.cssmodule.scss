@@ -1,0 +1,13 @@
+.columns {
+    -webkit-column-count: 3;
+    column-count: 3;
+    grid-column-gap: 1.25rem;
+    -webkit-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+}
+
+.columns>div {
+    display: inline-block;
+}

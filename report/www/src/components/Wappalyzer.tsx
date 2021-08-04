@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import { Table } from '@dataesr/react-dsfr';
 
-import Badge from './Badge';
-
 import { Panel } from './Panel';
 
 type WappalyzerProps = { data: WappalyzerReport };
