@@ -47,11 +47,12 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
               <Grade small grade={grade} />
             </h3>
             {capReasons.length > 0 && <br />}
-            {capReasons.map((reason: any, i: number) => (
-              <Alert key={reason.id + i} variant="info">
-                <Info style={{ marginRight: 5 }} />
-                {reason.finding}
-              </Alert>
+            {capReasons.map((reason: any) => (
+              <Alert
+                key={reason.id}
+                type="info"
+                title={reason.finding}
+              />
             ))}
           </Col>
         </Row>

@@ -44,7 +44,7 @@ export const Panel: React.FC<PanelProps> = ({
             rel="noreferrer noopener"
           />
         ) : (
-          <Link to={url} style={{ color: 'white', float: 'right' }}>
+          <Link to={url} style={{ float: 'right' }}>
             <Search />
           </Link>
         ))}

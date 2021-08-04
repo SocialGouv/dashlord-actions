@@ -50,7 +50,7 @@ export const Nuclei: React.FC<NucleiProps> = ({ data }) => {
         <Table
           caption="Nuclei"
           captionPosition="none"
-          rowKey="templateID"
+          rowKey="matcher_name"
           columns={columns}
           data={rows}
         />

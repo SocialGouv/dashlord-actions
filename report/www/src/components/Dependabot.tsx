@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import { Table, Badge } from 'react-bootstrap';
+import { Table } from '@dataesr/react-dsfr';
 import { getLastUrlSegment } from '../utils';
 
+import Badge from './Badge';
 import { Panel } from './Panel';
 import { Grade } from './Grade';
 
@@ -39,6 +40,24 @@ const DependabotBadge = (node: DependabotNode) => {
 
 type DependabotProps = { data: DependabotRepository; url: string };
 
+const columns = [
+  { name: 'severity', label: 'Sévérité', render: (node) => <DependabotBadge {...node} /> },
+  { name: 'dependancy', label: 'Dépendance vulnérable', render: (node) => node.securityVulnerability.package.name },
+  {
+    name: 'vulnerabilities',
+    label: 'Vulnérabilités',
+    render: (node) => node.securityVulnerability.advisory.references.map(
+      (reference, i: number) => (
+        <p key={getLastUrlSegment(reference.url) + i}>
+          <a target="_blank" href={reference.url} rel="noopener noreferrer">
+            {getLastUrlSegment(reference.url)}
+          </a>
+          <br />
+        </p>
+      ),
+    ),
+  },
+];
 export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
   const nodes = data && data.vulnerabilityAlerts.totalCount > 0
     ? data.vulnerabilityAlerts.nodes
@@ -69,40 +88,11 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
           {' '}
           <Grade small grade={data.grade} />
         </h3>
-        <br />
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th style={{ width: 100 }} className="text-center">
-                Sévérité
-              </th>
-              <th>Dépendance vulnérable</th>
-              <th>Vulnérabilités</th>
-            </tr>
-          </thead>
-          <tbody>
-            {nodes.map((node, i: number) => (
-              <tr key={node.securityVulnerability.package.name + i}>
-                <td className="text-center">
-                  <DependabotBadge {...node} />
-                </td>
-                <td>{node.securityVulnerability.package.name}</td>
-                <td>
-                  {node.securityVulnerability.advisory.references.map(
-                    (reference, i: number) => (
-                      <p key={getLastUrlSegment(reference.url) + i}>
-                        <a target="_blank" href={reference.url} rel="noopener noreferrer">
-                          {getLastUrlSegment(reference.url)}
-                        </a>
-                        <br />
-                      </p>
-                    ),
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        <Table
+          columns={columns}
+          data={nodes}
+          rowKey="createdAt"
+        />
       </Panel>
     ))
     || null

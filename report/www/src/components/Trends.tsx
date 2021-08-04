@@ -1,6 +1,6 @@
 import React from 'react';
 import { TrendingUp, TrendingDown } from 'react-feather';
-import { Table } from 'react-bootstrap';
+import { Table } from '@dataesr/react-dsfr';
 import { Panel } from './Panel';
 import { smallUrl, letterGradeValue } from '../utils';
 
@@ -42,6 +42,7 @@ const metricsDefinitions = {
 } as Record<any, { title: string; reverse?: boolean }>;
 
 const getTrend = (metric: SummaryKey, values: any[]) => {
+  console.log(values);
   const metricDefinition = metricsDefinitions[metric];
   const firstValue = values[0];
   const lastValue = values[values.length - 1];
@@ -96,6 +97,34 @@ const Trend = ({ metric, values }: { metric: SummaryKey; values: any[] }) => {
   );
 };
 
+const columns = [
+  {
+    name: 'trend',
+    label: 'Trend',
+    render: (row) => {
+      const trend = getTrend(row.key, row.values);
+      return trend > 0 ? (
+        <TrendingUp
+          size={40}
+          style={{
+            stroke: 'var(--success)',
+            marginRight: 10,
+          }}
+        />
+      ) : (
+        <TrendingDown
+          size={40}
+          style={{
+            stroke: 'var(--danger)',
+            marginRight: 10,
+          }}
+        />
+      );
+    },
+  },
+  { name: 'outil', label: 'Outil', render: (row) => metricsDefinitions[row.key].title },
+  { name: 'evolution', label: 'Evolution', render: (row) => showValues(row.values) },
+];
 export const Trends = ({ trends }: { trends: Trends }) => {
   const urls = Object.keys(trends);
   urls.sort();
@@ -114,26 +143,11 @@ export const Trends = ({ trends }: { trends: Trends }) => {
               title={smallUrl(url)}
               url={`/url/${encodeURIComponent(url)}`}
             >
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th style={{ width: 100 }} className="text-center">
-                      Trend
-                    </th>
-                    <th>Outil</th>
-                    <th>Evolution</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {Object.keys(changes).map((key) => (
-                    <Trend
-                      key={key}
-                      metric={key as SummaryKey}
-                      values={changes[key]}
-                    />
-                  ))}
-                </tbody>
-              </Table>
+              <Table
+                columns={columns}
+                data={Object.keys(changes).map((change) => ({ key: change, values: changes[change] }))}
+                keyId="key"
+              />
             </Panel>
           );
         }
@@ -142,47 +156,3 @@ export const Trends = ({ trends }: { trends: Trends }) => {
     </div>
   );
 };
-
-/*
-<Table striped bordered hover>
-  <thead>
-    <tr>
-      <th style={{ width: 100 }} className="text-center">
-        Trend
-      </th>
-      <th>Outil</th>
-      <th>Evolution</th>
-    </tr>
-  </thead>
-  <tbody>
-    {nodes.map((node, i: number) => {
-      return (
-        <tr key={node.securityVulnerability.package.name + i}>
-          <td className="text-center">
-            <DependabotBadge {...node} />
-          </td>
-          <td>{node.securityVulnerability.package.name}</td>
-          <td>
-            {node.securityVulnerability.advisory.references.map(
-              (reference, i: number) => {
-                return (
-                  <p key={getLastUrlSegment(reference.url) + i}>
-                    <a
-                      target="_blank"
-                      href={reference.url}
-                      rel="noopener noreferrer"
-                    >
-                      {getLastUrlSegment(reference.url)}
-                    </a>
-                    <br />
-                  </p>
-                );
-              }
-            )}
-          </td>
-        </tr>
-      );
-    })}
-  </tbody>
-</Table>;
-*/

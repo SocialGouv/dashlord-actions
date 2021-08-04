@@ -66,7 +66,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           )}
           {report.tags
             && report.tags.map((tag: string) => (
-              <Badge className={styles.badge} variant="info">
+              <Badge className={styles.badge} variant="info" key={tag}>
                 <Link key={tag} to={`/tag/${tag}`}>
                   {tag}
                 </Link>
