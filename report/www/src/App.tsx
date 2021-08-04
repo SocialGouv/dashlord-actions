@@ -101,39 +101,37 @@ const App = () => (
       <ScrollToTop />
       <HeaderSite report={report} />
       <Container>
-        <Row>
-          <Col role="main" className="fr-my-4w">
-            <Switch>
-              <Route path="/url/*">
-                <UrlRoute report={report} />
-              </Route>
-              <Route path="/dashboard">
-                <Dashboard report={report} />
-              </Route>
-              <Route path="/trends">
-                <Trends trends={trends} />
-              </Route>
-              <Route path="/category/:category">
-                <CategoryRoute report={report} />
-              </Route>
-              <Route path="/tag/:tag">
-                <TagRoute report={report} />
-              </Route>
-              <Route path="/wappalyzer">
-                <WappalyzerDashboard report={report} />
-              </Route>
-              <Route path="/intro">
-                <Intro />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/">
-                <Dashboard report={report} />
-              </Route>
-            </Switch>
-          </Col>
-        </Row>
+        <div role="main" className="fr-my-4w">
+          <Switch>
+            <Route path="/url/*">
+              <UrlRoute report={report} />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard report={report} />
+            </Route>
+            <Route path="/trends">
+              <Trends trends={trends} />
+            </Route>
+            <Route path="/category/:category">
+              <CategoryRoute report={report} />
+            </Route>
+            <Route path="/tag/:tag">
+              <TagRoute report={report} />
+            </Route>
+            <Route path="/wappalyzer">
+              <WappalyzerDashboard report={report} />
+            </Route>
+            <Route path="/intro">
+              <Intro />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Dashboard report={report} />
+            </Route>
+          </Switch>
+        </div>
       </Container>
       <FooterSite />
     </div>
