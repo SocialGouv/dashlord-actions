@@ -25,7 +25,7 @@ import * as styles from './url.cssmodule.scss';
 type UrlDetailProps = { url: string; report: UrlReport };
 
 const Anchor = ({ id }: { id: string }) => (
-  <div id={id} style={{ marginBottom: 30 }} />
+  <div id={id} />
 );
 
 const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
@@ -50,7 +50,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
   }
   return (
     <>
-      <Callout hasInfoIcon={false}>
+      <Callout hasInfoIcon={false} className="fr-mb-3w">
         <CalloutTitle as="h4">
           <a href={url} rel="noreferrer noopener" target="_blank">
             {url}
@@ -73,16 +73,16 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               </Badge>
             ))}
           {updateDate && (
-            <>
-              <Clock size={12} />
-              <span title={updateDate} className={styles.clock}>
-                Mise à jour il y a :
-                {' '}
-                {formatDistanceToNow(new Date(updateDate), {
-                  locale: frLocale,
-                })}
-              </span>
-            </>
+          <>
+            <Clock size={12} />
+            <span title={updateDate} className={styles.clock}>
+              Mise à jour il y a :
+              {' '}
+              {formatDistanceToNow(new Date(updateDate), {
+                locale: frLocale,
+              })}
+            </span>
+          </>
           )}
         </CalloutText>
         <div className={styles.image}>
