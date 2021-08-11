@@ -5,7 +5,7 @@ import {
 } from 'react-feather';
 import Tooltip from 'rc-tooltip';
 
-import "rc-tooltip/assets/bootstrap.css";
+import 'rc-tooltip/assets/bootstrap.css';
 import styles from './columnHeader.cssmodule.scss';
 
 type ColumnHeaderProps = {
@@ -33,16 +33,16 @@ const ColumnHeader: React.FC<ColumnHeaderProps> = ({
     </Tooltip>
 
     {warning && (
-        <Tooltip
-        placement="bottom"
-        trigger={['hover']}
-        overlay={<div className={styles.tooltip}>{warning}</div>}
-        >
-        <AlertTriangle
-            size={16}
-            className={styles.warning}
-        />
-        </Tooltip>
+    <Tooltip
+      placement="bottom"
+      trigger={['hover']}
+      overlay={<div className={styles.tooltip}>{warning}</div>}
+    >
+      <AlertTriangle
+        size={16}
+        className={styles.warning}
+      />
+    </Tooltip>
     )}
   </div>
 );
