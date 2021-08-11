@@ -108,8 +108,8 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                   value={`${(score * 100).toFixed()}%`}
                 >
                   <Gauge
-                    width={100}
-                    height={60}
+                    width={120}
+                    height={80}
                     value={score * 100}
                     minValue={0}
                     maxValue={100}

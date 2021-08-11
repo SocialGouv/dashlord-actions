@@ -31,8 +31,8 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
               value={`${data.uptime}%`}
             >
               <Gauge
-                width={100}
-                height={20}
+                width={120}
+                height={80}
                 value={data.uptime * 100}
                 minValue={0}
                 maxValue={100}
@@ -48,8 +48,8 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                 value={`${data.metrics.timings.total}ms`}
               >
                 <Gauge
-                  width={100}
-                  height={20}
+                  width={120}
+                  height={60}
                   value={Math.max(0, data.metrics.timings.total)}
                   minValue={0}
                   maxValue={1000}
@@ -81,7 +81,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
           <Col n="12 sm-12 md-6" className="fr-mb-3w">
             {data.ssl && (
               <Card
-                title={(
+                title={
                   <>
                     Certificat TLS{" "}
                     {data.ssl.valid ? (
@@ -90,7 +90,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                       <Grade small grade="F" label="invalide" />
                     )}
                   </>
-                )}
+                }
                 value={`expire le ${format(
                   new Date(data.ssl.expires_at),
                   "dd/MM/yyyy",
