@@ -28,8 +28,7 @@ export const Intro: React.FC = () => (
         et seule la page d'accueil du site est ici évaluée.
         <br />
         Vous pouvez soumettre de nouvelles URLs, proposer des corrections ou
-        consulter la roadmap en
-{" "}
+        consulter la roadmap en{" "}
         <a
           href="https://github.com/SocialGouv/dashlord/issues/new"
           target="_blank"
@@ -68,7 +67,7 @@ export const Intro: React.FC = () => (
         />
         <Alert
           type="warning"
-          description={(
+          description={
             <span>
               Les mesures d'accessibilité n'abordent pas du tout{" "}
               <a
@@ -80,7 +79,7 @@ export const Intro: React.FC = () => (
               </a>
               .
             </span>
-          )}
+          }
         />
       </Panel>
     )}
@@ -160,7 +159,7 @@ export const Intro: React.FC = () => (
         title="testssl.sh"
         url="https://testssl.sh/"
         isExternal
-        info={(
+        info={
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -168,7 +167,7 @@ export const Intro: React.FC = () => (
           >
             Code source
           </a>
-        )}
+        }
       >
         Évalue le niveau de confiance d'un certificat SSL
         <br />
@@ -187,7 +186,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("http") && (
       <Panel
         title="Mozilla HTTP observatory"
-        info={(
+        info={
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -195,7 +194,7 @@ export const Intro: React.FC = () => (
           >
             Méthodologie
           </a>
-        )}
+        }
         url="https://observatory.mozilla.org/"
         isExternal
       >
@@ -211,7 +210,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("updownio") && (
       <Panel
         title="Updown.io"
-        info={(
+        info={
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -219,7 +218,7 @@ export const Intro: React.FC = () => (
           >
             APDEX
           </a>
-        )}
+        }
         url="https://updown.io/"
         isExternal
       >
@@ -296,8 +295,7 @@ export const Intro: React.FC = () => (
         Vérifie si la page /stats existe
         <br />
         <br />
-        Par exemple:
-{" "}
+        Par exemple:{" "}
         <a
           rel="noopener noreferrer"
           target="_blank"
