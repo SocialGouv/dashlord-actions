@@ -14,10 +14,7 @@ module.exports = {
       },
     },
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -26,12 +23,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'jest',
-  ],
-  ignorePatterns: ['*.d.ts'],
+  plugins: ['react', '@typescript-eslint', 'jest'],
+  ignorePatterns: ['*.d.ts', 'build'],
   rules: {
     'import/prefer-default-export': 0,
     'max-classes-per-file': 0,
@@ -46,10 +39,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: [
-          '.js',
-          '.tsx',
-        ],
+        extensions: ['.js', '.tsx'],
       },
     ],
   },
