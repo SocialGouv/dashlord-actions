@@ -1,34 +1,34 @@
-const path = require('path');
-const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const rootPath = path.resolve(__dirname, '..');
+const rootPath = path.resolve(__dirname, "..");
 
 const getConfig = () => ({
   context: rootPath,
-  entry: { main: path.resolve(rootPath, 'src/index.tsx') },
+  entry: { main: path.resolve(rootPath, "src/index.tsx") },
   output: {
-    filename: '[name].[contenthash].bundle.js',
-    path: path.resolve(rootPath, 'dist'),
-    publicPath: './',
+    filename: "[name].[contenthash].bundle.js",
+    path: path.resolve(rootPath, "dist"),
+    publicPath: "./",
   },
   optimization: {
-    moduleIds: 'deterministic',
+    moduleIds: "deterministic",
     removeEmptyChunks: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          name: "vendors",
           chunks(chunk) {
-            return chunk.name === 'main';
+            return chunk.name === "main";
           },
         },
       },
     },
-    runtimeChunk: { name: 'manifest' },
+    runtimeChunk: { name: "manifest" },
   },
   module: {
     rules: [
@@ -36,67 +36,60 @@ const getConfig = () => ({
         test: /\.(js|jsx|ts|tsx)?$/,
         exclude: [/node_modules/],
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-              '@babel/preset-typescript',
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
             ],
           },
         },
       },
       {
         test: /\.css$/,
-        rules: [{
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-          ],
-        }],
+        rules: [
+          {
+            use: ["style-loader", "css-loader", "sass-loader"],
+          },
+        ],
       },
       {
         test: /\.svg/,
-        use: ['svg-url-loader'],
+        use: ["svg-url-loader"],
       },
       {
         test: /\.(jpg|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        rules: [{ use: ['file-loader'] }],
+        rules: [{ use: ["file-loader"] }],
       },
       {
         test: /\.md$/,
-        use: [
-          { loader: 'html-loader' },
-          { loader: 'markdown-loader' },
-        ],
+        use: [{ loader: "html-loader" }, { loader: "markdown-loader" }],
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       alwaysWriteToDisk: true,
-      filename: path.resolve(rootPath, 'dist/index.html'),
-      template: path.resolve(rootPath, 'index.html'),
+      filename: path.resolve(rootPath, "dist/index.html"),
+      template: path.resolve(rootPath, "index.html"),
     }),
     new CopyPlugin({
-      patterns: [
-        'public',
-      ],
+      patterns: ["public"],
     }),
     new webpack.DefinePlugin({
       __PUBLIC_URL__: "'http://localhost:3000'",
     }),
   ],
   performance: {
-    hints: 'warning',
+    hints: "warning",
     // Calculates sizes of gziped bundles.
     assetFilter(assetFilename) {
-      return assetFilename.endsWith('.js.gz');
+      return assetFilename.endsWith(".js.gz");
     },
   },
 });

@@ -1,47 +1,40 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Table } from '@dataesr/react-dsfr';
+import { Table } from "@dataesr/react-dsfr";
 
-import { Panel } from './Panel';
+import { Panel } from "./Panel";
 
 type WappalyzerProps = { data: WappalyzerReport };
 
 const columns = [
-  { name: 'name', label: 'Name' },
+  { name: "name", label: "Name" },
   {
-    name: 'categories',
-    label: 'Categories',
-    render: ({ categories }) => categories
-    && categories
-      .map((cat: any) => cat.name)
-      .join(', '),
+    name: "categories",
+    label: "Categories",
+    render: ({ categories }) =>
+      categories && categories.map((cat: any) => cat.name).join(", "),
   },
   {
-    name: 'website',
-    label: 'Website',
+    name: "website",
+    label: "Website",
     render: ({ website }) => (
-      <a
-        href={website}
-        target="_blank"
-        rel="nopoener noreferrer"
-      >
+      <a href={website} target="_blank" rel="nopoener noreferrer">
         {website}
       </a>
     ),
   },
 ];
 
-export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) => (
+export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) =>
   (data && data.technologies && data.technologies.length && (
-  <Panel title="Wappalyzer" info="Détection des technologies">
-    <Table
-      caption="Wappalyzer"
-      captionPosition="none"
-      rowKey="name"
-      columns={columns}
-      data={data.technologies}
-    />
-  </Panel>
-  ))
-    || null
-);
+    <Panel title="Wappalyzer" info="Détection des technologies">
+      <Table
+        caption="Wappalyzer"
+        captionPosition="none"
+        rowKey="name"
+        columns={columns}
+        data={data.technologies}
+      />
+    </Panel>
+  )) ||
+  null;

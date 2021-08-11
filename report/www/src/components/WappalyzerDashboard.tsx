@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   BarChart,
   Bar,
@@ -7,18 +7,16 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from 'recharts';
+} from "recharts";
 
-import {
-  Callout, CalloutTitle,
-} from '@dataesr/react-dsfr';
-import uniq from 'lodash.uniq';
+import { Callout, CalloutTitle } from "@dataesr/react-dsfr";
+import uniq from "lodash.uniq";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { Panel } from './Panel';
+import { Panel } from "./Panel";
 
-import styles from './wappalyzerDashboard.cssmodule.scss';
+import styles from "./wappalyzerDashboard.cssmodule.scss";
 
 type UsageChartProps = { data: any };
 
@@ -43,10 +41,11 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
   </BarChart>
 );
 
-const toChartData = (category: WappalyzerParsedCategory) => category.items.map((item) => ({
-  name: item.name,
-  count: item.urls.length,
-}));
+const toChartData = (category: WappalyzerParsedCategory) =>
+  category.items.map((item) => ({
+    name: item.name,
+    count: item.urls.length,
+  }));
 
 type WappalyzerDashboardProps = { report: DashLordReport };
 
@@ -64,24 +63,26 @@ const getCategoriesByUrl = (report: DashLordReport) => {
     .flatMap((url) => ({ url, wappalyzer: url.wappalyzer }))
     .filter(({ url, wappalyzer }) => !!wappalyzer)
     .flatMap(
-      ({ url, wappalyzer }) => (wappalyzer
-          && wappalyzer.technologies.map((details) => ({
+      ({ url, wappalyzer }) =>
+        (wappalyzer &&
+          wappalyzer.technologies.map((details) => ({
             ...details,
             url: url.url,
-          })))
-        || [],
+          }))) ||
+        []
     );
   const categoriesNames = uniq(
     allTechnologies.flatMap(
-      (t) => t.categories && t.categories.map((c) => c.name),
-    ),
+      (t) => t.categories && t.categories.map((c) => c.name)
+    )
   );
 
-  const getTechUrl = (name: string) => allTechnologies.find((t) => t.name === name)?.website;
+  const getTechUrl = (name: string) =>
+    allTechnologies.find((t) => t.name === name)?.website;
 
   const categories = categoriesNames.map((name) => {
     const categoryTechs = allTechnologies.filter(
-      (t) => t.categories && t.categories.find((c) => c.name === name),
+      (t) => t.categories && t.categories.find((c) => c.name === name)
     );
 
     // group techs by name and sort by count desc
@@ -132,11 +133,10 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                     rel="noopener noreferrer"
                   >
                     {item.name}
-                    {' '}
-                    (
-                    {item.urls.length}
-                    )
-                  </a>
+{' '}
+({item.urls.length}
+)
+</a>
                 </b>
                 <ul>
                   {item.urls.map((url) => (

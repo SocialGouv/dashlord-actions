@@ -1,46 +1,49 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 
-const defaultConfig = require('./webpack.base');
+const defaultConfig = require("./webpack.base");
 
 const baseConfig = defaultConfig();
 
 module.exports = {
   ...baseConfig,
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: "development",
+  devtool: "inline-source-map",
   entry: {
-    main: ['webpack-dev-server/client?http://localhost:3000/', './src/index.tsx'],
+    main: [
+      "webpack-dev-server/client?http://localhost:3000/",
+      "./src/index.tsx",
+    ],
   },
   devServer: {
-    contentBase: path.resolve(baseConfig.context, 'dist'),
+    contentBase: path.resolve(baseConfig.context, "dist"),
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Origin": "*",
     },
     historyApiFallback: true,
     port: 3000,
   },
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(baseConfig.context, 'dist'),
-    publicPath: '/',
+    filename: "[name].bundle.js",
+    path: path.resolve(baseConfig.context, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.cssmodule\.scss$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                localIdentName: '[path][name]__[local]',
+                localIdentName: "[path][name]__[local]",
               },
               importLoaders: 1,
             },
           },
-          'sass-loader',
+          "sass-loader",
         ],
       },
     ].concat(baseConfig.module.rules),

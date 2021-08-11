@@ -1,8 +1,8 @@
-import React from 'react';
-import { TrendingUp, TrendingDown } from 'react-feather';
-import { Table } from '@dataesr/react-dsfr';
-import { Panel } from './Panel';
-import { smallUrl, letterGradeValue } from '../utils';
+import React from "react";
+import { TrendingUp, TrendingDown } from "react-feather";
+import { Table } from "@dataesr/react-dsfr";
+import { Panel } from "./Panel";
+import { smallUrl, letterGradeValue } from "../utils";
 
 const uniqify = (arr: any[]): any[] => Array.from(new Set(arr));
 
@@ -24,21 +24,21 @@ const getChanges = (urlTrends: UrlMetricsHistoryValues): ChangeSet => {
 };
 
 const metricsDefinitions = {
-  testsslGrade: { title: 'SSL' },
-  codescanGrade: { title: 'Codescan grade' },
-  dependabotGrade: { title: 'Dependabot grade' },
-  httpGrade: { title: 'HTTP observatory' },
-  lighthouse_performance: { title: 'Performance' },
-  lighthouse_seo: { title: 'Lighthouse SEO' },
-  lighthouse_pwa: { title: 'Lighthouse PWA' },
-  lighthouse_accessibility: { title: 'Lighthouse accessibility' },
-  'lighthouse_best-practices': { title: 'Lighthouse best practices' },
-  nmapGrade: { title: 'NMAP grade' },
-  nmapOpenPortsGrade: { title: 'NMAP open ports grade' },
-  trackersCount: { title: 'Trackers count', reverse: true },
-  cookiesCount: { title: 'Cookies count', reverse: true },
-  uptime: { title: 'uptime' },
-  apdex: { title: 'apDex' },
+  testsslGrade: { title: "SSL" },
+  codescanGrade: { title: "Codescan grade" },
+  dependabotGrade: { title: "Dependabot grade" },
+  httpGrade: { title: "HTTP observatory" },
+  lighthouse_performance: { title: "Performance" },
+  lighthouse_seo: { title: "Lighthouse SEO" },
+  lighthouse_pwa: { title: "Lighthouse PWA" },
+  lighthouse_accessibility: { title: "Lighthouse accessibility" },
+  "lighthouse_best-practices": { title: "Lighthouse best practices" },
+  nmapGrade: { title: "NMAP grade" },
+  nmapOpenPortsGrade: { title: "NMAP open ports grade" },
+  trackersCount: { title: "Trackers count", reverse: true },
+  cookiesCount: { title: "Cookies count", reverse: true },
+  uptime: { title: "uptime" },
+  apdex: { title: "apDex" },
 } as Record<any, { title: string; reverse?: boolean }>;
 
 const getTrend = (metric: SummaryKey, values: any[]) => {
@@ -48,20 +48,22 @@ const getTrend = (metric: SummaryKey, values: any[]) => {
   const lastValue = values[values.length - 1];
   if (metric.match(/Grade$/)) {
     return letterGradeValue(lastValue) - letterGradeValue(firstValue);
-  } if (metricDefinition.reverse) {
+  }
+  if (metricDefinition.reverse) {
     return firstValue - lastValue;
   }
   return lastValue - firstValue;
 };
 
-const showValues = (values: any[]) => values
-  .map((val: any) => {
-    if (!Number.isNaN(val)) {
-      return Math.floor(val * 10000) / 10000;
-    }
-    return val;
-  })
-  .join(' => ');
+const showValues = (values: any[]) =>
+  values
+    .map((val: any) => {
+      if (!Number.isNaN(val)) {
+        return Math.floor(val * 10000) / 10000;
+      }
+      return val;
+    })
+    .join(" => ");
 
 const Trend = ({ metric, values }: { metric: SummaryKey; values: any[] }) => {
   const showMetric = metric in metricsDefinitions;
@@ -69,23 +71,24 @@ const Trend = ({ metric, values }: { metric: SummaryKey; values: any[] }) => {
     return null;
   }
   const trend = getTrend(metric, values);
-  const Icon = () => (trend > 0 ? (
-    <TrendingUp
-      size={40}
-      style={{
-        stroke: 'var(--success)',
-        marginRight: 10,
-      }}
-    />
-  ) : (
-    <TrendingDown
-      size={40}
-      style={{
-        stroke: 'var(--danger)',
-        marginRight: 10,
-      }}
-    />
-  ));
+  const Icon = () =>
+    trend > 0 ? (
+      <TrendingUp
+        size={40}
+        style={{
+          stroke: "var(--success)",
+          marginRight: 10,
+        }}
+      />
+    ) : (
+      <TrendingDown
+        size={40}
+        style={{
+          stroke: "var(--danger)",
+          marginRight: 10,
+        }}
+      />
+    );
   return (
     <tr>
       <td className="text-center">
@@ -99,15 +102,15 @@ const Trend = ({ metric, values }: { metric: SummaryKey; values: any[] }) => {
 
 const columns = [
   {
-    name: 'trend',
-    label: 'Trend',
+    name: "trend",
+    label: "Trend",
     render: (row) => {
       const trend = getTrend(row.key, row.values);
       return trend > 0 ? (
         <TrendingUp
           size={40}
           style={{
-            stroke: 'var(--success)',
+            stroke: "var(--success)",
             marginRight: 10,
           }}
         />
@@ -115,15 +118,23 @@ const columns = [
         <TrendingDown
           size={40}
           style={{
-            stroke: 'var(--danger)',
+            stroke: "var(--danger)",
             marginRight: 10,
           }}
         />
       );
     },
   },
-  { name: 'outil', label: 'Outil', render: (row) => metricsDefinitions[row.key].title },
-  { name: 'evolution', label: 'Evolution', render: (row) => showValues(row.values) },
+  {
+    name: "outil",
+    label: "Outil",
+    render: (row) => metricsDefinitions[row.key].title,
+  },
+  {
+    name: "evolution",
+    label: "Evolution",
+    render: (row) => showValues(row.values),
+  },
 ];
 export const Trends = ({ trends }: { trends: Trends }) => {
   const urls = Object.keys(trends);
@@ -145,7 +156,10 @@ export const Trends = ({ trends }: { trends: Trends }) => {
             >
               <Table
                 columns={columns}
-                data={Object.keys(changes).map((change) => ({ key: change, values: changes[change] }))}
+                data={Object.keys(changes).map((change) => ({
+                  key: change,
+                  values: changes[change],
+                }))}
                 keyId="key"
               />
             </Panel>

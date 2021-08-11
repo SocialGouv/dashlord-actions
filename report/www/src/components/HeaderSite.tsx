@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
-import uniq from 'lodash.uniq';
+import React, { useEffect, useState } from "react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
+import uniq from "lodash.uniq";
 import {
   Header,
   HeaderBody,
@@ -13,8 +13,8 @@ import {
   NavItem,
   NavSubItem,
   SwitchTheme,
-} from '@dataesr/react-dsfr';
-import { smallUrl, sortByKey } from '../utils';
+} from "@dataesr/react-dsfr";
+import { smallUrl, sortByKey } from "../utils";
 
 type HeaderSiteProps = {
   report: DashLordReport;
@@ -23,10 +23,10 @@ type HeaderSiteProps = {
 export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [path, setPath] = useState(() => location.pathname || '');
-  const sortedReport = (report && report.sort(sortByKey('url'))) || [];
+  const [path, setPath] = useState(() => location.pathname || "");
+  const sortedReport = (report && report.sort(sortByKey("url"))) || [];
   const categories = uniq(
-    sortedReport.filter((u) => u.category).map((u) => u.category),
+    sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
 
   useEffect(() => {
@@ -44,11 +44,14 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             title="Dashlord"
             description="Pour les scanner tous..."
           />
-          <Tool
-            closeButtonLabel="fermer"
-          >
+          <Tool closeButtonLabel="fermer">
             <ToolItemGroup>
-              <ToolItem icon="ri-github-fill" link="https://github.com/SocialGouv/dashlord">Code source</ToolItem>
+              <ToolItem
+                icon="ri-github-fill"
+                link="https://github.com/SocialGouv/dashlord"
+              >
+                Code source
+              </ToolItem>
               <ToolItem onClick={() => setIsOpen(true)}>
                 <span
                   className="fr-fi-theme-fill fr-link--icon-left"
@@ -64,7 +67,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
         <HeaderNav path={path}>
           <NavItem
             title="Introduction"
-            current={path.startsWith('/intro')}
+            current={path.startsWith("/intro")}
             asLink={<RouterLink to="/intro" />}
           />
           <NavItem title="Catégories">
@@ -89,17 +92,17 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           </NavItem>
           <NavItem
             title="Technologies"
-            current={path.startsWith('/wappalyzer')}
+            current={path.startsWith("/wappalyzer")}
             asLink={<RouterLink to="/wappalyzer" />}
           />
           <NavItem
             title="Evolutions"
-            current={path.startsWith('/trends')}
+            current={path.startsWith("/trends")}
             asLink={<RouterLink to="/trends" />}
           />
           <NavItem
             title="A propos"
-            current={path.startsWith('/about')}
+            current={path.startsWith("/about")}
             asLink={<RouterLink to="/about" />}
           />
         </HeaderNav>

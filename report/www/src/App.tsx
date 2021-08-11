@@ -1,28 +1,26 @@
-import * as React from 'react';
+import * as React from "react";
 
-import {
-  Container, Row, Col, Alert,
-} from '@dataesr/react-dsfr';
+import { Container, Row, Col, Alert } from "@dataesr/react-dsfr";
 
 import {
   useParams,
   HashRouter as Router,
   Switch,
   Route,
-} from 'react-router-dom';
+} from "react-router-dom";
 
-import { HeaderSite } from './components/HeaderSite';
-import { FooterSite } from './components/FooterSite';
-import { Dashboard } from './components/Dashboard';
-import { Trends } from './components/Trends';
-import Url from './components/Url';
-import { Intro } from './components/Intro';
-import { ScrollToTop } from './components/ScrollToTop';
-import { About } from './components/About';
-import { WappalyzerDashboard } from './components/WappalyzerDashboard';
+import { HeaderSite } from "./components/HeaderSite";
+import { FooterSite } from "./components/FooterSite";
+import { Dashboard } from "./components/Dashboard";
+import { Trends } from "./components/Trends";
+import Url from "./components/Url";
+import { Intro } from "./components/Intro";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { About } from "./components/About";
+import { WappalyzerDashboard } from "./components/WappalyzerDashboard";
 
-const report: DashLordReport = require('./report.json');
-const trends: Trends = require('./trends.json');
+const report: DashLordReport = require("./report.json");
+const trends: Trends = require("./trends.json");
 
 type CategoryRouteProps = { report: DashLordReport };
 
@@ -40,12 +38,11 @@ const CategoryRoute: React.FC<CategoryRouteProps> = (props) => {
       <br />
       <h3>
         {category}
-        {' '}
-        :
-        {urls.length}
-        {' '}
-        urls
-      </h3>
+{' '}
+:{urls.length}
+{' '}
+urls
+</h3>
       <Dashboard report={urls} />
     </>
   );
@@ -66,30 +63,32 @@ const TagRoute: React.FC<TagRouteProps> = (props) => {
       <br />
       <h3>
         {tag}
-        {' '}
-        :
-        {urls.length}
-        {' '}
-        urls
-      </h3>
+{' '}
+:{urls.length}
+{' '}
+urls
+</h3>
       <Dashboard report={urls} />
     </>
   );
 };
 
 interface UrlParamTypes {
-  '0': string;
+  "0": string;
 }
 
 type UrlRouteProps = { report: DashLordReport };
 
 const UrlRoute: React.FC<UrlRouteProps> = (props) => {
   const params = useParams<UrlParamTypes>();
-  const url = window.decodeURIComponent(params['0']);
+  const url = window.decodeURIComponent(params["0"]);
   const urlData = props.report.find((u) => u.url === url);
   if (!urlData) {
     return (
-      <Alert type="error" title={`Impossible de trouver le rapport pour ${url}`} />
+      <Alert
+        type="error"
+        title={`Impossible de trouver le rapport pour ${url}`}
+      />
     );
   }
   return <Url url={url} report={urlData} />;

@@ -1,24 +1,25 @@
-import * as React from 'react';
-import { Table } from '@dataesr/react-dsfr';
-import Badge from './Badge';
+import * as React from "react";
+import { Table } from "@dataesr/react-dsfr";
+import Badge from "./Badge";
 
-import { smallUrl } from '../utils';
-import { Panel } from './Panel';
-import { Grade } from './Grade';
+import { smallUrl } from "../utils";
+import { Panel } from "./Panel";
+import { Grade } from "./Grade";
 
 type HTTPProps = { data: HttpReport };
 
 const HttpRowBadge = (row: HttpTestReport) => {
   const scoreModifier = row.score_modifier;
-  const variant = scoreModifier < -50
-    ? 'danger'
-    : scoreModifier < -30
-      ? 'danger'
+  const variant =
+    scoreModifier < -50
+      ? "danger"
+      : scoreModifier < -30
+      ? "danger"
       : scoreModifier < -20
-        ? 'warning'
-        : scoreModifier < -10
-          ? 'info'
-          : 'success';
+      ? "warning"
+      : scoreModifier < -10
+      ? "info"
+      : "success";
   return (
     <Badge className="w-100" variant={variant}>
       {scoreModifier}
@@ -28,7 +29,7 @@ const HttpRowBadge = (row: HttpTestReport) => {
 
 // some help for remediation
 const helpDocs = {
-  'content-security-policy': (
+  "content-security-policy": (
     <>
       <a
         rel="noopener noreferrer"
@@ -38,7 +39,7 @@ const helpDocs = {
         Doc Content Security Policy
       </a>
       . L'extension
-      {' '}
+{" "}
       <a
         href="https://github.com/april/laboratory"
         rel="noopener noreferrer"
@@ -46,11 +47,11 @@ const helpDocs = {
       >
         github.com/april/laboratory
       </a>
-      {' '}
+{" "}
       permet de générer la CSP pour votre application.
     </>
   ),
-  'x-frame-options': (
+  "x-frame-options": (
     <>
       <a
         rel="noopener noreferrer"
@@ -62,7 +63,7 @@ const helpDocs = {
       .
     </>
   ),
-  'strict-transport-security': (
+  "strict-transport-security": (
     <>
       <a
         rel="noopener noreferrer"
@@ -74,7 +75,7 @@ const helpDocs = {
       .
     </>
   ),
-  'x-content-type-options': (
+  "x-content-type-options": (
     <>
       <a
         rel="noopener noreferrer"
@@ -86,7 +87,7 @@ const helpDocs = {
       .
     </>
   ),
-  'x-xss-protection': (
+  "x-xss-protection": (
     <>
       <a
         rel="noopener noreferrer"
@@ -110,7 +111,7 @@ const helpDocs = {
       .
     </>
   ),
-  'subresource-integrity': (
+  "subresource-integrity": (
     <>
       <a
         rel="noopener noreferrer"
@@ -125,36 +126,44 @@ const helpDocs = {
 };
 
 const columns = [
-  { name: 'impact', label: 'Impact', render: (failure) => <HttpRowBadge {...failure} /> },
-  { name: 'score_description', label: 'Description' },
-  { name: 'documentation', label: 'Documentation', render: ({ name }) => helpDocs[name] || '-' },
+  {
+    name: "impact",
+    label: "Impact",
+    render: (failure) => <HttpRowBadge {...failure} />,
+  },
+  { name: "score_description", label: "Description" },
+  {
+    name: "documentation",
+    label: "Documentation",
+    render: ({ name }) => helpDocs[name] || "-",
+  },
 ];
 
 export const HTTP = ({ data }: HTTPProps) => {
   if (!data.url) {
     return null;
   }
-  const url = (data && `https://observatory.mozilla.org/analyze/${smallUrl(data.url)}`)
-    || null;
+  const url =
+    (data && `https://observatory.mozilla.org/analyze/${smallUrl(data.url)}`) ||
+    null;
   const failures = Object.keys(data.details)
     .filter((key) => !data.details[key].pass)
     .map((key) => data.details[key]);
   failures.sort((a, b) => a.score_modifier - b.score_modifier);
 
-  return (
-    (url ? (
-      <Panel
-        title="HTTP"
-        info="Informations collectées par le Mozilla HTTP observatory"
-        url={url}
-        isExternal
-      >
-        <h3>
-          Scan Summary :
-          {' '}
-          <Grade small grade={data.grade} />
-        </h3>
-        {(failures.length && (
+  return url ? (
+    <Panel
+      title="HTTP"
+      info="Informations collectées par le Mozilla HTTP observatory"
+      url={url}
+      isExternal
+    >
+      <h3>
+        Scan Summary : 
+{' '}
+<Grade small grade={data.grade} />
+      </h3>
+      {failures.length && (
         <Table
           caption="HTTP"
           captionPosition="none"
@@ -162,8 +171,9 @@ export const HTTP = ({ data }: HTTPProps) => {
           columns={columns}
           data={failures}
         />
-        ))}
-      </Panel>
-    ) : <></>)
+      )}
+    </Panel>
+  ) : (
+    <></>
   );
 };

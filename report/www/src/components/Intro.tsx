@@ -1,31 +1,35 @@
-import * as React from 'react';
+import * as React from "react";
 
 import {
-  Button, Alert, Callout, CalloutText, CalloutTitle,
-} from '@dataesr/react-dsfr';
+  Button,
+  Alert,
+  Callout,
+  CalloutText,
+  CalloutTitle,
+} from "@dataesr/react-dsfr";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { isToolEnabled } from '../utils';
+import { isToolEnabled } from "../utils";
 
-import { Panel } from './Panel';
+import { Panel } from "./Panel";
 
-const dashlordConfig: DashlordConfig = require('../config.json');
+const dashlordConfig: DashlordConfig = require("../config.json");
 
 export const Intro: React.FC = () => (
   <>
     <Callout hasInfoIcon={false} className="fr-mb-3w">
-      <CalloutTitle as="h1">{dashlordConfig.title || 'DashLord'}</CalloutTitle>
+      <CalloutTitle as="h1">{dashlordConfig.title || "DashLord"}</CalloutTitle>
       <CalloutText>
-        Le tableau de bord aggrège les données issues de plusieurs
-        outils qui évaluent chaque URL indépendamment.
+        Le tableau de bord aggrège les données issues de plusieurs outils qui
+        évaluent chaque URL indépendamment.
         <br />
         L'évaluation des outils ne remplace en aucun cas une expertise manuelle,
         et seule la page d'accueil du site est ici évaluée.
         <br />
         Vous pouvez soumettre de nouvelles URLs, proposer des corrections ou
         consulter la roadmap en
-        {' '}
+{" "}
         <a
           href="https://github.com/SocialGouv/dashlord/issues/new"
           target="_blank"
@@ -40,8 +44,12 @@ export const Intro: React.FC = () => (
       </Link>
     </Callout>
 
-    {isToolEnabled('lighthouse') && (
-      <Panel title="Google Lighthouse" url="https://developers.google.com/web/tools/lighthouse" isExternal>
+    {isToolEnabled("lighthouse") && (
+      <Panel
+        title="Google Lighthouse"
+        url="https://developers.google.com/web/tools/lighthouse"
+        isExternal
+      >
         Permet un audit automatique de page web :
         <br />
         <br />
@@ -62,9 +70,7 @@ export const Intro: React.FC = () => (
           type="warning"
           description={(
             <span>
-              Les mesures
-              d'accessibilité n'abordent pas du tout
-              {' '}
+              Les mesures d'accessibilité n'abordent pas du tout{" "}
               <a
                 href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/"
                 rel="noopener noreferrer"
@@ -79,7 +85,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('dependabot') && (
+    {isToolEnabled("dependabot") && (
       <Panel title="Dependabot" url="https://dependabot.com/" isExternal>
         Recense les vulnérabilités de tes dépendances dans ton code
         <br />
@@ -94,18 +100,27 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('codescan') && (
-      <Panel title="Codescan" url="https://docs.github.com/en/code-security/secure-coding/about-code-scanning" isExternal>
+    {isToolEnabled("codescan") && (
+      <Panel
+        title="Codescan"
+        url="https://docs.github.com/en/code-security/secure-coding/about-code-scanning"
+        isExternal
+      >
         Recense les potentielles vulnérabilités dans ton code
         <br />
         <br />
-        <li>Scan des potentielles vulnérabilités sur le dépôt Github du code</li>
+        <li>
+          Scan des potentielles vulnérabilités sur le dépôt Github du code
+        </li>
         <li>Possibilité d'activer autant de scanner souhaité: CodeQL, etc</li>
-        <li>Liste restreinte de langages couverts: C/C++, C#, Go, Java, JavaScript/TypeScript, Python</li>
+        <li>
+          Liste restreinte de langages couverts: C/C++, C#, Go, Java,
+          JavaScript/TypeScript, Python
+        </li>
       </Panel>
     )}
 
-    {isToolEnabled('nmap') && (
+    {isToolEnabled("nmap") && (
       <Panel title="Nmap" url="https://nmap.org" isExternal>
         Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine
         <br />
@@ -120,8 +135,12 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('zap') && (
-      <Panel title="OWASP Zed Attack Proxy" url="https://www.zaproxy.org/docs/docker/baseline-scan/" isExternal>
+    {isToolEnabled("zap") && (
+      <Panel
+        title="OWASP Zed Attack Proxy"
+        url="https://www.zaproxy.org/docs/docker/baseline-scan/"
+        isExternal
+      >
         Scan de vulnérabilités passif "baseline" qui permet de détecter des
         risques de sécurité.
         <br />
@@ -136,7 +155,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('testssl') && (
+    {isToolEnabled("testssl") && (
       <Panel
         title="testssl.sh"
         url="https://testssl.sh/"
@@ -149,7 +168,7 @@ export const Intro: React.FC = () => (
           >
             Code source
           </a>
-      )}
+        )}
       >
         Évalue le niveau de confiance d'un certificat SSL
         <br />
@@ -165,7 +184,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('http') && (
+    {isToolEnabled("http") && (
       <Panel
         title="Mozilla HTTP observatory"
         info={(
@@ -176,7 +195,7 @@ export const Intro: React.FC = () => (
           >
             Méthodologie
           </a>
-      )}
+        )}
         url="https://observatory.mozilla.org/"
         isExternal
       >
@@ -189,7 +208,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('updownio') && (
+    {isToolEnabled("updownio") && (
       <Panel
         title="Updown.io"
         info={(
@@ -200,7 +219,7 @@ export const Intro: React.FC = () => (
           >
             APDEX
           </a>
-      )}
+        )}
         url="https://updown.io/"
         isExternal
       >
@@ -212,8 +231,12 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('nuclei') && (
-      <Panel title="Nucléi" url="https://nuclei.projectdiscovery.io/" isExternal>
+    {isToolEnabled("nuclei") && (
+      <Panel
+        title="Nucléi"
+        url="https://nuclei.projectdiscovery.io/"
+        isExternal
+      >
         Détecte plus de 700 erreurs de configuration courantes sur les
         applications webs.
         <br />
@@ -223,8 +246,12 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('thirdparties') && (
-      <Panel title="Third-parties" url="https://github.com/SocialGouv/thirdparties" isExternal>
+    {isToolEnabled("thirdparties") && (
+      <Panel
+        title="Third-parties"
+        url="https://github.com/SocialGouv/thirdparties"
+        isExternal
+      >
         Liste tous les scripts externes chargés par une URL et qui peuvent avoir
         un impact sur :
         <br />
@@ -239,8 +266,12 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('thirdparties') && (
-      <Panel title="GeoIP2" url="https://www.maxmind.com/en/geoip-demo" isExternal>
+    {isToolEnabled("thirdparties") && (
+      <Panel
+        title="GeoIP2"
+        url="https://www.maxmind.com/en/geoip-demo"
+        isExternal
+      >
         Géolocalise tous les serveurs contactés lors de l'ouverture d'une URL.
         <br />
         <br />
@@ -248,9 +279,10 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('wappalyzer') && (
+    {isToolEnabled("wappalyzer") && (
       <Panel title="Wappalyzer" url="https://www.wappalyzer.com/" isExternal>
-        Wappalyzer reconnait +1500 technologies web, Javascript, CMS, outillage...
+        Wappalyzer reconnait +1500 technologies web, Javascript, CMS,
+        outillage...
         <br />
         <br />
         <li>Stack technique</li>
@@ -259,13 +291,13 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled('stats') && (
+    {isToolEnabled("stats") && (
       <Panel title="Statistiques">
         Vérifie si la page /stats existe
         <br />
         <br />
         Par exemple:
-        {' '}
+{" "}
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -275,6 +307,5 @@ export const Intro: React.FC = () => (
         </a>
       </Panel>
     )}
-
   </>
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Footer,
@@ -9,23 +9,23 @@ import {
   FooterBottom,
   FooterCopy,
   Link,
-} from '@dataesr/react-dsfr';
+} from "@dataesr/react-dsfr";
 
 export const FooterSite: React.FC = () => (
   <Footer>
-    <FooterBody
-      description=""
-    >
+    <FooterBody description="">
       <Logo>Ministères sociaux</Logo>
       <FooterBodyItem>
-        <Link href="https://beta.gouv.fr">
-          beta.gouv.fr
-        </Link>
+        <Link href="https://beta.gouv.fr">beta.gouv.fr</Link>
       </FooterBodyItem>
     </FooterBody>
     <FooterBottom>
-      <FooterLink href="https://github.com/SocialGouv/dashlord">Code source</FooterLink>
-      <FooterCopy href="https://solidarites-sante.gouv.fr">© Ministères Sociaux 2021</FooterCopy>
+      <FooterLink href="https://github.com/SocialGouv/dashlord">
+        Code source
+      </FooterLink>
+      <FooterCopy href="https://solidarites-sante.gouv.fr">
+        © Ministères Sociaux 2021
+      </FooterCopy>
     </FooterBottom>
   </Footer>
 );
