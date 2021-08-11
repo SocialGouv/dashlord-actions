@@ -1,18 +1,16 @@
-import * as React from 'react';
+import * as React from "react";
 
-import {
-  AlertTriangle, Info,
-} from 'react-feather';
-import Tooltip from 'rc-tooltip';
+import { AlertTriangle, Info } from "react-feather";
+import Tooltip from "rc-tooltip";
 
 import "rc-tooltip/assets/bootstrap.css";
-import styles from './columnHeader.cssmodule.scss';
+import styles from "./columnHeader.cssmodule.scss";
 
 type ColumnHeaderProps = {
-    title: string;
-    info: string;
-    warning?: React.ReactNode;
-  };
+  title: string;
+  info: string;
+  warning?: React.ReactNode;
+};
 
 const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   title,
@@ -20,29 +18,24 @@ const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   warning,
 }) => (
   <div className={styles.header}>
-    <span>
-      {title}
-    </span>
+    <span>{title}</span>
     <br />
     <Tooltip
       placement="bottom"
-      trigger={['hover']}
+      trigger={["hover"]}
       overlay={<div className={styles.tooltip}>{info}</div>}
     >
       <Info size={16} className={styles.info} />
     </Tooltip>
 
     {warning && (
-        <Tooltip
+      <Tooltip
         placement="bottom"
-        trigger={['hover']}
+        trigger={["hover"]}
         overlay={<div className={styles.tooltip}>{warning}</div>}
-        >
-        <AlertTriangle
-            size={16}
-            className={styles.warning}
-        />
-        </Tooltip>
+      >
+        <AlertTriangle size={16} className={styles.warning} />
+      </Tooltip>
     )}
   </div>
 );

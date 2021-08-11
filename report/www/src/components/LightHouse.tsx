@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Row, Col } from '@dataesr/react-dsfr';
-import { Gauge } from './Gauge';
-import { Panel } from './Panel';
-import { getPerformanceScore } from '../lib/lighthouse/getPerformanceScore';
-import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
+import { Row, Col } from "@dataesr/react-dsfr";
+import { Gauge } from "./Gauge";
+import { Panel } from "./Panel";
+import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
+import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 
-import styles from './lightHouse.cssmodule.scss';
-import Card from './Card';
+import styles from "./lightHouse.cssmodule.scss";
+import Card from "./Card";
 
 const toTime = (ms: number) => {
   let minutes = 0;
@@ -54,28 +54,28 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
   }
 
   const highlights = {
-    'First contentful Paint':
-      data.audits.metrics.details
-      && data.audits.metrics.details.items
-      && toTime(data.audits.metrics.details.items[0].firstContentfulPaint),
-    'Time to interactive':
-      data.audits.metrics.details
-      && data.audits.metrics.details.items
-      && toTime(data.audits.metrics.details.items[0].interactive),
-    'Total requests':
-      data.audits.diagnostics.details
-      && data.audits.diagnostics.details.items
-      && data.audits.diagnostics.details.items[0].numRequests,
-    'Total weight':
-      data.audits.diagnostics.details
-      && data.audits.diagnostics.details.items
-      && toSize(data.audits.diagnostics.details.items[0].totalByteWeight),
+    "First contentful Paint":
+      data.audits.metrics.details &&
+      data.audits.metrics.details.items &&
+      toTime(data.audits.metrics.details.items[0].firstContentfulPaint),
+    "Time to interactive":
+      data.audits.metrics.details &&
+      data.audits.metrics.details.items &&
+      toTime(data.audits.metrics.details.items[0].interactive),
+    "Total requests":
+      data.audits.diagnostics.details &&
+      data.audits.diagnostics.details.items &&
+      data.audits.diagnostics.details.items[0].numRequests,
+    "Total weight":
+      data.audits.diagnostics.details &&
+      data.audits.diagnostics.details.items &&
+      toSize(data.audits.diagnostics.details.items[0].totalByteWeight),
     // "Max server Latency": toTime(
     //   data.audits.diagnostics.details.items[0].maxServerLatency
     //   ),
   } as object;
 
-  const order = ['accessibility', 'performance', 'seo', 'best-practices'];
+  const order = ["accessibility", "performance", "seo", "best-practices"];
 
   // use custom scoring
   data.categories.performance.score = getPerformanceScore(data);
@@ -97,7 +97,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
           const category = data.categories[key as LighthouseReportCategoryKey];
           const score = category.score as number;
           return (
-            (!Number.isNaN(score) && (
+            !Number.isNaN(score) && (
               <Col
                 key={category.id}
                 n="12 sm-12 md-6 lg-3"
@@ -117,17 +117,13 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                   />
                 </Card>
               </Col>
-            ))
+            )
           );
         })}
       </Row>
       <Row>
         {Object.keys(highlights).map((label) => (
-          <Col
-            n="12 sm-12 md-6 lg-3"
-            key={label}
-            className="fr-mb-2w"
-          >
+          <Col n="12 sm-12 md-6 lg-3" key={label} className="fr-mb-2w">
             <Card title={label} value={highlights[label]} />
           </Col>
         ))}

@@ -1,36 +1,34 @@
-import * as React from 'react';
-import { formatDistanceToNow } from 'date-fns';
-import frLocale from 'date-fns/locale/fr';
-import { Clock } from 'react-feather';
-import { Callout, CalloutTitle, CalloutText } from '@dataesr/react-dsfr';
-import Badge from './Badge';
+import * as React from "react";
+import { formatDistanceToNow } from "date-fns";
+import frLocale from "date-fns/locale/fr";
+import { Clock } from "react-feather";
+import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr";
+import Badge from "./Badge";
 
-import { isToolEnabled } from '../utils';
-import { HTTP } from './HTTP';
-import { LightHouse } from './LightHouse';
-import { Nuclei } from './Nuclei';
-import { Owasp } from './Owasp';
-import { TestSSL } from './TestSSL';
-import { Trackers } from './Trackers';
-import { Wappalyzer } from './Wappalyzer';
-import { UpdownIo } from './UpdownIo';
-import { Dependabot } from './Dependabot';
-import { Codescan } from './Codescan';
-import { Nmap } from './Nmap';
-import { Stats } from './Stats';
+import { isToolEnabled } from "../utils";
+import { HTTP } from "./HTTP";
+import { LightHouse } from "./LightHouse";
+import { Nuclei } from "./Nuclei";
+import { Owasp } from "./Owasp";
+import { TestSSL } from "./TestSSL";
+import { Trackers } from "./Trackers";
+import { Wappalyzer } from "./Wappalyzer";
+import { UpdownIo } from "./UpdownIo";
+import { Dependabot } from "./Dependabot";
+import { Codescan } from "./Codescan";
+import { Nmap } from "./Nmap";
+import { Stats } from "./Stats";
 
-import styles from './url.cssmodule.scss';
+import styles from "./url.cssmodule.scss";
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
-const Anchor = ({ id }: { id: string }) => (
-  <div id={id} />
-);
+const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
 const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
-    const hash = document.location.hash.split('#');
+    const hash = document.location.hash.split("#");
     if (hash.length === 3) {
       // double hash + HashRouter workaround
       const target = document.getElementById(hash[2]);
@@ -57,27 +55,36 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         </CalloutTitle>
         <CalloutText>
           {report.category && (
-          <Badge className={styles.badge} variant="success" to={`/category/${report.category}`}>
-            {report.category}
-          </Badge>
+            <Badge
+              className={styles.badge}
+              variant="success"
+              to={`/category/${report.category}`}
+            >
+              {report.category}
+            </Badge>
           )}
-          {report.tags
-            && report.tags.map((tag: string) => (
-              <Badge className={styles.badge} variant="info" key={tag} to={`/tag/${tag}`}>
+          {report.tags &&
+            report.tags.map((tag: string) => (
+              <Badge
+                className={styles.badge}
+                variant="info"
+                key={tag}
+                to={`/tag/${tag}`}
+              >
                 {tag}
               </Badge>
             ))}
           {updateDate && (
-          <>
-            <Clock size={12} />
-            <span title={updateDate} className={styles.clock}>
-              Mise à jour il y a :
-              {' '}
-              {formatDistanceToNow(new Date(updateDate), {
-                locale: frLocale,
-              })}
-            </span>
-          </>
+            <>
+              <Clock size={12} />
+              <span title={updateDate} className={styles.clock}>
+                Mise à jour il y a :
+{" "}
+                {formatDistanceToNow(new Date(updateDate), {
+                  locale: frLocale,
+                })}
+              </span>
+            </>
           )}
         </CalloutText>
         <div className={styles.image}>
@@ -87,112 +94,100 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           />
         </div>
       </Callout>
-      {(isToolEnabled('lighthouse') && report.lhr && (
+      {isToolEnabled("lighthouse") && report.lhr && (
         <>
           <Anchor id="lighthouse" />
           <LightHouse
             data={report.lhr}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(
-              url,
-            )}/lhr.html`}
+            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/lhr.html`}
           />
         </>
-      ))}
-      {(isToolEnabled('dependabot')
-        && report.dependabot
-        && report.dependabot.repositories && (
+      )}
+      {isToolEnabled("dependabot") &&
+        report.dependabot &&
+        report.dependabot.repositories && (
           <>
             <Anchor id="dependabot" />
             {report.dependabot.repositories
               .filter(Boolean)
               .map((repository) => (
-                <Dependabot
-                  key={repository.url}
-                  data={repository}
-                  url={url}
-                />
+                <Dependabot key={repository.url} data={repository} url={url} />
               ))}
           </>
-      ))}
-      {(isToolEnabled('codescan')
-        && report.codescan
-        && report.codescan.repositories && (
+        )}
+      {isToolEnabled("codescan") &&
+        report.codescan &&
+        report.codescan.repositories && (
           <>
             <Anchor id="codescan" />
             {report.codescan.repositories.filter(Boolean).map((repository) => (
               <Codescan key={repository.url} data={repository} url={url} />
             ))}
           </>
-      ))}
-      {(isToolEnabled('updownio') && report.updownio && (
+        )}
+      {isToolEnabled("updownio") && report.updownio && (
         <>
           <Anchor id="updownio" />
           <UpdownIo data={report.updownio} url={url} />
         </>
-      ))}
-      {(isToolEnabled('testssl') && report.testssl && (
+      )}
+      {isToolEnabled("testssl") && report.testssl && (
         <>
           <Anchor id="testssl" />
           <TestSSL
             data={report.testssl}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(
-              url,
-            )}/testssl.html`}
+            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/testssl.html`}
           />
         </>
-      ))}
-      {(isToolEnabled('nmap') && report.nmap && (
+      )}
+      {isToolEnabled("nmap") && report.nmap && (
         <>
           <Anchor id="nmap" />
           <Nmap
             data={report.nmap}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(
-              url,
-            )}/nmapvuln.html`}
+            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/nmapvuln.html`}
           />
         </>
-      ))}
-      {(isToolEnabled('http') && report.http && (
+      )}
+      {isToolEnabled("http") && report.http && (
         <>
           <Anchor id="http" />
           <HTTP data={report.http} />
         </>
-      ))}
-      {(isToolEnabled('thirdparties') && report.thirdparties && (
+      )}
+      {isToolEnabled("thirdparties") && report.thirdparties && (
         <>
           <Anchor id="thirdparties" />
           <Trackers data={report.thirdparties} />
         </>
-      ))}
-      {(isToolEnabled('zap') && report.zap && (
+      )}
+      {isToolEnabled("zap") && report.zap && (
         <>
           <Anchor id="zap" />
           <Owasp
             data={report.zap}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(
-              url,
-            )}/zap.html`}
+            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/zap.html`}
           />
         </>
-      ))}
-      {(isToolEnabled('nuclei') && report.nuclei && (
+      )}
+      {isToolEnabled("nuclei") && report.nuclei && (
         <>
           <Anchor id="nuclei" />
           <Nuclei data={report.nuclei} />
         </>
-      ))}
-      {(isToolEnabled('wappalyzer') && report.wappalyzer && (
+      )}
+      {isToolEnabled("wappalyzer") && report.wappalyzer && (
         <>
           <Anchor id="wappalyzer" />
           <Wappalyzer data={report.wappalyzer} />
         </>
-      ))}
-      {(isToolEnabled('stats') && report.stats && (
-      <>
-        <Anchor id="stats" />
-        <Stats data={report.stats} url={url} />
-      </>
-      ))}
+      )}
+      {isToolEnabled("stats") && report.stats && (
+        <>
+          <Anchor id="stats" />
+          <Stats data={report.stats} url={url} />
+        </>
+      )}
     </>
   );
 };

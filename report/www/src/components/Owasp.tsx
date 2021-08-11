@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { Table } from '@dataesr/react-dsfr';
-import Badge from './Badge';
-import { Panel } from './Panel';
+import { Table } from "@dataesr/react-dsfr";
+import Badge from "./Badge";
+import { Panel } from "./Panel";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first
@@ -16,15 +16,16 @@ const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
 
 const OwaspBadge = (row: ZapReportSiteAlert) => {
   const severity = row.riskcode;
-  const variant = severity === '0'
-    ? 'info'
-    : severity === '1'
-      ? 'info'
-      : severity === '2'
-        ? 'warning'
-        : severity === '3'
-          ? 'danger'
-          : 'info';
+  const variant =
+    severity === "0"
+      ? "info"
+      : severity === "1"
+      ? "info"
+      : severity === "2"
+      ? "warning"
+      : severity === "3"
+      ? "danger"
+      : "info";
   return (
     <Badge className="w-100" variant={variant}>
       {row.riskdesc}
@@ -35,12 +36,17 @@ const OwaspBadge = (row: ZapReportSiteAlert) => {
 type OwaspProps = { data: ZapReport; url: string };
 
 const columns = [
-  { name: 'risk', label: 'Risk/Confidence', render: (alert) => <OwaspBadge {...alert} /> },
-  { name: 'name', label: 'Name' },
+  {
+    name: "risk",
+    label: "Risk/Confidence",
+    render: (alert) => <OwaspBadge {...alert} />,
+  },
+  { name: "name", label: "Name" },
 ];
 
 export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
-  const alerts = (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
+  const alerts =
+    (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
   alerts.sort(orderBySeverity);
   return (
     (alerts.length && (
@@ -58,7 +64,7 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
           rowKey="name"
         />
       </Panel>
-    ))
-    || null
+    )) ||
+    null
   );
 };
