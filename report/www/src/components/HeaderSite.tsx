@@ -74,8 +74,8 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             {categories.map((category) => (
               <NavSubItem
                 key={category}
-                current={path.startsWith(`/tag/${category}`)}
-                asLink={<RouterLink to={`/tag/${category}`} />}
+                current={path.startsWith(`/category/${category}`)}
+                asLink={<RouterLink to={`/category/${category}`} />}
                 title={category}
               />
             ))}
