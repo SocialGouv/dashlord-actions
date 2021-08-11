@@ -11,11 +11,7 @@ import ColumnHeader from "./ColumnHeader";
 
 type DashboardProps = { report: DashLordReport };
 
-const IconUnknown = () => (
-  <div style={{ textAlign: "center" }}>
-    <Slash size={20} />
-  </div>
-);
+const IconUnknown = () => <Slash size={20} />;
 
 const percent = (num: number | undefined): string =>
   (num !== undefined && `${Math.floor(num * 100)} %`) || "-";
@@ -28,8 +24,15 @@ const GradeBadge = ({
   grade: string | undefined;
   label?: string | number | undefined;
   to?: H.LocationDescriptor<unknown> | undefined;
-}) =>
-  grade ? <Grade small grade={grade} label={label} to={to} /> : <IconUnknown />;
+}) => (
+  <div style={{ textAlign: "center" }}>
+    {grade ? (
+      <Grade small grade={grade} label={label} to={to} />
+    ) : (
+      <IconUnknown />
+    )}
+  </div>
+);
 
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const getSummaryData = (rowData, grade) => {
