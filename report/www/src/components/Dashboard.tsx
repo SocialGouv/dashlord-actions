@@ -71,7 +71,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       id,
       title,
       info,
-      <AccessibilityWarnings />,
+      id === "accessibility" ? <AccessibilityWarnings /> : undefined,
       "lighthouse",
       `lighthouse_${id}Grade`,
       (summary) => percent(summary[`lighthouse_${id}`])
