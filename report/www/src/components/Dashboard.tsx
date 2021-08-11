@@ -11,11 +11,7 @@ import ColumnHeader from "./ColumnHeader";
 
 type DashboardProps = { report: DashLordReport };
 
-const IconUnknown = () => (
-  <div style={{ textAlign: "center" }}>
-    <Slash size={20} />
-  </div>
-);
+const IconUnknown = () => <Slash size={20} />;
 
 const percent = (num: number | undefined): string =>
   (num !== undefined && `${Math.floor(num * 100)} %`) || "-";
