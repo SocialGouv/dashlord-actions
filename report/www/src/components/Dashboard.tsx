@@ -1,62 +1,19 @@
-import Tooltip from 'rc-tooltip';
 import * as React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as H from 'history';
 import { Table } from '@dataesr/react-dsfr';
 import {
-  AlertTriangle, Info, Search, Slash,
+  Search, Slash,
 } from 'react-feather';
 import { Link } from 'react-router-dom';
 import { AccessibilityWarnings } from '../lib/lighthouse/AccessibilityWarnings';
 import { isToolEnabled, letterGradeValue, smallUrl } from '../utils';
 import { Grade } from './Grade';
+import ColumnHeader from './ColumnHeader';
 
 type DashboardProps = { report: DashLordReport };
 
 const IconUnknown = () => <Slash size={20} />;
-
-type ColumnHeaderProps = {
-  title: string;
-  info: string;
-  warning?: React.ReactNode;
-};
-
-const ColumnHeader: React.FC<ColumnHeaderProps> = ({
-  title,
-  info,
-  warning,
-}) => (
-  <div style={{ textAlign: 'center' }}>
-    <span style={{ fontSize: '0.9em' }}>
-      {title}
-      <br />
-      <Tooltip
-        placement="bottom"
-        trigger={['hover']}
-        overlay={<div style={{ maxWidth: 300 }}>{info}</div>}
-      >
-        <Info size={16} style={{ cursor: 'pointer' }} />
-      </Tooltip>
-    </span>
-
-    {warning && (
-      <Tooltip
-        placement="bottom"
-        trigger={['hover']}
-        overlay={<div style={{ maxWidth: 300 }}>{warning}</div>}
-      >
-        <AlertTriangle
-          size={16}
-          style={{
-            stroke: 'var(--danger)',
-            marginLeft: 5,
-            cursor: 'pointer',
-          }}
-        />
-      </Tooltip>
-    )}
-  </div>
-);
 
 const percent = (num: number | undefined): string => (num !== undefined && `${Math.floor(num * 100)} %`) || '-';
 
@@ -91,7 +48,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   ) => ({
     name: id,
     sortable: true,
-    sortMethod: (a, b) => getSummaryData(a, 'httpGrade') - getSummaryData(b, 'httpGrade'),
+    sort: (a, b) => getSummaryData(a, gradeKey) - getSummaryData(b, gradeKey),
     label: title,
     headerRender: () => (
       <ColumnHeader
