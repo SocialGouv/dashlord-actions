@@ -1,7 +1,6 @@
 import * as React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as H from 'history';
-import { Link } from 'react-router-dom';
 import Badge from './Badge';
 
 import styles from './grade.cssmodule.scss';
@@ -34,8 +33,9 @@ export const Grade: React.FC<GradeProps> = ({
     <Badge
       variant={variant}
       className={styles[small ? 'small' : 'big']}
+      to={to}
     >
-      {to ? <Link to={to}>{title}</Link> : title }
+      { title }
     </Badge>
   );
 };

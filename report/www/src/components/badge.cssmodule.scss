@@ -3,9 +3,13 @@
 .warning,
 .danger {
     display: inline-block;
+    cursor: pointer;
     padding: 4px 8px;
     color: white;
+    min-width: 60px;
     border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .success {

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
-import { Link } from 'react-router-dom';
 import { Clock } from 'react-feather';
 import { Callout, CalloutTitle, CalloutText } from '@dataesr/react-dsfr';
 import Badge from './Badge';
@@ -20,7 +19,7 @@ import { Codescan } from './Codescan';
 import { Nmap } from './Nmap';
 import { Stats } from './Stats';
 
-import * as styles from './url.cssmodule.scss';
+import styles from './url.cssmodule.scss';
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
@@ -58,18 +57,14 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         </CalloutTitle>
         <CalloutText>
           {report.category && (
-          <Badge className={styles.badge} variant="success">
-            <Link to={`/category/${report.category}`}>
-              {report.category}
-            </Link>
+          <Badge className={styles.badge} variant="success" to={`/category/${report.category}`}>
+            {report.category}
           </Badge>
           )}
           {report.tags
             && report.tags.map((tag: string) => (
-              <Badge className={styles.badge} variant="info" key={tag}>
-                <Link key={tag} to={`/tag/${tag}`}>
-                  {tag}
-                </Link>
+              <Badge className={styles.badge} variant="info" key={tag} to={`/tag/${tag}`}>
+                {tag}
               </Badge>
             ))}
           {updateDate && (
