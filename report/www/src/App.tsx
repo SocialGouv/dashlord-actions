@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Container, Row, Col, Alert } from "@dataesr/react-dsfr";
+import { Container, Alert } from "@dataesr/react-dsfr";
 
 import {
   useParams,

@@ -16,6 +16,8 @@ import {
 } from "@dataesr/react-dsfr";
 import { smallUrl, sortByKey } from "../utils";
 
+import dashlordConfig from "../config.json";
+
 type HeaderSiteProps = {
   report: DashLordReport;
 };
@@ -38,11 +40,11 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
     <>
       <Header>
         <HeaderBody>
-          <Logo splitCharacter={10}>Ministères sociaux</Logo>
+          <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
           <Service
             asLink={<RouterLink to="/#" />}
-            title="Dashlord"
-            description="Pour les scanner tous..."
+            title={dashlordConfig.title}
+            description={dashlordConfig.description}
           />
           <Tool closeButtonLabel="fermer">
             <ToolItemGroup>

@@ -11,21 +11,19 @@ import {
   Link,
 } from "@dataesr/react-dsfr";
 
+import dashlordConfig from "../config.json";
+
 export const FooterSite: React.FC = () => (
   <Footer>
     <FooterBody description="">
-      <Logo>Ministères sociaux</Logo>
+      <Logo>{dashlordConfig.entity}</Logo>
       <FooterBodyItem>
-        <Link href="https://beta.gouv.fr">beta.gouv.fr</Link>
+        <div dangerouslySetInnerHTML={{ __html: dashlordConfig.footer }} />
       </FooterBodyItem>
     </FooterBody>
     <FooterBottom>
-      <FooterLink href="https://github.com/SocialGouv/dashlord">
-        Code source
-      </FooterLink>
-      <FooterCopy href="https://solidarites-sante.gouv.fr">
-        © Ministères Sociaux 2021
-      </FooterCopy>
+      <FooterLink href="#"></FooterLink>
+      <FooterCopy href="#"></FooterCopy>
     </FooterBottom>
   </Footer>
 );
