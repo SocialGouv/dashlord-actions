@@ -24,8 +24,15 @@ const GradeBadge = ({
   grade: string | undefined;
   label?: string | number | undefined;
   to?: H.LocationDescriptor<unknown> | undefined;
-}) =>
-  grade ? <Grade small grade={grade} label={label} to={to} /> : <IconUnknown />;
+}) => (
+  <div style={{ textAlign: "center" }}>
+    {grade ? (
+      <Grade small grade={grade} label={label} to={to} />
+    ) : (
+      <IconUnknown />
+    )}
+  </div>
+);
 
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const getSummaryData = (rowData, grade) => {

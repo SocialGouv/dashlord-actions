@@ -1,11 +1,14 @@
 {
-  "title": "Test 1",
+  "title": "Dashlord fabrique numérique",
+  "description": "Bonnes pratiques techniques",
+  "entity": "Ministères sociaux",
+  "footer": "Create your own DashLord by <a href='https://github.com/SocialGouv/dashlord'>cloning the repository</a>.",
   "tools": {
     "screenshot": true,
     "nmap": true,
     "zap": true,
     "wappalyzer": true,
-    "httpobs": true,
+    "http": true,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,
@@ -19,20 +22,14 @@
     {
       "url": "https://www.free.fr",
       "title": "Free",
-      "repositories": [
-        "iliad/free-ui",
-        "iliad/free-api"
-      ]
+      "repositories": ["iliad/free-ui", "iliad/free-api"]
     },
     {
       "url": "invalid-url"
     },
     {
       "url": "http://chez.com",
-      "repositories": [
-        "chez/chez-ui",
-        "chez/chez-api"
-      ],
+      "repositories": ["chez/chez-ui", "chez/chez-api"],
       "tools": {
         "screenshot": false,
         "updownio": false

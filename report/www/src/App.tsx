@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Container, Row, Col, Alert } from "@dataesr/react-dsfr";
+import { Container, Alert } from "@dataesr/react-dsfr";
 
 import {
   useParams,
@@ -33,17 +33,20 @@ const CategoryRoute: React.FC<CategoryRouteProps> = (props) => {
   const params = useParams<CategoryParamTypes>();
   const category = window.decodeURIComponent(params.category);
   const urls = props.report.filter((u) => u.category === category);
+  console.log(urls);
   return (
     <>
       <br />
-      <h3>
-        {category}
-{' '}
-:{urls.length}
-{' '}
-urls
-</h3>
-      <Dashboard report={urls} />
+      {urls.length ? (
+        <>
+          <h3>
+            {category} : {urls.length} urls
+          </h3>
+          <Dashboard report={urls} />
+        </>
+      ) : (
+        <h3>Aucun URL associée</h3>
+      )}
     </>
   );
 };
@@ -62,12 +65,8 @@ const TagRoute: React.FC<TagRouteProps> = (props) => {
     <>
       <br />
       <h3>
-        {tag}
-{' '}
-:{urls.length}
-{' '}
-urls
-</h3>
+        {tag} : {urls.length} urls
+      </h3>
       <Dashboard report={urls} />
     </>
   );

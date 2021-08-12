@@ -15,6 +15,7 @@ const getChanges = (urlTrends: UrlMetricsHistoryValues): ChangeSet => {
     .filter((key) => key in metricsDefinitions)
     .forEach((key) => {
       const values = urlTrends[key].map(({ date, value }) => value);
+
       const uniqueValues = uniqify(values);
       if (uniqueValues.length > 1) {
         changes[key] = uniqueValues;
@@ -42,7 +43,6 @@ const metricsDefinitions = {
 } as Record<any, { title: string; reverse?: boolean }>;
 
 const getTrend = (metric: SummaryKey, values: any[]) => {
-  console.log(values);
   const metricDefinition = metricsDefinitions[metric];
   const firstValue = values[0];
   const lastValue = values[values.length - 1];
@@ -58,47 +58,12 @@ const getTrend = (metric: SummaryKey, values: any[]) => {
 const showValues = (values: any[]) =>
   values
     .map((val: any) => {
-      if (!Number.isNaN(val)) {
+      if (!isNaN(val)) {
         return Math.floor(val * 10000) / 10000;
       }
       return val;
     })
     .join(" => ");
-
-const Trend = ({ metric, values }: { metric: SummaryKey; values: any[] }) => {
-  const showMetric = metric in metricsDefinitions;
-  if (!showMetric) {
-    return null;
-  }
-  const trend = getTrend(metric, values);
-  const Icon = () =>
-    trend > 0 ? (
-      <TrendingUp
-        size={40}
-        style={{
-          stroke: "var(--success)",
-          marginRight: 10,
-        }}
-      />
-    ) : (
-      <TrendingDown
-        size={40}
-        style={{
-          stroke: "var(--danger)",
-          marginRight: 10,
-        }}
-      />
-    );
-  return (
-    <tr>
-      <td className="text-center">
-        <Icon />
-      </td>
-      <td>{metricsDefinitions[metric].title}</td>
-      <td>{showValues(values)}</td>
-    </tr>
-  );
-};
 
 const columns = [
   {
@@ -118,7 +83,7 @@ const columns = [
         <TrendingDown
           size={40}
           style={{
-            stroke: "var(--danger)",
+            stroke: "var(--error)",
             marginRight: 10,
           }}
         />
@@ -136,6 +101,7 @@ const columns = [
     render: (row) => showValues(row.values),
   },
 ];
+
 export const Trends = ({ trends }: { trends: Trends }) => {
   const urls = Object.keys(trends);
   urls.sort();
@@ -155,12 +121,13 @@ export const Trends = ({ trends }: { trends: Trends }) => {
               url={`/url/${encodeURIComponent(url)}`}
             >
               <Table
+                caption=""
                 columns={columns}
                 data={Object.keys(changes).map((change) => ({
                   key: change,
                   values: changes[change],
                 }))}
-                keyId="key"
+                rowKey="key"
               />
             </Panel>
           );
