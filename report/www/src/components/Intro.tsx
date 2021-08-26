@@ -21,8 +21,8 @@ export const Intro: React.FC = () => (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
       <CalloutTitle as="h1">{dashlordConfig.title || "DashLord"}</CalloutTitle>
       <CalloutText>
-        Le tableau de bord aggrège les données issues de plusieurs outils qui
-        évaluent chaque URL indépendamment.
+        Le tableau de bord aggrège des données techniques issues de plusieurs
+        outils qui évaluent chaque URL.
         <br />
         L'évaluation des outils ne remplace en aucun cas une expertise manuelle,
         et seule la page d'accueil du site est ici évaluée.

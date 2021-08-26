@@ -33,8 +33,8 @@ runs:
         yarn
         CI=false yarn build
         # prevent gh-pages jekyll build
-        touch build/.nojekyll
+        touch dist/.nojekyll
         # save report in workspace for artifact
         cp src/report.json ${{ github.workspace }}/report.json
         # save the build for gh-pages publication
-        mv build ${{ github.workspace }}/build
+        mv dist ${{ github.workspace }}/build

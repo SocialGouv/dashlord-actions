@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 
 import { Dashboard } from "../components/Dashboard";
 
-import report from "./report.json";
+import report from "../report.json";
 
 const mockSampleConfig = JSON.parse(
   jest
@@ -34,7 +34,6 @@ it("Should render full Dashboard", () => {
     .create(
       <MemoryRouter>
         <Dashboard {...props} />
-{" "}
       </MemoryRouter>
     )
     .toJSON();
@@ -55,7 +54,6 @@ describe("Tools config", () => {
       .create(
         <MemoryRouter>
           <Dashboard {...props} />
-{" "}
         </MemoryRouter>
       )
       .toJSON();

@@ -90,11 +90,20 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       label: "URL",
       sortable: true,
       render: (rowData) => (
-        <Link to={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
-          <Search size={16} />
-          &nbsp;
-          {smallUrl((rowData as UrlReport).url)}
-        </Link>
+        <div
+          style={{
+            width: "95%",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+          }}
+        >
+          <Link to={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
+            <Search size={16} />
+            &nbsp;
+            {smallUrl((rowData as UrlReport).url)}
+          </Link>
+        </div>
       ),
     },
   ];
@@ -257,5 +266,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  return <Table data={report} columns={columns} rowKey="url" />;
+  return (
+    (report && (
+      <Table
+        data={report}
+        caption={""}
+        columns={columns}
+        rowKey="url"
+        perPage={1000}
+      />
+    )) ||
+    null
+  );
 };
