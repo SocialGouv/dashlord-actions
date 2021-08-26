@@ -257,5 +257,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  return <Table data={report} columns={columns} rowKey="url" />;
+  return (
+    (report && (
+      <Table data={report} caption={""} columns={columns} rowKey="url" />
+    )) ||
+    null
+  );
 };

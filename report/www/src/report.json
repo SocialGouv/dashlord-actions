@@ -30,10 +30,7 @@
       "statsGrade": "A"
     },
     "category": "dnum",
-    "tags": [
-      "social",
-      "enfance"
-    ],
+    "tags": ["social", "enfance"],
     "http": {
       "url": "https://adoption.gouv.fr",
       "algorithm_version": 2,
@@ -151,10 +148,7 @@
           "output": {
             "destination": "https://adoption.gouv.fr/",
             "redirects": true,
-            "route": [
-              "http://adoption.gouv.fr/",
-              "https://adoption.gouv.fr/"
-            ],
+            "route": ["http://adoption.gouv.fr/", "https://adoption.gouv.fr/"],
             "status_code": 200
           },
           "pass": true,
@@ -236,10 +230,55 @@
         }
       }
     },
-    "updownio": {"apdexGrade": "F", "uptimeGrade": "A", "token":"rt57","url":"https://adoption.gouv.fr","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":60,"apdex_t":0.5,"string_match":"","enabled":true,"published":true,"disabled_locations":[],"last_check_at":"2021-05-07T23:01:13Z","next_check_at":"2021-05-07T23:02:13Z","mute_until":null,"favicon_url":"https://www.fabrique.social.gouv.fr/images/favicons/favicon-16x16.png","custom_headers":{},"http_verb":"GET/HEAD","http_body":"","ssl":{"tested_at":"2021-05-07T22:53:18Z","expires_at":"2021-06-21T16:16:37Z","valid":true,"error":null},"metrics":{"apdex":0.8,"timings":{"redirect":0,"namelookup":124,"connection":129,"handshake":268,"response":134,"total":655}}},
+    "updownio": {
+      "apdexGrade": "F",
+      "uptimeGrade": "A",
+      "token": "rt57",
+      "url": "https://adoption.gouv.fr",
+      "alias": "",
+      "last_status": 200,
+      "uptime": 100.0,
+      "down": false,
+      "down_since": null,
+      "error": null,
+      "period": 60,
+      "apdex_t": 0.5,
+      "string_match": "",
+      "enabled": true,
+      "published": true,
+      "disabled_locations": [],
+      "last_check_at": "2021-05-07T23:01:13Z",
+      "next_check_at": "2021-05-07T23:02:13Z",
+      "mute_until": null,
+      "favicon_url": "https://www.fabrique.social.gouv.fr/images/favicons/favicon-16x16.png",
+      "custom_headers": {},
+      "http_verb": "GET/HEAD",
+      "http_body": "",
+      "ssl": {
+        "tested_at": "2021-05-07T22:53:18Z",
+        "expires_at": "2021-06-21T16:16:37Z",
+        "valid": true,
+        "error": null
+      },
+      "metrics": {
+        "apdex": 0.8,
+        "timings": {
+          "redirect": 0,
+          "namelookup": 124,
+          "connection": 129,
+          "handshake": 268,
+          "response": 134,
+          "total": 655
+        }
+      }
+    },
     "dependabot": null,
     "codescan": null,
-    "stats": {"grade": "A", "url": "https://adoption.gouv.fr", "uri": "stats"},
+    "stats": {
+      "grade": "A",
+      "url": "https://adoption.gouv.fr",
+      "uri": "stats"
+    },
     "nmap": {
       "grade": "D",
       "protocol": "tcp",
@@ -269,7 +308,7 @@
                 "cvss": "5.0"
               }
             ]
-          }          
+          }
         },
         {
           "service": {
@@ -294,7 +333,7 @@
                 "cvss": "6.8"
               }
             ]
-          }          
+          }
         },
         {
           "service": {
@@ -303,7 +342,7 @@
             "product": null,
             "version": null,
             "vulnerabilities": []
-          }          
+          }
         }
       ]
     },
@@ -1928,7 +1967,7 @@
   {
     "url": "https://alternance.emploi.gouv.fr",
     "summary": {
-      "httpGrade": "A",
+      "httpGrade": "D",
       "dependabotGrade": "B",
       "dependabotCount": 2,
       "testsslGrade": "A+",
@@ -1952,11 +1991,7 @@
       "statsGrade": "B"
     },
     "category": "dnum",
-    "tags": [
-      "travail",
-      "emploi",
-      "formation"
-    ],
+    "tags": ["travail", "emploi", "formation2"],
     "http": {
       "url": "https://alternance.emploi.gouv.fr",
       "algorithm_version": 2,
@@ -1998,9 +2033,7 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "upgrade-insecure-requests": [
-                "'none'"
-              ]
+              "upgrade-insecure-requests": ["'none'"]
             },
             "http": true,
             "meta": false,
@@ -2203,175 +2236,181 @@
       }
     },
     "updownio": null,
-    "stats": {"grade": "B", "url": "https://alternance.emploi.gouv.fr", "uri": "statistiques"},
+    "stats": {
+      "grade": "B",
+      "url": "https://alternance.emploi.gouv.fr",
+      "uri": "statistiques"
+    },
     "dependabot": {
       "totalCount": 5,
       "grade": "F",
       "repositories": [
-      {
-        "grade": "F",
-        "url": "https://github.com/MTES-MCT/aides-territoires",
-        "vulnerabilityAlerts": {
-          "totalCount": 5,
-          "nodes": [
-            {
-              "dismissedAt": null,
-              "createdAt": "2020-09-08T04:07:54Z",
-              "securityVulnerability": {
-                "severity": "LOW",
-                "package": {
-                  "name": "yargs-parser"
-                },
-                "advisory": {
-                  "identifiers": [
-                    {
-                      "type": "GHSA",
-                      "value": "GHSA-p9pc-299p-vxgp"
-                    },
-                    {
-                      "type": "CVE",
-                      "value": "CVE-2020-7608"
-                    }
-                  ],
-                  "references": [
-                    {
-                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7608"
-                    },
-                    {
-                      "url": "https://github.com/advisories/GHSA-p9pc-299p-vxgp"
-                    }
-                  ]
+        {
+          "grade": "F",
+          "url": "https://github.com/MTES-MCT/aides-territoires",
+          "vulnerabilityAlerts": {
+            "totalCount": 5,
+            "nodes": [
+              {
+                "dismissedAt": null,
+                "createdAt": "2020-09-08T04:07:54Z",
+                "securityVulnerability": {
+                  "severity": "LOW",
+                  "package": {
+                    "name": "yargs-parser"
+                  },
+                  "advisory": {
+                    "identifiers": [
+                      {
+                        "type": "GHSA",
+                        "value": "GHSA-p9pc-299p-vxgp"
+                      },
+                      {
+                        "type": "CVE",
+                        "value": "CVE-2020-7608"
+                      }
+                    ],
+                    "references": [
+                      {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7608"
+                      },
+                      {
+                        "url": "https://github.com/advisories/GHSA-p9pc-299p-vxgp"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "dismissedAt": null,
+                "createdAt": "2021-03-29T21:33:13Z",
+                "securityVulnerability": {
+                  "severity": "HIGH",
+                  "package": {
+                    "name": "y18n"
+                  },
+                  "advisory": {
+                    "identifiers": [
+                      {
+                        "type": "GHSA",
+                        "value": "GHSA-c4w7-xm78-47vh"
+                      },
+                      {
+                        "type": "CVE",
+                        "value": "CVE-2020-7774"
+                      }
+                    ],
+                    "references": [
+                      {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7774"
+                      },
+                      {
+                        "url": "https://github.com/advisories/GHSA-c4w7-xm78-47vh"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "dismissedAt": null,
+                "createdAt": "2021-05-07T03:55:34Z",
+                "securityVulnerability": {
+                  "severity": "HIGH",
+                  "package": {
+                    "name": "lodash"
+                  },
+                  "advisory": {
+                    "identifiers": [
+                      {
+                        "type": "GHSA",
+                        "value": "GHSA-35jh-r3h4-6jhm"
+                      },
+                      {
+                        "type": "CVE",
+                        "value": "CVE-2021-23337"
+                      }
+                    ],
+                    "references": [
+                      {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23337"
+                      },
+                      {
+                        "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "dismissedAt": null,
+                "createdAt": "2021-05-10T17:45:01Z",
+                "securityVulnerability": {
+                  "severity": "MODERATE",
+                  "package": {
+                    "name": "postcss"
+                  },
+                  "advisory": {
+                    "identifiers": [
+                      {
+                        "type": "GHSA",
+                        "value": "GHSA-hwj9-h5mp-3pm3"
+                      },
+                      {
+                        "type": "CVE",
+                        "value": "CVE-2021-23368"
+                      }
+                    ],
+                    "references": [
+                      {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
+                      },
+                      {
+                        "url": "https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "dismissedAt": null,
+                "createdAt": "2021-05-24T23:29:53Z",
+                "securityVulnerability": {
+                  "severity": "MODERATE",
+                  "package": {
+                    "name": "browserslist"
+                  },
+                  "advisory": {
+                    "identifiers": [
+                      {
+                        "type": "GHSA",
+                        "value": "GHSA-w8qv-6jwh-64r5"
+                      },
+                      {
+                        "type": "CVE",
+                        "value": "CVE-2021-23364"
+                      }
+                    ],
+                    "references": [
+                      {
+                        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23364"
+                      },
+                      {
+                        "url": "https://github.com/advisories/GHSA-w8qv-6jwh-64r5"
+                      }
+                    ]
+                  }
                 }
               }
-            },
-            {
-              "dismissedAt": null,
-              "createdAt": "2021-03-29T21:33:13Z",
-              "securityVulnerability": {
-                "severity": "HIGH",
-                "package": {
-                  "name": "y18n"
-                },
-                "advisory": {
-                  "identifiers": [
-                    {
-                      "type": "GHSA",
-                      "value": "GHSA-c4w7-xm78-47vh"
-                    },
-                    {
-                      "type": "CVE",
-                      "value": "CVE-2020-7774"
-                    }
-                  ],
-                  "references": [
-                    {
-                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7774"
-                    },
-                    {
-                      "url": "https://github.com/advisories/GHSA-c4w7-xm78-47vh"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "dismissedAt": null,
-              "createdAt": "2021-05-07T03:55:34Z",
-              "securityVulnerability": {
-                "severity": "HIGH",
-                "package": {
-                  "name": "lodash"
-                },
-                "advisory": {
-                  "identifiers": [
-                    {
-                      "type": "GHSA",
-                      "value": "GHSA-35jh-r3h4-6jhm"
-                    },
-                    {
-                      "type": "CVE",
-                      "value": "CVE-2021-23337"
-                    }
-                  ],
-                  "references": [
-                    {
-                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23337"
-                    },
-                    {
-                      "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "dismissedAt": null,
-              "createdAt": "2021-05-10T17:45:01Z",
-              "securityVulnerability": {
-                "severity": "MODERATE",
-                "package": {
-                  "name": "postcss"
-                },
-                "advisory": {
-                  "identifiers": [
-                    {
-                      "type": "GHSA",
-                      "value": "GHSA-hwj9-h5mp-3pm3"
-                    },
-                    {
-                      "type": "CVE",
-                      "value": "CVE-2021-23368"
-                    }
-                  ],
-                  "references": [
-                    {
-                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
-                    },
-                    {
-                      "url": "https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "dismissedAt": null,
-              "createdAt": "2021-05-24T23:29:53Z",
-              "securityVulnerability": {
-                "severity": "MODERATE",
-                "package": {
-                  "name": "browserslist"
-                },
-                "advisory": {
-                  "identifiers": [
-                    {
-                      "type": "GHSA",
-                      "value": "GHSA-w8qv-6jwh-64r5"
-                    },
-                    {
-                      "type": "CVE",
-                      "value": "CVE-2021-23364"
-                    }
-                  ],
-                  "references": [
-                    {
-                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23364"
-                    },
-                    {
-                      "url": "https://github.com/advisories/GHSA-w8qv-6jwh-64r5"
-                    }
-                  ]
-                }
-              }
-            }
-          ]
+            ]
+          }
         }
-    }]},
+      ]
+    },
     "codescan": [
       {
         "url": "https://github.com/SocialGouv/alternance",
-      "alerts": []
-    }
+        "alerts": []
+      }
     ],
     "testssl": [
       {
@@ -4702,17 +4741,714 @@
         }
       ]
     },
-    "zap": {"@version":"2.10.0","@generated":"Wed, 16 Jun 2021 22:26:10","site":[{"@name":"https://monsuivipsy.fabrique.social.gouv.fr","@host":"monsuivipsy.fabrique.social.gouv.fr","@port":"443","@ssl":"true","alerts":[{"pluginid":"10015","alertRef":"10015","alert":"Incomplete or No Cache-control and Pragma HTTP Header Set","name":"Incomplete or No Cache-control and Pragma HTTP Header Set","riskcode":"1","confidence":"2","riskdesc":"Low (Medium)","desc":"<p>The cache-control and pragma HTTP header have not been set properly or are missing allowing the browser and proxies to cache content.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/img/app-store-badge.svg","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET","param":"Cache-Control"},
-      {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/img/google-play-badge.svg","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","param":"Cache-Control"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css","method":"GET","param":"Cache-Control"}],"count":"11","solution":"<p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate; and that the pragma HTTP header is set with no-cache.<\/p>","reference":"<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching<\/p>","cweid":"525","wascid":"13","sourceid":"3"},{"pluginid":"10109","alertRef":"10109","alert":"Modern Web Application","name":"Modern Web Application","riskcode":"0","confidence":"2","riskdesc":"Informational (Medium)","desc":"<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},
-        {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/polyfills-4f4acd756cef4fe6da1b.js","method":"GET","evidence":"<script>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"<script>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","evidence":"<noscript data-n-css=\"\"><\/noscript>"}],"count":"9","solution":"<p>This is an informational alert and so no changes are required.<\/p>","otherinfo":"<p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.<\/p>","reference":"<p><\/p>","sourceid":"3"},{"pluginid":"10094","alertRef":"10094","alert":"Base64 Disclosure","name":"Base64 Disclosure","riskcode":"0","confidence":"2","riskdesc":"Informational (Medium)","desc":"<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},
-          {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/img/logo-MSP.png","method":"GET","evidence":"org/std/Iptc4xmpExt/2008-02-29/"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","evidence":"/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"}],"count":"8","solution":"<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.<\/p>","otherinfo":"<p>�����쵫bs�Ō�Nw6�fm�\\x0014�x\\x001a�������\\x001a�'޲<\/p>","reference":"<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage<\/p>","cweid":"200","wascid":"13","sourceid":"3"},{"pluginid":"10063","alertRef":"10063","alert":"Feature Policy Header Not Set","name":"Feature Policy Header Not Set","riskcode":"1","confidence":"2","riskdesc":"Low (Medium)","desc":"<p>Feature Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Feature Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/webpack-ffa33f3849fe9303598c.js","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/f0ecf37a.a83a6a4548b93404854d.js","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET"}],
-          "count":"11","solution":"<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Feature-Policy header.<\/p>","reference":"<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy<\/p><p>https://developers.google.com/web/updates/2018/06/feature-policy<\/p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/<\/p><p>https://w3c.github.io/webappsec-feature-policy/<\/p><p>https://www.smashingmagazine.com/2018/12/feature-policy/<\/p>","cweid":"16","wascid":"15","sourceid":"3"},{"pluginid":"10055","alertRef":"10055","alert":"CSP: Wildcard Directive","name":"CSP: Wildcard Directive","riskcode":"2","confidence":"2","riskdesc":"Medium (Medium)","desc":"<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: <\/p><p>frame-ancestors, form-action<\/p><p><\/p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},
-      {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},
-      {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"}],"count":"5","solution":"<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.<\/p>","reference":"<p>http://www.w3.org/TR/CSP2/<\/p><p>http://www.w3.org/TR/CSP/<\/p><p>http://caniuse.com/#search=content+security+policy<\/p><p>http://content-security-policy.com/<\/p><p>https://github.com/shapesecurity/salvation<\/p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources<\/p>","cweid":"16","wascid":"15","sourceid":"3"},{"pluginid":"10036","alertRef":"10036","alert":"Server Leaks Version Information via \"Server\" HTTP Response Header Field","name":"Server Leaks Version Information via \"Server\" HTTP Response Header Field","riskcode":"1","confidence":"3","riskdesc":"Low (High)","desc":"<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/img/favicon.png","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET","evidence":"nginx/1.17.8"},
-        {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css","method":"GET","evidence":"nginx/1.17.8"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","evidence":"nginx/1.17.8"}],"count":"11","solution":"<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.<\/p>","reference":"<p>http://httpd.apache.org/docs/current/mod/core.html#servertokens<\/p><p>http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007<\/p><p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx<\/p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html<\/p>","cweid":"200","wascid":"13","sourceid":"3"},{"pluginid":"10027","alertRef":"10027","alert":"Information Disclosure - Suspicious Comments","name":"Information Disclosure - Suspicious Comments","riskcode":"0","confidence":"1","riskdesc":"Informational (Low)","desc":"<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"select"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/b948986645f1cc161763b5108f7630577dce86d6.98580feccb4dced15d4d.js","method":"GET","evidence":"select"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/commons.db60c8cd708fa5c303a2.js","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","evidence":"query"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","evidence":"query"}],"count":"11","solution":"<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.<\/p>","otherinfo":"<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"bFjJtOdzaJZm3zFPN4\", see evidence field for the suspicious comment/snippet.<\/p>","reference":"<p><\/p>","cweid":"200","wascid":"13","sourceid":"3"},
-        {"pluginid":"10049","alertRef":"10049","alert":"Storable and Cacheable Content","name":"Storable and Cacheable Content","riskcode":"0","confidence":"2","riskdesc":"Informational (Medium)","desc":"<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/img/favicon.png","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET"}],"count":"11","solution":"<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:<\/p><p>Cache-Control: no-cache, no-store, must-revalidate, private<\/p><p>Pragma: no-cache<\/p><p>Expires: 0<\/p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. <\/p>","otherinfo":"<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.<\/p>","reference":"<p>https://tools.ietf.org/html/rfc7234<\/p><p>https://tools.ietf.org/html/rfc7231<\/p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)<\/p>","cweid":"524","wascid":"13","sourceid":"3"},{"pluginid":"10096","alertRef":"10096","alert":"Timestamp Disclosure - Unix","name":"Timestamp Disclosure - Unix","riskcode":"0","confidence":"1","riskdesc":"Informational (Low)","desc":"<p>A timestamp was disclosed by the application/web server - Unix<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"805306368"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"1073741825"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"67108864"},
-          {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"268435456"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"1073741824"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"1073741823"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"33554432"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"62914560"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"134217728"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"134217727"}],"count":"10","solution":"<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.<\/p>","otherinfo":"<p>805306368, which evaluates to: 1995-07-09 16:12:48<\/p>","reference":"<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage<\/p>","cweid":"200","wascid":"13","sourceid":"3"},{"pluginid":"10108","alertRef":"10108","alert":"Reverse Tabnabbing","name":"Reverse Tabnabbing","riskcode":"2","confidence":"2","riskdesc":"Medium (Medium)","desc":"<p>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the \"noopener\" and \"noreferrer\" keywords in the \"rel\" attribute, which allows the target page to take control of this page.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","evidence":"<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/><\/a>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","evidence":"<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/><\/a>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","evidence":"<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/><\/a>"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","evidence":"<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/><\/a>"}],"count":"4","solution":"<p>Do not use a target attribute, or if you have to then also add the attribute: rel=\"noopener noreferrer\".<\/p>","reference":"<p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing<\/p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example<\/p><p>https://mathiasbynens.github.io/rel-noopener/<\/p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c<\/p>","sourceid":"3"},{"pluginid":"10055","alertRef":"10055","alert":"CSP: style-src unsafe-inline","name":"CSP: style-src unsafe-inline","riskcode":"2","confidence":"2","riskdesc":"Medium (Medium)","desc":"<p>style-src includes unsafe-inline.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},
-            {"uri":"https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/robots.txt","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/cgu","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr","method":"GET","param":"Content-Security-Policy","evidence":"default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"}],"count":"5","solution":"<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.<\/p>","reference":"<p>http://www.w3.org/TR/CSP2/<\/p><p>http://www.w3.org/TR/CSP/<\/p><p>http://caniuse.com/#search=content+security+policy<\/p><p>http://content-security-policy.com/<\/p><p>https://github.com/shapesecurity/salvation<\/p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources<\/p>","cweid":"16","wascid":"15","sourceid":"3"},{"pluginid":"10110","alertRef":"10110","alert":"Dangerous JS Functions","name":"Dangerous JS Functions","riskcode":"1","confidence":"1","riskdesc":"Low (Low)","desc":"<p>A dangerous JS function seems to be in use that would leave the site vulnerable.<\/p>","instances":[{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js","method":"GET","evidence":"eVal"},{"uri":"https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/b948986645f1cc161763b5108f7630577dce86d6.98580feccb4dced15d4d.js","method":"GET","evidence":"eVal"}],"count":"2","solution":"<p>See the references for security advice on the use of these functions.<\/p>","reference":"<p>https://angular.io/guide/security<\/p>","cweid":"749","sourceid":"3"}]}]}  ,
+    "zap": {
+      "@version": "2.10.0",
+      "@generated": "Wed, 16 Jun 2021 22:26:10",
+      "site": [
+        {
+          "@name": "https://monsuivipsy.fabrique.social.gouv.fr",
+          "@host": "monsuivipsy.fabrique.social.gouv.fr",
+          "@port": "443",
+          "@ssl": "true",
+          "alerts": [
+            {
+              "pluginid": "10015",
+              "alertRef": "10015",
+              "alert": "Incomplete or No Cache-control and Pragma HTTP Header Set",
+              "name": "Incomplete or No Cache-control and Pragma HTTP Header Set",
+              "riskcode": "1",
+              "confidence": "2",
+              "riskdesc": "Low (Medium)",
+              "desc": "<p>The cache-control and pragma HTTP header have not been set properly or are missing allowing the browser and proxies to cache content.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/img/app-store-badge.svg",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/img/google-play-badge.svg",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css",
+                  "method": "GET",
+                  "param": "Cache-Control"
+                }
+              ],
+              "count": "11",
+              "solution": "<p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate; and that the pragma HTTP header is set with no-cache.</p>",
+              "reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p>",
+              "cweid": "525",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10109",
+              "alertRef": "10109",
+              "alert": "Modern Web Application",
+              "name": "Modern Web Application",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/polyfills-4f4acd756cef4fe6da1b.js",
+                  "method": "GET",
+                  "evidence": "<script>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "<script>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "evidence": "<noscript data-n-css=\"\"></noscript>"
+                }
+              ],
+              "count": "9",
+              "solution": "<p>This is an informational alert and so no changes are required.</p>",
+              "otherinfo": "<p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p>",
+              "reference": "<p></p>",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10094",
+              "alertRef": "10094",
+              "alert": "Base64 Disclosure",
+              "name": "Base64 Disclosure",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/img/logo-MSP.png",
+                  "method": "GET",
+                  "evidence": "org/std/Iptc4xmpExt/2008-02-29/"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "evidence": "/_next/static/bFjJtOdzaJZm3zFPN4GsG/_buildManifest"
+                }
+              ],
+              "count": "8",
+              "solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+              "otherinfo": "<p>�����쵫bs�Ō�Nw6�fm�\\x0014�x\\x001a�������\\x001a�'޲</p>",
+              "reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+              "cweid": "200",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10063",
+              "alertRef": "10063",
+              "alert": "Feature Policy Header Not Set",
+              "name": "Feature Policy Header Not Set",
+              "riskcode": "1",
+              "confidence": "2",
+              "riskdesc": "Low (Medium)",
+              "desc": "<p>Feature Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Feature Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/webpack-ffa33f3849fe9303598c.js",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/f0ecf37a.a83a6a4548b93404854d.js",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET"
+                }
+              ],
+              "count": "11",
+              "solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Feature-Policy header.</p>",
+              "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+              "cweid": "16",
+              "wascid": "15",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10055",
+              "alertRef": "10055",
+              "alert": "CSP: Wildcard Directive",
+              "name": "CSP: Wildcard Directive",
+              "riskcode": "2",
+              "confidence": "2",
+              "riskdesc": "Medium (Medium)",
+              "desc": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>frame-ancestors, form-action</p><p></p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                }
+              ],
+              "count": "5",
+              "solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+              "reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+              "cweid": "16",
+              "wascid": "15",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10036",
+              "alertRef": "10036",
+              "alert": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+              "name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+              "riskcode": "1",
+              "confidence": "3",
+              "riskdesc": "Low (High)",
+              "desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/img/favicon.png",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "evidence": "nginx/1.17.8"
+                }
+              ],
+              "count": "11",
+              "solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.</p>",
+              "reference": "<p>http://httpd.apache.org/docs/current/mod/core.html#servertokens</p><p>http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007</p><p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
+              "cweid": "200",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10027",
+              "alertRef": "10027",
+              "alert": "Information Disclosure - Suspicious Comments",
+              "name": "Information Disclosure - Suspicious Comments",
+              "riskcode": "0",
+              "confidence": "1",
+              "riskdesc": "Informational (Low)",
+              "desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "select"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/b948986645f1cc161763b5108f7630577dce86d6.98580feccb4dced15d4d.js",
+                  "method": "GET",
+                  "evidence": "select"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/commons.db60c8cd708fa5c303a2.js",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "evidence": "query"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "evidence": "query"
+                }
+              ],
+              "count": "11",
+              "solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+              "otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/\",\"query\":{},\"buildId\":\"bFjJtOdzaJZm3zFPN4\", see evidence field for the suspicious comment/snippet.</p>",
+              "reference": "<p></p>",
+              "cweid": "200",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10049",
+              "alertRef": "10049",
+              "alert": "Storable and Cacheable Content",
+              "name": "Storable and Cacheable Content",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/img/favicon.png",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/mentions-legales",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/59b0563a98c015cf0985.css",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/main-ead13d3b5a04498c3df8.js",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/politique-confidentialite",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/css/c21b8750c443c44306e7.css",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET"
+                }
+              ],
+              "count": "11",
+              "solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+              "otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+              "reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+              "cweid": "524",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10096",
+              "alertRef": "10096",
+              "alert": "Timestamp Disclosure - Unix",
+              "name": "Timestamp Disclosure - Unix",
+              "riskcode": "0",
+              "confidence": "1",
+              "riskdesc": "Informational (Low)",
+              "desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "805306368"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "1073741825"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "67108864"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "268435456"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "1073741824"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "1073741823"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "33554432"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "62914560"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "134217728"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "134217727"
+                }
+              ],
+              "count": "10",
+              "solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+              "otherinfo": "<p>805306368, which evaluates to: 1995-07-09 16:12:48</p>",
+              "reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+              "cweid": "200",
+              "wascid": "13",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10108",
+              "alertRef": "10108",
+              "alert": "Reverse Tabnabbing",
+              "name": "Reverse Tabnabbing",
+              "riskcode": "2",
+              "confidence": "2",
+              "riskdesc": "Medium (Medium)",
+              "desc": "<p>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the \"noopener\" and \"noreferrer\" keywords in the \"rel\" attribute, which allows the target page to take control of this page.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "evidence": "<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/></a>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "evidence": "<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/></a>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "evidence": "<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/></a>"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "evidence": "<a href=\"https://apps.apple.com/us/app/mon-suivi-psy/id1540061393\" target=\"noopener noreferrer\"><img width=\"200\" src=\"/img/app-store-badge.svg\" alt=\"\"/></a>"
+                }
+              ],
+              "count": "4",
+              "solution": "<p>Do not use a target attribute, or if you have to then also add the attribute: rel=\"noopener noreferrer\".</p>",
+              "reference": "<p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing</p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example</p><p>https://mathiasbynens.github.io/rel-noopener/</p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</p>",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10055",
+              "alertRef": "10055",
+              "alert": "CSP: style-src unsafe-inline",
+              "name": "CSP: style-src unsafe-inline",
+              "riskcode": "2",
+              "confidence": "2",
+              "riskdesc": "Medium (Medium)",
+              "desc": "<p>style-src includes unsafe-inline.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/sitemap.xml",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/robots.txt",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/cgu",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr",
+                  "method": "GET",
+                  "param": "Content-Security-Policy",
+                  "evidence": "default-src 'none'; connect-src 'self' https://*.gouv.fr; font-src 'self'; media-src 'self' https://*.gouv.fr; img-src 'self' https://*.gouv.fr https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; prefetch-src 'self' https://*.gouv.fr; script-src 'self' https://*.gouv.fr; frame-src 'self' https://*.gouv.fr; style-src 'self' 'unsafe-inline'"
+                }
+              ],
+              "count": "5",
+              "solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+              "reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
+              "cweid": "16",
+              "wascid": "15",
+              "sourceid": "3"
+            },
+            {
+              "pluginid": "10110",
+              "alertRef": "10110",
+              "alert": "Dangerous JS Functions",
+              "name": "Dangerous JS Functions",
+              "riskcode": "1",
+              "confidence": "1",
+              "riskdesc": "Low (Low)",
+              "desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+              "instances": [
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/framework.6e0b47c479fed0d88ee7.js",
+                  "method": "GET",
+                  "evidence": "eVal"
+                },
+                {
+                  "uri": "https://monsuivipsy.fabrique.social.gouv.fr/_next/static/chunks/b948986645f1cc161763b5108f7630577dce86d6.98580feccb4dced15d4d.js",
+                  "method": "GET",
+                  "evidence": "eVal"
+                }
+              ],
+              "count": "2",
+              "solution": "<p>See the references for security advice on the use of these functions.</p>",
+              "reference": "<p>https://angular.io/guide/security</p>",
+              "cweid": "749",
+              "sourceid": "3"
+            }
+          ]
+        }
+      ]
+    },
     "nuclei": [
       {
         "templateID": "waf-detect",
@@ -4926,10 +5662,7 @@
       "statsGrade": "F"
     },
     "category": "dnum",
-    "tags": [
-      "sante",
-      "dicom"
-    ],
+    "tags": ["sante", "dicom"],
     "http": {
       "url": "https://arretonslesviolences.gouv.fr",
       "algorithm_version": 2,
@@ -5142,7 +5875,11 @@
       }
     },
     "updownio": null,
-    "stats": {"grade": "F", "url": "https://arretonslesviolences.gouv.fr", "uri": "stats"},
+    "stats": {
+      "grade": "F",
+      "url": "https://arretonslesviolences.gouv.fr",
+      "uri": "stats"
+    },
     "dependabot": null,
     "codescan": null,
     "testssl": [
@@ -6959,10 +7696,7 @@
       "lighthouse_pwaGrade": "D"
     },
     "category": "dnum",
-    "tags": [
-      "travail",
-      "emploi"
-    ],
+    "tags": ["travail", "emploi"],
     "http": {
       "url": "https://bonusmalus.travail-emploi.gouv.fr",
       "algorithm_version": 2,
@@ -8901,11 +9635,7 @@
       "lighthouse_pwaGrade": "D"
     },
     "category": "dnum",
-    "tags": [
-      "jeunesse",
-      "emploi",
-      "formation"
-    ],
+    "tags": ["jeunesse", "emploi", "formation"],
     "http": {
       "url": "https://boussole.jeunes.gouv.fr",
       "algorithm_version": 2,

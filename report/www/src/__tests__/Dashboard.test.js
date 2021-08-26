@@ -34,7 +34,6 @@ it("Should render full Dashboard", () => {
     .create(
       <MemoryRouter>
         <Dashboard {...props} />
-{" "}
       </MemoryRouter>
     )
     .toJSON();
@@ -55,7 +54,6 @@ describe("Tools config", () => {
       .create(
         <MemoryRouter>
           <Dashboard {...props} />
-{" "}
         </MemoryRouter>
       )
       .toJSON();

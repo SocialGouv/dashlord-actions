@@ -8,6 +8,8 @@ jest.mock("../components/Gauge", () => ({ Gauge: () => <div>io</div> }));
 jest.useFakeTimers("modern");
 jest.setSystemTime(new Date("2021-04-06").getTime());
 
+global.__PUBLIC_URL__ = "https://jest.demo.com/dashlord";
+
 const report = require("../report.json").find(
   (r) => r.url === "https://adoption.gouv.fr"
 );
@@ -31,7 +33,6 @@ it("Should render full Url", () => {
     .create(
       <MemoryRouter>
         <Url {...props} />
-{" "}
       </MemoryRouter>
     )
     .toJSON();
@@ -48,7 +49,6 @@ it("Should render full Url with screenshot", () => {
     .create(
       <MemoryRouter>
         <Url {...props} />
-{" "}
       </MemoryRouter>
     )
     .toJSON();
@@ -69,7 +69,6 @@ describe("Tools config", () => {
       .create(
         <MemoryRouter>
           <Url {...props} />
-{" "}
         </MemoryRouter>
       )
       .toJSON();
