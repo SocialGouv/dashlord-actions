@@ -2,7 +2,7 @@
   "title": "Dashlord fabrique numérique",
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
-  "footer": "Create your own DashLord by <a href='https://github.com/SocialGouv/dashlord'>cloning the repository</a>.",
+  "footer": "Powered by BetaGouv.",
   "tools": {
     "screenshot": true,
     "nmap": true,

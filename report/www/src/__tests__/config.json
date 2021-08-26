@@ -1,5 +1,8 @@
 {
   "title": "Test 1",
+  "description": "Bonnes pratiques techniques",
+  "entity": "Ministères sociaux",
+  "footer": "Powered by BetaGouv.",
   "tools": {
     "screenshot": true,
     "nmap": true,

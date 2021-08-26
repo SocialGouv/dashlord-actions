@@ -18,7 +18,7 @@ export const FooterSite: React.FC = () => (
     <FooterBody description="">
       <Logo>{dashlordConfig.entity}</Logo>
       <FooterBodyItem>
-        <div dangerouslySetInnerHTML={{ __html: dashlordConfig.footer }} />
+        <div>{dashlordConfig.footer}</div>
       </FooterBodyItem>
     </FooterBody>
     <FooterBottom>
