@@ -686,36 +686,47 @@ exports[`Should render full Dashboard 1`] = `
     <tbody>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            archifiltre.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              archifiltre.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -1006,36 +1017,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            index-egapro.travail.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              index-egapro.travail.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -1326,36 +1348,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            index-egapro.travail.gouv.fr/consulter-index
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              index-egapro.travail.gouv.fr/consulter-index
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -1646,36 +1679,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            code.travail.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              code.travail.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -1966,36 +2010,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            domifa.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              domifa.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -2286,36 +2341,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            emjpm.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              emjpm.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -2606,36 +2672,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            www.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              www.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -2910,36 +2987,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            medle.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              medle.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -3230,36 +3318,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            monsuivipsy.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              monsuivipsy.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -3534,36 +3633,47 @@ exports[`Should render full Dashboard 1`] = `
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            onvs.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              onvs.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
         <td>
           <div
@@ -3852,6 +3962,1645 @@ exports[`Should render full Dashboard 1`] = `
           </div>
         </td>
       </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fozensemble.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              ozensemble.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              95 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              92 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              85 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fpjm.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              pjm.social.gouv.fr
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              98 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              83 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              B
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              99 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              3
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              3
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Ftumeplay.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              tumeplay.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              92 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              85 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              67
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fwww.psyenfantado.sante.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              www.psyenfantado.sante.gouv.fr
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              3
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fsample-next-app.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              sample-next-app.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              98 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              91 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0.991
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              8
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              F
+            </button>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -3881,342 +5630,677 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
     <tbody>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            archifiltre.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              archifiltre.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            index-egapro.travail.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              index-egapro.travail.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            index-egapro.travail.gouv.fr/consulter-index
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              index-egapro.travail.gouv.fr/consulter-index
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            code.travail.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              code.travail.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            domifa.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              domifa.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            emjpm.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              emjpm.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            www.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              www.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            medle.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              medle.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            monsuivipsy.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              monsuivipsy.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-          <a
-            href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
-            onClick={[Function]}
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
           >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
+              onClick={[Function]}
             >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            onvs.fabrique.social.gouv.fr
-          </a>
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              onvs.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fozensemble.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              ozensemble.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fpjm.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              pjm.social.gouv.fr
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Ftumeplay.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              tumeplay.fabrique.social.gouv.fr
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fwww.psyenfantado.sante.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              www.psyenfantado.sante.gouv.fr
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+                "width": "95%",
+              }
+            }
+          >
+            <a
+              href="/url/https%3A%2F%2Fsample-next-app.fabrique.social.gouv.fr"
+              onClick={[Function]}
+            >
+              <svg
+                fill="none"
+                height={16}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <line
+                  x1="21"
+                  x2="16.65"
+                  y1="21"
+                  y2="16.65"
+                />
+              </svg>
+               
+              sample-next-app.fabrique.social.gouv.fr
+            </a>
+          </div>
         </td>
       </tr>
     </tbody>
