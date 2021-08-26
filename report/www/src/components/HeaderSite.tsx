@@ -72,16 +72,19 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             current={path.startsWith("/intro")}
             asLink={<RouterLink to="/intro" />}
           />
-          <NavItem title="Catégories">
-            {categories.map((category) => (
-              <NavSubItem
-                key={category}
-                current={path.startsWith(`/category/${category}`)}
-                asLink={<RouterLink to={`/category/${category}`} />}
-                title={category}
-              />
-            ))}
-          </NavItem>
+          {(categories.length > 1 && (
+            <NavItem title="Catégories">
+              {categories.map((category) => (
+                <NavSubItem
+                  key={category}
+                  current={path.startsWith(`/category/${category}`)}
+                  asLink={<RouterLink to={`/category/${category}`} />}
+                  title={category}
+                />
+              ))}
+            </NavItem>
+          )) ||
+            null}
           <NavItem title="Urls">
             {sortedReport.map((url) => (
               <NavSubItem
