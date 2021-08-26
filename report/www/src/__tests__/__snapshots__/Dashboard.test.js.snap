@@ -687,7 +687,7 @@ exports[`Should render full Dashboard 1`] = `
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Fadoption.gouv.fr"
+            href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -714,8 +714,362 @@ exports[`Should render full Dashboard 1`] = `
               />
             </svg>
              
-            adoption.gouv.fr
+            archifiltre.fabrique.social.gouv.fr
           </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              14
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            index-egapro.travail.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
         </td>
         <td>
           <div
@@ -747,7 +1101,2197 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              50 %
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              37
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            index-egapro.travail.gouv.fr/consulter-index
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              96 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              83 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            code.travail.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              90 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              96 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              C-
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              4
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            domifa.fabrique.social.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              98 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              83 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              92 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              B+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            emjpm.fabrique.social.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              87 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              95 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              92 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              B+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            www.fabrique.social.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              93 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              45 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              90 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              11
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              F
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            medle.fabrique.social.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              92 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              99 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              10
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              F
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            monsuivipsy.fabrique.social.gouv.fr
+          </a>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              70 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
             </button>
           </div>
         </td>
@@ -832,7 +3376,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0.998
+              1
             </button>
           </div>
         </td>
@@ -849,7 +3393,24 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              6
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
             </button>
           </div>
         </td>
@@ -884,6 +3445,73 @@ exports[`Should render full Dashboard 1`] = `
                 y2="19.07"
               />
             </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              0
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              2
+            </button>
           </div>
         </td>
         <td>
@@ -903,6 +3531,40 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            onvs.fabrique.social.gouv.fr
+          </a>
+        </td>
         <td>
           <div
             style={
@@ -916,8 +3578,226 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              3
+              98 %
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              82 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              A+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              D+
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              100 %
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              1
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              5
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
         <td>
@@ -952,258 +3832,6 @@ exports[`Should render full Dashboard 1`] = `
             >
               2
             </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/url/https%3A%2F%2Falternance.emploi.gouv.fr"
-            onClick={[Function]}
-          >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            alternance.emploi.gouv.fr
-          </a>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              92 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              50 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              83 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              2
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
           </div>
         </td>
         <td>
@@ -1221,1194 +3849,6 @@ exports[`Should render full Dashboard 1`] = `
             >
               F
             </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              3
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              0
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              2
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/url/https%3A%2F%2Farretonslesviolences.gouv.fr"
-            onClick={[Function]}
-          >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            arretonslesviolences.gouv.fr
-          </a>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              92 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              50 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              83 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              6
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              0
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              2
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/url/https%3A%2F%2Fbonusmalus.travail-emploi.gouv.fr"
-            onClick={[Function]}
-          >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            bonusmalus.travail-emploi.gouv.fr
-          </a>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              92 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              50 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              83 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              6
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              0
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              2
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/url/https%3A%2F%2Fboussole.jeunes.gouv.fr"
-            onClick={[Function]}
-          >
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="11"
-                cy="11"
-                r="8"
-              />
-              <line
-                x1="21"
-                x2="16.65"
-                y1="21"
-                y2="16.65"
-              />
-            </svg>
-             
-            boussole.jeunes.gouv.fr
-          </a>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              92 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              50 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              83 %
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              6
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              0
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              2
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
           </div>
         </td>
       </tr>
@@ -2442,7 +3882,7 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Fadoption.gouv.fr"
+            href="/url/https%3A%2F%2Farchifiltre.fabrique.social.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -2469,14 +3909,14 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               />
             </svg>
              
-            adoption.gouv.fr
+            archifiltre.fabrique.social.gouv.fr
           </a>
         </td>
       </tr>
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Falternance.emploi.gouv.fr"
+            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -2503,14 +3943,14 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               />
             </svg>
              
-            alternance.emploi.gouv.fr
+            index-egapro.travail.gouv.fr
           </a>
         </td>
       </tr>
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Farretonslesviolences.gouv.fr"
+            href="/url/https%3A%2F%2Findex-egapro.travail.gouv.fr%2Fconsulter-index"
             onClick={[Function]}
           >
             <svg
@@ -2537,14 +3977,14 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               />
             </svg>
              
-            arretonslesviolences.gouv.fr
+            index-egapro.travail.gouv.fr/consulter-index
           </a>
         </td>
       </tr>
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Fbonusmalus.travail-emploi.gouv.fr"
+            href="/url/https%3A%2F%2Fcode.travail.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -2571,14 +4011,14 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               />
             </svg>
              
-            bonusmalus.travail-emploi.gouv.fr
+            code.travail.gouv.fr
           </a>
         </td>
       </tr>
       <tr>
         <td>
           <a
-            href="/url/https%3A%2F%2Fboussole.jeunes.gouv.fr"
+            href="/url/https%3A%2F%2Fdomifa.fabrique.social.gouv.fr"
             onClick={[Function]}
           >
             <svg
@@ -2605,7 +4045,177 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               />
             </svg>
              
-            boussole.jeunes.gouv.fr
+            domifa.fabrique.social.gouv.fr
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Femjpm.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            emjpm.fabrique.social.gouv.fr
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fwww.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            www.fabrique.social.gouv.fr
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fmedle.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            medle.fabrique.social.gouv.fr
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fmonsuivipsy.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            monsuivipsy.fabrique.social.gouv.fr
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="/url/https%3A%2F%2Fonvs.fabrique.social.gouv.fr"
+            onClick={[Function]}
+          >
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+             
+            onvs.fabrique.social.gouv.fr
           </a>
         </td>
       </tr>

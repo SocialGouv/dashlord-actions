@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 
 import { Dashboard } from "../components/Dashboard";
 
-import report from "./report.json";
+import report from "../report.json";
 
 const mockSampleConfig = JSON.parse(
   jest
