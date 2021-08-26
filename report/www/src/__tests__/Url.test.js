@@ -10,9 +10,9 @@ jest.setSystemTime(new Date("2021-04-06").getTime());
 
 global.__PUBLIC_URL__ = "https://jest.demo.com/dashlord";
 
-const report = require("../report.json").find(
-  (r) => r.url === "https://adoption.gouv.fr"
-);
+const TEST_URL = "https://www.fabrique.social.gouv.fr";
+
+const report = require("../report.json").find((r) => r.url === TEST_URL);
 
 const mockSampleConfig = JSON.parse(
   jest
@@ -28,7 +28,7 @@ it("Should render empty Url", () => {
 });
 
 it("Should render full Url", () => {
-  const props = { report, url: "https://adoption.gouv.fr" };
+  const props = { report, url: TEST_URL };
   const tree = renderer
     .create(
       <MemoryRouter>
@@ -44,7 +44,7 @@ it("Should render full Url with screenshot", () => {
     ...report,
     screenshot: true,
   };
-  const props = { report: report2, url: "https://adoption.gouv.fr" };
+  const props = { report: report2, url: TEST_URL };
   const tree = renderer
     .create(
       <MemoryRouter>
