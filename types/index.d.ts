@@ -25,6 +25,9 @@ type DashlordTool =
 
 type DashlordConfig = {
   title: string;
+  entity: string;
+  description: string;
+  footer: string;
   tools?: DashlordTool[] | Record<DashlordTool, boolean>;
   urls: UrlConfig[];
 };
@@ -174,9 +177,9 @@ type DependabotRepository = {
 };
 
 type DependabotReport = {
-  totalCount: number,
-  grade: string,
-  repositories: DependabotRepository[]
+  totalCount: number;
+  grade: string;
+  repositories: DependabotRepository[];
 };
 
 type CodescanRule = {

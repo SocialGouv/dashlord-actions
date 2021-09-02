@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Container, Row, Alert } from "react-bootstrap";
+import { Container, Alert } from "@dataesr/react-dsfr";
 
 import {
   useParams,
@@ -9,11 +9,11 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Sidebar } from "./components/Sidebar";
-import { Topbar } from "./components/Topbar";
+import { HeaderSite } from "./components/HeaderSite";
+import { FooterSite } from "./components/FooterSite";
 import { Dashboard } from "./components/Dashboard";
 import { Trends } from "./components/Trends";
-import { Url } from "./components/Url";
+import Url from "./components/Url";
 import { Intro } from "./components/Intro";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { About } from "./components/About";
@@ -21,6 +21,7 @@ import { WappalyzerDashboard } from "./components/WappalyzerDashboard";
 
 const report: DashLordReport = require("./report.json");
 const trends: Trends = require("./trends.json");
+
 type CategoryRouteProps = { report: DashLordReport };
 
 // for some reason react-router `:url*` didnt work, use `*` only
@@ -32,14 +33,21 @@ const CategoryRoute: React.FC<CategoryRouteProps> = (props) => {
   const params = useParams<CategoryParamTypes>();
   const category = window.decodeURIComponent(params.category);
   const urls = props.report.filter((u) => u.category === category);
+  console.log(urls);
   return (
-    <React.Fragment>
+    <>
       <br />
-      <h3>
-        {category} : {urls.length} urls
-      </h3>
-      <Dashboard report={urls} />
-    </React.Fragment>
+      {urls.length ? (
+        <>
+          <h3>
+            {category} : {urls.length} urls
+          </h3>
+          <Dashboard report={urls} />
+        </>
+      ) : (
+        <h3>Aucun URL associée</h3>
+      )}
+    </>
   );
 };
 
@@ -54,13 +62,13 @@ const TagRoute: React.FC<TagRouteProps> = (props) => {
   const tag = window.decodeURIComponent(params.tag);
   const urls = props.report.filter((u) => u.tags && u.tags.includes(tag));
   return (
-    <React.Fragment>
+    <>
       <br />
       <h3>
         {tag} : {urls.length} urls
       </h3>
       <Dashboard report={urls} />
-    </React.Fragment>
+    </>
   );
 };
 
@@ -76,59 +84,56 @@ const UrlRoute: React.FC<UrlRouteProps> = (props) => {
   const urlData = props.report.find((u) => u.url === url);
   if (!urlData) {
     return (
-      <Alert variant="danger">
-        Impossible de trouver le rapport pour {url}
-      </Alert>
+      <Alert
+        type="error"
+        title={`Impossible de trouver le rapport pour ${url}`}
+      />
     );
   }
   return <Url url={url} report={urlData} />;
 };
 
-const App = () => {
-  return (
-    <Router>
-      <div>
-        <ScrollToTop />
-        <Topbar />
-        <Container fluid>
-          <Row>
-            <Sidebar report={report} />
-            <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-              <Switch>
-                <Route path="/url/*">
-                  <UrlRoute report={report} />
-                </Route>
-                <Route path="/dashboard">
-                  <Dashboard report={report} />
-                </Route>
-                <Route path="/trends">
-                  <Trends trends={trends} />
-                </Route>
-                <Route path="/category/:category">
-                  <CategoryRoute report={report} />
-                </Route>
-                <Route path="/tag/:tag">
-                  <TagRoute report={report} />
-                </Route>
-                <Route path="/wappalyzer">
-                  <WappalyzerDashboard report={report} />
-                </Route>
-                <Route path="/intro">
-                  <Intro />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="/">
-                  <Dashboard report={report} />
-                </Route>
-              </Switch>
-            </main>
-          </Row>
-        </Container>
-      </div>
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <div>
+      <ScrollToTop />
+      <HeaderSite report={report} />
+      <Container>
+        <div role="main" className="fr-my-4w">
+          <Switch>
+            <Route path="/url/*">
+              <UrlRoute report={report} />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard report={report} />
+            </Route>
+            <Route path="/trends">
+              <Trends trends={trends} />
+            </Route>
+            <Route path="/category/:category">
+              <CategoryRoute report={report} />
+            </Route>
+            <Route path="/tag/:tag">
+              <TagRoute report={report} />
+            </Route>
+            <Route path="/wappalyzer">
+              <WappalyzerDashboard report={report} />
+            </Route>
+            <Route path="/intro">
+              <Intro />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Dashboard report={report} />
+            </Route>
+          </Switch>
+        </div>
+      </Container>
+      <FooterSite />
+    </div>
+  </Router>
+);
 
 export default App;

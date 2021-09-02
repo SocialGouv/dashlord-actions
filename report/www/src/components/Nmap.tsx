@@ -1,36 +1,28 @@
 import * as React from "react";
 
-import { Table, Badge } from "react-bootstrap";
+import { Table } from "@dataesr/react-dsfr";
 
 import { Panel } from "./Panel";
 import { Grade } from "./Grade";
+import Badge from "./Badge";
 
-const sumCvss = (total: number, vulnerability: NmapVulnerability) => {
-  return total + Number.parseFloat(vulnerability.cvss);
-};
+const sumCvss = (total: number, vulnerability: NmapVulnerability) =>
+  total + Number.parseFloat(vulnerability.cvss);
 
-const orderByCvss = (a: NmapOpenPort, b: NmapOpenPort) => {
-  return (
-    b.service.vulnerabilities.reduce(sumCvss, 0) -
-    a.service.vulnerabilities.reduce(sumCvss, 0)
-  );
-};
+const orderByCvss = (a: NmapOpenPort, b: NmapOpenPort) =>
+  b.service.vulnerabilities.reduce(sumCvss, 0) -
+  a.service.vulnerabilities.reduce(sumCvss, 0);
 
-const hasExploit = (open_port: NmapOpenPort) => {
-  return (
-    open_port.service.vulnerabilities.filter(
-      (vulnerability) => vulnerability.is_exploit
-    ).length > 0
-  );
-};
+const hasExploit = (service: NmapService) =>
+  service.vulnerabilities.filter((vulnerability) => vulnerability.is_exploit)
+    .length > 0;
 
-const NmapBadge = (open_port: NmapOpenPort) => {
-  const max = open_port.service.vulnerabilities.reduce(sumCvss, 0);
+const NmapBadge = (service: NmapService) => {
+  const max = service.vulnerabilities.reduce(sumCvss, 0);
   const variant =
-    !hasExploit(open_port) && max > 5 * open_port.service.vulnerabilities.length
+    !hasExploit(service) && max > 5 * service.vulnerabilities.length
       ? "warning"
-      : hasExploit(open_port) &&
-        max > 5 * open_port.service.vulnerabilities.length
+      : hasExploit(service) && max > 5 * service.vulnerabilities.length
       ? "danger"
       : "info";
   return (
@@ -42,6 +34,36 @@ const NmapBadge = (open_port: NmapOpenPort) => {
 
 type NmapProps = { data: NmapReport; url: string };
 
+const columns = [
+  {
+    name: "severty",
+    label: "Sévérité",
+    render: (service) => <NmapBadge {...service} />,
+  },
+  {
+    name: "service",
+    label: "Service à l'écoute",
+    render: (service) => `${service.name} (port:${service.id})`,
+  },
+  {
+    name: "vulnerability",
+    label: "Vulnérabilités",
+    render: (service) =>
+      service.vulnerabilities.map((vulnerability) => (
+        <div key={vulnerability.id}>
+          <a
+            target="_blank"
+            href={`https://vulners.com/cve/${vulnerability.id}`}
+            rel="noopener noreferrer"
+          >
+            {vulnerability.id}
+          </a>
+          <br />
+        </div>
+      )),
+  },
+];
+
 export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
   const open_ports = data && data.open_ports.length > 0 ? data.open_ports : [];
   data.open_ports.sort(orderByCvss);
@@ -50,73 +72,33 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
       <Panel
         title="Nmap"
         url={url}
-        isExternal={true}
-        info={
+        isExternal
+        info={(
           <span>
             Scan des vulnérabiliés nmap{" "}
             <a
               style={{ color: "white" }}
-              href={"https://" + data.host}
+              href={`https://${data.host}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {"https://" + data.host}
+              {`https://${data.host}`}
             </a>
           </span>
-        }
+        )}
       >
         <h3>
-          Scan Summary : <Grade small grade={data.grade} />
+          Scan Summary : 
+{' '}
+<Grade small grade={data.grade} />
         </h3>
-        <br />
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th style={{ width: 100 }} className="text-center">
-                Sévérité
-              </th>
-              <th>Service à l'écoute</th>
-              <th>Vulnérabilités</th>
-            </tr>
-          </thead>
-          <tbody>
-            {open_ports.map((open_port, i: number) => {
-              return (
-                <tr key={open_port.service.name + i}>
-                  <td className="text-center">
-                    <NmapBadge {...open_port} />
-                  </td>
-                  <td>
-                    {open_port.service.name +
-                      " (port:" +
-                      open_port.service.id +
-                      ")"}
-                  </td>
-                  <td>
-                    {open_port.service.vulnerabilities.map(
-                      (vulnerability, i: number) => {
-                        return (
-                          <p key={vulnerability.id + i}>
-                            <a
-                              target="_blank"
-                              href={
-                                "https://vulners.com/cve/" + vulnerability.id
-                              }
-                              rel="noopener noreferrer"
-                            >
-                              {vulnerability.id}
-                            </a>
-                            <br />
-                          </p>
-                        );
-                      }
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
+        <Table
+          caption="NMap"
+          captionPosition="none"
+          columns={columns}
+          data={open_ports.map((x) => x.service)}
+          rowKey="id"
+        />
       </Panel>
     )) ||
     null

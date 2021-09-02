@@ -17,11 +17,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "noEmit": true
   },
   "include": [
     "../../types/index.d.ts",
     "src"
+  ],
+  "exclude": [
+    "src/__tests__"
   ]
 }

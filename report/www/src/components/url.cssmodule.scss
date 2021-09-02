@@ -1,0 +1,18 @@
+.badge {
+    margin-right: 4px;
+}
+
+.clock {
+    margin-left: 4px;
+}
+
+.image {
+    position: absolute;
+    top: 28px;
+    right: 48px;
+
+    img {
+        border: 1px solid var(--dark);
+        max-height: 80px;
+    }
+}

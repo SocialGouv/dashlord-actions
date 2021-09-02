@@ -73,12 +73,8 @@ export const Gauge: React.FC<GaugeProps> = (props) => {
 
   return (
     <>
-      <canvas
-        ref={canvas}
-        className="gauge-canvas"
-        {...passThroughProps}
-      ></canvas>
-      <span ref={span} style={{ display: "none" }}></span>
+      <canvas ref={canvas} className="gauge-canvas" {...passThroughProps} />
+      <span ref={span} style={{ display: "none" }} />
     </>
   );
 };
@@ -98,7 +94,7 @@ Gauge.defaultProps = {
       [0.0, "#FF4E42"],
       [0.5, "#ffa400"],
       [0.9, "#0CCE6B"],
-      //[0.90, "#ffa400"],
+      // [0.90, "#ffa400"],
       //  [0.3, "#ff0000"],
       // [0.5, "#f9c802"],
       [1, "#0CCE6B"],
@@ -111,10 +107,10 @@ Gauge.defaultProps = {
       strokeWidth: 0.035,
       color: "#333",
     },
-    //limitMax: false,
-    //limitMin: false,
-    //colorStart: "red",
-    //colorStop: "pink",
+    // limitMax: false,
+    // limitMin: false,
+    // colorStart: "red",
+    // colorStop: "pink",
     strokeColor: "#FF4E42",
     generateGradient: true,
     highDpiSupport: true,

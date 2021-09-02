@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Table, Badge } from "react-bootstrap";
+import { Table } from "@dataesr/react-dsfr";
+import Badge from "./Badge";
 
 import { smallUrl } from "../utils";
 import { Panel } from "./Panel";
@@ -29,7 +30,7 @@ const HttpRowBadge = (row: HttpTestReport) => {
 // some help for remediation
 const helpDocs = {
   "content-security-policy": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -37,19 +38,21 @@ const helpDocs = {
       >
         Doc Content Security Policy
       </a>
-      . L'extension{" "}
+      . L'extension
+{" "}
       <a
         href="https://github.com/april/laboratory"
         rel="noopener noreferrer"
         target="_blank"
       >
         github.com/april/laboratory
-      </a>{" "}
+      </a>
+{" "}
       permet de générer la CSP pour votre application.
-    </React.Fragment>
+    </>
   ),
   "x-frame-options": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -58,10 +61,10 @@ const helpDocs = {
         Doc header X-Frame-Options
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   "strict-transport-security": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -70,10 +73,10 @@ const helpDocs = {
         Doc header Strict-Transport-Security (HSTS)
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   "x-content-type-options": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -82,10 +85,10 @@ const helpDocs = {
         Doc header X-Content-Type-Options
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   "x-xss-protection": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -94,10 +97,10 @@ const helpDocs = {
         Doc header X-XSS-Protection
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   cookies: (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -106,10 +109,10 @@ const helpDocs = {
         OWASP Session Management Cheat Sheet
       </a>
       .
-    </React.Fragment>
+    </>
   ),
   "subresource-integrity": (
-    <React.Fragment>
+    <>
       <a
         rel="noopener noreferrer"
         target="_blank"
@@ -118,9 +121,23 @@ const helpDocs = {
         Doc Subresource Integrity
       </a>
       .
-    </React.Fragment>
+    </>
   ),
 };
+
+const columns = [
+  {
+    name: "impact",
+    label: "Impact",
+    render: (failure) => <HttpRowBadge {...failure} />,
+  },
+  { name: "score_description", label: "Description" },
+  {
+    name: "documentation",
+    label: "Documentation",
+    render: ({ name }) => helpDocs[name] || "-",
+  },
+];
 
 export const HTTP = ({ data }: HTTPProps) => {
   if (!data.url) {
@@ -134,51 +151,29 @@ export const HTTP = ({ data }: HTTPProps) => {
     .map((key) => data.details[key]);
   failures.sort((a, b) => a.score_modifier - b.score_modifier);
 
-  return (
-    (url && (
-      <Panel
-        title="HTTP"
-        info="Informations collectées par le Mozilla HTTP observatory"
-        url={url}
-        isExternal={true}
-      >
-        <h3>
-          Scan Summary : <Grade small grade={data.grade} />
-        </h3>
-        <br />
-        {(failures.length && (
-          <React.Fragment>
-            <br />
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th style={{ width: 100 }}>impact</th>
-                  <th>description</th>
-                  <th>documentation</th>
-                </tr>
-              </thead>
-              <tbody>
-                {failures.map((failure, i) => (
-                  <tr key={failure.name + i}>
-                    <td>
-                      <HttpRowBadge {...failure} />
-                    </td>
-                    <td>{failure.score_description}</td>
-                    <td>
-                      {
-                        // @ts-expect-error
-                        helpDocs[failure.name] || "-"
-                      }
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </React.Fragment>
-        )) ||
-          null}
-      </Panel>
-    )) ||
-    null
+  return url ? (
+    <Panel
+      title="HTTP"
+      info="Informations collectées par le Mozilla HTTP observatory"
+      url={url}
+      isExternal
+    >
+      <h3>
+        Scan Summary : 
+{' '}
+<Grade small grade={data.grade} />
+      </h3>
+      {failures.length && (
+        <Table
+          caption="HTTP"
+          captionPosition="none"
+          rowKey="name"
+          columns={columns}
+          data={failures}
+        />
+      )}
+    </Panel>
+  ) : (
+    <></>
   );
 };

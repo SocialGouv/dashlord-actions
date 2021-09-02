@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 
 import { Dashboard } from "../components/Dashboard";
 
-import report from "./report.json";
+import report from "../report.json";
 
 const mockSampleConfig = JSON.parse(
   jest
@@ -15,7 +15,12 @@ const mockSampleConfig = JSON.parse(
 );
 
 // prevent empty table due to resize detection
-jest.mock("react-virtualized-auto-sizer", () => ({children}) => children({width:1000, height:1000}))
+jest.mock(
+  "react-virtualized-auto-sizer",
+  () =>
+    ({ children }) =>
+      children({ width: 1000, height: 1000 })
+);
 
 it("Should render empty Dashboard", () => {
   const props = {};
@@ -28,7 +33,7 @@ it("Should render full Dashboard", () => {
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Dashboard {...props} />{" "}
+        <Dashboard {...props} />
       </MemoryRouter>
     )
     .toJSON();
@@ -48,7 +53,7 @@ describe("Tools config", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <Dashboard {...props} />{" "}
+          <Dashboard {...props} />
         </MemoryRouter>
       )
       .toJSON();

@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Table, Badge } from "react-bootstrap";
-
+import { Table } from "@dataesr/react-dsfr";
+import Badge from "./Badge";
 import { Panel } from "./Panel";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
@@ -35,6 +35,15 @@ const OwaspBadge = (row: ZapReportSiteAlert) => {
 
 type OwaspProps = { data: ZapReport; url: string };
 
+const columns = [
+  {
+    name: "risk",
+    label: "Risk/Confidence",
+    render: (alert) => <OwaspBadge {...alert} />,
+  },
+  { name: "name", label: "Name" },
+];
+
 export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
   const alerts =
     (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
@@ -42,33 +51,18 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
   return (
     (alerts.length && (
       <Panel
-        isExternal={true}
+        isExternal
         title="OWASP"
         url={url}
         info="Scan de vulnérabiliés OWASP baseline"
       >
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th style={{ width: 100 }} className="text-center">
-                risk/confidence
-              </th>
-              <th>name</th>
-            </tr>
-          </thead>
-          <tbody>
-            {alerts.map((alert, i: number) => {
-              return (
-                <tr key={alert.name + i}>
-                  <td className="text-center">
-                    <OwaspBadge {...alert} />
-                  </td>
-                  <td>{alert.name}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
+        <Table
+          caption="Owasp"
+          captionPosition="none"
+          columns={columns}
+          data={alerts}
+          rowKey="name"
+        />
       </Panel>
     )) ||
     null

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Row, Col, Alert, Card } from "react-bootstrap";
+import { Row, Col, Alert } from "@dataesr/react-dsfr";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 
@@ -7,6 +7,9 @@ import { Panel } from "./Panel";
 import { Gauge } from "./Gauge";
 import { Grade } from "./Grade";
 import { smallUrl } from "../utils";
+import Card from "./Card";
+
+import styles from "./updownIo.cssmodule.scss";
 
 type UpDownIoProps = { data: UpDownReport; url: string };
 
@@ -19,36 +22,34 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
         title="Temps de réponse"
         info="Informations collectées par updown.io"
         url={urlUpdownio}
-        isExternal={true}
+        isExternal
       >
         <Row>
-          <Col xs={12} md={4} className="text-center mb-3">
-            <Card>
+          <Col n="12 sm-12 md-6" className="fr-mb-3w">
+            <Card
+              title="Taux de disponibilité sur un mois glissant"
+              value={`${data.uptime}%`}
+            >
               <Gauge
-                width={100}
-                height={20}
+                width={120}
+                height={80}
                 value={data.uptime * 100}
                 minValue={0}
                 maxValue={100}
                 animationSpeed={32}
               />
-              <Card.Body>
-                <Card.Title>
-                  Taux de disponibilité sur un mois glissant
-                </Card.Title>
-                <Card.Title style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                  {data.uptime + "%"}
-                </Card.Title>
-              </Card.Body>
             </Card>
           </Col>
 
           {data.metrics && (
-            <Col xs={12} md={4} className="text-center mb-3">
-              <Card>
+            <Col n="12 sm-12 md-6" className="fr-mb-3w">
+              <Card
+                title="Temps de réponse"
+                value={`${data.metrics.timings.total}ms`}
+              >
                 <Gauge
-                  width={100}
-                  height={20}
+                  width={120}
+                  height={60}
                   value={Math.max(0, data.metrics.timings.total)}
                   minValue={0}
                   maxValue={1000}
@@ -62,47 +63,42 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                     ],
                   }}
                 />
-                <Card.Body>
-                  <Card.Title>Temps de réponse</Card.Title>
-                  <Card.Title style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                    {data.metrics.timings.total + "ms"}
-                  </Card.Title>
-                </Card.Body>
               </Card>
             </Col>
           )}
-
-          <Col xs={12} md={4} className="text-center mb-3">
+        </Row>
+        <Row className={styles.values}>
+          <Col n="12 sm-12 md-6" className="fr-mb-3w">
             {data?.metrics?.apdex !== undefined && (
-              <Card style={{ marginBottom: 10 }}>
-                <Card.Body style={{ padding: 5 }}>
-                  <Card.Title>APDEX</Card.Title>
-                  <div>
-                    <Grade grade={data.apdexGrade} label={data.metrics.apdex} />
-                  </div>
-                </Card.Body>
-              </Card>
+              <Card
+                title="APDEX"
+                value={
+                  <Grade grade={data.apdexGrade} label={data.metrics.apdex} />
+                }
+              />
             )}
-
+          </Col>
+          <Col n="12 sm-12 md-6" className="fr-mb-3w">
             {data.ssl && (
-              <Card>
-                <Card.Body style={{ padding: 5 }}>
-                  <Card.Title>
+              <Card
+                title={
+                  <>
                     Certificat TLS{" "}
                     {data.ssl.valid ? (
                       <Grade small grade="A+" label="valide" />
                     ) : (
                       <Grade small grade="F" label="invalide" />
                     )}
-                  </Card.Title>
-                  <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-                    expire le{" "}
-                    {format(new Date(data.ssl.expires_at), "dd/MM/yyyy", {
-                      locale: frLocale,
-                    })}
-                  </div>
-                </Card.Body>
-              </Card>
+                  </>
+                }
+                value={`expire le ${format(
+                  new Date(data.ssl.expires_at),
+                  "dd/MM/yyyy",
+                  {
+                    locale: frLocale,
+                  }
+                )}`}
+              />
             )}
           </Col>
         </Row>

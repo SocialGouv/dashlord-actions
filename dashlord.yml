@@ -1,10 +1,13 @@
 title: Test 1
+description: my dashboard
+entity: some entity
+footer: Powered by BetaGouv
 tools:
   screenshot: true
   nmap: true
   zaproxy: true
   wappalyzer: true
-  httpobs: true
+  http: true
   testssl: true
   lighthouse: true
   thirdparties: true

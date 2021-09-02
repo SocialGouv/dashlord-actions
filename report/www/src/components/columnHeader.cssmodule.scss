@@ -1,0 +1,18 @@
+.header {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.tooltip {
+    max-width: 300px;
+}
+
+.info, 
+.warning {
+    cursor: pointer;
+}
+
+.warning {
+    stroke: var(--error);
+    margin-left: 5px;
+}

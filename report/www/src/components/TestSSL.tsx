@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Row, Col, Alert } from "react-bootstrap";
+import { Row, Col, Alert } from "@dataesr/react-dsfr";
 import { Info } from "react-feather";
 
 import { Panel } from "./Panel";
@@ -9,7 +9,8 @@ import { Grade } from "./Grade";
 const sortByKey = (key: string) => (a: any, b: any) => {
   if (a[key] > b[key]) {
     return 1;
-  } else if (a[key] < b[key]) {
+  }
+  if (a[key] < b[key]) {
     return -1;
   }
   return 0;
@@ -37,22 +38,19 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
         title="SSL"
         info="Informations collectées via testssl.sh"
         url={url}
-        isExternal={true}
+        isExternal
       >
         <Row>
           <Col>
             <h3>
-              Scan Summary : <Grade small grade={grade} />
+              Scan Summary : 
+{' '}
+<Grade small grade={grade} />
             </h3>
-            <br />
-            {capReasons.map((reason: any, i: number) => {
-              return (
-                <Alert key={reason.id + i} variant="info">
-                  <Info style={{ marginRight: 5 }} />
-                  {reason.finding}
-                </Alert>
-              );
-            })}
+            {capReasons.length > 0 && <br />}
+            {capReasons.map((reason: any) => (
+              <Alert key={reason.id} type="info" title={reason.finding} />
+            ))}
           </Col>
         </Row>
       </Panel>

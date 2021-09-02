@@ -1,10 +1,14 @@
 import * as React from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as H from "history";
+import Badge from "./Badge";
 
-import { Badge } from "react-bootstrap";
+import styles from "./grade.cssmodule.scss";
 
 type GradeProps = {
   grade: string;
   label?: string | number | null;
+  to?: H.LocationDescriptor<unknown>;
   small?: boolean;
 };
 
@@ -17,16 +21,19 @@ const grades = {
   F: "danger",
 } as Record<string, string>;
 
-export const Grade: React.FC<GradeProps> = ({ grade, label, small }) => {
-  const newGrade = (grade + "").substring(0, 1).toUpperCase();
+export const Grade: React.FC<GradeProps> = ({ grade, label, to, small }) => {
+  const newGrade = `${grade}`.substring(0, 1).toUpperCase();
   const variant = grades[newGrade] || "danger";
+
+  const title = label !== undefined ? label : grade;
 
   return (
     <Badge
       variant={variant}
-      style={{ minWidth: 60, fontSize: small ? "1.1em" : "2em" }}
+      className={styles[small ? "small" : "big"]}
+      to={to}
     >
-      {label !== undefined ? label : grade}
+      {title}
     </Badge>
   );
 };
