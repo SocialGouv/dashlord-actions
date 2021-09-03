@@ -76,10 +76,9 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
             ))}
           {updateDate && (
             <>
-              <Clock size={12} />
+              <Clock size={16} className={styles.clockIcon}/>
               <span title={updateDate} className={styles.clock}>
-                Mise à jour il y a :
-{" "}
+                Mise à jour il y a :{" "}
                 {formatDistanceToNow(new Date(updateDate), {
                   locale: frLocale,
                 })}

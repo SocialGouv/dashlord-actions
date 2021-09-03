@@ -27,9 +27,4 @@ module.exports = (apiUrl) => ({
       },
     ].concat(baseConfig.module.rules),
   },
-  plugins: baseConfig.plugins.concat([
-    new webpack.DefinePlugin({
-      __PUBLIC_URL__: "'http://localhost:3000'",
-    }),
-  ]),
 });
