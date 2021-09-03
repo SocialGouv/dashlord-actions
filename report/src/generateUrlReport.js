@@ -111,7 +111,7 @@ const lhrCleanup = (result) => {
 /**
  * Minify wget spider report
  */
-const wget404Cleanup = (result) => result.broken
+const wget404Cleanup = (result) => result && result.broken
 
 
 //@ts-expect-error
