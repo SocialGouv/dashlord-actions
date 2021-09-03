@@ -13527,6 +13527,103 @@
     "repositories": [
       "socialgouv/www"
     ],
+    "404": [
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.fabrique.social.gouv.fr",
+          "port": null,
+          "hostname": "www.fabrique.social.gouv.fr",
+          "hash": null,
+          "search": null,
+          "query": null,
+          "pathname": "/startups/code-du-travail-numerique/kickoff/genese",
+          "path": "/startups/code-du-travail-numerique/kickoff/genese",
+          "href": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/kickoff/genese"
+        },
+        "link": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/kickoff/genese",
+        "line": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/kickoff/genese",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.fabrique.social.gouv.fr",
+          "port": null,
+          "hostname": "www.fabrique.social.gouv.fr",
+          "hash": null,
+          "search": null,
+          "query": null,
+          "pathname": "/faq/beta.gouv.fr",
+          "path": "/faq/beta.gouv.fr",
+          "href": "https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr"
+        },
+        "link": "https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr",
+        "line": "https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.fabrique.social.gouv.fr",
+          "port": null,
+          "hostname": "www.fabrique.social.gouv.fr",
+          "hash": null,
+          "search": null,
+          "query": null,
+          "pathname": "/feed.xml",
+          "path": "/feed.xml",
+          "href": "https://www.fabrique.social.gouv.fr/feed.xml"
+        },
+        "link": "https://www.fabrique.social.gouv.fr/feed.xml",
+        "line": "https://www.fabrique.social.gouv.fr/feed.xml",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.fabrique.social.gouv.fr",
+          "port": null,
+          "hostname": "www.fabrique.social.gouv.fr",
+          "hash": null,
+          "search": null,
+          "query": null,
+          "pathname": "/startups/code-du-travail-numerique/sdr",
+          "path": "/startups/code-du-travail-numerique/sdr",
+          "href": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/sdr"
+        },
+        "link": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/sdr",
+        "line": "https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/sdr",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.fabrique.social.gouv.fr",
+          "port": null,
+          "hostname": "www.fabrique.social.gouv.fr",
+          "hash": null,
+          "search": null,
+          "query": null,
+          "pathname": "/startups/ramses/",
+          "path": "/startups/ramses/",
+          "href": "https://www.fabrique.social.gouv.fr/startups/ramses/"
+        },
+        "link": "https://www.fabrique.social.gouv.fr/startups/ramses/",
+        "line": "https://www.fabrique.social.gouv.fr/startups/ramses/",
+        "broken": true
+      }
+    ],
     "http": {
       "url": "https://www.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -15931,7 +16028,8 @@
       "lighthouse_seoGrade": "A",
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
-      "statsGrade": "F"
+      "statsGrade": "F",
+      "404": 5
     }
   },
   {

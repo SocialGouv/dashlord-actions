@@ -301,13 +301,13 @@ Array [
         </button>
       </h3>
       <div
-        className="fr-table"
+        className="fr-table fr-table--no-caption"
       >
         <table>
           <caption
             data-testid="table-caption"
           >
-            
+            Dependabot results
           </caption>
           <thead>
             <tr>
@@ -1641,6 +1641,72 @@ Array [
           F
         </button>
       </h3>
+    </div>
+  </div>,
+  <div
+    id="404"
+  />,
+  <div
+    className=""
+  >
+    <div>
+      <h5>
+        Erreurs 404
+      </h5>
+      <span>
+        Pages introuvables
+      </span>
+    </div>
+    <div>
+      <div
+        className="fr-table fr-table--no-caption"
+      >
+        <table>
+          <caption
+            data-testid="table-caption"
+          >
+            Erreurs 404
+          </caption>
+          <thead>
+            <tr>
+              <th
+                className=""
+                onClick={[Function]}
+                scope="col"
+              >
+                URL
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/kickoff/genese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/feed.xml
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/sdr
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/ramses/
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>,
 ]
@@ -1941,13 +2007,13 @@ Array [
         </button>
       </h3>
       <div
-        className="fr-table"
+        className="fr-table fr-table--no-caption"
       >
         <table>
           <caption
             data-testid="table-caption"
           >
-            
+            Dependabot results
           </caption>
           <thead>
             <tr>
@@ -3281,6 +3347,72 @@ Array [
           F
         </button>
       </h3>
+    </div>
+  </div>,
+  <div
+    id="404"
+  />,
+  <div
+    className=""
+  >
+    <div>
+      <h5>
+        Erreurs 404
+      </h5>
+      <span>
+        Pages introuvables
+      </span>
+    </div>
+    <div>
+      <div
+        className="fr-table fr-table--no-caption"
+      >
+        <table>
+          <caption
+            data-testid="table-caption"
+          >
+            Erreurs 404
+          </caption>
+          <thead>
+            <tr>
+              <th
+                className=""
+                onClick={[Function]}
+                scope="col"
+              >
+                URL
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/kickoff/genese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/feed.xml
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/code-du-travail-numerique/sdr
+              </td>
+            </tr>
+            <tr>
+              <td>
+                https://www.fabrique.social.gouv.fr/startups/ramses/
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>,
 ]
