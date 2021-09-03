@@ -79,6 +79,7 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
       <Panel
         title="Dependabot"
         url={`${data.url}/security/dependabot`}
+        isExternal={true}
         info={
           <span>
             Scan des vulnérabiliés du dépôt Github
