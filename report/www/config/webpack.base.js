@@ -82,7 +82,7 @@ const getConfig = () => ({
       patterns: ["public"],
     }),
     new webpack.DefinePlugin({
-      __PUBLIC_URL__: "'http://localhost:3000'",
+      __PUBLIC_URL__: `"${ process.env.PUBLIC_URL || ""}"`,
     }),
   ],
   performance: {
