@@ -108,7 +108,7 @@ const lhrCleanup = (result) => {
   };
 };
 
-**
+/**
  * Minify wget spider report
  */
 const wget404Cleanup = (result) => result.broken
