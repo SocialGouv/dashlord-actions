@@ -108,6 +108,12 @@ const lhrCleanup = (result) => {
   };
 };
 
+**
+ * Minify wget spider report
+ */
+const wget404Cleanup = (result) => result.broken
+
+
 //@ts-expect-error
 const requireToolData = (filename) => (basePath) =>
   requireJson(path.join(basePath, filename));
@@ -128,7 +134,8 @@ const tools = {
     /** @param {string} basePath scan directory */
     data: (basePath) => fs.existsSync(path.join(basePath, "screenshot.jpeg")),
   },
-  stats: { data: requireToolData("stats.json") }
+  stats: { data: requireToolData("stats.json") },
+  404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
 };
 
 //@ts-expect-error
