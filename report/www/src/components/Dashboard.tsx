@@ -271,7 +271,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       getColumn(
         "404",
         "404",
-        "Pages introvables",
+        "Pages introuvables",
         undefined,
         "404",
         "404",

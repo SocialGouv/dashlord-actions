@@ -67,6 +67,7 @@ Object {
     "report": "stats.json",
   },
   "summary": Object {
+    "404": 3,
     "codescanCount": 42,
     "codescanGrade": undefined,
   },

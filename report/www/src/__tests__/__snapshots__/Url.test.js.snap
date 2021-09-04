@@ -74,11 +74,11 @@ Array [
         />
       </svg>
       <span
-        title="2021-08-17T22:57:01.853Z"
+        title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
          
-        4 mois
+        5 mois
       </span>
     </p>
     <div>
@@ -146,7 +146,7 @@ Array [
               Accessibility
             </div>
             <div>
-              93%
+              96%
             </div>
           </div>
         </div>
@@ -207,7 +207,7 @@ Array [
               First contentful Paint
             </div>
             <div>
-              1.2s
+              1.5s
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@ Array [
               Time to interactive
             </div>
             <div>
-              3.5s
+              3.4s
             </div>
           </div>
         </div>
@@ -382,206 +382,36 @@ Array [
                 </button>
               </td>
               <td>
-                glob-parent
+                next
               </td>
               <td>
                 <p>
                   <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-28469"
+                    href="https://github.com/vercel/next.js/security/advisories/GHSA-9gr3-7897-pp7m"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    CVE-2020-28469
+                    GHSA-9gr3-7897-pp7m
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-ww39-953v-wcq6"
+                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-39178"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-ww39-953v-wcq6
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                highlight.js
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://github.com/highlightjs/highlight.js/security/advisories/GHSA-7wwv-vh3v-89cq"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-7wwv-vh3v-89cq
+                    CVE-2021-39178
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-7wwv-vh3v-89cq"
+                    href="https://github.com/advisories/GHSA-9gr3-7897-pp7m"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-7wwv-vh3v-89cq
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                browserslist
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23364"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23364
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-w8qv-6jwh-64r5"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-w8qv-6jwh-64r5
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                postcss
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23368
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hwj9-h5mp-3pm3
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                postcss
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23368
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hwj9-h5mp-3pm3
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                path-parse
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23343"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23343
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hj48-42vr-x3v9"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hj48-42vr-x3v9
+                    GHSA-9gr3-7897-pp7m
                   </a>
                   <br />
                 </p>
@@ -640,76 +470,40 @@ Array [
                   onClick={[Function]}
                   type="button"
                 >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                url-parse
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-3664"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-3664
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hh27-ffr2-f2jc"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hh27-ffr2-f2jc
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
                   LOW
                 </button>
               </td>
               <td>
-                highlight.js
+                node-fetch
               </td>
               <td>
                 <p>
                   <a
-                    href="https://github.com/highlightjs/highlight.js/security/advisories/GHSA-vfrc-7r7c-w9mx"
+                    href="https://github.com/node-fetch/node-fetch/security/advisories/GHSA-w7rc-rwvf-8q5r"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-vfrc-7r7c-w9mx
+                    GHSA-w7rc-rwvf-8q5r
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-26237"
+                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-15168"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    CVE-2020-26237
+                    CVE-2020-15168
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-vfrc-7r7c-w9mx"
+                    href="https://github.com/advisories/GHSA-w7rc-rwvf-8q5r"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-vfrc-7r7c-w9mx
+                    GHSA-w7rc-rwvf-8q5r
                   </a>
                   <br />
                 </p>
@@ -762,7 +556,7 @@ Array [
               Taux de disponibilité sur un mois glissant
             </div>
             <div>
-              100%
+              99.909%
             </div>
           </div>
         </div>
@@ -777,7 +571,7 @@ Array [
               Temps de réponse
             </div>
             <div>
-              91ms
+              92ms
             </div>
           </div>
         </div>
@@ -819,7 +613,7 @@ Array [
               </button>
             </div>
             <div>
-              expire le 19/10/2021
+              expire le 30/11/2021
             </div>
           </div>
         </div>
@@ -1377,13 +1171,13 @@ Array [
                 </button>
               </td>
               <td>
-                tech-detect
+                can-i-take-over-dns-fingerprint
               </td>
               <td>
-                Wappalyzer Technology Detection
+                Can I Take Over DNS - Fingerprint
               </td>
               <td>
-                nginx
+                azure
               </td>
             </tr>
             <tr>
@@ -1397,13 +1191,13 @@ Array [
                 </button>
               </td>
               <td>
-                can-i-take-over-dns
+                tech-detect
               </td>
               <td>
-                Can I Take Over DNS - Fingerprint
+                Wappalyzer Technology Detection
               </td>
               <td>
-                azure
+                nginx
               </td>
             </tr>
           </tbody>
@@ -1560,6 +1354,40 @@ Array [
                   target="_blank"
                 >
                   https://webpack.js.org/
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                core-js
+              </td>
+              <td>
+                JavaScript libraries
+              </td>
+              <td>
+                <a
+                  href="https://github.com/zloirock/core-js"
+                  rel="nopoener noreferrer"
+                  target="_blank"
+                >
+                  https://github.com/zloirock/core-js
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wheelio
+              </td>
+              <td>
+                Widgets
+              </td>
+              <td>
+                <a
+                  href="https://wheelio-app.com/"
+                  rel="nopoener noreferrer"
+                  target="_blank"
+                >
+                  https://wheelio-app.com/
                 </a>
               </td>
             </tr>
@@ -1780,11 +1608,11 @@ Array [
         />
       </svg>
       <span
-        title="2021-08-17T22:57:01.853Z"
+        title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
          
-        4 mois
+        5 mois
       </span>
     </p>
     <div>
@@ -1852,7 +1680,7 @@ Array [
               Accessibility
             </div>
             <div>
-              93%
+              96%
             </div>
           </div>
         </div>
@@ -1913,7 +1741,7 @@ Array [
               First contentful Paint
             </div>
             <div>
-              1.2s
+              1.5s
             </div>
           </div>
         </div>
@@ -1925,7 +1753,7 @@ Array [
               Time to interactive
             </div>
             <div>
-              3.5s
+              3.4s
             </div>
           </div>
         </div>
@@ -2088,206 +1916,36 @@ Array [
                 </button>
               </td>
               <td>
-                glob-parent
+                next
               </td>
               <td>
                 <p>
                   <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-28469"
+                    href="https://github.com/vercel/next.js/security/advisories/GHSA-9gr3-7897-pp7m"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    CVE-2020-28469
+                    GHSA-9gr3-7897-pp7m
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-ww39-953v-wcq6"
+                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-39178"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-ww39-953v-wcq6
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                highlight.js
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://github.com/highlightjs/highlight.js/security/advisories/GHSA-7wwv-vh3v-89cq"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-7wwv-vh3v-89cq
+                    CVE-2021-39178
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-7wwv-vh3v-89cq"
+                    href="https://github.com/advisories/GHSA-9gr3-7897-pp7m"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-7wwv-vh3v-89cq
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                browserslist
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23364"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23364
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-w8qv-6jwh-64r5"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-w8qv-6jwh-64r5
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                postcss
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23368
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hwj9-h5mp-3pm3
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                postcss
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23368"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23368
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hwj9-h5mp-3pm3"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hwj9-h5mp-3pm3
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                path-parse
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-23343"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-23343
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hj48-42vr-x3v9"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hj48-42vr-x3v9
+                    GHSA-9gr3-7897-pp7m
                   </a>
                   <br />
                 </p>
@@ -2346,76 +2004,40 @@ Array [
                   onClick={[Function]}
                   type="button"
                 >
-                  MODERATE
-                </button>
-              </td>
-              <td>
-                url-parse
-              </td>
-              <td>
-                <p>
-                  <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2021-3664"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    CVE-2021-3664
-                  </a>
-                  <br />
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/advisories/GHSA-hh27-ffr2-f2jc"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GHSA-hh27-ffr2-f2jc
-                  </a>
-                  <br />
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button
-                  className="w-100"
-                  onClick={[Function]}
-                  type="button"
-                >
                   LOW
                 </button>
               </td>
               <td>
-                highlight.js
+                node-fetch
               </td>
               <td>
                 <p>
                   <a
-                    href="https://github.com/highlightjs/highlight.js/security/advisories/GHSA-vfrc-7r7c-w9mx"
+                    href="https://github.com/node-fetch/node-fetch/security/advisories/GHSA-w7rc-rwvf-8q5r"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-vfrc-7r7c-w9mx
+                    GHSA-w7rc-rwvf-8q5r
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-26237"
+                    href="https://nvd.nist.gov/vuln/detail/CVE-2020-15168"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    CVE-2020-26237
+                    CVE-2020-15168
                   </a>
                   <br />
                 </p>
                 <p>
                   <a
-                    href="https://github.com/advisories/GHSA-vfrc-7r7c-w9mx"
+                    href="https://github.com/advisories/GHSA-w7rc-rwvf-8q5r"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    GHSA-vfrc-7r7c-w9mx
+                    GHSA-w7rc-rwvf-8q5r
                   </a>
                   <br />
                 </p>
@@ -2468,7 +2090,7 @@ Array [
               Taux de disponibilité sur un mois glissant
             </div>
             <div>
-              100%
+              99.909%
             </div>
           </div>
         </div>
@@ -2483,7 +2105,7 @@ Array [
               Temps de réponse
             </div>
             <div>
-              91ms
+              92ms
             </div>
           </div>
         </div>
@@ -2525,7 +2147,7 @@ Array [
               </button>
             </div>
             <div>
-              expire le 19/10/2021
+              expire le 30/11/2021
             </div>
           </div>
         </div>
@@ -3083,13 +2705,13 @@ Array [
                 </button>
               </td>
               <td>
-                tech-detect
+                can-i-take-over-dns-fingerprint
               </td>
               <td>
-                Wappalyzer Technology Detection
+                Can I Take Over DNS - Fingerprint
               </td>
               <td>
-                nginx
+                azure
               </td>
             </tr>
             <tr>
@@ -3103,13 +2725,13 @@ Array [
                 </button>
               </td>
               <td>
-                can-i-take-over-dns
+                tech-detect
               </td>
               <td>
-                Can I Take Over DNS - Fingerprint
+                Wappalyzer Technology Detection
               </td>
               <td>
-                azure
+                nginx
               </td>
             </tr>
           </tbody>
@@ -3266,6 +2888,40 @@ Array [
                   target="_blank"
                 >
                   https://webpack.js.org/
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                core-js
+              </td>
+              <td>
+                JavaScript libraries
+              </td>
+              <td>
+                <a
+                  href="https://github.com/zloirock/core-js"
+                  rel="nopoener noreferrer"
+                  target="_blank"
+                >
+                  https://github.com/zloirock/core-js
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wheelio
+              </td>
+              <td>
+                Widgets
+              </td>
+              <td>
+                <a
+                  href="https://wheelio-app.com/"
+                  rel="nopoener noreferrer"
+                  target="_blank"
+                >
+                  https://wheelio-app.com/
                 </a>
               </td>
             </tr>
@@ -3483,11 +3139,11 @@ Array [
         />
       </svg>
       <span
-        title="2021-08-17T22:57:01.853Z"
+        title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
          
-        4 mois
+        5 mois
       </span>
     </p>
     <div>
