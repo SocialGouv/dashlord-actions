@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should compute summary for some URL report 1`] = `
+Object {
+  "404": 5,
+  "apdex": 1,
+  "apdexGrade": "A",
+  "codescanCount": 0,
+  "codescanGrade": "A",
+  "cookiesCount": 2,
+  "cookiesGrade": "B",
+  "dependabotCount": 4,
+  "dependabotGrade": "D",
+  "httpGrade": "A+",
+  "lighthouse_accessibility": 0.96,
+  "lighthouse_accessibilityGrade": "A",
+  "lighthouse_best-practices": 0.93,
+  "lighthouse_best-practicesGrade": "A",
+  "lighthouse_performance": 0.45,
+  "lighthouse_performanceGrade": "D",
+  "lighthouse_pwa": 0.42,
+  "lighthouse_pwaGrade": "D",
+  "lighthouse_seo": 0.9,
+  "lighthouse_seoGrade": "A",
+  "testsslGrade": "A+",
+  "trackersCount": 0,
+  "trackersGrade": "A",
+  "uptime": 99.909,
+  "uptimeGrade": "A",
+}
+`;

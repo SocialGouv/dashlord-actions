@@ -2,6 +2,7 @@
 
 exports[`generateUrlReport should allow empty/invalid reports 1`] = `
 Object {
+  "404": null,
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
@@ -30,6 +31,11 @@ Object {
 
 exports[`generateUrlReport should generate latest report for a valid url 1`] = `
 Object {
+  "404": Array [
+    1,
+    2,
+    3,
+  ],
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
@@ -61,6 +67,7 @@ Object {
     "report": "stats.json",
   },
   "summary": Object {
+    "404": 3,
     "codescanCount": 42,
     "codescanGrade": undefined,
   },

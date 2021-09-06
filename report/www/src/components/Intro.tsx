@@ -21,22 +21,23 @@ export const Intro: React.FC = () => (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
       <CalloutTitle as="h1">{dashlordConfig.title || "DashLord"}</CalloutTitle>
       <CalloutText>
-        Le tableau de bord aggrège des données techniques issues de plusieurs
-        outils qui évaluent chaque URL.
         <br />
-        L'évaluation des outils ne remplace en aucun cas une expertise manuelle,
+        DashLord compile les données techniques issues de différents outils open-source.
+        <br />
+        Cette évaluation ne remplace en aucun cas une expertise manuelle,
         et seule la page d'accueil du site est ici évaluée.
         <br />
-        Vous pouvez soumettre de nouvelles URLs, proposer des corrections ou
-        consulter la roadmap en{" "}
-        <a
+        Vous pouvez <a
           href="https://github.com/SocialGouv/dashlord/issues/new"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          cliquant ici
-        </a>
-        .
+        >soumettre de nouvelles URLs, proposer des corrections</a> ou <a
+          href="https://github.com/SocialGouv/dashlord/projects/1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >consulter la roadmap</a>.
+        <br/>
+        <br/>
       </CalloutText>
       <Link to="/dashboard">
         <Button>Accéder au tableau de bord</Button>
@@ -58,15 +59,18 @@ export const Intro: React.FC = () => (
         <li>Bonnes pratiques web</li>
         <br />
         <Alert
-          type="info"
+          type="success"
+          title=""
           description="L'audit complet avec les recommandations de correction est disponible pour chaque URL"
         />
         <Alert
-          type="warning"
-          description="Les mesures de performance, sont un instantané, donc pas forcément représentatives"
+          type="info"
+          title=""
+          description="Les mesures de performance sont un instantané, donc pas forcément représentatives"
         />
         <Alert
           type="warning"
+          title=""
           description={
             <span>
               Les mesures d'accessibilité n'abordent pas du tout{" "}
@@ -86,7 +90,7 @@ export const Intro: React.FC = () => (
 
     {isToolEnabled("dependabot") && (
       <Panel title="Dependabot" url="https://dependabot.com/" isExternal>
-        Recense les vulnérabilités de tes dépendances dans ton code
+        Recense les vulnérabilités de tes dépendances dans le code source
         <br />
         <br />
         <a
@@ -94,8 +98,15 @@ export const Intro: React.FC = () => (
           target="_blank"
           href="https://docs.github.com/en/code-security/supply-chain-security/about-alerts-for-vulnerable-dependencies"
         >
-          Scan des vulnérabilités de tes dépendances sur le dépôt Github du code
+          Scan des vulnérabilités des dépendances sur le dépôt Github du code
         </a>
+         <br />
+         <br />
+        <Alert
+          title=""
+          type="info"
+          description="Nécessite d'avoir activé Dependabot sur ses repositories GitHub"
+        />
       </Panel>
     )}
 
@@ -115,7 +126,13 @@ export const Intro: React.FC = () => (
         <li>
           Liste restreinte de langages couverts: C/C++, C#, Go, Java,
           JavaScript/TypeScript, Python
-        </li>
+        </li> <br />
+         <br />
+        <Alert
+          title=""
+          type="info"
+          description="Nécessite d'avoir activé CodeQL sur le repository"
+        />
       </Panel>
     )}
 
@@ -148,6 +165,7 @@ export const Intro: React.FC = () => (
         <li>Bonnes pratiques http</li>
         <br />
         <Alert
+          title=""
           type="info"
           description="L'audit complet avec les recommandations de correction est disponible pour chaque URL"
         />
@@ -176,7 +194,9 @@ export const Intro: React.FC = () => (
         <li>Protocoles disponibles</li>
         <li>Compatibilité navigateurs</li>
         <li>Solidité des clés de chiffrement</li>
+        <br/>
         <Alert
+          title=""
           type="info"
           description="L'audit complet avec les recommandations de correction est disponible pour chaque URL"
         />
@@ -222,11 +242,19 @@ export const Intro: React.FC = () => (
         url="https://updown.io/"
         isExternal
       >
-        Évalue les temps de réponse de son serveur
+        Évalue la qualité de service rendue par le serveur
         <br />
         <br />
-        <li>Disponibilité du site web avec calcul régulier de l'APDEX</li>
+        <li>Temps de réponse</li>
+        <li>Disponibilité</li>
+        <li>Indice de performance : APDEX</li>
         <li>Validité des certificats TLS</li>
+        <br/>
+         <Alert
+          title=""
+          type="info"
+          description="Vous devez disposer d'un compte updown.io et d'une clé API"
+        />
       </Panel>
     )}
 
@@ -258,7 +286,9 @@ export const Intro: React.FC = () => (
         <li>Performances web</li>
         <li>Sécurité</li>
         <li>Vie privée</li>
+        <br/>
         <Alert
+          title=""
           type="warning"
           description="Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs"
         />
@@ -303,6 +333,12 @@ export const Intro: React.FC = () => (
         >
           Beta.gouv.fr
         </a>
+      </Panel>
+    )}
+
+    {isToolEnabled("404") && (
+      <Panel title="Erreurs 404">
+        Explore le site web et détecte les liens brisés.
       </Panel>
     )}
   </>

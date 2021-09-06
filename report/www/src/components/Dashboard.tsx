@@ -266,6 +266,20 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("404")) {
+    columns.push(
+      getColumn(
+        "404",
+        "404",
+        "Pages introuvables",
+        undefined,
+        "404",
+        "404",
+        (summary) => summary['404']
+      )
+    );
+  }
+
   return (
     (report && (
       <Table

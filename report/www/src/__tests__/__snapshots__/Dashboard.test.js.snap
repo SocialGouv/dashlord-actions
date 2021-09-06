@@ -681,6 +681,49 @@ exports[`Should render full Dashboard 1`] = `
             </svg>
           </div>
         </th>
+        <th
+          className="sortable"
+          onClick={[Function]}
+          scope="col"
+        >
+          <div>
+            <span>
+              404
+            </span>
+            <br />
+            <svg
+              fill="none"
+              height={16}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -1014,6 +1057,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -1343,6 +1419,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               A
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>
@@ -1676,6 +1785,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -2005,6 +2147,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               A
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>
@@ -2338,6 +2513,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -2669,6 +2877,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -2727,7 +2968,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              93 %
+              96 %
             </button>
           </div>
         </td>
@@ -2812,7 +3053,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              99 %
             </button>
           </div>
         </td>
@@ -2846,7 +3087,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              11
+              4
             </button>
           </div>
         </td>
@@ -2981,6 +3222,23 @@ exports[`Should render full Dashboard 1`] = `
               type="button"
             >
               F
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className=""
+              onClick={[Function]}
+              type="button"
+            >
+              5
             </button>
           </div>
         </td>
@@ -3315,6 +3573,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -3628,6 +3919,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               F
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>
@@ -3961,6 +4285,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -4290,6 +4647,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               A
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>
@@ -4623,6 +5013,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -4952,6 +5375,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               A
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>
@@ -5285,6 +5741,39 @@ exports[`Should render full Dashboard 1`] = `
             </button>
           </div>
         </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -5598,6 +6087,39 @@ exports[`Should render full Dashboard 1`] = `
             >
               F
             </button>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
       </tr>

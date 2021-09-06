@@ -4,6 +4,7 @@
   "entity": "Ministères sociaux",
   "footer": "Powered by BetaGouv.",
   "tools": {
+    "404": true,
     "screenshot": true,
     "nmap": true,
     "zap": true,

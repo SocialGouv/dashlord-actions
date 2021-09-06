@@ -18,6 +18,7 @@ import { Dependabot } from "./Dependabot";
 import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
 import { Stats } from "./Stats";
+import { Report404 } from "./404";
 
 import styles from "./url.cssmodule.scss";
 
@@ -185,6 +186,12 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         <>
           <Anchor id="stats" />
           <Stats data={report.stats} url={url} />
+        </>
+      )}
+      {isToolEnabled("404") && report['404'] && report['404'].length && (
+        <>
+          <Anchor id="404" />
+          <Report404 data={report['404']}/>
         </>
       )}
     </>

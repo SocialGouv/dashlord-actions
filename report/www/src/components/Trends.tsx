@@ -121,7 +121,8 @@ export const Trends = ({ trends }: { trends: Trends }) => {
               url={`/url/${encodeURIComponent(url)}`}
             >
               <Table
-                caption=""
+                caption="Evolution"
+                captionPosition="none"
                 columns={columns}
                 data={Object.keys(changes).map((change) => ({
                   key: change,

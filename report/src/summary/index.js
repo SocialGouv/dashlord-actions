@@ -19,6 +19,8 @@ const tools = {
   updownio: (report) => require("./updownio")(report),
   /** @param {StatsReport} report */
   stats: (report) => require("./stats")(report),
+  /** @param {Error404Report} report */
+  404: report => report && report.length && ({ 404: report.length })
 };
 
 /**

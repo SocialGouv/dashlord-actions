@@ -10,6 +10,7 @@ type UrlConfig = {
 };
 
 type DashlordTool =
+  | "404"
   | "http"
   | "lighthouse"
   | "nuclei"
