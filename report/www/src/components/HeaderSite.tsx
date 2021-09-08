@@ -25,17 +25,12 @@ type HeaderSiteProps = {
 export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [path, setPath] = useState(() => location.pathname || "");
   const sortedReport = (report && report.sort(sortByKey("url"))) || [];
   const categories = uniq(
     sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
 
-  useEffect(() => {
-    if (path !== location.pathname) {
-      setPath(location.pathname);
-    }
-  }, [path, setPath, location]);
+  console.log(location.pathname);
   return (
     <>
       <Header>
@@ -66,18 +61,25 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             </ToolItemGroup>
           </Tool>
         </HeaderBody>
-        <HeaderNav path={path}>
+        <HeaderNav>
           <NavItem
             title="Introduction"
-            current={path.startsWith("/intro")}
+            current={location.pathname.startsWith("/intro")}
             asLink={<RouterLink to="/intro" />}
+          />
+          <NavItem
+            title="Dashboard"
+            current={location.pathname === "/"}
+            asLink={<RouterLink to="/" />}
           />
           {(categories.length > 1 && (
             <NavItem title="Catégories">
               {categories.map((category) => (
                 <NavSubItem
                   key={category}
-                  current={path.startsWith(`/category/${category}`)}
+                  current={location.pathname.startsWith(
+                    `/category/${category}`
+                  )}
                   asLink={<RouterLink to={`/category/${category}`} />}
                   title={category}
                 />
@@ -89,7 +91,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             {sortedReport.map((url) => (
               <NavSubItem
                 key={url.url}
-                current={path.startsWith(`/url/${url.url}`)}
+                current={location.pathname.startsWith(`/url/${url.url}`)}
                 asLink={<RouterLink to={`/url/${url.url}`} />}
                 title={smallUrl(url.url)}
               />
@@ -97,17 +99,17 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           </NavItem>
           <NavItem
             title="Technologies"
-            current={path.startsWith("/wappalyzer")}
+            current={location.pathname.startsWith("/wappalyzer")}
             asLink={<RouterLink to="/wappalyzer" />}
           />
           <NavItem
             title="Evolutions"
-            current={path.startsWith("/trends")}
+            current={location.pathname.startsWith("/trends")}
             asLink={<RouterLink to="/trends" />}
           />
           <NavItem
             title="A propos"
-            current={path.startsWith("/about")}
+            current={location.pathname.startsWith("/about")}
             asLink={<RouterLink to="/about" />}
           />
         </HeaderNav>
