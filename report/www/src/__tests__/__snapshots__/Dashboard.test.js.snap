@@ -19,78 +19,13 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          URL
-        </th>
-        <th
-          className="sortable"
-          onClick={[Function]}
-          scope="col"
-        >
-          <div>
-            <span>
-              Accessibilité
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="9"
-                y2="13"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="17"
-                y2="17"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            URL
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -98,42 +33,78 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Performance
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Accessibilité
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="9"
+                  y2="13"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="17"
+                  y2="17"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -141,42 +112,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              SEO
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Performance
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -184,42 +162,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              SSL
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                SEO
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -227,42 +212,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              HTTP
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                SSL
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -270,42 +262,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Disponibilité
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                HTTP
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -313,42 +312,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Apdex
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Disponibilité
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -356,42 +362,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Vulnérabilités
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Apdex
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -399,42 +412,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              CodeQL
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Vulnérabilités
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -442,42 +462,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Nmap
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                CodeQL
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -485,42 +512,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Ports ouverts
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Nmap
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -528,71 +562,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Trackers
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="9"
-                y2="13"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="17"
-                y2="17"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Ports ouverts
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -600,42 +612,78 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Cookies
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Trackers
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="9"
+                  y2="13"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="17"
+                  y2="17"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -643,42 +691,49 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              Stats
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Cookies
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
         <th
@@ -686,42 +741,99 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          <div>
-            <span>
-              404
-            </span>
-            <br />
-            <svg
-              fill="none"
-              height={16}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="12"
-                x2="12"
-                y1="16"
-                y2="12"
-              />
-              <line
-                x1="12"
-                x2="12.01"
-                y1="8"
-                y2="8"
-              />
-            </svg>
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                Stats
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
+          </div>
+        </th>
+        <th
+          className="sortable"
+          onClick={[Function]}
+          scope="col"
+        >
+          <div
+            className="table-column-header"
+          >
+            <div>
+              <span>
+                404
+              </span>
+              <br />
+              <svg
+                fill="none"
+                height={16}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="16"
+                  y2="12"
+                />
+                <line
+                  x1="12"
+                  x2="12.01"
+                  y1="8"
+                  y2="8"
+                />
+              </svg>
+            </div>
+            <span
+              className="empty-sort-icon"
+            />
           </div>
         </th>
       </tr>
@@ -6145,7 +6257,14 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
           onClick={[Function]}
           scope="col"
         >
-          URL
+          <div
+            className="table-column-header"
+          >
+            URL
+            <span
+              className="empty-sort-icon"
+            />
+          </div>
         </th>
       </tr>
     </thead>

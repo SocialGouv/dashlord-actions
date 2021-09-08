@@ -16,7 +16,6 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(baseConfig.context, "dist"),
     headers: {
       "Access-Control-Allow-Origin": "*",
     },

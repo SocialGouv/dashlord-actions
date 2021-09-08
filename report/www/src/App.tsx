@@ -19,6 +19,8 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { About } from "./components/About";
 import { WappalyzerDashboard } from "./components/WappalyzerDashboard";
 
+import "./colors.css";
+
 const report: DashLordReport = require("./report.json");
 const trends: Trends = require("./trends.json");
 
@@ -40,8 +42,12 @@ const CategoryRoute: React.FC<CategoryRouteProps> = (props) => {
       {urls.length ? (
         <>
           <h3>
-            {category} : {urls.length} urls
-          </h3>
+            {category}
+{' '}
+:{urls.length}
+{' '}
+urls
+</h3>
           <Dashboard report={urls} />
         </>
       ) : (
@@ -65,8 +71,12 @@ const TagRoute: React.FC<TagRouteProps> = (props) => {
     <>
       <br />
       <h3>
-        {tag} : {urls.length} urls
-      </h3>
+        {tag}
+{' '}
+:{urls.length}
+{' '}
+urls
+</h3>
       <Dashboard report={urls} />
     </>
   );

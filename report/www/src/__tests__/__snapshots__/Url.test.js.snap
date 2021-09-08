@@ -301,14 +301,12 @@ Array [
         </button>
       </h3>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Dependabot results
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -316,21 +314,33 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Sévérité
+                <div
+                  className="table-column-header"
+                >
+                  Sévérité
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Dépendance vulnérable
+                <div
+                  className="table-column-header"
+                >
+                  Dépendance vulnérable
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Vulnérabilités
+                <div
+                  className="table-column-header"
+                >
+                  Vulnérabilités
+                </div>
               </th>
             </tr>
           </thead>
@@ -721,14 +731,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Cookies
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -736,28 +744,44 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Cookies
+                <div
+                  className="table-column-header"
+                >
+                  Cookies
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Domaine
+                <div
+                  className="table-column-header"
+                >
+                  Domaine
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                HTTP Only
+                <div
+                  className="table-column-header"
+                >
+                  HTTP Only
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Secure
+                <div
+                  className="table-column-header"
+                >
+                  Secure
+                </div>
               </th>
             </tr>
           </thead>
@@ -794,14 +818,12 @@ Array [
         </table>
       </div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            End Points
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -809,35 +831,55 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Flag
+                <div
+                  className="table-column-header"
+                >
+                  Flag
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Hostname
+                <div
+                  className="table-column-header"
+                >
+                  Hostname
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                IP
+                <div
+                  className="table-column-header"
+                >
+                  IP
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                City
+                <div
+                  className="table-column-header"
+                >
+                  City
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Country
+                <div
+                  className="table-column-header"
+                >
+                  Country
+                </div>
               </th>
             </tr>
           </thead>
@@ -913,14 +955,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Owasp
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -928,14 +968,22 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Risk/Confidence
+                <div
+                  className="table-column-header"
+                >
+                  Risk/Confidence
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
             </tr>
           </thead>
@@ -1080,6 +1128,34 @@ Array [
                 Base64 Disclosure
               </td>
             </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Information Disclosure - Suspicious Comments
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Timestamp Disclosure - Unix
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -1101,14 +1177,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Nuclei
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -1116,28 +1190,44 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Séverité
+                <div
+                  className="table-column-header"
+                >
+                  Séverité
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                id
+                <div
+                  className="table-column-header"
+                >
+                  id
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Matcher
+                <div
+                  className="table-column-header"
+                >
+                  Matcher
+                </div>
               </th>
             </tr>
           </thead>
@@ -1221,14 +1311,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Wappalyzer
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -1236,21 +1324,33 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Categories
+                <div
+                  className="table-column-header"
+                >
+                  Categories
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Website
+                <div
+                  className="table-column-header"
+                >
+                  Website
+                </div>
               </th>
             </tr>
           </thead>
@@ -1487,14 +1587,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Erreurs 404
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -1502,7 +1600,11 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                URL
+                <div
+                  className="table-column-header"
+                >
+                  URL
+                </div>
               </th>
             </tr>
           </thead>
@@ -1835,14 +1937,12 @@ Array [
         </button>
       </h3>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Dependabot results
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -1850,21 +1950,33 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Sévérité
+                <div
+                  className="table-column-header"
+                >
+                  Sévérité
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Dépendance vulnérable
+                <div
+                  className="table-column-header"
+                >
+                  Dépendance vulnérable
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Vulnérabilités
+                <div
+                  className="table-column-header"
+                >
+                  Vulnérabilités
+                </div>
               </th>
             </tr>
           </thead>
@@ -2255,14 +2367,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Cookies
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -2270,28 +2380,44 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Cookies
+                <div
+                  className="table-column-header"
+                >
+                  Cookies
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Domaine
+                <div
+                  className="table-column-header"
+                >
+                  Domaine
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                HTTP Only
+                <div
+                  className="table-column-header"
+                >
+                  HTTP Only
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Secure
+                <div
+                  className="table-column-header"
+                >
+                  Secure
+                </div>
               </th>
             </tr>
           </thead>
@@ -2328,14 +2454,12 @@ Array [
         </table>
       </div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            End Points
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -2343,35 +2467,55 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Flag
+                <div
+                  className="table-column-header"
+                >
+                  Flag
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Hostname
+                <div
+                  className="table-column-header"
+                >
+                  Hostname
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                IP
+                <div
+                  className="table-column-header"
+                >
+                  IP
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                City
+                <div
+                  className="table-column-header"
+                >
+                  City
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Country
+                <div
+                  className="table-column-header"
+                >
+                  Country
+                </div>
               </th>
             </tr>
           </thead>
@@ -2447,14 +2591,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Owasp
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -2462,14 +2604,22 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Risk/Confidence
+                <div
+                  className="table-column-header"
+                >
+                  Risk/Confidence
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
             </tr>
           </thead>
@@ -2614,6 +2764,34 @@ Array [
                 Base64 Disclosure
               </td>
             </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Information Disclosure - Suspicious Comments
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Timestamp Disclosure - Unix
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -2635,14 +2813,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Nuclei
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -2650,28 +2826,44 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Séverité
+                <div
+                  className="table-column-header"
+                >
+                  Séverité
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                id
+                <div
+                  className="table-column-header"
+                >
+                  id
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Matcher
+                <div
+                  className="table-column-header"
+                >
+                  Matcher
+                </div>
               </th>
             </tr>
           </thead>
@@ -2755,14 +2947,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Wappalyzer
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -2770,21 +2960,33 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Categories
+                <div
+                  className="table-column-header"
+                >
+                  Categories
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Website
+                <div
+                  className="table-column-header"
+                >
+                  Website
+                </div>
               </th>
             </tr>
           </thead>
@@ -3021,14 +3223,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Erreurs 404
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -3036,7 +3236,11 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                URL
+                <div
+                  className="table-column-header"
+                >
+                  URL
+                </div>
               </th>
             </tr>
           </thead>
@@ -3179,14 +3383,12 @@ Array [
     </div>
     <div>
       <div
-        className="fr-table fr-table--no-caption"
+        className="fr-table"
       >
         <table>
           <caption
             data-testid="table-caption"
-          >
-            Owasp
-          </caption>
+          />
           <thead>
             <tr>
               <th
@@ -3194,14 +3396,22 @@ Array [
                 onClick={[Function]}
                 scope="col"
               >
-                Risk/Confidence
+                <div
+                  className="table-column-header"
+                >
+                  Risk/Confidence
+                </div>
               </th>
               <th
                 className=""
                 onClick={[Function]}
                 scope="col"
               >
-                Name
+                <div
+                  className="table-column-header"
+                >
+                  Name
+                </div>
               </th>
             </tr>
           </thead>
@@ -3344,6 +3554,34 @@ Array [
               </td>
               <td>
                 Base64 Disclosure
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Information Disclosure - Suspicious Comments
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  className="w-100"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Informational (Low)
+                </button>
+              </td>
+              <td>
+                Timestamp Disclosure - Unix
               </td>
             </tr>
           </tbody>

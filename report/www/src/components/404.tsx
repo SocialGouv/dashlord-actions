@@ -15,8 +15,6 @@ export const Report404: React.FC<WappalyzerProps> = ({ data }) =>
   (data && data.length && (
     <Panel title="Erreurs 404" info="Pages introuvables">
       <Table
-        caption="Erreurs 404"
-        captionPosition="none"
         rowKey="name"
         columns={columns}
         data={data}
