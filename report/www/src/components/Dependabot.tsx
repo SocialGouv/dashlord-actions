@@ -98,7 +98,7 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
         <h3>
           Scan Summary : <Grade small grade={data.grade} />
         </h3>
-        <Table columns={columns} data={nodes} rowKey="createdAt" caption="Dependabot results" captionPosition="none"/>
+        <Table columns={columns} data={nodes} rowKey="createdAt"/>
       </Panel>
     )) ||
     null

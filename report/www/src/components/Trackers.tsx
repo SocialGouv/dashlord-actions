@@ -27,8 +27,6 @@ const cookiesColumns = [
 const CookiesTable: React.FC<CookiesTableProps> = ({ cookies }) =>
   (cookies && cookies.length && (
     <Table
-      caption="Cookies"
-      captionPosition="none"
       rowKey="name"
       columns={cookiesColumns}
       data={cookies}
@@ -54,8 +52,6 @@ const trackersColumns = [
 const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) =>
   (trackers && trackers.length && (
     <Table
-      caption="Trackers"
-      captionPosition="none"
       columns={trackersColumns}
       data={trackers}
       rowKey="url"
@@ -107,8 +103,6 @@ const endPointsColumns = [
 const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
   (endpoints && endpoints.length && (
     <Table
-      caption="End Points"
-      captionPosition="none"
       columns={endPointsColumns}
       data={endpoints}
       rowKey="ip"
