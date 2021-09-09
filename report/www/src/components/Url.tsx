@@ -193,7 +193,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           <Anchor id="404" />
           <Report404 data={report['404']}/>
         </>
-      )}
+      ) || null}
     </>
   );
 };
