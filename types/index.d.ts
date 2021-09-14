@@ -22,7 +22,8 @@ type DashlordTool =
   | "dependabot"
   | "codescan"
   | "zap"
-  | "stats";
+  | "stats"
+  | "screenshot";
 
 type DashlordConfig = {
   title: string;

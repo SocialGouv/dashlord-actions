@@ -2,17 +2,7 @@ const fs = require("fs");
 const core = require("@actions/core");
 const YAML = require("yaml");
 
-const getOutputs = () => {
-  const urlsInput =
-    core.getInput("url") &&
-    core
-      .getInput("url")
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
-
-  core.info(`urlsInput :${urlsInput}`);
-
+const getDashlordConfig = () => {
   let dashlordConfig;
   if (fs.existsSync("./dashlord.yml")) {
     core.info('----')
@@ -30,26 +20,43 @@ const getOutputs = () => {
   }
 
   core.info(JSON.stringify(dashlordConfig))
+  return dashlordConfig
+}
 
-  const getSiteTools = (site) => {
-    if (!dashlordConfig.tools) {
-      return {}
-    }
-    if (!site.tools) {
-      return dashlordConfig.tools;
-    }
-    return Object.keys(dashlordConfig.tools).reduce((siteTools, tool) => {
-      // tool can be disabled at global or site level
-      const isToolDisabled =
-        dashlordConfig.tools[tool] === false || site.tools[tool] === false;
-      return {
-        ...siteTools,
-        [tool]: !isToolDisabled,
-      };
-    }, {});
-  };
+const getSiteTools = (site) => {
+  core.info(`site=${JSON.stringify(site)}`)
+  core.info(`site.tools=${JSON.stringify(site.tools)}`)
+  let dashlordConfig = getDashlordConfig();
+  if (!dashlordConfig.tools) {
+    return {}
+  }
+  if (!site.tools) {
+    return dashlordConfig.tools;
+  }
+  return Object.keys(dashlordConfig.tools).reduce((siteTools, tool) => {
+    // tool status can be set at global or site level, if defined at site level and global then site level wins.
+    const isToolDisabled =
+      site.tools[tool] === undefined ? dashlordConfig.tools[tool] === false : site.tools[tool] === false;
+    return {
+      ...siteTools,
+      [tool]: !isToolDisabled,
+    };
+  }, {});
+};
+
+const getOutputs = () => {
+  const urlsInput =
+    core.getInput("url") &&
+    core
+      .getInput("url")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+  core.info(`urlsInput :${urlsInput}`);
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
+  let dashlordConfig = getDashlordConfig();
   const sites = dashlordConfig.urls
     .filter(isValid)
     .filter((url) =>
@@ -83,4 +90,4 @@ if (require.main === module) {
   run();
 }
 
-module.exports = { run, getOutputs };
+module.exports = { run, getOutputs, getSiteTools };
