@@ -21,7 +21,9 @@ type DashlordTool =
   | "dependabot"
   | "codescan"
   | "zap"
-  | "stats";
+  | "stats"
+  | "screenshot"
+  | "404";
 
 type DashlordConfig = {
   title: string;

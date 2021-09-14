@@ -6,7 +6,7 @@ const sampleConfig = jest.requireActual('fs').readFileSync(path.join(__dirname, 
 
 jest.mock("fs");
 
-const { getOutputs } = require("./index");
+const { getOutputs, getSiteTools } = require("./index");
  
 let inputs = {};
 
@@ -50,6 +50,28 @@ describe("should parse dashlord config", () => {
     fs.readFileSync.mockReturnValue(sampleConfig);
     const outputs = getOutputs();
     expect(outputs.sites).toMatchSnapshot();
+  });
+
+    test("and getSiteTools http://chez.com match", async () => {
+    inputs.url = 'http://chez.com';
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const tools = getSiteTools({"url":"http://chez.com","repositories":["chez/chez-ui","chez/chez-api"],"tools":{"screenshot":false,"updownio":false,"stats":false,"testssl":true}});
+    core.info(`tools=${JSON.stringify(tools)}`)
+    expect(tools).toEqual({screenshot: false,
+      nmap: true,
+      zap: true,
+      wappalyzer: true,
+      http: true,
+      testssl: true,
+      lighthouse: true,
+      thirdparties: true,
+      nuclei: false,
+      updownio: false,
+      dependabot: true,
+      codescan: true,
+      stats: false,
+      404: true});
   });
 
 });

@@ -2,10 +2,10 @@ title: Test 1
 tools:
   screenshot: true
   nmap: true
-  zaproxy: true
+  zap: true
   wappalyzer: true
-  httpobs: true
-  testssl: true
+  http: true
+  testssl: false
   lighthouse: true
   thirdparties: true
   nuclei: false
@@ -13,6 +13,7 @@ tools:
   dependabot: true
   codescan: true
   stats: true
+  404: true
 urls:
   - url: https://www.free.fr
     title: Free
@@ -28,4 +29,5 @@ urls:
       screenshot: false
       updownio: false
       stats: false
+      testssl: true
   - url: https://voila.fr
