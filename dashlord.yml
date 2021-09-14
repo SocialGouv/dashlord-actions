@@ -1,4 +1,7 @@
 title: Test 1
+description: my dashboard
+entity: some entity
+footer: Powered by BetaGouv
 tools:
   screenshot: true
   nmap: true

@@ -1,5 +1,5 @@
 declare module 'react-base-table' {
-  import React from 'react'
+  import React from 'react';
 
   export interface ColumnProps<T> {
     key: string
@@ -61,21 +61,22 @@ declare module 'react-base-table' {
   }
   export class SortOrder extends React.Component<SortOrderProps> {
     static ASC: string
+
     static DESC: string
   }
   export class AutoResizer extends React.Component<any> {}
   export class TableHeader extends React.Component<any> {}
   export class TableRow extends React.Component<any> {}
 
-  export const renderElement: any
-  export const normalizeColumns: any
-  export const isObjectEqual: any
-  export const callOrReturn: any
-  export const hasChildren: any
-  export const unflatten: any
-  export const flattenOnKeys: any
-  export const getScrollbarSize: any
-  export const getValue: any
+  export const renderElement: any;
+  export const normalizeColumns: any;
+  export const isObjectEqual: any;
+  export const callOrReturn: any;
+  export const hasChildren: any;
+  export const unflatten: any;
+  export const flattenOnKeys: any;
+  export const getScrollbarSize: any;
+  export const getValue: any;
 
   export type OnColumnSort = ((obj: { column: ColumnProps<any>, key: string, order: string }) => void)
 
@@ -83,7 +84,7 @@ declare module 'react-base-table' {
     [eventName: string]: ((obj: { rowData: T, rowIndex: number, rowKey: string, event: React.MouseEvent }) => any)
   }
 
-  export default class<T> extends React.Component<{
+  export default class <T> extends React.Component<{
     /** Prefix for table's inner className */
     classPrefix?: string
     /** Class name for the table */
@@ -197,33 +198,32 @@ declare module 'react-base-table' {
     /** Get the DOM node of the table */
     getDOMNode(): HTMLTableElement
 
-    /** Get the column manager*/
+    /** Get the column manager */
     getColumnManager(): any
 
-    /** Get internal expandedRowKeys state*/
+    /** Get internal expandedRowKeys state */
     getExpandedRowKeys(): any
 
-    /** Get the expanded state, fallback to normal state if not expandable.*/
+    /** Get the expanded state, fallback to normal state if not expandable. */
     getExpandedState(): any
 
-    /** Get the total height of all rows, including expanded rows.*/
+    /** Get the total height of all rows, including expanded rows. */
     getTotalRowsHeight(): any
 
-    /** Get the total width of all columns.*/
+    /** Get the total width of all columns. */
     getTotalColumnsWidth(): any
 
     /** Forcefully re-render the inner Grid component.
-    Calling forceUpdate on Table may not re-render the inner Grid since it uses shallowCompare as a performance optimization. Use this method if you want to manually trigger a re-render. This may be appropriate if the underlying row data has changed but the row sizes themselves have not.*/
+    Calling forceUpdate on Table may not re-render the inner Grid since it uses shallowCompare as a performance optimization. Use this method if you want to manually trigger a re-render. This may be appropriate if the underlying row data has changed but the row sizes themselves have not. */
     forceUpdateTable(): any
 
-
-    /** Scroll to the specified offset. Useful for animating position changes.*/
+    /** Scroll to the specified offset. Useful for animating position changes. */
     scrollToPosition(offset: object): any
 
-    /** Scroll to the specified offset vertically.*/
+    /** Scroll to the specified offset vertically. */
     scrollToTop(scrollTop: number): any
 
-    /** Scroll to the specified offset horizontally.*/
+    /** Scroll to the specified offset horizontally. */
     scrollToLeft(scrollLeft: number): any
 
     /** Scroll to the specified row. By default, the table will scroll as little as possible to ensure the row is visible. You can control the alignment of the row though by specifying an align property. Acceptable values are:
@@ -231,7 +231,7 @@ declare module 'react-base-table' {
     smart - Same as auto if it is less than one viewport away, or it's the same ascenter.
     center - Center align the row within the table.
     end - Align the row to the bottom side of the table.
-    start - Align the row to the top side of the table.*/
+    start - Align the row to the top side of the table. */
     scrollToRow(rowIndex: number, align: string): any
 
     /** Set expandedRowKeys manually. This method is available only if expandedRowKeys is uncontrolled. */

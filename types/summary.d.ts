@@ -29,4 +29,5 @@ type UrlReportSummary = {
   apdex?: number;
   apdexGrade?: string;
   statsGrade?: string;
+  statsCount?: number;
 };

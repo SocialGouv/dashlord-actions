@@ -1,16 +1,18 @@
-import path from "path"
-import * as React from "react";
+import React from "react";
+import path from "path";
 import * as renderer from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
-import { Url } from "../components/Url";
+import Url from "../components/Url";
 
 jest.mock("../components/Gauge", () => ({ Gauge: () => <div>io</div> }));
 jest.useFakeTimers("modern");
 jest.setSystemTime(new Date("2021-04-06").getTime());
 
-const report = require("../report.json").find(
-  (r) => r.url === "https://adoption.gouv.fr"
-);
+global.__PUBLIC_URL__ = "https://jest.demo.com/dashlord";
+
+const TEST_URL = "https://www.fabrique.social.gouv.fr";
+
+const report = require("../report.json").find((r) => r.url === TEST_URL);
 
 const mockSampleConfig = JSON.parse(
   jest
@@ -26,11 +28,11 @@ it("Should render empty Url", () => {
 });
 
 it("Should render full Url", () => {
-  const props = { report, url: "https://adoption.gouv.fr" };
+  const props = { report, url: TEST_URL };
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Url {...props} />{" "}
+        <Url {...props} />
       </MemoryRouter>
     )
     .toJSON();
@@ -42,11 +44,11 @@ it("Should render full Url with screenshot", () => {
     ...report,
     screenshot: true,
   };
-  const props = { report: report2, url: "https://adoption.gouv.fr" };
+  const props = { report: report2, url: TEST_URL };
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Url {...props} />{" "}
+        <Url {...props} />
       </MemoryRouter>
     )
     .toJSON();
@@ -66,7 +68,7 @@ describe("Tools config", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <Url {...props} />{" "}
+          <Url {...props} />
         </MemoryRouter>
       )
       .toJSON();

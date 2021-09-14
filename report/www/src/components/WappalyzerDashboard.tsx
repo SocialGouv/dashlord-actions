@@ -9,37 +9,37 @@ import {
   Legend,
 } from "recharts";
 
-import { Jumbotron, CardColumns } from "react-bootstrap";
+import { Callout, CalloutTitle } from "@dataesr/react-dsfr";
 import uniq from "lodash.uniq";
 
 import { Link } from "react-router-dom";
 
 import { Panel } from "./Panel";
 
+import styles from "./wappalyzerDashboard.cssmodule.scss";
+
 type UsageChartProps = { data: any };
 
-const UsageChart: React.FC<UsageChartProps> = ({ data }) => {
-  return (
-      <BarChart
-        width={300}
-        height={200}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="count" fill="#82ca9d" />
-      </BarChart>
-  );
-};
+const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
+  <BarChart
+    width={300}
+    height={200}
+    data={data}
+    margin={{
+      top: 5,
+      right: 30,
+      left: 20,
+      bottom: 5,
+    }}
+  >
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis dataKey="name" />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <Bar dataKey="count" fill="var(--bf500)" />
+  </BarChart>
+);
 
 const toChartData = (category: WappalyzerParsedCategory) =>
   category.items.map((item) => ({
@@ -115,16 +115,15 @@ const getCategoriesByUrl = (report: DashLordReport) => {
 export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
   const categories = getCategoriesByUrl(report);
   return (
-    <div>
-      <br />
-      <Jumbotron style={{ padding: "2em" }}>
-        <h1>Wappalyzer : technologies détectées</h1>
-      </Jumbotron>
-      <CardColumns>
+    <>
+      <Callout hasInfoIcon={false} className="fr-mb-3w">
+        <CalloutTitle as="h1">Wappalyzer : technologies détectées</CalloutTitle>
+      </Callout>
+      <div className={styles.columns}>
         {categories.map((category) => (
           <Panel key={category.name} title={category.name}>
             <UsageChart data={toChartData(category)} />
-            <br/>
+            <br />
             {category.items.map((item) => (
               <div key={item.name}>
                 <b>
@@ -133,8 +132,11 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {item.name} ({item.urls.length})
-                  </a>
+                    {item.name}
+{' '}
+({item.urls.length}
+)
+</a>
                 </b>
                 <ul>
                   {item.urls.map((url) => (
@@ -148,7 +150,7 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
             ))}
           </Panel>
         ))}
-      </CardColumns>
-    </div>
+      </div>
+    </>
   );
 };

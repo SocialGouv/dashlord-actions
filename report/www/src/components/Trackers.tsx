@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Alert, Table } from "react-bootstrap";
+import { Alert, Table } from "@dataesr/react-dsfr";
 import Flags from "country-flag-icons/react/3x2";
 
 import { smallUrl } from "../utils";
@@ -10,128 +10,108 @@ type TrackersProps = { data: ThirdPartiesReport };
 
 type CookiesTableProps = { cookies: ThirdPartiesReportCookies };
 
+const cookiesColumns = [
+  { name: "name", label: "Cookies" },
+  { name: "domain", label: "Domaine" },
+  {
+    name: "httpOnly",
+    label: "HTTP Only",
+    render: ({ httpOnly }) => (httpOnly ? "✔️" : "❌"),
+  },
+  {
+    name: "secure",
+    label: "Secure",
+    render: ({ secure }) => (secure ? "✔️" : "❌"),
+  },
+];
 const CookiesTable: React.FC<CookiesTableProps> = ({ cookies }) =>
   (cookies && cookies.length && (
-    <Table striped bordered hover style={{ marginBottom: 10 }}>
-      <thead>
-        <tr>
-          <th className="bg-dark text-white" colSpan={4}>
-            Cookies
-          </th>
-        </tr>
-        <tr>
-          <th>name</th>
-          <th>domain</th>
-          <th className="text-center">httpOnly</th>
-          <th className="text-center">secure</th>
-        </tr>
-      </thead>
-      <tbody>
-        {cookies.map((cookie, i: number) => (
-          <tr key={cookie.name + "" + i}>
-            <td>{cookie.name}</td>
-            <td>{cookie.domain}</td>
-            <td className="text-center">{cookie.httpOnly ? "✔️" : "❌"}</td>
-            <td className="text-center">{cookie.secure ? "✔️" : "❌"}</td>
-          </tr>
-        ))}
-      </tbody>
-    </Table>
+    <Table
+      rowKey="name"
+      columns={cookiesColumns}
+      data={cookies}
+    />
   )) ||
   null;
 
 const smallLinkify = (url: string) => (
-  <a href={url}>{smallUrl(url).substring(0, 25) + "..."}</a>
+  <a href={url}>{`${smallUrl(url).substring(0, 25)}...`}</a>
 );
 
 type TrackersTableProps = { trackers: ThirdPartiesReportTrackers };
 
+const trackersColumns = [
+  { name: "type", label: "Type" },
+  { name: "url", label: "URL", render: ({ url }) => smallLinkify(url) },
+  {
+    name: "details",
+    label: "Remédiation",
+    render: ({ details }) => details && details.message,
+  },
+];
 const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) =>
   (trackers && trackers.length && (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th className="bg-dark text-white" colSpan={3}>
-            Third-parties ressources
-          </th>
-        </tr>
-        <tr>
-          <th>type</th>
-          <th>url</th>
-          <th>remédiation</th>
-        </tr>
-      </thead>
-      <tbody>
-        {trackers.map((tracker, i: number) => {
-          return (
-            <tr key={tracker.url + i}>
-              <td>{tracker.type}</td>
-              <td>{smallLinkify(tracker.url)}</td>
-              <td>{tracker.details && tracker.details.message}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+    <Table
+      columns={trackersColumns}
+      data={trackers}
+      rowKey="url"
+    />
   )) ||
   null;
 
 type EndPointsTableProps = { endpoints: ThirdPartiesReportEndpoints };
 
+const endPointsColumns = [
+  {
+    name: "flag",
+    label: "Flag",
+    render: (endpoint) => {
+      if (endpoint.geoip && endpoint.geoip.country) {
+        const Flag = Flags[endpoint.geoip.country.iso_code];
+        return (
+          <Flag style={{ width: 60 }} title={endpoint.geoip.country.names.fr} />
+        );
+      }
+      return null;
+    },
+  },
+  {
+    name: "hostname",
+    label: "Hostname",
+  },
+  {
+    name: "ip",
+    label: "IP",
+  },
+  {
+    name: "city",
+    label: "City",
+    render: (endpoint) =>
+      (endpoint.geoip && endpoint.geoip.city && endpoint.geoip.city.names.fr) ||
+      "?",
+  },
+  {
+    name: "country",
+    label: "Country",
+    render: (endpoint) =>
+      (endpoint.geoip &&
+        endpoint.geoip.country &&
+        endpoint.geoip.country.names.fr) ||
+      "?",
+  },
+];
 const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
   (endpoints && endpoints.length && (
-    <Table striped bordered hover style={{ marginBottom: 10 }}>
-      <thead>
-        <tr>
-          <th style={{ width: 100 }}>Flag</th>
-          <th>Hostname</th>
-          <th>IP</th>
-          <th>City</th>
-          <th>Country</th>
-        </tr>
-      </thead>
-      <tbody>
-        {endpoints.map((endpoint, i: number) => {
-          const Flag =
-            (endpoint.geoip &&
-              endpoint.geoip.country &&
-              Flags[endpoint.geoip.country.iso_code]) ||
-            null;
-          return (
-            <tr key={endpoint.hostname + "-" + endpoint.ip}>
-              <td className="text-center">
-                {Flag && endpoint.geoip && endpoint.geoip.country && (
-                  <Flag
-                    style={{ width: 60 }}
-                    title={endpoint.geoip.country.names.fr}
-                  />
-                )}
-              </td>
-              <td>{endpoint.hostname}</td>
-              <td>{endpoint.ip}</td>
-              <td>
-                {(endpoint.geoip &&
-                  endpoint.geoip.city &&
-                  endpoint.geoip.city.names.fr) ||
-                  "?"}
-              </td>
-
-              <td>
-                {(endpoint.geoip &&
-                  endpoint.geoip.country &&
-                  endpoint.geoip.country.names.fr) ||
-                  "?"}
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+    <Table
+      columns={endPointsColumns}
+      data={endpoints}
+      rowKey="ip"
+    />
   )) ||
   null;
 
 export const Trackers: React.FC<TrackersProps> = ({ data }) => {
-  const hasIssues = [];
+  const hasIssues: (ThirdPartyCookie | ThirdPartyTracker)[] = [];
   if (data.cookies && data.cookies.length) {
     hasIssues.push(...data.cookies);
   }

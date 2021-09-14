@@ -1,0 +1,23 @@
+.badge {
+    margin-right: 4px;
+}
+
+.clockIcon {
+    vertical-align: middle;
+
+}
+.clock {
+    margin-left: 4px;
+    font-size: 0.9rem;
+}
+
+.image {
+    position: absolute;
+    top: 28px;
+    right: 48px;
+
+    img {
+        border: 1px solid var(--dark);
+        max-height: 80px;
+    }
+}
