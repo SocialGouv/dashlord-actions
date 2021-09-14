@@ -37,7 +37,11 @@ const columns = [
     label: "Sévérité",
     render: (alert) => <CodescanBadge {...alert} />,
   },
-  { name: "rule", label: "Règle", render: (alert) => alert.rule.name },
+  {
+    name: "rule",
+    label: "Règle",
+    render: (alert) => alert.rule.name,
+  },
   {
     name: "description",
     label: "Description",
@@ -57,7 +61,7 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
       <Panel
         title="Codescan"
         url={`${data.url}/security/code-scanning`}
-        info={(
+        info={
           <span>
             Scan du code du dépôt Github{" "}
             <a
@@ -69,14 +73,12 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
               {data.url}
             </a>
           </span>
-        )}
+        }
       >
         <h3>
-          Scan Summary : 
-{' '}
-<Grade small grade={data.grade} />
+          Scan Summary : <Grade small grade={data.grade} />
         </h3>
-        <Table columns={columns} data={alerts} />
+        <Table columns={columns} data={alerts} rowKey="rule" />
       </Panel>
     )) ||
     null
