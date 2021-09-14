@@ -23,8 +23,7 @@ type DashlordTool =
   | "codescan"
   | "zap"
   | "stats"
-  | "screenshot"
-  | "404";
+  | "screenshot";
 
 type DashlordConfig = {
   title: string;
