@@ -63,6 +63,9 @@ const getConfig = () => {
   let dashlordConfig = {
     title: "DashLord report",
     urls: [],
+    entity: "",
+    footer: "",
+    description: "",
   };
 
   if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "dashlord.yaml"))) {

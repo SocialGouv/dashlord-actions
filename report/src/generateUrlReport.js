@@ -106,7 +106,13 @@ const lhrCleanup = (result) => {
 };
 
 /**
+ *
  * Minify wget spider report
+ *
+ * @param {{broken?:Wget404Report}} result Lighthouse JSON content
+ *
+ * @returns {Wget404Report|undefined} minified JSON content
+ *
  */
 const wget404Cleanup = (result) => result && result.broken;
 
