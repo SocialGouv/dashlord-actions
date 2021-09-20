@@ -56,10 +56,7 @@ const zapCleanup = (result) =>
  * @returns {NucleiReport} minified JSON content
  */
 const nucleiCleanup = (result, url) =>
-  result &&
-  result.map &&
-  result
-    .map((r) => omit(r, ["request", "response"]))
+  result && result.map && result.map((r) => omit(r, ["request", "response"]));
 
 /**
  * Minify Lighthouse JSON data
@@ -111,8 +108,7 @@ const lhrCleanup = (result) => {
 /**
  * Minify wget spider report
  */
-const wget404Cleanup = (result) => result && result.broken
-
+const wget404Cleanup = (result) => result && result.broken;
 
 //@ts-expect-error
 const requireToolData = (filename) => (basePath) =>
@@ -150,17 +146,8 @@ const noop = (args) => args;
  */
 const generateUrlReport = (url) => {
   const urlb64 = Buffer.from(url.url).toString("base64");
-  const urlPath = path.join(DASHLORD_REPO_PATH, "results", urlb64);
-  if (fs.existsSync(urlPath)) {
-    // use filesystem to determine latest scan report
-    const scans = fs.readdirSync(urlPath);
-    scans.sort().reverse();
-    const lastScan = scans.length && scans[0];
-    if (!lastScan) {
-      return null;
-    }
-    const latestFilesPath = path.join(urlPath, lastScan);
-
+  const latestFilesPath = path.join(DASHLORD_REPO_PATH, "results", urlb64);
+  if (fs.existsSync(latestFilesPath)) {
     // compile all tools data
     /** @type {UrlReport} toolsData */
     //@ts-expect-error
