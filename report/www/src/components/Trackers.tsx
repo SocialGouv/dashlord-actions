@@ -26,11 +26,7 @@ const cookiesColumns = [
 ];
 const CookiesTable: React.FC<CookiesTableProps> = ({ cookies }) =>
   (cookies && cookies.length && (
-    <Table
-      rowKey="name"
-      columns={cookiesColumns}
-      data={cookies}
-    />
+    <Table rowKey="name" columns={cookiesColumns} data={cookies} />
   )) ||
   null;
 
@@ -51,11 +47,7 @@ const trackersColumns = [
 ];
 const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) =>
   (trackers && trackers.length && (
-    <Table
-      columns={trackersColumns}
-      data={trackers}
-      rowKey="url"
-    />
+    <Table columns={trackersColumns} data={trackers} rowKey="url" />
   )) ||
   null;
 
@@ -102,11 +94,7 @@ const endPointsColumns = [
 ];
 const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
   (endpoints && endpoints.length && (
-    <Table
-      columns={endPointsColumns}
-      data={endpoints}
-      rowKey="ip"
-    />
+    <Table columns={endPointsColumns} data={endpoints} rowKey="ip" />
   )) ||
   null;
 
@@ -133,7 +121,11 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
         title="Third parties"
         info="Scripts tiers embarqués dans la page web"
       >
-        <Alert variant="success">Aucun script third-party detecté</Alert>
+        <Alert
+          type="success"
+          title=""
+          description="Aucun script third-party detecté"
+        />
       </Panel>
     )
   );

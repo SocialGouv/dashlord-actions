@@ -702,8 +702,7 @@ Array [
     </div>
     <div>
       <h3>
-        Scan Summary :
-         
+        Scan Summary : 
         <button
           className=""
           onClick={[Function]}
@@ -712,7 +711,6 @@ Array [
           A+
         </button>
       </h3>
-      0
     </div>
   </div>,
   <div
@@ -2338,8 +2336,7 @@ Array [
     </div>
     <div>
       <h3>
-        Scan Summary :
-         
+        Scan Summary : 
         <button
           className=""
           onClick={[Function]}
@@ -2348,7 +2345,6 @@ Array [
           A+
         </button>
       </h3>
-      0
     </div>
   </div>,
   <div
