@@ -38,16 +38,14 @@ const helpDocs = {
       >
         Doc Content Security Policy
       </a>
-      . L'extension
-{" "}
+      . L'extension{" "}
       <a
         href="https://github.com/april/laboratory"
         rel="noopener noreferrer"
         target="_blank"
       >
         github.com/april/laboratory
-      </a>
-{" "}
+      </a>{" "}
       permet de générer la CSP pour votre application.
     </>
   ),
@@ -159,17 +157,12 @@ export const HTTP = ({ data }: HTTPProps) => {
       isExternal
     >
       <h3>
-        Scan Summary : 
-{' '}
-<Grade small grade={data.grade} />
+        Scan Summary : <Grade small grade={data.grade} />
       </h3>
-      {failures.length && (
-        <Table
-          rowKey="name"
-          columns={columns}
-          data={failures}
-        />
-      )}
+      {(failures.length && (
+        <Table rowKey="name" columns={columns} data={failures} />
+      )) ||
+        null}
     </Panel>
   ) : (
     <></>

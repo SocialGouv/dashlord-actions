@@ -41,7 +41,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
             </Card>
           </Col>
 
-          {data.metrics && (
+          {data.metrics && data.metrics.timings && (
             <Col n="12 sm-12 md-6" className="fr-mb-3w">
               <Card
                 title="Temps de réponse"
