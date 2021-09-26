@@ -328,6 +328,8 @@ type UpDownReport = {
   apdexGrade: string;
 };
 
+type Wget404Report = string[];
+
 type UrlReport = UrlConfig & {
   lhr?: LighthouseReport | null;
   testssl?: SslTestReport | null;
@@ -343,6 +345,7 @@ type UrlReport = UrlConfig & {
   screenshot?: boolean | null;
   summary: UrlReportSummary;
   stats?: StatsReport | null;
+  404?: Wget404Report | null;
 };
 
 type DashLordReport = UrlReport[];

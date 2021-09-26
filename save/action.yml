@@ -16,14 +16,12 @@ runs:
         DASHLORD_REPO_PATH=${{ github.workspace }};
         # store results in a folder with then base64 encoded url
         URL_BASE64=$(printf "%s" "$URL" | base64 -w 500) # default is wrap at 76
-        NOW=$(date +"%Y%m%d_%H%M%S")
-        OUT_PATH="./results/${URL_BASE64}/${NOW}"
+        OUT_PATH="./results/${URL_BASE64}"
 
         echo "URL: $URL"
         echo "URL base 64: $URL_BASE64"
         echo "HOSTNAME: $HOSTNAME"
         echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
-        echo "NOW: $NOW"
         echo "OUT_PATH: $OUT_PATH"
 
         cd $DASHLORD_REPO_PATH
@@ -50,7 +48,6 @@ runs:
         mv scans/* $OUT_PATH/ || true
 
         mv report_json.json $OUT_PATH/zap.json || true
-        mv report_md.md $OUT_PATH/zap.md || true
         mv report_html.html $OUT_PATH/zap.html || true
 
         ###### put screenshot if any ######
@@ -73,4 +70,3 @@ runs:
                 mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr.html
             done
         fi
-      
