@@ -91,7 +91,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         <div className={styles.image}>
           <img
             alt={`Copie d'écran de ${url}`}
-            src="https://dashlord.incubateur.net/report/aHR0cHM6Ly9hY2Nlc2xpYnJlLmJldGEuZ291di5mcg==/screenshot.jpeg"
+            src={`${__PUBLIC_URL__}/report/${window.btoa(url)}/screenshot.jpeg`}
           />
         </div>
       </Callout>
