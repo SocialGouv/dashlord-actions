@@ -1705,7 +1705,9 @@ Array [
         <table>
           <caption
             data-testid="table-caption"
-          />
+          >
+            ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)
+          </caption>
           <thead>
             <tr>
               <th
@@ -3543,7 +3545,9 @@ Array [
         <table>
           <caption
             data-testid="table-caption"
-          />
+          >
+            ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)
+          </caption>
           <thead>
             <tr>
               <th
