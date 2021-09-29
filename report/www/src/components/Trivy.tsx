@@ -61,7 +61,8 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
             title={`Image docker ${image.name}`}
             info="Scan de vulnérabilités Trivy"
           >
-            {image.trivy.Vulnerabilities &&
+            {image.trivy &&
+            image.trivy.Vulnerabilities &&
             image.trivy.Vulnerabilities.length ? (
               <Table
                 columns={columns}
