@@ -19,6 +19,7 @@ import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
 import { Stats } from "./Stats";
 import { Report404 } from "./404";
+import { Trivy } from "./Trivy";
 
 import styles from "./url.cssmodule.scss";
 
@@ -77,7 +78,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
             ))}
           {updateDate && (
             <>
-              <Clock size={16} className={styles.clockIcon}/>
+              <Clock size={16} className={styles.clockIcon} />
               <span title={updateDate} className={styles.clock}>
                 Mise à jour il y a :{" "}
                 {formatDistanceToNow(new Date(updateDate), {
@@ -188,12 +189,20 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           <Stats data={report.stats} url={url} />
         </>
       )}
-      {isToolEnabled("404") && report['404'] && report['404'].length && (
+      {(isToolEnabled("404") && report["404"] && report["404"].length && (
         <>
           <Anchor id="404" />
-          <Report404 data={report['404']}/>
+          <Report404 data={report["404"]} />
         </>
-      ) || null}
+      )) ||
+        null}
+      {(isToolEnabled("trivy") && report["trivy"] && report["trivy"].length && (
+        <>
+          <Anchor id="trivy" />
+          <Trivy data={report["trivy"]} />
+        </>
+      )) ||
+        null}
     </>
   );
 };

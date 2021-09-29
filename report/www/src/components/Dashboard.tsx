@@ -275,7 +275,20 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         undefined,
         "404",
         "404",
-        (summary) => summary['404']
+        (summary) => summary["404"]
+      )
+    );
+  }
+
+  if (isToolEnabled("trivy")) {
+    columns.push(
+      getColumn(
+        "trivy",
+        "Trivy",
+        "Vulnérabilités Trivy",
+        undefined,
+        "trivy",
+        "trivyGrade"
       )
     );
   }

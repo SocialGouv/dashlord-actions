@@ -17,7 +17,8 @@
     "updownio": true,
     "dependabot": true,
     "codescan": true,
-    "stats": true
+    "stats": true,
+    "trivy": true
   },
   "urls": [
     {

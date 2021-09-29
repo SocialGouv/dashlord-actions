@@ -30,4 +30,7 @@ type UrlReportSummary = {
   apdexGrade?: string;
   statsGrade?: string;
   statsCount?: number;
+  "404"?: number;
+  trivy?: number;
+  trivyGrade?: string;
 };

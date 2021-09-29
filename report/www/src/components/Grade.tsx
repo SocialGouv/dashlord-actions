@@ -17,7 +17,7 @@ const grades = {
   B: "info",
   C: "info",
   D: "warning",
-  E: "danger",
+  E: "warning",
   F: "danger",
 } as Record<string, string>;
 

@@ -18,7 +18,8 @@ Array [
       <br />
       Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
       <br />
-      Vous pouvez 
+      Vous pouvez
+       
       <a
         href="https://github.com/SocialGouv/dashlord/issues/new"
         rel="noopener noreferrer"
@@ -26,7 +27,9 @@ Array [
       >
         soumettre de nouvelles URLs, proposer des corrections
       </a>
-       ou 
+       
+      ou
+       
       <a
         href="https://github.com/SocialGouv/dashlord/projects/1"
         rel="noopener noreferrer"
@@ -641,6 +644,31 @@ Array [
       Explore le site web et détecte les liens brisés.
     </div>
   </div>,
+  <div
+    className=""
+  >
+    <div>
+      <h5>
+        Vulnérabilités Trivy
+      </h5>
+      <a
+        href="https://aquasecurity.github.io/trivy/"
+        rel="noreferrer noopener"
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+        target="_blank"
+      />
+    </div>
+    <div>
+      Trivy permet de scanner les containers docker à la recherche de vulnérabilités connues.
+      <br />
+      <br />
+      Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.) mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
+    </div>
+  </div>,
 ]
 `;
 
@@ -662,7 +690,8 @@ Array [
       <br />
       Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
       <br />
-      Vous pouvez 
+      Vous pouvez
+       
       <a
         href="https://github.com/SocialGouv/dashlord/issues/new"
         rel="noopener noreferrer"
@@ -670,7 +699,9 @@ Array [
       >
         soumettre de nouvelles URLs, proposer des corrections
       </a>
-       ou 
+       
+      ou
+       
       <a
         href="https://github.com/SocialGouv/dashlord/projects/1"
         rel="noopener noreferrer"

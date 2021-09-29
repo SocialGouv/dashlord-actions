@@ -69,14 +69,8 @@ const lhrCleanup = (result) => {
   if (!result) {
     return null;
   }
-  const {
-    requestedUrl,
-    finalUrl,
-    fetchTime,
-    runWarnings,
-    categories,
-    audits,
-  } = result;
+  const { requestedUrl, finalUrl, fetchTime, runWarnings, categories, audits } =
+    result;
 
   /** @type {LighthouseReportCategories} */
   // @ts-ignore
@@ -109,12 +103,44 @@ const lhrCleanup = (result) => {
  *
  * Minify wget spider report
  *
- * @param {{broken?:Wget404Report}} result Lighthouse JSON content
+ * @param {{broken?:Wget404Report}} result wget JSON content
  *
  * @returns {Wget404Report|undefined} minified JSON content
  *
  */
 const wget404Cleanup = (result) => result && result.broken;
+
+/**
+ *
+ * Minify trivy report
+ *
+ * @param {TrivyReport} result trivy JSON content
+ *
+ * @returns {TrivyReport} minified JSON content
+ *
+ */
+const trivyCleanup = (result) =>
+  result &&
+  result.map((image) => ({
+    name: image.name,
+    url: image.url,
+    image: image.image,
+    trivy: image.trivy && {
+      Target: image.trivy.Target,
+      Vulnerabilities:
+        image.trivy &&
+        image.trivy.Vulnerabilities &&
+        image.trivy.Vulnerabilities.map(
+          ({ VulnerabilityID, PkgName, PrimaryURL, Title, Severity }) => ({
+            VulnerabilityID,
+            PkgName,
+            PrimaryURL,
+            Title,
+            Severity,
+          })
+        ),
+    },
+  }));
 
 //@ts-expect-error
 const requireToolData = (filename) => (basePath) =>
@@ -138,6 +164,7 @@ const tools = {
   },
   stats: { data: requireToolData("stats.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
+  trivy: { data: requireToolData("trivy.json"), cleanup: trivyCleanup },
 };
 
 //@ts-expect-error

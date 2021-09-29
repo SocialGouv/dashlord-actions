@@ -1,18 +1,19 @@
 .header {
-    text-align: center;
-    font-size: 0.9em;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9em;
 }
 
 .tooltip {
-    max-width: 300px;
+  max-width: 300px;
 }
 
-.info, 
+.info,
 .warning {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .warning {
-    stroke: var(--error);
-    margin-left: 5px;
+  stroke: var(--error);
+  margin-left: 5px;
 }

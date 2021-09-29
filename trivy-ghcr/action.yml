@@ -1,0 +1,27 @@
+name: "Trivy GHCR scan action"
+description: "Generate a trivy report on your GHCR images"
+
+inputs:
+  repos:
+    description: "Comma separated list of github repos : org1/repo1,org1/repo2..."
+    required: true
+    default: socialgouv/sample-next-app
+  output:
+    description: "Path to output file. defaults to trivy.json"
+    default: "trivy.json"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install
+      shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+    - name: Get packages
+      shell: bash
+      id: scan
+      run: |
+        bash --version
+        cd ${{ github.action_path }}
+        yarn -s scan ${{ inputs.repos }} > ${{ github.workspace }}/${{ inputs.output }}
