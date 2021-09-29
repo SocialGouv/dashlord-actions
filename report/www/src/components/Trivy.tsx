@@ -53,31 +53,35 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
   return (
     <React.Fragment>
       {(data.length &&
-        data.map((image) => (
-          <Panel
-            key={image.url}
-            isExternal
-            url={image.url}
-            title={`Image docker ${image.name}`}
-            info="Scan de vulnérabilités Trivy"
-          >
-            {image.trivy &&
-            image.trivy.Vulnerabilities &&
-            image.trivy.Vulnerabilities.length ? (
-              <Table
-                columns={columns}
-                data={image.trivy.Vulnerabilities?.sort(orderBySeverity)}
-                rowKey={(row) => row.PkgName + row.VulnerabilityID}
-              />
-            ) : (
-              <Alert
-                type="success"
-                title=""
-                description="Aucune vulnérabilité détectée par Trivy"
-              />
-            )}
-          </Panel>
-        ))) ||
+        data.map(
+          (image) =>
+            image.trivy &&
+            ((
+              <Panel
+                key={image.url}
+                isExternal
+                url={image.url}
+                title={`Image docker ${image.name}`}
+                info="Scan de vulnérabilités Trivy"
+              >
+                {image.trivy.Vulnerabilities &&
+                image.trivy.Vulnerabilities.length ? (
+                  <Table
+                    columns={columns}
+                    data={image.trivy.Vulnerabilities?.sort(orderBySeverity)}
+                    rowKey={(row) => row.PkgName + row.VulnerabilityID}
+                  />
+                ) : (
+                  <Alert
+                    type="success"
+                    title=""
+                    description="Aucune vulnérabilité détectée par Trivy"
+                  />
+                )}
+              </Panel>
+            ) ||
+              null)
+        )) ||
         null}
     </React.Fragment>
   );
