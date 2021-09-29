@@ -67,6 +67,7 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
                 {image.trivy.Vulnerabilities &&
                 image.trivy.Vulnerabilities.length ? (
                   <Table
+                    caption={image.trivy.Target}
                     columns={columns}
                     data={image.trivy.Vulnerabilities?.sort(orderBySeverity)}
                     rowKey={(row) => row.PkgName + row.VulnerabilityID}
