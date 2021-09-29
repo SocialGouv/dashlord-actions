@@ -1,0 +1,13 @@
+{
+  "name": "dashlord-trivy-ghcr",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "scan": "node ./src/scanReposPackages"
+  },
+  "dependencies": {
+    "exec-sh": "^0.4.0",
+    "jsdom": "^17.0.0",
+    "p-all": "^3"
+  }
+}

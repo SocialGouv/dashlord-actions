@@ -22,22 +22,31 @@ export const Intro: React.FC = () => (
       <CalloutTitle as="h1">{dashlordConfig.title || "DashLord"}</CalloutTitle>
       <CalloutText>
         <br />
-        DashLord compile les données techniques issues de différents outils open-source.
+        DashLord compile les données techniques issues de différents outils
+        open-source.
         <br />
-        Cette évaluation ne remplace en aucun cas une expertise manuelle,
-        et seule la page d'accueil du site est ici évaluée.
+        Cette évaluation ne remplace en aucun cas une expertise manuelle, et
+        seule la page d'accueil du site est ici évaluée.
         <br />
-        Vous pouvez <a
+        Vous pouvez{" "}
+        <a
           href="https://github.com/SocialGouv/dashlord/issues/new"
           target="_blank"
           rel="noopener noreferrer"
-        >soumettre de nouvelles URLs, proposer des corrections</a> ou <a
+        >
+          soumettre de nouvelles URLs, proposer des corrections
+        </a>{" "}
+        ou{" "}
+        <a
           href="https://github.com/SocialGouv/dashlord/projects/1"
           target="_blank"
           rel="noopener noreferrer"
-        >consulter la roadmap</a>.
-        <br/>
-        <br/>
+        >
+          consulter la roadmap
+        </a>
+        .
+        <br />
+        <br />
       </CalloutText>
       <Link to="/dashboard">
         <Button>Accéder au tableau de bord</Button>
@@ -100,8 +109,8 @@ export const Intro: React.FC = () => (
         >
           Scan des vulnérabilités des dépendances sur le dépôt Github du code
         </a>
-         <br />
-         <br />
+        <br />
+        <br />
         <Alert
           title=""
           type="info"
@@ -126,8 +135,9 @@ export const Intro: React.FC = () => (
         <li>
           Liste restreinte de langages couverts: C/C++, C#, Go, Java,
           JavaScript/TypeScript, Python
-        </li> <br />
-         <br />
+        </li>{" "}
+        <br />
+        <br />
         <Alert
           title=""
           type="info"
@@ -194,7 +204,7 @@ export const Intro: React.FC = () => (
         <li>Protocoles disponibles</li>
         <li>Compatibilité navigateurs</li>
         <li>Solidité des clés de chiffrement</li>
-        <br/>
+        <br />
         <Alert
           title=""
           type="info"
@@ -249,8 +259,8 @@ export const Intro: React.FC = () => (
         <li>Disponibilité</li>
         <li>Indice de performance : APDEX</li>
         <li>Validité des certificats TLS</li>
-        <br/>
-         <Alert
+        <br />
+        <Alert
           title=""
           type="info"
           description="Vous devez disposer d'un compte updown.io et d'une clé API"
@@ -286,7 +296,7 @@ export const Intro: React.FC = () => (
         <li>Performances web</li>
         <li>Sécurité</li>
         <li>Vie privée</li>
-        <br/>
+        <br />
         <Alert
           title=""
           type="warning"
@@ -339,6 +349,21 @@ export const Intro: React.FC = () => (
     {isToolEnabled("404") && (
       <Panel title="Erreurs 404">
         Explore le site web et détecte les liens brisés.
+      </Panel>
+    )}
+
+    {isToolEnabled("trivy") && (
+      <Panel
+        title="Vulnérabilités Trivy"
+        url="https://aquasecurity.github.io/trivy/"
+        isExternal
+      >
+        Trivy permet de scanner les containers docker à la recherche de
+        vulnérabilités connues.
+        <br />
+        <br />
+        Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.)
+        mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
       </Panel>
     )}
   </>

@@ -1,4 +1,3 @@
-
 // each tool can output multiple values
 const tools = {
   /** @param {CodescanReport} report */
@@ -19,8 +18,10 @@ const tools = {
   updownio: (report) => require("./updownio")(report),
   /** @param {StatsReport} report */
   stats: (report) => require("./stats")(report),
-  /** @param {Error404Report} report */
-  404: report => report && report.length && ({ 404: report.length })
+  /** @param {Wget404Report} report */
+  404: (report) => report && report.length && { 404: report.length },
+  /** @param {TrivyReport} report */
+  trivy: (report) => require("./trivy")(report),
 };
 
 /**

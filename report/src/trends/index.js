@@ -33,22 +33,15 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
   const commits = await Promise.all(
     history
       // include only relevant commits (in the date range)
-      .reduce(
-       (
-          filteredCommits,
-          entry,
-          i
-        ) => {
-          const isAfter = entry.commit.date() >= startDate;
-          const isFirstBefore = !isAfter && i === filteredCommits.length;
-          // include relevant commits
-          if (isAfter || isFirstBefore) {
-            filteredCommits.push(entry);
-          }
-          return filteredCommits;
-        },
-        reduceInit
-      )
+      .reduce((filteredCommits, entry, i) => {
+        const isAfter = entry.commit.date() >= startDate;
+        const isFirstBefore = !isAfter && i === filteredCommits.length;
+        // include relevant commits
+        if (isAfter || isFirstBefore) {
+          filteredCommits.push(entry);
+        }
+        return filteredCommits;
+      }, reduceInit)
       // extract summary content for each commit
       .map(async ({ commit }) => {
         //@ts-expect-error

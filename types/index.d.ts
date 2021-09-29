@@ -23,7 +23,8 @@ type DashlordTool =
   | "codescan"
   | "zap"
   | "stats"
-  | "screenshot";
+  | "screenshot"
+  | "trivy";
 
 type DashlordConfig = {
   title: string;
@@ -346,6 +347,7 @@ type UrlReport = UrlConfig & {
   summary: UrlReportSummary;
   stats?: StatsReport | null;
   404?: Wget404Report | null;
+  trivy?: TrivyReport | null;
 };
 
 type DashLordReport = UrlReport[];
@@ -354,3 +356,25 @@ type StatsReport = {
   grade: string;
   uri: string;
 };
+
+type TrivyReport = TrivyImageReport[];
+
+interface TrivyImageReport {
+  name: string;
+  url: string;
+  image: string;
+  trivy: TrivyScanResult;
+}
+
+interface TrivyScanResult {
+  Target: string;
+  Vulnerabilities?: Vulnerability[];
+}
+
+interface Vulnerability {
+  VulnerabilityID: string;
+  PkgName: string;
+  PrimaryURL: string;
+  Title?: string;
+  Severity: string;
+}

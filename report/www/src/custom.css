@@ -1,14 +1,18 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardValue {
-    font-size: 2em;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .cardTitle {
-    font-size: 0.9em;
+  font-size: 0.9em;
+}
+
+.empty-sort-icon {
+  display: none;
 }

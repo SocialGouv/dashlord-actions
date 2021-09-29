@@ -20,6 +20,7 @@ Object {
   },
   "testssl": null,
   "thirdparties": null,
+  "trivy": null,
   "updownio": null,
   "url": "https://www.test.com",
   "wappalyzer": Object {
@@ -79,6 +80,7 @@ Object {
   "thirdparties": Object {
     "report": "thirdparties.json",
   },
+  "trivy": null,
   "updownio": Object {
     "report": "updownio.json",
   },
