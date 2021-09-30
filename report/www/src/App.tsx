@@ -7,6 +7,7 @@ import {
   HashRouter as Router,
   Switch,
   Route,
+  useLocation,
 } from "react-router-dom";
 
 import { HeaderSite } from "./components/HeaderSite";
@@ -99,42 +100,49 @@ const App = () => (
     <div>
       <ScrollToTop />
       <HeaderSite report={report} />
-      <Container>
-        <div role="main" className="fr-my-4w">
-          <Switch>
-            <Route path="/url/*">
-              <UrlRoute report={report} />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard report={report} />
-            </Route>
-            <Route path="/trends">
-              <Trends trends={trends} />
-            </Route>
-            <Route path="/category/:category">
-              <CategoryRoute report={report} />
-            </Route>
-            <Route path="/tag/:tag">
-              <TagRoute report={report} />
-            </Route>
-            <Route path="/wappalyzer">
-              <WappalyzerDashboard report={report} />
-            </Route>
-            <Route path="/intro">
-              <Intro />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/">
-              <Dashboard report={report} />
-            </Route>
-          </Switch>
-        </div>
-      </Container>
+      <AppContainer />
       <FooterSite />
     </div>
   </Router>
 );
+
+const AppContainer = () => {
+  const location = useLocation();
+  return (
+    <Container fluid={location.pathname === "/"}>
+      <div role="main" className="fr-my-4w">
+        <Switch>
+          <Route path="/url/*">
+            <UrlRoute report={report} />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard report={report} />
+          </Route>
+          <Route path="/trends">
+            <Trends trends={trends} />
+          </Route>
+          <Route path="/category/:category">
+            <CategoryRoute report={report} />
+          </Route>
+          <Route path="/tag/:tag">
+            <TagRoute report={report} />
+          </Route>
+          <Route path="/wappalyzer">
+            <WappalyzerDashboard report={report} />
+          </Route>
+          <Route path="/intro">
+            <Intro />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Dashboard report={report} />
+          </Route>
+        </Switch>
+      </div>
+    </Container>
+  );
+};
 
 export default App;
