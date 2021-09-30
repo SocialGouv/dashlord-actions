@@ -3,6 +3,7 @@
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
   "footer": "Propulsé par SocialGouv",
+  "marianne": true,
   "tools": {
     "404": true,
     "screenshot": true,

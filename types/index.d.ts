@@ -34,6 +34,7 @@ type DashlordConfig = {
   footer: string;
   tools?: DashlordTool[] | Record<DashlordTool, boolean>;
   urls: UrlConfig[];
+  marianne: boolean;
 };
 
 type LighthouseReportCategory = {

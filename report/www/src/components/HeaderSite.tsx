@@ -30,12 +30,13 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
     sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
 
-  console.log(location.pathname);
   return (
     <>
       <Header>
         <HeaderBody>
-          <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
+          {dashlordConfig.marianne === true ? (
+            <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
+          ) : null}
           <Service
             asLink={<RouterLink to="/#" />}
             title={dashlordConfig.title}
