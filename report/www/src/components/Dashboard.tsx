@@ -11,6 +11,8 @@ import ColumnHeader from "./ColumnHeader";
 
 type DashboardProps = { report: DashLordReport };
 
+import styles from "./dashboard.cssmodule.scss";
+
 const IconUnknown = () => <Slash size={20} />;
 
 const percent = (num: number | undefined): string =>
@@ -301,6 +303,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         columns={columns}
         rowKey="url"
         perPage={1000}
+        tableClassName={styles.table}
+        className={styles.tableWrapper}
       />
     )) ||
     null
