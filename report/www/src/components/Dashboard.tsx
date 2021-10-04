@@ -310,5 +310,3 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     null
   );
 };
-
-//
