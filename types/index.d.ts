@@ -24,7 +24,8 @@ type DashlordTool =
   | "zap"
   | "stats"
   | "screenshot"
-  | "trivy";
+  | "trivy"
+  | "declaration-a11y";
 
 type DashlordConfig = {
   title: string;
@@ -348,6 +349,7 @@ type UrlReport = UrlConfig & {
   stats?: StatsReport | null;
   404?: Wget404Report | null;
   trivy?: TrivyReport | null;
+  "declaration-a11y"?: DeclarationA11yReport | null;
 };
 
 type DashLordReport = UrlReport[];
@@ -356,6 +358,8 @@ type StatsReport = {
   grade: string;
   uri: string;
 };
+
+type DeclarationA11yReport = string;
 
 type TrivyReport = TrivyImageReport[];
 

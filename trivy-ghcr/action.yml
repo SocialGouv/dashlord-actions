@@ -22,6 +22,5 @@ runs:
       shell: bash
       id: scan
       run: |
-        bash --version
         cd ${{ github.action_path }}
         yarn -s scan ${{ inputs.repos }} > ${{ github.workspace }}/${{ inputs.output }}

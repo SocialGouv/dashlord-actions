@@ -52,7 +52,7 @@ export const Nuclei: React.FC<NucleiProps> = ({ data }) => {
         info="Détection d'erreurs de configuration et vulnérabilités"
       >
         <Table
-          rowKey="matcher_name"
+          rowKey={(args) => args.templateID + args.matcher_name}
           columns={columns}
           data={rows}
         />

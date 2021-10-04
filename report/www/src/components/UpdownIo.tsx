@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Row, Col, Alert } from "@dataesr/react-dsfr";
+import { Row, Col, Alert, CardDescription } from "@dataesr/react-dsfr";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 
@@ -19,7 +19,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
   return (
     (urlUpdownio && smallUrl(data.url) === smallUrl(url) && (
       <Panel
-        title="Temps de réponse"
+        title="Disponibilité et temps de réponse"
         info="Informations collectées par updown.io"
         url={urlUpdownio}
         isExternal
@@ -31,12 +31,13 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
               value={`${data.uptime}%`}
             >
               <Gauge
-                width={120}
-                height={80}
-                value={data.uptime * 100}
+                width={200}
+                height={120}
+                value={data.uptime}
                 minValue={0}
                 maxValue={100}
-                animationSpeed={32}
+                segments={3}
+                currentValueText=""
               />
             </Card>
           </Col>
@@ -48,20 +49,27 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
                 value={`${data.metrics.timings.total}ms`}
               >
                 <Gauge
-                  width={120}
-                  height={60}
+                  width={200}
+                  height={120}
                   value={Math.max(0, data.metrics.timings.total)}
                   minValue={0}
-                  maxValue={1000}
-                  animationSpeed={32}
-                  options={{
-                    percentColors: [
-                      [0, "#0CCE6B"],
-                      [0.4, "#0CCE6B"],
-                      [0.6, "#ffa400"],
-                      [0.8, "#FF4E42"],
-                    ],
-                  }}
+                  maxValue={500}
+                  customSegmentStops={[0, 150, 300, 500]}
+                  segmentColors={[
+                    "var(--success)",
+                    "var(--warning)",
+                    "var(--error)",
+                  ]}
+                  currentValueText=""
+
+                  // options={{
+                  //   percentColors: [
+                  //     [0, "#0CCE6B"],
+                  //     [0.4, "#0CCE6B"],
+                  //     [0.6, "#ffa400"],
+                  //     [0.8, "#FF4E42"],
+                  //   ],
+                  // }}
                 />
               </Card>
             </Col>
