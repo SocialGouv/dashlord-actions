@@ -11,8 +11,8 @@ import { About } from "./About";
 import { WappalyzerDashboard } from "./WappalyzerDashboard";
 import Url from "./Url";
 
-const report: DashLordReport = require("./report.json");
-const trends: Trends = require("./trends.json");
+const report: DashLordReport = require("../report.json");
+const trends: Trends = require("../trends.json");
 
 type CategoryRouteProps = { report: DashLordReport };
 
