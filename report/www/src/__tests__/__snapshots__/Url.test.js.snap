@@ -662,8 +662,7 @@ Array [
           className="fr-col"
         >
           <h3>
-            Scan Summary :
-             
+            Scan Summary : 
             <button
               className=""
               onClick={[Function]}
@@ -672,6 +671,10 @@ Array [
               A+
             </button>
           </h3>
+          <h4>
+            Expiration : 
+            30/11/2021
+          </h4>
         </div>
       </div>
     </div>
@@ -2502,8 +2505,7 @@ Array [
           className="fr-col"
         >
           <h3>
-            Scan Summary :
-             
+            Scan Summary : 
             <button
               className=""
               onClick={[Function]}
@@ -2512,6 +2514,10 @@ Array [
               A+
             </button>
           </h3>
+          <h4>
+            Expiration : 
+            30/11/2021
+          </h4>
         </div>
       </div>
     </div>
