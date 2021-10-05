@@ -22,6 +22,8 @@ Object {
   "lighthouse_pwaGrade": "D",
   "lighthouse_seo": 0.9,
   "lighthouse_seoGrade": "A",
+  "testsslExpireDate": "2021-11-30T19:40:00.000Z",
+  "testsslExpireSoon": false,
   "testsslGrade": "A+",
   "trackersCount": 0,
   "trackersGrade": "A",
