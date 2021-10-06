@@ -72,8 +72,9 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
       <Panel
         title="Nmap"
         url={url}
+        urlText="Rapport détaillé"
         isExternal
-        info={(
+        info={
           <span>
             Scan des vulnérabiliés nmap{" "}
             <a
@@ -85,12 +86,10 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
               {`https://${data.host}`}
             </a>
           </span>
-        )}
+        }
       >
         <h3>
-          Scan Summary : 
-{' '}
-<Grade small grade={data.grade} />
+          Scan Summary : <Grade small grade={data.grade} />
         </h3>
         <Table
           columns={columns}

@@ -8,7 +8,6 @@ export type Reco = {
 
 export const getRecommendations = (data: UrlReport): Reco[] => {
   const recos = [] as Reco[];
-  console.log("data", data);
   /* stats */
   if (data.summary.statsGrade && data.summary.statsGrade !== "A") {
     recos.push({
