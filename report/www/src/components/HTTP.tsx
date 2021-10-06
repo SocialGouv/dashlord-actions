@@ -142,7 +142,10 @@ export const HTTP = ({ data }: HTTPProps) => {
     return null;
   }
   const url =
-    (data && `https://observatory.mozilla.org/analyze/${smallUrl(data.url)}`) ||
+    (data &&
+      `https://observatory.mozilla.org/analyze/${smallUrl(
+        data.url.replace(/^(https?:\/\/[^/]+).*/, "$1")
+      )}`) ||
     null;
   const failures = Object.keys(data.details)
     .filter((key) => !data.details[key].pass)
@@ -151,9 +154,9 @@ export const HTTP = ({ data }: HTTPProps) => {
 
   return url ? (
     <Panel
-      title="HTTP"
-      info="Informations collectées par le Mozilla HTTP observatory"
+      title="Mozilla HTTP observatory"
       url={url}
+      urlText="Retester l'url"
       isExternal
     >
       <h3>

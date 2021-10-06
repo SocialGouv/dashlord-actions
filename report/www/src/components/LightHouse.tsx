@@ -85,6 +85,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       title="LightHouse"
       info="Informations collectées par l'outil Google LightHouse"
       url={url}
+      urlText="Rapport LightHouse"
       isExternal
     >
       <Row>

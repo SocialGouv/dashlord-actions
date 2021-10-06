@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { Row, Col, Alert } from "@dataesr/react-dsfr";
-import { Info } from "react-feather";
 import { format } from "date-fns";
 import { Panel } from "./Panel";
 import { Grade } from "./Grade";
@@ -60,8 +59,9 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
     (grade && (
       <Panel
         title="SSL"
-        info="Informations collectées via testssl.sh"
+        info="Informations sur la qualité des certificats SSL via testssl.sh"
         url={url}
+        urlText="Rapport détaillé"
         isExternal
       >
         <Row>

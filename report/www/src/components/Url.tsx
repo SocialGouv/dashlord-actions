@@ -132,14 +132,12 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           )) ||
             null}
         </Tab>
-        <Tab label="Performance">
-          {isToolEnabled("updownio") && report.updownio && (
-            <>
-              <Anchor id="updownio" />
-              <UpdownIo data={report.updownio} url={url} />
-            </>
-          )}
-        </Tab>
+        {isToolEnabled("updownio") && report.updownio && (
+          <Tab label="Disponibilité">
+            <Anchor id="updownio" />
+            <UpdownIo data={report.updownio} url={url} />
+          </Tab>
+        )}
         <Tab label="Sécurité">
           {isToolEnabled("nmap") && report.nmap && (
             <>
@@ -228,7 +226,8 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               </>
             )) ||
             null}
-
+        </Tab>
+        <Tab label="Informations">
           {isToolEnabled("wappalyzer") && report.wappalyzer && (
             <>
               <Anchor id="wappalyzer" />
