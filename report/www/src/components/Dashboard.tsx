@@ -21,20 +21,33 @@ const percent = (num: number | undefined): string =>
 const GradeBadge = ({
   grade,
   label,
+  warning,
   to,
 }: {
   grade: string | undefined;
   label?: string | number | undefined;
+  warning?: string;
   to?: H.LocationDescriptor<unknown> | undefined;
 }) => (
   <div style={{ textAlign: "center" }}>
     {grade ? (
-      <Grade small grade={grade} label={label} to={to} />
+      <Grade small warning={warning} grade={grade} label={label} to={to} />
     ) : (
       <IconUnknown />
     )}
   </div>
 );
+
+type GetColumnProps = {
+  id: string;
+  title: string;
+  info: string;
+  warning?: JSX.Element | undefined;
+  hash: string;
+  gradeKey: string;
+  gradeLabel?: (s: UrlReportSummary) => string | number | undefined;
+  warningText?: (s: UrlReportSummary) => string | undefined;
+};
 
 export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const getSummaryData = (rowData, grade) => {
@@ -42,17 +55,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     return (summary[grade] && letterGradeValue(summary[grade])) || -1;
   };
 
-  const getColumn = (
-    id: string,
-    title: string,
-    info: string,
-    warning: JSX.Element | undefined,
-    hash: string,
-    gradeKey: string,
-    gradeLabel:
-      | ((s: UrlReportSummary) => string | number | undefined)
-      | undefined = undefined
-  ) => ({
+  const getColumn = ({
+    id,
+    title,
+    info,
+    warning,
+    hash,
+    gradeKey,
+    gradeLabel,
+    warningText,
+  }: GetColumnProps) => ({
     name: id,
     sortable: true,
     sort: (a, b) => getSummaryData(a, gradeKey) - getSummaryData(b, gradeKey),
@@ -66,6 +78,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         <GradeBadge
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(summary)}
+          warning={warningText && warningText(summary)}
           to={{
             pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
             hash,
@@ -76,15 +89,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   });
 
   const lightHouseColumn = (id, title, info) =>
-    getColumn(
+    getColumn({
       id,
       title,
       info,
-      id === "accessibility" ? <AccessibilityWarnings /> : undefined,
-      "lighthouse",
-      `lighthouse_${id}Grade`,
-      (summary) => percent(summary[`lighthouse_${id}`])
-    );
+      warning: id === "accessibility" ? <AccessibilityWarnings /> : undefined,
+      hash: "lighthouse",
+      gradeKey: `lighthouse_${id}Grade`,
+      gradeLabel: (summary) => percent(summary[`lighthouse_${id}`]),
+    });
 
   let columns = [
     {
@@ -131,167 +144,162 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
   if (isToolEnabled("testssl")) {
     columns.push(
-      getColumn(
-        "ssl",
-        "SSL",
-        "Niveau de confiance du certificat SSL (testssl.sh)",
-        undefined,
-        "testssl",
-        "testsslGrade"
-      )
+      getColumn({
+        id: "ssl",
+        title: "SSL",
+        info: "Niveau de confiance du certificat SSL (testssl.sh)",
+        hash: "testssl",
+        gradeKey: "testsslGrade",
+        gradeLabel: (summary) => summary.testsslGrade,
+        warningText: (summary) =>
+          (summary.testsslExpireSoon &&
+            `Expire le : ${summary.testsslExpireDate}`) ||
+          undefined,
+      })
     );
   }
 
   if (isToolEnabled("http")) {
     columns.push(
-      getColumn(
-        "http",
-        "HTTP",
-        "Bonnes pratiques de configuration HTTP (Mozilla observatory)",
-        undefined,
-        "http",
-        "httpGrade"
-      )
+      getColumn({
+        id: "http",
+        title: "HTTP",
+        info: "Bonnes pratiques de configuration HTTP (Mozilla observatory)",
+        hash: "http",
+        gradeKey: "httpGrade",
+      })
     );
   }
 
   if (isToolEnabled("updownio")) {
     columns = columns.concat([
-      getColumn(
-        "updownio",
-        "Disponibilité",
-        "Disponibilité du service (updown.io)",
-        undefined,
-        "updownio",
-        "uptimeGrade",
-        (summary) => percent((summary.uptime || 0) / 100)
-      ),
-      getColumn(
-        "updownio2",
-        "Apdex",
-        "Apdex: Application Performance Index : indice de satisfaction des attentes de performance (updown.io)",
-        undefined,
-        "updownio",
-        "apdexGrade",
-        (summary) => summary.apdex
-      ),
+      getColumn({
+        id: "updownio",
+        title: "Disponibilité",
+        info: "Disponibilité du service (updown.io)",
+        hash: "updownio",
+        gradeKey: "uptimeGrade",
+        gradeLabel: (summary) => percent((summary.uptime || 0) / 100),
+      }),
+      getColumn({
+        id: "updownio2",
+        title: "Apdex",
+        info: "Apdex: Application Performance Index : indice de satisfaction des attentes de performance (updown.io)",
+        hash: "updownio",
+        gradeKey: "apdexGrade",
+        gradeLabel: (summary) => summary.apdex,
+      }),
     ]);
   }
 
   if (isToolEnabled("dependabot")) {
     columns.push(
-      getColumn(
-        "dependabot",
-        "Vulnérabilités",
-        "Vulnérabilités applicatives detectées dans les dépendances du code (dependabot)",
-        undefined,
-        "dependabot",
-        "dependabotGrade",
-        (summary) => summary.dependabotCount
-      )
+      getColumn({
+        id: "dependabot",
+        title: "Vulnérabilités",
+        info: "Vulnérabilités applicatives detectées dans les dépendances du code (dependabot)",
+        hash: "dependabot",
+        gradeKey: "dependabotGrade",
+        gradeLabel: (summary) => summary.dependabotCount,
+      })
     );
   }
 
   if (isToolEnabled("codescan")) {
     columns.push(
-      getColumn(
-        "codescan",
-        "CodeQL",
-        "Potentielles vulnérabilités ou erreurs detectées dans les codes sources (codescan)",
-        undefined,
-        "codescan",
-        "codescanGrade",
-        (summary) => summary.codescanCount
-      )
+      getColumn({
+        id: "codescan",
+        title: "CodeQL",
+        info: "Potentielles vulnérabilités ou erreurs detectées dans les codes sources (codescan)",
+        hash: "codescan",
+        gradeKey: "codescanGrade",
+        gradeLabel: (summary) => summary.codescanCount,
+      })
     );
   }
 
   if (isToolEnabled("nmap")) {
     columns = columns.concat([
-      getColumn(
-        "nmap",
-        "Nmap",
-        "Vulnérabilités réseau detectées par Nmap",
-        undefined,
-        "nmap",
-        "nmapGrade"
-      ),
-      getColumn(
-        "nmap2",
-        "Ports ouverts",
-        "Ports TCP ouverts détectés par nmap",
-        undefined,
-        "nmap",
-        "nmapOpenPortsGrade",
-        (summary) => summary.nmapOpenPortsCount
-      ),
+      getColumn({
+        id: "nmap",
+        title: "Nmap",
+        info: "Vulnérabilités réseau detectées par Nmap",
+        hash: "nmap",
+        gradeKey: "nmapGrade",
+      }),
+      getColumn({
+        id: "nmap2",
+        title: "Ports ouverts",
+        info: "Ports TCP ouverts détectés par nmap",
+        hash: "nmap",
+        gradeKey: "nmapOpenPortsGrade",
+        gradeLabel: (summary) => summary.nmapOpenPortsCount,
+      }),
     ]);
   }
 
   if (isToolEnabled("thirdparties")) {
     columns = columns.concat([
-      getColumn(
-        "trackers",
-        "Trackers",
-        "Nombre de scripts externes détectés",
-        <div>
-          Certains scripts externes légitimes peuvent être considérés comme
-          trackers.
-        </div>,
-        "thirdparties",
-        "trackersGrade",
-        (summary) => summary.trackersCount
-      ),
-      getColumn(
-        "cookies",
-        "Cookies",
-        "Nombre de cookies présents",
-        undefined,
-        "thirdparties",
-        "cookiesGrade",
-        (summary) => summary.cookiesCount
-      ),
+      getColumn({
+        id: "trackers",
+        title: "Trackers",
+        info: "Nombre de scripts externes détectés",
+        warning: (
+          <div>
+            Certains scripts externes légitimes peuvent être considérés comme
+            trackers.
+          </div>
+        ),
+        hash: "thirdparties",
+        gradeKey: "trackersGrade",
+        gradeLabel: (summary) => summary.trackersCount,
+      }),
+      getColumn({
+        id: "cookies",
+        title: "Cookies",
+        info: "Nombre de cookies présents",
+        hash: "thirdparties",
+        gradeKey: "cookiesGrade",
+        gradeLabel: (summary) => summary.cookiesCount,
+      }),
     ]);
   }
 
   if (isToolEnabled("stats")) {
     columns.push(
-      getColumn(
-        "stats",
-        "Stats",
-        "Présence de la page des statistiques",
-        undefined,
-        "stats",
-        "statsGrade",
-        (summary) => summary.statsCount
-      )
+      getColumn({
+        id: "stats",
+        title: "Stats",
+        info: "Présence de la page des statistiques",
+        hash: "stats",
+        gradeKey: "statsGrade",
+        gradeLabel: (summary) => summary.statsCount,
+      })
     );
   }
 
   if (isToolEnabled("404")) {
     columns.push(
-      getColumn(
-        "404",
-        "404",
-        "Pages introuvables",
-        undefined,
-        "404",
-        "404",
-        (summary) => summary["404"]
-      )
+      getColumn({
+        id: "404",
+        title: "404",
+        info: "Pages introuvables",
+        hash: "404",
+        gradeKey: "404",
+        gradeLabel: (summary) => summary["404"],
+      })
     );
   }
 
   if (isToolEnabled("trivy")) {
     columns.push(
-      getColumn(
-        "trivy",
-        "Trivy",
-        "Vulnérabilités Trivy",
-        undefined,
-        "trivy",
-        "trivyGrade"
-      )
+      getColumn({
+        id: "trivy",
+        title: "Trivy",
+        info: "Vulnérabilités Trivy",
+        hash: "trivy",
+        gradeKey: "trivyGrade",
+      })
     );
   }
 

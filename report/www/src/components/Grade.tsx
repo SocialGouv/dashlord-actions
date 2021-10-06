@@ -8,6 +8,7 @@ import styles from "./grade.cssmodule.scss";
 type GradeProps = {
   grade: string;
   label?: string | number | null;
+  warning?: string | null;
   to?: H.LocationDescriptor<unknown>;
   small?: boolean;
 };
@@ -21,7 +22,13 @@ const grades = {
   F: "danger",
 } as Record<string, string>;
 
-export const Grade: React.FC<GradeProps> = ({ grade, label, to, small }) => {
+export const Grade: React.FC<GradeProps> = ({
+  grade,
+  warning,
+  label,
+  to,
+  small,
+}) => {
   const newGrade = `${grade}`.substring(0, 1).toUpperCase();
   const variant = grades[newGrade] || "danger";
 
@@ -34,6 +41,11 @@ export const Grade: React.FC<GradeProps> = ({ grade, label, to, small }) => {
       to={to}
     >
       {title}
+      {warning && (
+        <span title={warning} style={{ marginLeft: 5 }}>
+          ⚠️
+        </span>
+      )}
     </Badge>
   );
 };

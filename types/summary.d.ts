@@ -2,6 +2,8 @@
 
 type UrlReportSummary = {
   testsslGrade?: string;
+  testsslExpireSoon: boolean;
+  testsslExpireDate: string;
   codescanCount?: number;
   codescanGrade?: string;
   dependabotCount?: number;
