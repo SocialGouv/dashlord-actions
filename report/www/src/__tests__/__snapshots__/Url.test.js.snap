@@ -4799,7 +4799,7 @@ Array [
           type="button"
         >
           
-          Disponibilité
+          Sécurité
         </button>
       </li>
       <li
@@ -4810,24 +4810,6 @@ Array [
           aria-selected="false"
           className="fr-tabs__tab"
           id="fr-tab-2"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="tab"
-          tabIndex={-1}
-          type="button"
-        >
-          
-          Sécurité
-        </button>
-      </li>
-      <li
-        role="presentation"
-      >
-        <button
-          aria-controls="fr-tabpanel-3"
-          aria-selected="false"
-          className="fr-tabs__tab"
-          id="fr-tab-3"
           onClick={[Function]}
           onKeyDown={[Function]}
           role="tab"
@@ -4850,13 +4832,6 @@ Array [
       aria-labelledby="fr-tab-1"
       className="fr-tabs__panel "
       id="fr-tabpanel-1"
-      role="tabpanel"
-      tabIndex="0"
-    />
-    <div
-      aria-labelledby="fr-tab-2"
-      className="fr-tabs__panel "
-      id="fr-tabpanel-2"
       role="tabpanel"
       tabIndex="0"
     >
@@ -5130,9 +5105,9 @@ Array [
       </div>
     </div>
     <div
-      aria-labelledby="fr-tab-3"
+      aria-labelledby="fr-tab-2"
       className="fr-tabs__panel "
-      id="fr-tabpanel-3"
+      id="fr-tabpanel-2"
       role="tabpanel"
       tabIndex="0"
     />
