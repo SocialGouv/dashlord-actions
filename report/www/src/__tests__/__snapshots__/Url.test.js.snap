@@ -110,7 +110,30 @@ Array [
           type="button"
         >
           
-          Bonnes pratiques
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+              />
+            </svg>
+            Bonnes pratiques
+          </div>
         </button>
       </li>
       <li
@@ -128,7 +151,30 @@ Array [
           type="button"
         >
           
-          Disponibilité
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+              />
+            </svg>
+            Disponibilité
+          </div>
         </button>
       </li>
       <li
@@ -146,7 +192,38 @@ Array [
           type="button"
         >
           
-          Sécurité
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="11"
+                rx="2"
+                ry="2"
+                width="18"
+                x="3"
+                y="11"
+              />
+              <path
+                d="M7 11V7a5 5 0 0 1 10 0v4"
+              />
+            </svg>
+            Sécurité
+          </div>
         </button>
       </li>
       <li
@@ -164,7 +241,44 @@ Array [
           type="button"
         >
           
-          Informations
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+            Informations
+          </div>
         </button>
       </li>
     </ul>
@@ -2447,7 +2561,30 @@ Array [
           type="button"
         >
           
-          Bonnes pratiques
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+              />
+            </svg>
+            Bonnes pratiques
+          </div>
         </button>
       </li>
       <li
@@ -2465,7 +2602,30 @@ Array [
           type="button"
         >
           
-          Disponibilité
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+              />
+            </svg>
+            Disponibilité
+          </div>
         </button>
       </li>
       <li
@@ -2483,7 +2643,38 @@ Array [
           type="button"
         >
           
-          Sécurité
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="11"
+                rx="2"
+                ry="2"
+                width="18"
+                x="3"
+                y="11"
+              />
+              <path
+                d="M7 11V7a5 5 0 0 1 10 0v4"
+              />
+            </svg>
+            Sécurité
+          </div>
         </button>
       </li>
       <li
@@ -2501,7 +2692,44 @@ Array [
           type="button"
         >
           
-          Informations
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+            Informations
+          </div>
         </button>
       </li>
     </ul>
@@ -4781,7 +5009,30 @@ Array [
           type="button"
         >
           
-          Bonnes pratiques
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+              />
+            </svg>
+            Bonnes pratiques
+          </div>
         </button>
       </li>
       <li
@@ -4799,7 +5050,38 @@ Array [
           type="button"
         >
           
-          Sécurité
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="11"
+                rx="2"
+                ry="2"
+                width="18"
+                x="3"
+                y="11"
+              />
+              <path
+                d="M7 11V7a5 5 0 0 1 10 0v4"
+              />
+            </svg>
+            Sécurité
+          </div>
         </button>
       </li>
       <li
@@ -4817,7 +5099,44 @@ Array [
           type="button"
         >
           
-          Informations
+          <div>
+            <svg
+              fill="none"
+              height={16}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "marginBottom": -2,
+                  "marginRight": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+            Informations
+          </div>
         </button>
       </li>
     </ul>

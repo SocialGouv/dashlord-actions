@@ -1,7 +1,7 @@
 import * as React from "react";
 import { formatDistanceToNow } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Clock } from "react-feather";
+import { Clock, Sun, ThumbsUp, Zap, Lock, Info } from "react-feather";
 import {
   Callout,
   CalloutTitle,
@@ -102,7 +102,17 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         </div>
       </Callout>
       <Tabs>
-        <Tab label="Bonnes pratiques">
+        <Tab
+          label={
+            <div>
+              <ThumbsUp
+                size={16}
+                style={{ marginRight: 5, marginBottom: -2 }}
+              />
+              Bonnes pratiques
+            </div>
+          }
+        >
           {isToolEnabled("lighthouse") && report.lhr && (
             <>
               <Anchor id="lighthouse" />
@@ -133,12 +143,26 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
             null}
         </Tab>
         {isToolEnabled("updownio") && report.updownio && (
-          <Tab label="Disponibilité">
+          <Tab
+            label={
+              <div>
+                <Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+                Disponibilité
+              </div>
+            }
+          >
             <Anchor id="updownio" />
             <UpdownIo data={report.updownio} url={url} />
           </Tab>
         )}
-        <Tab label="Sécurité">
+        <Tab
+          label={
+            <div>
+              <Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+              Sécurité
+            </div>
+          }
+        >
           {isToolEnabled("nmap") && report.nmap && (
             <>
               <Anchor id="nmap" />
@@ -227,7 +251,14 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
             )) ||
             null}
         </Tab>
-        <Tab label="Informations">
+        <Tab
+          label={
+            <div>
+              <Info size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+              Informations
+            </div>
+          }
+        >
           {isToolEnabled("wappalyzer") && report.wappalyzer && (
             <>
               <Anchor id="wappalyzer" />
