@@ -3,6 +3,7 @@ import { formatDistanceToNow } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Clock, Sun, ThumbsUp, Zap, Lock, Info } from "react-feather";
 import {
+  Alert,
   Callout,
   CalloutTitle,
   CalloutText,
@@ -11,6 +12,8 @@ import {
 } from "@dataesr/react-dsfr";
 
 import { isToolEnabled } from "../utils";
+import { getRecommendations } from "../recos";
+
 import Badge from "./Badge";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
@@ -24,6 +27,7 @@ import { Dependabot } from "./Dependabot";
 import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
 import { Stats } from "./Stats";
+import { Recos } from "./Recos";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 
@@ -53,6 +57,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
       </div>
     );
   }
+  const recos = getRecommendations(report);
   return (
     <>
       <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -102,6 +107,16 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         </div>
       </Callout>
       <Tabs>
+        <Tab
+          label={
+            <div>
+              <Sun size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+              Recommandations
+            </div>
+          }
+        >
+          <Recos recos={recos} />
+        </Tab>
         <Tab
           label={
             <div>
