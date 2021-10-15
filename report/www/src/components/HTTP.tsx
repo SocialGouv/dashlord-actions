@@ -156,7 +156,7 @@ export const HTTP = ({ data }: HTTPProps) => {
     <Panel
       title="Mozilla HTTP observatory"
       url={url}
-      urlText="Retester l'url"
+      urlText="Rapport détaillé"
       isExternal
     >
       <h3>
