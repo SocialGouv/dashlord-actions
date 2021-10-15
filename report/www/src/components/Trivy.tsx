@@ -60,14 +60,13 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
               <Panel
                 key={image.url}
                 isExternal
-                url={image.url}
                 title={`Image docker ${image.name}`}
                 info="Scan de vulnérabilités Trivy"
               >
+                <h6>{image.trivy.Target}</h6>
                 {image.trivy.Vulnerabilities &&
                 image.trivy.Vulnerabilities.length ? (
                   <Table
-                    caption={image.trivy.Target}
                     columns={columns}
                     data={image.trivy.Vulnerabilities?.sort(orderBySeverity)}
                     rowKey={(row) => row.PkgName + row.VulnerabilityID}

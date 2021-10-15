@@ -27,12 +27,8 @@ const columns = [
 
 export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) =>
   (data && data.technologies && data.technologies.length && (
-    <Panel title="Wappalyzer" info="Détection des technologies">
-      <Table
-        rowKey="name"
-        columns={columns}
-        data={data.technologies}
-      />
+    <Panel title="Wappalyzer" info="Détection des technologies utilisées">
+      <Table rowKey="name" columns={columns} data={data.technologies} />
     </Panel>
   )) ||
   null;

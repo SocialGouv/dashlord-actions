@@ -85,6 +85,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       title="LightHouse"
       info="Informations collectées par l'outil Google LightHouse"
       url={url}
+      urlText="Rapport LightHouse"
       isExternal
     >
       <Row>
@@ -108,12 +109,13 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                   value={`${(score * 100).toFixed()}%`}
                 >
                   <Gauge
-                    width={120}
-                    height={80}
+                    width={180}
+                    height={120}
                     value={score * 100}
                     minValue={0}
                     maxValue={100}
-                    animationSpeed={32}
+                    segments={3}
+                    currentValueText=""
                   />
                 </Card>
               </Col>

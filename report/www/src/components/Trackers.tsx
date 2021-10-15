@@ -109,7 +109,7 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
   return (
     (hasIssues.length && (
       <Panel
-        title="Third parties"
+        title="Scripts tiers et cookies"
         info="Scripts tiers embarqués dans la page web"
       >
         <CookiesTable cookies={data.cookies} />

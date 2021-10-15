@@ -59,19 +59,14 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
   return (
     (alerts.length > 0 && (
       <Panel
-        title="Codescan"
+        title="CodeScan"
         url={`${data.url}/security/code-scanning`}
+        urlText="Alertes CodeQL"
+        isExternal
         info={
           <span>
-            Scan du code du dépôt Github{" "}
-            <a
-              style={{ color: "white" }}
-              href={data.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {data.url}
-            </a>
+            Scan statique du code du dépôt Github{" "}
+            {data.url.replace(/^https?:\/\/[^/]+\/(.*)/, "$1")}
           </span>
         }
       >

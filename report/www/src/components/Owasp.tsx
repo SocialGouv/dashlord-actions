@@ -52,15 +52,12 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
     (alerts.length && (
       <Panel
         isExternal
-        title="OWASP"
+        title="Scan OWASP"
         url={url}
-        info="Scan de vulnérabiliés OWASP baseline"
+        urlText="Rapport détaillé"
+        info="Scan passif de vulnérabiliés ZAP OWASP baseline"
       >
-        <Table
-          columns={columns}
-          data={alerts}
-          rowKey="name"
-        />
+        <Table columns={columns} data={alerts} rowKey="name" />
       </Panel>
     )) ||
     null

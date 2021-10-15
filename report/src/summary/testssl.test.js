@@ -8,16 +8,18 @@ const tests = [
   },
   {
     title: "invalid report 2",
-    report: [{id:"some", finding:"X"}],
-    expected: undefined
+    report: [{ id: "some", finding: "X" }],
+    expected: undefined,
   },
   {
     title: "sample report",
-    report: [{id:"overall_grade", finding:"X"}],
+    report: [{ id: "overall_grade", finding: "X" }],
     expected: {
-      testsslGrade: "X"
+      testsslGrade: "X",
+      testsslExpireDate: null,
+      testsslExpireSoon: null,
     },
-  }
+  },
 ];
 
 describe("testssl", () => {

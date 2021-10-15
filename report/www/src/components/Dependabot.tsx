@@ -49,7 +49,7 @@ const columns = [
   },
   {
     name: "dependancy",
-    label: "Dépendance vulnérable",
+    label: "dépendance vulnérable",
     render: (node) => node.securityVulnerability.package.name,
   },
   {
@@ -77,28 +77,21 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
   return (
     (data.vulnerabilityAlerts.totalCount > 0 && (
       <Panel
-        title="Dependabot"
+        title="Alertes Dependabot"
         url={`${data.url}/security/dependabot`}
+        urlText="Alertes dependabot"
         isExternal={true}
         info={
           <span>
-            Scan des vulnérabiliés du dépôt Github
-{" "}
-            <a
-              style={{ color: "white" }}
-              href={data.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {data.url}
-            </a>
+            Vulnérabilités des dépendances du dépôt Github{" "}
+            {data.url.replace(/^https:\/\/github\.com\/(.*)/, "$1")}
           </span>
         }
       >
         <h3>
           Scan Summary : <Grade small grade={data.grade} />
         </h3>
-        <Table columns={columns} data={nodes} rowKey="createdAt"/>
+        <Table columns={columns} data={nodes} rowKey="createdAt" />
       </Panel>
     )) ||
     null

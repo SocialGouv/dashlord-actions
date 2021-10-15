@@ -1,11 +1,17 @@
 import * as React from "react";
 import { formatDistanceToNow } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Clock } from "react-feather";
-import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr";
-import Badge from "./Badge";
+import { Clock, Sun, ThumbsUp, Zap, Lock, Info } from "react-feather";
+import {
+  Callout,
+  CalloutTitle,
+  CalloutText,
+  Tabs,
+  Tab,
+} from "@dataesr/react-dsfr";
 
 import { isToolEnabled } from "../utils";
+import Badge from "./Badge";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
 import { Nuclei } from "./Nuclei";
@@ -95,114 +101,172 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           />
         </div>
       </Callout>
-      {isToolEnabled("lighthouse") && report.lhr && (
-        <>
-          <Anchor id="lighthouse" />
-          <LightHouse
-            data={report.lhr}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/lhr.html`}
-          />
-        </>
-      )}
-      {isToolEnabled("dependabot") &&
-        report.dependabot &&
-        report.dependabot.repositories && (
-          <>
-            <Anchor id="dependabot" />
-            {report.dependabot.repositories
-              .filter(Boolean)
-              .map((repository) => (
-                <Dependabot key={repository.url} data={repository} url={url} />
-              ))}
-          </>
+      <Tabs>
+        <Tab
+          label={
+            <div>
+              <ThumbsUp
+                size={16}
+                style={{ marginRight: 5, marginBottom: -2 }}
+              />
+              Bonnes pratiques
+            </div>
+          }
+        >
+          {isToolEnabled("lighthouse") && report.lhr && (
+            <>
+              <Anchor id="lighthouse" />
+              <LightHouse
+                data={report.lhr}
+                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/lhr.html`}
+              />
+            </>
+          )}
+          {isToolEnabled("thirdparties") && report.thirdparties && (
+            <>
+              <Anchor id="thirdparties" />
+              <Trackers data={report.thirdparties} />
+            </>
+          )}
+          {isToolEnabled("stats") && report.stats && (
+            <>
+              <Anchor id="stats" />
+              <Stats data={report.stats} url={url} />
+            </>
+          )}
+          {(isToolEnabled("404") && report["404"] && report["404"].length && (
+            <>
+              <Anchor id="404" />
+              <Report404 data={report["404"]} />
+            </>
+          )) ||
+            null}
+        </Tab>
+        {isToolEnabled("updownio") && report.updownio && (
+          <Tab
+            label={
+              <div>
+                <Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+                Disponibilité
+              </div>
+            }
+          >
+            <Anchor id="updownio" />
+            <UpdownIo data={report.updownio} url={url} />
+          </Tab>
         )}
-      {isToolEnabled("codescan") &&
-        report.codescan &&
-        report.codescan.repositories && (
-          <>
-            <Anchor id="codescan" />
-            {report.codescan.repositories.filter(Boolean).map((repository) => (
-              <Codescan key={repository.url} data={repository} url={url} />
-            ))}
-          </>
-        )}
-      {isToolEnabled("updownio") && report.updownio && (
-        <>
-          <Anchor id="updownio" />
-          <UpdownIo data={report.updownio} url={url} />
-        </>
-      )}
-      {isToolEnabled("testssl") && report.testssl && (
-        <>
-          <Anchor id="testssl" />
-          <TestSSL
-            data={report.testssl}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/testssl.html`}
-          />
-        </>
-      )}
-      {isToolEnabled("nmap") && report.nmap && (
-        <>
-          <Anchor id="nmap" />
-          <Nmap
-            data={report.nmap}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/nmapvuln.html`}
-          />
-        </>
-      )}
-      {isToolEnabled("http") && report.http && (
-        <>
-          <Anchor id="http" />
-          <HTTP data={report.http} />
-        </>
-      )}
-      {isToolEnabled("thirdparties") && report.thirdparties && (
-        <>
-          <Anchor id="thirdparties" />
-          <Trackers data={report.thirdparties} />
-        </>
-      )}
-      {isToolEnabled("zap") && report.zap && (
-        <>
-          <Anchor id="zap" />
-          <Owasp
-            data={report.zap}
-            url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/zap.html`}
-          />
-        </>
-      )}
-      {isToolEnabled("nuclei") && report.nuclei && (
-        <>
-          <Anchor id="nuclei" />
-          <Nuclei data={report.nuclei} />
-        </>
-      )}
-      {isToolEnabled("wappalyzer") && report.wappalyzer && (
-        <>
-          <Anchor id="wappalyzer" />
-          <Wappalyzer data={report.wappalyzer} />
-        </>
-      )}
-      {isToolEnabled("stats") && report.stats && (
-        <>
-          <Anchor id="stats" />
-          <Stats data={report.stats} url={url} />
-        </>
-      )}
-      {(isToolEnabled("404") && report["404"] && report["404"].length && (
-        <>
-          <Anchor id="404" />
-          <Report404 data={report["404"]} />
-        </>
-      )) ||
-        null}
-      {(isToolEnabled("trivy") && report["trivy"] && report["trivy"].length && (
-        <>
-          <Anchor id="trivy" />
-          <Trivy data={report["trivy"]} />
-        </>
-      )) ||
-        null}
+        <Tab
+          label={
+            <div>
+              <Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+              Sécurité
+            </div>
+          }
+        >
+          {isToolEnabled("nmap") && report.nmap && (
+            <>
+              <Anchor id="nmap" />
+              <Nmap
+                data={report.nmap}
+                url={`${__PUBLIC_URL__}/report/${window.btoa(
+                  url
+                )}/nmapvuln.html`}
+              />
+            </>
+          )}
+          {isToolEnabled("http") && report.http && (
+            <>
+              <Anchor id="http" />
+              <HTTP data={report.http} />
+            </>
+          )}
+
+          {isToolEnabled("testssl") && report.testssl && (
+            <>
+              <Anchor id="testssl" />
+              <TestSSL
+                data={report.testssl}
+                url={`${__PUBLIC_URL__}/report/${window.btoa(
+                  url
+                )}/testssl.html`}
+              />
+            </>
+          )}
+
+          {isToolEnabled("dependabot") &&
+            report.dependabot &&
+            report.dependabot.repositories && (
+              <>
+                <Anchor id="dependabot" />
+                {report.dependabot.repositories
+                  .filter(Boolean)
+                  .map((repository) => (
+                    <Dependabot
+                      key={repository.url}
+                      data={repository}
+                      url={url}
+                    />
+                  ))}
+              </>
+            )}
+          {isToolEnabled("codescan") &&
+            report.codescan &&
+            report.codescan.repositories && (
+              <>
+                <Anchor id="codescan" />
+                {report.codescan.repositories
+                  .filter(Boolean)
+                  .map((repository) => (
+                    <Codescan
+                      key={repository.url}
+                      data={repository}
+                      url={url}
+                    />
+                  ))}
+              </>
+            )}
+          {isToolEnabled("zap") && report.zap && (
+            <>
+              <Anchor id="zap" />
+              <Owasp
+                data={report.zap}
+                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/zap.html`}
+              />
+            </>
+          )}
+          {isToolEnabled("nuclei") && report.nuclei && (
+            <>
+              <Anchor id="nuclei" />
+              <Nuclei data={report.nuclei} />
+            </>
+          )}
+
+          {(isToolEnabled("trivy") &&
+            report["trivy"] &&
+            report["trivy"].length && (
+              <>
+                <Anchor id="trivy" />
+                <Trivy data={report["trivy"]} />
+              </>
+            )) ||
+            null}
+        </Tab>
+        <Tab
+          label={
+            <div>
+              <Info size={16} style={{ marginRight: 5, marginBottom: -2 }} />
+              Informations
+            </div>
+          }
+        >
+          {isToolEnabled("wappalyzer") && report.wappalyzer && (
+            <>
+              <Anchor id="wappalyzer" />
+              <Wappalyzer data={report.wappalyzer} />
+            </>
+          )}
+        </Tab>
+      </Tabs>
     </>
   );
 };

@@ -38,7 +38,7 @@ export const Intro: React.FC = () => (
         </a>{" "}
         ou{" "}
         <a
-          href="https://github.com/SocialGouv/dashlord/projects/1"
+          href="https://github.com/orgs/SocialGouv/projects/13"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -57,6 +57,7 @@ export const Intro: React.FC = () => (
       <Panel
         title="Google Lighthouse"
         url="https://developers.google.com/web/tools/lighthouse"
+        urlText="Site officiel"
         isExternal
       >
         Permet un audit automatique de page web :
@@ -98,7 +99,12 @@ export const Intro: React.FC = () => (
     )}
 
     {isToolEnabled("dependabot") && (
-      <Panel title="Dependabot" url="https://dependabot.com/" isExternal>
+      <Panel
+        title="Dependabot"
+        url="https://dependabot.com/"
+        urlText="Site officiel"
+        isExternal
+      >
         Recense les vulnérabilités de tes dépendances dans le code source
         <br />
         <br />
@@ -122,6 +128,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("codescan") && (
       <Panel
         title="Codescan"
+        urlText="Documentation"
         url="https://docs.github.com/en/code-security/secure-coding/about-code-scanning"
         isExternal
       >
@@ -147,7 +154,12 @@ export const Intro: React.FC = () => (
     )}
 
     {isToolEnabled("nmap") && (
-      <Panel title="Nmap" url="https://nmap.org" isExternal>
+      <Panel
+        title="Nmap"
+        urlText="Site officiel"
+        url="https://nmap.org"
+        isExternal
+      >
         Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine
         <br />
         <br />
@@ -164,6 +176,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("zap") && (
       <Panel
         title="OWASP Zed Attack Proxy"
+        urlText="Site officiel"
         url="https://www.zaproxy.org/docs/docker/baseline-scan/"
         isExternal
       >
@@ -185,6 +198,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("testssl") && (
       <Panel
         title="testssl.sh"
+        urlText="Site officiel"
         url="https://testssl.sh/"
         isExternal
         info={
@@ -216,6 +230,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("http") && (
       <Panel
         title="Mozilla HTTP observatory"
+        urlText="Site officiel"
         info={
           <a
             rel="noopener noreferrer"
@@ -240,6 +255,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("updownio") && (
       <Panel
         title="Updown.io"
+        urlText="Site officiel"
         info={
           <a
             rel="noopener noreferrer"
@@ -271,6 +287,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("nuclei") && (
       <Panel
         title="Nucléi"
+        urlText="Site officiel"
         url="https://nuclei.projectdiscovery.io/"
         isExternal
       >
@@ -286,6 +303,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("thirdparties") && (
       <Panel
         title="Third-parties"
+        urlText="Code source"
         url="https://github.com/SocialGouv/thirdparties"
         isExternal
       >
@@ -308,6 +326,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("thirdparties") && (
       <Panel
         title="GeoIP2"
+        urlText="Site officiel"
         url="https://www.maxmind.com/en/geoip-demo"
         isExternal
       >
@@ -319,7 +338,12 @@ export const Intro: React.FC = () => (
     )}
 
     {isToolEnabled("wappalyzer") && (
-      <Panel title="Wappalyzer" url="https://www.wappalyzer.com/" isExternal>
+      <Panel
+        title="Wappalyzer"
+        urlText="Site officiel"
+        url="https://www.wappalyzer.com/"
+        isExternal
+      >
         Wappalyzer reconnait +1500 technologies web, Javascript, CMS,
         outillage...
         <br />
@@ -356,6 +380,7 @@ export const Intro: React.FC = () => (
       <Panel
         title="Vulnérabilités Trivy"
         url="https://aquasecurity.github.io/trivy/"
+        urlText="Site officiel"
         isExternal
       >
         Trivy permet de scanner les containers docker à la recherche de
