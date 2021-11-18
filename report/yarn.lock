@@ -784,15 +784,15 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^14.17.27":
-  version "14.17.27"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.27.tgz#5054610d37bb5f6e21342d0e6d24c494231f3b85"
-  integrity sha512-94+Ahf9IcaDuJTle/2b+wzvjmutxXAEXU6O81JHblYXUg2BDG+dnBy7VxIPHKAyEEDHzCMQydTJuWvrE+Aanzw==
+"@types/node@*", "@types/node@^14.17.33":
+  version "14.17.33"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.33.tgz#011ee28e38dc7aee1be032ceadf6332a0ab15b12"
+  integrity sha512-noEeJ06zbn3lOh4gqe2v7NMGS33jrulfNqYFDjjEbhpDEHR5VTxgYNQSBqBlJIsBJW3uEYDgD6kvMnrrhGzq8g==
 
-"@types/nodegit@^0.27.0", "@types/nodegit@^0.27.3":
-  version "0.27.3"
-  resolved "https://registry.yarnpkg.com/@types/nodegit/-/nodegit-0.27.3.tgz#fee7d2c3b5e8d828cd59804d6525cb7e3cabdc1f"
-  integrity sha512-Bdu5zd62wcI2bwvxyZ1WPtANMLQKgXtZOMRtodN4kaUHm8DIK0fhrVNa6QPfkDUCf8hDdanP7cTLTp7Ts5VqZg==
+"@types/nodegit@^0.27.0", "@types/nodegit@^0.27.5":
+  version "0.27.5"
+  resolved "https://registry.yarnpkg.com/@types/nodegit/-/nodegit-0.27.5.tgz#cbb79c48c58d62ebbdb4f33bd00c9775bc077968"
+  integrity sha512-C2EG7Rk991wfAadFBlGi+C09obyDQzFqR+IJKidXVMsEEsZwfKS6hY9EVJzVnDwdNBuDakeHrLA7tCjEosvLoQ==
   dependencies:
     "@types/node" "*"
 
