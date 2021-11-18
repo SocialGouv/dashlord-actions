@@ -7,9 +7,7 @@ exports[`Should render full Dashboard 1`] = `
   className="fr-table"
 >
   <table>
-    <caption
-      data-testid="table-caption"
-    >
+    <caption>
       
     </caption>
     <thead>
@@ -6774,9 +6772,7 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
   className="fr-table"
 >
   <table>
-    <caption
-      data-testid="table-caption"
-    >
+    <caption>
       
     </caption>
     <thead>
