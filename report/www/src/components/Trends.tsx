@@ -63,6 +63,7 @@ const showValues = (values: any[]) =>
       }
       return val;
     })
+    .filter((n, i, arr) => i === 0 || i === arr.length - 1)
     .join(" => ");
 
 const columns = [

@@ -31,6 +31,9 @@ const TrivyBadge = (vuln: Vulnerability) => {
 
 type TrivyProps = { data: TrivyReport };
 
+const filterByKey = (key) => (item, idx, arr) =>
+  !arr.find((v, j) => j < idx && v[key] === item[key]);
+
 const columns = [
   {
     name: "Severity",
@@ -68,8 +71,10 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
                 image.trivy.Vulnerabilities.length ? (
                   <Table
                     columns={columns}
-                    data={image.trivy.Vulnerabilities?.sort(orderBySeverity)}
-                    rowKey={(row) => row.PkgName + row.VulnerabilityID}
+                    data={image.trivy.Vulnerabilities?.sort(
+                      orderBySeverity
+                    ).filter(filterByKey("VulnerabilityID"))}
+                    rowKey="VulnerabilityID"
                   />
                 ) : (
                   <Alert

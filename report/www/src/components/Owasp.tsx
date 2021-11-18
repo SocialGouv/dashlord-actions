@@ -3,6 +3,7 @@ import * as React from "react";
 import { Table } from "@dataesr/react-dsfr";
 import Badge from "./Badge";
 import { Panel } from "./Panel";
+import { Grade } from "./Grade";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first
