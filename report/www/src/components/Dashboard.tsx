@@ -8,6 +8,7 @@ import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 import { isToolEnabled, letterGradeValue, smallUrl } from "../utils";
 import { Grade } from "./Grade";
 import ColumnHeader from "./ColumnHeader";
+import { format } from "date-fns";
 
 type DashboardProps = { report: DashLordReport };
 
@@ -45,6 +46,7 @@ type GetColumnProps = {
   warning?: JSX.Element | undefined;
   hash: string;
   gradeKey: string;
+  sort?: Function;
   gradeLabel?: (s: UrlReportSummary) => string | number | undefined;
   warningText?: (s: UrlReportSummary) => string | undefined;
 };
@@ -55,10 +57,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     return (summary[grade] && letterGradeValue(summary[grade])) || -1;
   };
 
+  const sortSSLGrades = (a, b) =>
+    b.summary.testsslExpireSoon - a.summary.testsslExpireSoon ||
+    getSummaryData(a, "testsslGrade") - getSummaryData(b, "testsslGrade") ||
+    1;
+
   const getColumn = ({
     id,
     title,
     info,
+    sort,
     warning,
     hash,
     gradeKey,
@@ -67,7 +75,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   }: GetColumnProps) => ({
     name: id,
     sortable: true,
-    sort: (a, b) => getSummaryData(a, gradeKey) - getSummaryData(b, gradeKey),
+    sort: (a, b) =>
+      sort
+        ? sort(a, b)
+        : getSummaryData(a, gradeKey) - getSummaryData(b, gradeKey),
     label: title,
     headerRender: () => (
       <ColumnHeader title={title} info={info} warning={warning} />
@@ -102,7 +113,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   let columns = [
     {
       name: "url",
-      label: "URL",
+      label: `URL ${report && `(${report.length})`}`,
       sortable: true,
       render: (rowData) => (
         <div
@@ -151,9 +162,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "testssl",
         gradeKey: "testsslGrade",
         gradeLabel: (summary) => summary.testsslGrade,
+        sort: sortSSLGrades,
         warningText: (summary) =>
           (summary.testsslExpireSoon &&
-            `Expire le : ${summary.testsslExpireDate}`) ||
+            `Expire le : ${format(
+              new Date(summary.testsslExpireDate),
+              "dd/MM/yyyy"
+            )}`) ||
           undefined,
       })
     );
@@ -303,13 +318,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  const filterBy = (key) => (item, idx, arr) =>
+    !arr.slice(idx + 1).find((r) => item[key] === r[key]);
+
   return (
     (report && (
       <Table
-        data={report}
+        data={report.filter(filterBy("url"))}
         caption={""}
         columns={columns}
-        rowKey="url"
+        rowKey={(row, idx) => row.url}
         perPage={1000}
         tableClassName={styles.table}
         className={styles.tableWrapper}

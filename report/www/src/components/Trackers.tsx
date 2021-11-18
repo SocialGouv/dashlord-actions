@@ -5,10 +5,16 @@ import Flags from "country-flag-icons/react/3x2";
 
 import { smallUrl } from "../utils";
 import { Panel } from "./Panel";
+import { Popover } from "react-bootstrap";
 
 type TrackersProps = { data: ThirdPartiesReport };
 
 type CookiesTableProps = { cookies: ThirdPartiesReportCookies };
+
+const sortBy = (accessor) => (a, b) => accessor(a).localeCompare(accessor(b));
+
+const filterByKey = (accessor) => (item, idx, arr) =>
+  !arr.find((v, j) => j < idx && accessor(v, idx) === accessor(item, idx + 1));
 
 const cookiesColumns = [
   { name: "name", label: "Cookies" },
@@ -38,7 +44,13 @@ type TrackersTableProps = { trackers: ThirdPartiesReportTrackers };
 
 const trackersColumns = [
   { name: "type", label: "Type" },
-  { name: "url", label: "URL", render: ({ url }) => smallLinkify(url) },
+  {
+    name: "url",
+    label: "URL",
+    render: ({ url }) => {
+      return smallLinkify(url);
+    },
+  },
   {
     name: "details",
     label: "Remédiation",
@@ -47,7 +59,16 @@ const trackersColumns = [
 ];
 const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) =>
   (trackers && trackers.length && (
-    <Table columns={trackersColumns} data={trackers} rowKey="url" />
+    <Table
+      columns={trackersColumns}
+      data={trackers.filter(
+        filterByKey(
+          // group by type except for "unknown" trackers
+          (t: ThirdPartyTracker, idx) => (t.type !== "unknown" && t.type) || idx
+        )
+      )}
+      rowKey={(row) => row.type + row.url}
+    />
   )) ||
   null;
 
@@ -92,9 +113,16 @@ const endPointsColumns = [
       "?",
   },
 ];
+
 const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
   (endpoints && endpoints.length && (
-    <Table columns={endPointsColumns} data={endpoints} rowKey="ip" />
+    <Table
+      columns={endPointsColumns}
+      data={endpoints.sort(
+        sortBy((point) => point.geoip?.country?.names?.fr || "")
+      )}
+      rowKey="ip"
+    />
   )) ||
   null;
 

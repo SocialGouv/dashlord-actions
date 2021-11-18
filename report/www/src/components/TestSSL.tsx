@@ -20,6 +20,9 @@ const getSeverityValue = (severity: string) => severities.indexOf(severity);
 
 type SSLProps = { data: SslTestReport; url: string };
 
+const filterByKey = (key) => (item, idx, arr) =>
+  !arr.find((v, j) => j < idx && v[key] === item[key]);
+
 export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
   const gradeEntry = data.find((entry) => entry.id === "overall_grade");
   const grade = data && gradeEntry && gradeEntry.finding;
@@ -70,11 +73,12 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
               Scan Summary : <Grade small grade={grade} />
             </h3>
             {capReasons.length > 0 && <br />}
-            {capReasons.map((reason: any) => (
-              <Alert key={reason.id} type="info" title={reason.finding} />
+            {capReasons.filter(filterByKey("finding")).map((reason: any) => (
+              <Alert key={reason.finding} type="info" title={reason.finding} />
             ))}
             {expirationDate && (
               <h4>
+                <br />
                 Expiration : {format(expirationDate, "dd/MM/yyyy")}
                 {expiresSoon && " ⚠️"}
               </h4>

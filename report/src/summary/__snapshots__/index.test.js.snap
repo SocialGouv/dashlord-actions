@@ -23,7 +23,7 @@ Object {
   "lighthouse_seo": 0.9,
   "lighthouse_seoGrade": "A",
   "testsslExpireDate": "2021-11-30T20:40:00.000Z",
-  "testsslExpireSoon": false,
+  "testsslExpireSoon": true,
   "testsslGrade": "A+",
   "trackersCount": 0,
   "trackersGrade": "A",
