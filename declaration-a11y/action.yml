@@ -19,7 +19,7 @@ runs:
         yarn
     - name: Get URL HTML
       id: html
-      uses: socialgouv/dashlord-actions/get-html@v1
+      uses: socialgouv/dashlord-actions/get-html@declaration-a11y
       with:
         url: ${{ inputs.url }}
     - name: Detect declaration a11y
