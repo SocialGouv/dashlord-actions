@@ -27,3 +27,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         node index ${{ github.workspace }}/result.html > ${{ github.workspace }}/${{ inputs.output }}
+        cat ${{ github.workspace }}/${{ inputs.output }}
