@@ -8,7 +8,7 @@ Get HTML from any URL
 jobs:
   html:
     steps:
-      - uses: "socialgouv/dashlord-actions/get-html@master"
+      - uses: "socialgouv/dashlord-actions/get-html@v1"
         with:
           url: ${{ matrix.url }}
           output: result.html
