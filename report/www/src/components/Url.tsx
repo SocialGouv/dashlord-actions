@@ -26,6 +26,7 @@ import { Nmap } from "./Nmap";
 import { Stats } from "./Stats";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
+import { DeclarationA11y } from "./DeclarationA11y";
 
 import styles from "./url.cssmodule.scss";
 
@@ -134,6 +135,13 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Stats data={report.stats} url={url} />
             </>
           )}
+          {isToolEnabled("declaration-a11y") &&
+            report.summary["declaration-a11y"] && (
+              <>
+                <Anchor id="declaration-a11y" />
+                <DeclarationA11y data={report.summary["declaration-a11y"]} />
+              </>
+            )}
           {(isToolEnabled("404") && report["404"] && report["404"].length && (
             <>
               <Anchor id="404" />

@@ -359,7 +359,9 @@ type StatsReport = {
   uri: string;
 };
 
-type DeclarationA11yReport = string;
+type DeclarationA11yReport = {
+  declaration: string | null | undefined;
+};
 
 type TrivyReport = TrivyImageReport[];
 

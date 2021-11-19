@@ -165,6 +165,9 @@ const tools = {
   stats: { data: requireToolData("stats.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
   trivy: { data: requireToolData("trivy.json"), cleanup: trivyCleanup },
+  "declaration-a11y": {
+    data: requireToolData("declaration-a11y.json"),
+  },
 };
 
 //@ts-expect-error

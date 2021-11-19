@@ -8,7 +8,7 @@ Save results from various URL scanners into a single folder for DashLord
 jobs:
   scans:
     steps:
-      - uses: "socialgouv/dashlord-save-action@master"
+      - uses: "socialgouv/dashlord-actions/save@master"
         with:
           url: ${{ matrix.url }}
 ```

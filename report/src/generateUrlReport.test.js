@@ -60,6 +60,9 @@ describe("generateUrlReport", () => {
     mockJson("zap.json", { report: "zap.json" });
     mockJson("stats.json", { report: "stats.json" });
     mockJson("404.json", { broken: [1, 2, 3] });
+    mockJson("declaration-a11y.json", {
+      declaration: "Accessibilité : partiellement conforme",
+    });
 
     expect(
       generateUrlReport({
@@ -81,6 +84,7 @@ describe("generateUrlReport", () => {
     unMockJson("zap.json");
     unMockJson("stats.json");
     unMockJson("404.json");
+    unMockJson("declaration-a11y.json");
   });
   test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder

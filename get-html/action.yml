@@ -1,0 +1,20 @@
+name: "Get URL HTML action"
+description: "Get some URL HTML"
+
+inputs:
+  url:
+    description: URL to save data for
+    required: true
+outputs:
+  html:
+    description: The URL HTML after fully-loaded
+    value: ${{ steps.scan.outputs.html }}
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      id: scan
+      run: |
+        HTML=$(npx pwpr --url=${{ inputs.url }} --load=30000)
+        echo "::set-output name=html::$(echo $HTML)"
