@@ -3,6 +3,7 @@
     "404": null,
     "url": "https://archifiltre.fabrique.social.gouv.fr",
     "category": "fabrique",
+    "declaration-a11y": null,
     "tags": ["unknown"],
     "repositories": [
       "socialgouv/archifiltre",
@@ -2434,6 +2435,7 @@
   },
   {
     "404": null,
+    "declaration-a11y": {},
     "url": "https://index-egapro.travail.gouv.fr",
     "category": "fabrique",
     "tags": ["travail"],
@@ -7063,6 +7065,7 @@
   },
   {
     "404": null,
+    "declaration-a11y": { "declaration": "balbala" },
     "url": "https://code.travail.gouv.fr",
     "category": "fabrique",
     "tags": ["travail"],
@@ -9320,6 +9323,7 @@
       "uri": "stats"
     },
     "summary": {
+      "declaration-a11y": "B",
       "httpGrade": "C-",
       "apdex": 1,
       "apdexGrade": "A",
@@ -11352,6 +11356,7 @@
       "uri": "stats"
     },
     "summary": {
+      "declaration-a11y": null,
       "httpGrade": "B+",
       "apdex": 1,
       "apdexGrade": "A",
@@ -18085,6 +18090,7 @@
       "uri": "stats"
     },
     "summary": {
+      "declaration-a11y": "F",
       "httpGrade": "D+",
       "apdex": 1,
       "apdexGrade": "A",

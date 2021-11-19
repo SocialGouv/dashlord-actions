@@ -165,6 +165,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         sort: sortSSLGrades,
         warningText: (summary) =>
           (summary.testsslExpireSoon &&
+            summary.testsslExpireDate &&
             `Expire le : ${format(
               new Date(summary.testsslExpireDate),
               "dd/MM/yyyy"
@@ -289,6 +290,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "stats",
         gradeKey: "statsGrade",
         gradeLabel: (summary) => summary.statsCount,
+      })
+    );
+  }
+
+  if (isToolEnabled("declaration-a11y")) {
+    columns.push(
+      getColumn({
+        id: "declaration-a11y",
+        title: "Déclaration a11y",
+        info: "Présence de la déclaration de mise en accessibilité",
+        hash: "declaration-a11y",
+        gradeKey: "declaration-a11y",
+        //gradeLabel: (summary) => summary.statsCount,
       })
     );
   }

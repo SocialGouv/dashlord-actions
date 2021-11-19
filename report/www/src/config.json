@@ -18,7 +18,8 @@
     "dependabot": true,
     "codescan": true,
     "stats": true,
-    "trivy": true
+    "trivy": true,
+    "declaration-a11y": true
   },
   "urls": [
     {

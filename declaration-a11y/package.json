@@ -1,0 +1,10 @@
+{
+  "name": "declaration-a11y",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fast-fuzzy": "^1.10.10",
+    "jsdom": "^17.0.0"
+  }
+}

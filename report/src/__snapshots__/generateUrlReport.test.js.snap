@@ -7,6 +7,7 @@ Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
   },
+  "declaration-a11y": null,
   "dependabot": null,
   "http": null,
   "lhr": null,
@@ -17,6 +18,7 @@ Object {
   "summary": Object {
     "codescanCount": 42,
     "codescanGrade": undefined,
+    "declaration-a11y": undefined,
   },
   "testssl": null,
   "thirdparties": null,
@@ -40,6 +42,9 @@ Object {
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
+  },
+  "declaration-a11y": Object {
+    "declaration": "Accessibilité : partiellement conforme",
   },
   "dependabot": Object {
     "report": "dependabotalerts.json",
@@ -71,6 +76,7 @@ Object {
     "404": 3,
     "codescanCount": 42,
     "codescanGrade": undefined,
+    "declaration-a11y": "B",
   },
   "testssl": Array [
     Object {

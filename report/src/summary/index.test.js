@@ -3,12 +3,16 @@ const { computeSummary } = require("./index");
 
 
 test("should compute summary for some URL report", () => {
+  // @ts-ignore
   expect(computeSummary(urlReport)).toMatchSnapshot();
 });
 
 // extracted from report.json
 const urlReport = {
     "url": "https://www.fabrique.social.gouv.fr",
+    "declaration-a11y": {
+      "declaration": "Accessibilité : partiellement conforme",
+    },
     "404": [
       {
         "url": {

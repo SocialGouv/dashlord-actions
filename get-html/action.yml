@@ -1,0 +1,18 @@
+name: "Get URL HTML action"
+description: "Get some URL HTML"
+
+inputs:
+  url:
+    description: URL to save data for
+    required: true
+  output:
+    description: Path to output file
+    default: result.html
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      id: scan
+      run: |
+        npx pwpr --url=${{ inputs.url }} --load=30000 --output ${{ inputs.output }}

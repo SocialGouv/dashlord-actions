@@ -1,4 +1,3 @@
-// each tool can output multiple values
 const tools = {
   /** @param {CodescanReport} report */
   codescan: (report) => require("./codescan")(report),
@@ -22,12 +21,14 @@ const tools = {
   404: (report) => report && report.length && { 404: report.length },
   /** @param {TrivyReport} report */
   trivy: (report) => require("./trivy")(report),
+  /** @param {DeclarationA11yReport} report */
+  "declaration-a11y": (report) => require("./declaration-a11y")(report),
 };
 
 /**
  * @param {UrlReport} urlReport
  *
- * @returns {object}
+ * @returns {UrlReportSummary}
  */
 const computeSummary = (urlReport) => {
   /** @type {Record<string,any>} */

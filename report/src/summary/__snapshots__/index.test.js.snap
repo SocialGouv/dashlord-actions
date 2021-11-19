@@ -9,6 +9,7 @@ Object {
   "codescanGrade": "A",
   "cookiesCount": 2,
   "cookiesGrade": "B",
+  "declaration-a11y": "B",
   "dependabotCount": 4,
   "dependabotGrade": "D",
   "httpGrade": "A+",
