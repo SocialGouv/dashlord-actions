@@ -9,10 +9,10 @@ jobs:
   html:
     steps:
       - uses: "socialgouv/dashlord-actions/get-html@master"
-        id: example
         with:
           url: ${{ matrix.url }}
+          output: result.html
       - name: demo
         run: |
-          echo "${{ steps.example.outputs.html }}"
+          cat result.html
 ```
