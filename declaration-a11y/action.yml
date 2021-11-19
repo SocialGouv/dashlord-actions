@@ -22,9 +22,11 @@ runs:
       uses: socialgouv/dashlord-actions/get-html@declaration-a11y
       with:
         url: ${{ inputs.url }}
+        output: result.html
     - name: Detect declaration a11y
       shell: bash
       run: |
+        ls
         cd ${{ github.action_path }}
-        echo "${{ steps.html.outputs.html }}" > result.html
+        ls
         node index result.html > ${{ github.workspace }}/${{ inputs.output }}
