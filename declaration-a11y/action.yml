@@ -18,7 +18,6 @@ runs:
         cd ${{ github.action_path }}
         yarn
     - name: Get URL HTML
-      id: html
       uses: socialgouv/dashlord-actions/get-html@declaration-a11y
       with:
         url: ${{ inputs.url }}
