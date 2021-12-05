@@ -9,6 +9,9 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
     - name: Build
       id: build
       shell: bash
@@ -26,11 +29,11 @@ runs:
         echo "PUBLIC_URL: $PUBLIC_URL"
 
         cd ${{ github.action_path }}
-        yarn --ignore-engines
+        yarn
         # this creates a report.json to build the website
         node src
         cd www
-        yarn --ignore-engines
+        yarn
         CI=false yarn build
         # prevent gh-pages jekyll build
         touch dist/.nojekyll
