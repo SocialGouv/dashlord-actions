@@ -4,6 +4,7 @@
   "entity": "Ministères sociaux",
   "footer": "Propulsé par SocialGouv",
   "marianne": true,
+  "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "tools": {
     "404": true,
     "screenshot": true,
