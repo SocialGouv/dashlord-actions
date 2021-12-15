@@ -46,7 +46,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             <ToolItemGroup>
               <ToolItem
                 icon="ri-github-fill"
-                link="https://github.com/SocialGouv/dashlord"
+                asLink={<a href="https://github.com/SocialGouv/dashlord" />}
               >
                 Code source
               </ToolItem>
@@ -59,6 +59,13 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
                   Paramètres d’affichage
                 </span>
               </ToolItem>
+              {dashlordConfig.loginUrl && (
+                <ToolItem asLink={<a href={dashlordConfig.loginUrl} />}>
+                  <span className="fr-fi-lock-fill fr-link--icon-left">
+                    Login
+                  </span>
+                </ToolItem>
+              )}
             </ToolItemGroup>
           </Tool>
         </HeaderBody>
