@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "dashlord/",
   "dependencies": {
-    "@dataesr/react-dsfr": "^0.6.9",
+    "@dataesr/react-dsfr": "^0.9.0",
     "classnames": "^2.3.1",
     "country-flag-icons": "^1.4.19",
     "date-fns": "^2.24.0",
