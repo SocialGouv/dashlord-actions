@@ -796,6 +796,81 @@ Array [
         </div>
       </div>
       <div
+        id="declaration-a11y"
+      />
+      <div
+        className=""
+      >
+        <div>
+          <h5>
+            Déclaration de mise en accessibilité
+          </h5>
+          <svg
+            fill="none"
+            height={20}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "cursor": "pointer",
+                "marginLeft": 5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="16"
+              y2="12"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="8"
+              y2="8"
+            />
+          </svg>
+        </div>
+        <div>
+          <div
+            className="fr-alert fr-alert--error"
+            role="alert"
+          >
+            <p
+              className="fr-alert__title"
+            />
+            <p>
+              <div>
+                La mention a bien été detectée : Non conforme
+                <div>
+                  <br />
+                  La déclaration est disponible sur :
+                  <a
+                    href="https://www.fabrique.social.gouv.fr/accessibilite"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    https://www.fabrique.social.gouv.fr/accessibilite
+                  </a>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
         id="404"
       />
       <div
@@ -3227,6 +3302,81 @@ Array [
             </p>
             <p>
               La page /stats n'a pas été détectée !
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="declaration-a11y"
+      />
+      <div
+        className=""
+      >
+        <div>
+          <h5>
+            Déclaration de mise en accessibilité
+          </h5>
+          <svg
+            fill="none"
+            height={20}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "cursor": "pointer",
+                "marginLeft": 5,
+              }
+            }
+            viewBox="0 0 24 24"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="16"
+              y2="12"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="8"
+              y2="8"
+            />
+          </svg>
+        </div>
+        <div>
+          <div
+            className="fr-alert fr-alert--error"
+            role="alert"
+          >
+            <p
+              className="fr-alert__title"
+            />
+            <p>
+              <div>
+                La mention a bien été detectée : Non conforme
+                <div>
+                  <br />
+                  La déclaration est disponible sur :
+                  <a
+                    href="https://www.fabrique.social.gouv.fr/accessibilite"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    https://www.fabrique.social.gouv.fr/accessibilite
+                  </a>
+                </div>
+              </div>
             </p>
           </div>
         </div>

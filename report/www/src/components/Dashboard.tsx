@@ -299,7 +299,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       getColumn({
         id: "declaration-a11y",
         title: "Déclaration a11y",
-        info: "Présence de la déclaration de mise en accessibilité",
+        info: "Présence de la mention de déclaration de mise en accessibilité",
         hash: "declaration-a11y",
         gradeKey: "declaration-a11y",
         //gradeLabel: (summary) => summary.statsCount,

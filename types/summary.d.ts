@@ -35,4 +35,5 @@ type UrlReportSummary = {
   "404"?: number;
   trivy?: number;
   trivyGrade?: string;
+  "declaration-a11y"?: string;
 };

@@ -7065,7 +7065,10 @@
   },
   {
     "404": null,
-    "declaration-a11y": { "declaration": "balbala" },
+    "declaration-a11y": {
+      "mention": "Accessibilité : partiellement conforme",
+      "declarationUrl": "https://code.travail.gouv.fr/accessibilite"
+    },
     "url": "https://code.travail.gouv.fr",
     "category": "fabrique",
     "tags": ["travail"],
@@ -13533,6 +13536,10 @@
     ],
     "url": "https://www.fabrique.social.gouv.fr",
     "category": "fabrique",
+    "declaration-a11y": {
+      "mention": "Accessibilité : non conforme",
+      "declarationUrl": "https://www.fabrique.social.gouv.fr/accessibilite"
+    },
     "tags": ["social", "sante", "travail"],
     "repositories": ["socialgouv/www"],
     "trivy": [

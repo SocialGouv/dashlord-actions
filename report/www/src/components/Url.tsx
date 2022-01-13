@@ -135,13 +135,12 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Stats data={report.stats} url={url} />
             </>
           )}
-          {isToolEnabled("declaration-a11y") &&
-            report.summary["declaration-a11y"] && (
-              <>
-                <Anchor id="declaration-a11y" />
-                <DeclarationA11y data={report.summary["declaration-a11y"]} />
-              </>
-            )}
+          {isToolEnabled("declaration-a11y") && report["declaration-a11y"] && (
+            <>
+              <Anchor id="declaration-a11y" />
+              <DeclarationA11y data={report["declaration-a11y"]} />
+            </>
+          )}
           {(isToolEnabled("404") && report["404"] && report["404"].length && (
             <>
               <Anchor id="404" />

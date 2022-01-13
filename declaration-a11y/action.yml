@@ -26,4 +26,4 @@ runs:
       shell: bash
       run: |
         cd ${{ github.action_path }}
-        node index ${{ github.workspace }}/result.html > ${{ github.workspace }}/${{ inputs.output }}
+        node index ${{ inputs.url }} ${{ github.workspace }}/result.html > ${{ github.workspace }}/${{ inputs.output }}

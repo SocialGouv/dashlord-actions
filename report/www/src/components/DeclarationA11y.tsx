@@ -3,30 +3,51 @@ import { Panel } from "./Panel";
 import { Grade } from "./Grade";
 import { Alert } from "@dataesr/react-dsfr";
 
-type DeclarationA11yProps = { data: string };
+type DeclarationA11yProps = { data: DeclarationA11yReport };
 
 export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
+  const declarationUrlBlock = data.declarationUrl && (
+    <div>
+      <br />
+      La déclaration est disponible sur :
+      <a href={data.declarationUrl} target="_blank" rel="noopener noreferrer">
+        {data.declarationUrl}
+      </a>
+    </div>
+  );
+
   const alerts = {
-    A: (
+    "Accessibilité : totalement conforme": (
       <Alert
         type="success"
         description={
-          <div>La mention a bien été detectée : Totalement conforme</div>
+          <div>
+            La mention a bien été detectée : Totalement conforme
+            {declarationUrlBlock}
+          </div>
         }
       />
     ),
-    B: (
+    "Accessibilité : partiellement conforme": (
       <Alert
         type="warning"
         description={
-          <div>La mention a bien été detectée : Partiellement conforme</div>
+          <div>
+            La mention a bien été detectée : Partiellement conforme
+            {declarationUrlBlock}
+          </div>
         }
       />
     ),
-    C: (
+    "Accessibilité : non conforme": (
       <Alert
         type="error"
-        description={<div>La mention a bien été detectée : Non conforme</div>}
+        description={
+          <div>
+            La mention a bien été detectée : Non conforme
+            {declarationUrlBlock}
+          </div>
+        }
       />
     ),
   };
@@ -34,9 +55,9 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
     (data && (
       <Panel
         title="Déclaration de mise en accessibilité"
-        info="Cette mention est obligatoire sur les sites et applications de l'état"
+        info="La déclaration est obligatoire sur les sites et applications de l'état"
       >
-        {alerts[data] || (
+        {(data.mention && alerts[data.mention]) || (
           <Alert
             type="error"
             title=""
@@ -54,9 +75,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
                 pour en créer une.
               </div>
             }
-          >
-            czefez
-          </Alert>
+          ></Alert>
         )}
       </Panel>
     )) ||
