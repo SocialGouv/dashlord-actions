@@ -61,7 +61,7 @@ describe("generateUrlReport", () => {
     mockJson("stats.json", { report: "stats.json" });
     mockJson("404.json", { broken: [1, 2, 3] });
     mockJson("declaration-a11y.json", {
-      declaration: "Accessibilité : partiellement conforme",
+      mention: "Accessibilité : partiellement conforme",
     });
 
     expect(
