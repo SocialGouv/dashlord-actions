@@ -362,7 +362,8 @@ type StatsReport = {
 };
 
 type DeclarationA11yReport = {
-  declaration: string | null | undefined;
+  mention: string | null;
+  declarationUrl?: string;
 };
 
 type TrivyReport = TrivyImageReport[];
