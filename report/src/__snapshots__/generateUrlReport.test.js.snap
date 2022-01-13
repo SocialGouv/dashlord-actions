@@ -44,7 +44,7 @@ Object {
     "totalCount": 42,
   },
   "declaration-a11y": Object {
-    "declaration": "Accessibilité : partiellement conforme",
+    "mention": "Accessibilité : partiellement conforme",
   },
   "dependabot": Object {
     "report": "dependabotalerts.json",

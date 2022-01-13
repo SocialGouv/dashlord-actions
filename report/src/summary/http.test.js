@@ -16,6 +16,7 @@ const tests = [
 describe("http", () => {
   tests.forEach((t) => {
     test(`${t.title} should return ${JSON.stringify(t.expected)}`, () => {
+      //@ts-expect-error
       expect(summary(t.report)).toEqual(t.expected);
     });
   });
