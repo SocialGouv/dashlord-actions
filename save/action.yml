@@ -70,3 +70,5 @@ runs:
                 mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr.html
             done
         fi
+        
+        ls -la $OUT_PATH
