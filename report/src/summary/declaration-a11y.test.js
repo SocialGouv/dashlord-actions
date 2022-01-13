@@ -2,31 +2,32 @@ const summary = require("./declaration-a11y");
 
 const tests = [
   {
-    declaration: undefined,
+    mention: undefined,
     expected: { "declaration-a11y": undefined },
   },
   {
-    declaration: null,
+    mention: null,
     expected: { "declaration-a11y": "F" },
   },
   {
-    declaration: "Accessibilité : totalement conforme",
+    mention: "Accessibilité : totalement conforme",
     expected: { "declaration-a11y": "A" },
   },
   {
-    declaration: "Accessibilité : partiellement conforme",
+    mention: "Accessibilité : partiellement conforme",
     expected: { "declaration-a11y": "B" },
   },
   {
-    declaration: "Accessibilité : non conforme",
+    mention: "Accessibilité : non conforme",
     expected: { "declaration-a11y": "C" },
   },
 ];
 
 describe("declaration-a11y", () => {
   tests.forEach((t) => {
-    test(`${t.declaration} should return ${JSON.stringify(t.expected)}`, () => {
-      expect(summary({ declaration: t.declaration })).toEqual(t.expected);
+    test(`${t.mention} should return ${JSON.stringify(t.expected)}`, () => {
+      //@ts-expect-error
+      expect(summary({ mention: t.mention })).toEqual(t.expected);
     });
   });
 });

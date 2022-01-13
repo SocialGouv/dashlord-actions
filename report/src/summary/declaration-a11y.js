@@ -13,11 +13,11 @@ const summary = (report) => {
       "declaration-a11y": undefined,
     };
   }
-  const foundGradeIndex = report.declaration
-    ? Object.values(grades).indexOf(report.declaration)
+  const foundGradeIndex = report.mention
+    ? Object.values(grades).indexOf(report.mention)
     : -1;
 
-  if (report.declaration === null) {
+  if (report.mention === null) {
     // not detected
     grade = "F";
   } else if (foundGradeIndex > -1) {
