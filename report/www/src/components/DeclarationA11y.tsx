@@ -9,7 +9,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
   const declarationUrlBlock = data.declarationUrl && (
     <div>
       <br />
-      La déclaration est disponible sur :
+      La déclaration est disponible sur :{" "}
       <a href={data.declarationUrl} target="_blank" rel="noopener noreferrer">
         {data.declarationUrl}
       </a>
