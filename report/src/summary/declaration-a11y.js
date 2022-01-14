@@ -13,16 +13,22 @@ const summary = (report) => {
       "declaration-a11y": undefined,
     };
   }
-  const foundGradeIndex = report.mention
+  const mentionIndex = report.mention
     ? Object.values(grades).indexOf(report.mention)
     : -1;
 
   if (report.mention === null) {
     // not detected
     grade = "F";
-  } else if (foundGradeIndex > -1) {
-    // @ts-ignore
-    grade = Object.keys(grades)[foundGradeIndex];
+  } else if (mentionIndex > -1) {
+    if (report.declarationUrl) {
+      // @ts-ignore
+      grade = Object.keys(grades)[mentionIndex];
+    } else if (report.mention === "Accessibilité : non conforme") {
+      grade = "D";
+    } else {
+      grade = "F";
+    }
   }
 
   return {

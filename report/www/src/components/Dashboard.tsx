@@ -133,6 +133,20 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       ),
     },
   ];
+
+  if (isToolEnabled("declaration-a11y")) {
+    columns.push(
+      getColumn({
+        id: "declaration-a11y",
+        title: "Déclaration d'accessibilité",
+        info: "Présence de la mention de conformité et de la déclaration",
+        hash: "declaration-a11y",
+        gradeKey: "declaration-a11y",
+        //gradeLabel: (summary) => summary.statsCount,
+      })
+    );
+  }
+
   if (isToolEnabled("lighthouse")) {
     columns = columns.concat([
       lightHouseColumn(
@@ -290,19 +304,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "stats",
         gradeKey: "statsGrade",
         gradeLabel: (summary) => summary.statsCount,
-      })
-    );
-  }
-
-  if (isToolEnabled("declaration-a11y")) {
-    columns.push(
-      getColumn({
-        id: "declaration-a11y",
-        title: "Déclaration a11y",
-        info: "Présence de la mention de déclaration de mise en accessibilité",
-        hash: "declaration-a11y",
-        gradeKey: "declaration-a11y",
-        //gradeLabel: (summary) => summary.statsCount,
       })
     );
   }

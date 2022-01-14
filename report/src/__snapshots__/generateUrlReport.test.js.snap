@@ -76,7 +76,7 @@ Object {
     "404": 3,
     "codescanCount": 42,
     "codescanGrade": undefined,
-    "declaration-a11y": "B",
+    "declaration-a11y": "F",
   },
   "testssl": Array [
     Object {
