@@ -29654,7 +29654,7 @@
     }
   },
   {
-    "404": null,
+    "404": [],
     "url": "https://www.psyenfantado.sante.gouv.fr",
     "category": "fabrique",
     "tags": ["sante"],
@@ -32767,7 +32767,8 @@
       "lighthouse_seoGrade": "A",
       "lighthouse_pwa": 0.58,
       "lighthouse_pwaGrade": "C",
-      "statsGrade": "A"
+      "statsGrade": "A",
+      "404": "A+"
     }
   },
   {
