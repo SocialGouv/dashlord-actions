@@ -316,7 +316,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Pages introuvables",
         hash: "404",
         gradeKey: "404",
-        gradeLabel: (summary) => summary["404"],
+        gradeLabel: (summary) => {
+          return summary["404"];
+        },
       })
     );
   }
