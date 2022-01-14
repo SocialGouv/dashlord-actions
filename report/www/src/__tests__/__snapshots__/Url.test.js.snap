@@ -854,18 +854,29 @@ Array [
             <p>
               <div>
                 La mention a bien été detectée : Non conforme
-                <div>
-                  <br />
-                  La déclaration est disponible sur :
-                   
-                  <a
-                    href="https://www.fabrique.social.gouv.fr/accessibilite"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    https://www.fabrique.social.gouv.fr/accessibilite
-                  </a>
-                </div>
+              </div>
+            </p>
+          </div>
+          <div
+            className="fr-alert fr-alert--success"
+            role="alert"
+          >
+            <p
+              className="fr-alert__title"
+            >
+              
+            </p>
+            <p>
+              <div>
+                La déclaration est disponible sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/accessibilite
+                </a>
               </div>
             </p>
           </div>
@@ -3366,18 +3377,29 @@ Array [
             <p>
               <div>
                 La mention a bien été detectée : Non conforme
-                <div>
-                  <br />
-                  La déclaration est disponible sur :
-                   
-                  <a
-                    href="https://www.fabrique.social.gouv.fr/accessibilite"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    https://www.fabrique.social.gouv.fr/accessibilite
-                  </a>
-                </div>
+              </div>
+            </p>
+          </div>
+          <div
+            className="fr-alert fr-alert--success"
+            role="alert"
+          >
+            <p
+              className="fr-alert__title"
+            >
+              
+            </p>
+            <p>
+              <div>
+                La déclaration est disponible sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/accessibilite
+                </a>
               </div>
             </p>
           </div>
