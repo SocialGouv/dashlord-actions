@@ -18,7 +18,7 @@ const tools = {
   /** @param {StatsReport} report */
   stats: (report) => require("./stats")(report),
   /** @param {Wget404Report} report */
-  404: (report) => report && report.length && { 404: report.length },
+  404: (report) => report && { 404: report.length || "A+" },
   /** @param {TrivyReport} report */
   trivy: (report) => require("./trivy")(report),
   /** @param {DeclarationA11yReport} report */
