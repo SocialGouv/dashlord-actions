@@ -845,7 +845,7 @@ Array [
         </div>
         <div>
           <div
-            className="fr-alert fr-alert--error"
+            className="fr-alert fr-alert--info"
             role="alert"
           >
             <p
@@ -3368,7 +3368,7 @@ Array [
         </div>
         <div>
           <div
-            className="fr-alert fr-alert--error"
+            className="fr-alert fr-alert--info"
             role="alert"
           >
             <p
