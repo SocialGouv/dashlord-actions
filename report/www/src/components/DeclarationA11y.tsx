@@ -87,7 +87,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
     (data && (
       <Panel
         title="Déclaration de mise en accessibilité"
-        info="La déclaration est obligatoire sur les sites et applications de l'état"
+        info="Une mention de conformité pointant sur une déclaration d'accessibilité est obligatoire sur les sites et applications de l'état"
       >
         {alerts.mention[data.mention || "null"]}
         {alerts.declaration["" + !!data.declarationUrl]}
