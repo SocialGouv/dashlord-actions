@@ -18,7 +18,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       ),
       "Accessibilité : partiellement conforme": (
         <Alert
-          type="warning"
+          type="success"
           description={
             <div>La mention a bien été detectée : Partiellement conforme</div>
           }
@@ -26,7 +26,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       ),
       "Accessibilité : non conforme": (
         <Alert
-          type="error"
+          type="info"
           description={<div>La mention a bien été detectée : Non conforme</div>}
         />
       ),
