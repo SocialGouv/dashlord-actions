@@ -31,13 +31,28 @@ const analyseDom = async (dom, { url = "" } = {}) => {
     Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
       if (fuzzy(bestStatus.needle, a.text) > 0.9) {
         // make URL absolute when possible
-        const declarationUrl =
-          a.getAttribute("href").charAt(0) === "/"
-            ? `${url || ""}${a.getAttribute("href")}`
-            : a.getAttribute("href");
-        result.declarationUrl = declarationUrl;
+        const link = a.getAttribute("href");
+        if (link !== "#") {
+          const declarationUrl =
+            link.charAt(0) === "/" ? `${url || ""}${link}` : link;
+          result.declarationUrl = declarationUrl;
+        }
       }
     });
+    // loose href search
+    if (!result.declarationUrl) {
+      Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
+        if (fuzzy("Accessibilité", a.text) > 0.9) {
+          // make URL absolute when possible
+          const link = a.getAttribute("href");
+          if (link !== "#") {
+            const declarationUrl =
+              link.charAt(0) === "/" ? `${url || ""}${link}` : link;
+            result.declarationUrl = declarationUrl;
+          }
+        }
+      });
+    }
   }
   return result;
 };
