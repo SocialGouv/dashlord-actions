@@ -1,274 +1,47 @@
 {
-  "title": "DashLord Fabrique des ministères sociaux",
+  "title": "Dashlord fabrique numérique",
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
-  "footer": "Un produit de la fabrique numérique des ministères sociaux, de la communauté beta.gouv.fr",
+  "footer": "Propulsé par SocialGouv",
   "marianne": true,
   "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "tools": {
     "404": true,
     "screenshot": true,
-    "lighthouse": true,
-    "testssl": true,
+    "nmap": true,
+    "zap": true,
     "wappalyzer": true,
-    "nuclei": true,
-    "zap": false,
-    "thirdparties": true,
-    "dependabot": false,
-    "codescan": false,
-    "updownio": true,
     "http": true,
-    "nmap": false,
+    "testssl": true,
+    "lighthouse": true,
+    "thirdparties": true,
+    "nuclei": true,
+    "updownio": true,
+    "dependabot": true,
+    "codescan": true,
     "stats": true,
-    "trivy": false,
+    "trivy": true,
     "declaration-a11y": true
   },
   "urls": [
     {
-      "url": "https://archifiltre.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "unknown"
-      ],
-      "repositories": [
-        "socialgouv/archifiltre",
-        "socialgouv/archifiltre-site",
-        "socialgouv/archifiltre-statistics"
-      ]
+      "url": "https://www.free.fr",
+      "title": "Free",
+      "repositories": ["iliad/free-ui", "iliad/free-api"]
     },
     {
-      "url": "https://index-egapro.travail.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/egapro",
-        "socialgouv/egapro-api",
-        "socialgouv/egapro-declaration"
-      ]
+      "url": "invalid-url"
     },
     {
-      "url": "https://index-egapro.travail.gouv.fr/consulter-index",
-      "category": "fabrique",
-      "tags": [
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/egapro-declaration"
-      ]
+      "url": "http://chez.com",
+      "repositories": ["chez/chez-ui", "chez/chez-api"],
+      "tools": {
+        "screenshot": false,
+        "updownio": false
+      }
     },
     {
-      "url": "https://code.travail.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/code-du-travail-numerique",
-        "socialgouv/cdtn-admin"
-      ]
-    },
-    {
-      "url": "https://domifa.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social"
-      ],
-      "repositories": [
-        "socialgouv/domifa"
-      ]
-    },
-    {
-      "url": "https://emjpm.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social"
-      ],
-      "repositories": [
-        "socialgouv/emjpm"
-      ]
-    },
-    {
-      "url": "https://www.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social",
-        "sante",
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/www"
-      ]
-    },
-    {
-      "url": "https://medle.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/medle"
-      ]
-    },
-    {
-      "url": "https://monsuivipsy.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/monsuivipsy",
-        "socialgouv/monsuivipsy-site"
-      ]
-    },
-    {
-      "url": "https://onvs.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/onvs"
-      ]
-    },
-    {
-      "url": "https://ozensemble.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/ozensemble",
-        "socialgouv/ozensemble-site"
-      ]
-    },
-    {
-      "url": "https://pjm.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social"
-      ],
-      "repositories": [
-        "socialgouv/emjpm-portail"
-      ]
-    },
-    {
-      "url": "https://tumeplay.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/tumeplay"
-      ]
-    },
-    {
-      "url": "https://www.psyenfantado.sante.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "betagouv/psy-enfant-ado"
-      ]
-    },
-    {
-      "url": "https://sample-next-app.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "demo"
-      ],
-      "repositories": [
-        "socialgouv/sample-next-app"
-      ]
-    },
-    {
-      "url": "https://1000jours.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/nos1000jours-landing"
-      ]
-    },
-    {
-      "url": "https://carnet-de-bord.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/carnet-de-bord"
-      ]
-    },
-    {
-      "url": "https://enfants-du-spectacle.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social"
-      ],
-      "repositories": [
-        "socialgouv/enfants-du-spectacle"
-      ]
-    },
-    {
-      "url": "https://fce.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/fce"
-      ]
-    },
-    {
-      "url": "https://mano-app.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/mano"
-      ]
-    },
-    {
-      "url": "https://monpsy.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "sante"
-      ],
-      "repositories": [
-        "socialgouv/mon-psy-sante"
-      ]
-    },
-    {
-      "url": "https://ressourcerie.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "ressources"
-      ],
-      "repositories": [
-        "socialgouv/ressourcerie"
-      ]
-    },
-    {
-      "url": "https://transitions-collectives.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "travail"
-      ],
-      "repositories": [
-        "socialgouv/transitions-collectives"
-      ]
-    },
-    {
-      "url": "https://mon-domifa.fabrique.social.gouv.fr",
-      "category": "fabrique",
-      "tags": [
-        "social"
-      ]
+      "url": "https://voila.fr"
     }
   ]
 }
