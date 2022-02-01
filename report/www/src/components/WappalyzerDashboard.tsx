@@ -138,7 +138,9 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                 <ul>
                   {item.urls.map((url) => (
                     <li key={url}>
-                      <Link href={`/url/${url}`}>{url}</Link>
+                      <Link href={`/url/${encodeURIComponent(url)}`}>
+                        {url}
+                      </Link>
                     </li>
                   ))}
                 </ul>

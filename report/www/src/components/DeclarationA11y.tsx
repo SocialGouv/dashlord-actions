@@ -36,7 +36,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
           title=""
           description={
             <div>
-              La mention de conformité n'a pas été détectée. La mention «
+              La mention de conformité n&apos;a pas été détectée. La mention «
               Accessibilité : non conforme » doit être présente sur chaque page.
             </div>
           }
@@ -68,7 +68,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
           title=""
           description={
             <div>
-              La déclaration n'a pas été trouvée. Utilisez le{" "}
+              La déclaration n&apos;a pas été trouvée. Utilisez le{" "}
               <a
                 href="https://betagouv.github.io/a11y-generateur-declaration"
                 target="_blank"

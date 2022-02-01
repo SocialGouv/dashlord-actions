@@ -36,7 +36,7 @@ type UrlDetailProps = { url: string; report: UrlReport };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
-const btoa = (b: any) => Buffer.from(b, "base64").toString();
+const btoa = (b: any) => Buffer.from(b).toString("base64");
 
 export const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;

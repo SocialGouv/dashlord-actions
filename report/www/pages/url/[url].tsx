@@ -22,8 +22,8 @@ const PageUrl = ({ report, url }: { report: UrlReport; url: string }) => {
 
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const url =
-    params && params.url && Array.isArray(params.url) && params.url.join("/");
+  const url = params && decodeURIComponent(params.url as string);
+  console.log("url", url);
   const urlData = report.find((u: UrlReport) => u.url === url);
   return {
     props: { url, report: urlData || null },
@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // return list of urls to generate
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: report.map((u: UrlReport) => `/url/${u.url}`),
+  paths: report.map((u: UrlReport) => `/url/${encodeURIComponent(u.url)}`),
   fallback: true,
 });
 

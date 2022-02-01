@@ -26,7 +26,7 @@ export const Intro: React.FC = () => (
         open-source.
         <br />
         Cette évaluation ne remplace en aucun cas une expertise manuelle, et
-        seule la page d'accueil du site est ici évaluée.
+        seule la page d&apos;accueil du site est ici évaluée.
         <br />
         Vous pouvez{" "}
         <a
@@ -49,7 +49,7 @@ export const Intro: React.FC = () => (
         <br />
       </CalloutText>
       <Button>
-        <Link href="/dashboard">Accéder au tableau de bord</Link>
+        <Link href="/">Accéder au tableau de bord</Link>
       </Button>
     </Callout>
 
@@ -83,7 +83,7 @@ export const Intro: React.FC = () => (
           title=""
           description={
             <span>
-              Les mesures d'accessibilité n'abordent pas du tout{" "}
+              Les mesures d&apos;accessibilité n&apos;abordent pas du tout{" "}
               <a
                 href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/"
                 rel="noopener noreferrer"
@@ -138,7 +138,9 @@ export const Intro: React.FC = () => (
         <li>
           Scan des potentielles vulnérabilités sur le dépôt Github du code
         </li>
-        <li>Possibilité d'activer autant de scanner souhaité: CodeQL, etc</li>
+        <li>
+          Possibilité d&apos;activer autant de scanner souhaité: CodeQL, etc
+        </li>
         <li>
           Liste restreinte de langages couverts: C/C++, C#, Go, Java,
           JavaScript/TypeScript, Python
@@ -160,7 +162,8 @@ export const Intro: React.FC = () => (
         url="https://nmap.org"
         isExternal
       >
-        Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine
+        Nmap scan les vulnérabilités d&apos;une machine (IP) associée à un
+        domaine
         <br />
         <br />
         <a
@@ -180,8 +183,8 @@ export const Intro: React.FC = () => (
         url="https://www.zaproxy.org/docs/docker/baseline-scan/"
         isExternal
       >
-        Scan de vulnérabilités passif "baseline" qui permet de détecter des
-        risques de sécurité.
+        Scan de vulnérabilités passif &quot;baseline&quot; qui permet de
+        détecter des risques de sécurité.
         <br />
         <br />
         <li>Bonnes pratiques web</li>
@@ -211,7 +214,7 @@ export const Intro: React.FC = () => (
           </a>
         }
       >
-        Évalue le niveau de confiance d'un certificat SSL
+        Évalue le niveau de confiance d&apos;un certificat SSL
         <br />
         <br />
         <li>Bonnes pratiques de configuration</li>
@@ -330,7 +333,8 @@ export const Intro: React.FC = () => (
         url="https://www.maxmind.com/en/geoip-demo"
         isExternal
       >
-        Géolocalise tous les serveurs contactés lors de l'ouverture d'une URL.
+        Géolocalise tous les serveurs contactés lors de l&apos;ouverture
+        d&apos;une URL.
         <br />
         <br />
         <li>Vie privée</li>

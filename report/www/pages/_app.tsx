@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     router.asPath === "/" ||
     router.asPath.match(/^\/tag\/.+/) ||
     router.asPath.match(/^\/category\/.+/);
-  console.log("app", pageProps);
   return (
     <div>
       <HeaderSite report={report} />
