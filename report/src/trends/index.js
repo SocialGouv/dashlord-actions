@@ -16,7 +16,7 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
   const repo = await Repository.open(gitPath);
 
   // get history for the report file
-  core.info(`Open GIT history for report.json`);
+  core.info(`Open GIT history for ${gitPath}/report.json`);
   const history = await gitHistory(`${gitPath}/report.json`);
 
   // ensure git history is sorted from latest to oldest commit
@@ -86,17 +86,29 @@ async function generateTrends(gitPath, latestReport, maxDaysHistory = 30) {
           urlsHistory[url] = {};
         }
         summary &&
-          Object.keys(summary).forEach((
-            /** @type {keyof UrlReportSummary}*/ key
-          ) => {
-            if (!urlsHistory[url][key]) {
-              urlsHistory[url][key] = [];
+          Object.keys(summary).forEach(
+            (/** @type {keyof UrlReportSummary}*/ key) => {
+              if (!urlsHistory[url][key]) {
+                urlsHistory[url][key] = [];
+              }
+              if (summary[key] !== undefined) {
+                let isSame = false;
+                // check if different than previous value
+                if (urlsHistory[url][key].length) {
+                  if (
+                    urlsHistory[url][key][urlsHistory[url][key].length - 1]
+                      .value === summary[key]
+                  ) {
+                    isSame = true;
+                  }
+                }
+                if (!isSame) {
+                  /** @ts-expect-error */
+                  urlsHistory[url][key].push({ date, value: summary[key] });
+                }
+              }
             }
-            if (summary[key] !== undefined) {
-              /** @ts-expect-error */
-              urlsHistory[url][key].push({ date, value: summary[key] });
-            }
-          });
+          );
       });
   });
   return urlsHistory;

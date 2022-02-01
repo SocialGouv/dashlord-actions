@@ -14,11 +14,18 @@ const getChanges = (urlTrends: UrlMetricsHistoryValues): ChangeSet => {
   Object.keys(urlTrends)
     .filter((key) => key in metricsDefinitions)
     .forEach((key) => {
-      const values = urlTrends[key].map(({ date, value }) => value);
-
-      const uniqueValues = uniqify(values);
-      if (uniqueValues.length > 1) {
-        changes[key] = uniqueValues;
+      const values = urlTrends[key].map(({ date, value }) => value) as any[];
+      if (values.length > 1) {
+        // keep only first and last
+        const firstValue = values[0];
+        const lastValue = values[values.length - 1];
+        const treshold = metricsDefinitions[key].treshold;
+        const isValid = treshold
+          ? Math.abs(firstValue - lastValue) > (treshold || 0)
+          : true;
+        if (isValid && firstValue !== lastValue) {
+          changes[key] = [firstValue, lastValue];
+        }
       }
     });
   return changes;
@@ -29,24 +36,32 @@ const metricsDefinitions = {
   codescanGrade: { title: "Codescan grade" },
   dependabotGrade: { title: "Dependabot grade" },
   httpGrade: { title: "HTTP observatory" },
-  lighthouse_performance: { title: "Performance" },
-  lighthouse_seo: { title: "Lighthouse SEO" },
-  lighthouse_pwa: { title: "Lighthouse PWA" },
+  lighthouse_performance: { treshold: 0.1, title: "Lighthouse Performance" },
+  lighthouse_seo: { treshold: 0.1, title: "Lighthouse SEO" },
+  lighthouse_pwa: { treshold: 0.1, title: "Lighthouse PWA" },
   lighthouse_accessibility: { title: "Lighthouse accessibility" },
-  "lighthouse_best-practices": { title: "Lighthouse best practices" },
+  "lighthouse_best-practices": {
+    treshold: 0.1,
+    title: "Lighthouse best practices",
+  },
   nmapGrade: { title: "NMAP grade" },
   nmapOpenPortsGrade: { title: "NMAP open ports grade" },
   trackersCount: { title: "Trackers count", reverse: true },
   cookiesCount: { title: "Cookies count", reverse: true },
-  uptime: { title: "uptime" },
-  apdex: { title: "apDex" },
-} as Record<any, { title: string; reverse?: boolean }>;
+  uptime: { treshold: 1, title: "uptime" },
+  apdex: { treshold: 0.05, title: "apDex" },
+  "declaration-a11y": { title: "Déclaration a11y" },
+  trivyGrade: { title: "Trivy grade" },
+} as Record<
+  keyof UrlReportSummary,
+  { title: string; reverse?: boolean; treshold?: number }
+>;
 
 const getTrend = (metric: SummaryKey, values: any[]) => {
   const metricDefinition = metricsDefinitions[metric];
   const firstValue = values[0];
   const lastValue = values[values.length - 1];
-  if (metric.match(/Grade$/)) {
+  if (metric.match(/Grade$/) || metric === "declaration-a11y") {
     return letterGradeValue(lastValue) - letterGradeValue(firstValue);
   }
   if (metricDefinition.reverse) {
