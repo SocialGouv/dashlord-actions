@@ -1,9 +1,7 @@
 import * as React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as H from "history";
 import { Table } from "@dataesr/react-dsfr";
 import { Search, Slash } from "react-feather";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 import { isToolEnabled, letterGradeValue, smallUrl } from "../utils";
 import { Grade } from "./Grade";
@@ -12,7 +10,7 @@ import { format } from "date-fns";
 
 type DashboardProps = { report: DashLordReport };
 
-import styles from "./dashboard.cssmodule.scss";
+import styles from "./dashboard.module.scss";
 
 const IconUnknown = () => <Slash size={20} />;
 
@@ -28,7 +26,7 @@ const GradeBadge = ({
   grade: string | undefined;
   label?: string | number | undefined;
   warning?: string;
-  to?: H.LocationDescriptor<unknown> | undefined;
+  to?: string;
 }) => (
   <div style={{ textAlign: "center" }}>
     {grade ? (
@@ -90,10 +88,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(summary)}
           warning={warningText && warningText(summary)}
-          to={{
-            pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
-            hash,
-          }}
+          to={`/url/${encodeURIComponent((rowData as UrlReport).url)}#${hash}`}
         />
       );
     },
@@ -124,10 +119,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             textOverflow: "ellipsis",
           }}
         >
-          <Link to={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
-            <Search size={16} />
-            &nbsp;
-            {smallUrl((rowData as UrlReport).url)}
+          <Link href={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
+            <a>
+              <Search size={16} />
+              &nbsp;
+              {smallUrl((rowData as UrlReport).url)}
+            </a>
           </Link>
         </div>
       ),

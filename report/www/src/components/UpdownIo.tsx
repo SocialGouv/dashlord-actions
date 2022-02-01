@@ -9,7 +9,7 @@ import { Grade } from "./Grade";
 import { smallUrl } from "../utils";
 import Card from "./Card";
 
-import styles from "./updownIo.cssmodule.scss";
+import styles from "./updownIo.module.scss";
 
 type UpDownIoProps = { data: UpDownReport; url: string };
 

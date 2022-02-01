@@ -8,7 +8,7 @@ import {
   CalloutTitle,
 } from "@dataesr/react-dsfr";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { isToolEnabled } from "../utils";
 
@@ -48,9 +48,9 @@ export const Intro: React.FC = () => (
         <br />
         <br />
       </CalloutText>
-      <Link to="/dashboard">
-        <Button>Accéder au tableau de bord</Button>
-      </Link>
+      <Button>
+        <Link href="/dashboard">Accéder au tableau de bord</Link>
+      </Button>
     </Callout>
 
     {isToolEnabled("lighthouse") && (

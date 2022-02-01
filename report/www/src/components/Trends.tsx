@@ -19,6 +19,7 @@ const getChanges = (urlTrends: UrlMetricsHistoryValues): ChangeSet => {
         // keep only first and last
         const firstValue = values[0];
         const lastValue = values[values.length - 1];
+        // @ts-ignore
         const treshold = metricsDefinitions[key].treshold;
         const isValid = treshold
           ? Math.abs(firstValue - lastValue) > (treshold || 0)
@@ -85,7 +86,7 @@ const columns = [
   {
     name: "trend",
     label: "Trend",
-    render: (row) => {
+    render: (row: any) => {
       const trend = getTrend(row.key, row.values);
       return trend > 0 ? (
         <TrendingUp
@@ -109,11 +110,13 @@ const columns = [
   {
     name: "outil",
     label: "Outil",
+    //@ts-ignore
     render: (row) => metricsDefinitions[row.key].title,
   },
   {
     name: "evolution",
     label: "Evolution",
+    //@ts-ignore
     render: (row) => showValues(row.values),
   },
 ];

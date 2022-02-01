@@ -4,7 +4,7 @@ import { AlertTriangle, Info } from "react-feather";
 import Tooltip from "rc-tooltip";
 
 import "rc-tooltip/assets/bootstrap.css";
-import styles from "./columnHeader.cssmodule.scss";
+import styles from "./columnHeader.module.scss";
 
 type ColumnHeaderProps = {
   title: string;

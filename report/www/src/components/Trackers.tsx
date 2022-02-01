@@ -5,7 +5,6 @@ import Flags from "country-flag-icons/react/3x2";
 
 import { smallUrl } from "../utils";
 import { Panel } from "./Panel";
-import { Popover } from "react-bootstrap";
 
 type TrackersProps = { data: ThirdPartiesReport };
 

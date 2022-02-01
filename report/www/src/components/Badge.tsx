@@ -1,26 +1,24 @@
 import classNames from "classnames";
 import React from "react";
-import { useHistory } from "react-router";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as H from "history";
+import { useRouter } from "next/router";
 
-import styles from "./badge.cssmodule.scss";
+import styles from "./badge.module.scss";
 
 type BadgeProps = {
   variant: string;
   className?: string;
-  to?: H.LocationDescriptor<unknown>;
+  to?: string;
 };
 
 const Badge: React.FC<BadgeProps> = ({ children, variant, className, to }) => {
-  const history = useHistory();
+  const router = useRouter();
   return (
     <button
       type="button"
       className={classNames(className, styles[variant])}
       onClick={() => {
         if (to) {
-          history.push(to);
+          router.push(to);
         }
       }}
     >

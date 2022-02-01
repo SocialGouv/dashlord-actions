@@ -3,9 +3,9 @@ import classNames from "classnames";
 import Tooltip from "rc-tooltip";
 
 import { Search, Info } from "react-feather";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-import styles from "./panel.cssmodule.scss";
+import styles from "./panel.module.scss";
 
 type PanelProps = {
   title: string;
@@ -45,9 +45,11 @@ export const Panel: React.FC<PanelProps> = ({
             {urlText}
           </a>
         ) : (
-          <Link to={url} style={{ float: "right" }}>
-            {urlText}
-            <Search />
+          <Link href={url}>
+            <a style={{ float: "right" }}>
+              {urlText}
+              <Search />
+            </a>
           </Link>
         ))}
     </div>

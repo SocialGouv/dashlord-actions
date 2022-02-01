@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./card.cssmodule.scss";
+import styles from "./card.module.scss";
 
 type CardProps = {
   title?: string | React.ReactNode;

@@ -28,13 +28,17 @@ import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
 
-import styles from "./url.cssmodule.scss";
+import styles from "./url.module.scss";
+
+const NEXT_PUBLIC_HOMEPAGE = process.env.NEXT_PUBLIC_HOMEPAGE || "";
 
 type UrlDetailProps = { url: string; report: UrlReport };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
-const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
+const btoa = (b: any) => Buffer.from(b, "base64").toString();
+
+export const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
     const hash = document.location.hash.split("#");
@@ -98,7 +102,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         <div className={styles.image}>
           <img
             alt={`Copie d'écran de ${url}`}
-            src={`${__PUBLIC_URL__}/report/${window.btoa(url)}/screenshot.jpeg`}
+            src={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/screenshot.jpeg`}
           />
         </div>
       </Callout>
@@ -119,7 +123,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="lighthouse" />
               <LightHouse
                 data={report.lhr}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/lhr.html`}
+                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/lhr.html`}
               />
             </>
           )}
@@ -175,7 +179,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="nmap" />
               <Nmap
                 data={report.nmap}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(
+                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(
                   url
                 )}/nmapvuln.html`}
               />
@@ -193,9 +197,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="testssl" />
               <TestSSL
                 data={report.testssl}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(
-                  url
-                )}/testssl.html`}
+                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/testssl.html`}
               />
             </>
           )}
@@ -237,7 +239,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="zap" />
               <Owasp
                 data={report.zap}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/zap.html`}
+                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/zap.html`}
               />
             </>
           )}
@@ -277,5 +279,3 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
     </>
   );
 };
-
-export default Url;
