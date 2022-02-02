@@ -31,7 +31,7 @@ import { DeclarationA11y } from "./DeclarationA11y";
 
 import styles from "./url.module.scss";
 
-const NEXT_PUBLIC_HOMEPAGE = process.env.NEXT_PUBLIC_HOMEPAGE || "";
+const BASE_PATH = process.env.BASE_PATH || "";
 
 type UrlDetailProps = { url: string; report: UrlReport; activeTab?: number };
 
@@ -108,7 +108,7 @@ export const Url: React.FC<UrlDetailProps> = ({
         <div className={styles.image}>
           <img
             alt={`Copie d'écran de ${url}`}
-            src={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/screenshot.jpeg`}
+            src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
           />
         </div>
       </Callout>
@@ -130,7 +130,7 @@ export const Url: React.FC<UrlDetailProps> = ({
               <Anchor id="lighthouse" />
               <LightHouse
                 data={report.lhr}
-                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/lhr.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
               />
             </>
           )}
@@ -186,9 +186,7 @@ export const Url: React.FC<UrlDetailProps> = ({
               <Anchor id="nmap" />
               <Nmap
                 data={report.nmap}
-                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(
-                  url
-                )}/nmapvuln.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/nmapvuln.html`}
               />
             </>
           )}
@@ -204,7 +202,7 @@ export const Url: React.FC<UrlDetailProps> = ({
               <Anchor id="testssl" />
               <TestSSL
                 data={report.testssl}
-                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/testssl.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/testssl.html`}
               />
             </>
           )}
@@ -246,7 +244,7 @@ export const Url: React.FC<UrlDetailProps> = ({
               <Anchor id="zap" />
               <Owasp
                 data={report.zap}
-                url={`${NEXT_PUBLIC_HOMEPAGE}/report/${btoa(url)}/zap.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/zap.html`}
               />
             </>
           )}

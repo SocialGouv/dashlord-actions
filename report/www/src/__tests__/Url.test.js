@@ -8,8 +8,6 @@ jest.mock("../components/Gauge", () => ({ Gauge: () => <div>io</div> }));
 jest.useFakeTimers("modern");
 jest.setSystemTime(new Date("2021-04-06").getTime());
 
-global.__PUBLIC_URL__ = "https://jest.demo.com/dashlord";
-
 const TEST_URL = "https://www.fabrique.social.gouv.fr";
 
 const report = require("../report.json").find((r) => r.url === TEST_URL);

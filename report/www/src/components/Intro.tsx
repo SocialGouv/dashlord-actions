@@ -16,6 +16,9 @@ import { Panel } from "./Panel";
 
 const dashlordConfig: DashlordConfig = require("../config.json");
 
+const REPOSITORY_URL =
+  process.env.REPOSITORY_URL || "https://github.com/socialgouv/dashlord";
+
 export const Intro: React.FC = () => (
   <>
     <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -30,7 +33,7 @@ export const Intro: React.FC = () => (
         <br />
         Vous pouvez{" "}
         <a
-          href="https://github.com/SocialGouv/dashlord/issues/new"
+          href={`${REPOSITORY_URL}/issues/new`}
           target="_blank"
           rel="noopener noreferrer"
         >

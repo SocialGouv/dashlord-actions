@@ -3,6 +3,7 @@ import { Table } from "@dataesr/react-dsfr";
 import { Search, Slash } from "react-feather";
 import Link from "next/link";
 import { format } from "date-fns";
+
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 import {
   isToolEnabled,

@@ -3,6 +3,7 @@
   "description": "Reporting website for DashLord actions",
   "private": true,
   "license": "Apache-2.0",
+  "homepage": "https://socialgouv.github.io/dashlord-fabrique",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

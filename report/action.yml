@@ -11,7 +11,7 @@ runs:
   steps:
     - uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: "14"
     - name: Build
       id: build
       shell: bash
@@ -19,25 +19,25 @@ runs:
         SKIP_PREFLIGHT_CHECK: "true"
       run: |
         export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
+        export REPOSITORY_URL=$(echo 'https://github.com/${{ github.repository }}')
         export DASHLORD_REPO_PATH=${{ github.workspace }};
-        export PUBLIC_URL=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
-        export ACTION_PATH=${{ github.action_path }}
+        export BASE_PATH=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
 
         echo "REPOSITORY_NAME: $REPOSITORY_NAME"
-        echo "ACTION_PATH: $ACTION_PATH"
+        echo "REPOSITORY_URL: $REPOSITORY_URL"
         echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
-        echo "PUBLIC_URL: $PUBLIC_URL"
+        echo "BASE_PATH: $BASE_PATH"
 
         cd ${{ github.action_path }}
         yarn
-        # this creates a report.json to build the website
+        # this creates config.json, report.json and trends.json to build the website
         node src
         cd www
         yarn
-        CI=false yarn build
+        CI=false yarn build && yarn export
         # prevent gh-pages jekyll build
-        touch dist/.nojekyll
+        touch out/.nojekyll
         # save report in workspace for artifact
         cp src/report.json ${{ github.workspace }}/report.json
         # save the build for gh-pages publication
-        mv dist ${{ github.workspace }}/build
+        mv out ${{ github.workspace }}/build
