@@ -1,6 +1,8 @@
 {
-  "name": "template",
+  "name": "@socialgouv/dashlord-report",
+  "description": "Reporting website for DashLord actions",
   "private": true,
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
