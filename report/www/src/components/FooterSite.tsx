@@ -16,7 +16,7 @@ import dashlordConfig from "../config.json";
 
 export const FooterSite: React.FC = () => (
   <Footer>
-    <FooterTop>sss</FooterTop>
+    <FooterTop></FooterTop>
     <FooterBody description="">
       {dashlordConfig.marianne === true ? (
         <Logo>{dashlordConfig.entity}</Logo>

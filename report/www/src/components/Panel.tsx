@@ -45,7 +45,7 @@ export const Panel: React.FC<PanelProps> = ({
             {urlText}
           </a>
         ) : (
-          <Link href={url}>
+          <Link prefetch={false} href={url}>
             <a style={{ float: "right" }}>
               {urlText}
               <Search />

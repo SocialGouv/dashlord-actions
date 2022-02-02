@@ -3,7 +3,6 @@ import * as React from "react";
 import { AlertTriangle, Info } from "react-feather";
 import Tooltip from "rc-tooltip";
 
-import "rc-tooltip/assets/bootstrap.css";
 import styles from "./columnHeader.module.scss";
 
 type ColumnHeaderProps = {

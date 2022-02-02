@@ -7,7 +7,15 @@ import { slugifyUrl } from "../../src/utils";
 
 const report: DashLordReport = require("../../src/report.json");
 
-const PageUrl = ({ report, url }: { report: UrlReport; url: string }) => {
+const PageUrl = ({
+  report,
+  url,
+  activeTab,
+}: {
+  report: UrlReport;
+  url: string;
+  activeTab: number;
+}) => {
   if (!report) {
     return <Alert type="error" title={`Impossible de trouver le rapport`} />;
   }
@@ -16,27 +24,51 @@ const PageUrl = ({ report, url }: { report: UrlReport; url: string }) => {
       <Head>
         <title>DashLord - {url}</title>
       </Head>
-      <Url url={url} report={report} />;
+      <Url url={url} report={report} activeTab={activeTab} />
     </>
   );
 };
 
+// create nested urls for tabs
+const tabs = ["best-practices", "disponibilite", "securite", "informations"];
+
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = params && decodeURIComponent((params.url as []).join(""));
-  const urlData = report.find((u: UrlReport) => slugifyUrl(u.url) === query);
-  const url = urlData.url;
-  return {
-    props: { url, report: urlData || null },
-  };
+  let activeTab = 0;
+  if (Array.isArray(params.url)) {
+    let fullUrl = decodeURIComponent((params.url as []).join(""));
+    if (params.url.length > 1) {
+      const lastPart = params.url[params.url.length - 1];
+      if (tabs.indexOf(lastPart) > -1) {
+        // use selected tab
+        fullUrl = decodeURIComponent(
+          (params.url.slice(0, params.url.length - 1) as []).join("")
+        );
+        activeTab = tabs.indexOf(lastPart);
+      }
+    }
+    const urlData = report.find(
+      (u: UrlReport) => slugifyUrl(u.url) === fullUrl
+    );
+    const url = urlData.url;
+    return {
+      props: { activeTab, url, report: urlData || null },
+    };
+  }
+  return { props: {} };
 };
 
 // return list of urls to generate
-export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: report.map(
-    (u: UrlReport) => `/url/${encodeURIComponent(slugifyUrl(u.url))}`
-  ),
-  fallback: false,
-});
-
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = report.flatMap((u: UrlReport) => [
+    ...tabs.map(
+      (tab) => `/url/${encodeURIComponent(slugifyUrl(u.url))}/${tab}`
+    ),
+    `/url/${encodeURIComponent(slugifyUrl(u.url))}`,
+  ]);
+  return {
+    paths,
+    fallback: false,
+  };
+};
 export default PageUrl;

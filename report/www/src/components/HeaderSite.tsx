@@ -33,13 +33,27 @@ const NavLink = ({
   const router = useRouter();
   const isCurrent = href === router.asPath;
   return (
-    <Link href={href}>
+    <Link href={href} prefetch={false}>
       <a
         className="fr-nav__link"
         {...(isCurrent ? { "aria-current": "page" } : {})}
       >
         {children}
       </a>
+    </Link>
+  );
+};
+
+const TitleLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children?: ReactChildren;
+}) => {
+  return (
+    <Link href={href}>
+      <a className="fr-header__service-title">{children}</a>
     </Link>
   );
 };
@@ -58,7 +72,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
           ) : null}
           <Service
-            asLink={<a href="/" />}
+            asLink={<TitleLink href="/" />}
             title={dashlordConfig.title}
             description={dashlordConfig.description}
           />

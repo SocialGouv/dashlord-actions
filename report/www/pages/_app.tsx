@@ -5,6 +5,7 @@ import { Container } from "@dataesr/react-dsfr";
 import Head from "next/head";
 
 import "@gouvfr/dsfr/dist/dsfr/dsfr.min.css";
+import "rc-tooltip/assets/bootstrap.css";
 
 import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";

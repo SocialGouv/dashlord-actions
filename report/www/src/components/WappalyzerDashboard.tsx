@@ -139,6 +139,7 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                   {item.urls.map((url) => (
                     <li key={url}>
                       <Link
+                        prefetch={false}
                         href={`/url/${encodeURIComponent(slugifyUrl(url))}`}
                       >
                         {smallUrl(url)}

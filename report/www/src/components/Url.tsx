@@ -9,8 +9,9 @@ import {
   Tabs,
   Tab,
 } from "@dataesr/react-dsfr";
+import Link from "next/link";
 
-import { isToolEnabled } from "../utils";
+import { isToolEnabled, slugifyUrl } from "../utils";
 import Badge from "./Badge";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
@@ -32,13 +33,17 @@ import styles from "./url.module.scss";
 
 const NEXT_PUBLIC_HOMEPAGE = process.env.NEXT_PUBLIC_HOMEPAGE || "";
 
-type UrlDetailProps = { url: string; report: UrlReport };
+type UrlDetailProps = { url: string; report: UrlReport; activeTab?: number };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
 const btoa = (b: any) => Buffer.from(b).toString("base64");
 
-export const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
+export const Url: React.FC<UrlDetailProps> = ({
+  url,
+  report,
+  activeTab = 0,
+}) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
     const hash = document.location.hash.split("#");
@@ -58,6 +63,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
       </div>
     );
   }
+
   return (
     <>
       <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -106,16 +112,17 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
           />
         </div>
       </Callout>
-      <Tabs>
+
+      <Tabs defaultActiveTab={activeTab}>
         <Tab
           label={
-            <div>
+            <>
               <ThumbsUp
                 size={16}
                 style={{ marginRight: 5, marginBottom: -2 }}
               />
               Bonnes pratiques
-            </div>
+            </>
           }
         >
           {isToolEnabled("lighthouse") && report.lhr && (
