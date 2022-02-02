@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import { Container } from "@dataesr/react-dsfr";
 import Head from "next/head";
+import { init } from "@socialgouv/matomo-next";
 
 import "@gouvfr/dsfr/dist/dsfr/dsfr.min.css";
 import "rc-tooltip/assets/bootstrap.css";
@@ -12,7 +13,12 @@ import { FooterSite } from "../src/components/FooterSite";
 
 import "../src/custom.css";
 
+const dashlordConfig: DashlordConfig = require("../src/config.json");
+
 const report: DashLordReport = require("../src/report.json");
+
+const MATOMO_URL = dashlordConfig.matomoUrl;
+const MATOMO_SITE_ID = dashlordConfig.matomoId;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -20,6 +26,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     router.asPath === "/" ||
     router.asPath.match(/^\/tag\/.+/) ||
     router.asPath.match(/^\/category\/.+/);
+  React.useEffect(() => {
+    console.log("use effect");
+    init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
+  }, []);
   return (
     <div>
       <Head>

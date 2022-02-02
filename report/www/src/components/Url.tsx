@@ -9,7 +9,6 @@ import {
   Tabs,
   Tab,
 } from "@dataesr/react-dsfr";
-import Link from "next/link";
 
 import { isToolEnabled, slugifyUrl } from "../utils";
 import Badge from "./Badge";

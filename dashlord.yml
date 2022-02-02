@@ -2,6 +2,8 @@ title: Test 1
 description: my dashboard
 entity: some entity
 footer: Powered by BetaGouv
+matomoId: 62
+matomoUrl: https://matomo.fabrique.social.gouv.fr
 tools:
   screenshot: true
   nmap: true
