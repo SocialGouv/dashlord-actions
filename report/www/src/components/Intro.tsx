@@ -17,7 +17,8 @@ import { Panel } from "./Panel";
 const dashlordConfig: DashlordConfig = require("../config.json");
 
 const REPOSITORY_URL =
-  process.env.REPOSITORY_URL || "https://github.com/socialgouv/dashlord";
+  process.env.NEXT_PUBLIC_REPOSITORY_URL ||
+  "https://github.com/socialgouv/dashlord";
 
 export const Intro: React.FC = () => (
   <>

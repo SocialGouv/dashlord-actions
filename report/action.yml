@@ -19,8 +19,8 @@ runs:
         SKIP_PREFLIGHT_CHECK: "true"
       run: |
         export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
-        export REPOSITORY_URL=$(echo 'https://github.com/${{ github.repository }}')
         export DASHLORD_REPO_PATH=${{ github.workspace }};
+        export NEXT_PUBLIC_REPOSITORY_URL=$(echo 'https://github.com/${{ github.repository }}')
         export NEXT_PUBLIC_BASE_PATH=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
 
         echo "REPOSITORY_NAME: $REPOSITORY_NAME"
