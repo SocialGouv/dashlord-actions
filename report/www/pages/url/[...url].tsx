@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
+import { Alert } from "@dataesr/react-dsfr";
 
 import { Url } from "../../src/components/Url";
-import { Alert } from "@dataesr/react-dsfr";
+import { slugifyUrl } from "../../src/utils";
 
 const report: DashLordReport = require("../../src/report.json");
 
@@ -22,9 +23,9 @@ const PageUrl = ({ report, url }: { report: UrlReport; url: string }) => {
 
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const url = params && decodeURIComponent(params.url as string);
-  console.log("url", url);
-  const urlData = report.find((u: UrlReport) => u.url === url);
+  const query = params && decodeURIComponent((params.url as []).join(""));
+  const urlData = report.find((u: UrlReport) => slugifyUrl(u.url) === query);
+  const url = urlData.url;
   return {
     props: { url, report: urlData || null },
   };
@@ -32,8 +33,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // return list of urls to generate
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: report.map((u: UrlReport) => `/url/${encodeURIComponent(u.url)}`),
-  fallback: true,
+  paths: report.map(
+    (u: UrlReport) => `/url/${encodeURIComponent(slugifyUrl(u.url))}`
+  ),
+  fallback: false,
 });
 
 export default PageUrl;

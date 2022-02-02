@@ -2,9 +2,7 @@ import React from "react";
 import { TrendingUp, TrendingDown } from "react-feather";
 import { Table } from "@dataesr/react-dsfr";
 import { Panel } from "./Panel";
-import { smallUrl, letterGradeValue } from "../utils";
-
-const uniqify = (arr: any[]): any[] => Array.from(new Set(arr));
+import { smallUrl, slugifyUrl, letterGradeValue } from "../utils";
 
 type ChangeSet = Record<string, any[]>;
 type SummaryKey = keyof UrlReportSummary;
@@ -137,7 +135,7 @@ export const Trends = ({ trends }: { trends: Trends }) => {
             <Panel
               key={url}
               title={smallUrl(url)}
-              url={`/url/${encodeURIComponent(url)}`}
+              url={`/url/${encodeURIComponent(slugifyUrl(url))}`}
             >
               <Table
                 columns={columns}

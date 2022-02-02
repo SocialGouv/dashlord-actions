@@ -15,8 +15,8 @@ import uniq from "lodash.uniq";
 import Link from "next/link";
 
 import { Panel } from "./Panel";
-
 import styles from "./wappalyzerDashboard.module.scss";
+import { smallUrl, slugifyUrl } from "../utils";
 
 type UsageChartProps = { data: any };
 
@@ -138,8 +138,10 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                 <ul>
                   {item.urls.map((url) => (
                     <li key={url}>
-                      <Link href={`/url/${encodeURIComponent(url)}`}>
-                        {url}
+                      <Link
+                        href={`/url/${encodeURIComponent(slugifyUrl(url))}`}
+                      >
+                        {smallUrl(url)}
                       </Link>
                     </li>
                   ))}

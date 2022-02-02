@@ -1,6 +1,6 @@
 import React, { ReactChildren, useEffect, useState } from "react";
 import { default as Link } from "next/link";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import uniq from "lodash.uniq";
 import {
   Header,
@@ -15,7 +15,7 @@ import {
   NavSubItem,
   SwitchTheme,
 } from "@dataesr/react-dsfr";
-import { smallUrl, sortByKey } from "../utils";
+import { smallUrl, slugifyUrl, sortByKey } from "../utils";
 
 import dashlordConfig from "../config.json";
 
@@ -45,13 +45,11 @@ const NavLink = ({
 };
 
 export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const sortedReport = (report && report.sort(sortByKey("url"))) || [];
   const categories = uniq(
     sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
-  console.log("router.asPath", router.asPath);
   return (
     <>
       <Header>
@@ -60,11 +58,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
           ) : null}
           <Service
-            asLink={
-              <Link href="/">
-                <a className="fr-header__service-title"></a>
-              </Link>
-            }
+            asLink={<a href="/" />}
             title={dashlordConfig.title}
             description={dashlordConfig.description}
           />
@@ -115,7 +109,9 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
               <NavSubItem
                 key={url.url}
                 asLink={
-                  <NavLink href={`/url/${encodeURIComponent(url.url)}`} />
+                  <NavLink
+                    href={`/url/${encodeURIComponent(slugifyUrl(url.url))}`}
+                  />
                 }
                 title={smallUrl(url.url)}
               />

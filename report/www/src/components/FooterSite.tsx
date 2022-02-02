@@ -4,6 +4,7 @@ import {
   Footer,
   FooterLink,
   FooterBody,
+  FooterTop,
   FooterBodyItem,
   Logo,
   FooterBottom,
@@ -15,10 +16,13 @@ import dashlordConfig from "../config.json";
 
 export const FooterSite: React.FC = () => (
   <Footer>
+    <FooterTop>sss</FooterTop>
     <FooterBody description="">
       {dashlordConfig.marianne === true ? (
         <Logo>{dashlordConfig.entity}</Logo>
-      ) : null}
+      ) : (
+        ""
+      )}
       <FooterBodyItem>
         <div>{dashlordConfig.footer}</div>
       </FooterBodyItem>

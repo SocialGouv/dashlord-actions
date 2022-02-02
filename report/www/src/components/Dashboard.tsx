@@ -2,11 +2,17 @@ import * as React from "react";
 import { Table } from "@dataesr/react-dsfr";
 import { Search, Slash } from "react-feather";
 import Link from "next/link";
+import { format } from "date-fns";
+
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-import { isToolEnabled, letterGradeValue, smallUrl } from "../utils";
+import {
+  isToolEnabled,
+  letterGradeValue,
+  smallUrl,
+  slugifyUrl,
+} from "../utils";
 import { Grade } from "./Grade";
 import ColumnHeader from "./ColumnHeader";
-import { format } from "date-fns";
 
 type DashboardProps = { report: DashLordReport };
 
@@ -88,7 +94,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(summary)}
           warning={warningText && warningText(summary)}
-          to={`/url/${encodeURIComponent((rowData as UrlReport).url)}#${hash}`}
+          to={`/url/${encodeURIComponent(
+            slugifyUrl((rowData as UrlReport).url)
+          )}#${hash}`}
         />
       );
     },
@@ -119,7 +127,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             textOverflow: "ellipsis",
           }}
         >
-          <Link href={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
+          <Link
+            href={`/url/${encodeURIComponent(
+              slugifyUrl((rowData as UrlReport).url)
+            )}`}
+          >
             <a>
               <Search size={16} />
               &nbsp;

@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 // return list of urls to generate
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: uniq(report.map((u: UrlReport) => `/category/${u.category}`)),
-  fallback: true,
+  fallback: false,
 });
 
 export default Tag;

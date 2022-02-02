@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   paths: uniq(report.flatMap((u: UrlReport) => u.tags)).map(
     (tag) => `/tag/${tag}`
   ),
-  fallback: true,
+  fallback: false,
 });
 
 export default Tag;
