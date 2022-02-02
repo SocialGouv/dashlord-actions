@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "build:export": "yarn build && yarn export"
+    "build:export": "yarn build && yarn export",
+    "test": "echo 'hello, world'"
   },
   "dependencies": {
     "@dataesr/react-dsfr": "^0.9.8",
