@@ -21,12 +21,12 @@ runs:
         export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
         export REPOSITORY_URL=$(echo 'https://github.com/${{ github.repository }}')
         export DASHLORD_REPO_PATH=${{ github.workspace }};
-        export BASE_PATH=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
+        export NEXT_PUBLIC_BASE_PATH=$([[ -n "${{ inputs.public-url }}" ]] && echo "${{ inputs.public-url }}" || echo "/$REPOSITORY_NAME")
 
         echo "REPOSITORY_NAME: $REPOSITORY_NAME"
         echo "REPOSITORY_URL: $REPOSITORY_URL"
         echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
-        echo "BASE_PATH: $BASE_PATH"
+        echo "NEXT_PUBLIC_BASE_PATH: $NEXT_PUBLIC_BASE_PATH"
 
         cd ${{ github.action_path }}
         yarn

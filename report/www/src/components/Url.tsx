@@ -30,7 +30,7 @@ import { DeclarationA11y } from "./DeclarationA11y";
 
 import styles from "./url.module.scss";
 
-const BASE_PATH = process.env.BASE_PATH || "";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 type UrlDetailProps = { url: string; report: UrlReport; activeTab?: number };
 
