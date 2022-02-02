@@ -12,7 +12,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
         <Alert
           type="success"
           description={
-            <div>La mention a bien été detectée : Totalement conforme</div>
+            <>La mention a bien été detectée : Totalement conforme</>
           }
         />
       ),
@@ -20,14 +20,14 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
         <Alert
           type="success"
           description={
-            <div>La mention a bien été detectée : Partiellement conforme</div>
+            <>La mention a bien été detectée : Partiellement conforme</>
           }
         />
       ),
       "Accessibilité : non conforme": (
         <Alert
           type="info"
-          description={<div>La mention a bien été detectée : Non conforme</div>}
+          description={<>La mention a bien été detectée : Non conforme</>}
         />
       ),
       null: (
@@ -35,10 +35,10 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
           type="error"
           title=""
           description={
-            <div>
+            <>
               La mention de conformité n&apos;a pas été détectée. La mention «
               Accessibilité : non conforme » doit être présente sur chaque page.
-            </div>
+            </>
           }
         ></Alert>
       ),
@@ -49,7 +49,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
           type="success"
           title=""
           description={
-            <div>
+            <>
               La déclaration est disponible sur :{" "}
               <a
                 href={data.declarationUrl}
@@ -58,7 +58,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
               >
                 {data.declarationUrl}
               </a>
-            </div>
+            </>
           }
         ></Alert>
       ),
@@ -67,7 +67,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
           type="error"
           title=""
           description={
-            <div>
+            <>
               La déclaration n&apos;a pas été trouvée. Utilisez le{" "}
               <a
                 href="https://betagouv.github.io/a11y-generateur-declaration"
@@ -77,7 +77,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
                 générateur de déclaration
               </a>{" "}
               pour en créer une.
-            </div>
+            </>
           }
         ></Alert>
       ),
