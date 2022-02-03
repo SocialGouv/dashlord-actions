@@ -13,7 +13,7 @@
     "nmap": true,
     "zap": true,
     "wappalyzer": true,
-    "http": true,
+    "http": false,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,

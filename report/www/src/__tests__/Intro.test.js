@@ -1,11 +1,7 @@
 import path from "path";
 import * as React from "react";
-import * as renderer from "react-test-renderer";
-import { MemoryRouter } from "react-router-dom";
-
-import { Intro } from "../components/Intro";
-
-import report from "../report.json";
+import { render } from "@testing-library/react";
+import Intro from "@/pages/intro";
 
 const mockSampleConfig = JSON.parse(
   jest
@@ -14,38 +10,27 @@ const mockSampleConfig = JSON.parse(
     .toString()
 );
 
-// // prevent empty table due to resize detection
-// jest.mock(
-//   "react-virtualized-auto-sizer",
-//   () =>
-//     ({ children }) =>
-//       children({ width: 1000, height: 1000 })
-// );
-
 it("Should render Intro", () => {
-  const props = {report};
-  const tree = renderer.create(<MemoryRouter><Intro {...props} /></MemoryRouter>).toJSON();
-  expect(tree).toMatchSnapshot();
+  const { container } = render(<Intro />);
+  expect(container).toMatchSnapshot();
 });
 
- 
 describe("Tools config", () => {
   beforeEach(() => {
-    jest.mock("../config.json", () => ({
-      ...mockSampleConfig,
-      tools: { http: false, zap: true, lighthouse: false },
-    }));
+    jest.mock("../config.json", () => {
+      return {
+        ...mockSampleConfig,
+        tools: {
+          ...mockSampleConfig.tools,
+          http: false,
+          zap: true,
+          lighthouse: false,
+        },
+      };
+    });
   });
-
   it("Should render Intro with limited tools", () => {
-    const props = { report };
-    const tree = renderer
-      .create(
-        <MemoryRouter>
-          <Intro {...props} />
-        </MemoryRouter>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<Intro />);
+    expect(container).toMatchSnapshot();
   });
 });
