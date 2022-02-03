@@ -78,12 +78,6 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           />
           <Tool closeButtonLabel="fermer">
             <ToolItemGroup>
-              <ToolItem
-                icon="ri-github-fill"
-                asLink={<a href="https://github.com/SocialGouv/dashlord" />}
-              >
-                Code source
-              </ToolItem>
               <ToolItem onClick={() => setIsOpen(true)}>
                 <span
                   className="fr-fi-theme-fill fr-link--icon-left"
