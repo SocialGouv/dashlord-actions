@@ -69,7 +69,9 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
       <Header>
         <HeaderBody>
           {dashlordConfig.marianne === true ? (
-            <Logo splitCharacter={10}>{dashlordConfig.entity}</Logo>
+            <Logo asLink={<TitleLink href="/" />} splitCharacter={10}>
+              {dashlordConfig.entity}
+            </Logo>
           ) : null}
           <Service
             asLink={<TitleLink href="/" />}
