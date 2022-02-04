@@ -4,11 +4,9 @@ This GitHub action build a web report based on some [dashlord](https://github.co
 
 ## Inputs
 
-### `public-url`
+### `base-path` (optional)
 
-`PUBLIC_URL` for the build. defaults to your repository name.
-
-see https://create-react-app.dev/docs/using-the-public-folder/#adding-assets-outside-of-the-module-system
+`NEXT_PUBLIC_BASE_PATH` for the next.js build if you host the report in a subfolder. see https://nextjs.org/docs/api-reference/next.config.js/basepath
 
 ## Example usage
 
@@ -24,7 +22,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - id: dashlord-report
-        uses: SocialGouv/dashlord-actions/report@main
+        uses: SocialGouv/dashlord-actions/report@v1
+        with:
+          base-path: /my-dashlord
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
