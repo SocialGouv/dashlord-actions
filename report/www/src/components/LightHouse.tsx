@@ -6,7 +6,7 @@ import { Panel } from "./Panel";
 import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 
-import styles from "./lightHouse.cssmodule.scss";
+import styles from "./lightHouse.module.scss";
 import Card from "./Card";
 
 const toTime = (ms: number) => {

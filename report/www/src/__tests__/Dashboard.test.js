@@ -1,7 +1,6 @@
 import path from "path";
 import * as React from "react";
 import * as renderer from "react-test-renderer";
-import { MemoryRouter } from "react-router-dom";
 
 import { Dashboard } from "../components/Dashboard";
 
@@ -30,13 +29,7 @@ it("Should render empty Dashboard", () => {
 
 it("Should render full Dashboard", () => {
   const props = { report };
-  const tree = renderer
-    .create(
-      <MemoryRouter>
-        <Dashboard {...props} />
-      </MemoryRouter>
-    )
-    .toJSON();
+  const tree = renderer.create(<Dashboard {...props} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -50,13 +43,7 @@ describe("Tools config", () => {
 
   it("Should render Dashboard with limited tools", () => {
     const props = { report };
-    const tree = renderer
-      .create(
-        <MemoryRouter>
-          <Dashboard {...props} />
-        </MemoryRouter>
-      )
-      .toJSON();
+    const tree = renderer.create(<Dashboard {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

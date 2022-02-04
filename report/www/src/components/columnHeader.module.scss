@@ -2,7 +2,7 @@
   text-align: center;
   width: 100%;
   font-size: 0.9em;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 
 .tooltip {
@@ -12,6 +12,7 @@
 .info,
 .warning {
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .warning {

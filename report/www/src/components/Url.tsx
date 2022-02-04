@@ -10,7 +10,7 @@ import {
   Tab,
 } from "@dataesr/react-dsfr";
 
-import { isToolEnabled } from "../utils";
+import { isToolEnabled, slugifyUrl } from "../utils";
 import Badge from "./Badge";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
@@ -28,13 +28,21 @@ import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
 
-import styles from "./url.cssmodule.scss";
+import styles from "./url.module.scss";
 
-type UrlDetailProps = { url: string; report: UrlReport };
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+type UrlDetailProps = { url: string; report: UrlReport; activeTab?: number };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
-const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
+const btoa = (b: any) => Buffer.from(b).toString("base64");
+
+export const Url: React.FC<UrlDetailProps> = ({
+  url,
+  report,
+  activeTab = 0,
+}) => {
   const updateDate = report && report.lhr && report.lhr.fetchTime;
   React.useEffect(() => {
     const hash = document.location.hash.split("#");
@@ -54,6 +62,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
       </div>
     );
   }
+
   return (
     <>
       <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -98,20 +107,21 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
         <div className={styles.image}>
           <img
             alt={`Copie d'écran de ${url}`}
-            src={`${__PUBLIC_URL__}/report/${window.btoa(url)}/screenshot.jpeg`}
+            src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
           />
         </div>
       </Callout>
-      <Tabs>
+
+      <Tabs defaultActiveTab={activeTab}>
         <Tab
           label={
-            <div>
+            <>
               <ThumbsUp
                 size={16}
                 style={{ marginRight: 5, marginBottom: -2 }}
               />
               Bonnes pratiques
-            </div>
+            </>
           }
         >
           {isToolEnabled("lighthouse") && report.lhr && (
@@ -119,7 +129,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="lighthouse" />
               <LightHouse
                 data={report.lhr}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/lhr.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
               />
             </>
           )}
@@ -175,9 +185,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="nmap" />
               <Nmap
                 data={report.nmap}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(
-                  url
-                )}/nmapvuln.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/nmapvuln.html`}
               />
             </>
           )}
@@ -193,9 +201,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="testssl" />
               <TestSSL
                 data={report.testssl}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(
-                  url
-                )}/testssl.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/testssl.html`}
               />
             </>
           )}
@@ -237,7 +243,7 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
               <Anchor id="zap" />
               <Owasp
                 data={report.zap}
-                url={`${__PUBLIC_URL__}/report/${window.btoa(url)}/zap.html`}
+                url={`${BASE_PATH}/report/${btoa(url)}/zap.html`}
               />
             </>
           )}
@@ -277,5 +283,3 @@ const Url: React.FC<UrlDetailProps> = ({ url, report }) => {
     </>
   );
 };
-
-export default Url;

@@ -1,15 +1,13 @@
 import * as React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as H from "history";
 import Badge from "./Badge";
 
-import styles from "./grade.cssmodule.scss";
+import styles from "./grade.module.scss";
 
 type GradeProps = {
   grade: string;
   label?: string | number | null;
   warning?: string | null;
-  to?: H.LocationDescriptor<unknown>;
+  to?: string;
   small?: boolean;
 };
 

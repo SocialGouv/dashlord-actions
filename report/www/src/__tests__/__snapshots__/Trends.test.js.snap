@@ -1,0 +1,3237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Trends 1`] = `
+<div>
+  <div>
+    <br />
+    <h3>
+      Evolutions sur les 30 derniers jours
+    </h3>
+    <br />
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          1000jours.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/1000jours-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trackers count
+                </td>
+                <td>
+                  0 =&gt; 5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse best practices
+                </td>
+                <td>
+                  0.93 =&gt; 0.8
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          archifiltre.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/archifiltre-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; B
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  B =&gt; E
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Codescan grade
+                </td>
+                <td>
+                  B =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  F =&gt; C
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          code.travail.gouv.fr
+        </h5>
+        <a
+          href="/url/code-travail-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  C- =&gt; B
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  apDex
+                </td>
+                <td>
+                  0.763 =&gt; 0.983
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; E
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Codescan grade
+                </td>
+                <td>
+                  B =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.9 =&gt; 0.96
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trivy grade
+                </td>
+                <td>
+                  A =&gt; F
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          domifa.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/domifa-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; B+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse Performance
+                </td>
+                <td>
+                  0.8341 =&gt; 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.98 =&gt; 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse best practices
+                </td>
+                <td>
+                  1 =&gt; 0.73
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse PWA
+                </td>
+                <td>
+                  0.33 =&gt; 0.83
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          emjpm.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/emjpm-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; B+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  B =&gt; E
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.86 =&gt; 0.98
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          index-egapro.travail.gouv.fr
+        </h5>
+        <a
+          href="/url/index-egapro-travail-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  C =&gt; B
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          medle.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/medle-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          mon-domifa.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/mon-domifa-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Cookies count
+                </td>
+                <td>
+                  0 =&gt; 2
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse best practices
+                </td>
+                <td>
+                  1 =&gt; 0.87
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          monsuivipsy.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/monsuivipsy-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; A+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Codescan grade
+                </td>
+                <td>
+                  A =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse Performance
+                </td>
+                <td>
+                  0.7842 =&gt; 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.93 =&gt; 0.75
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          onvs.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/onvs-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          ozensemble.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/ozensemble-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  A =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.95 =&gt; 0.94
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trivy grade
+                </td>
+                <td>
+                  E =&gt; F
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  F =&gt; C
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          pjm.social.gouv.fr
+        </h5>
+        <a
+          href="/url/pjm-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; B
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trackers count
+                </td>
+                <td>
+                  4 =&gt; 3
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trivy grade
+                </td>
+                <td>
+                  E =&gt; F
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          sample-next-app.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/sample-next-app-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trackers count
+                </td>
+                <td>
+                  0 =&gt; 1
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.98 =&gt; 0.97
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          transitions-collectives.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/transitions-collectives-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trackers count
+                </td>
+                <td>
+                  17 =&gt; 18
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse Performance
+                </td>
+                <td>
+                  0.8636 =&gt; 0.6763
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          tumeplay.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/tumeplay-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  D+ =&gt; B
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trackers count
+                </td>
+                <td>
+                  0 =&gt; 1
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          www.fabrique.social.gouv.fr
+        </h5>
+        <a
+          href="/url/www-fabrique-social-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  F =&gt; D
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse Performance
+                </td>
+                <td>
+                  0.5 =&gt; 0.35
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.92 =&gt; 0.96
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse best practices
+                </td>
+                <td>
+                  0.8 =&gt; 0.93
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Trivy grade
+                </td>
+                <td>
+                  E =&gt; F
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Déclaration a11y
+                </td>
+                <td>
+                  F =&gt; C
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="banner"
+      >
+        <h5
+          class="mainTitle"
+        >
+          www.psyenfantado.sante.gouv.fr
+        </h5>
+        <a
+          href="/url/www-psyenfantado-sante-gouv-fr"
+          style="float: right;"
+        >
+          
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="8"
+            />
+            <line
+              x1="21"
+              x2="16.65"
+              y1="21"
+              y2="16.65"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="body"
+      >
+        <div
+          class="fr-table"
+        >
+          <table>
+            <caption />
+            <thead>
+              <tr>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Trend
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Outil
+                  </div>
+                </th>
+                <th
+                  class=""
+                  scope="col"
+                >
+                  <div
+                    class="table-column-header"
+                  >
+                    Evolution
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  HTTP observatory
+                </td>
+                <td>
+                  A+ =&gt; C+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Dependabot grade
+                </td>
+                <td>
+                  A =&gt; C
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--error); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 18 13.5 8.5 8.5 13.5 1 6"
+                    />
+                    <polyline
+                      points="17 18 23 18 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Cookies count
+                </td>
+                <td>
+                  2 =&gt; 3
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <svg
+                    fill="none"
+                    height="40"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="stroke: var(--success); margin-right: 10px;"
+                    viewBox="0 0 24 24"
+                    width="40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polyline
+                      points="23 6 13.5 15.5 8.5 10.5 1 18"
+                    />
+                    <polyline
+                      points="17 6 23 6 23 12"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  Lighthouse accessibility
+                </td>
+                <td>
+                  0.98 =&gt; 1
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

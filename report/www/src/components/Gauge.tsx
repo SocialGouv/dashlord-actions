@@ -1,5 +1,10 @@
 import React from "react";
-import ReactSpeedometer from "react-d3-speedometer";
+
+import dynamic from "next/dynamic";
+
+const ReactSpeedometer = dynamic(() => import("react-d3-speedometer"), {
+  ssr: false,
+});
 
 type GaugeProps = {
   maxValue?: number;

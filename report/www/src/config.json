@@ -3,6 +3,8 @@
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
   "footer": "Propulsé par SocialGouv",
+  "matomoId": 62,
+  "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
   "marianne": true,
   "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "tools": {
@@ -11,7 +13,7 @@
     "nmap": true,
     "zap": true,
     "wappalyzer": true,
-    "http": true,
+    "http": false,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,

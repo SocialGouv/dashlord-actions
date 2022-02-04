@@ -16,3 +16,19 @@
 .empty-sort-icon {
   display: none;
 }
+
+:root {
+  --warning: #fa5c00;
+  --success: #1f8d49;
+  --info: #0078f3;
+  --error: #f60700;
+  --blue-france: #000091;
+}
+
+:root[data-fr-theme="dark"] {
+  --warning: #ff6105;
+  --success: #1f8d49;
+  --info: #518fff;
+  --error: #f60700;
+  --blue-france: #518fff;
+}

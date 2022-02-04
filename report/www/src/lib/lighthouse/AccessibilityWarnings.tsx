@@ -8,10 +8,8 @@ export const AccessibilityWarnings = ({
   className,
 }: AccessibilityWarningProps) => (
   <div className={className}>
-    Moins de 25% des critères d'accessibilité peuvent être testés
-    automatiquement, 
-{' '}
-<strong>une expertise manuelle est requise</strong>
+    Moins de 25% des critères d&apos;accessibilité peuvent être testés
+    automatiquement, <strong>une expertise manuelle est requise</strong>
     .
     <br />
     <br />

@@ -1,18 +1,22 @@
 import * as React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import * as H from "history";
 import { Table } from "@dataesr/react-dsfr";
 import { Search, Slash } from "react-feather";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { format } from "date-fns";
+
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-import { isToolEnabled, letterGradeValue, smallUrl } from "../utils";
+import {
+  isToolEnabled,
+  letterGradeValue,
+  smallUrl,
+  slugifyUrl,
+} from "../utils";
 import { Grade } from "./Grade";
 import ColumnHeader from "./ColumnHeader";
-import { format } from "date-fns";
 
 type DashboardProps = { report: DashLordReport };
 
-import styles from "./dashboard.cssmodule.scss";
+import styles from "./dashboard.module.scss";
 
 const IconUnknown = () => <Slash size={20} />;
 
@@ -28,7 +32,7 @@ const GradeBadge = ({
   grade: string | undefined;
   label?: string | number | undefined;
   warning?: string;
-  to?: H.LocationDescriptor<unknown> | undefined;
+  to?: string;
 }) => (
   <div style={{ textAlign: "center" }}>
     {grade ? (
@@ -47,6 +51,7 @@ type GetColumnProps = {
   hash: string;
   gradeKey: string;
   sort?: Function;
+  category?: string;
   gradeLabel?: (s: UrlReportSummary) => string | number | undefined;
   warningText?: (s: UrlReportSummary) => string | undefined;
 };
@@ -70,6 +75,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     warning,
     hash,
     gradeKey,
+    category,
     gradeLabel,
     warningText,
   }: GetColumnProps) => ({
@@ -90,10 +96,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(summary)}
           warning={warningText && warningText(summary)}
-          to={{
-            pathname: `/url/${encodeURIComponent((rowData as UrlReport).url)}`,
-            hash,
-          }}
+          to={`/url/${encodeURIComponent(
+            slugifyUrl((rowData as UrlReport).url)
+          )}/${category ? `${category}/` : ""}#${hash}`}
         />
       );
     },
@@ -104,6 +109,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       id,
       title,
       info,
+      category: "best-practices",
       warning: id === "accessibility" ? <AccessibilityWarnings /> : undefined,
       hash: "lighthouse",
       gradeKey: `lighthouse_${id}Grade`,
@@ -124,10 +130,17 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             textOverflow: "ellipsis",
           }}
         >
-          <Link to={`/url/${encodeURIComponent((rowData as UrlReport).url)}`}>
-            <Search size={16} />
-            &nbsp;
-            {smallUrl((rowData as UrlReport).url)}
+          <Link
+            prefetch={false}
+            href={`/url/${encodeURIComponent(
+              slugifyUrl((rowData as UrlReport).url)
+            )}`}
+          >
+            <a>
+              <Search size={16} />
+              &nbsp;
+              {smallUrl((rowData as UrlReport).url)}
+            </a>
           </Link>
         </div>
       ),
@@ -142,6 +155,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Présence de la mention de conformité et de la déclaration",
         hash: "declaration-a11y",
         gradeKey: "declaration-a11y",
+        category: "best-practices",
         //gradeLabel: (summary) => summary.statsCount,
       })
     );
@@ -177,6 +191,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         gradeKey: "testsslGrade",
         gradeLabel: (summary) => summary.testsslGrade,
         sort: sortSSLGrades,
+        category: "securite",
         warningText: (summary) =>
           (summary.testsslExpireSoon &&
             summary.testsslExpireDate &&
@@ -196,6 +211,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         title: "HTTP",
         info: "Bonnes pratiques de configuration HTTP (Mozilla observatory)",
         hash: "http",
+        category: "securite",
         gradeKey: "httpGrade",
       })
     );
@@ -209,6 +225,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Disponibilité du service (updown.io)",
         hash: "updownio",
         gradeKey: "uptimeGrade",
+        category: "disponibilite",
         gradeLabel: (summary) => percent((summary.uptime || 0) / 100),
       }),
       getColumn({
@@ -217,6 +234,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Apdex: Application Performance Index : indice de satisfaction des attentes de performance (updown.io)",
         hash: "updownio",
         gradeKey: "apdexGrade",
+        category: "disponibilite",
         gradeLabel: (summary) => summary.apdex,
       }),
     ]);
@@ -229,6 +247,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         title: "Vulnérabilités",
         info: "Vulnérabilités applicatives detectées dans les dépendances du code (dependabot)",
         hash: "dependabot",
+        category: "securite",
         gradeKey: "dependabotGrade",
         gradeLabel: (summary) => summary.dependabotCount,
       })
@@ -241,6 +260,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         id: "codescan",
         title: "CodeQL",
         info: "Potentielles vulnérabilités ou erreurs detectées dans les codes sources (codescan)",
+        category: "securite",
         hash: "codescan",
         gradeKey: "codescanGrade",
         gradeLabel: (summary) => summary.codescanCount,
@@ -254,6 +274,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         id: "nmap",
         title: "Nmap",
         info: "Vulnérabilités réseau detectées par Nmap",
+        category: "securite",
         hash: "nmap",
         gradeKey: "nmapGrade",
       }),
@@ -261,6 +282,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         id: "nmap2",
         title: "Ports ouverts",
         info: "Ports TCP ouverts détectés par nmap",
+        category: "securite",
         hash: "nmap",
         gradeKey: "nmapOpenPortsGrade",
         gradeLabel: (summary) => summary.nmapOpenPortsCount,
@@ -280,6 +302,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             trackers.
           </div>
         ),
+        category: "best-practices",
         hash: "thirdparties",
         gradeKey: "trackersGrade",
         gradeLabel: (summary) => summary.trackersCount,
@@ -288,6 +311,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         id: "cookies",
         title: "Cookies",
         info: "Nombre de cookies présents",
+        category: "best-practices",
         hash: "thirdparties",
         gradeKey: "cookiesGrade",
         gradeLabel: (summary) => summary.cookiesCount,
@@ -299,6 +323,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     columns.push(
       getColumn({
         id: "stats",
+        category: "best-practices",
         title: "Stats",
         info: "Présence de la page des statistiques",
         hash: "stats",
@@ -311,6 +336,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   if (isToolEnabled("404")) {
     columns.push(
       getColumn({
+        category: "best-practices",
         id: "404",
         title: "404",
         info: "Pages introuvables",
@@ -327,6 +353,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     columns.push(
       getColumn({
         id: "trivy",
+        category: "securite",
         title: "Trivy",
         info: "Vulnérabilités Trivy",
         hash: "trivy",

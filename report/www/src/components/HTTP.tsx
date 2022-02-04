@@ -38,7 +38,7 @@ const helpDocs = {
       >
         Doc Content Security Policy
       </a>
-      . L'extension{" "}
+      . L&apos;extension{" "}
       <a
         href="https://github.com/april/laboratory"
         rel="noopener noreferrer"

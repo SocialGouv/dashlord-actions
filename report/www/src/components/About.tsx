@@ -19,8 +19,8 @@ export const About: React.FC = () => (
         </a>
         .
         <br /> <br />
-        L'objectif de DashLord est d'identifier des points d'attention mais
-        aussi de proposer des solutions actionnables.
+        L&apos;objectif de DashLord est d&apos;identifier des points
+        d&apos;attention mais aussi de proposer des solutions actionnables.
         <br /> <br />
         DashLord est né à la{" "}
         <a
@@ -31,8 +31,8 @@ export const About: React.FC = () => (
           {" "}
           Fabrique des ministères sociaux
         </a>{" "}
-        pour répondre aux besoins d'évaluation et de mise en oeuvre des bonnes
-        pratiques de développement web.
+        pour répondre aux besoins d&apos;évaluation et de mise en oeuvre des
+        bonnes pratiques de développement web.
         <br /> <br />
         Vous pouvez facilement créer votre propre DashLord pour vos URLs en
         suivant{" "}

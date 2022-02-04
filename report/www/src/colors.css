@@ -1,7 +1,0 @@
-:root {    
-    --warning: #fa5c00;
-}
-
-:root[data-fr-theme=dark] {
-    --warning: #ff6105;
-}

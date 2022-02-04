@@ -36,6 +36,8 @@ type DashlordConfig = {
   urls: UrlConfig[];
   marianne?: boolean;
   loginUrl?: string;
+  matomoId?: number;
+  matomoUrl?: string;
 };
 
 type LighthouseReportCategory = {

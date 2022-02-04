@@ -3,6 +3,7 @@
 exports[`Should render empty Url 1`] = `
 <div>
   No data available for
+  https://some.url
 </div>
 `;
 
@@ -12,7 +13,7 @@ Array [
     className="fr-callout fr-mb-3w"
   >
     <h4
-      className="fr-callout__title"
+      className="fr-callout__title fr-text--lg"
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
@@ -23,37 +24,38 @@ Array [
       </a>
     </h4>
     <p
-      className="fr-callout__text"
+      className="fr-callout__text fr-text--lg"
     >
       <button
-        className=""
+        className="badge success"
         onClick={[Function]}
         type="button"
       >
         fabrique
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         social
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         sante
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         travail
       </button>
       <svg
+        className="clockIcon"
         fill="none"
         height={16}
         stroke="currentColor"
@@ -74,6 +76,7 @@ Array [
         />
       </svg>
       <span
+        className="clock"
         title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
@@ -81,10 +84,12 @@ Array [
         5 mois
       </span>
     </p>
-    <div>
+    <div
+      className="image"
+    >
       <img
         alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
       />
     </div>
   </div>,
@@ -110,30 +115,28 @@ Array [
           type="button"
         >
           
-          <div>
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              style={
-                Object {
-                  "marginBottom": -2,
-                  "marginRight": 5,
-                }
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginBottom": -2,
+                "marginRight": 5,
               }
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
-              />
-            </svg>
-            Bonnes pratiques
-          </div>
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+            />
+          </svg>
+          Bonnes pratiques
         </button>
       </li>
       <li
@@ -293,10 +296,14 @@ Array [
         id="lighthouse"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             LightHouse
           </h5>
           <svg
@@ -337,7 +344,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -349,16 +356,19 @@ Array [
             Rapport LightHouse
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
             <div
               className="fr-col"
             >
-              <div>
-                Moins de 25% des critères d'accessibilité peuvent être testés automatiquement,
-                 
+              <div
+                className="accesibility"
+              >
+                Moins de 25% des critères d'accessibilité peuvent être testés automatiquement, 
                 <strong>
                   une expertise manuelle est requise
                 </strong>
@@ -375,14 +385,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Accessibility
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   96%
                 </div>
               </div>
@@ -390,14 +410,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Performance
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   45%
                 </div>
               </div>
@@ -405,14 +435,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   SEO
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   90%
                 </div>
               </div>
@@ -420,14 +460,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Best Practices
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   93%
                 </div>
               </div>
@@ -439,11 +489,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   First contentful Paint
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   1.5s
                 </div>
               </div>
@@ -451,11 +507,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Time to interactive
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   3.4s
                 </div>
               </div>
@@ -463,11 +525,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Total requests
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   51
                 </div>
               </div>
@@ -475,11 +543,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Total weight
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   7.6Mb
                 </div>
               </div>
@@ -491,10 +565,14 @@ Array [
         id="thirdparties"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Scripts tiers et cookies
           </h5>
           <svg
@@ -535,7 +613,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -735,10 +815,14 @@ Array [
         id="stats"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Page /stats
           </h5>
           <svg
@@ -779,7 +863,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-alert fr-alert--error"
             role="alert"
@@ -799,10 +885,14 @@ Array [
         id="declaration-a11y"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Déclaration de mise en accessibilité
           </h5>
           <svg
@@ -843,7 +933,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-alert fr-alert--info"
             role="alert"
@@ -852,9 +944,7 @@ Array [
               className="fr-alert__title"
             />
             <p>
-              <div>
-                La mention a bien été detectée : Non conforme
-              </div>
+              La mention a bien été detectée : Non conforme
             </p>
           </div>
           <div
@@ -867,17 +957,15 @@ Array [
               
             </p>
             <p>
-              <div>
-                La déclaration est disponible sur :
-                 
-                <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  https://www.fabrique.social.gouv.fr/accessibilite
-                </a>
-              </div>
+              La déclaration est disponible sur :
+               
+              <a
+                href="https://www.fabrique.social.gouv.fr/accessibilite"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                https://www.fabrique.social.gouv.fr/accessibilite
+              </a>
             </p>
           </div>
         </div>
@@ -886,10 +974,14 @@ Array [
         id="404"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Erreurs 404
           </h5>
           <svg
@@ -930,7 +1022,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -994,10 +1088,14 @@ Array [
         id="updownio"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Disponibilité et temps de réponse
           </h5>
           <svg
@@ -1050,21 +1148,33 @@ Array [
             Statistiques détaillées
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Taux de disponibilité sur un mois glissant
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   99.909%
                 </div>
               </div>
@@ -1072,14 +1182,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   APDEX: Application Performance Index
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   1
                 </div>
               </div>
@@ -1087,21 +1207,31 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Temps de réponse
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   92ms
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="fr-grid-row"
+            className="fr-grid-row left"
           >
             <div
               className="fr-col-12 fr-mb-3w"
@@ -1118,7 +1248,7 @@ Array [
                 Le certificat SSL est
                  
                 <button
-                  className=""
+                  className="small success"
                   onClick={[Function]}
                   type="button"
                 >
@@ -1144,49 +1274,17 @@ Array [
       tabIndex="0"
     >
       <div
-        id="http"
-      />
-      <div
-        className=""
-      >
-        <div>
-          <h5>
-            Mozilla HTTP observatory
-          </h5>
-          <a
-            href="https://observatory.mozilla.org/analyze/www.fabrique.social.gouv.fr"
-            rel="noreferrer noopener"
-            style={
-              Object {
-                "float": "right",
-              }
-            }
-            target="_blank"
-          >
-            Rapport détaillé
-          </a>
-        </div>
-        <div>
-          <h3>
-            Scan Summary : 
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </h3>
-        </div>
-      </div>
-      <div
         id="testssl"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             SSL
           </h5>
           <svg
@@ -1227,7 +1325,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/testssl.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/testssl.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -1239,7 +1337,9 @@ Array [
             Rapport détaillé
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
@@ -1249,7 +1349,7 @@ Array [
               <h3>
                 Scan Summary : 
                 <button
-                  className=""
+                  className="small success"
                   onClick={[Function]}
                   type="button"
                 >
@@ -1269,10 +1369,14 @@ Array [
         id="dependabot"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Alertes Dependabot
           </h5>
           <svg
@@ -1325,11 +1429,13 @@ Array [
             Alertes dependabot
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h3>
             Scan Summary : 
             <button
-              className=""
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
@@ -1382,7 +1488,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1418,7 +1524,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1464,7 +1570,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1510,7 +1616,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1565,10 +1671,14 @@ Array [
         id="zap"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Scan OWASP
           </h5>
           <svg
@@ -1609,7 +1719,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/zap.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/zap.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -1621,7 +1731,9 @@ Array [
             Rapport détaillé
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -1657,7 +1769,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1671,7 +1783,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1685,7 +1797,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1699,7 +1811,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1713,7 +1825,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1727,7 +1839,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1741,7 +1853,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1755,7 +1867,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1769,7 +1881,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1783,7 +1895,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1797,7 +1909,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1811,7 +1923,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1831,10 +1943,14 @@ Array [
         id="nuclei"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Nuclei
           </h5>
           <svg
@@ -1875,7 +1991,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -1933,7 +2051,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1951,7 +2069,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1971,7 +2089,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -1997,10 +2115,14 @@ Array [
         id="trivy"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Image docker app
           </h5>
           <svg
@@ -2041,7 +2163,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h6>
             ghcr.io/socialgouv/sample-next-app/app:latest (alpine 3.11.12)
           </h6>
@@ -2061,10 +2185,14 @@ Array [
         </div>
       </div>
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Image docker hasura
           </h5>
           <svg
@@ -2105,7 +2233,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h6>
             ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)
           </h6>
@@ -2155,7 +2285,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -2178,7 +2308,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -2201,7 +2331,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -2224,7 +2354,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -2261,10 +2391,14 @@ Array [
         id="wappalyzer"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Wappalyzer
           </h5>
           <svg
@@ -2305,7 +2439,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -2535,7 +2671,7 @@ Array [
     className="fr-callout fr-mb-3w"
   >
     <h4
-      className="fr-callout__title"
+      className="fr-callout__title fr-text--lg"
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
@@ -2546,37 +2682,38 @@ Array [
       </a>
     </h4>
     <p
-      className="fr-callout__text"
+      className="fr-callout__text fr-text--lg"
     >
       <button
-        className=""
+        className="badge success"
         onClick={[Function]}
         type="button"
       >
         fabrique
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         social
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         sante
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         travail
       </button>
       <svg
+        className="clockIcon"
         fill="none"
         height={16}
         stroke="currentColor"
@@ -2597,6 +2734,7 @@ Array [
         />
       </svg>
       <span
+        className="clock"
         title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
@@ -2604,10 +2742,12 @@ Array [
         5 mois
       </span>
     </p>
-    <div>
+    <div
+      className="image"
+    >
       <img
         alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
       />
     </div>
   </div>,
@@ -2633,30 +2773,28 @@ Array [
           type="button"
         >
           
-          <div>
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              style={
-                Object {
-                  "marginBottom": -2,
-                  "marginRight": 5,
-                }
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginBottom": -2,
+                "marginRight": 5,
               }
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
-              />
-            </svg>
-            Bonnes pratiques
-          </div>
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+            />
+          </svg>
+          Bonnes pratiques
         </button>
       </li>
       <li
@@ -2816,10 +2954,14 @@ Array [
         id="lighthouse"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             LightHouse
           </h5>
           <svg
@@ -2860,7 +3002,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -2872,16 +3014,19 @@ Array [
             Rapport LightHouse
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
             <div
               className="fr-col"
             >
-              <div>
-                Moins de 25% des critères d'accessibilité peuvent être testés automatiquement,
-                 
+              <div
+                className="accesibility"
+              >
+                Moins de 25% des critères d'accessibilité peuvent être testés automatiquement, 
                 <strong>
                   une expertise manuelle est requise
                 </strong>
@@ -2898,14 +3043,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Accessibility
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   96%
                 </div>
               </div>
@@ -2913,14 +3068,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Performance
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   45%
                 </div>
               </div>
@@ -2928,14 +3093,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   SEO
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   90%
                 </div>
               </div>
@@ -2943,14 +3118,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Best Practices
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   93%
                 </div>
               </div>
@@ -2962,11 +3147,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   First contentful Paint
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   1.5s
                 </div>
               </div>
@@ -2974,11 +3165,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Time to interactive
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   3.4s
                 </div>
               </div>
@@ -2986,11 +3183,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Total requests
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   51
                 </div>
               </div>
@@ -2998,11 +3201,17 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
             >
-              <div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  className="cardTitle"
+                >
                   Total weight
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   7.6Mb
                 </div>
               </div>
@@ -3014,10 +3223,14 @@ Array [
         id="thirdparties"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Scripts tiers et cookies
           </h5>
           <svg
@@ -3058,7 +3271,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -3258,10 +3473,14 @@ Array [
         id="stats"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Page /stats
           </h5>
           <svg
@@ -3302,7 +3521,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-alert fr-alert--error"
             role="alert"
@@ -3322,10 +3543,14 @@ Array [
         id="declaration-a11y"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Déclaration de mise en accessibilité
           </h5>
           <svg
@@ -3366,7 +3591,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-alert fr-alert--info"
             role="alert"
@@ -3375,9 +3602,7 @@ Array [
               className="fr-alert__title"
             />
             <p>
-              <div>
-                La mention a bien été detectée : Non conforme
-              </div>
+              La mention a bien été detectée : Non conforme
             </p>
           </div>
           <div
@@ -3390,17 +3615,15 @@ Array [
               
             </p>
             <p>
-              <div>
-                La déclaration est disponible sur :
-                 
-                <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  https://www.fabrique.social.gouv.fr/accessibilite
-                </a>
-              </div>
+              La déclaration est disponible sur :
+               
+              <a
+                href="https://www.fabrique.social.gouv.fr/accessibilite"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                https://www.fabrique.social.gouv.fr/accessibilite
+              </a>
             </p>
           </div>
         </div>
@@ -3409,10 +3632,14 @@ Array [
         id="404"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Erreurs 404
           </h5>
           <svg
@@ -3453,7 +3680,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -3517,10 +3746,14 @@ Array [
         id="updownio"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Disponibilité et temps de réponse
           </h5>
           <svg
@@ -3573,21 +3806,33 @@ Array [
             Statistiques détaillées
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Taux de disponibilité sur un mois glissant
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   99.909%
                 </div>
               </div>
@@ -3595,14 +3840,24 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   APDEX: Application Performance Index
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   1
                 </div>
               </div>
@@ -3610,21 +3865,31 @@ Array [
             <div
               className="fr-col-12 fr-col-sm-12 fr-col-md-4 fr-mb-3w"
             >
-              <div>
-                <div>
-                  io
-                </div>
-                <div>
+              <div
+                className="card"
+              >
+                <div
+                  style={
+                    Object {
+                      "background": "#FFF",
+                    }
+                  }
+                />
+                <div
+                  className="cardTitle"
+                >
                   Temps de réponse
                 </div>
-                <div>
+                <div
+                  className="cardValue"
+                >
                   92ms
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="fr-grid-row"
+            className="fr-grid-row left"
           >
             <div
               className="fr-col-12 fr-mb-3w"
@@ -3641,7 +3906,7 @@ Array [
                 Le certificat SSL est
                  
                 <button
-                  className=""
+                  className="small success"
                   onClick={[Function]}
                   type="button"
                 >
@@ -3667,49 +3932,17 @@ Array [
       tabIndex="0"
     >
       <div
-        id="http"
-      />
-      <div
-        className=""
-      >
-        <div>
-          <h5>
-            Mozilla HTTP observatory
-          </h5>
-          <a
-            href="https://observatory.mozilla.org/analyze/www.fabrique.social.gouv.fr"
-            rel="noreferrer noopener"
-            style={
-              Object {
-                "float": "right",
-              }
-            }
-            target="_blank"
-          >
-            Rapport détaillé
-          </a>
-        </div>
-        <div>
-          <h3>
-            Scan Summary : 
-            <button
-              className=""
-              onClick={[Function]}
-              type="button"
-            >
-              A+
-            </button>
-          </h3>
-        </div>
-      </div>
-      <div
         id="testssl"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             SSL
           </h5>
           <svg
@@ -3750,7 +3983,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/testssl.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/testssl.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -3762,7 +3995,9 @@ Array [
             Rapport détaillé
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-grid-row"
           >
@@ -3772,7 +4007,7 @@ Array [
               <h3>
                 Scan Summary : 
                 <button
-                  className=""
+                  className="small success"
                   onClick={[Function]}
                   type="button"
                 >
@@ -3792,10 +4027,14 @@ Array [
         id="dependabot"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Alertes Dependabot
           </h5>
           <svg
@@ -3848,11 +4087,13 @@ Array [
             Alertes dependabot
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h3>
             Scan Summary : 
             <button
-              className=""
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
@@ -3905,7 +4146,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -3941,7 +4182,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -3987,7 +4228,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4033,7 +4274,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4088,10 +4329,14 @@ Array [
         id="zap"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Scan OWASP
           </h5>
           <svg
@@ -4132,7 +4377,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/zap.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/zap.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -4144,7 +4389,9 @@ Array [
             Rapport détaillé
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -4180,7 +4427,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4194,7 +4441,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4208,7 +4455,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4222,7 +4469,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4236,7 +4483,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4250,7 +4497,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4264,7 +4511,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4278,7 +4525,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4292,7 +4539,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4306,7 +4553,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4320,7 +4567,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4334,7 +4581,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4354,10 +4601,14 @@ Array [
         id="nuclei"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Nuclei
           </h5>
           <svg
@@ -4398,7 +4649,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -4456,7 +4709,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4474,7 +4727,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4494,7 +4747,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 success"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4520,10 +4773,14 @@ Array [
         id="trivy"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Image docker app
           </h5>
           <svg
@@ -4564,7 +4821,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h6>
             ghcr.io/socialgouv/sample-next-app/app:latest (alpine 3.11.12)
           </h6>
@@ -4584,10 +4843,14 @@ Array [
         </div>
       </div>
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Image docker hasura
           </h5>
           <svg
@@ -4628,7 +4891,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <h6>
             ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)
           </h6>
@@ -4678,7 +4943,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 danger"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4701,7 +4966,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4724,7 +4989,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4747,7 +5012,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -4784,10 +5049,14 @@ Array [
         id="wappalyzer"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Wappalyzer
           </h5>
           <svg
@@ -4828,7 +5097,9 @@ Array [
             />
           </svg>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -5058,45 +5329,49 @@ Array [
     className="fr-callout fr-mb-3w"
   >
     <h4
-      className="fr-callout__title"
+      className="fr-callout__title fr-text--lg"
     >
       <a
+        href="https://www.fabrique.social.gouv.fr"
         rel="noreferrer noopener"
         target="_blank"
-      />
+      >
+        https://www.fabrique.social.gouv.fr
+      </a>
     </h4>
     <p
-      className="fr-callout__text"
+      className="fr-callout__text fr-text--lg"
     >
       <button
-        className=""
+        className="badge success"
         onClick={[Function]}
         type="button"
       >
         fabrique
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         social
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         sante
       </button>
       <button
-        className=""
+        className="badge info"
         onClick={[Function]}
         type="button"
       >
         travail
       </button>
       <svg
+        className="clockIcon"
         fill="none"
         height={16}
         stroke="currentColor"
@@ -5117,6 +5392,7 @@ Array [
         />
       </svg>
       <span
+        className="clock"
         title="2021-09-03T23:52:34.263Z"
       >
         Mise à jour il y a :
@@ -5124,10 +5400,12 @@ Array [
         5 mois
       </span>
     </p>
-    <div>
+    <div
+      className="image"
+    >
       <img
-        alt="Copie d'écran de undefined"
-        src="https://jest.demo.com/dashlord/report/dW5kZWZpbmVk/screenshot.jpeg"
+        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
       />
     </div>
   </div>,
@@ -5153,30 +5431,28 @@ Array [
           type="button"
         >
           
-          <div>
-            <svg
-              fill="none"
-              height={16}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              style={
-                Object {
-                  "marginBottom": -2,
-                  "marginRight": 5,
-                }
+          <svg
+            fill="none"
+            height={16}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "marginBottom": -2,
+                "marginRight": 5,
               }
-              viewBox="0 0 24 24"
-              width={16}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
-              />
-            </svg>
-            Bonnes pratiques
-          </div>
+            }
+            viewBox="0 0 24 24"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+            />
+          </svg>
+          Bonnes pratiques
         </button>
       </li>
       <li
@@ -5302,10 +5578,14 @@ Array [
         id="zap"
       />
       <div
-        className=""
+        className="container"
       >
-        <div>
-          <h5>
+        <div
+          className="banner"
+        >
+          <h5
+            className="mainTitle"
+          >
             Scan OWASP
           </h5>
           <svg
@@ -5346,7 +5626,7 @@ Array [
             />
           </svg>
           <a
-            href="https://jest.demo.com/dashlord/report/dW5kZWZpbmVk/zap.html"
+            href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/zap.html"
             rel="noreferrer noopener"
             style={
               Object {
@@ -5358,7 +5638,9 @@ Array [
             Rapport détaillé
           </a>
         </div>
-        <div>
+        <div
+          className="body"
+        >
           <div
             className="fr-table"
           >
@@ -5394,7 +5676,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5408,7 +5690,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5422,7 +5704,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 warning"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5436,7 +5718,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5450,7 +5732,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5464,7 +5746,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5478,7 +5760,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5492,7 +5774,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5506,7 +5788,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5520,7 +5802,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5534,7 +5816,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >
@@ -5548,7 +5830,7 @@ Array [
                 <tr>
                   <td>
                     <button
-                      className="w-100"
+                      className="w-100 info"
                       onClick={[Function]}
                       type="button"
                     >

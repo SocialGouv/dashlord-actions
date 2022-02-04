@@ -15,12 +15,12 @@ export const Stats: React.FC<StatsProps> = ({ data, url }) =>
         <Alert
           type="success"
           description={
-            <div>
+            <>
               Page bien détéctée :{" "}
               <a href={`${url}/${data.uri}`}>
                 {url}/{data.uri}
               </a>
-            </div>
+            </>
           }
         />
       )) || (

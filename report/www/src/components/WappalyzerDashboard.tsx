@@ -12,11 +12,11 @@ import {
 import { Callout, CalloutTitle } from "@dataesr/react-dsfr";
 import uniq from "lodash.uniq";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { Panel } from "./Panel";
-
-import styles from "./wappalyzerDashboard.cssmodule.scss";
+import styles from "./wappalyzerDashboard.module.scss";
+import { smallUrl, slugifyUrl } from "../utils";
 
 type UsageChartProps = { data: any };
 
@@ -37,7 +37,7 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
     <YAxis />
     <Tooltip />
     <Legend />
-    <Bar dataKey="count" fill="var(--bf500)" />
+    <Bar dataKey="count" fill="var(--blue-france)" />
   </BarChart>
 );
 
@@ -132,16 +132,18 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {item.name}
-{' '}
-({item.urls.length}
-)
-</a>
+                    {item.name} ({item.urls.length})
+                  </a>
                 </b>
                 <ul>
                   {item.urls.map((url) => (
                     <li key={url}>
-                      <Link to={`/url/${url}`}>{url}</Link>
+                      <Link
+                        prefetch={false}
+                        href={`/url/${encodeURIComponent(slugifyUrl(url))}`}
+                      >
+                        {smallUrl(url)}
+                      </Link>
                     </li>
                   ))}
                 </ul>
