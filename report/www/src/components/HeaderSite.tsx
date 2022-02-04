@@ -17,7 +17,7 @@ import {
 } from "@dataesr/react-dsfr";
 import { smallUrl, slugifyUrl, sortByKey } from "../utils";
 
-import dashlordConfig from "../config.json";
+const dashlordConfig: DashlordConfig = require("../config.json");
 
 type HeaderSiteProps = {
   report: DashLordReport;
