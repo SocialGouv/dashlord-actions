@@ -21,6 +21,11 @@ runs:
       shell: bash
       id: scan
       run: |
-        IMAGE=[[ ! "${{ inputs.image }}" =~ ":" ]] && "${{ inputs.image }}:latest" || "${{ inputs.image }}"
-        echo $IMAGE
-        docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.19.2 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL ${IMAGE} > ${{ inputs.output }}
+        IMAGE=$([[ "${{ inputs.image }}" =~ ":" ]] && "${{ inputs.image }}" || "${{ inputs.image }}:latest")
+        echo "$IMAGE"
+        docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.19.2 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > ${{ inputs.output }}
+
+
+
+
+IMAGE=[[ ! "$IMG" =~ ":" ]] && "$IMG:latest" || "$IMG"
