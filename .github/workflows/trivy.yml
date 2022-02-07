@@ -14,9 +14,10 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ghcr.io/socialgouv/fabrique/www
+          image-ref: ghcr.io/socialgouv/domifa/backend
           format: "json"
           output: "trivy-results.json"
+          severity: MEDIUM,HIGH,CRITICAL
       - shell: bash
         run: |
           cat trivy-results.json
