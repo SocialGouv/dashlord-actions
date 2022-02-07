@@ -1,0 +1,26 @@
+name: "Trivy scan action"
+description: "Generate a trivy report on a given image"
+
+inputs:
+  image:
+    description: "Docker image like `ghcr.io/socialgouv/nginx` or `ghcr.io/socialgouv/nginx:latest"
+    required: true
+  output:
+    description: "Path to output file. defaults to trivy.json"
+    default: "trivy.json"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install
+      shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+    - name: Get packages
+      shell: bash
+      id: scan
+      run: |
+        IMAGE=[[ ! "${{ inputs.image }}" =~ ":" ]] && "${{ inputs.image }}:latest" || "${{ inputs.image }}"
+        echo $IMAGE
+        docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.19.2 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL ${IMAGE} > ${{ inputs.output }}
