@@ -24,3 +24,5 @@ runs:
         IMAGE=$([[ "${{ inputs.image }}" =~ ":" ]] && echo "${{ inputs.image }}" || echo  "${{ inputs.image }}:latest")
         echo "$IMAGE"
         docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.19.2 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > ${{ inputs.output }}
+        cat ${{ inputs.output }}
+        jq ${{ inputs.output }}
