@@ -60,3 +60,5 @@ export const letterGradeValue = (grade: string): number =>
     F: 40,
     "F-": 30,
   }[grade] || 0);
+
+export const btoa = (b: any) => Buffer.from(b).toString("base64");

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Info, Zap, ThumbsUp, Lock } from "react-feather";
 
-import { isToolEnabled, slugifyUrl } from "../utils";
+import { isToolEnabled, slugifyUrl, btoa } from "../utils";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
 import { Nuclei } from "./Nuclei";
@@ -25,8 +25,6 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 type UrlDetailProps = { url: string; report: UrlReport; selectedTab?: string };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
-
-const btoa = (b: any) => Buffer.from(b).toString("base64");
 
 // define tabs structure
 const tabs = [

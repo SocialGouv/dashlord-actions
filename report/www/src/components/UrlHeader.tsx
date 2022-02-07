@@ -6,6 +6,7 @@ import frLocale from "date-fns/locale/fr";
 
 import Badge from "./Badge";
 import styles from "./url.module.scss";
+import { btoa } from "../utils";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
