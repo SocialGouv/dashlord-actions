@@ -10,11 +10,11 @@ const report: DashLordReport = require("../../src/report.json");
 const PageUrl = ({
   report,
   url,
-  activeTab,
+  selectedTab,
 }: {
   report: UrlReport;
   url: string;
-  activeTab: number;
+  selectedTab: string;
 }) => {
   if (!report) {
     return <Alert type="error" title={`Impossible de trouver le rapport`} />;
@@ -24,7 +24,7 @@ const PageUrl = ({
       <Head>
         <title>DashLord - {url}</title>
       </Head>
-      <Url url={url} report={report} activeTab={activeTab} />
+      <Url url={url} report={report} selectedTab={selectedTab} />
     </>
   );
 };
@@ -34,7 +34,7 @@ const tabs = ["best-practices", "disponibilite", "securite", "informations"];
 
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  let activeTab = 0;
+  let selectedTab = "";
   if (Array.isArray(params.url)) {
     let fullUrl = decodeURIComponent((params.url as []).join(""));
     if (params.url.length > 1) {
@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         fullUrl = decodeURIComponent(
           (params.url.slice(0, params.url.length - 1) as []).join("")
         );
-        activeTab = tabs.indexOf(lastPart);
+        selectedTab = lastPart;
       }
     }
     const urlData = report.find(
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     );
     const url = urlData.url;
     return {
-      props: { activeTab, url, report: urlData || null },
+      props: { selectedTab, url, report: urlData || null },
     };
   }
   return { props: {} };
