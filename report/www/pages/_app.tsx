@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     router.asPath.match(/^\/tag\/.+/) ||
     router.asPath.match(/^\/category\/.+/);
   React.useEffect(() => {
-    console.log("use effect");
     init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
   }, []);
   return (

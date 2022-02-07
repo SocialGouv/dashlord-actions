@@ -1,17 +1,7 @@
 import * as React from "react";
-import { formatDistanceToNow } from "date-fns";
-import frLocale from "date-fns/locale/fr";
-import { Clock, Sun, ThumbsUp, Zap, Lock, Info } from "react-feather";
-import {
-  Callout,
-  CalloutTitle,
-  CalloutText,
-  Tabs,
-  Tab,
-} from "@dataesr/react-dsfr";
+import { Info, Zap, ThumbsUp, Lock } from "react-feather";
 
 import { isToolEnabled, slugifyUrl } from "../utils";
-import Badge from "./Badge";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
 import { Nuclei } from "./Nuclei";
@@ -27,23 +17,147 @@ import { Stats } from "./Stats";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
-
-import styles from "./url.module.scss";
+import { Tab, TabContent } from "./UrlTabs";
+import { UrlHeader } from "./UrlHeader";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-type UrlDetailProps = { url: string; report: UrlReport; activeTab?: number };
+type UrlDetailProps = { url: string; report: UrlReport; selectedTab?: string };
 
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
 const btoa = (b: any) => Buffer.from(b).toString("base64");
 
-export const Url: React.FC<UrlDetailProps> = ({
-  url,
-  report,
-  activeTab = 0,
-}) => {
-  const updateDate = report && report.lhr && report.lhr.fetchTime;
+// define tabs structure
+const tabs = [
+  {
+    label: "Bonnes pratiques",
+    id: "best-practices",
+    icon: <ThumbsUp size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    items: [
+      {
+        id: "lighthouse",
+        reportKey: "lhr",
+        render: (report, url) => (
+          <LightHouse
+            data={report.lhr}
+            url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
+          />
+        ),
+      },
+      {
+        id: "thirdparties",
+        render: (report, url) => <Trackers data={report.thirdparties} />,
+      },
+      {
+        id: "stats",
+        render: (report, url) => <Stats data={report.stats} url={url} />,
+      },
+      {
+        id: "declaration-a11y",
+        render: (report, url) => (
+          <DeclarationA11y data={report["declaration-a11y"]} />
+        ),
+      },
+      {
+        id: "404",
+        render: (report, url) =>
+          report["404"].length && <Report404 data={report["404"]} />,
+      },
+    ],
+  },
+  {
+    label: "Disponibilité",
+    id: "disponibilite",
+    icon: <Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    items: [
+      {
+        id: "updownio",
+        render: (report, url) => <UpdownIo data={report.updownio} url={url} />,
+      },
+    ],
+  },
+  {
+    label: "Sécurité",
+    id: "securite",
+    icon: <Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    items: [
+      {
+        id: "nmap",
+        render: (report, url) => (
+          <Nmap
+            data={report.nmap}
+            url={`${BASE_PATH}/report/${btoa(url)}/nmapvuln.html`}
+          />
+        ),
+      },
+      {
+        id: "http",
+        render: (report, url) => <HTTP data={report.http} />,
+      },
+      {
+        id: "testssl",
+        render: (report, url) => (
+          <TestSSL
+            data={report.testssl}
+            url={`${BASE_PATH}/report/${btoa(url)}/testssl.html`}
+          />
+        ),
+      },
+      {
+        id: "dependabot",
+        render: (report, url) =>
+          report.dependabot.repositories &&
+          report.dependabot.repositories
+            .filter(Boolean)
+            .map((repository) => (
+              <Dependabot key={repository.url} data={repository} url={url} />
+            )),
+      },
+      {
+        id: "codescan",
+        render: (report, url) =>
+          report.codescan.repositories &&
+          report.codescan.repositories
+            .filter(Boolean)
+            .map((repository) => (
+              <Codescan key={repository.url} data={repository} url={url} />
+            )),
+      },
+      {
+        id: "zap",
+        render: (report, url) => (
+          <Owasp
+            data={report.zap}
+            url={`${BASE_PATH}/report/${btoa(url)}/zap.html`}
+          />
+        ),
+      },
+      {
+        id: "nuclei",
+        render: (report, url) => <Nuclei data={report.nuclei} />,
+      },
+      {
+        id: "trivy",
+        render: (report, url) =>
+          report["trivy"].length && <Trivy data={report["trivy"]} />,
+      },
+    ],
+  },
+  {
+    label: "Informations",
+    id: "informations",
+    icon: <Info size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    items: [
+      {
+        id: "wappalyzer",
+        render: (report, url) => <Wappalyzer data={report.wappalyzer} />,
+      },
+    ],
+  },
+];
+
+export const Url: React.FC<UrlDetailProps> = ({ url, report, selectedTab }) => {
   React.useEffect(() => {
     const hash = document.location.hash.split("#");
     if (hash.length === 3) {
@@ -54,6 +168,7 @@ export const Url: React.FC<UrlDetailProps> = ({
       }
     }
   }, [report]);
+
   if (!report) {
     return (
       <div>
@@ -63,223 +178,56 @@ export const Url: React.FC<UrlDetailProps> = ({
     );
   }
 
+  const selectedTabIndex: number = Math.max(
+    0,
+    tabs.findIndex((tab) => selectedTab === tab.id)
+  );
+
+  const selectedTabDefinition = tabs[selectedTabIndex];
+
   return (
     <>
-      <Callout hasInfoIcon={false} className="fr-mb-3w">
-        <CalloutTitle as="h4">
-          <a href={url} rel="noreferrer noopener" target="_blank">
-            {url}
-          </a>
-        </CalloutTitle>
-        <CalloutText>
-          {report.category && (
-            <Badge
-              className={styles.badge}
-              variant="success"
-              to={`/category/${report.category}`}
-            >
-              {report.category}
-            </Badge>
-          )}
-          {report.tags &&
-            report.tags.map((tag: string) => (
-              <Badge
-                className={styles.badge}
-                variant="info"
-                key={tag}
-                to={`/tag/${tag}`}
-              >
-                {tag}
-              </Badge>
-            ))}
-          {updateDate && (
-            <>
-              <Clock size={16} className={styles.clockIcon} />
-              <span title={updateDate} className={styles.clock}>
-                Mise à jour il y a :{" "}
-                {formatDistanceToNow(new Date(updateDate), {
-                  locale: frLocale,
-                })}
-              </span>
-            </>
-          )}
-        </CalloutText>
-        <div className={styles.image}>
-          <img
-            alt={`Copie d'écran de ${url}`}
-            src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
-          />
-        </div>
-      </Callout>
+      <UrlHeader report={report} url={url} />
 
-      <Tabs defaultActiveTab={activeTab}>
-        <Tab
-          label={
-            <>
-              <ThumbsUp
-                size={16}
-                style={{ marginRight: 5, marginBottom: -2 }}
-              />
-              Bonnes pratiques
-            </>
-          }
-        >
-          {isToolEnabled("lighthouse") && report.lhr && (
-            <>
-              <Anchor id="lighthouse" />
-              <LightHouse
-                data={report.lhr}
-                url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
-              />
-            </>
-          )}
-          {isToolEnabled("thirdparties") && report.thirdparties && (
-            <>
-              <Anchor id="thirdparties" />
-              <Trackers data={report.thirdparties} />
-            </>
-          )}
-          {isToolEnabled("stats") && report.stats && (
-            <>
-              <Anchor id="stats" />
-              <Stats data={report.stats} url={url} />
-            </>
-          )}
-          {isToolEnabled("declaration-a11y") && report["declaration-a11y"] && (
-            <>
-              <Anchor id="declaration-a11y" />
-              <DeclarationA11y data={report["declaration-a11y"]} />
-            </>
-          )}
-          {(isToolEnabled("404") && report["404"] && report["404"].length && (
-            <>
-              <Anchor id="404" />
-              <Report404 data={report["404"]} />
-            </>
-          )) ||
-            null}
-        </Tab>
-        {isToolEnabled("updownio") && report.updownio && (
-          <Tab
-            label={
-              <div>
-                <Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />
-                Disponibilité
+      {/* custom DSFR Tabs renderer because of some react-dsfr issue */}
+      <div className="fr-tabs">
+        <ul className="fr-tabs__list" role="tablist">
+          {tabs.map((tab, tabIndex) => (
+            <Tab
+              key={tab.id}
+              selected={selectedTabDefinition.id === tab.id}
+              index={tabIndex}
+              href={`/url/${slugifyUrl(url)}/${tab.id}`}
+              {...tab}
+            />
+          ))}
+        </ul>
+        {tabs.map((tab, tabIndex) => {
+          // filter out invalid items
+          const items = tab.items
+            .filter(
+              (item) =>
+                !!report[item.reportKey || item.id] &&
+                isToolEnabled(item.id as DashlordTool)
+            )
+            .map((item) => (
+              <div key={item.id}>
+                <Anchor id={item.id} />
+                {item.render(report, url)}
               </div>
-            }
-          >
-            <Anchor id="updownio" />
-            <UpdownIo data={report.updownio} url={url} />
-          </Tab>
-        )}
-        <Tab
-          label={
-            <div>
-              <Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />
-              Sécurité
-            </div>
-          }
-        >
-          {isToolEnabled("nmap") && report.nmap && (
-            <>
-              <Anchor id="nmap" />
-              <Nmap
-                data={report.nmap}
-                url={`${BASE_PATH}/report/${btoa(url)}/nmapvuln.html`}
-              />
-            </>
-          )}
-          {isToolEnabled("http") && report.http && (
-            <>
-              <Anchor id="http" />
-              <HTTP data={report.http} />
-            </>
-          )}
+            ));
 
-          {isToolEnabled("testssl") && report.testssl && (
-            <>
-              <Anchor id="testssl" />
-              <TestSSL
-                data={report.testssl}
-                url={`${BASE_PATH}/report/${btoa(url)}/testssl.html`}
-              />
-            </>
-          )}
-
-          {isToolEnabled("dependabot") &&
-            report.dependabot &&
-            report.dependabot.repositories && (
-              <>
-                <Anchor id="dependabot" />
-                {report.dependabot.repositories
-                  .filter(Boolean)
-                  .map((repository) => (
-                    <Dependabot
-                      key={repository.url}
-                      data={repository}
-                      url={url}
-                    />
-                  ))}
-              </>
-            )}
-          {isToolEnabled("codescan") &&
-            report.codescan &&
-            report.codescan.repositories && (
-              <>
-                <Anchor id="codescan" />
-                {report.codescan.repositories
-                  .filter(Boolean)
-                  .map((repository) => (
-                    <Codescan
-                      key={repository.url}
-                      data={repository}
-                      url={url}
-                    />
-                  ))}
-              </>
-            )}
-          {isToolEnabled("zap") && report.zap && (
-            <>
-              <Anchor id="zap" />
-              <Owasp
-                data={report.zap}
-                url={`${BASE_PATH}/report/${btoa(url)}/zap.html`}
-              />
-            </>
-          )}
-          {isToolEnabled("nuclei") && report.nuclei && (
-            <>
-              <Anchor id="nuclei" />
-              <Nuclei data={report.nuclei} />
-            </>
-          )}
-
-          {(isToolEnabled("trivy") &&
-            report["trivy"] &&
-            report["trivy"].length && (
-              <>
-                <Anchor id="trivy" />
-                <Trivy data={report["trivy"]} />
-              </>
-            )) ||
-            null}
-        </Tab>
-        <Tab
-          label={
-            <div>
-              <Info size={16} style={{ marginRight: 5, marginBottom: -2 }} />
-              Informations
-            </div>
-          }
-        >
-          {isToolEnabled("wappalyzer") && report.wappalyzer && (
-            <>
-              <Anchor id="wappalyzer" />
-              <Wappalyzer data={report.wappalyzer} />
-            </>
-          )}
-        </Tab>
-      </Tabs>
+          return (
+            <TabContent
+              {...tab}
+              key={tab.id}
+              tabIndex={tabIndex}
+              selected={selectedTabDefinition.id === tab.id}
+              items={items}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
