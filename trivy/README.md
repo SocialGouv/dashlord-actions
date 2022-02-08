@@ -1,6 +1,6 @@
 # trivy
 
-Run trivy scans on some docker images and produce JSON output
+Run trivy scans on multiples docker images and produce JSON output
 
 ## Usage
 
@@ -14,7 +14,7 @@ on:
 
 jobs:
   trivy:
-    name: trivy scan on GHCR
+    name: trivy scans
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

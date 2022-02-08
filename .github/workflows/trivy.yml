@@ -14,17 +14,6 @@ jobs:
     name: trivy action
     steps:
       - uses: actions/checkout@v2
-      # - name: Run Trivy vulnerability scanner
-      #   uses: aquasecurity/trivy-action@master
-      #   with:
-      #
-      #     image-ref: ghcr.io/socialgouv/domifa/backend
-      #     format: "json"
-      #     output: "trivy-results.json"
-      #     severity: MEDIUM,HIGH,CRITICAL
-      # - shell: bash
-      #   run: |
-      #     cat trivy-results.json
       - name: Run Trivy vulnerability scanner
         uses: ./trivy
         with:
@@ -32,4 +21,4 @@ jobs:
           output: "trivy-results.json"
       - shell: bash
         run: |
-          cat trivy-results.json
+          cat trivy-results.json | jq
