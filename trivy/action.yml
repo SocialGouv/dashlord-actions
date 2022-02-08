@@ -21,6 +21,7 @@ runs:
       shell: bash
       id: scan
       run: |
+        apt-get install -y jq
         IFS=',' ;
         mkdir trivy-results || true
         for image in `echo "${{ inputs.images }}"`; do
