@@ -21,4 +21,5 @@ jobs:
           output: trivy-results.json
       - shell: bash
         run: |
+          ls -la
           cat trivy-results.json | jq
