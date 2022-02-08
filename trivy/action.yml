@@ -23,7 +23,7 @@ runs:
       run: |
         IFS=',' ;
         mkdir trivy-results || true
-        for image in `echo "${{ inputs.images }}"`;
+        for image in `echo "${{ inputs.images }}"`; do
           echo "image: ${image}"
           # add latest tag if needed
           IMAGE=$([[ "${image}" =~ ":" ]] && echo "${image}" || echo "${image}:latest")
