@@ -2,7 +2,7 @@ on:
   push:
     branches: ["*"]
     paths:
-      - trivy
+      - trivy/**
       - .github/workflows/trivy.yml
   pull_request:
     branches: ["*"]

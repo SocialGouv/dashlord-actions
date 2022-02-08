@@ -2,7 +2,7 @@ on:
   push:
     branches: ["*"]
     paths:
-      - report
+      - report/**
       - .github/workflows/report.yml
   pull_request:
     branches: ["*"]
