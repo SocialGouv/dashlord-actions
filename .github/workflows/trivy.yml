@@ -21,3 +21,11 @@ jobs:
       - shell: bash
         run: |
           cat trivy-results.json
+      - name: Run Trivy vulnerability scanner
+        uses: ./trivy
+        with:
+          images: ghcr.io/socialgouv/domifa/backend,ghcr.io/socialgouv/domifa/frontend
+          output: "trivy-results2.json"
+      - shell: bash
+        run: |
+          cat trivy-results2.json

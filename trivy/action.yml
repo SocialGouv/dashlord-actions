@@ -3,7 +3,7 @@ description: "Generate a trivy report on a given image"
 
 inputs:
   image:
-    description: "Docker image like `ghcr.io/socialgouv/nginx` or `ghcr.io/socialgouv/nginx:latest"
+    description: "Comma separated list of docker image like `ghcr.io/socialgouv/nginx,ghcr.io/socialgouv/psql` or `ghcr.io/socialgouv/nginx:latest"
     required: true
   output:
     description: "Path to output file. defaults to trivy.json"
@@ -21,8 +21,13 @@ runs:
       shell: bash
       id: scan
       run: |
-        IMAGE=$([[ "${{ inputs.image }}" =~ ":" ]] && echo "${{ inputs.image }}" || echo  "${{ inputs.image }}:latest")
-        echo "$IMAGE"
-        #--quiet 
-        docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE"
-        cat ${{ inputs.output }} | jq
+        IFS=',' ;
+        mkdir trivy || true
+        for image in `echo "${{ inputs.image }}"`; 
+          IMAGE=$([[ "${{ image }}" =~ ":" ]] && echo "${{ image }}" || echo  "${{ image }}:latest")
+          echo "$IMAGE"
+          OUTPUT=trivy/$(echo "$IMAGE" | base64).json
+          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
+        done
+        ls -la
+        ls -la trivy
