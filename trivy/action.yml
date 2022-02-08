@@ -13,7 +13,7 @@ runs:
   using: "composite"
   steps:
     - name: Scan images
-      runs-on: bash
+      shell: bash
       run: |
         sudo apt-get install -y jq
         IFS=',' ;
