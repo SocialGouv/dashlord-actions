@@ -24,13 +24,13 @@ runs:
         IFS=',' ;
         mkdir trivy-results || true
         for image in `echo "${{ inputs.images }}"`; do
-          echo "image: ${image}"
           # add latest tag if needed
           IMAGE=$([[ "${image}" =~ ":" ]] && echo "${image}" || echo "${image}:latest")
-          echo "IMAGE: $IMAGE"
           OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
+          echo "IMAGE: $IMAGE"
           echo "OUTPUT: $OUTPUT"
           docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
         done
         # concatenate results for all images in a single JSON
         jq -s '.' trivy-results/* > "${{ inputs.output }}"
+        echo "created in ${{ inputs.output }}"
