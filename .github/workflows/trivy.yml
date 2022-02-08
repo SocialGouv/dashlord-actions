@@ -22,4 +22,4 @@ jobs:
       - shell: bash
         run: |
           ls -la
-          cat trivy-results.json | jq
+          python -m json.tool < trivy-results.json
