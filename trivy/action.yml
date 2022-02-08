@@ -30,7 +30,7 @@ runs:
           echo "IMAGE: $IMAGE"
           OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
           echo "OUTPUT: $OUTPUT"
-          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
+          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --quiet --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
         done
         # concatenate results for all images in a single JSON
         ls -la
