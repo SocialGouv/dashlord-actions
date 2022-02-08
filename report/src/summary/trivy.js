@@ -10,7 +10,7 @@ const sum = (arr) => arr.reduce((a, c) => a + c, 0);
 const summary = (report) => {
   if (report && report.length) {
     const allVulns = report.flatMap(
-      (image) => (image.trivy && image.trivy.Vulnerabilities) || []
+      (image) => (image && image.Vulnerabilities) || []
     );
     const vulnsCount = allVulns.length;
     const critical = allVulns.filter(
