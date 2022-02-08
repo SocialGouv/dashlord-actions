@@ -18,7 +18,7 @@ jobs:
         uses: ./trivy
         with:
           images: ghcr.io/socialgouv/domifa/backend,ghcr.io/socialgouv/domifa/frontend
-          output: "trivy-results.json"
+          output: trivy-results.json
       - shell: bash
         run: |
           cat trivy-results.json | jq
