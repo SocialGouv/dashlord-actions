@@ -23,7 +23,8 @@ runs:
       run: |
         IFS=',' ;
         mkdir trivy-results || true
-        for image in `echo "${{ inputs.image }}"`; 
+        for image in `echo "${{ inputs.image }}"`;
+          echo "image: $image"
           IMAGE=$([[ "$image" =~ ":" ]] && echo "$image" || echo "${image}:latest")
           echo "IMAGE: $IMAGE"
           OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
