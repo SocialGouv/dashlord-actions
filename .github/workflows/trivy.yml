@@ -21,5 +21,4 @@ jobs:
           output: trivy-results.json
       - shell: bash
         run: |
-          ls -la
           python -m json.tool < trivy-results.json
