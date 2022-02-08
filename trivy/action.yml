@@ -25,6 +25,7 @@ runs:
         mkdir trivy-results || true
         for image in `echo "${{ inputs.images }}"`;
           echo "image: ${image}"
+          # add latest tag if needed
           IMAGE=$([[ "${image}" =~ ":" ]] && echo "${image}" || echo "${image}:latest")
           echo "IMAGE: $IMAGE"
           OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
