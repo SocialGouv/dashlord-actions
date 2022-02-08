@@ -17,7 +17,7 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-    - name: Get packages
+    - name: Scan images
       shell: bash
       id: scan
       run: |
@@ -25,9 +25,12 @@ runs:
         mkdir trivy || true
         for image in `echo "${{ inputs.image }}"`; 
           IMAGE=$([[ "${{ image }}" =~ ":" ]] && echo "${{ image }}" || echo  "${{ image }}:latest")
-          echo "$IMAGE"
+          echo "IMAGE: $IMAGE"
           OUTPUT=trivy/$(echo "$IMAGE" | base64).json
+          echo "OUTPUT: $OUTPUT"
           docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
         done
         ls -la
         ls -la trivy
+        jq -s '.' trivy/*.json > "${{ inputs.output }}"
+        cat "${{ inputs.output }}"
