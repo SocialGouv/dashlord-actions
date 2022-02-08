@@ -32,7 +32,9 @@ runs:
           echo "OUTPUT: $OUTPUT"
           docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
         done
+        # concatenate results for all images in a single JSON
         ls -la
         ls -la trivy-results
+        cat trivy-results/*
         jq -s '.' trivy-results/* > "${{ inputs.output }}"
         cat "${{ inputs.output }}"
