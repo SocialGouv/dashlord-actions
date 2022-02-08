@@ -34,5 +34,5 @@ runs:
         done
         ls -la
         ls -la trivy-results
-        jq -s '.' "trivy-results/*.json" > "${{ inputs.output }}"
+        jq -s '.' trivy-results/* > "${{ inputs.output }}"
         cat "${{ inputs.output }}"
