@@ -1,6 +1,6 @@
 # trivy
 
-Run trivy scans on some docker image and produce JSON output
+Run trivy scans on some docker images and produce JSON output
 
 ## Usage
 
@@ -21,8 +21,8 @@ jobs:
       - name: test
         uses: socialgouv/dashlord-actions/trivy@v1
         with:
-          image: ghcr.io/socialgouv/fabrique/www
-        # output: trivy.json
+          images: ghcr.io/socialgouv/front,ghcr.io/socialgouv/back
+          output: trivy.json
       - uses: actions/upload-artifact@v2
         with:
           name: trivy.json
