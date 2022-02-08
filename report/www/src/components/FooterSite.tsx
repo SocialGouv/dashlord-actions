@@ -6,30 +6,34 @@ import {
   FooterBody,
   FooterTop,
   FooterBodyItem,
-  Logo,
+  Logo as Marianne,
   FooterBottom,
   FooterCopy,
-  Link,
 } from "@dataesr/react-dsfr";
 
-import dashlordConfig from "../config.json";
+const dashlordConfig: DashlordConfig = require("../config.json");
 
-export const FooterSite: React.FC = () => (
-  <Footer>
-    <FooterTop></FooterTop>
-    <FooterBody description="">
-      {dashlordConfig.marianne === true ? (
-        <Logo>{dashlordConfig.entity}</Logo>
-      ) : (
-        ""
-      )}
-      <FooterBodyItem>
-        <div>{dashlordConfig.footer}</div>
-      </FooterBodyItem>
-    </FooterBody>
-    <FooterBottom>
-      <FooterLink href="#"></FooterLink>
-      <FooterCopy href="#"></FooterCopy>
-    </FooterBottom>
-  </Footer>
-);
+export const FooterSite: React.FC = () => {
+  const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
+  return (
+    <Footer>
+      <FooterTop></FooterTop>
+      <FooterBody description="">
+        <Logo
+          style={{
+            display: dashlordConfig.marianne === true ? "block" : "none",
+          }}
+        >
+          {dashlordConfig.entity}
+        </Logo>
+        <FooterBodyItem>
+          <div>{dashlordConfig.footer}</div>
+        </FooterBodyItem>
+      </FooterBody>
+      <FooterBottom>
+        <FooterLink href="#"></FooterLink>
+        <FooterCopy href="#"></FooterCopy>
+      </FooterBottom>
+    </Footer>
+  );
+};

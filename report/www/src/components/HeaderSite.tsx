@@ -1,11 +1,11 @@
-import React, { ReactChildren, useEffect, useState } from "react";
+import React, { CSSProperties, ReactChildren, useState } from "react";
 import { default as Link } from "next/link";
 import { useRouter } from "next/router";
 import uniq from "lodash.uniq";
 import {
   Header,
   HeaderBody,
-  Logo,
+  Logo as Marianne,
   Service,
   Tool,
   ToolItem,
@@ -64,15 +64,14 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const categories = uniq(
     sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
+  const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
   return (
     <>
       <Header>
         <HeaderBody>
-          {dashlordConfig.marianne === true ? (
-            <Logo asLink={<TitleLink href="/" />} splitCharacter={10}>
-              {dashlordConfig.entity}
-            </Logo>
-          ) : null}
+          <Logo asLink={<TitleLink href="/" />} splitCharacter={10}>
+            {dashlordConfig.entity}
+          </Logo>
           <Service
             asLink={<TitleLink href="/" />}
             title={dashlordConfig.title}
