@@ -3,6 +3,7 @@ on:
     branches: ["*"]
     paths:
       - report
+      - .github/workflows/report.yml
   pull_request:
     branches: ["*"]
 
