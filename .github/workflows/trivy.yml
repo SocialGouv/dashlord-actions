@@ -22,6 +22,7 @@ jobs:
       #     output: "trivy-results.json"
       #     severity: MEDIUM,HIGH,CRITICAL
       # - shell: bash
+      #
       #   run: |
       #     cat trivy-results.json
       - name: Run Trivy vulnerability scanner
