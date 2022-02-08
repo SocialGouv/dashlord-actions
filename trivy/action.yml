@@ -22,15 +22,15 @@ runs:
       id: scan
       run: |
         IFS=',' ;
-        mkdir trivy || true
+        mkdir trivy-results || true
         for image in `echo "${{ inputs.image }}"`; 
           IMAGE=$([[ "$image" =~ ":" ]] && echo "$image" || echo  "$image:latest")
           echo "IMAGE: $IMAGE"
-          OUTPUT=trivy/$(echo "$IMAGE" | base64).json
+          OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
           echo "OUTPUT: $OUTPUT"
           docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT"
         done
         ls -la
-        ls -la trivy
-        jq -s '.' trivy/*.json > "${{ inputs.output }}"
+        ls -la trivy-results
+        jq -s '.' trivy-results/*.json > "${{ inputs.output }}"
         cat "${{ inputs.output }}"
