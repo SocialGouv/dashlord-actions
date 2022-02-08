@@ -2,7 +2,7 @@ name: "Trivy scan action"
 description: "Generate a trivy report on a given image"
 
 inputs:
-  image:
+  images:
     description: "Comma separated list of docker image like `ghcr.io/socialgouv/nginx,ghcr.io/socialgouv/psql` or `ghcr.io/socialgouv/nginx:latest"
     required: true
   output:
@@ -23,7 +23,7 @@ runs:
       run: |
         IFS=',' ;
         mkdir trivy-results || true
-        for image in `echo "${{ inputs.image }}"`;
+        for image in `echo "${{ inputs.images }}"`;
           echo "image: $image"
           IMAGE=$([[ "$image" =~ ":" ]] && echo "$image" || echo "${image}:latest")
           echo "IMAGE: $IMAGE"
