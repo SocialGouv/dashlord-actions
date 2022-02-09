@@ -56,36 +56,38 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
   return (
     <React.Fragment>
       {(data.length &&
-        data.map(
-          (image) =>
-            image &&
-            ((
-              <Panel
-                key={image.ArtifactName}
-                isExternal
-                title={`Image docker ${image.ArtifactName}`}
-                info="Scan de vulnérabilités Trivy"
-              >
-                <h6>{image.Target}</h6>
-                {image.Vulnerabilities && image.Vulnerabilities.length ? (
-                  <Table
-                    columns={columns}
-                    data={image.Vulnerabilities?.sort(orderBySeverity).filter(
-                      filterByKey("VulnerabilityID")
-                    )}
-                    rowKey="VulnerabilityID"
-                  />
-                ) : (
-                  <Alert
-                    type="success"
-                    title=""
-                    description="Aucune vulnérabilité détectée par Trivy"
-                  />
-                )}
-              </Panel>
-            ) ||
-              null)
-        )) ||
+        data
+          .filter((image) => image.ArtifactName)
+          .map(
+            (image) =>
+              image &&
+              ((
+                <Panel
+                  key={image.ArtifactName}
+                  isExternal
+                  title={`Image docker ${image.ArtifactName}`}
+                  info="Scan de vulnérabilités Trivy"
+                >
+                  <h6>{image.Target}</h6>
+                  {image.Vulnerabilities && image.Vulnerabilities.length ? (
+                    <Table
+                      columns={columns}
+                      data={image.Vulnerabilities?.sort(orderBySeverity).filter(
+                        filterByKey("VulnerabilityID")
+                      )}
+                      rowKey="VulnerabilityID"
+                    />
+                  ) : (
+                    <Alert
+                      type="success"
+                      title=""
+                      description="Aucune vulnérabilité détectée par Trivy"
+                    />
+                  )}
+                </Panel>
+              ) ||
+                null)
+          )) ||
         null}
     </React.Fragment>
   );

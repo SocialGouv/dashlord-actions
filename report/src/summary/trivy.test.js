@@ -10,6 +10,7 @@ const tests = [
     title: "critical report",
     report: [
       {
+        ArtifactName: "some-image",
         Target:
           "ghcr.io/socialgouv/sample-next-app/app:latest (alpine 3.11.12)",
         Vulnerabilities: [
@@ -24,6 +25,7 @@ const tests = [
         ],
       },
       {
+        ArtifactName: "some-image",
         Target:
           "ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)",
         Vulnerabilities: [
@@ -55,6 +57,7 @@ const tests = [
     title: "medium report",
     report: [
       {
+        ArtifactName: "some-image",
         Target:
           "ghcr.io/socialgouv/sample-next-app/app:latest (alpine 3.11.12)",
         Vulnerabilities: [
@@ -69,6 +72,7 @@ const tests = [
         ],
       },
       {
+        ArtifactName: "some-image",
         Target:
           "ghcr.io/socialgouv/sample-next-app/hasura:latest (debian 10.9)",
       },
