@@ -1,0 +1,31 @@
+name: "Trivy scan action"
+description: "Generate a trivy report on a given image"
+
+inputs:
+  images:
+    description: "Comma separated list of docker image like `ghcr.io/socialgouv/nginx,ghcr.io/socialgouv/psql` or `ghcr.io/socialgouv/nginx:latest"
+    required: true
+  output:
+    description: "Path to output file. defaults to trivy.json"
+    default: "trivy.json"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Scan images
+      shell: bash
+      run: |
+        sudo apt-get install -y jq
+        IFS=',' ;
+        mkdir trivy-results || true
+        for image in `echo "${{ inputs.images }}"`; do
+          # add latest tag if needed
+          IMAGE=$([[ "${image}" =~ ":" ]] && echo "${image}" || echo "${image}:latest")
+          OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
+          echo "IMAGE: $IMAGE"
+          echo "OUTPUT: $OUTPUT"
+          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.23.0 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT" || true
+        done
+        # concatenate results for all images in a single JSON
+        jq -s '.' trivy-results/* > "${{ inputs.output }}"
+        echo "created in ${{ inputs.output }}"

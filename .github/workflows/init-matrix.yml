@@ -1,6 +1,9 @@
 on:
   push:
     branches: ["*"]
+    paths:
+      - init/**
+      - .github/workflows/init-matrix.yml
   pull_request:
     branches: ["*"]
   workflow_dispatch:

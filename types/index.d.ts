@@ -368,16 +368,17 @@ type DeclarationA11yReport = {
   declarationUrl?: string;
 };
 
-type TrivyReport = TrivyImageReport[];
+type TrivyReport = TrivyScanResult[];
 
-interface TrivyImageReport {
-  name: string;
-  url: string;
-  image: string;
-  trivy: TrivyScanResult;
-}
+// interface TrivyImageReport {
+//   name: string;
+//   url: string;
+//   image: string;
+//   trivy: TrivyScanResult;
+// }
 
 interface TrivyScanResult {
+  ArtifactName: string;
   Target: string;
   Vulnerabilities?: Vulnerability[];
 }

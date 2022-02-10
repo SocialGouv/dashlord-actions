@@ -110,38 +110,6 @@ const lhrCleanup = (result) => {
  */
 const wget404Cleanup = (result) => result && result.broken;
 
-/**
- *
- * Minify trivy report
- *
- * @param {TrivyReport} result trivy JSON content
- *
- * @returns {TrivyReport} minified JSON content
- *
- */
-const trivyCleanup = (result) =>
-  result &&
-  result.map((image) => ({
-    name: image.name,
-    url: image.url,
-    image: image.image,
-    trivy: image.trivy && {
-      Target: image.trivy.Target,
-      Vulnerabilities:
-        image.trivy &&
-        image.trivy.Vulnerabilities &&
-        image.trivy.Vulnerabilities.map(
-          ({ VulnerabilityID, PkgName, PrimaryURL, Title, Severity }) => ({
-            VulnerabilityID,
-            PkgName,
-            PrimaryURL,
-            Title,
-            Severity,
-          })
-        ),
-    },
-  }));
-
 //@ts-expect-error
 const requireToolData = (filename) => (basePath) =>
   requireJson(path.join(basePath, filename));
@@ -164,7 +132,7 @@ const tools = {
   },
   stats: { data: requireToolData("stats.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
-  trivy: { data: requireToolData("trivy.json"), cleanup: trivyCleanup },
+  trivy: { data: requireToolData("trivy.json") /*, cleanup: trivyCleanup */ },
   "declaration-a11y": {
     data: requireToolData("declaration-a11y.json"),
   },
