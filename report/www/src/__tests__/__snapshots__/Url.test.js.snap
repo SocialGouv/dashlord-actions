@@ -384,13 +384,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -409,13 +405,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -434,13 +426,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -459,13 +447,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -1535,13 +1519,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -1560,13 +1540,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -1585,13 +1561,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
@@ -1610,13 +1582,9 @@ Array [
                 <div
                   className="card"
                 >
-                  <div
-                    style={
-                      Object {
-                        "background": "#FFF",
-                      }
-                    }
-                  />
+                  <div>
+                    gauge mock
+                  </div>
                   <div
                     className="cardTitle"
                   >
