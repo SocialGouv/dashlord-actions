@@ -89,7 +89,7 @@ export const Trivy: React.FC<TrivyProps> = ({ data, url }) => {
                             <h6>
                               {result.Target} ({result.Type})
                             </h6>
-                            {vulnsCount > MAX_ROWS && (
+                            {result.Vulnerabilities.length > MAX_ROWS && (
                               <Alert
                                 type="error"
                                 title=""
