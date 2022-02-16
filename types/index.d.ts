@@ -380,7 +380,15 @@ type TrivyReport = TrivyScanResult[];
 interface TrivyScanResult {
   ArtifactName: string;
   Target: string;
-  Vulnerabilities?: Vulnerability[];
+  Results: TrivyArtifactResult[];
+  //Vulnerabilities?: Vulnerability[];
+}
+
+interface TrivyArtifactResult {
+  Target: string;
+  Type: string;
+  Class: string;
+  Vulnerabilities: Vulnerability[];
 }
 
 interface Vulnerability {

@@ -13,7 +13,12 @@ const summary = (report) => {
       return;
     }
     const allVulns = report.flatMap(
-      (image) => (image && image.Vulnerabilities) || []
+      (image) =>
+        (image &&
+          image.Results &&
+          image.Results.length &&
+          image.Results.flatMap((res) => res.Vulnerabilities || [])) ||
+        []
     );
     const vulnsCount = allVulns.length;
     const critical = allVulns.filter(
