@@ -6,6 +6,10 @@ inputs:
     description: URL to save data for
     required: true
 
+#
+# this actions copy scanners results to the dashlord repository for versionning
+#
+
 runs:
   using: "composite"
   steps:
@@ -27,6 +31,10 @@ runs:
         cd $DASHLORD_REPO_PATH
 
         mkdir -p $OUT_PATH || true
+
+        # cleanup previous scans results
+        echo "Cleanup $OUT_PATH"
+        rm -rf $OUT_PATH/*
 
         ls -la scans
 
