@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 import {
-  isToolEnabled,
+  isToolEnabledGlobally,
   letterGradeValue,
   smallUrl,
   slugifyUrl,
@@ -147,7 +147,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     },
   ];
 
-  if (isToolEnabled("declaration-a11y")) {
+  if (isToolEnabledGlobally("declaration-a11y")) {
     columns.push(
       getColumn({
         id: "declaration-a11y",
@@ -161,7 +161,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("lighthouse")) {
+  if (isToolEnabledGlobally("lighthouse")) {
     columns = columns.concat([
       lightHouseColumn(
         "accessibility",
@@ -181,7 +181,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     ]);
   }
 
-  if (isToolEnabled("testssl")) {
+  if (isToolEnabledGlobally("testssl")) {
     columns.push(
       getColumn({
         id: "ssl",
@@ -204,7 +204,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("http")) {
+  if (isToolEnabledGlobally("http")) {
     columns.push(
       getColumn({
         id: "http",
@@ -217,7 +217,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("updownio")) {
+  if (isToolEnabledGlobally("updownio")) {
     columns = columns.concat([
       getColumn({
         id: "updownio",
@@ -240,7 +240,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     ]);
   }
 
-  if (isToolEnabled("dependabot")) {
+  if (isToolEnabledGlobally("dependabot")) {
     columns.push(
       getColumn({
         id: "dependabot",
@@ -254,7 +254,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("codescan")) {
+  if (isToolEnabledGlobally("codescan")) {
     columns.push(
       getColumn({
         id: "codescan",
@@ -268,7 +268,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("nmap")) {
+  if (isToolEnabledGlobally("nmap")) {
     columns = columns.concat([
       getColumn({
         id: "nmap",
@@ -290,7 +290,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     ]);
   }
 
-  if (isToolEnabled("thirdparties")) {
+  if (isToolEnabledGlobally("thirdparties")) {
     columns = columns.concat([
       getColumn({
         id: "trackers",
@@ -319,7 +319,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     ]);
   }
 
-  if (isToolEnabled("stats")) {
+  if (isToolEnabledGlobally("stats")) {
     columns.push(
       getColumn({
         id: "stats",
@@ -333,7 +333,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("404")) {
+  if (isToolEnabledGlobally("404")) {
     columns.push(
       getColumn({
         category: "best-practices",
@@ -349,7 +349,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
-  if (isToolEnabled("trivy")) {
+  if (isToolEnabledGlobally("trivy")) {
     columns.push(
       getColumn({
         id: "trivy",

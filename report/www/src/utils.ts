@@ -26,7 +26,7 @@ export const sortByKey = (key: string) => (a: any, b: any) => {
   return 0;
 };
 
-export const isToolEnabled = (name: DashlordTool): boolean => {
+export const isToolEnabledGlobally = (name: DashlordTool): boolean => {
   const dashlordConfig: DashlordConfig = require("./config.json");
   if (!dashlordConfig.tools) return true;
   if (Array.isArray(dashlordConfig.tools)) {
@@ -37,6 +37,20 @@ export const isToolEnabled = (name: DashlordTool): boolean => {
     );
   }
   return dashlordConfig.tools[name] === true;
+};
+
+export const isToolEnabledForUrl = (
+  url: string,
+  name: DashlordTool
+): boolean => {
+  if (!isToolEnabledGlobally(name)) return false;
+
+  const dashlordConfig: DashlordConfig = require("./config.json");
+  const urlConfig = dashlordConfig.urls.find(
+    (urlConfig) => urlConfig.url === url
+  );
+
+  return !urlConfig.tools || urlConfig.tools[name] !== false;
 };
 
 export const letterGradeValue = (grade: string): number =>

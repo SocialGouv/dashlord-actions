@@ -7,6 +7,7 @@ type UrlConfig = {
   title?: string;
   tags?: string[];
   repositories?: string[];
+  tools?: Record<DashlordTool, boolean>;
 };
 
 type DashlordTool =

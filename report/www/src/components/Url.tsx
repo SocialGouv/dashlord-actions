@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Info, Zap, ThumbsUp, Lock } from "react-feather";
 
-import { isToolEnabled, slugifyUrl, btoa } from "../utils";
+import { isToolEnabledForUrl, slugifyUrl, btoa } from "../utils";
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
 import { Nuclei } from "./Nuclei";
@@ -206,7 +206,7 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, selectedTab }) => {
             .filter(
               (item) =>
                 !!report[item.reportKey || item.id] &&
-                isToolEnabled(item.id as DashlordTool)
+                isToolEnabledForUrl(url, item.id as DashlordTool)
             )
             .map((item) => (
               <div key={item.id}>

@@ -10,7 +10,7 @@ import {
 
 import Link from "next/link";
 
-import { isToolEnabled } from "../utils";
+import { isToolEnabledGlobally } from "../utils";
 
 import { Panel } from "./Panel";
 
@@ -57,7 +57,7 @@ export const Intro: React.FC = () => (
       </Button>
     </Callout>
 
-    {isToolEnabled("lighthouse") && (
+    {isToolEnabledGlobally("lighthouse") && (
       <Panel
         title="Google Lighthouse"
         url="https://developers.google.com/web/tools/lighthouse"
@@ -102,7 +102,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("dependabot") && (
+    {isToolEnabledGlobally("dependabot") && (
       <Panel
         title="Dependabot"
         url="https://dependabot.com/"
@@ -129,7 +129,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("codescan") && (
+    {isToolEnabledGlobally("codescan") && (
       <Panel
         title="Codescan"
         urlText="Documentation"
@@ -159,7 +159,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("nmap") && (
+    {isToolEnabledGlobally("nmap") && (
       <Panel
         title="Nmap"
         urlText="Site officiel"
@@ -180,7 +180,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("zap") && (
+    {isToolEnabledGlobally("zap") && (
       <Panel
         title="OWASP Zed Attack Proxy"
         urlText="Site officiel"
@@ -202,7 +202,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("testssl") && (
+    {isToolEnabledGlobally("testssl") && (
       <Panel
         title="testssl.sh"
         urlText="Site officiel"
@@ -234,7 +234,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("http") && (
+    {isToolEnabledGlobally("http") && (
       <Panel
         title="Mozilla HTTP observatory"
         urlText="Site officiel"
@@ -259,7 +259,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("updownio") && (
+    {isToolEnabledGlobally("updownio") && (
       <Panel
         title="Updown.io"
         urlText="Site officiel"
@@ -291,7 +291,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("nuclei") && (
+    {isToolEnabledGlobally("nuclei") && (
       <Panel
         title="Nucléi"
         urlText="Site officiel"
@@ -307,7 +307,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("thirdparties") && (
+    {isToolEnabledGlobally("thirdparties") && (
       <Panel
         title="Third-parties"
         urlText="Code source"
@@ -330,7 +330,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("thirdparties") && (
+    {isToolEnabledGlobally("thirdparties") && (
       <Panel
         title="GeoIP2"
         urlText="Site officiel"
@@ -345,7 +345,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("wappalyzer") && (
+    {isToolEnabledGlobally("wappalyzer") && (
       <Panel
         title="Wappalyzer"
         urlText="Site officiel"
@@ -362,7 +362,7 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("stats") && (
+    {isToolEnabledGlobally("stats") && (
       <Panel title="Statistiques">
         Vérifie si la page /stats existe
         <br />
@@ -378,13 +378,13 @@ export const Intro: React.FC = () => (
       </Panel>
     )}
 
-    {isToolEnabled("404") && (
+    {isToolEnabledGlobally("404") && (
       <Panel title="Erreurs 404">
         Explore le site web et détecte les liens brisés.
       </Panel>
     )}
 
-    {isToolEnabled("trivy") && (
+    {isToolEnabledGlobally("trivy") && (
       <Panel
         title="Vulnérabilités Trivy"
         url="https://aquasecurity.github.io/trivy/"
