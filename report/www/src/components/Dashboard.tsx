@@ -10,6 +10,7 @@ import {
   letterGradeValue,
   smallUrl,
   slugifyUrl,
+  isToolEnabledForUrl,
 } from "../utils";
 import { Grade } from "./Grade";
 import ColumnHeader from "./ColumnHeader";
@@ -23,32 +24,12 @@ const IconUnknown = () => <Slash size={20} />;
 const percent = (num: number | undefined): string =>
   (num !== undefined && `${Math.floor(num * 100)} %`) || "-";
 
-const GradeBadge = ({
-  grade,
-  label,
-  warning,
-  to,
-}: {
-  grade: string | undefined;
-  label?: string | number | undefined;
-  warning?: string;
-  to?: string;
-}) => (
-  <div style={{ textAlign: "center" }}>
-    {grade ? (
-      <Grade small warning={warning} grade={grade} label={label} to={to} />
-    ) : (
-      <IconUnknown />
-    )}
-  </div>
-);
-
 type GetColumnProps = {
   id: string;
   title: string;
   info: string;
   warning?: JSX.Element | undefined;
-  hash: string;
+  hash: DashlordTool;
   gradeKey: string;
   sort?: Function;
   category?: string;
@@ -89,17 +70,25 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     headerRender: () => (
       <ColumnHeader title={title} info={info} warning={warning} />
     ),
-    render: (rowData) => {
-      const { summary } = rowData as UrlReport;
+    render: (rowData: UrlReport) => {
+      const { url, summary } = rowData;
+
       return (
-        <GradeBadge
-          grade={summary[gradeKey]}
-          label={gradeLabel && gradeLabel(summary)}
-          warning={warningText && warningText(summary)}
-          to={`/url/${encodeURIComponent(
-            slugifyUrl((rowData as UrlReport).url)
-          )}/${category ? `${category}/` : ""}#${hash}`}
-        />
+        <div style={{ textAlign: "center" }}>
+          {isToolEnabledForUrl(url, hash) && summary[gradeKey] ? (
+            <Grade
+              small
+              warning={warningText && warningText(summary)}
+              grade={summary[gradeKey]}
+              label={gradeLabel && gradeLabel(summary)}
+              to={`/url/${encodeURIComponent(slugifyUrl(url))}/${
+                category ? `${category}/` : ""
+              }#${hash}`}
+            />
+          ) : (
+            <IconUnknown />
+          )}
+        </div>
       );
     },
   });
