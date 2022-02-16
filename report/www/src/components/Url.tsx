@@ -59,8 +59,7 @@ const tabs = [
       },
       {
         id: "404",
-        render: (report, url) =>
-          report["404"].length && <Report404 data={report["404"]} />,
+        render: (report, url) => <Report404 data={report["404"]} />,
       },
     ],
   },
