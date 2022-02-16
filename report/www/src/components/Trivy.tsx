@@ -29,7 +29,7 @@ const TrivyBadge = (vuln: Vulnerability) => {
   );
 };
 
-type TrivyProps = { data: TrivyReport };
+type TrivyProps = { data: TrivyReport; url: string };
 
 const filterByKey = (key) => (item, idx, arr) =>
   !arr.find((v, j) => j < idx && v[key] === item[key]);
@@ -52,31 +52,65 @@ const columns = [
   { name: "Title", label: "Titre" },
 ];
 
-export const Trivy: React.FC<TrivyProps> = ({ data }) => {
+const MAX_ROWS = 10;
+
+export const Trivy: React.FC<TrivyProps> = ({ data, url }) => {
   return (
-    <React.Fragment>
+    <>
       {(data.length &&
         data
-          .filter((image) => image.ArtifactName)
-          .map(
-            (image) =>
-              image &&
-              ((
+          .filter((image) => image && image.ArtifactName)
+          .map((image) => {
+            const vulnsCount =
+              (image.Results &&
+                image.Results.length &&
+                image.Results.map(
+                  (r) => (r.Vulnerabilities && r.Vulnerabilities.length) || 0
+                ).reduce((t, c) => t + c, 0)) ||
+              0;
+
+            return (
+              (
                 <Panel
                   key={image.ArtifactName}
                   isExternal
-                  title={`Image docker ${image.ArtifactName}`}
+                  title={`Image docker ${image.ArtifactName} (${vulnsCount})`}
                   info="Scan de vulnérabilités Trivy"
+                  url={url}
+                  urlText="Rapport détaillé"
                 >
-                  <h6>{image.Target}</h6>
-                  {image.Vulnerabilities && image.Vulnerabilities.length ? (
-                    <Table
-                      columns={columns}
-                      data={image.Vulnerabilities?.sort(orderBySeverity).filter(
-                        filterByKey("VulnerabilityID")
-                      )}
-                      rowKey="VulnerabilityID"
-                    />
+                  <h5>{image.Target}</h5>
+                  {vulnsCount ? (
+                    image.Results.map(
+                      (result) =>
+                        result.Vulnerabilities &&
+                        result.Vulnerabilities.length && (
+                          <div key={result.Target}>
+                            <h6>
+                              {result.Target} ({result.Type})
+                            </h6>
+                            {vulnsCount > MAX_ROWS && (
+                              <Alert
+                                type="error"
+                                title=""
+                                description={`Plus de ${MAX_ROWS} vulnérabilités détectées, vérifiez le rapport Trivy`}
+                              />
+                            )}
+                            <Table
+                              columns={columns}
+                              data={result.Vulnerabilities?.sort(
+                                orderBySeverity
+                              )
+                                .filter(filterByKey("VulnerabilityID"))
+                                .slice(0, MAX_ROWS)}
+                              rowKey="VulnerabilityID"
+                            />
+                            <br />
+                            <br />
+                            <hr />
+                          </div>
+                        )
+                    )
                   ) : (
                     <Alert
                       type="success"
@@ -85,10 +119,10 @@ export const Trivy: React.FC<TrivyProps> = ({ data }) => {
                     />
                   )}
                 </Panel>
-              ) ||
-                null)
-          )) ||
+              ) || null
+            );
+          })) ||
         null}
-    </React.Fragment>
+    </>
   );
 };

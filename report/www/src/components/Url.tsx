@@ -138,7 +138,12 @@ const tabs = [
       {
         id: "trivy",
         render: (report, url) =>
-          report["trivy"].length && <Trivy data={report["trivy"]} />,
+          report["trivy"].length && (
+            <Trivy
+              data={report["trivy"]}
+              url={`${BASE_PATH}/report/${btoa(url)}/trivy.json`}
+            />
+          ),
       },
     ],
   },

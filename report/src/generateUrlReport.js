@@ -201,6 +201,7 @@ const generateUrlReport = (url) => {
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");
     copyForWebsite("nmapvuln.html");
+    copyForWebsite("trivy.json");
 
     return urlData;
   } else {
