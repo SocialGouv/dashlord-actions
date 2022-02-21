@@ -5,6 +5,7 @@ footer: Powered by BetaGouv
 matomoId: 62
 matomoUrl: https://matomo.fabrique.social.gouv.fr
 tools:
+  404: true
   screenshot: true
   nmap: true
   zap: true
@@ -14,10 +15,12 @@ tools:
   lighthouse: true
   thirdparties: true
   nuclei: true
-  updownio: true
+  updownio: false
   dependabot: true
   codescan: true
-  stats: true
+  stats: false
+  declaration-a11y: true
+  declaration-rgpd: true
 urls:
   - url: https://www.free.fr
     title: Free
