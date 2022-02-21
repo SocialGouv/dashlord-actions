@@ -1,49 +1,52 @@
 {
-  "title": "Dashlord fabrique numérique",
+  "title": "DashLord example",
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
-  "footer": "Propulsé par SocialGouv",
-  "matomoId": 62,
-  "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
-  "marianne": true,
-  "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
+  "footer": "Powered by SocialGouv",
+  "marianne": false,
   "tools": {
     "404": true,
     "screenshot": true,
     "nmap": true,
     "zap": true,
     "wappalyzer": true,
-    "http": false,
+    "http": true,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,
     "nuclei": true,
-    "updownio": true,
+    "updownio": false,
     "dependabot": true,
     "codescan": true,
-    "stats": true,
-    "trivy": true,
+    "stats": false,
     "declaration-a11y": true
   },
   "urls": [
     {
       "url": "https://www.free.fr",
-      "title": "Free",
-      "repositories": ["iliad/free-ui", "iliad/free-api"]
-    },
-    {
-      "url": "invalid-url"
-    },
-    {
-      "url": "http://chez.com",
-      "repositories": ["chez/chez-ui", "chez/chez-api"],
+      "title": "Homepage free.fr",
+      "tags": [
+        "telecom",
+        "provider"
+      ],
+      "repositories": [
+        "free/free-ui",
+        "free/free-css"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/fabrique/frontend",
+        "ghcr.io/socialgouv/fabrique/backend"
+      ],
       "tools": {
-        "screenshot": false,
-        "updownio": false
+        "nmap": false
       }
     },
     {
-      "url": "https://voila.fr"
+      "url": "https://www.lemonde.fr",
+      "title": "Homepage lemonde.fr",
+      "tags": [
+        "presse"
+      ]
     }
   ]
 }
