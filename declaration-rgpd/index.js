@@ -16,8 +16,9 @@ const searches = [
 
 const analyseDom = async (dom, { url = "" } = {}) => {
   const text = dom.window.document.body.textContent;
-  // fuzzy find the best match
+  // add an object to result for every searches entry
   const results = searches.map((search) => {
+    // fuzzy find the best match
     const result = { slug: search.slug, mention: null };
     const status = search.needles
       .map((needle) => ({ needle, score: fuzzy(needle, text) }))
@@ -54,8 +55,9 @@ const analyseDom = async (dom, { url = "" } = {}) => {
         });
       }
     }
-    return results;
+    return result;
   });
+  return results;
 };
 
 const analyseFile = async (filePath, { url } = {}) => {
