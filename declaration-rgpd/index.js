@@ -1,5 +1,6 @@
 const jsdom = require("jsdom");
 const { fuzzy } = require("fast-fuzzy");
+const { execSync } = require("child_process");
 
 const { JSDOM } = jsdom;
 
@@ -7,10 +8,17 @@ const searches = [
   {
     slug: "ml",
     needles: ["Mentions légales", "Legal Notice"],
+    mustMatch: [["directeur"], ["publication"], ["hébergeur", "hébergement"]],
   },
   {
     slug: "pc",
     needles: ["Politique de confidentialité", "Privacy Policy"],
+    mustMatch: [
+      ["modèle"],
+      ["finalité"],
+      ["durée de conservation"],
+      ["sous-traitants", "sous traitants"],
+    ],
   },
 ];
 
@@ -19,7 +27,7 @@ const analyseDom = async (dom, { url = "" } = {}) => {
   // add an object to result for every searches entry
   const results = searches.map((search) => {
     // fuzzy find the best match
-    const result = { slug: search.slug, mention: null };
+    const result = { slug: search.slug, mention: null, maxScore: 0, score: 0 };
     const status = search.needles
       .map((needle) => ({ needle, score: fuzzy(needle, text) }))
       .sort((a, b) => a.score - b.score)
@@ -40,19 +48,16 @@ const analyseDom = async (dom, { url = "" } = {}) => {
           }
         }
       });
-      // loose href search
-      if (!result.declarationUrl) {
-        Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
-          if (fuzzy(search.needles[0], a.text) > 0.9) {
-            // make URL absolute when possible
-            const link = a.getAttribute("href");
-            if (link !== "#") {
-              const declarationUrl =
-                link.charAt(0) === "/" ? `${url || ""}${link}` : link;
-              result.declarationUrl = declarationUrl;
-            }
-          }
-        });
+
+      if (result.declarationUrl) {
+        const htmlOutput = execSync(
+          `npx pwpr --url=${result.declarationUrl} --load=30000`
+        );
+        const htmlString = htmlOutput.toString().toUpperCase();
+        result.maxScore = search.mustMatch.length;
+        result.score = search.mustMatch.filter((words) => {
+          return htmlString.match(`${words.join("|").toUpperCase()}`, "i");
+        }).length;
       }
     }
     return result;
