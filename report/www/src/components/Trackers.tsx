@@ -113,20 +113,17 @@ const endPointsColumns = [
   },
 ];
 
-const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) => {
-  return (
-    (endpoints && endpoints.length && (
-      <Table
-        columns={endPointsColumns}
-        data={endpoints.sort(
-          sortBy((point) => point.geoip?.country?.names?.fr || "")
-        )}
-        rowKey="ip"
-      />
-    )) ||
-    null
-  );
-};
+const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
+  (endpoints && endpoints.length && (
+    <Table
+      columns={endPointsColumns}
+      data={endpoints.sort(
+        sortBy((point) => point.geoip?.country?.names?.fr || "")
+      )}
+      rowKey="ip"
+    />
+  )) ||
+  null;
 
 export const Trackers: React.FC<TrackersProps> = ({ data }) => {
   const hasIssues: (ThirdPartyCookie | ThirdPartyTracker)[] = [];
