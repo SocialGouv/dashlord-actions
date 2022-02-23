@@ -5,7 +5,6 @@ footer: Powered by BetaGouv
 matomoId: 62
 matomoUrl: https://matomo.fabrique.social.gouv.fr
 tools:
-  404: true
   screenshot: true
   nmap: true
   zap: true
@@ -15,10 +14,10 @@ tools:
   lighthouse: true
   thirdparties: true
   nuclei: true
-  updownio: false
+  updownio: true
   dependabot: true
   codescan: true
-  stats: false
+  stats: true
   declaration-a11y: true
   declaration-rgpd: true
 urls:
