@@ -136,6 +136,9 @@ const tools = {
   "declaration-a11y": {
     data: requireToolData("declaration-a11y.json"),
   },
+ "declaration-rgpd": {
+    data: requireToolData("declaration-rgpd.json"),
+  },
 };
 
 //@ts-expect-error

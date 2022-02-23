@@ -161,6 +161,55 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("declaration-rgpd")) {
+    columns.push(
+      getColumn({
+        id: "declaration-rgpd-ml",
+        title: "Mentions légales",
+        info: "Présence des mentions légales et conformité de celles-ci",
+        hash: "declaration-rgpd",
+        gradeKey: "declaration-rgpd-ml",
+        category: "best-practices",
+        gradeLabel: (summary) => {
+          switch (summary["declaration-rgpd-ml"]) {
+            case "A":
+              return "🥳";
+            case "D":
+              return "";
+            case "F":
+              return "😔";
+          }
+        },
+        warningText: (summary) =>
+          summary["declaration-rgpd-ml"] === "D" &&
+          "Vos mentions légales sont présentes mais incomplètes. Consultez les détails pour plus d'informations",
+      })
+    );
+    columns.push(
+      getColumn({
+        id: "declaration-rgpd-pc",
+        title: "Politique de confidentialité",
+        info: "Présence de la politique de confidentialité et conformité de celle-ci",
+        hash: "declaration-rgpd",
+        gradeKey: "declaration-rgpd-pc",
+        category: "best-practices",
+        gradeLabel: (summary) => {
+          switch (summary["declaration-rgpd-pc"]) {
+            case "A":
+              return "🥳";
+            case "D":
+              return "";
+            case "F":
+              return "😔";
+          }
+        },
+        warningText: (summary) =>
+          summary["declaration-rgpd-pc"] === "D" &&
+          "Votre politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations",
+      })
+    );
+  }
+
   if (isToolEnabled("lighthouse")) {
     columns = columns.concat([
       lightHouseColumn(

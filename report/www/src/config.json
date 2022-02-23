@@ -19,34 +19,24 @@
     "dependabot": true,
     "codescan": true,
     "stats": false,
-    "declaration-a11y": true
+    "declaration-a11y": true,
+    "declaration-rgpd": true
   },
   "urls": [
     {
-      "url": "https://www.free.fr",
-      "title": "Homepage free.fr",
-      "tags": [
-        "telecom",
-        "provider"
-      ],
+      "url": "https://www.fabrique.social.gouv.fr",
       "repositories": [
-        "free/free-ui",
-        "free/free-css"
+        "socialgouv/www"
       ],
       "docker": [
-        "ghcr.io/socialgouv/fabrique/frontend",
-        "ghcr.io/socialgouv/fabrique/backend"
-      ],
-      "tools": {
-        "nmap": false
-      }
+        "ghcr.io/socialgouv/fabrique/frontend"
+      ]
     },
     {
-      "url": "https://www.lemonde.fr",
-      "title": "Homepage lemonde.fr",
-      "tags": [
-        "presse"
-      ]
+      "url": "https://beta.gouv.fr"
+    },
+    {
+      "url": "https://emjpm.fabrique.social.gouv.fr"
     }
   ]
 }

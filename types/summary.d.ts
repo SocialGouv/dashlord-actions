@@ -36,4 +36,5 @@ type UrlReportSummary = {
   trivy?: number;
   trivyGrade?: string;
   "declaration-a11y"?: string;
+  "declaration-rgpd"?: string;
 };
