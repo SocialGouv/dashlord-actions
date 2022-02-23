@@ -27,7 +27,13 @@ const analyseDom = async (dom, { url = "" } = {}) => {
   // add an object to result for every searches entry
   const results = searches.map((search) => {
     // fuzzy find the best match
-    const result = { slug: search.slug, mention: null, maxScore: 0, score: 0 };
+    const result = {
+      slug: search.slug,
+      mention: null,
+      maxScore: 0,
+      score: 0,
+      missing: [],
+    };
     const status = search.needles
       .map((needle) => ({ needle, score: fuzzy(needle, text) }))
       .sort((a, b) => a.score - b.score)
@@ -56,7 +62,16 @@ const analyseDom = async (dom, { url = "" } = {}) => {
         const htmlString = htmlOutput.toString().toUpperCase();
         result.maxScore = search.mustMatch.length;
         result.score = search.mustMatch.filter((words) => {
-          return htmlString.match(`${words.join("|").toUpperCase()}`, "i");
+          const match = htmlString.match(
+            `${words.join("|").toUpperCase()}`,
+            "i"
+          );
+
+          if (!match) {
+            result.missing.push(words[0]);
+          }
+
+          return match;
         }).length;
       }
     }
