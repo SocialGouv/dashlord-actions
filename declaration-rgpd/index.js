@@ -14,6 +14,7 @@ const searches = [
     slug: "pc",
     needles: ["Politique de confidentialité", "Privacy Policy"],
     mustMatch: [
+      ["@"],
       ["finalité"],
       ["durée de conservation"],
       ["sous-traitants", "sous traitants"],
