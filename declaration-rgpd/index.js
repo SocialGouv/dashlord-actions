@@ -68,7 +68,7 @@ const analyseDom = async (dom, { url = "" } = {}) => {
           );
 
           if (!match) {
-            result.missing.push(words[0]);
+            result.missing.push(words.join(" (ou) "));
           }
 
           return match;
