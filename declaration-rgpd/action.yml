@@ -5,7 +5,7 @@ inputs:
   trackers:
     description: "Trackers output of third parties action"
     required: false
-    default: []
+    default: "[]"
   url:
     description: "URL à tester"
     required: true
