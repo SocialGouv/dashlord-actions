@@ -111,7 +111,7 @@ module.exports = { analyseFile, analyseUrl };
 if (require.main === module) {
   const url = process.argv[process.argv.length - 3]; // url, to make absolute links
   const filePath = process.argv[process.argv.length - 2]; // file path to analyse
-  const thirdPartiesOutput = process.argv[process.argv.length - 1]; // file path to analyse
+  const thirdPartiesOutput = process.argv[process.argv.length - 1]; // third parties output
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch(() => console.log(JSON.stringify({ declaration: undefined })));
