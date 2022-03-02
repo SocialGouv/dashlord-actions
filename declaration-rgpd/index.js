@@ -8,11 +8,20 @@ const searches = [
   {
     slug: "ml",
     needles: ["Mentions légales", "Legal Notice"],
-    mustMatch: [["directeur"], ["publication"], ["hébergeur", "hébergement"]],
+    mustMatch: [
+      ["directeur", "directrice"],
+      ["publication"],
+      ["hébergeur", "hébergement"],
+      ["éditeur"],
+    ],
   },
   {
     slug: "pc",
-    needles: ["Politique de confidentialité", "Privacy Policy"],
+    needles: [
+      "Politique de confidentialité",
+      "Privacy Policy",
+      "Données personnelles",
+    ],
     mustMatch: [
       ["@"],
       ["finalité"],
@@ -22,7 +31,11 @@ const searches = [
   },
 ];
 
-const analyseDom = async (dom, { url = "" } = {}) => {
+const analyseDom = async (
+  dom,
+  { url = "", thirdPartiesOutput = "{}" } = {}
+) => {
+  const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
   const text = dom.window.document.body.textContent;
   // add an object to result for every searches entry
   const results = searches.map((search) => {
@@ -75,14 +88,16 @@ const analyseDom = async (dom, { url = "" } = {}) => {
         }).length;
       }
     }
+
+    result.test_thirdparties_json = thirdPartiesJson;
     return result;
   });
   return results;
 };
 
-const analyseFile = async (filePath, { url } = {}) => {
+const analyseFile = async (filePath, { url, thirdPartiesOutput } = {}) => {
   const dom = await JSDOM.fromFile(filePath);
-  return analyseDom(dom, { url });
+  return analyseDom(dom, { url, thirdPartiesOutput });
 };
 
 // warn: this wont work for SPA applications
@@ -94,9 +109,10 @@ const analyseUrl = async (url) => {
 module.exports = { analyseFile, analyseUrl };
 
 if (require.main === module) {
-  const url = process.argv[process.argv.length - 2]; // url, to make absolute links
-  const filePath = process.argv[process.argv.length - 1]; // file path to analyse
-  analyseFile(filePath, { url })
+  const url = process.argv[process.argv.length - 3]; // url, to make absolute links
+  const filePath = process.argv[process.argv.length - 2]; // file path to analyse
+  const thirdPartiesOutput = process.argv[process.argv.length - 1]; // file path to analyse
+  analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch(() => console.log(JSON.stringify({ declaration: undefined })));
 }
