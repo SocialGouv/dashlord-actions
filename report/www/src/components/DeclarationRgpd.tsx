@@ -35,7 +35,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       <div style={{ display: "flex" }}>
         <Table
           columns={[{ name: "word", label: "Mot manquant" }]}
-          data={itemData.missing.map((word: string, index: number) => ({
+          data={itemData.missingWords.map((word: string, index: number) => ({
             key: index,
             word,
           }))}

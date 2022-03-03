@@ -376,7 +376,8 @@ type DeclarationRgpdItem = {
   declarationUrl?: string;
   maxScore: number;
   score: number;
-  missing: string[];
+  missingWords: string[];
+  missingTrackers: string[];
 };
 type DeclarationRgpdReport = DeclarationRgpdItem[];
 

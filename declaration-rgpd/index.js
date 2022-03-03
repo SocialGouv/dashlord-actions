@@ -45,7 +45,8 @@ const analyseDom = async (
       mention: null,
       maxScore: 0,
       score: 0,
-      missing: [],
+      missingWords: [],
+      missingTrackers: [],
     };
     const status = search.needles
       .map((needle) => ({ needle, score: fuzzy(needle, text) }))
@@ -81,15 +82,27 @@ const analyseDom = async (
           );
 
           if (!match) {
-            result.missing.push(words.join(" (ou) "));
+            result.missingWords.push(words.join(" (ou) "));
           }
 
           return match;
         }).length;
+
+        if (result.slug === "pc" && thirdPartiesJson.trackers) {
+          const trackers = thirdPartiesJson.trackers;
+          result.maxScore += trackers.length;
+          result.score += trackers.filter(({ type }) => {
+            const match = htmlString.match(`${type.toUpperCase()}`, "i");
+
+            if (!match) {
+              result.missingTrackers.push(words.join(" (ou) "));
+            }
+
+            return match;
+          }).length;
+        }
       }
     }
-
-    result.test_thirdparties_json = thirdPartiesJson;
     return result;
   });
   return results;
