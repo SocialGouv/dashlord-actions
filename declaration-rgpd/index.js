@@ -53,6 +53,39 @@ const matchInHtml = (htmlString, searchArray) => {
   return { score, missing };
 };
 
+const analyseDeclaration = (result) => {
+  // get declaration HTML
+  const htmlOutput = execSync(
+    `npx pwpr --url=${result.declarationUrl} --load=30000`
+  );
+  const htmlString = htmlOutput.toString().toUpperCase();
+  result.maxScore = search.mustMatch.length;
+
+  // get score from required words & missing words array
+  let matchResult = matchInHtml(htmlString, search.mustMatch);
+  result.score = matchResult.score;
+  result.missingWords = mmatchResult.issing;
+
+  // check trackers mention in privacy policy
+  if (result.slug === "pc" && thirdPartiesJson.trackers) {
+    const trackers = thirdPartiesJson.trackers
+      .map((_) => _.type)
+      //get unique types & not unknown
+      .filter(
+        (value, index, self) =>
+          self.indexOf(value) === index && value !== "unknown"
+      );
+    result.maxScore += trackers.length;
+
+    // get score from required trackers & missing trackers array
+    matchResult = matchInHtml(htmlString, trackers);
+    result.score += matchResult.score;
+    result.missingTrackers = matchResult.missing;
+  }
+
+  return result;
+};
+
 const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
@@ -60,7 +93,7 @@ const analyseDom = async (
   const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
   const text = dom.window.document.body.textContent;
   // add an object to result for every searches entry
-  const results = searches.map((search) => {
+  return searches.map((search) => {
     // fuzzy find the best match
     const result = {
       slug: search.slug,
@@ -92,39 +125,11 @@ const analyseDom = async (
       });
 
       if (result.declarationUrl) {
-        // get declaration HTML
-        const htmlOutput = execSync(
-          `npx pwpr --url=${result.declarationUrl} --load=30000`
-        );
-        const htmlString = htmlOutput.toString().toUpperCase();
-        result.maxScore = search.mustMatch.length;
-
-        // get score from required words & missing words array
-        let { score, missing } = matchInHtml(htmlString, search.mustMatch);
-        result.score = score;
-        result.missingWords = missing;
-
-        // check trackers mention in privacy policy
-        if (result.slug === "pc" && thirdPartiesJson.trackers) {
-          const trackers = thirdPartiesJson.trackers
-            .map((_) => _.type)
-            //get unique types & not unknown
-            .filter(
-              (value, index, self) =>
-                self.indexOf(value) === index && value !== "unknown"
-            );
-          result.maxScore += trackers.length;
-
-          // get score from required trackers & missing trackers array
-          let { score, missing } = matchInHtml(htmlString, trackers);
-          result.score += score;
-          result.missingTrackers = missing;
-        }
+        result = analyseDeclaration(result);
       }
     }
     return result;
   });
-  return results;
 };
 
 const analyseFile = async (filePath, { url, thirdPartiesOutput } = {}) => {
