@@ -14,7 +14,7 @@ const tests = [
         declarationUrl: undefined,
       },
     ],
-    expected: { "declaration-rgpd-ml": "F" },
+    expected: { "declaration-rgpd-ml": "F", "declaration-rgpd-pc": "F" },
   },
 ];
 
