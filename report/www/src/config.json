@@ -1,42 +1,49 @@
 {
-  "title": "DashLord example",
+  "title": "Dashlord fabrique numérique",
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
-  "footer": "Powered by SocialGouv",
-  "marianne": false,
+  "footer": "Propulsé par SocialGouv",
+  "matomoId": 62,
+  "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
+  "marianne": true,
+  "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "tools": {
     "404": true,
     "screenshot": true,
     "nmap": true,
     "zap": true,
     "wappalyzer": true,
-    "http": true,
+    "http": false,
     "testssl": true,
     "lighthouse": true,
     "thirdparties": true,
     "nuclei": true,
-    "updownio": false,
+    "updownio": true,
     "dependabot": true,
     "codescan": true,
-    "stats": false,
-    "declaration-a11y": true,
-    "declaration-rgpd": true
+    "stats": true,
+    "trivy": true,
+    "declaration-a11y": true
   },
   "urls": [
     {
-      "url": "https://www.fabrique.social.gouv.fr",
-      "repositories": [
-        "socialgouv/www"
-      ],
-      "docker": [
-        "ghcr.io/socialgouv/fabrique/frontend"
-      ]
+      "url": "https://www.free.fr",
+      "title": "Free",
+      "repositories": ["iliad/free-ui", "iliad/free-api"]
     },
     {
-      "url": "https://beta.gouv.fr"
+      "url": "invalid-url"
     },
     {
-      "url": "https://emjpm.fabrique.social.gouv.fr"
+      "url": "http://chez.com",
+      "repositories": ["chez/chez-ui", "chez/chez-api"],
+      "tools": {
+        "screenshot": false,
+        "updownio": false
+      }
+    },
+    {
+      "url": "https://voila.fr"
     }
   ]
 }
