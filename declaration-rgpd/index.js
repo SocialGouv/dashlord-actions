@@ -95,7 +95,7 @@ const analyseDom = async (
   // add an object to result for every searches entry
   return searches.map((search) => {
     // fuzzy find the best match
-    const result = {
+    let result = {
       slug: search.slug,
       mention: null,
       maxScore: 0,
