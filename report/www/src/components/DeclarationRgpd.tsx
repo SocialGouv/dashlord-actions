@@ -8,7 +8,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
   const [mlData] = React.useState(data.find((_) => _.slug === "ml"));
   const [pcData] = React.useState(data.find((_) => _.slug === "pc"));
 
-  const getResolution = (slug) => {
+  const getMissingWordsResolution = (slug) => {
     if (slug === "ml") {
       return (
         <>
@@ -30,6 +30,30 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
     }
   };
 
+  const getMissingTrackersTable = (itemData: DeclarationRgpdItem) => {
+    return (
+      <div style={{ display: "flex" }}>
+        <Table
+          columns={[
+            { name: "word", label: "Tracker manquant" },
+            { name: "resolution", label: "Remédiation" },
+          ]}
+          data={itemData.missingTrackers.map((word: string, index: number) => ({
+            key: index,
+            resolution: (
+              <>
+                Vous devez impérativement mentionner le tracker <b>{word}</b>{" "}
+                dans votre politique de confidentialité.
+              </>
+            ),
+            word,
+          }))}
+          rowKey={"key"}
+        />
+      </div>
+    );
+  };
+
   const getMissingWordsTable = (itemData: DeclarationRgpdItem) => {
     return (
       <div style={{ display: "flex" }}>
@@ -46,7 +70,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
           data={[
             {
               key: 1,
-              resolution: getResolution(itemData.slug),
+              resolution: getMissingWordsResolution(itemData.slug),
             },
           ]}
           rowKey={"key"}
@@ -67,7 +91,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
             type="info"
             description={
               <>
-                Votre déclaration a bien été détecté sur :{" "}
+                Votre déclaration a bien été détectée sur :{" "}
                 <a href={itemData.declarationUrl}>{itemData.declarationUrl}</a>
                 <br />
                 <br />
@@ -76,7 +100,16 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
               </>
             }
           />
-          {getMissingWordsTable(itemData)}
+          {itemData.missingWords.length ? (
+            getMissingWordsTable(itemData)
+          ) : (
+            <></>
+          )}
+          {itemData.missingTrackers.length ? (
+            getMissingTrackersTable(itemData)
+          ) : (
+            <></>
+          )}
         </>
       );
     } else {
