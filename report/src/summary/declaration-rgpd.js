@@ -12,7 +12,7 @@ const summary = (report) => {
   const tmpSummary = report.map((result) => {
     let grade = 0;
 
-    if (result.mention) {
+    if (result.declarationUrl) {
       grade += 1;
 
       if (result.score === result.maxScore) {
