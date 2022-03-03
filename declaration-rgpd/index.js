@@ -31,6 +31,28 @@ const searches = [
   },
 ];
 
+const matchInHtml = (htmlString, searchArray) => {
+  const missing = [];
+  const score = searchArray.filter((item) => {
+    const match = htmlString.match(
+      `${
+        typeof item === "object"
+          ? item.join("|").toUpperCase()
+          : item.toUpperCase()
+      }`,
+      "i"
+    );
+
+    if (!match) {
+      missing.push(typeof item === "object" ? item.join(" (ou) ") : item);
+    }
+
+    return match;
+  }).length;
+
+  return { score, missing };
+};
+
 const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
@@ -70,36 +92,33 @@ const analyseDom = async (
       });
 
       if (result.declarationUrl) {
+        // get declaration HTML
         const htmlOutput = execSync(
           `npx pwpr --url=${result.declarationUrl} --load=30000`
         );
         const htmlString = htmlOutput.toString().toUpperCase();
         result.maxScore = search.mustMatch.length;
-        result.score = search.mustMatch.filter((words) => {
-          const match = htmlString.match(
-            `${words.join("|").toUpperCase()}`,
-            "i"
-          );
 
-          if (!match) {
-            result.missingWords.push(words.join(" (ou) "));
-          }
+        // get score from required words & missing words array
+        let { score, missing } = matchInHtml(htmlString, search.mustMatch);
+        result.score = score;
+        result.missingWords = missing;
 
-          return match;
-        }).length;
-
+        // check trackers mention in privacy policy
         if (result.slug === "pc" && thirdPartiesJson.trackers) {
-          const trackers = thirdPartiesJson.trackers;
+          const trackers = thirdPartiesJson.trackers
+            .map((_) => _.type)
+            //get unique types & not unknown
+            .filter(
+              (value, index, self) =>
+                self.indexOf(value) === index && value !== "unknown"
+            );
           result.maxScore += trackers.length;
-          result.score += trackers.filter(({ type }) => {
-            const match = htmlString.match(`${type.toUpperCase()}`, "i");
 
-            if (!match) {
-              result.missingTrackers.push(words.join(" (ou) "));
-            }
-
-            return match;
-          }).length;
+          // get score from required trackers & missing trackers array
+          let { score, missing } = matchInHtml(htmlString, trackers);
+          result.score += score;
+          result.missingTrackers = missing;
         }
       }
     }
