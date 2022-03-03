@@ -2,16 +2,27 @@ const summary = require("./declaration-rgpd");
 
 const tests = [
   {
-    mention: undefined,
-    expected: { "declaration-rgpd": undefined },
+    name: "ML & PC undefined",
+    report: [
+      {
+        slug: "ml",
+        declarationUrl: undefined,
+        expected: { "declaration-rgpd": "F" },
+      },
+      {
+        slug: "pc",
+        declarationUrl: undefined,
+      },
+    ],
+    expected: { "declaration-rgpd-ml": "F" },
   },
 ];
 
 describe("declaration-rgpd", () => {
   tests.forEach((t) => {
-    test(`${t.mention} should return ${JSON.stringify(t.expected)}`, () => {
+    test(`${t.name} should return ${JSON.stringify(t.expected)}`, () => {
       //@ts-expect-error
-      expect(summary(t)).toEqual(t.expected);
+      expect(summary(t.report)).toEqual(t.expected);
     });
   });
 });
