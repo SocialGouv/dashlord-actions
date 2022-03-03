@@ -53,7 +53,7 @@ const matchInHtml = (htmlString, searchArray) => {
   return { score, missing };
 };
 
-const analyseDeclaration = (result) => {
+const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   const htmlOutput = execSync(
     `npx pwpr --url=${result.declarationUrl} --load=30000`
@@ -64,7 +64,7 @@ const analyseDeclaration = (result) => {
   // get score from required words & missing words array
   let matchResult = matchInHtml(htmlString, search.mustMatch);
   result.score = matchResult.score;
-  result.missingWords = mmatchResult.issing;
+  result.missingWords = matchResult.missing;
 
   // check trackers mention in privacy policy
   if (result.slug === "pc" && thirdPartiesJson.trackers) {
@@ -90,7 +90,6 @@ const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
 ) => {
-  const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
   const text = dom.window.document.body.textContent;
   // add an object to result for every searches entry
   return searches.map((search) => {
@@ -125,7 +124,8 @@ const analyseDom = async (
       });
 
       if (result.declarationUrl) {
-        result = analyseDeclaration(result);
+        const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
+        result = analyseDeclaration(result, search, thirdPartiesJson);
       }
     }
     return result;
