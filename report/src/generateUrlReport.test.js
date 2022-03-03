@@ -64,8 +64,18 @@ describe("generateUrlReport", () => {
       mention: "Accessibilité : partiellement conforme",
     });
     mockJson("declaration-rgpd.json", [
-      { slug: "ml", declarationUrl: "http://declaration-ml.test" },
-      { slug: "pc", declarationUrl: "http://declaration-pc.test" },
+      {
+        slug: "ml",
+        declarationUrl: "https://declaration-ml.test",
+        maxScore: 4,
+        score: 3,
+      },
+      {
+        slug: "pc",
+        declarationUrl: "https://declaration-pc.test",
+        maxScore: 4,
+        score: 3,
+      },
     ]);
 
     expect(
