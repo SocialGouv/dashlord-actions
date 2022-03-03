@@ -53,6 +53,21 @@ const matchInHtml = (htmlString, searchArray) => {
   return { score, missing };
 };
 
+const getDeclarationUrl = (bestMatch, url) => {
+  let declarationUrl;
+  // try to find related href if any
+  Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
+    if (fuzzy(bestMatch.needle, a.text) > 0.9) {
+      // make URL absolute when possible
+      const link = a.getAttribute("href");
+      if (link !== "#") {
+        declarationUrl = link.charAt(0) === "/" ? `${url || ""}${link}` : link;
+      }
+    }
+  });
+  return declarationUrl;
+};
+
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   const htmlOutput = execSync(
@@ -107,21 +122,10 @@ const analyseDom = async (
       .sort((a, b) => a.score - b.score)
       .reverse();
     // ensure were confident enough
-    const bestStatus = status[0];
-    if (bestStatus.score > 0.9) {
-      result.mention = bestStatus.needle;
-      // try to find related href if any
-      Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
-        if (fuzzy(bestStatus.needle, a.text) > 0.9) {
-          // make URL absolute when possible
-          const link = a.getAttribute("href");
-          if (link !== "#") {
-            const declarationUrl =
-              link.charAt(0) === "/" ? `${url || ""}${link}` : link;
-            result.declarationUrl = declarationUrl;
-          }
-        }
-      });
+    const bestMatch = status[0];
+    if (bestMatch.score > 0.9) {
+      result.mention = bestMatch.needle;
+      result.declarationUrl = getDeclarationUrl(bestMatch, url);
 
       if (result.declarationUrl) {
         const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
