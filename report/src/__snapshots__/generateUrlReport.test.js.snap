@@ -8,6 +8,7 @@ Object {
     "totalCount": 42,
   },
   "declaration-a11y": null,
+  "declaration-rgpd": null,
   "dependabot": null,
   "http": null,
   "lhr": null,
@@ -19,6 +20,7 @@ Object {
     "codescanCount": 42,
     "codescanGrade": undefined,
     "declaration-a11y": undefined,
+    "declaration-rgpd": undefined,
   },
   "testssl": null,
   "thirdparties": null,
@@ -46,6 +48,20 @@ Object {
   "declaration-a11y": Object {
     "mention": "Accessibilité : partiellement conforme",
   },
+  "declaration-rgpd": Array [
+    Object {
+      "declarationUrl": "https://declaration-ml.test",
+      "maxScore": 4,
+      "score": 3,
+      "slug": "ml",
+    },
+    Object {
+      "declarationUrl": "https://declaration-pc.test",
+      "maxScore": 4,
+      "score": 3,
+      "slug": "pc",
+    },
+  ],
   "dependabot": Object {
     "report": "dependabotalerts.json",
   },
@@ -77,6 +93,8 @@ Object {
     "codescanCount": 42,
     "codescanGrade": undefined,
     "declaration-a11y": "F",
+    "declaration-rgpd-ml": "D",
+    "declaration-rgpd-pc": "D",
   },
   "testssl": Array [
     Object {
