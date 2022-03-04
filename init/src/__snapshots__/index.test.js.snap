@@ -11,6 +11,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
@@ -34,6 +36,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
@@ -63,6 +67,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
@@ -86,6 +92,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
@@ -105,6 +113,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
@@ -136,6 +146,8 @@ Array [
     "tools": Object {
       "404": true,
       "codescan": true,
+			"declaration-a11y": true,
+      "declaration-rgpd": true,
       "dependabot": true,
       "http": true,
       "lighthouse": true,
