@@ -55,12 +55,12 @@ describe("should parse dashlord config", () => {
     expect(outputs.sites).toMatchSnapshot();
   });
 
-  test("and getSiteTools http://chez.com match", async () => {
-    inputs.url = "http://chez.com";
+  test("and getSiteTools https://chez.com match", async () => {
+    inputs.url = "https://chez.com";
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const tools = getSiteTools({
-      url: "http://chez.com",
+      url: "https://chez.com",
       repositories: ["chez/chez-ui", "chez/chez-api"],
       tools: {
         screenshot: false,
