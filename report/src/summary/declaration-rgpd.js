@@ -3,7 +3,7 @@ const grades = ["F", "D", "A"];
 /** @param {DeclarationRgpdReport} report */
 const summary = (report) => {
   // not known
-  if (!report) {
+  if (!report || !report.map) {
     return {
       "declaration-rgpd": undefined,
     };
