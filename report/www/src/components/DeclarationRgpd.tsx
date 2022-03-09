@@ -5,8 +5,12 @@ import { Alert, Table } from "@dataesr/react-dsfr";
 type DeclarationRgpdProps = { data: DeclarationRgpdReport };
 
 export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
-  const [mlData] = React.useState(data.find((_) => _.slug === "ml"));
-  const [pcData] = React.useState(data.find((_) => _.slug === "pc"));
+  const [mlData] = React.useState(
+    data && data.find && data.find((_) => _.slug === "ml")
+  );
+  const [pcData] = React.useState(
+    data && data.find && data.find((_) => _.slug === "pc")
+  );
 
   const getMissingWordsResolution = (slug) => {
     if (slug === "ml") {
@@ -130,18 +134,22 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
   return (
     (data && (
       <>
-        <Panel
-          title="Mentions légales"
-          info="Les mentions légales sont une page obligatoire qui présente les personnes chargées de la plateforme"
-        >
-          {getPresenceAlerts(mlData)}
-        </Panel>
-        <Panel
-          title="Politique de confidentialité"
-          info="La politique de confidentialité est une page présentant aux utilisateurs les traitements de données personnelles et les éventuelles trackers"
-        >
-          {getPresenceAlerts(pcData)}
-        </Panel>
+        {mlData && (
+          <Panel
+            title="Mentions légales"
+            info="Les mentions légales sont une page obligatoire qui présente les personnes chargées de la plateforme"
+          >
+            {getPresenceAlerts(mlData)}
+          </Panel>
+        )}
+        {pcData && (
+          <Panel
+            title="Politique de confidentialité"
+            info="La politique de confidentialité est une page présentant aux utilisateurs les traitements de données personnelles et les éventuelles trackers"
+          >
+            {getPresenceAlerts(pcData)}
+          </Panel>
+        )}
       </>
     )) ||
     null
