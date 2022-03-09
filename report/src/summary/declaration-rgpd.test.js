@@ -151,6 +151,16 @@ const tests = [
     ],
     expected: { "declaration-rgpd-ml": "A", "declaration-rgpd-pc": "F" },
   },
+  {
+    name: "Invalid report 1",
+    report: {},
+    expected: { "declaration-rgpd": undefined },
+  },
+  {
+    name: "Invalid report 2",
+    report: null,
+    expected: { "declaration-rgpd": undefined },
+  },
 ];
 
 describe("declaration-rgpd", () => {

@@ -23,7 +23,8 @@
     "codescan": true,
     "stats": true,
     "trivy": true,
-    "declaration-a11y": true
+    "declaration-a11y": true,
+    "declaration-rgpd": true
   },
   "urls": [
     {
