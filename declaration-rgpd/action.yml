@@ -1,0 +1,33 @@
+name: "Déclaration RGPD scan action"
+description: "Détecte la présence de mentions légales et de politiques de confidentialité"
+
+inputs:
+  thirdparties:
+    description: "Thirdparties action output to analyze trackers"
+    required: false
+    default: "{}"
+  url:
+    description: "URL à tester"
+    required: true
+  output:
+    description: "Path to output file. defaults to declaration-rgpd.json"
+    default: "declaration-rgpd.json"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install
+      shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+    - name: Get URL HTML
+      uses: socialgouv/dashlord-actions/get-html@v1
+      with:
+        url: ${{ inputs.url }}
+        output: result.html
+    - name: Detect declaration rgpd
+      shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        node index ${{ inputs.url }} ${{ github.workspace }}/result.html '${{ inputs.thirdparties }}' > ${{ github.workspace }}/${{ inputs.output }}

@@ -14,6 +14,8 @@ tools:
   codescan: true
   stats: true
   404: true
+  declaration-a11y: true
+  declaration-rgpd: true
 urls:
   - url: https://www.free.fr
     title: Free

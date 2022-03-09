@@ -63,6 +63,20 @@ describe("generateUrlReport", () => {
     mockJson("declaration-a11y.json", {
       mention: "Accessibilité : partiellement conforme",
     });
+    mockJson("declaration-rgpd.json", [
+      {
+        slug: "ml",
+        declarationUrl: "https://declaration-ml.test",
+        maxScore: 4,
+        score: 3,
+      },
+      {
+        slug: "pc",
+        declarationUrl: "https://declaration-pc.test",
+        maxScore: 4,
+        score: 3,
+      },
+    ]);
 
     expect(
       generateUrlReport({
@@ -85,6 +99,7 @@ describe("generateUrlReport", () => {
     unMockJson("stats.json");
     unMockJson("404.json");
     unMockJson("declaration-a11y.json");
+    unMockJson("declaration-rgpd.json");
   });
   test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder

@@ -1,0 +1,10 @@
+{
+  "name": "declaration-rgpd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fast-fuzzy": "^1.10.10",
+    "jsdom": "^19.0.0"
+  }
+}

@@ -25,7 +25,8 @@ type DashlordTool =
   | "stats"
   | "screenshot"
   | "trivy"
-  | "declaration-a11y";
+  | "declaration-a11y"
+  | "declaration-rgpd";
 
 type DashlordConfig = {
   title: string;
@@ -354,6 +355,7 @@ type UrlReport = UrlConfig & {
   404?: Wget404Report | null;
   trivy?: TrivyReport | null;
   "declaration-a11y"?: DeclarationA11yReport | null;
+  "declaration-rgpd"?: DeclarationRgpdReport | null;
 };
 
 type DashLordReport = UrlReport[];
@@ -367,6 +369,17 @@ type DeclarationA11yReport = {
   mention: string | null;
   declarationUrl?: string;
 };
+
+type DeclarationRgpdItem = {
+  slug: string;
+  mention: string | null;
+  declarationUrl?: string;
+  maxScore: number;
+  score: number;
+  missingWords: string[];
+  missingTrackers: string[];
+};
+type DeclarationRgpdReport = DeclarationRgpdItem[];
 
 type TrivyReport = TrivyScanResult[];
 

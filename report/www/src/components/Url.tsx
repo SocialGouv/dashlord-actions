@@ -17,6 +17,7 @@ import { Stats } from "./Stats";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
+import { DeclarationRgpd } from "./DeclarationRgpd";
 import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
 
@@ -55,6 +56,12 @@ const tabs = [
         id: "declaration-a11y",
         render: (report, url) => (
           <DeclarationA11y data={report["declaration-a11y"]} />
+        ),
+      },
+      {
+        id: "declaration-rgpd",
+        render: (report, url) => (
+          <DeclarationRgpd data={report["declaration-rgpd"]} />
         ),
       },
       {

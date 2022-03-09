@@ -50,6 +50,7 @@ const metricsDefinitions = {
   uptime: { treshold: 1, title: "uptime" },
   apdex: { treshold: 0.05, title: "apDex" },
   "declaration-a11y": { title: "Déclaration a11y" },
+  "declaration-rgpd": { title: "Déclaration RGPD" },
   trivyGrade: { title: "Trivy grade" },
 } as Record<
   keyof UrlReportSummary,

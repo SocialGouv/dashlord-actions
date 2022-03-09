@@ -18,6 +18,8 @@ tools:
   dependabot: true
   codescan: true
   stats: true
+  declaration-a11y: true
+  declaration-rgpd: true
 urls:
   - url: https://www.free.fr
     title: Free

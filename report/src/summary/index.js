@@ -23,6 +23,8 @@ const tools = {
   trivy: (report) => require("./trivy")(report),
   /** @param {DeclarationA11yReport} report */
   "declaration-a11y": (report) => require("./declaration-a11y")(report),
+  /** @param {DeclarationRgpdReport} report */
+  "declaration-rgpd": (report) => require("./declaration-rgpd")(report),
 };
 
 /**
