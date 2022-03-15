@@ -139,6 +139,9 @@ const tools = {
  "declaration-rgpd": {
     data: requireToolData("declaration-rgpd.json"),
   },
+  "betagouv": {
+    data: requireToolData("betagouv.json"),
+  },
 };
 
 //@ts-expect-error

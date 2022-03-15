@@ -9350,6 +9350,50 @@
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
       "statsGrade": "A"
+    },
+    "betagouv": {
+      "id": "codedutravail",
+      "type": "startup",
+      "attributes": {
+        "name": "Code du travail numérique",
+        "pitch": "Faciliter l'accès au droit du travail pour les entreprises et les employés.",
+        "stats_url": "https://code.travail.gouv.fr/stats",
+        "link": "https://code.travail.gouv.fr",
+        "repository": "https://github.com/SocialGouv/code-du-travail-numerique",
+        "contact": "codedutravailnumerique@travail.gouv.fr",
+        "content_url_encoded_markdown": "%23%23%20Qu%E2%80%99est-ce%20que%20le%20Code%20du%20travail%20num%C3%A9rique%C2%A0%3F%0A%0ALe%20Code%20du%20travail%20num%C3%A9rique%20est%20un%20service%20public%20en%20ligne%20et%20gratuit%20vous%20permettant%20d%E2%80%99obtenir%20des%20r%C3%A9ponses%20personnalis%C3%A9es%20sur%20le%20droit%20de%20travail.%0A%0AL%E2%80%99ouverture%20officielle%20du%20site%20a%20eu%20lieu%20le%201er%20janvier%202020.%0A%0A%23%23%23%20Pourquoi%20le%20Code%20du%20travail%20num%C3%A9rique%C2%A0%3F%0A%0AAujourd%E2%80%99hui%2C%20seul%20un%20public%20expert%20ma%C3%AEtrise%20la%20complexit%C3%A9%20du%20droit%20du%20travail%20et%20de%20ses%20diff%C3%A9rentes%20sources%20%28code%20du%20travail%2C%20conventions%20collectives%2C%20accords%20d%E2%80%99entreprises%2C%20etc.%29.%20La%20technicit%C3%A9%20du%20sujet%20le%20rend%20%C3%A9galement%20peu%20accessible%20pour%20les%20salari%C3%A9s%20et%20les%20employeurs.%20Or%2C%20le%20droit%20est%20d%E2%80%99autant%20plus%20facilement%20appliqu%C3%A9%20et%20respect%C3%A9%20qu%E2%80%99il%20est%20connu%20et%20compris.%0A%0ALa%20d%C3%A9cision%20de%20cr%C3%A9er%20le%20Code%20du%20travail%20num%C3%A9rique%20a%20donc%20%C3%A9t%C3%A9%20prise%20et%20inscrite%20dans%20%5Bles%20ordonnances%20sur%20le%20renforcement%20du%20dialogue%20social%20de%202017%5D%28https%3A%2F%2Fwww.legifrance.gouv.fr%2FaffichTexteArticle.do%3Bjsessionid%3DF175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3%3FcidTexte%3DJORFTEXT000035607388%26idArticle%3DLEGIARTI000036762196%26dateTexte%3D20191129%26categorieLien%3Did%23LEGIARTI000036762196%29.%0A%0A%23%23%23%20%C3%80%20qui%20ce%20service%20s%27adresse-t-il%C2%A0%3F%0A%0ALe%20Code%20du%20travail%20num%C3%A9rique%20s%E2%80%99adresse%20%C3%A0%20tous%20les%20salari%C3%A9s%20et%20employeurs%20de%20droit%20priv%C3%A9%20relevant%20du%20code%20du%20travail%20%28plus%20de%2025%20millions%20de%20personnes%20en%20France%29.%20Les%20fonctionnaires%20et%20les%20ind%C3%A9pendants%20ne%20sont%20par%20exemple%20pas%20concern%C3%A9s.%0A%0A%23%23%23%20Que%20peut-on%20trouver%20sur%20le%20site%C2%A0%3F%0A%0ALe%20Code%20du%20travail%20num%C3%A9rique%20rassemble%20diff%C3%A9rents%20contenus%20sur%20le%20droit%20du%20travail%20ainsi%20que%20des%20r%C3%A9ponses%20personnalis%C3%A9es%20selon%20votre%20situation.%0A%0APlus%20pr%C3%A9cis%C3%A9ment%2C%20vous%20retrouverez%20sur%20le%20site%C2%A0%3A%0A-%20des%20r%C3%A9ponses%20g%C3%A9n%C3%A9riques%20sur%20le%20droit%20du%20travail%20dans%20un%20langage%20accessible%C2%A0%3B%0A-%20des%20r%C3%A9ponses%20personnalis%C3%A9es%20selon%20votre%20convention%20collective%C2%A0%3B%0A-%20des%20simulateurs%20permettant%20d%E2%80%99estimer%20des%20dur%C3%A9es%20de%20pr%C3%A9avis%2C%20des%20montants%20d%E2%80%99indemnit%C3%A9s%E2%80%A6%C2%A0%3B%0A-%20des%20mod%C3%A8les%20de%20courrier.%0A%0A%23%23%20Qui%20sommes-nous%C2%A0%3F%0A%0A%23%23%23%20Notre%20%C3%A9quipe%0A%0ANous%20sommes%20une%20%C3%A9quipe%20pluridisciplinaire%20d%E2%80%99une%20dizaine%20de%20personnes%20compos%C3%A9e%20de%20d%C3%A9veloppeurs%20web%2C%20designers%20d%E2%80%99interface%20et%20d%E2%80%99exp%C3%A9rience%2C%20juristes%2C%20inspecteurs%20du%20travail%2C%20sp%C3%A9cialistes%20de%20la%20donn%C3%A9e%E2%80%A6%20L%E2%80%99ensemble%20des%20agents%20du%20minist%C3%A8re%20du%20Travail%20contribue%20%C3%A9galement%20au%20produit%20en%20r%C3%A9digeant%20des%20contenus%20et%20en%20assurant%20la%20validit%C3%A9%20juridique%20des%20r%C3%A9ponses.%0A%0ALe%20Code%20du%20travail%20num%C3%A9rique%20est%20un%20service%20public%20initi%C3%A9%20par%20%5Ble%20minist%C3%A8re%20du%20Travail%5D%28https%3A%2F%2Ftravail-emploi.gouv.fr%2Fministere%2Forganisation%2Farticle%2Fdgt-direction-generale-du-travail%29%2C%20con%C3%A7u%20et%20d%C3%A9velopp%C3%A9%20au%20sein%20de%20%5Bl%E2%80%99incubateur%20des%20minist%C3%A8res%20sociaux%5D%28https%3A%2F%2Fincubateur.social.gouv.fr%2F%29%20en%20partenariat%20avec%20la%20communaut%C3%A9%20beta.gouv.fr.%0A%0A%23%23%23%20Notre%20m%C3%A9thode%0A%0ALe%20service%20est%20d%C3%A9velopp%C3%A9%20en%20lien%20%C3%A9troit%20avec%20les%20utilisateurs%20%28employeurs%20et%20salari%C3%A9s%29%20et%20les%20praticiens%20du%20droit%20du%20travail%20%28services%20du%20minist%C3%A8re%20du%20Travail%20en%20r%C3%A9gion%2C%20conseillers%20du%20salari%C3%A9%2C%20maisons%20d%E2%80%99acc%C3%A8s%20au%20droit%2C%20professeurs%20en%20droit%20du%20travail...%29.%0A%0ALe%20site%20est%20en%20%C3%A9volution%20continue%20et%20s%E2%80%99enrichit%20r%C3%A9guli%C3%A8rement%20de%20nouveaux%20contenus%20et%20de%20nouvelles%20fonctionnalit%C3%A9s.%0A",
+        "events": [],
+        "phases": [
+          {
+            "name": "investigation",
+            "start": "2017-12-01",
+            "end": ""
+          },
+          {
+            "name": "construction",
+            "start": "2017-12-01",
+            "end": ""
+          },
+          {
+            "name": "acceleration",
+            "start": "2019-01-01",
+            "end": ""
+          },
+          {
+            "name": "success",
+            "start": "2021-01-01",
+            "end": ""
+          }
+        ]
+      },
+      "relationships": {
+        "incubator": {
+          "data": {
+            "type": "incubator",
+            "id": "sgmas"
+          }
+        }
+      }
     }
   },
   {
