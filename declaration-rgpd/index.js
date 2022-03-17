@@ -53,7 +53,7 @@ const matchInHtml = (htmlString, searchArray) => {
   return { score, missing };
 };
 
-const getDeclarationUrl = (bestMatch, url) => {
+const getDeclarationUrl = (dom, bestMatch, url) => {
   let declarationUrl;
   // try to find related href if any
   Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
@@ -97,7 +97,6 @@ const analyseDeclaration = (result, search, thirdPartiesJson) => {
     result.score += matchResult.score;
     result.missingTrackers = matchResult.missing;
   }
-
   return result;
 };
 
@@ -125,7 +124,7 @@ const analyseDom = async (
     const bestMatch = status[0];
     if (bestMatch.score > 0.9) {
       result.mention = bestMatch.needle;
-      result.declarationUrl = getDeclarationUrl(bestMatch, url);
+      result.declarationUrl = getDeclarationUrl(dom, bestMatch, url);
 
       if (result.declarationUrl) {
         const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
@@ -153,6 +152,7 @@ if (require.main === module) {
   const url = process.argv[process.argv.length - 3]; // url, to make absolute links
   const filePath = process.argv[process.argv.length - 2]; // file path to analyse
   const thirdPartiesOutput = process.argv[process.argv.length - 1]; // third parties output
+
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch(() => console.log(JSON.stringify({ declaration: undefined })));
