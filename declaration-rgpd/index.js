@@ -12,7 +12,7 @@ const searches = [
       ["directeur", "directrice"],
       ["publication"],
       ["hébergeur", "hébergement"],
-      ["éditeur", "édité par"],
+      ["éditeur", "édité par", "editeur", "edité par"],
     ],
   },
   {
