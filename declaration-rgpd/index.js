@@ -12,7 +12,7 @@ const searches = [
       ["directeur", "directrice"],
       ["publication"],
       ["hébergeur", "hébergement"],
-      ["éditeur"],
+      ["éditeur", "édité par"],
     ],
   },
   {
@@ -120,9 +120,10 @@ const analyseDom = async (
       .map((needle) => ({ needle, score: fuzzy(needle, text) }))
       .sort((a, b) => a.score - b.score)
       .reverse();
+
     // ensure were confident enough
     const bestMatch = status[0];
-    if (bestMatch.score > 0.9) {
+    if (bestMatch.score > 0.8) {
       result.mention = bestMatch.needle;
       result.declarationUrl = getDeclarationUrl(dom, bestMatch, url);
 
