@@ -131,12 +131,13 @@ const tools = {
     data: (basePath) => fs.existsSync(path.join(basePath, "screenshot.jpeg")),
   },
   stats: { data: requireToolData("stats.json") },
+  budget_page: { data: requireToolData("budget_page.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
   trivy: { data: requireToolData("trivy.json") /*, cleanup: trivyCleanup */ },
   "declaration-a11y": {
     data: requireToolData("declaration-a11y.json"),
   },
- "declaration-rgpd": {
+  "declaration-rgpd": {
     data: requireToolData("declaration-rgpd.json"),
   },
   "betagouv": {

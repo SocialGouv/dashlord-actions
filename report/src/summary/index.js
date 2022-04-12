@@ -15,8 +15,10 @@ const tools = {
   thirdparties: (report) => require("./thirdparties")(report),
   /** @param {UpDownReport} report */
   updownio: (report) => require("./updownio")(report),
-  /** @param {StatsReport} report */
+  /** @param {PageReport} report */
   stats: (report) => require("./stats")(report),
+  /** @param {PageReport} report */
+  budget_page: (report) => require("./stats")(report),
   /** @param {Wget404Report} report */
   404: (report) => report && { 404: report.length || "A+" },
   /** @param {TrivyReport} report */
