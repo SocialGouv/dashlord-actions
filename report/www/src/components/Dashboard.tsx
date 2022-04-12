@@ -389,9 +389,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         title: "Budget",
         info: "Présence de la page de budget",
-        hash: "stats",
-        gradeKey: "statsGrade",
-        gradeLabel: (summary) => summary.statsCount,
+        hash: "budgetPage",
+        gradeKey: "budgetPageGrade",
       })
     );
   }
