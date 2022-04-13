@@ -66,6 +66,7 @@ describe("should parse dashlord config", () => {
         screenshot: false,
         updownio: false,
         stats: false,
+        budget_page: false,
         testssl: true,
       },
     });
@@ -86,6 +87,7 @@ describe("should parse dashlord config", () => {
       "declaration-a11y": true,
       "declaration-rgpd": true,
       stats: false,
+      budget_page: false,
       404: true,
     });
   });
