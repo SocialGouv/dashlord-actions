@@ -26,6 +26,7 @@ const summary = (report) => {
         expirationDate = new Date(notAfterNode.finding).getTime();
       }
     }
+    console.log("HERE", expirationDate)
 
     const expiresSoon =
       expirationDate && new Date().getTime() + warningDelay > expirationDate;
