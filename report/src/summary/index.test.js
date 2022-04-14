@@ -885,14 +885,14 @@ const urlReport = {
       ip: "www.fabrique.social.gouv.fr/20.74.14.77",
       port: "443",
       severity: "INFO",
-      finding: "2021-09-01 20:40",
+      finding: "2021-09-01 20:40Z",
     },
     {
       id: "cert_notAfter",
       ip: "www.fabrique.social.gouv.fr/20.74.14.77",
       port: "443",
       severity: "OK",
-      finding: "2021-11-30 20:40",
+      finding: "2021-11-30 20:40Z",
     },
     {
       id: "cert_extlifeSpan",
