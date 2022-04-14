@@ -31,10 +31,15 @@ const summary = (report) => {
       expirationDate && new Date().getTime() + warningDelay > expirationDate;
 
     if (value) {
+      let testsslExpireDate = null;
+      if (expirationDate) {
+        testsslExpireDate = new Date();
+        testsslExpireDate.setTime(expirationDate);
+      }
       return {
         testsslExpireSoon: expiresSoon,
         testsslExpireDate:
-          expirationDate && new Date(expirationDate).toISOString(),
+          testsslExpireDate && testsslExpireDate.toISOString(),
         testsslGrade: value,
       };
     }

@@ -353,7 +353,7 @@ const urlReport = {
     http_body: "",
     ssl: {
       tested_at: "2021-09-03T23:52:42Z",
-      expires_at: "2021-11-30T19:40:24Z",
+      expires_at: "2021-11-30T20:40:24Z",
       valid: true,
       error: null,
     },
