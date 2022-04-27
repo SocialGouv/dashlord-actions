@@ -3,6 +3,8 @@
 exports[`generateUrlReport should allow empty/invalid reports 1`] = `
 Object {
   "404": null,
+  "betagouv": null,
+  "budget_page": null,
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
@@ -41,6 +43,10 @@ Object {
     2,
     3,
   ],
+  "betagouv": null,
+  "budget_page": Object {
+    "report": "budget_page.json",
+  },
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,

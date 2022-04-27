@@ -23,6 +23,7 @@ type DashlordTool =
   | "codescan"
   | "zap"
   | "stats"
+  | "budget_page"
   | "screenshot"
   | "trivy"
   | "declaration-a11y"
@@ -351,7 +352,8 @@ type UrlReport = UrlConfig & {
   codescan?: CodescanReport | null;
   screenshot?: boolean | null;
   summary: UrlReportSummary;
-  stats?: StatsReport | null;
+  stats?: PageReport | null;
+  budget_page?: PageReport | null;
   404?: Wget404Report | null;
   trivy?: TrivyReport | null;
   "declaration-a11y"?: DeclarationA11yReport | null;
@@ -360,7 +362,7 @@ type UrlReport = UrlConfig & {
 
 type DashLordReport = UrlReport[];
 
-type StatsReport = {
+type PageReport = {
   grade: string;
   uri: string;
 };

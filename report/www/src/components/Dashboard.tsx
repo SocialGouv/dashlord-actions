@@ -382,6 +382,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("budget_page")) {
+    columns.push(
+      getColumn({
+        id: "budget_page",
+        category: "best-practices",
+        title: "Budget",
+        info: "Présence de la page de budget",
+        hash: "budgetPage",
+        gradeKey: "budgetPageGrade",
+      })
+    );
+  }
+
   if (isToolEnabled("404")) {
     columns.push(
       getColumn({

@@ -55,6 +55,8 @@ tools:
   updownio: true
   dependabot: true
   codescan: true
+  stats: true
+  budget_page: true
   404: true
 urls:
   - url: https://www.free.fr

@@ -1,10 +1,10 @@
 /** @param {PageReport} report */
 const summary = (report) => {
   if (report) {
-    const statsGrade = report.grade;
-    if (statsGrade) {
+    const budgetPageGrade = report.grade;
+    if (budgetPageGrade) {
       return {
-        statsGrade
+        budgetPageGrade
       };
     }
   }
