@@ -122,7 +122,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
           type="success"
           description={
             <>
-              Votre déclaration a bien été détecté sur :{" "}
+              Votre déclaration a bien été détectée sur :{" "}
               <a href={itemData.declarationUrl}>{itemData.declarationUrl}</a>
             </>
           }
