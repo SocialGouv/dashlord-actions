@@ -13,13 +13,14 @@ import { UpdownIo } from "./UpdownIo";
 import { Dependabot } from "./Dependabot";
 import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
-import { Stats } from "./Stats";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
 import { DeclarationRgpd } from "./DeclarationRgpd";
 import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
+import { Panel } from "./Panel";
+import { Page } from "./Page";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -46,11 +47,21 @@ const tabs = [
       },
       {
         id: "thirdparties",
-        render: (report, url) => <Trackers data={report.thirdparties} />,
+        render: (report) => <Trackers data={report.thirdparties} />,
       },
       {
         id: "stats",
-        render: (report, url) => <Stats data={report.stats} url={url} />,
+        render: (report, url) => report.stats ? <Panel title="Page de statistiques"
+          info="Cette page permet de publier vos mesures d'impact">
+          <Page data={report.stats} url={url} />,
+        </Panel> : null
+      },
+      {
+        id: "budget_page",
+        render: (report, url) => report.budget_page ? <Panel title="Page de budget"
+          info="Cette page permet de publier votre budget">
+          <Page data={report.budget_page} url={url} />,
+        </Panel> : null
       },
       {
         id: "declaration-a11y",

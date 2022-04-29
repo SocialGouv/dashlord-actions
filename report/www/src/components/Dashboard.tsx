@@ -389,7 +389,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         title: "Budget",
         info: "Présence de la page de budget",
-        hash: "budgetPage",
+        hash: "budget_page",
         gradeKey: "budgetPageGrade",
       })
     );
@@ -426,14 +426,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
   const filterBy = (key) => (item, idx, arr) =>
     !arr.slice(idx + 1).find((r) => item[key] === r[key]);
-
   return (
     (report && (
       <Table
         data={report.filter(filterBy("url"))}
         caption={""}
         columns={columns}
-        rowKey={(row, idx) => row.url}
+        rowKey={row => row.url}
         perPage={1000}
         tableClassName={styles.table}
         className={styles.tableWrapper}
