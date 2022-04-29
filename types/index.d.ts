@@ -362,10 +362,12 @@ type UrlReport = UrlConfig & {
 };
 
 type BetagouvReport = {
-  phases: Array<{
-    name: string,
-    start: string
-  }>
+  attributes: {
+    phases: Array<{
+      name: string,
+      start: string
+    }>
+  }
 }
 
 type DashLordReport = UrlReport[];

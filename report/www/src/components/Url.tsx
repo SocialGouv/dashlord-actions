@@ -21,6 +21,7 @@ import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
 import { Panel } from "./Panel";
 import { Page } from "./Page";
+import { Betagouv } from "./Betagouv";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -171,8 +172,12 @@ const tabs = [
     items: [
       {
         id: "wappalyzer",
-        render: (report, url) => <Wappalyzer data={report.wappalyzer} />,
+        render: (report) => <Wappalyzer data={report.wappalyzer} />,
       },
+      {
+        id: "betagouv",
+        render: (report) => <Betagouv data={report.betagouv} />
+      }
     ],
   },
 ];
