@@ -807,7 +807,7 @@ Array [
             <h5
               className="mainTitle"
             >
-              Page /stats
+              Page de statistiques
             </h5>
             <svg
               fill="none"
@@ -860,9 +860,10 @@ Array [
                 
               </p>
               <p>
-                La page /stats n'a pas été détectée !
+                La page n'a pas été détectée!
               </p>
             </div>
+            ,
           </div>
         </div>
       </div>
@@ -1942,7 +1943,7 @@ Array [
             <h5
               className="mainTitle"
             >
-              Page /stats
+              Page de statistiques
             </h5>
             <svg
               fill="none"
@@ -1995,9 +1996,10 @@ Array [
                 
               </p>
               <p>
-                La page /stats n'a pas été détectée !
+                La page n'a pas été détectée!
               </p>
             </div>
+            ,
           </div>
         </div>
       </div>
