@@ -51,9 +51,16 @@ const tabs = [
       },
       {
         id: "stats",
-        render: (report, url) => report.stats ? <Panel title="Page /stats"
+        render: (report, url) => report.stats ? <Panel title="Page de statistiques"
           info="Cette page permet de publier vos mesures d'impact">
           <Page data={report.stats} url={url} />,
+        </Panel> : null
+      },
+      {
+        id: "budget_page",
+        render: (report, url) => report.budget_page ? <Panel title="Page de budget"
+          info="Cette page permet de publier votre budget">
+          <Page data={report.budget_page} url={url} />,
         </Panel> : null
       },
       {

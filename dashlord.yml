@@ -18,6 +18,7 @@ tools:
   dependabot: true
   codescan: true
   stats: true
+  budget_page: true
   declaration-a11y: true
   declaration-rgpd: true
 urls:
