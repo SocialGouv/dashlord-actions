@@ -33,6 +33,12 @@ jobs:
           folder: build
 ```
 
+## Add a new column
+To add a new column in the dashboard, you have to follow these steps (cf. Pull Request to add the SE current phase):
+
+1. Make sure the required info to displayed is stored in `report.json`. For instance, the SE current phase is stored in the `betagouv` key.
+2. Create a summary extractor for your value. It will add the values that you specify to the summary key in the `report.json`. These values will then be accessible in the dashboard tab. For instance, we created a `betagouv.js` file, that extracts the SE current phase from the `betagouv` key 
+
 ## Dev
 
 - A first step is to build a light index of latest scans in `www/src/report.json`. this is done by [`./src/index.js`](./src/index.js).

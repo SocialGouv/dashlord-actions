@@ -360,6 +360,13 @@ type UrlReport = UrlConfig & {
   "declaration-rgpd"?: DeclarationRgpdReport | null;
 };
 
+type BetagouvReport = {
+  phases: Array<{
+    name: string,
+    start: string
+  }>
+}
+
 type DashLordReport = UrlReport[];
 
 type PageReport = {
