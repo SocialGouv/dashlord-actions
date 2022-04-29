@@ -156,9 +156,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "declaration-a11y",
         gradeKey: "declaration-a11y",
         category: "best-practices",
-        //gradeLabel: (summary) => summary.statsCount,
       })
     );
+  }
+
+  if (isToolEnabled("betagouv")) {
+    columns.push(getColumn({ id: "se_current_phase", title: "Phase", info: "Phase actuelle de la Startup d'Etat", hash: "seCurrentPhase", category: "informations", gradeKey: "seCurrentPhase" }))
   }
 
   if (isToolEnabled("declaration-rgpd")) {

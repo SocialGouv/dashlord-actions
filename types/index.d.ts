@@ -26,6 +26,7 @@ type DashlordTool =
   | "budget_page"
   | "screenshot"
   | "trivy"
+  | "betagouv"
   | "declaration-a11y"
   | "declaration-rgpd";
 
