@@ -2708,11 +2708,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small danger"
+              className="small info"
               onClick={[Function]}
               type="button"
             >
-              S
+              Succès
             </button>
           </div>
         </td>
