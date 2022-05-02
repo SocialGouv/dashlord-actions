@@ -9400,7 +9400,8 @@
       "lighthouse_seoGrade": "A",
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
-      "statsGrade": "A"
+      "statsGrade": "A",
+      "seCurrentPhase": "success"
     },
     "betagouv": {
       "id": "codedutravail",
