@@ -4,7 +4,9 @@
     "url": "https://archifiltre.fabrique.social.gouv.fr",
     "category": "fabrique",
     "declaration-a11y": null,
-    "tags": ["unknown"],
+    "tags": [
+      "unknown"
+    ],
     "repositories": [
       "socialgouv/archifiltre",
       "socialgouv/archifiltre-site",
@@ -210,7 +212,14 @@
       "string_match": "",
       "enabled": true,
       "published": false,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:31:46Z",
       "next_check_at": "2021-08-09T23:32:46Z",
       "mute_until": null,
@@ -2208,7 +2217,9 @@
         "type": "http",
         "host": "https://archifiltre.fabrique.social.gouv.fr",
         "matched": "https://archifiltre.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:30:16.464133279Z"
       },
@@ -2438,7 +2449,9 @@
     "declaration-a11y": {},
     "url": "https://index-egapro.travail.gouv.fr",
     "category": "fabrique",
-    "tags": ["travail"],
+    "tags": [
+      "travail"
+    ],
     "repositories": [
       "socialgouv/egapro",
       "socialgouv/egapro-api",
@@ -2644,7 +2657,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:31:07Z",
       "next_check_at": "2021-08-09T23:32:07Z",
       "mute_until": null,
@@ -4791,7 +4811,9 @@
         "type": "http",
         "host": "https://index-egapro.travail.gouv.fr",
         "matched": "https://index-egapro.travail.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:29:55.309489012Z"
       },
@@ -5005,8 +5027,12 @@
     "404": null,
     "url": "https://index-egapro.travail.gouv.fr/consulter-index",
     "category": "fabrique",
-    "tags": ["travail"],
-    "repositories": ["socialgouv/egapro-declaration"],
+    "tags": [
+      "travail"
+    ],
+    "repositories": [
+      "socialgouv/egapro-declaration"
+    ],
     "http": {
       "url": "https://index-egapro.travail.gouv.fr/consulter-index",
       "algorithm_version": 2,
@@ -5207,7 +5233,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:32:48Z",
       "next_check_at": "2021-08-09T23:33:47Z",
       "mute_until": null,
@@ -7071,7 +7104,9 @@
     },
     "url": "https://code.travail.gouv.fr",
     "category": "fabrique",
-    "tags": ["travail"],
+    "tags": [
+      "travail"
+    ],
     "repositories": [
       "socialgouv/code-du-travail-numerique",
       "socialgouv/cdtn-admin"
@@ -7115,7 +7150,11 @@
                 "*.fabrique.social.gouv.fr",
                 "*.travail.gouv.fr"
               ],
-              "font-src": ["'self'", "data:", "blob:"],
+              "font-src": [
+                "'self'",
+                "data:",
+                "blob:"
+              ],
               "frame-src": [
                 "'self'",
                 "https://mon-entreprise.fr",
@@ -7142,7 +7181,10 @@
                 "*.fabrique.social.gouv.fr",
                 "https://www.googletagmanager.com"
               ],
-              "style-src": ["'self'", "'unsafe-inline'"]
+              "style-src": [
+                "'self'",
+                "'unsafe-inline'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -7323,7 +7365,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:46:08Z",
       "next_check_at": "2021-08-09T23:47:08Z",
       "mute_until": null,
@@ -9141,7 +9190,9 @@
         "type": "http",
         "host": "https://code.travail.gouv.fr",
         "matched": "https://code.travail.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:43:53.369914929Z"
       },
@@ -9400,8 +9451,12 @@
     "404": null,
     "url": "https://domifa.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["social"],
-    "repositories": ["socialgouv/domifa"],
+    "tags": [
+      "social"
+    ],
+    "repositories": [
+      "socialgouv/domifa"
+    ],
     "http": {
       "url": "https://domifa.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -9439,17 +9494,30 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "connect-src": ["'self'", "https://*.fabrique.social.gouv.fr"],
-              "default-src": ["'self'", "https://*.fabrique.social.gouv.fr"],
-              "font-src": ["'self'"],
-              "img-src": ["'self'"],
+              "connect-src": [
+                "'self'",
+                "https://*.fabrique.social.gouv.fr"
+              ],
+              "default-src": [
+                "'self'",
+                "https://*.fabrique.social.gouv.fr"
+              ],
+              "font-src": [
+                "'self'"
+              ],
+              "img-src": [
+                "'self'"
+              ],
               "script-src": [
                 "'self'",
                 "'unsafe-inline'",
                 "https://matomo.fabrique.social.gouv.fr/piwik.js",
                 "'unsafe-eval'"
               ],
-              "style-src": ["'self'", "'unsafe-inline'"]
+              "style-src": [
+                "'self'",
+                "'unsafe-inline'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -9630,7 +9698,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:39:39Z",
       "next_check_at": "2021-08-09T23:40:38Z",
       "mute_until": null,
@@ -11233,7 +11308,9 @@
         "type": "http",
         "host": "https://domifa.fabrique.social.gouv.fr",
         "matched": "https://domifa.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:38:19.320184091Z"
       },
@@ -11433,8 +11510,12 @@
     "404": null,
     "url": "https://emjpm.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["social"],
-    "repositories": ["socialgouv/emjpm"],
+    "tags": [
+      "social"
+    ],
+    "repositories": [
+      "socialgouv/emjpm"
+    ],
     "http": {
       "url": "https://emjpm.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -11484,8 +11565,12 @@
                 "https://openmaptiles.geo.data.gouv.fr/",
                 "https://nominatim.openstreetmap.org"
               ],
-              "default-src": ["https://matomo.fabrique.social.gouv.fr/"],
-              "font-src": ["'self'"],
+              "default-src": [
+                "https://matomo.fabrique.social.gouv.fr/"
+              ],
+              "font-src": [
+                "'self'"
+              ],
               "img-src": [
                 "'self'",
                 "data:",
@@ -11493,7 +11578,9 @@
                 "https://openmaptiles.github.io/",
                 "blob:"
               ],
-              "manifest-src": ["'self'"],
+              "manifest-src": [
+                "'self'"
+              ],
               "script-src": [
                 "'self'",
                 "https://matomo.fabrique.social.gouv.fr/",
@@ -11685,7 +11772,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:40:16Z",
       "next_check_at": "2021-08-09T23:41:15Z",
       "mute_until": null,
@@ -13584,8 +13678,14 @@
       "mention": "Accessibilité : non conforme",
       "declarationUrl": "https://www.fabrique.social.gouv.fr/accessibilite"
     },
-    "tags": ["social", "sante", "travail"],
-    "repositories": ["socialgouv/www"],
+    "tags": [
+      "social",
+      "sante",
+      "travail"
+    ],
+    "repositories": [
+      "socialgouv/www"
+    ],
     "trivy": [
       {
         "ArtifactName": "ghcr.io/socialgouv/sample-next-app/app:latest",
@@ -13663,14 +13763,35 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "connect-src": ["https://*.gouv.fr", "'self'"],
-              "default-src": ["'none'"],
-              "font-src": ["'self'"],
-              "frame-src": ["https://*.gouv.fr", "'self'"],
-              "img-src": ["'self'"],
-              "prefetch-src": ["https://*.gouv.fr", "'self'"],
-              "script-src": ["https://*.gouv.fr", "'self'"],
-              "style-src": ["'unsafe-inline'", "'self'"]
+              "connect-src": [
+                "https://*.gouv.fr",
+                "'self'"
+              ],
+              "default-src": [
+                "'none'"
+              ],
+              "font-src": [
+                "'self'"
+              ],
+              "frame-src": [
+                "https://*.gouv.fr",
+                "'self'"
+              ],
+              "img-src": [
+                "'self'"
+              ],
+              "prefetch-src": [
+                "https://*.gouv.fr",
+                "'self'"
+              ],
+              "script-src": [
+                "https://*.gouv.fr",
+                "'self'"
+              ],
+              "style-src": [
+                "'unsafe-inline'",
+                "'self'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -13851,7 +13972,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-09-03T23:56:41Z",
       "next_check_at": "2021-09-03T23:57:40Z",
       "mute_until": null,
@@ -15632,7 +15760,9 @@
         "templateID": "nginx-version",
         "info": {
           "name": "nginx version detect",
-          "author": ["philippedelteil"],
+          "author": [
+            "philippedelteil"
+          ],
           "tags": null,
           "description": "Some nginx servers have the version on the response header. Useful when you need to find specific CVEs on your targets.",
           "reference": null,
@@ -15641,7 +15771,9 @@
         "type": "http",
         "host": "https://www.fabrique.social.gouv.fr",
         "matched": "https://www.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-09-03T23:55:05.078589619Z"
       },
@@ -15649,9 +15781,17 @@
         "templateID": "can-i-take-over-dns-fingerprint",
         "info": {
           "name": "Can I Take Over DNS - Fingerprint",
-          "author": ["pdteam"],
-          "tags": ["dns", "ns", "takeover"],
-          "reference": ["https://github.com/indianajson/can-i-take-over-dns"],
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "ns",
+            "takeover"
+          ],
+          "reference": [
+            "https://github.com/indianajson/can-i-take-over-dns"
+          ],
           "severity": "info"
         },
         "matcher_name": "azure",
@@ -15664,8 +15804,12 @@
         "templateID": "tech-detect",
         "info": {
           "name": "Wappalyzer Technology Detection",
-          "author": ["hakluke"],
-          "tags": ["tech"],
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
           "reference": null,
           "severity": "info"
         },
@@ -15846,8 +15990,12 @@
     "404": null,
     "url": "https://medle.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["socialgouv/medle"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "socialgouv/medle"
+    ],
     "http": {
       "url": "https://medle.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -16048,7 +16196,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:47:41Z",
       "next_check_at": "2021-08-09T23:48:40Z",
       "mute_until": null,
@@ -17963,7 +18118,9 @@
         "type": "http",
         "host": "https://medle.fabrique.social.gouv.fr",
         "matched": "https://medle.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:45:42.2490921Z"
       },
@@ -18163,8 +18320,12 @@
     "404": null,
     "url": "https://monsuivipsy.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["socialgouv/monsuivipsy"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "socialgouv/monsuivipsy"
+    ],
     "http": {
       "url": "https://monsuivipsy.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -18202,10 +18363,20 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "connect-src": ["'self'", "https://*.gouv.fr"],
-              "default-src": ["'none'"],
-              "font-src": ["'self'"],
-              "frame-src": ["'self'", "https://*.gouv.fr"],
+              "connect-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "default-src": [
+                "'none'"
+              ],
+              "font-src": [
+                "'self'"
+              ],
+              "frame-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
               "img-src": [
                 "'self'",
                 "https://b.tile.openstreetmap.org",
@@ -18213,10 +18384,22 @@
                 "https://a.tile.openstreetmap.org",
                 "https://c.tile.openstreetmap.org"
               ],
-              "media-src": ["'self'", "https://*.gouv.fr"],
-              "prefetch-src": ["'self'", "https://*.gouv.fr"],
-              "script-src": ["'self'", "https://*.gouv.fr"],
-              "style-src": ["'self'", "'unsafe-inline'"]
+              "media-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "prefetch-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "script-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "style-src": [
+                "'self'",
+                "'unsafe-inline'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -18397,7 +18580,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:53:13Z",
       "next_check_at": "2021-08-09T23:54:13Z",
       "mute_until": null,
@@ -20067,7 +20257,9 @@
         "type": "http",
         "host": "https://monsuivipsy.fabrique.social.gouv.fr",
         "matched": "https://monsuivipsy.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:51:36.344455425Z"
       },
@@ -20268,8 +20460,12 @@
     "404": null,
     "url": "https://onvs.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["socialgouv/onvs"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "socialgouv/onvs"
+    ],
     "http": {
       "url": "https://onvs.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -20470,7 +20666,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-09T23:54:47Z",
       "next_check_at": "2021-08-09T23:55:47Z",
       "mute_until": null,
@@ -22221,7 +22424,9 @@
         "type": "http",
         "host": "https://onvs.fabrique.social.gouv.fr",
         "matched": "https://onvs.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:53:15.939210642Z"
       },
@@ -22420,8 +22625,12 @@
     "404": null,
     "url": "https://ozensemble.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["socialgouv/ozensemble"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "socialgouv/ozensemble"
+    ],
     "http": {
       "url": "https://ozensemble.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -22459,15 +22668,40 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "connect-src": ["'self'", "https://*.gouv.fr"],
-              "default-src": ["'none'"],
-              "font-src": ["'self'"],
-              "frame-src": ["'self'", "https://*.gouv.fr"],
-              "img-src": ["'self'", "https://*.gouv.fr"],
-              "media-src": ["'self'", "https://*.gouv.fr"],
-              "prefetch-src": ["'self'", "https://*.gouv.fr"],
-              "script-src": ["'self'", "https://*.gouv.fr"],
-              "style-src": ["'self'", "'unsafe-inline'"]
+              "connect-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "default-src": [
+                "'none'"
+              ],
+              "font-src": [
+                "'self'"
+              ],
+              "frame-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "img-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "media-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "prefetch-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "script-src": [
+                "'self'",
+                "https://*.gouv.fr"
+              ],
+              "style-src": [
+                "'self'",
+                "'unsafe-inline'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -22648,7 +22882,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-10T00:00:02Z",
       "next_check_at": "2021-08-10T00:01:02Z",
       "mute_until": null,
@@ -24235,7 +24476,9 @@
         "type": "http",
         "host": "https://ozensemble.fabrique.social.gouv.fr",
         "matched": "https://ozensemble.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:57:19.736168472Z"
       },
@@ -24419,8 +24662,12 @@
     "404": null,
     "url": "https://pjm.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["social"],
-    "repositories": ["socialgouv/emjpm-portail"],
+    "tags": [
+      "social"
+    ],
+    "repositories": [
+      "socialgouv/emjpm-portail"
+    ],
     "http": {
       "url": "https://pjm.social.gouv.fr",
       "algorithm_version": 2,
@@ -24624,7 +24871,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-10T00:01:14Z",
       "next_check_at": "2021-08-10T00:02:14Z",
       "mute_until": null,
@@ -26357,7 +26611,9 @@
         "type": "http",
         "host": "https://pjm.social.gouv.fr",
         "matched": "https://pjm.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-09T23:59:36.232457829Z"
       },
@@ -26556,8 +26812,13 @@
     "404": null,
     "url": "https://tumeplay.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["socialgouv/tumeplay-app", "socialgouv/tumeplay-back"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "socialgouv/tumeplay-app",
+      "socialgouv/tumeplay-back"
+    ],
     "http": {
       "url": "https://tumeplay.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -26758,7 +27019,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-10T00:02:10Z",
       "next_check_at": "2021-08-10T00:03:09Z",
       "mute_until": null,
@@ -29494,7 +29762,9 @@
         "type": "http",
         "host": "https://tumeplay.fabrique.social.gouv.fr",
         "matched": "https://tumeplay.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-10T00:00:30.506489966Z"
       },
@@ -29693,8 +29963,12 @@
     "404": [],
     "url": "https://www.psyenfantado.sante.gouv.fr",
     "category": "fabrique",
-    "tags": ["sante"],
-    "repositories": ["betagouv/psy-enfant-ado"],
+    "tags": [
+      "sante"
+    ],
+    "repositories": [
+      "betagouv/psy-enfant-ado"
+    ],
     "http": {
       "url": "https://www.psyenfantado.sante.gouv.fr",
       "algorithm_version": 2,
@@ -29730,17 +30004,46 @@
           "name": "content-security-policy",
           "output": {
             "data": {
-              "base-uri": ["'self'"],
-              "block-all-mixed-content": ["'none'"],
-              "default-src": ["'self'"],
-              "font-src": ["'self'", "data:", "https:"],
-              "frame-ancestors": ["'self'"],
-              "img-src": ["'self'", "data:", "https://stats.data.gouv.fr/"],
-              "object-src": ["'none'"],
-              "script-src": ["'self'", "https://stats.data.gouv.fr/"],
-              "script-src-attr": ["'none'"],
-              "style-src": ["'self'", "'unsafe-inline'", "https:"],
-              "upgrade-insecure-requests": ["'none'"]
+              "base-uri": [
+                "'self'"
+              ],
+              "block-all-mixed-content": [
+                "'none'"
+              ],
+              "default-src": [
+                "'self'"
+              ],
+              "font-src": [
+                "'self'",
+                "data:",
+                "https:"
+              ],
+              "frame-ancestors": [
+                "'self'"
+              ],
+              "img-src": [
+                "'self'",
+                "data:",
+                "https://stats.data.gouv.fr/"
+              ],
+              "object-src": [
+                "'none'"
+              ],
+              "script-src": [
+                "'self'",
+                "https://stats.data.gouv.fr/"
+              ],
+              "script-src-attr": [
+                "'none'"
+              ],
+              "style-src": [
+                "'self'",
+                "'unsafe-inline'",
+                "https:"
+              ],
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
             },
             "http": true,
             "meta": false,
@@ -29932,7 +30235,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-10T00:11:07Z",
       "next_check_at": "2021-08-10T00:12:07Z",
       "mute_until": null,
@@ -32811,8 +33121,12 @@
     "404": null,
     "url": "https://sample-next-app.fabrique.social.gouv.fr",
     "category": "fabrique",
-    "tags": ["demo"],
-    "repositories": ["socialgouv/sample-next-app"],
+    "tags": [
+      "demo"
+    ],
+    "repositories": [
+      "socialgouv/sample-next-app"
+    ],
     "http": {
       "url": "https://sample-next-app.fabrique.social.gouv.fr",
       "algorithm_version": 2,
@@ -33013,7 +33327,14 @@
       "string_match": "",
       "enabled": true,
       "published": true,
-      "disabled_locations": ["lan", "mia", "bhs", "sin", "tok", "syd"],
+      "disabled_locations": [
+        "lan",
+        "mia",
+        "bhs",
+        "sin",
+        "tok",
+        "syd"
+      ],
       "last_check_at": "2021-08-10T00:10:55Z",
       "next_check_at": "2021-08-10T00:11:55Z",
       "mute_until": null,
@@ -34846,7 +35167,9 @@
         "type": "http",
         "host": "https://sample-next-app.fabrique.social.gouv.fr",
         "matched": "https://sample-next-app.fabrique.social.gouv.fr",
-        "extracted_results": ["nginx/1.17.8"],
+        "extracted_results": [
+          "nginx/1.17.8"
+        ],
         "ip": "20.74.14.77",
         "timestamp": "2021-08-10T00:08:02.494597648Z"
       },
