@@ -18,6 +18,7 @@ type DashboardProps = { report: DashLordReport };
 
 import styles from "./dashboard.module.scss";
 
+
 const IconUnknown = () => <Slash size={20} />;
 
 const percent = (num: number | undefined): string =>
@@ -28,15 +29,17 @@ const GradeBadge = ({
   label,
   warning,
   to,
+  colorVariant,
 }: {
   grade: string | undefined;
   label?: string | number | undefined;
   warning?: string;
   to?: string;
+  colorVariant?: ColorVariant;
 }) => (
   <div style={{ textAlign: "center" }}>
     {grade ? (
-      <Grade small warning={warning} grade={grade} label={label} to={to} />
+      <Grade colorVariant={colorVariant} small warning={warning} grade={grade} label={label} to={to} />
     ) : (
       <IconUnknown />
     )}
@@ -53,6 +56,7 @@ type GetColumnProps = {
   sort?: Function;
   category?: string;
   gradeLabel?: (s: UrlReportSummary) => string | number | undefined;
+  colorVariant?: ColorVariant;
   warningText?: (s: UrlReportSummary) => string | undefined;
 };
 
@@ -78,6 +82,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     category,
     gradeLabel,
     warningText,
+    colorVariant
   }: GetColumnProps) => ({
     name: id,
     sortable: true,
@@ -93,6 +98,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       const { summary } = rowData as UrlReport;
       return (
         <GradeBadge
+          colorVariant={colorVariant}
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(summary)}
           warning={warningText && warningText(summary)}
@@ -161,7 +167,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   }
 
   if (isToolEnabled("betagouv")) {
-    columns.push(getColumn({ id: "se_current_phase", title: "Phase", info: "Phase actuelle de la Startup d'Etat", hash: "seCurrentPhase", category: "informations", gradeKey: "seCurrentPhase" }))
+    columns.push(getColumn({
+      id: "se_current_phase",
+      title: "Phase",
+      info: "Phase actuelle de la Startup d'Etat",
+      hash: "seCurrentPhase",
+      category: "informations",
+      gradeKey: "seCurrentPhase",
+      colorVariant: "info",
+    }))
   }
 
   if (isToolEnabled("declaration-rgpd")) {

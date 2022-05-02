@@ -9,6 +9,8 @@ type UrlConfig = {
   repositories?: string[];
 };
 
+type ColorVariant = "info" | "success" | "warning" | "danger";
+
 type DashlordTool =
   | "404"
   | "http"

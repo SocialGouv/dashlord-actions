@@ -12,15 +12,15 @@ const summary = (report) => {
 function convertPhaseToGrade(phase) {
     switch (phase) {
         case "investigation":
-            return "I";
+            return "Investigation";
         case "construction":
-            return "C";
+            return "Construction";
         case "acceleration":
-            return "A";
+            return "Accélération";
         case "success":
-            return "S";
+            return "Succès";
         default:
-            return ""
+            return phase
     }
 }
 
