@@ -176,6 +176,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       category: "informations",
       gradeKey: "seCurrentPhase",
       colorVariant: "info",
+      sort: (a, b) => (a.summary["seCurrentPhase"] || "").localeCompare((b.summary["seCurrentPhase"] || "")),
       gradeLabel: (summary) => getPhaseLabel(summary["seCurrentPhase"])
     }))
   }
