@@ -2,20 +2,11 @@ import * as React from "react"
 import { Table } from "@dataesr/react-dsfr";
 import { Panel } from "./Panel"
 
-
 type BetagouvProps = { data: BetagouvReport }
-
-const phasesLabel = {
-    success: "Succès",
-    acceleration: "Accélération",
-    construction: "Construction",
-    investigation: "Investigation"
-}
-
 
 const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
     const columns = [
-        { name: "name", label: "Phase", render: ({ name }) => phasesLabel[name] },
+        { name: "name", label: "Phase", render: ({ name }) => getPhaseLabel(name) },
         { name: "start", label: "Start", render: ({ start }) => start || "-" },
         { name: "end", label: "End", render: ({ end }) => end || "-" }
     ]
@@ -24,4 +15,19 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
     </Panel>)
 }
 
-export { Betagouv };
+export { Betagouv, getPhaseLabel };
+
+function getPhaseLabel(phase: string) {
+    switch (phase) {
+        case "investigation":
+            return "Investigation";
+        case "construction":
+            return "Construction";
+        case "acceleration":
+            return "Accélération";
+        case "success":
+            return "Succès";
+        default:
+            return phase
+    }
+}

@@ -17,6 +17,7 @@ import ColumnHeader from "./ColumnHeader";
 type DashboardProps = { report: DashLordReport };
 
 import styles from "./dashboard.module.scss";
+import { getPhaseLabel } from "./Betagouv";
 
 
 const IconUnknown = () => <Slash size={20} />;
@@ -175,20 +176,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       category: "informations",
       gradeKey: "seCurrentPhase",
       colorVariant: "info",
-      gradeLabel: (summary) => {
-        switch (summary["seCurrentPhase"]) {
-          case "investigation":
-            return "Investigation";
-          case "construction":
-            return "Construction";
-          case "acceleration":
-            return "Accélération";
-          case "success":
-            return "Succès";
-          default:
-            return summary["seCurrentPhase"]
-        }
-      }
+      gradeLabel: (summary) => getPhaseLabel(summary["seCurrentPhase"])
     }))
   }
 
