@@ -9,6 +9,8 @@ type UrlConfig = {
   repositories?: string[];
 };
 
+type ColorVariant = "info" | "success" | "warning" | "danger";
+
 type DashlordTool =
   | "404"
   | "http"
@@ -26,6 +28,7 @@ type DashlordTool =
   | "budget_page"
   | "screenshot"
   | "trivy"
+  | "betagouv"
   | "declaration-a11y"
   | "declaration-rgpd";
 
@@ -359,6 +362,15 @@ type UrlReport = UrlConfig & {
   "declaration-a11y"?: DeclarationA11yReport | null;
   "declaration-rgpd"?: DeclarationRgpdReport | null;
 };
+
+type BetagouvReport = {
+  attributes: {
+    phases: Array<{
+      name: string,
+      start: string
+    }>
+  }
+}
 
 type DashLordReport = UrlReport[];
 

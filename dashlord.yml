@@ -21,6 +21,7 @@ tools:
   budget_page: true
   declaration-a11y: true
   declaration-rgpd: true
+  betagouv: true
 urls:
   - url: https://www.free.fr
     title: Free
