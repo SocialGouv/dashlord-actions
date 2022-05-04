@@ -27,6 +27,10 @@ function getPhaseLabel(phase: string) {
             return "Accélération";
         case "success":
             return "Succès";
+        case "transfer":
+            return "Transfert";
+        case "alumni":
+            return "Partenariat terminé"
         default:
             return phase
     }
