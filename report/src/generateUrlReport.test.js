@@ -60,6 +60,7 @@ describe("generateUrlReport", () => {
     mockJson("zap.json", { report: "zap.json" });
     mockJson("stats.json", { report: "stats.json" });
     mockJson("budget_page.json", { report: "budget_page.json" });
+    mockJson("github_repository.json", { report: "github_repository.json" });
     mockJson("404.json", { broken: [1, 2, 3] });
     mockJson("declaration-a11y.json", {
       mention: "Accessibilité : partiellement conforme",
@@ -99,6 +100,7 @@ describe("generateUrlReport", () => {
     unMockJson("zap.json");
     unMockJson("stats.json");
     unMockJson("budget_page.json");
+    unMockJson("github_repository.json");
     unMockJson("404.json");
     unMockJson("declaration-a11y.json");
     unMockJson("declaration-rgpd.json");

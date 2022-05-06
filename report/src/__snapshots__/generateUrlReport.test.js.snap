@@ -12,6 +12,7 @@ Object {
   "declaration-a11y": null,
   "declaration-rgpd": null,
   "dependabot": null,
+  "github_repository": null,
   "http": null,
   "lhr": null,
   "nmap": null,
@@ -23,6 +24,7 @@ Object {
     "codescanGrade": undefined,
     "declaration-a11y": undefined,
     "declaration-rgpd": undefined,
+    "seCurrentPhase": undefined,
   },
   "testssl": null,
   "thirdparties": null,
@@ -71,6 +73,9 @@ Object {
   "dependabot": Object {
     "report": "dependabotalerts.json",
   },
+  "github_repository": Object {
+    "report": "github_repository.json",
+  },
   "http": Object {
     "report": "http.json",
   },
@@ -101,6 +106,7 @@ Object {
     "declaration-a11y": "F",
     "declaration-rgpd-ml": "D",
     "declaration-rgpd-pc": "D",
+    "seCurrentPhase": undefined,
   },
   "testssl": Array [
     Object {
