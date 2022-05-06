@@ -1,11 +1,12 @@
 /** @param {BetagouvReport} report */
 const summary = (report) => {
+    let seCurrentPhase;
     if (report?.attributes.phases.length) {
-        const seCurrentPhase = report.attributes.phases.sort((a, b) => b.start.localeCompare(a.start))[0];
-        return {
-            seCurrentPhase: seCurrentPhase.name
-        };
+        seCurrentPhase = report.attributes.phases.sort((a, b) => b.start.localeCompare(a.start))[0].name;
     }
+    return {
+        seCurrentPhase,
+    };
 };
 
 module.exports = summary;

@@ -13,11 +13,10 @@ import {
 } from "../utils";
 import { Grade } from "./Grade";
 import ColumnHeader from "./ColumnHeader";
+import styles from "./dashboard.module.scss";
+import { getLatestPhase } from "./BetagouvInfo";
 
 type DashboardProps = { report: DashLordReport };
-
-import styles from "./dashboard.module.scss";
-import { getLatestPhase } from "./Betagouv";
 
 const IconUnknown = () => <Slash size={20} />;
 
@@ -204,6 +203,17 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           getLatestPhase(rowData.betagouv.attributes.phases).label,
       })
     );
+  }
+
+  if (isToolEnabled("github_repository")) {
+    columns.push(getColumn({
+      id: "github_repository",
+      title: "Code ouvert",
+      info: "Le code est-il ouvert ?",
+      hash: "github_repository",
+      category: "best-practices",
+      gradeKey: "githubRepositoryGrade",
+    }))
   }
 
   if (isToolEnabled("declaration-rgpd")) {
