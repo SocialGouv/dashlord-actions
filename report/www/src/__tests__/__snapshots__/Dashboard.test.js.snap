@@ -2710,6 +2710,11 @@ exports[`Should render full Dashboard 1`] = `
             <button
               className="small info"
               onClick={[Function]}
+              style={
+                Object {
+                  "width": 140,
+                }
+              }
               type="button"
             >
               Succès

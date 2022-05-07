@@ -17,8 +17,7 @@ import ColumnHeader from "./ColumnHeader";
 type DashboardProps = { report: DashLordReport };
 
 import styles from "./dashboard.module.scss";
-import { getPhaseLabel } from "./Betagouv";
-
+import { getLatestPhase } from "./Betagouv";
 
 const IconUnknown = () => <Slash size={20} />;
 
@@ -31,16 +30,26 @@ const GradeBadge = ({
   warning,
   to,
   colorVariant,
+  style,
 }: {
   grade: string | undefined;
   label?: string | number | undefined;
   warning?: string;
   to?: string;
   colorVariant?: ColorVariant;
+  style?: React.CSSProperties;
 }) => (
   <div style={{ textAlign: "center" }}>
     {grade ? (
-      <Grade colorVariant={colorVariant} small warning={warning} grade={grade} label={label} to={to} />
+      <Grade
+        colorVariant={colorVariant}
+        small
+        warning={warning}
+        grade={grade}
+        label={label}
+        to={to}
+        style={style}
+      />
     ) : (
       <IconUnknown />
     )}
@@ -56,7 +65,8 @@ type GetColumnProps = {
   gradeKey: string;
   sort?: Function;
   category?: string;
-  gradeLabel?: (s: UrlReportSummary) => string | number | undefined;
+  gradeLabel?: (s: UrlReport) => string | number | undefined;
+  gradeStyle?: React.CSSProperties;
   colorVariant?: ColorVariant;
   warningText?: (s: UrlReportSummary) => string | undefined;
 };
@@ -83,7 +93,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     category,
     gradeLabel,
     warningText,
-    colorVariant
+    colorVariant,
+    gradeStyle,
   }: GetColumnProps) => ({
     name: id,
     sortable: true,
@@ -100,8 +111,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       return (
         <GradeBadge
           colorVariant={colorVariant}
+          style={gradeStyle}
           grade={summary[gradeKey]}
-          label={gradeLabel && gradeLabel(summary)}
+          label={gradeLabel && gradeLabel(rowData)}
           warning={warningText && warningText(summary)}
           to={`/url/${encodeURIComponent(
             slugifyUrl((rowData as UrlReport).url)
@@ -120,7 +132,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       warning: id === "accessibility" ? <AccessibilityWarnings /> : undefined,
       hash: "lighthouse",
       gradeKey: `lighthouse_${id}Grade`,
-      gradeLabel: (summary) => percent(summary[`lighthouse_${id}`]),
+      gradeLabel: (rowData) => percent(rowData.summary[`lighthouse_${id}`]),
     });
 
   let columns = [
@@ -168,17 +180,30 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   }
 
   if (isToolEnabled("betagouv")) {
-    columns.push(getColumn({
-      id: "se_current_phase",
-      title: "Phase",
-      info: "Phase actuelle de la Startup d'Etat",
-      hash: "seCurrentPhase",
-      category: "informations",
-      gradeKey: "seCurrentPhase",
-      colorVariant: "info",
-      sort: (a, b) => (a.summary["seCurrentPhase"] || "").localeCompare((b.summary["seCurrentPhase"] || "")),
-      gradeLabel: (summary) => getPhaseLabel(summary["seCurrentPhase"])
-    }))
+    columns.push(
+      getColumn({
+        id: "se_current_phase",
+        title: "Phase",
+        info: "Phase actuelle de la Startup d'Etat",
+        hash: "betagouv",
+        category: "informations",
+        gradeKey: "seCurrentPhase",
+        gradeStyle: { width: 140 },
+        colorVariant: "info",
+        sort: (a, b) => {
+          // ensure we use latest phase for sorting
+          if (!a.betagouv) return 1;
+          if (!b.betagouv) return -1;
+          return (
+            getLatestPhase(b.betagouv.attributes.phases).index -
+            getLatestPhase(a.betagouv.attributes.phases).index
+          );
+        },
+        gradeLabel: (rowData) =>
+          rowData.betagouv &&
+          getLatestPhase(rowData.betagouv.attributes.phases).label,
+      })
+    );
   }
 
   if (isToolEnabled("declaration-rgpd")) {
@@ -190,8 +215,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "declaration-rgpd",
         gradeKey: "declaration-rgpd-ml",
         category: "best-practices",
-        gradeLabel: (summary) => {
-          switch (summary["declaration-rgpd-ml"]) {
+        gradeLabel: (rowData) => {
+          switch (rowData.summary["declaration-rgpd-ml"]) {
             case "A":
               return "🥳";
             case "D":
@@ -213,8 +238,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "declaration-rgpd",
         gradeKey: "declaration-rgpd-pc",
         category: "best-practices",
-        gradeLabel: (summary) => {
-          switch (summary["declaration-rgpd-pc"]) {
+        gradeLabel: (rowData) => {
+          switch (rowData.summary["declaration-rgpd-pc"]) {
             case "A":
               return "🥳";
             case "D":
@@ -258,7 +283,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Niveau de confiance du certificat SSL (testssl.sh)",
         hash: "testssl",
         gradeKey: "testsslGrade",
-        gradeLabel: (summary) => summary.testsslGrade,
+        gradeLabel: (rowData) => rowData.summary.testsslGrade,
         sort: sortSSLGrades,
         category: "securite",
         warningText: (summary) =>
@@ -295,7 +320,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "updownio",
         gradeKey: "uptimeGrade",
         category: "disponibilite",
-        gradeLabel: (summary) => percent((summary.uptime || 0) / 100),
+        gradeLabel: (rowData) => percent((rowData.summary.uptime || 0) / 100),
       }),
       getColumn({
         id: "updownio2",
@@ -304,7 +329,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "updownio",
         gradeKey: "apdexGrade",
         category: "disponibilite",
-        gradeLabel: (summary) => summary.apdex,
+        gradeLabel: (rowData) => rowData.summary.apdex,
       }),
     ]);
   }
@@ -318,7 +343,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "dependabot",
         category: "securite",
         gradeKey: "dependabotGrade",
-        gradeLabel: (summary) => summary.dependabotCount,
+        gradeLabel: (rowData) => rowData.summary.dependabotCount,
       })
     );
   }
@@ -332,7 +357,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "securite",
         hash: "codescan",
         gradeKey: "codescanGrade",
-        gradeLabel: (summary) => summary.codescanCount,
+        gradeLabel: (rowData) => rowData.summary.codescanCount,
       })
     );
   }
@@ -354,7 +379,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "securite",
         hash: "nmap",
         gradeKey: "nmapOpenPortsGrade",
-        gradeLabel: (summary) => summary.nmapOpenPortsCount,
+        gradeLabel: (rowData) => rowData.summary.nmapOpenPortsCount,
       }),
     ]);
   }
@@ -374,7 +399,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "trackersGrade",
-        gradeLabel: (summary) => summary.trackersCount,
+        gradeLabel: (rowData) => rowData.summary.trackersCount,
       }),
       getColumn({
         id: "cookies",
@@ -383,7 +408,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "cookiesGrade",
-        gradeLabel: (summary) => summary.cookiesCount,
+        gradeLabel: (rowData) => rowData.summary.cookiesCount,
       }),
     ]);
   }
@@ -397,7 +422,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Présence de la page des statistiques",
         hash: "stats",
         gradeKey: "statsGrade",
-        gradeLabel: (summary) => summary.statsCount,
+        gradeLabel: (rowData) => rowData.summary.statsCount,
       })
     );
   }
@@ -424,8 +449,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Pages introuvables",
         hash: "404",
         gradeKey: "404",
-        gradeLabel: (summary) => {
-          return summary["404"];
+        gradeLabel: (rowData) => {
+          return rowData.summary["404"];
         },
       })
     );
@@ -452,7 +477,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         data={report.filter(filterBy("url"))}
         caption={""}
         columns={columns}
-        rowKey={row => row.url}
+        rowKey={(row) => row.url}
         perPage={1000}
         tableClassName={styles.table}
         className={styles.tableWrapper}
