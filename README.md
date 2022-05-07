@@ -34,8 +34,10 @@ based on the content of `DASHLORD_REPO_PATH` :
 ```sh
 DASHLORD_URLS=http://test1.com,http://test1.com  \ # optional
 DASHLORD_REPO_PATH=/path/to/some/dashlord-repo \ #optional
-node report/src > report/www/src/report.json
+node report/src # this will create fresh config.json, report.json and trends.json for the website
 ```
+
+See also the [report README](./report/README.md)
 
 ### Add a new dashlord action
 

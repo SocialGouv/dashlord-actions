@@ -34,14 +34,14 @@ jobs:
 ```
 
 ## Add a new column
-To add a new column in the dashboard, you have to follow these steps (cf. Pull Request to add the SE current phase):
+
+To add a new column in the dashboard, you have to follow these steps (cf. [Pull Request to add the SE current phase](https://github.com/SocialGouv/dashlord-actions/pull/172)):
 
 1. Make sure the required info to displayed is stored in `report.json`. For instance, the SE current phase is stored in the `betagouv` key.
-2. Create a summary extractor for your value. It will add the values that you specify to the summary key in the `report.json`. These values will then be accessible in the dashboard tab. For instance, we created a `betagouv.js` file, that extracts the SE current phase from the `betagouv` key 
+2. Create a summary extractor for your value. It will add the values that you specify to the summary key in the `report.json`. These values will then be accessible in the dashboard tab. For instance, we created a `betagouv.js` file, that extracts the SE current phase from the `betagouv` key
 3. Add a key to your `dashbord.yml` to enable the feature you want to use. For instance, we added `betagouv`.
 4. Add in `www/src/components/Dashboard.tsx` the column using the `getColumn` function
 5. Add in `www/src/components/Url.tsx` the panel you want to display in the corresponding tab.
-
 
 ## Dev
 
