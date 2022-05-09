@@ -61,7 +61,10 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
       // make URL absolute when possible
       const link = a.getAttribute("href");
       if (link !== "#") {
-        declarationUrl = link.charAt(0) === "/" ? `${url || ""}${link}` : link;
+        declarationUrl =
+          link.charAt(0) === "/"
+            ? `${url.replace(/\/$/, "") || ""}${link}`
+            : link;
       }
     }
   });

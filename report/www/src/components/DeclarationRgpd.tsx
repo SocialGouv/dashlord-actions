@@ -5,12 +5,8 @@ import { Alert, Table } from "@dataesr/react-dsfr";
 type DeclarationRgpdProps = { data: DeclarationRgpdReport };
 
 export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
-  const [mlData] = React.useState(
-    data && data.find && data.find((_) => _.slug === "ml")
-  );
-  const [pcData] = React.useState(
-    data && data.find && data.find((_) => _.slug === "pc")
-  );
+  const mlData = data && data.find && data.find((_) => _.slug === "ml");
+  const pcData = data && data.find && data.find((_) => _.slug === "pc");
 
   const getMissingWordsResolution = (slug) => {
     if (slug === "ml") {
@@ -18,7 +14,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
         <>
           Appliquer le modèle suivant :{" "}
           <a href="https://github.com/betagouv/juridiques/blob/main/Mentions-l%C3%A9gales.md">
-            https://github.com/betagouv/juridiques/blob/main/Mentions-l%C3%A9gales.md
+            https://github.com/betagouv/juridiques/blob/main/Mentions-légales.md
           </a>
         </>
       );
@@ -59,24 +55,20 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
   };
 
   const getMissingWordsTable = (itemData: DeclarationRgpdItem) => {
+    const resolution = getMissingWordsResolution(itemData.slug);
+    const rows = itemData.missingWords.map((word: string, index: number) => ({
+      key: index,
+      word,
+      resolution,
+    }));
     return (
       <div style={{ display: "flex" }}>
         <Table
-          columns={[{ name: "word", label: "Mot manquant" }]}
-          data={itemData.missingWords.map((word: string, index: number) => ({
-            key: index,
-            word,
-          }))}
-          rowKey={"key"}
-        />
-        <Table
-          columns={[{ name: "resolution", label: "Remédiation" }]}
-          data={[
-            {
-              key: 1,
-              resolution: getMissingWordsResolution(itemData.slug),
-            },
+          columns={[
+            { name: "word", label: "Mot manquant" },
+            { name: "resolution" },
           ]}
+          data={rows}
           rowKey={"key"}
         />
       </div>
@@ -88,6 +80,13 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <Alert type="error" description={<>Pas de déclaration détectée</>} />
       );
+    } else if (!itemData.declarationUrl) {
+      return (
+        <Alert
+          type="error"
+          description={<>Mention présente mais pas de déclaration détectée</>}
+        />
+      );
     } else if (itemData.score < itemData.maxScore) {
       return (
         <>
@@ -96,7 +95,13 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
             description={
               <>
                 Votre déclaration a bien été détectée sur :{" "}
-                <a href={itemData.declarationUrl}>{itemData.declarationUrl}</a>
+                <a
+                  href={itemData.declarationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {itemData.declarationUrl}
+                </a>
                 <br />
                 <br />
                 Cependant, certaines informations sont manquantes. Consultez le
@@ -123,7 +128,13 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
           description={
             <>
               Votre déclaration a bien été détectée sur :{" "}
-              <a href={itemData.declarationUrl}>{itemData.declarationUrl}</a>
+              <a
+                href={itemData.declarationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {itemData.declarationUrl}
+              </a>
             </>
           }
         />
