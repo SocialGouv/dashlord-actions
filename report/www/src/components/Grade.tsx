@@ -9,7 +9,8 @@ type GradeProps = {
   warning?: string | null;
   to?: string;
   small?: boolean;
-  colorVariant?: ColorVariant
+  colorVariant?: ColorVariant;
+  style?: React.CSSProperties;
 };
 
 const grades = {
@@ -27,7 +28,8 @@ export const Grade: React.FC<GradeProps> = ({
   label,
   to,
   small,
-  colorVariant
+  colorVariant,
+  style,
 }) => {
   const newGrade = `${grade}`.substring(0, 1).toUpperCase();
   const variant = colorVariant || grades[newGrade] || "danger";
@@ -39,6 +41,7 @@ export const Grade: React.FC<GradeProps> = ({
       variant={variant}
       className={styles[small ? "small" : "big"]}
       to={to}
+      style={style}
     >
       {title}
       {warning && (

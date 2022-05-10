@@ -361,16 +361,19 @@ type UrlReport = UrlConfig & {
   trivy?: TrivyReport | null;
   "declaration-a11y"?: DeclarationA11yReport | null;
   "declaration-rgpd"?: DeclarationRgpdReport | null;
+  betagouv?: BetagouvReport;
+};
+
+type BetagouvReportPhase = {
+  name: string;
+  start: string;
 };
 
 type BetagouvReport = {
   attributes: {
-    phases: Array<{
-      name: string,
-      start: string
-    }>
-  }
-}
+    phases: BetagouvReportPhase[];
+  };
+};
 
 type DashLordReport = UrlReport[];
 
