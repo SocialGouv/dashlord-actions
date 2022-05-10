@@ -21,7 +21,7 @@ import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
 import { Panel } from "./Panel";
 import { Page } from "./Page";
-import { BetagouvInfo } from "./BetagouvInfo";
+import { Betagouv } from "./BetagouvInfo";
 import { GithubRepository } from "./GithubRepository"
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -181,7 +181,7 @@ const tabs = [
       },
       {
         id: "betagouv",
-        render: (report) => <BetagouvInfo data={report.betagouv} />
+        render: (report) => <Betagouv data={report.betagouv} />
       }
     ],
   },

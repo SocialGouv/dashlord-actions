@@ -24,7 +24,6 @@ Object {
     "codescanGrade": undefined,
     "declaration-a11y": undefined,
     "declaration-rgpd": undefined,
-    "seCurrentPhase": undefined,
   },
   "testssl": null,
   "thirdparties": null,
@@ -106,7 +105,6 @@ Object {
     "declaration-a11y": "F",
     "declaration-rgpd-ml": "D",
     "declaration-rgpd-pc": "D",
-    "seCurrentPhase": undefined,
   },
   "testssl": Array [
     Object {

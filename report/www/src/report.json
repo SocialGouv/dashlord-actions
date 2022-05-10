@@ -9406,7 +9406,6 @@
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
       "statsGrade": "A",
-      "seCurrentPhase": "success",
       "githubRepositoryGrade": "A"
     },
     "betagouv": {

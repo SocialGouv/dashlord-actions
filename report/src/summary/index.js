@@ -29,8 +29,6 @@ const tools = {
   "declaration-a11y": (report) => require("./declaration-a11y")(report),
   /** @param {DeclarationRgpdReport} report */
   "declaration-rgpd": (report) => require("./declaration-rgpd")(report),
-  /** @param {BetagouvReport} report */
-  betagouv: (report) => require("./betagouv")(report),
 };
 
 /**

@@ -39,12 +39,12 @@ const GradeBadge = ({
   style?: React.CSSProperties;
 }) => (
   <div style={{ textAlign: "center" }}>
-    {grade ? (
+    {(grade || label) ? (
       <Grade
         colorVariant={colorVariant}
         small
         warning={warning}
-        grade={grade}
+        grade={grade || `${label}`}
         label={label}
         to={to}
         style={style}
