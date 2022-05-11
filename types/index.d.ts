@@ -29,6 +29,7 @@ type DashlordTool =
   | "screenshot"
   | "trivy"
   | "betagouv"
+  | "github_repository"
   | "declaration-a11y"
   | "declaration-rgpd";
 
@@ -371,14 +372,16 @@ type BetagouvReportPhase = {
 
 type BetagouvReport = {
   attributes: {
+    repository: string;
     phases: BetagouvReportPhase[];
-  };
-};
+  }
+}
 
 type DashLordReport = UrlReport[];
 
 type PageReport = {
   grade: string;
+  url: string;
   uri: string;
 };
 

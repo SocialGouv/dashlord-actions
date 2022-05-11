@@ -25,20 +25,27 @@
     "trivy": true,
     "declaration-a11y": true,
     "declaration-rgpd": true,
-    "betagouv": true
+    "betagouv": true,
+    "github_repository": true
   },
   "urls": [
     {
       "url": "https://www.free.fr",
       "title": "Free",
-      "repositories": ["iliad/free-ui", "iliad/free-api"]
+      "repositories": [
+        "iliad/free-ui",
+        "iliad/free-api"
+      ]
     },
     {
       "url": "invalid-url"
     },
     {
       "url": "http://chez.com",
-      "repositories": ["chez/chez-ui", "chez/chez-api"],
+      "repositories": [
+        "chez/chez-ui",
+        "chez/chez-api"
+      ],
       "tools": {
         "screenshot": false,
         "updownio": false

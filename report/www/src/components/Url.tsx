@@ -21,7 +21,8 @@ import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
 import { Panel } from "./Panel";
 import { Page } from "./Page";
-import { Betagouv } from "./Betagouv";
+import { Betagouv } from "./BetagouvInfo";
+import { GithubRepository } from "./GithubRepository"
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -79,6 +80,10 @@ const tabs = [
       {
         id: "404",
         render: (report, url) => <Report404 data={report["404"]} />,
+      },
+      {
+        id: "github_repository",
+        render: (report) => <GithubRepository data={report["github_repository"]} />,
       },
     ],
   },

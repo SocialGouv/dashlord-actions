@@ -9376,6 +9376,11 @@
       "url": "https://code.travail.gouv.fr",
       "uri": "stats"
     },
+    "github_repository": {
+      "grade": "A",
+      "url": "https://github.com",
+      "uri": "SocialGouv/code-du-travail-numerique"
+    },
     "summary": {
       "declaration-a11y": "B",
       "httpGrade": "C-",
@@ -9401,7 +9406,7 @@
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
       "statsGrade": "A",
-      "seCurrentPhase": "success"
+      "githubRepositoryGrade": "A"
     },
     "betagouv": {
       "id": "codedutravail",
