@@ -71,7 +71,10 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
                 className="vertical-timeline-element-subtitle"
                 style={{ color: "var(--blue-france-113)" }}
               >
-                {format(new Date(phase.start), "PPP", { locale: frLocale })}
+                {phase.start &&
+                  format(new Date(phase.start), "PPP", {
+                    locale: frLocale,
+                  })}
               </h6>
 
               <p style={{ color: "var(--blue-france-113)" }}>
