@@ -40,7 +40,7 @@ exports[`Should render full Dashboard 1`] = `
               className="header"
             >
               <span>
-                Déclaration d'accessibilité
+                Phase
               </span>
               <br />
               <svg
@@ -93,7 +93,7 @@ exports[`Should render full Dashboard 1`] = `
               className="header"
             >
               <span>
-                Phase
+                Déclaration d'accessibilité
               </span>
               <br />
               <svg
@@ -2845,9 +2845,14 @@ exports[`Should render full Dashboard 1`] = `
             <button
               className="small info"
               onClick={[Function]}
+              style={
+                Object {
+                  "width": 140,
+                }
+              }
               type="button"
             >
-              B
+              Succès
             </button>
           </div>
         </td>
@@ -2862,14 +2867,9 @@ exports[`Should render full Dashboard 1`] = `
             <button
               className="small info"
               onClick={[Function]}
-              style={
-                Object {
-                  "width": 140,
-                }
-              }
               type="button"
             >
-              Succès
+              B
             </button>
           </div>
         </td>
@@ -4935,23 +4935,6 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <button
-              className="small danger"
-              onClick={[Function]}
-              type="button"
-            >
-              F
-            </button>
-          </div>
-        </td>
-        <td>
-          <div
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
             <svg
               fill="none"
               height={20}
@@ -4975,6 +4958,23 @@ exports[`Should render full Dashboard 1`] = `
                 y2="19.07"
               />
             </svg>
+          </div>
+        </td>
+        <td>
+          <div
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              className="small danger"
+              onClick={[Function]}
+              type="button"
+            >
+              F
+            </button>
           </div>
         </td>
         <td>
