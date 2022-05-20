@@ -39,7 +39,7 @@ const GradeBadge = ({
   style?: React.CSSProperties;
 }) => (
   <div style={{ textAlign: "center" }}>
-    {(grade || label) ? (
+    {grade || label ? (
       <Grade
         colorVariant={colorVariant}
         small
@@ -165,19 +165,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     },
   ];
 
-  if (isToolEnabled("declaration-a11y")) {
-    columns.push(
-      getColumn({
-        id: "declaration-a11y",
-        title: "Déclaration d'accessibilité",
-        info: "Présence de la mention de conformité et de la déclaration",
-        hash: "declaration-a11y",
-        gradeKey: "declaration-a11y",
-        category: "best-practices",
-      })
-    );
-  }
-
   if (isToolEnabled("betagouv")) {
     columns.push(
       getColumn({
@@ -205,15 +192,30 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("declaration-a11y")) {
+    columns.push(
+      getColumn({
+        id: "declaration-a11y",
+        title: "Déclaration d'accessibilité",
+        info: "Présence de la mention de conformité et de la déclaration",
+        hash: "declaration-a11y",
+        gradeKey: "declaration-a11y",
+        category: "best-practices",
+      })
+    );
+  }
+
   if (isToolEnabled("github_repository")) {
-    columns.push(getColumn({
-      id: "github_repository",
-      title: "Code ouvert",
-      info: "Le code est-il ouvert ?",
-      hash: "github_repository",
-      category: "best-practices",
-      gradeKey: "githubRepositoryGrade",
-    }))
+    columns.push(
+      getColumn({
+        id: "github_repository",
+        title: "Code ouvert",
+        info: "Le code est-il ouvert ?",
+        hash: "github_repository",
+        category: "best-practices",
+        gradeKey: "githubRepositoryGrade",
+      })
+    );
   }
 
   if (isToolEnabled("declaration-rgpd")) {
@@ -228,11 +230,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         gradeLabel: (rowData) => {
           switch (rowData.summary["declaration-rgpd-ml"]) {
             case "A":
-              return "🥳";
+              return "✔";
             case "D":
               return "";
             case "F":
-              return "😔";
+              return "Ⅹ";
           }
         },
         warningText: (summary) =>
@@ -251,11 +253,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         gradeLabel: (rowData) => {
           switch (rowData.summary["declaration-rgpd-pc"]) {
             case "A":
-              return "🥳";
+              return "✔";
             case "D":
               return "";
             case "F":
-              return "😔";
+              return "Ⅹ";
           }
         },
         warningText: (summary) =>
