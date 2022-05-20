@@ -22,7 +22,7 @@ import { UrlHeader } from "./UrlHeader";
 import { Panel } from "./Panel";
 import { Page } from "./Page";
 import { Betagouv } from "./BetagouvInfo";
-import { GithubRepository } from "./GithubRepository"
+import { GithubRepository } from "./GithubRepository";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -53,17 +53,27 @@ const tabs = [
       },
       {
         id: "stats",
-        render: (report, url) => report.stats ? <Panel title="Page de statistiques"
-          info="Cette page permet de publier vos mesures d'impact">
-          <Page data={report.stats} url={url} />,
-        </Panel> : null
+        render: (report, url) =>
+          report.stats ? (
+            <Panel
+              title="Page de statistiques"
+              info="Cette page permet de publier vos mesures d'impact"
+            >
+              <Page data={report.stats} url={url} />
+            </Panel>
+          ) : null,
       },
       {
         id: "budget_page",
-        render: (report, url) => report.budget_page ? <Panel title="Page de budget"
-          info="Cette page permet de publier votre budget">
-          <Page data={report.budget_page} url={url} />,
-        </Panel> : null
+        render: (report, url) =>
+          report.budget_page ? (
+            <Panel
+              title="Page de budget"
+              info="Cette page permet de publier votre budget"
+            >
+              <Page data={report.budget_page} url={url} />
+            </Panel>
+          ) : null,
       },
       {
         id: "declaration-a11y",
@@ -83,7 +93,9 @@ const tabs = [
       },
       {
         id: "github_repository",
-        render: (report) => <GithubRepository data={report["github_repository"]} />,
+        render: (report) => (
+          <GithubRepository data={report["github_repository"]} />
+        ),
       },
     ],
   },
@@ -181,8 +193,8 @@ const tabs = [
       },
       {
         id: "betagouv",
-        render: (report) => <Betagouv data={report.betagouv} />
-      }
+        render: (report) => <Betagouv data={report.betagouv} />,
+      },
     ],
   },
 ];
