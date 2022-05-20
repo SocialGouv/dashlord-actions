@@ -2898,29 +2898,13 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              className="small success"
+              onClick={[Function]}
+              type="button"
             >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
+              ✔
+            </button>
           </div>
         </td>
         <td>
@@ -2931,29 +2915,13 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <svg
-              fill="none"
-              height={20}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={20}
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              className="small danger"
+              onClick={[Function]}
+              type="button"
             >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <line
-                x1="4.93"
-                x2="19.07"
-                y1="4.93"
-                y2="19.07"
-              />
-            </svg>
+              Ⅹ
+            </button>
           </div>
         </td>
         <td>
