@@ -9381,6 +9381,25 @@
       "url": "https://github.com",
       "uri": "SocialGouv/code-du-travail-numerique"
     },
+    "declaration-rgpd": [
+      {
+        "slug": "ml",
+        "mention": "Mentions légales",
+        "maxScore": 4,
+        "score": 4,
+        "missingWords": [],
+        "missingTrackers": [],
+        "declarationUrl": "https://code.travail.gouv.fr/mentions-legales"
+      },
+      {
+        "slug": "pc",
+        "mention": null,
+        "maxScore": 0,
+        "score": 0,
+        "missingWords": [],
+        "missingTrackers": []
+      }
+    ],
     "summary": {
       "declaration-a11y": "B",
       "httpGrade": "C-",
@@ -9406,7 +9425,9 @@
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D",
       "statsGrade": "A",
-      "githubRepositoryGrade": "A"
+      "githubRepositoryGrade": "A",
+      "declaration-rgpd-ml": "A",
+      "declaration-rgpd-pc": "F"
     },
     "betagouv": {
       "id": "codedutravail",
