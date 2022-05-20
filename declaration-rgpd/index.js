@@ -1,4 +1,5 @@
 const jsdom = require("jsdom");
+const fs = require("fs");
 const { fuzzy } = require("fast-fuzzy");
 const { execSync } = require("child_process");
 
@@ -140,7 +141,8 @@ const analyseDom = async (
 };
 
 const analyseFile = async (filePath, { url, thirdPartiesOutput } = {}) => {
-  const dom = await JSDOM.fromFile(filePath);
+  const html = fs.readFileSync(filePath).toString();
+  const dom = await new JSDOM(html);
   return analyseDom(dom, { url, thirdPartiesOutput });
 };
 

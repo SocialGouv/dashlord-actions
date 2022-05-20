@@ -8,6 +8,7 @@ inputs:
   output:
     description: Path to output file
     default: result.html
+    required: false
 
 runs:
   using: "composite"
