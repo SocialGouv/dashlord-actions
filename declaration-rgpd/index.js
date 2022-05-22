@@ -152,7 +152,7 @@ const analyseUrl = async (url) => {
   return analyseDom(dom, { url });
 };
 
-module.exports = { analyseFile, analyseUrl };
+module.exports = { analyseDom, analyseFile, analyseUrl };
 
 if (require.main === module) {
   const url = process.argv[process.argv.length - 3]; // url, to make absolute links
