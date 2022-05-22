@@ -108,7 +108,9 @@ const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
 ) => {
-  const text = dom.window.document.body.textContent;
+  const text = Array.from(dom.window.document.querySelectorAll("a"))
+    .map((a) => a.text)
+    .join(" ");
   // add an object to result for every searches entry
   return searches.map((search) => {
     // fuzzy find the best match
@@ -161,5 +163,8 @@ if (require.main === module) {
 
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
-    .catch(() => console.log(JSON.stringify({ declaration: undefined })));
+    .catch((e) => {
+      console.error(e);
+      console.log(JSON.stringify({ declaration: undefined }));
+    });
 }

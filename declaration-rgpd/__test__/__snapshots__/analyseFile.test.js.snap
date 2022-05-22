@@ -35,12 +35,12 @@ Array [
     "slug": "ml",
   },
   Object {
-    "declarationUrl": undefined,
-    "maxScore": 0,
-    "mention": "Données personnelles",
+    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/politique-confidentialite",
+    "maxScore": 4,
+    "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
     "missingWords": Array [],
-    "score": 0,
+    "score": 4,
     "slug": "pc",
   },
 ]
@@ -111,12 +111,14 @@ Array [
     "slug": "ml",
   },
   Object {
-    "declarationUrl": undefined,
-    "maxScore": 0,
-    "mention": "Données personnelles",
-    "missingTrackers": Array [],
+    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/politique-confidentialite",
+    "maxScore": 5,
+    "mention": "Politique de confidentialité",
+    "missingTrackers": Array [
+      "jQuery",
+    ],
     "missingWords": Array [],
-    "score": 0,
+    "score": 4,
     "slug": "pc",
   },
 ]
