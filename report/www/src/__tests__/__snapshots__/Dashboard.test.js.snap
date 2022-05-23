@@ -1533,7 +1533,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -1567,7 +1567,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              F
+              X
             </button>
           </div>
         </td>
@@ -1736,7 +1736,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="La politique de confidentialité n'a pas été trouvée"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -2004,7 +2014,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -2038,7 +2048,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -2055,7 +2065,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -2475,7 +2485,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -2509,7 +2519,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -2526,7 +2536,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -2689,7 +2699,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="La politique de confidentialité n'a pas été trouvée"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -2842,7 +2862,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -2925,7 +2945,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -2959,7 +2979,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              F
+              X
             </button>
           </div>
         </td>
@@ -3119,7 +3139,7 @@ exports[`Should render full Dashboard 1`] = `
                     "marginLeft": 5,
                   }
                 }
-                title="Votre politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
+                title="La politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
               >
                 ⚠️
               </span>
@@ -3417,7 +3437,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -3434,7 +3454,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              F
+              X
             </button>
           </div>
         </td>
@@ -3451,7 +3471,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -3586,7 +3606,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="Les mentions légales n'ont pas été détectées"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -3603,7 +3633,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="La politique de confidentialité n'a pas été trouvée"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -3881,7 +3921,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -3915,7 +3955,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -3932,7 +3972,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -4091,7 +4131,7 @@ exports[`Should render full Dashboard 1`] = `
                     "marginLeft": 5,
                   }
                 }
-                title="Votre politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
+                title="La politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
               >
                 ⚠️
               </span>
@@ -4396,7 +4436,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -4865,7 +4905,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -4899,7 +4939,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -4916,7 +4956,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -5232,7 +5272,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -5315,7 +5355,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -5349,7 +5389,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              F
+              X
             </button>
           </div>
         </td>
@@ -5513,7 +5553,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="La politique de confidentialité n'a pas été trouvée"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -5798,7 +5848,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -5815,7 +5865,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -5967,7 +6017,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="Les mentions légales n'ont pas été détectées"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -5984,7 +6044,17 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Ⅹ
+              
+              <span
+                style={
+                  Object {
+                    "marginLeft": 5,
+                  }
+                }
+                title="La politique de confidentialité n'a pas été trouvée"
+              >
+                ⚠️
+              </span>
             </button>
           </div>
         </td>
@@ -6268,7 +6338,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -6285,7 +6355,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              0
+              ✔
             </button>
           </div>
         </td>
@@ -6302,7 +6372,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -6319,7 +6389,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
@@ -6472,7 +6542,7 @@ exports[`Should render full Dashboard 1`] = `
                     "marginLeft": 5,
                   }
                 }
-                title="Vos mentions légales sont présentes mais incomplètes. Consultez les détails pour plus d'informations"
+                title="Les mentions légales sont présentes mais incomplètes. Consultez les détails pour plus d'informations"
               >
                 ⚠️
               </span>
@@ -6499,7 +6569,7 @@ exports[`Should render full Dashboard 1`] = `
                     "marginLeft": 5,
                   }
                 }
-                title="Votre politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
+                title="La politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations"
               >
                 ⚠️
               </span>
@@ -6804,7 +6874,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A
+              ✔
             </button>
           </div>
         </td>
@@ -6821,7 +6891,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              A+
+              ✔
             </button>
           </div>
         </td>
