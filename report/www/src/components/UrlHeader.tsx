@@ -20,6 +20,9 @@ export const UrlHeader = ({ report, url }) => {
         </a>
       </CalloutTitle>
       <CalloutText>
+        {report.betagouv?.attributes?.pitch && (
+          <div>{report.betagouv?.attributes?.pitch}</div>
+        )}
         {report.category && (
           <Badge
             className={styles.badge}
@@ -40,6 +43,16 @@ export const UrlHeader = ({ report, url }) => {
               {tag}
             </Badge>
           ))}
+        {report.betagouv?.id && (
+          <Badge
+            className={styles.badge}
+            variant="info"
+            external={true}
+            to={`https://beta.gouv.fr/startups/${report.betagouv?.id}.html`}
+          >
+            fiche beta.gouv.fr
+          </Badge>
+        )}
         {updateDate && (
           <>
             <Clock size={16} className={styles.clockIcon} />
@@ -53,12 +66,11 @@ export const UrlHeader = ({ report, url }) => {
         )}
       </CalloutText>
       {report.screenshot && (
-        <div className={styles.image}>
-          <img
-            alt={`Copie d'écran de ${url}`}
-            src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
-          />
-        </div>
+        <img
+          className={styles.screenshotImg}
+          alt={`Copie d'écran de ${url}`}
+          src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
+        />
       )}
     </Callout>
   );

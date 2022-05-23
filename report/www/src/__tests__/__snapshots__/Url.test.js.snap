@@ -84,14 +84,11 @@ Array [
         5 mois
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -1219,14 +1216,11 @@ Array [
         5 mois
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -2354,14 +2348,11 @@ Array [
         5 mois
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
