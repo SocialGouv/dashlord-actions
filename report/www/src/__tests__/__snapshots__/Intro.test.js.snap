@@ -8,7 +8,7 @@ exports[`Should render Intro 1`] = `
     <h1
       class="fr-callout__title fr-text--lg"
     >
-      Dashlord fabrique numérique
+      DashLord Fabrique des ministères sociaux
     </h1>
     <p
       class="fr-callout__text fr-text--lg"
@@ -408,6 +408,73 @@ exports[`Should render Intro 1`] = `
       <h5
         class="mainTitle"
       >
+        Mozilla HTTP observatory
+      </h5>
+      <svg
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="margin-left: 5px; cursor: pointer;"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12.01"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+      <a
+        href="https://observatory.mozilla.org/"
+        rel="noreferrer noopener"
+        style="float: right;"
+        target="_blank"
+      >
+        Site officiel
+      </a>
+    </div>
+    <div
+      class="body"
+    >
+      Évalue le niveau de qualité/sécurité de la page web et de son serveur
+      <br />
+      <br />
+      <li>
+        Bonnes pratiques de configuration
+      </li>
+      <li>
+        Bonnes pratiques web
+      </li>
+      <li>
+        Solidité des clés de chiffrement
+      </li>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="banner"
+    >
+      <h5
+        class="mainTitle"
+      >
         Updown.io
       </h5>
       <svg
@@ -719,7 +786,7 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
     <h1
       class="fr-callout__title fr-text--lg"
     >
-      Dashlord fabrique numérique
+      DashLord Fabrique des ministères sociaux
     </h1>
     <p
       class="fr-callout__text fr-text--lg"
