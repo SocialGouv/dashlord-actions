@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`1000jours-blues: should return ml and pc 1`] = `
+Array [
+  Object {
+    "declarationUrl": "https://1000jours-blues.fabrique.social.gouv.fr/mentions-legales",
+    "maxScore": 4,
+    "mention": "Mentions légales",
+    "missingTrackers": Array [],
+    "missingWords": Array [],
+    "score": 4,
+    "slug": "ml",
+  },
+  Object {
+    "declarationUrl": "https://1000jours-blues.fabrique.social.gouv.fr/politique-confidentialite",
+    "maxScore": 4,
+    "mention": "Politique de confidentialité",
+    "missingTrackers": Array [],
+    "missingWords": Array [],
+    "score": 4,
+    "slug": "pc",
+  },
+]
+`;
+
 exports[`egapro: should return ml and pc 1`] = `
 Array [
   Object {
