@@ -109,7 +109,7 @@ describe("should parse dashlord config", () => {
       },
     });
     core.info(`subpages=${JSON.stringify(subpages)}`);
-    expect(subpages).toEqual(["https://chez.com/login", "https://chez.com/profile"]);
+    expect(subpages).toEqual(["https://chez.com", "https://chez.com/login", "https://chez.com/profile"]);
   });
 
   

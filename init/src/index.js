@@ -47,10 +47,11 @@ const getSiteTools = (site) => {
 const getSiteSubpages = (site) => {
   core.info(`site=${JSON.stringify(site)}`)
   core.info(`site.pages=${JSON.stringify(site.pages)}`)
-  if (site.pages === undefined) {
-    return [site.url];
+  let subpages = [site.url];
+  if (site.pages !== undefined) {
+    subpages.push(...site.pages.map((page) => site.url + page));
   }
-  return site.pages.map((page) => site.url + page);
+  return subpages;
 };
 
 const getOutputs = () => {

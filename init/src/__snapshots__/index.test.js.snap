@@ -42,6 +42,7 @@ Array [
       "chez/chez-api",
     ],
     "subpages": Array [
+      "http://chez.com",
       "http://chez.com/login",
       "http://chez.com/profile",
     ],
@@ -111,6 +112,7 @@ Array [
       "chez/chez-api",
     ],
     "subpages": Array [
+      "http://chez.com",
       "http://chez.com/login",
       "http://chez.com/profile",
     ],
