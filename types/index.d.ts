@@ -7,6 +7,7 @@ type UrlConfig = {
   title?: string;
   tags?: string[];
   repositories?: string[];
+  pages?: string[];
 };
 
 type ColorVariant = "info" | "success" | "warning" | "danger";

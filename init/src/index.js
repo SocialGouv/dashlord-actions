@@ -44,6 +44,15 @@ const getSiteTools = (site) => {
   }, {});
 };
 
+const getSiteSubpages = (site) => {
+  core.info(`site=${JSON.stringify(site)}`)
+  core.info(`site.pages=${JSON.stringify(site.pages)}`)
+  if (site.pages === undefined) {
+    return [site.url];
+  }
+  return site.pages.map((page) => site.url + page);
+};
+
 const getOutputs = () => {
   const urlsInput =
     core.getInput("url") &&
@@ -65,6 +74,7 @@ const getOutputs = () => {
     .map((site) => ({
       ...site,
       tools: getSiteTools(site),
+      subpages: getSiteSubpages(site)
     }));
   const urls = sites.map((u) => u.url).join("\n");
 
@@ -90,4 +100,4 @@ if (require.main === module) {
   run();
 }
 
-module.exports = { run, getOutputs, getSiteTools };
+module.exports = { run, getOutputs, getSiteTools, getSiteSubpages };
