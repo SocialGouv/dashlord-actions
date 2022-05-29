@@ -57,18 +57,20 @@ const matchInHtml = (htmlString, searchArray) => {
 const getDeclarationUrl = (dom, bestMatch, url) => {
   let declarationUrl;
   // try to find related href if any
-  Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
-    if (fuzzy(bestMatch.needle, a.text) > 0.9) {
+  Array.from(dom.window.document.querySelectorAll("a"))
+    .filter((a) => fuzzy(bestMatch.needle, a.text) > 0.9)
+    .forEach((a) => {
       // make URL absolute when possible
       const link = a.getAttribute("href");
       if (link !== "#") {
-        declarationUrl =
-          link.charAt(0) === "/"
-            ? `${url.replace(/\/$/, "") || ""}${link}`
-            : link;
+        if (link.match(/^https?:\/\//)) {
+          declarationUrl = link;
+        } else {
+          const separator = link.charAt(0) === "/" ? "" : "/";
+          declarationUrl = `${url.replace(/\/$/, "")}${separator}${link}`;
+        }
       }
-    }
-  });
+    });
   return declarationUrl;
 };
 
@@ -108,7 +110,9 @@ const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
 ) => {
-  const text = dom.window.document.body.textContent;
+  const text = Array.from(dom.window.document.querySelectorAll("a"))
+    .map((a) => a.text)
+    .join(" ");
   // add an object to result for every searches entry
   return searches.map((search) => {
     // fuzzy find the best match
@@ -152,7 +156,7 @@ const analyseUrl = async (url) => {
   return analyseDom(dom, { url });
 };
 
-module.exports = { analyseFile, analyseUrl };
+module.exports = { analyseDom, analyseFile, analyseUrl };
 
 if (require.main === module) {
   const url = process.argv[process.argv.length - 3]; // url, to make absolute links
@@ -161,5 +165,8 @@ if (require.main === module) {
 
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
-    .catch(() => console.log(JSON.stringify({ declaration: undefined })));
+    .catch((e) => {
+      console.error(e);
+      console.log(JSON.stringify({ declaration: undefined }));
+    });
 }

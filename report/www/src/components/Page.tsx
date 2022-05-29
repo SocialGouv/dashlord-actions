@@ -17,7 +17,7 @@ export const Page: React.FC<PageProps> = ({ data, url }) => {
       <Alert
         type="error"
         title=""
-        description="La page n'a pas été détectée!"
+        description={`La page n'a pas été détectée! Ajoutez-la sur ${url}/${data.uri}`}
       />
     );
   }
