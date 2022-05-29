@@ -59,7 +59,7 @@ const tabs = [
               title="Page de statistiques"
               info="Cette page permet de publier vos mesures d'impact"
             >
-              <Page data={report.stats} url={url} />
+              <Page data={report.stats} url={url} uri="stats" />
             </Panel>
           ) : null,
       },
@@ -71,7 +71,7 @@ const tabs = [
               title="Page de budget"
               info="Cette page permet de publier votre budget"
             >
-              <Page data={report.budget_page} url={url} />
+              <Page data={report.budget_page} url={url} uri="budget" />
             </Panel>
           ) : null,
       },
