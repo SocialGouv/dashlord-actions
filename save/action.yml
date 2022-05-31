@@ -72,8 +72,7 @@ runs:
 
         if [[ -e "./.lighthouseci" ]]
         then
-            touch ./.ligthouseci/lhr.json
-            echo -e "[]" | tee -a ./.ligthouseci/lhr.json
+            echo "[]" > ./.ligthouseci/lhr.json
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
                 LHR_TIMESTAMP=$(basename $LHR_JSON_PATH | sed -e "s/lhr-\([0-9]*\)\.json/\1/")
                 jq '. |= . + ["LHR_TIMESTAMP"]' ./.ligthouseci/lhr.json
