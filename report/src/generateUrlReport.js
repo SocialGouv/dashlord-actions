@@ -204,7 +204,20 @@ const generateUrlReport = (url) => {
       }
     };
 
-    copyForWebsite("lhr.html");
+    if (fs.existsSync(path.join(latestFilesPath, "lhr.json"))) {
+      fs.readFile(path.join(latestFilesPath, "lhr.json"), "utf8", (err, jsonString) => {
+        if (err) {
+          console.log("Error reading file lhr.json from disk:", err);
+          return;
+        }
+        try {
+          const lhrFiles = JSON.parse(jsonString);
+          lhrFiles.map((lhrFile) => copyForWebsite(`lhr-${lhrFile}.html`));
+        } catch (err) {
+          console.log("Error parsing JSON string:", err);
+        }
+      });
+    }
     copyForWebsite("testssl.html");
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");

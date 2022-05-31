@@ -10,7 +10,7 @@ const generateTrends = require("./trends");
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
 
 /**
- * Minify Lighthouse JSON data
+ * Minify JSON data
  *
  * @returns {DashLordReport} Full DashLoard report as JSON
  */

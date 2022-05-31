@@ -1607,9 +1607,9 @@ const getSiteTools = (site) => {
 const getSiteSubpages = (site) => {
   core.info(`site=${JSON.stringify(site)}`)
   core.info(`site.pages=${JSON.stringify(site.pages)}`)
-  let subpages = [site.url];
+  const subpages = [site.url.replace(/\/$/,"")];
   if (site.pages !== undefined) {
-    subpages.push(...site.pages.map((page) => site.url + page));
+    subpages.push(...site.pages.map((page) => [site.url.replace(/\/$/,""), page.replace(/^\//,"")].join("/")));
   }
   return subpages;
 };

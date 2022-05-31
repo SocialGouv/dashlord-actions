@@ -98,7 +98,7 @@ describe("should parse dashlord config", () => {
     fs.readFileSync.mockReturnValue(sampleConfig);
     const subpages = getSiteSubpages({
       url: "https://chez.com",
-      pages: ["/login", "/profile"],
+      pages: ["login", "profile"],
       repositories: ["chez/chez-ui", "chez/chez-api"],
       tools: {
         screenshot: false,

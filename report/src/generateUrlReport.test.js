@@ -50,7 +50,8 @@ describe("generateUrlReport", () => {
     });
     mockJson("dependabotalerts.json", { report: "dependabotalerts.json" });
     mockJson("http.json", { report: "http.json" });
-    mockJson("lhr.json", { report: "lhr.json" });
+    mockJson("lhr.json", ["dsfsdfqdf"]);
+    mockJson("lhr-dsfsdfqdf.json", { report: "lhr-dsfsdfqdf.json" });
     mockJson("nmapvuln.json", { report: "nmap.json" });
     mockJson("nuclei.json", [{ report: "nuclei.json" }]);
     mockJson("testssl.json", [{ report: "testssl.json" }]);
@@ -91,6 +92,7 @@ describe("generateUrlReport", () => {
     unMockJson("dependabotalerts.json");
     unMockJson("http.json");
     unMockJson("lhr.json");
+    unMockJson("lhr-dsfsdfqdf.json");
     unMockJson("nmapvuln.json");
     unMockJson("nuclei.json", []);
     unMockJson("testssl.json");
