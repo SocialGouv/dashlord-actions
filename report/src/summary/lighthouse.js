@@ -2,21 +2,21 @@ const {scoreToGrade} = require("../utils");
 
 // compute a performance score from 0 to 100 from lighthouse report
 /**
- * @param {LighthouseReport[]} report
+ * @param {LighthouseReport} report
  *
  * @returns {number}
  */
 const getPerformanceScore = (report) => {
   const numRequests =
-    report[0].audits &&
-    report[0].audits.diagnostics &&
-    report[0].audits.diagnostics.details?.items &&
-    report[0].audits.diagnostics.details?.items[0].numRequests;
+    report.audits &&
+    report.audits.diagnostics &&
+    report.audits.diagnostics.details?.items &&
+    report.audits.diagnostics.details?.items[0].numRequests;
   const totalByteWeight =
-    report[0].audits &&
-    report[0].audits.diagnostics &&
-    report[0].audits.diagnostics.details?.items &&
-    report[0].audits.diagnostics.details?.items[0].totalByteWeight;
+    report.audits &&
+    report.audits.diagnostics &&
+    report.audits.diagnostics.details?.items &&
+    report.audits.diagnostics.details?.items[0].totalByteWeight;
 
   const maxRequests = 50;
   const maxByteWeight = 1024 * 1024;
@@ -39,10 +39,10 @@ const getPerformanceScore = (report) => {
 };
 
 
-/** @param {LighthouseReport[]} report */
+/** @param {LighthouseReport} report */
 const summary = (report) => {
-  if (report[0] && report[0].categories) {
-    const lhrCategories = report[0].categories;
+  if (report && report.categories) {
+    const lhrCategories = report.categories;
     if (lhrCategories["performance"]) {
       lhrCategories["performance"].score = getPerformanceScore(report);
     }

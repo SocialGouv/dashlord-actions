@@ -212,7 +212,8 @@ const generateUrlReport = (url) => {
         }
         try {
           const lhrFiles = JSON.parse(jsonString);
-          lhrFiles.map((lhrFile) => copyForWebsite(`lhr-${lhrFile}.html`));
+          console.log("lhr.json: ", jsonString);
+          lhrFiles.map((lhrFile) => {copyForWebsite(`lhr-${lhrFile}.html`);copyForWebsite(`lhr-${lhrFile}.json`);});
         } catch (err) {
           console.log("Error parsing JSON string:", err);
         }
