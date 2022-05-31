@@ -72,12 +72,12 @@ runs:
 
         if [[ -e "./.lighthouseci" ]]
         then
-            echo "[]" > ${DASHLORD_REPO_PATH}/.ligthouseci/lhr.json
+            echo "[]" > .ligthouseci/lhr.json
             for LHR_JSON_PATH in .lighthouseci/lhr-*.json; do
                 LHR_TIMESTAMP=$(basename $LHR_JSON_PATH | sed -e "s/lhr-\([0-9]*\)\.json/\1/")
-                jq '. |= . + ["LHR_TIMESTAMP"]' ./.ligthouseci/lhr.json
+                jq --arg vtimestamp "${LHR_TIMESTAMP}" '. |= . + ["$vtimestamp"]' .ligthouseci/lhr.json
                 mv .lighthouseci/lhr-${LHR_TIMESTAMP}.json $OUT_PATH/lhr-${LHR_TIMESTAMP}.json
                 mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr-${LHR_TIMESTAMP}.html
             done
-            mv ${DASHLORD_REPO_PATH}/.lighthouseci/lhr.json $OUT_PATH/lhr.json
+            mv .lighthouseci/lhr.json $OUT_PATH/lhr.json
         fi
