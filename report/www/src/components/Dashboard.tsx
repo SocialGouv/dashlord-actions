@@ -214,6 +214,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "github_repository",
         category: "best-practices",
         gradeKey: "githubRepositoryGrade",
+        gradeLabel: (rowData) => {
+          //@ts-ignore
+          const count = rowData.summary.githubRepositoryGrade;
+          if (count === "A") {
+            return "✔";
+          }
+          return count;
+        },
       })
     );
   }
@@ -234,12 +242,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             case "D":
               return "";
             case "F":
-              return "Ⅹ";
+              return "";
           }
         },
         warningText: (summary) =>
-          summary["declaration-rgpd-ml"] === "D" &&
-          "Vos mentions légales sont présentes mais incomplètes. Consultez les détails pour plus d'informations",
+          (summary["declaration-rgpd-ml"] === "D" &&
+            "Les mentions légales sont présentes mais incomplètes. Consultez les détails pour plus d'informations") ||
+          (summary["declaration-rgpd-ml"] === "F" &&
+            "Les mentions légales n'ont pas été détectées"),
       })
     );
     columns.push(
@@ -257,12 +267,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
             case "D":
               return "";
             case "F":
-              return "Ⅹ";
+              return "";
           }
         },
         warningText: (summary) =>
-          summary["declaration-rgpd-pc"] === "D" &&
-          "Votre politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations",
+          (summary["declaration-rgpd-pc"] === "D" &&
+            "La politique de confidentialité est présente mais incomplète. Consultez les détails pour plus d'informations") ||
+          (summary["declaration-rgpd-pc"] === "F" &&
+            "La politique de confidentialité n'a pas été trouvée"),
       })
     );
   }
@@ -369,7 +381,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "securite",
         hash: "codescan",
         gradeKey: "codescanGrade",
-        gradeLabel: (rowData) => rowData.summary.codescanCount,
+        gradeLabel: (rowData) => {
+          const count = rowData.summary.codescanCount;
+          if (count === 0) {
+            return "✔";
+          }
+          return count;
+        },
       })
     );
   }
@@ -411,7 +429,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "trackersGrade",
-        gradeLabel: (rowData) => rowData.summary.trackersCount,
+        gradeLabel: (rowData) => {
+          const count = rowData.summary.trackersCount;
+          if (count === 0) {
+            return "✔";
+          }
+          return count;
+        },
       }),
       getColumn({
         id: "cookies",
@@ -420,7 +444,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "cookiesGrade",
-        gradeLabel: (rowData) => rowData.summary.cookiesCount,
+        gradeLabel: (rowData) => {
+          const count = rowData.summary.cookiesCount;
+          if (count === 0) {
+            return "✔";
+          }
+          return count;
+        },
       }),
     ]);
   }
@@ -434,7 +464,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         info: "Présence de la page des statistiques",
         hash: "stats",
         gradeKey: "statsGrade",
-        gradeLabel: (rowData) => rowData.summary.statsCount,
+        gradeLabel: (rowData) => {
+          if (rowData.summary.statsGrade === "A") {
+            return "✔";
+          }
+          return "X";
+        },
       })
     );
   }
@@ -462,7 +497,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "404",
         gradeKey: "404",
         gradeLabel: (rowData) => {
-          return rowData.summary["404"];
+          const count = rowData.summary["404"];
+          //@ts-ignore
+          if (count === 0 || count === "A+") {
+            return "✔";
+          }
+          return count;
         },
       })
     );
