@@ -465,7 +465,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "stats",
         gradeKey: "statsGrade",
         gradeLabel: (rowData) => {
-          const grade = rowData.summary.statsGrade;
           if (rowData.summary.statsGrade === "A") {
             return "✔";
           }
