@@ -1567,7 +1567,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              X
+              F
             </button>
           </div>
         </td>
@@ -2979,7 +2979,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              X
+              F
             </button>
           </div>
         </td>
@@ -3454,7 +3454,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              X
+              F
             </button>
           </div>
         </td>
@@ -5389,7 +5389,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              X
+              F
             </button>
           </div>
         </td>

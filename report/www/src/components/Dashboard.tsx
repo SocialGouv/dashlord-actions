@@ -131,7 +131,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       warning: id === "accessibility" ? <AccessibilityWarnings /> : undefined,
       hash: "lighthouse",
       gradeKey: `lighthouse_${id}Grade`,
-      gradeLabel: (rowData) => percent(rowData.summary[`lighthouse_${id}`]),
+      gradeLabel: (rowData) =>
+        rowData.lhr && percent(rowData.summary[`lighthouse_${id}`]),
     });
 
   let columns = [
@@ -465,10 +466,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "stats",
         gradeKey: "statsGrade",
         gradeLabel: (rowData) => {
-          if (rowData.summary.statsGrade === "A") {
+          const grade = rowData.summary.statsGrade;
+          if (grade === "A") {
             return "✔";
           }
-          return "X";
+          return grade;
         },
       })
     );
