@@ -3,16 +3,19 @@ import React, { CSSProperties } from "react";
 import { useRouter } from "next/router";
 
 import styles from "./badge.module.scss";
+import { flattenOnKeys } from "react-base-table";
 
 type BadgeProps = {
   variant: string;
   className?: string;
   to?: string;
   style?: CSSProperties;
+  external?: boolean;
 };
 
 const Badge: React.FC<BadgeProps> = ({
   children,
+  external = false,
   variant,
   className,
   to,
@@ -25,6 +28,10 @@ const Badge: React.FC<BadgeProps> = ({
       className={classNames(className, styles[variant])}
       onClick={() => {
         if (to) {
+          if (external) {
+            window.open(to);
+            return;
+          }
           router.push(to);
         }
       }}
