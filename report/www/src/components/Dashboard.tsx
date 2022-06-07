@@ -345,7 +345,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "updownio",
         gradeKey: "uptimeGrade",
         category: "disponibilite",
-        gradeLabel: (rowData) => percent((rowData.summary.uptime || 0) / 100),
+        gradeLabel: (rowData) =>
+          rowData.summary.uptime !== undefined &&
+          percent((rowData.summary.uptime || 0) / 100),
       }),
       getColumn({
         id: "updownio2",
