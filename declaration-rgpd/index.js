@@ -77,7 +77,7 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   const htmlOutput = execSync(
-    `npx pwpr --url=${result.declarationUrl} --load=30000`
+    `npx pwpr --url=${result.declarationUrl} --load=30000 --locale=fr-FR`
   );
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;

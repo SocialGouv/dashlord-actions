@@ -9,6 +9,10 @@ inputs:
     description: Path to output file
     default: result.html
     required: false
+  locale:
+    description: Default Playwright context locale
+    default: fr-FR
+    required: false
 
 runs:
   using: "composite"
@@ -16,4 +20,4 @@ runs:
     - shell: bash
       id: scan
       run: |
-        npx pwpr --url=${{ inputs.url }} --load=30000 --output ${{ inputs.output }}
+        npx pwpr --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ inputs.output }}
