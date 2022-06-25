@@ -20,7 +20,9 @@ jobs:
       - uses: ./get-html
         with:
           url: https://opentermsarchive.org
+          output: result.html
       - shell: bash
         run: |
           ls -la
+          ls -la get-html
           cat result.html
