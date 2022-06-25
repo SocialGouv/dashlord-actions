@@ -23,6 +23,4 @@ jobs:
           output: result.html
       - shell: bash
         run: |
-          ls -la
-          ls -la get-html
-          cat result.html
+          cat result.html | grep Accessibilité
