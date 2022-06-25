@@ -46,3 +46,4 @@ See also the [report README](./report/README.md)
 3. In `report/src/summary`, add compute logic for your scanner score.
 4. Build a new report.json, see above
 5. Run `yarn start` in the `report/www` folder to start adding types from your action and UI for your component
+
