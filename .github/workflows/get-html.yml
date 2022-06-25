@@ -17,7 +17,6 @@ jobs:
       - shell: bash
         run: |
           ls -la
-          cat result.html
       - uses: ./get-html
         with:
           url: https://opentermsarchive.org
