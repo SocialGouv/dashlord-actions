@@ -76,8 +76,9 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
+  // todo: fix the locale issue
   const htmlOutput = execSync(
-    `npx pwpr --url=${result.declarationUrl} --load=30000 --locale=fr-FR`
+    `npx pwpr@2.2.0 --url=${result.declarationUrl} --load=30000 --locale=fr-FR`
   );
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;

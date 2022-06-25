@@ -17,7 +17,12 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "14"
     - shell: bash
       id: scan
       run: |
-        npx pwpr --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ inputs.output }}
+        cd get-html
+        yarn
+        node index --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ github.workspace }}/${{ inputs.output }}

@@ -1,0 +1,12 @@
+{
+  "name": "@socialgouv/get-html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4",
+    "fs-extra": "^10.1.0",
+    "minimist": "^1.2.6",
+    "playwright": "^1.22.2"
+  }
+}
