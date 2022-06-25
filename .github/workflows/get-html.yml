@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: ["*"]
 
-name: Tests get-html action
+name: Test get-html action
 jobs:
   tests-report:
     runs-on: ubuntu-latest

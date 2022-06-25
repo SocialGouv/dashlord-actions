@@ -24,6 +24,5 @@ runs:
       id: scan
       run: |
         cd get-html
-        ls -la
         yarn
-        node index --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ inputs.output }}
+        node index --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ github.workspace }}/${{ inputs.output }}
