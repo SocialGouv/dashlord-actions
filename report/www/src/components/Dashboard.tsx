@@ -493,6 +493,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         perPage={1000}
         tableClassName={styles.table}
         className={styles.tableWrapper}
+        fixedHeader={true}
       />
     )) ||
     null
