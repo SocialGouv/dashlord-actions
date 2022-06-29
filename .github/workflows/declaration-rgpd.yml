@@ -2,19 +2,18 @@ on:
   push:
     branches: ["*"]
     paths:
-      - init/**
-      - .github/workflows/init.yml
+      - declaration-rgpd
   pull_request:
     branches: ["*"]
 
-name: Test init JS
+name: Test declaration-rgpd
 jobs:
   tests:
     runs-on: ubuntu-latest
-    name: Test sh
+    name: Test
     steps:
       - uses: actions/checkout@v3
       - run: |
-          cd init
-          npm i
-          npm test
+          cd declaration-rgpd
+          yarn
+          yarn test

@@ -54,8 +54,8 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
     );
   };
 
-  const getMissingWordsTable = (itemData: DeclarationRgpdItem) => {
-    const resolution = getMissingWordsResolution(itemData.slug);
+  const getMissingWordsTable = (itemData: DeclarationRgpdItem, slug) => {
+    const resolution = getMissingWordsResolution(slug);
     const rows = itemData.missingWords.map((word: string, index: number) => ({
       key: index,
       word,
@@ -75,10 +75,19 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
     );
   };
 
-  const getPresenceAlerts = (itemData: DeclarationRgpdItem) => {
-    if (!itemData.mention) {
+  const getPresenceAlerts = (itemData: DeclarationRgpdItem, slug) => {
+    if (!itemData || !itemData.mention) {
       return (
-        <Alert type="error" description={<>Pas de déclaration détectée</>} />
+        <>
+          <Alert
+            type="error"
+            description={<>Pas de déclaration détectée. </>}
+          />
+          <Alert
+            type="error"
+            description={<>{getMissingWordsResolution(slug)} </>}
+          />
+        </>
       );
     } else if (!itemData.declarationUrl) {
       return (
@@ -110,7 +119,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
             }
           />
           {itemData.missingWords.length ? (
-            getMissingWordsTable(itemData)
+            getMissingWordsTable(itemData, slug)
           ) : (
             <></>
           )}
@@ -143,26 +152,19 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
   };
 
   return (
-    (data && (
-      <>
-        {mlData && (
-          <Panel
-            title="Mentions légales"
-            info="Les mentions légales sont une page obligatoire qui présente les personnes chargées de la plateforme"
-          >
-            {getPresenceAlerts(mlData)}
-          </Panel>
-        )}
-        {pcData && (
-          <Panel
-            title="Politique de confidentialité"
-            info="La politique de confidentialité est une page présentant aux utilisateurs les traitements de données personnelles et les éventuelles trackers"
-          >
-            {getPresenceAlerts(pcData)}
-          </Panel>
-        )}
-      </>
-    )) ||
-    null
+    <>
+      <Panel
+        title="Mentions légales"
+        info="Les mentions légales sont une page obligatoire qui présente les personnes chargées de la plateforme"
+      >
+        {getPresenceAlerts(mlData, "ml")}
+      </Panel>
+      <Panel
+        title="Politique de confidentialité"
+        info="La politique de confidentialité est une page présentant aux utilisateurs les traitements de données personnelles et les éventuelles trackers"
+      >
+        {getPresenceAlerts(pcData, "pc")}
+      </Panel>
+    </>
   );
 };

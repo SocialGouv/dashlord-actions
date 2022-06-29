@@ -2,9 +2,15 @@
   "name": "declaration-rgpd",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "fast-fuzzy": "^1.10.10",
     "jsdom": "^19.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
   }
 }

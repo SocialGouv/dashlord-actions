@@ -77,21 +77,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -416,7 +413,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    45%
+                    30%
                   </div>
                 </div>
               </div>
@@ -480,7 +477,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    1.5s
+                    1.2s
                   </div>
                 </div>
               </div>
@@ -498,7 +495,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    3.4s
+                    4.5s
                   </div>
                 </div>
               </div>
@@ -516,7 +513,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    51
+                    54
                   </div>
                 </div>
               </div>
@@ -534,7 +531,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    7.6Mb
+                    7.10Mb
                   </div>
                 </div>
               </div>
@@ -859,7 +856,7 @@ Array [
                 
               </p>
               <p>
-                La page n'a pas été détectée!
+                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
               </p>
             </div>
           </div>
@@ -945,12 +942,173 @@ Array [
                 La déclaration est disponible sur :
                  
                 <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  href="https://www.fabrique.social.gouv.fr/declaration-accessibilite"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  https://www.fabrique.social.gouv.fr/accessibilite
+                  https://www.fabrique.social.gouv.fr/declaration-accessibilite
                 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          id="declaration-rgpd"
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Mentions légales
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--success"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Votre déclaration a bien été détectée sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/mentions-legales/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/mentions-legales/
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Politique de confidentialité
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--error"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Pas de déclaration détectée. 
+              </p>
+            </div>
+            <div
+              className="fr-alert fr-alert--error"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Rendez vous sur
+                 
+                <a
+                  href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                >
+                  https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
+                </a>
+                 
               </p>
             </div>
           </div>
@@ -1041,6 +1199,21 @@ Array [
                   <tr>
                     <td>
                       https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/enfants-du-spectacle/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/Domifa/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/transition-collective/
                     </td>
                   </tr>
                   <tr>
@@ -1214,21 +1387,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -1553,7 +1723,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    45%
+                    30%
                   </div>
                 </div>
               </div>
@@ -1617,7 +1787,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    1.5s
+                    1.2s
                   </div>
                 </div>
               </div>
@@ -1635,7 +1805,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    3.4s
+                    4.5s
                   </div>
                 </div>
               </div>
@@ -1653,7 +1823,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    51
+                    54
                   </div>
                 </div>
               </div>
@@ -1671,7 +1841,7 @@ Array [
                   <div
                     className="cardValue"
                   >
-                    7.6Mb
+                    7.10Mb
                   </div>
                 </div>
               </div>
@@ -1996,7 +2166,7 @@ Array [
                 
               </p>
               <p>
-                La page n'a pas été détectée!
+                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
               </p>
             </div>
           </div>
@@ -2082,12 +2252,173 @@ Array [
                 La déclaration est disponible sur :
                  
                 <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  href="https://www.fabrique.social.gouv.fr/declaration-accessibilite"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  https://www.fabrique.social.gouv.fr/accessibilite
+                  https://www.fabrique.social.gouv.fr/declaration-accessibilite
                 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          id="declaration-rgpd"
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Mentions légales
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--success"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Votre déclaration a bien été détectée sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/mentions-legales/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/mentions-legales/
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Politique de confidentialité
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--error"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Pas de déclaration détectée. 
+              </p>
+            </div>
+            <div
+              className="fr-alert fr-alert--error"
+              role="alert"
+            >
+              <p
+                className="fr-alert__title"
+              />
+              <p>
+                Rendez vous sur
+                 
+                <a
+                  href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                >
+                  https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
+                </a>
+                 
               </p>
             </div>
           </div>
@@ -2178,6 +2509,21 @@ Array [
                   <tr>
                     <td>
                       https://www.fabrique.social.gouv.fr/faq/beta.gouv.fr
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/enfants-du-spectacle/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/Domifa/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/transition-collective/
                     </td>
                   </tr>
                   <tr>
@@ -2351,21 +2697,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
