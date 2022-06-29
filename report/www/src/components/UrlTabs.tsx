@@ -39,6 +39,7 @@ export const TabContent = ({ id, tabIndex, selected, items }) => (
     ) : (
       <Alert
         type="warning"
+        title="warn-no-info"
         description={<>Aucune information trouvée dans cette catégorie</>}
       />
     )}
