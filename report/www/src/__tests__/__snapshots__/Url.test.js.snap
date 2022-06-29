@@ -852,7 +852,6 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -924,18 +923,18 @@ Array [
           >
             <div
               className="fr-alert fr-alert--info"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                non-conforme
+              </p>
               <p>
                 La mention a bien été detectée : Non conforme
               </p>
             </div>
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -1079,12 +1078,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1103,12 +1103,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1127,12 +1128,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1987,7 +1989,6 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -2059,18 +2060,18 @@ Array [
           >
             <div
               className="fr-alert fr-alert--info"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                non-conforme
+              </p>
               <p>
                 La mention a bien été detectée : Non conforme
               </p>
             </div>
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -2214,12 +2215,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2238,12 +2240,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2262,12 +2265,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2558,12 +2562,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2582,12 +2587,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2606,12 +2612,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2630,12 +2637,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
