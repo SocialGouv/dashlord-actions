@@ -1011,11 +1011,12 @@ Array [
           >
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                declaration-ok
+              </p>
               <p>
                 Votre déclaration a bien été détectée sur :
                  
@@ -1084,22 +1085,24 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                no-declaration
+              </p>
               <p>
                 Pas de déclaration détectée. 
               </p>
             </div>
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                incomplete-declaration
+              </p>
               <p>
                 Rendez vous sur
                  
@@ -2321,11 +2324,12 @@ Array [
           >
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                declaration-ok
+              </p>
               <p>
                 Votre déclaration a bien été détectée sur :
                  
@@ -2394,22 +2398,24 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                no-declaration
+              </p>
               <p>
                 Pas de déclaration détectée. 
               </p>
             </div>
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                incomplete-declaration
+              </p>
               <p>
                 Rendez vous sur
                  
