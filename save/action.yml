@@ -69,12 +69,14 @@ runs:
 
         ls -la .lighthouseci
 
+        echo "${OUT_PATH}"
         ls -la "${OUT_PATH}"
 
         if [[ -e "./.lighthouseci" ]]
         then
             # concat all JSON reports
             jq -s '.' ./.lighthouseci/lhr-*.json > "$OUT_PATH"/lhr.json
+            ls -la ${OUT_PATH}
             # rename html reports with guessable url for publication
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
                 echo "$LHR_JSON_PATH"
