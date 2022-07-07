@@ -81,10 +81,12 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
         <>
           <Alert
             type="error"
+            title="no-declaration"
             description={<>Pas de déclaration détectée. </>}
           />
           <Alert
             type="error"
+            title="incomplete-declaration"
             description={<>{getMissingWordsResolution(slug)} </>}
           />
         </>
@@ -93,6 +95,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <Alert
           type="error"
+          title="mention-no-declaration"
           description={<>Mention présente mais pas de déclaration détectée</>}
         />
       );
@@ -101,6 +104,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
         <>
           <Alert
             type="info"
+            title="declaration-ok-incomplete"
             description={
               <>
                 Votre déclaration a bien été détectée sur :{" "}
@@ -134,6 +138,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <Alert
           type="success"
+          title="declaration-ok"
           description={
             <>
               Votre déclaration a bien été détectée sur :{" "}

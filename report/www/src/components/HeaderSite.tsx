@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactChildren, useState } from "react";
+import React, { ReactChildren, useState } from "react";
 import { default as Link } from "next/link";
 import { useRouter } from "next/router";
 import uniq from "lodash.uniq";
