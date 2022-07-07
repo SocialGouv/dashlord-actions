@@ -5,7 +5,8 @@ import { Container } from "@dataesr/react-dsfr";
 import Head from "next/head";
 import { init } from "@socialgouv/matomo-next";
 
-import "@gouvfr/dsfr/dist/dsfr/dsfr.min.css";
+import "@gouvfr/dsfr/dist/utility/utility.main.min.css";
+import "@gouvfr/dsfr/dist/dsfr/dsfr.main.min.css";
 import "rc-tooltip/assets/bootstrap.css";
 
 import { HeaderSite } from "../src/components/HeaderSite";
