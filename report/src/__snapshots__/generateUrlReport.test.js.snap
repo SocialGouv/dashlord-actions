@@ -78,14 +78,16 @@ Object {
   "http": Object {
     "report": "http.json",
   },
-  "lhr": Object {
-    "audits": Object {},
-    "categories": Object {},
-    "fetchTime": undefined,
-    "finalUrl": undefined,
-    "requestedUrl": undefined,
-    "runWarnings": undefined,
-  },
+  "lhr": Array [
+    Object {
+      "audits": Object {},
+      "categories": Object {},
+      "fetchTime": undefined,
+      "finalUrl": undefined,
+      "requestedUrl": undefined,
+      "runWarnings": undefined,
+    },
+  ],
   "nmap": Object {
     "report": "nmap.json",
   },
