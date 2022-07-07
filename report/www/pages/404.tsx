@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { About } from "../src/components/About";
-
 const PageIntro: NextPage = () => {
   return (
     <>

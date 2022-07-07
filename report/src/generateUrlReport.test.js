@@ -16,8 +16,8 @@ const mockJson = (name, data) =>
       data
         ? data
         : {
-          data: name,
-        },
+            data: name,
+          },
     { virtual: true }
   );
 
@@ -42,6 +42,11 @@ describe("generateUrlReport", () => {
   test(`should generate latest report for a valid url`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => false); // screenshot
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
 
     // mock all required files
     mockJson("codescanalerts.json", {
@@ -110,7 +115,11 @@ describe("generateUrlReport", () => {
   test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => false); // screenshot
-
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
     mockJson("codescanalerts.json");
     mockJson("wappalyzer.json");
 
@@ -127,6 +136,12 @@ describe("generateUrlReport", () => {
   test(`should detect screenshot if any`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => true); // screenshot
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
+
     expect(
       generateUrlReport({
         url: testUrl,
