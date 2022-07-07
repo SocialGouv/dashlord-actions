@@ -75,15 +75,16 @@ runs:
         if [[ -e "./.lighthouseci" ]]
         then
             # concat all JSON reports
-            jq -s '.' ./.lighthouseci/lhr-*.json > "$OUT_PATH"/lhr.json
-            ls -la ${OUT_PATH}
+            jq -s '.' ./.lighthouseci/lhr-*.json > "${OUT_PATH}/lhr.json"
+            ls -la "${OUT_PATH}"
             # rename html reports with guessable url for publication
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
                 echo "$LHR_JSON_PATH"
                 OUT_FILE=lhr-$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500).html
+                pwd
                 echo "mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}"
                 mv "${LHR_JSON_PATH%.json}.html" to "${OUT_PATH}/${OUT_FILE}"
             done
         fi
 
-        ls -la ${OUT_PATH}
+        ls -la "${OUT_PATH}"
