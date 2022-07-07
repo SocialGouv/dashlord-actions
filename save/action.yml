@@ -64,9 +64,6 @@ runs:
 
         ###### copy LHR reports ######
 
-        # todo: summarize multiple LHR runs
-        # if multiple scans detected we dont want to duplicate the whole data, do we ?
-
         # https://stackoverflow.com/a/29438087/174027
         shopt -s nullglob
 
@@ -80,5 +77,6 @@ runs:
                 echo "mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}"
                 mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}
             done
-            mv .lighthouseci/lhr.json $OUT_PATH/lhr.json
         fi
+
+        ls -la ${OUT_PATH}
