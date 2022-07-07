@@ -102,7 +102,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             </NavItem>
           )) ||
             null}
-          <NavItem title="Urls" className="pouet">
+          <NavItem title="Urls">
             {sortedReport.map((url) => (
               <NavSubItem
                 key={url.url}

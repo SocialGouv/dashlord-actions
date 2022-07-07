@@ -4,7 +4,7 @@ exports[`Should render empty Dashboard 1`] = `null`;
 
 exports[`Should render full Dashboard 1`] = `
 <div
-  className="fr-table tableWrapper"
+  className="fr-table fr-table--header-fixed tableWrapper"
 >
   <table
     className="table"
@@ -6952,7 +6952,7 @@ exports[`Should render full Dashboard 1`] = `
 
 exports[`Tools config Should render Dashboard with limited tools 1`] = `
 <div
-  className="fr-table tableWrapper"
+  className="fr-table fr-table--header-fixed tableWrapper"
 >
   <table
     className="table"

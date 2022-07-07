@@ -93,7 +93,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--success"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -104,7 +103,6 @@ exports[`Should render Intro 1`] = `
       </div>
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -114,8 +112,7 @@ exports[`Should render Intro 1`] = `
         </p>
       </div>
       <div
-        class="fr-alert fr-alert--warning"
-        role="alert"
+        class="fr-alert fr-alert--error"
       >
         <p
           class="fr-alert__title"
@@ -174,7 +171,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -225,7 +221,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -306,7 +301,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -388,7 +382,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -537,7 +530,6 @@ exports[`Should render Intro 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -619,12 +611,13 @@ exports[`Should render Intro 1`] = `
       </li>
       <br />
       <div
-        class="fr-alert fr-alert--warning"
-        role="alert"
+        class="fr-alert fr-alert--error"
       >
         <p
           class="fr-alert__title"
-        />
+        >
+          thirdparties
+        </p>
         <p>
           Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs
         </p>
@@ -867,7 +860,6 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -918,7 +910,6 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -999,7 +990,6 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -1081,7 +1071,6 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -1163,7 +1152,6 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       <br />
       <div
         class="fr-alert fr-alert--info"
-        role="alert"
       >
         <p
           class="fr-alert__title"
@@ -1245,12 +1233,13 @@ exports[`Tools config Should render Intro with limited tools 1`] = `
       </li>
       <br />
       <div
-        class="fr-alert fr-alert--warning"
-        role="alert"
+        class="fr-alert fr-alert--error"
       >
         <p
           class="fr-alert__title"
-        />
+        >
+          thirdparties
+        </p>
         <p>
           Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs
         </p>
