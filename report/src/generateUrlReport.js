@@ -61,42 +61,52 @@ const nucleiCleanup = (result, url) =>
 /**
  * Minify Lighthouse JSON data
  *
- * @param {LighthouseReport} result Lighthouse JSON content
+ * @param {UrlReport["lhr"]} result Lighthouse JSON content
  *
- * @returns {LighthouseReport|null} minified JSON content
+ * @returns {LighthouseReport[]|null} minified JSON content
  */
 const lhrCleanup = (result) => {
   if (!result) {
     return null;
   }
-  const { requestedUrl, finalUrl, fetchTime, runWarnings, categories, audits } =
-    result;
+  const lhrItems = Array.isArray(result) ? result : [result];
 
-  /** @type {LighthouseReportCategories} */
-  // @ts-ignore
-  const newCategories =
-    (categories &&
-      Object.keys(categories).reduce(
-        (
-          a,
-          /** @type {LighthouseReportCategoryKey} */
-          key
-        ) => ({
-          ...a,
+  return lhrItems.map((item) => {
+    const {
+      requestedUrl,
+      finalUrl,
+      fetchTime,
+      runWarnings,
+      categories,
+      audits,
+    } = item;
 
-          [key]: omit(categories[key], "auditRefs"),
-        }),
-        {}
-      )) ||
-    {};
-  return {
-    requestedUrl,
-    finalUrl,
-    fetchTime,
-    runWarnings,
-    categories: newCategories,
-    audits: pick(audits, ["metrics", "diagnostics"]),
-  };
+    /** @type {LighthouseReportCategories} */
+    // @ts-ignore
+    const newCategories =
+      (categories &&
+        Object.keys(categories).reduce(
+          (
+            a,
+            /** @type {LighthouseReportCategoryKey} */
+            key
+          ) => ({
+            ...a,
+
+            [key]: omit(categories[key], "auditRefs"),
+          }),
+          {}
+        )) ||
+      {};
+    return {
+      requestedUrl,
+      finalUrl,
+      fetchTime,
+      runWarnings,
+      categories: newCategories,
+      audits: pick(audits, ["metrics", "diagnostics"]),
+    };
+  });
 };
 
 /**
@@ -141,7 +151,7 @@ const tools = {
   "declaration-rgpd": {
     data: requireToolData("declaration-rgpd.json"),
   },
-  "betagouv": {
+  betagouv: {
     data: requireToolData("betagouv.json"),
   },
 };

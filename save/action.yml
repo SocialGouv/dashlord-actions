@@ -72,12 +72,13 @@ runs:
 
         if [[ -e "./.lighthouseci" ]]
         then
-            echo "[]" > .ligthouseci/lhr.json
-            for LHR_JSON_PATH in .lighthouseci/lhr-*.json; do
-                LHR_TIMESTAMP=$(basename $LHR_JSON_PATH | sed -e "s/lhr-\([0-9]*\)\.json/\1/")
-                jq --arg vtimestamp "${LHR_TIMESTAMP}" '. |= . + ["$vtimestamp"]' .ligthouseci/lhr.json
-                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.json $OUT_PATH/lhr-${LHR_TIMESTAMP}.json
-                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr-${LHR_TIMESTAMP}.html
+            # concat all JSON reports
+            jq -s '.' ./lighthouseci/*.json > "$OUT_PATH"/lhr.json
+            # rename html reports with guessable url for publication
+            for LHR_JSON_PATH in ./lighthouseci/*.json; do
+                OUT_FILE=lhr-$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500).html
+                echo "mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}"
+                mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}
             done
             mv .lighthouseci/lhr.json $OUT_PATH/lhr.json
         fi

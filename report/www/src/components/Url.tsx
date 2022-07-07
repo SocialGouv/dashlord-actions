@@ -43,7 +43,7 @@ const tabs = [
         render: (report, url) => (
           <LightHouse
             data={report.lhr}
-            url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
+            url={`${BASE_PATH}/report/${btoa(url)}`}
           />
         ),
       },

@@ -1,4 +1,4 @@
-const {scoreToGrade} = require("../utils");
+const { scoreToGrade } = require("../utils");
 
 // compute a performance score from 0 to 100 from lighthouse report
 /**
@@ -7,16 +7,21 @@ const {scoreToGrade} = require("../utils");
  * @returns {number}
  */
 const getPerformanceScore = (report) => {
+  /* @type {LighthouseReport} */
+  const reportData = (report && Array.isArray(report) && report[0]) || report; // use first lhr report
+  if (!reportData) {
+    return 0;
+  }
   const numRequests =
-    report.audits &&
-    report.audits.diagnostics &&
-    report.audits.diagnostics.details?.items &&
-    report.audits.diagnostics.details?.items[0].numRequests;
+    reportData.audits &&
+    reportData.audits.diagnostics &&
+    reportData.audits.diagnostics.details?.items &&
+    reportData.audits.diagnostics.details?.items[0].numRequests;
   const totalByteWeight =
-    report.audits &&
-    report.audits.diagnostics &&
-    report.audits.diagnostics.details?.items &&
-    report.audits.diagnostics.details?.items[0].totalByteWeight;
+    reportData.audits &&
+    reportData.audits.diagnostics &&
+    reportData.audits.diagnostics.details?.items &&
+    reportData.audits.diagnostics.details?.items[0].totalByteWeight;
 
   const maxRequests = 50;
   const maxByteWeight = 1024 * 1024;
@@ -37,7 +42,6 @@ const getPerformanceScore = (report) => {
   score = Math.max(0, score / 100);
   return score;
 };
-
 
 /** @param {LighthouseReport} report */
 const summary = (report) => {
