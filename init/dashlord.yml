@@ -28,6 +28,9 @@ urls:
     repositories:
       - chez/chez-ui
       - chez/chez-api
+    pages:
+      - /login
+      - /profile 
     tools:
       screenshot: false
       updownio: false

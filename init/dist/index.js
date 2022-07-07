@@ -1604,6 +1604,16 @@ const getSiteTools = (site) => {
   }, {});
 };
 
+const getSiteSubpages = (site) => {
+  core.info(`site=${JSON.stringify(site)}`)
+  core.info(`site.pages=${JSON.stringify(site.pages)}`)
+  const subpages = [site.url.replace(/\/$/,"")];
+  if (site.pages !== undefined) {
+    subpages.push(...site.pages.map((page) => [site.url.replace(/\/$/,""), page.replace(/^\//,"")].join("/")));
+  }
+  return subpages;
+};
+
 const getOutputs = () => {
   const urlsInput =
     core.getInput("url") &&
@@ -1625,6 +1635,7 @@ const getOutputs = () => {
     .map((site) => ({
       ...site,
       tools: getSiteTools(site),
+      subpages: getSiteSubpages(site)
     }));
   const urls = sites.map((u) => u.url).join("\n");
 
@@ -1650,7 +1661,7 @@ if (require.main === require.cache[eval('__filename')]) {
   run();
 }
 
-module.exports = { run, getOutputs, getSiteTools };
+module.exports = { run, getOutputs, getSiteTools, getSiteSubpages };
 
 
 /***/ }),

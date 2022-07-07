@@ -1,5 +1,6 @@
 /// <reference path="./summary.d.ts" />
 /// <reference path="./trends.d.ts" />
+/// <reference path="./lighthouse.d.ts" />
 
 type UrlConfig = {
   url: string;
@@ -7,6 +8,7 @@ type UrlConfig = {
   title?: string;
   tags?: string[];
   repositories?: string[];
+  pages?: string[];
 };
 
 type ColorVariant = "info" | "success" | "warning" | "danger";
@@ -44,47 +46,6 @@ type DashlordConfig = {
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
-};
-
-type LighthouseReportCategory = {
-  title: string;
-  id: string;
-  score: number | null;
-  description?: string;
-};
-
-type LighthouseReportCategoryKey =
-  | "performance"
-  | "accessibility"
-  | "best-practices"
-  | "seo"
-  | "pwa";
-
-type LighthouseReportCategories = Record<
-  LighthouseReportCategoryKey,
-  LighthouseReportCategory
->;
-
-type LighthouseReportAudits = {
-  metrics: {
-    details?: {
-      items?: any[];
-    };
-  };
-  diagnostics: {
-    details?: {
-      items?: any[];
-    };
-  };
-};
-
-type LighthouseReport = {
-  requestedUrl: string;
-  finalUrl: string;
-  runWarnings: string[];
-  categories: LighthouseReportCategories;
-  fetchTime: string;
-  audits: LighthouseReportAudits;
 };
 
 type SslTestReportEntry = {
@@ -343,7 +304,7 @@ type UpDownReport = {
 type Wget404Report = string[];
 
 type UrlReport = UrlConfig & {
-  lhr?: LighthouseReport | null;
+  lhr?: LighthouseReport | LighthouseReport[] | null;
   testssl?: SslTestReport | null;
   nmap?: NmapReport | null;
   http?: HttpReport | null;
@@ -374,8 +335,8 @@ type BetagouvReport = {
   attributes: {
     repository: string;
     phases: BetagouvReportPhase[];
-  }
-}
+  };
+};
 
 type DashLordReport = UrlReport[];
 

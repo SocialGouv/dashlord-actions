@@ -64,17 +64,20 @@ runs:
 
         ###### copy LHR reports ######
 
-        # todo: summarize multiple LHR runs
-        # if multiple scans detected we dont want to duplicate the whole data, do we ?
-
         # https://stackoverflow.com/a/29438087/174027
         shopt -s nullglob
 
         if [[ -e "./.lighthouseci" ]]
         then
+            # concat all JSON reports
+            jq -s '.' ./.lighthouseci/lhr-*.json > "${OUT_PATH}/lhr.json"
+            # rename html reports with guessable url for publication
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
-                LHR_TIMESTAMP=$(basename $LHR_JSON_PATH | sed -e "s/lhr-\([0-9]*\)\.json/\1/")
-                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.json $OUT_PATH/lhr.json
-                mv .lighthouseci/lhr-${LHR_TIMESTAMP}.html $OUT_PATH/lhr.html
+                LHR_URL_B64=$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500)
+                OUT_FILE="lhr-${LHR_URL_B64}.html"
+                echo "mv ${LHR_JSON_PATH%.json}.html ${OUT_PATH}/${OUT_FILE}"
+                mv "${LHR_JSON_PATH%.json}.html" "${OUT_PATH}/${OUT_FILE}"
             done
         fi
+
+        ls -la "${OUT_PATH}"
