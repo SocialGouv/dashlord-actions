@@ -1,6 +1,7 @@
 import * as React from "react";
-
 import { Row, Col } from "@dataesr/react-dsfr";
+
+import { btoa } from "../utils";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
 import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
