@@ -69,6 +69,8 @@ runs:
 
         ls -la .lighthouseci
 
+        ls -la "${OUT_PATH}"
+
         if [[ -e "./.lighthouseci" ]]
         then
             # concat all JSON reports
@@ -78,7 +80,7 @@ runs:
                 echo "$LHR_JSON_PATH"
                 OUT_FILE=lhr-$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500).html
                 echo "mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}"
-                mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}
+                mv "${LHR_JSON_PATH%.json}.html" to "${OUT_PATH}/${OUT_FILE}"
             done
         fi
 
