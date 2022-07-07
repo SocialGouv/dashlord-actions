@@ -1,4 +1,4 @@
-import React, { ReactChildren, useState } from "react";
+import React, { ReactChildren } from "react";
 import { default as Link } from "next/link";
 import { useRouter } from "next/router";
 import uniq from "lodash.uniq";
@@ -13,7 +13,6 @@ import {
   HeaderNav,
   NavItem,
   NavSubItem,
-  SwitchTheme,
 } from "@dataesr/react-dsfr";
 import { smallUrl, slugifyUrl, sortByKey } from "../utils";
 
@@ -59,7 +58,6 @@ const TitleLink = ({
 };
 
 export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const sortedReport = (report && report.sort(sortByKey("url"))) || [];
   const categories = uniq(
     sortedReport.filter((u) => u.category).map((u) => u.category)
@@ -79,15 +77,6 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           />
           <Tool closeButtonLabel="fermer">
             <ToolItemGroup>
-              <ToolItem onClick={() => setIsOpen(true)}>
-                <span
-                  className="fr-fi-theme-fill fr-link--icon-left"
-                  aria-controls="fr-theme-modal"
-                  data-fr-opened={isOpen}
-                >
-                  Paramètres d’affichage
-                </span>
-              </ToolItem>
               {dashlordConfig.loginUrl && (
                 <ToolItem asLink={<a href={dashlordConfig.loginUrl} />}>
                   <span className="fr-fi-lock-fill fr-link--icon-left">
@@ -134,7 +123,6 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           <NavItem title="A propos" asLink={<NavLink href="/about" />} />
         </HeaderNav>
       </Header>
-      <SwitchTheme isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 };
