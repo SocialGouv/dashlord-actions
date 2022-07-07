@@ -79,11 +79,13 @@ runs:
             ls -la "${OUT_PATH}"
             # rename html reports with guessable url for publication
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
-                echo "$LHR_JSON_PATH"
-                OUT_FILE=lhr-$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500).html
-                pwd
-                echo "mv ${LHR_JSON_PATH%.json}.html to ${OUT_PATH}/${OUT_FILE}"
-                mv "${LHR_JSON_PATH%.json}.html" to "${OUT_PATH}/${OUT_FILE}"
+                LHR_URL_B64=$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500)
+                OUT_FILE="lhr-${LHR_URL_B64}.html"
+                echo "${OUT_FILE}"
+                echo "mv ${LHR_JSON_PATH%.json}.html ${OUT_PATH}/${OUT_FILE}"
+                ls -la "${OUT_PATH}"
+                mv "${LHR_JSON_PATH%.json}.html" "${OUT_PATH}/${OUT_FILE}"
+                ls -la
             done
         fi
 
