@@ -214,21 +214,13 @@ const generateUrlReport = (url) => {
       }
     };
 
-    if (fs.existsSync(path.join(latestFilesPath, "lhr.json"))) {
-      fs.readFile(path.join(latestFilesPath, "lhr.json"), "utf8", (err, jsonString) => {
-        if (err) {
-          console.log("Error reading file lhr.json from disk:", err);
-          return;
-        }
-        try {
-          const lhrFiles = JSON.parse(jsonString);
-          console.log("lhr.json: ", jsonString);
-          lhrFiles.map((lhrFile) => {copyForWebsite(`lhr-${lhrFile}.html`);copyForWebsite(`lhr-${lhrFile}.json`);});
-        } catch (err) {
-          console.log("Error parsing JSON string:", err);
-        }
-      });
-    }
+    // copy all lhr-.*.html
+    fs.readdirSync(latestFilesPath).forEach((filename) => {
+      if (filename.match(/^lhr-(.*)\.html$/)) {
+        copyForWebsite(filename);
+      }
+    });
+
     copyForWebsite("testssl.html");
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");
