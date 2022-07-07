@@ -62,6 +62,9 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const categories = uniq(
     sortedReport.filter((u) => u.category).map((u) => u.category)
   ).sort() as string[];
+  const tags = uniq(
+    sortedReport.filter((u) => u.category).flatMap((u) => u.tags)
+  ).sort() as string[];
   const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
   return (
     <>
@@ -97,6 +100,18 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
                   key={category}
                   asLink={<NavLink href={`/category/${category}`} />}
                   title={category}
+                />
+              ))}
+            </NavItem>
+          )) ||
+            null}
+          {(tags.length > 1 && (
+            <NavItem title="Tags">
+              {tags.map((tag) => (
+                <NavSubItem
+                  key={tag}
+                  asLink={<NavLink href={`/tag/${tag}`} />}
+                  title={tag}
                 />
               ))}
             </NavItem>
