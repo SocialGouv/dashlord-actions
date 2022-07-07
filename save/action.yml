@@ -67,11 +67,6 @@ runs:
         # https://stackoverflow.com/a/29438087/174027
         shopt -s nullglob
 
-        ls -la .lighthouseci
-
-        echo "${OUT_PATH}"
-        ls -la "${OUT_PATH}"
-
         if [[ -e "./.lighthouseci" ]]
         then
             # concat all JSON reports
@@ -81,11 +76,8 @@ runs:
             for LHR_JSON_PATH in ./.lighthouseci/lhr-*.json; do
                 LHR_URL_B64=$(jq -jr ".requestedUrl" "$LHR_JSON_PATH" | base64 -w 500)
                 OUT_FILE="lhr-${LHR_URL_B64}.html"
-                echo "${OUT_FILE}"
                 echo "mv ${LHR_JSON_PATH%.json}.html ${OUT_PATH}/${OUT_FILE}"
-                ls -la "${OUT_PATH}"
                 mv "${LHR_JSON_PATH%.json}.html" "${OUT_PATH}/${OUT_FILE}"
-                ls -la
             done
         fi
 
