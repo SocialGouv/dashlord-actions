@@ -83,7 +83,7 @@ export const Intro: React.FC = () => (
           description="Les mesures de performance sont un instantané, donc pas forcément représentatives"
         />
         <Alert
-          type="warning"
+          type="error"
           title=""
           description={
             <span>
@@ -323,8 +323,8 @@ export const Intro: React.FC = () => (
         <li>Vie privée</li>
         <br />
         <Alert
-          title=""
-          type="warning"
+          title="thirdparties"
+          type="error"
           description="Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs"
         />
       </Panel>
