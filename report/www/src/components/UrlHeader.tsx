@@ -11,7 +11,9 @@ import { btoa } from "../utils";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const UrlHeader = ({ report, url }) => {
-  const updateDate = report && report.lhr && report.lhr.fetchTime;
+  const lhrReports =
+    report.lhr && Array.isArray(report.lhr) ? report.lhr : [report.lhr];
+  const updateDate = lhrReports && lhrReports.length && lhrReports[0].fetchTime;
   return (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
       <CalloutTitle as="h4">
