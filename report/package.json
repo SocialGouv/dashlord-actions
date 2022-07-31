@@ -7,7 +7,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@octokit/core": "^3.5.1",
+    "@octokit/core": "^4.0.0",
     "file-util-git-history": "^3.1.0",
     "lodash.omit": "^4.5.0",
     "lodash.pick": "^4.4.0",
