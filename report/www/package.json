@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@dataesr/react-dsfr": "^2.5.0",
+    "@dataesr/react-dsfr": "^3.0.0",
     "@socialgouv/matomo-next": "^1.2.2",
     "@testing-library/user-event": "^13.5.0",
     "country-flag-icons": "^1.4.20",
