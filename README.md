@@ -4,11 +4,16 @@ Basic GitHub actions used in [dashlord](https://github.com/socialgouv/dashlord) 
 
 Actions
 
-| Action | Usage                                             |
-| ------ | ------------------------------------------------- |
-| init   | read dashloard.yml                                |
-| save   | save a single url scan result for dashlord        |
-| report | build a report.json and website from latest scans |
+| Action           | Usage                                             |
+| ---------------- | ------------------------------------------------- |
+| init             | read dashloard.yml                                |
+| save             | save a single url scan result for dashlord        |
+| report           | build a report.json and website from latest scans |
+| lhci             | LightHouse collector action                       |
+| declaration-rgpd | check mentions légales, CGU, et confidentialité   | 
+| declaration-a11y | verif mention accessibilité                       |
+| get-html         | get raw HTML of any webpage                       |
+
 
 [![](./workflows.png)](https://excalidraw.com/#json=5097005936279552,BIdgMf7vmfpdFCKoCVegXg)
 
