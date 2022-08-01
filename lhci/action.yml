@@ -1,0 +1,36 @@
+name: "Run lighthouse collect action on some url"
+description: "Run lighthouse collect on"
+
+inputs:
+  url:
+    description: URLs to collect data for
+    required: true
+  language:
+    description: ISO-639 language code
+    default: fr
+    required: false
+  collectFlags:
+    description: "LHCI flags, see https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md"
+    default: "--numberOfRuns=1"
+    required: false
+  chromeFlags:
+    description: "Chrome flags, see https://peter.sh/experiments/chromium-command-line-switches"
+    default: "--no-sandbox --disable-dev-shm-usage --headless"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "14"
+    - shell: bash
+      id: scan
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+        export LANGUAGE="${{ inputs.language}}"
+        URLS=$(echo ${{ inputs.url }} | sed "s/^/--url=/" | sed "s/,/ --url=/g")
+        echo $URLS
+        yarn lhci collect "${{ inputs.collectFlags }}" $URLS --settings.chromeFlags="${{ inputs.chromeFlags }} --lang=$LANGUAGE"
+        mv .lighthouseci ${{ github.workspace }}/

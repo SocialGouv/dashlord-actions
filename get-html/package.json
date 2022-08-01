@@ -1,12 +1,20 @@
 {
   "name": "@socialgouv/get-html",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "Get some URL HTML content with puppeteer",
+  "version": "1.0.1",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "bin": {
+    "get-html": "./bin/index.js"
+  },
+  "main": "src/index.js",
+  "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "^4",
-    "fs-extra": "^10.1.0",
-    "minimist": "^1.2.6",
-    "playwright": "^1.22.2"
+    "puppeteer": "^15.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

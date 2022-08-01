@@ -76,10 +76,19 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
-  // todo: fix the locale issue
-  const htmlOutput = execSync(
-    `npx pwpr@2.2.0 --url=${result.declarationUrl} --load=30000 --locale=fr-FR`
-  );
+  if (result.declarationUrl.toLowerCase().match(/\.pdf$/)) {
+    // todo: handle PDF
+    return result;
+  }
+  let htmlOutput;
+  try {
+    htmlOutput = execSync(
+      `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
+    );
+  } catch (e) {
+    console.error(`Error: get-html failed for ${result.declarationUrl}`);
+    return result;
+  }
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;
 
@@ -167,7 +176,7 @@ if (require.main === module) {
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch((e) => {
-      console.error(e);
+      //console.error(e);
       console.log(JSON.stringify({ declaration: undefined }));
     });
 }
