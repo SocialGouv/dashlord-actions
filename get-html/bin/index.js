@@ -11,5 +11,5 @@ if (!url.match(/^https?:\/\//)) {
 getHTML(url)
   .then(console.log)
   .catch((e) => {
-    throw e;
+    console.error(e);
   });

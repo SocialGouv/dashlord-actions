@@ -84,8 +84,8 @@ const analyseDeclaration = (result, search, thirdPartiesJson) => {
     );
   } catch (e) {
     // happends with pdf urls for example
-    console.error(`Error: extractget-html failed for ${result.declarationUrl}`);
-    console.error(e);
+    console.error(`Error: get-html failed for ${result.declarationUrl}`);
+    //console.error(e);
     return result;
   }
   const htmlString = htmlOutput.toString().toUpperCase();
@@ -175,7 +175,7 @@ if (require.main === module) {
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch((e) => {
-      console.error(e);
+      //console.error(e);
       console.log(JSON.stringify({ declaration: undefined }));
     });
 }
