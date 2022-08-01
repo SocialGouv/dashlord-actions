@@ -26,4 +26,4 @@ runs:
         cd ${{ github.action_path }}
         yarn
         export LANGUAGE="${{ inputs.language }}"
-        node index ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}
+        ./bin/index.js ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}

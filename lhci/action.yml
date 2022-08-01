@@ -29,8 +29,8 @@ runs:
       run: |
         cd ${{ github.action_path }}
         yarn
-        export LANGUAGE="${{ inputs.language }}"
+        export LANGUAGE="${{ inputs.language}}"
         URLS=$(echo ${{ inputs.url }} | sed "s/^/--url=/" | sed "s/,/ --url=/g")
         echo $URLS
-        yarn lhci collect "${{ inputs.collectFlags }}" $URLS --settings.chromeFlags="${{ inputs.chromeFlags }}"
+        yarn lhci collect "${{ inputs.collectFlags }}" $URLS --settings.chromeFlags="${{ inputs.chromeFlags }} --lang=$LANGUAGE"
         mv .lighthouseci ${{ github.workspace }}/
