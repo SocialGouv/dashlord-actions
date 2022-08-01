@@ -9,6 +9,14 @@ inputs:
     description: ISO-639 language code
     default: fr
     required: false
+  collect-flags:
+    description: "LHCI flags, see https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md"
+    default: "--numberOfRuns=1"
+    required: false
+  chrome-flags:
+    description: "Chrome flags, see https://peter.sh/experiments/chromium-command-line-switches"
+    default: "--no-sandbox --disable-dev-shm-usage --headless"
+    required: false
 
 runs:
   using: "composite"
@@ -24,5 +32,5 @@ runs:
         export LANGUAGE="${{ inputs.language }}"
         URLS=$(echo ${{ inputs.url }} | sed "s/^/--url=/" | sed "s/,/ --url=/g")
         echo $URLS
-        yarn lhci collect --numberOfRuns=1 $URLS --settings.chromeFlags="--no-sandbox --disable-dev-shm-usage --headless"
+        yarn lhci collect "${{ inputs.collectFlags }}" $URLS --settings.chromeFlags="${{ inputs.chromeFlags }}"
         mv .lighthouseci ${{ github.workspace }}/
