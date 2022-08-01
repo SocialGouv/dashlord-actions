@@ -14,10 +14,9 @@ const getHTML = async (url) => {
 
   const page = await browser.newPage();
 
-  await page.goto(url);
-
   let html = "";
   try {
+    await page.goto(url);
     const frame = await page.mainFrame();
     html = await frame.content();
   } catch (e) {
