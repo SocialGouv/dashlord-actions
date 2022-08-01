@@ -12,10 +12,9 @@ const getHTML = async (url) => {
     ],
   });
 
-  const page = await browser.newPage();
-
   let html = "";
   try {
+    const page = await browser.newPage();
     await page.goto(url);
     const frame = await page.mainFrame();
     html = await frame.content();
