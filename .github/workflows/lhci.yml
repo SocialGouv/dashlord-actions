@@ -19,7 +19,7 @@ jobs:
           ls -la
       - uses: ./lhci
         with:
-          url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
+          url: https://opentermsarchive.org
           output: result.html
           language: fr
       - shell: bash
