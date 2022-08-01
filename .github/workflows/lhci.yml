@@ -26,5 +26,6 @@ jobs:
         run: |
           pwd 
           ls -la
+          ls -la .lighthouseci
           cat .lighthouseci/*.json
           jq
