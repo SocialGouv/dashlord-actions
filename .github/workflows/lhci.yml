@@ -14,9 +14,6 @@ jobs:
     name: lhci action
     steps:
       - uses: actions/checkout@v3
-      - shell: bash
-        run: |
-          ls -la
       - uses: ./lhci
         with:
           url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
@@ -28,4 +25,4 @@ jobs:
       - shell: bash
         name: test second URL
         run: |
-          cat .lighthouseci/*.json | grep '"finalUrl": "https://domifa.fabrique.social.gouv.fr"'
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://domifa.fabrique.social.gouv.fr/"'
