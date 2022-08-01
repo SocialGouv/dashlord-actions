@@ -1,0 +1,30 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - lhci/**
+      - .github/workflows/lhci.yml
+  pull_request:
+    branches: ["*"]
+
+name: Test lhci action
+jobs:
+  tests-report:
+    runs-on: self-hosted
+    name: lhci action
+    steps:
+      - uses: actions/checkout@v3
+      - shell: bash
+        run: |
+          ls -la
+      - uses: ./lhci
+        with:
+          url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
+          output: result.html
+          language: fr
+      - shell: bash
+        run: |
+          pwd 
+          ls -la
+          cat .lighthouseci/*.json
+          jq
