@@ -78,7 +78,7 @@ const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   // todo: fix the locale issue
   const htmlOutput = execSync(
-    `npx pwpr@2.2.0 --url=${result.declarationUrl} --load=30000 --locale=fr-FR`
+    `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
   );
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;
