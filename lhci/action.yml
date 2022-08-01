@@ -1,0 +1,25 @@
+name: "Run lighthouse collect action on some url"
+description: "Run lighthouse collect on"
+
+inputs:
+  url:
+    description: URLs to collect data for
+    required: true
+  language:
+    description: ISO-639 language code
+    default: fr
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "14"
+    - shell: bash
+      id: scan
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+        export LANGUAGE="${{ inputs.language }}"
+        yarn lhci collect --numberOfRuns=1 --url=${{ inputs.url }} --settings.chromeFlags="--no-sandbox --disable-dev-shm-usage --headless"

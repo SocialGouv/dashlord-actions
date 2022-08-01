@@ -19,7 +19,7 @@ jobs:
           ls -la
       - uses: ./get-html
         with:
-          url: https://opentermsarchive.org
+          url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
           output: result.html
       - shell: bash
         run: |
