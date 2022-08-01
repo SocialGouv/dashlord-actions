@@ -9,11 +9,11 @@ inputs:
     description: ISO-639 language code
     default: fr
     required: false
-  collect-flags:
+  collectFlags:
     description: "LHCI flags, see https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md"
     default: "--numberOfRuns=1"
     required: false
-  chrome-flags:
+  chromeFlags:
     description: "Chrome flags, see https://peter.sh/experiments/chromium-command-line-switches"
     default: "--no-sandbox --disable-dev-shm-usage --headless"
     required: false
