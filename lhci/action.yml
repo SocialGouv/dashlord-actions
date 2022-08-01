@@ -25,4 +25,4 @@ runs:
         URLS=$(echo ${{ inputs.url }} | sed "s/^/--url=/" | sed "s/,/ --url=/g")
         echo $URLS
         yarn lhci collect --numberOfRuns=1 $URLS --settings.chromeFlags="--no-sandbox --disable-dev-shm-usage --headless"
-        cp -a .lighthouseci ${{ github.workspace }}/
+        mv .lighthouseci ${{ github.workspace }}/

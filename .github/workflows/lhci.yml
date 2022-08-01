@@ -23,8 +23,5 @@ jobs:
           language: fr
       - shell: bash
         run: |
-          pwd 
-          ls -la
-          ls -la .lighthouseci
-          cat .lighthouseci/*.json
-          jq
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://opentermsarchive.org/fr"'
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://domifa.fabrique.social.gouv.fr"'
