@@ -10,7 +10,7 @@ on:
 name: Test get-html action
 jobs:
   tests-report:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: get-html action
     steps:
       - uses: actions/checkout@v3
