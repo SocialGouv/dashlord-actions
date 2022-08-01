@@ -77,9 +77,16 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   // todo: fix the locale issue
-  const htmlOutput = execSync(
-    `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
-  );
+  try {
+    const htmlOutput = execSync(
+      `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
+    );
+  } catch (e) {
+    // happends with pdf urls for example
+    console.error(`Error: extractget-html failed for ${result.declarationUrl}`);
+    console.error(e);
+    return result;
+  }
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;
 

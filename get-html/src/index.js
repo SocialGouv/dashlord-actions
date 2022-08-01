@@ -21,7 +21,7 @@ const getHTML = async (url) => {
     const frame = await page.mainFrame();
     html = await frame.content();
   } catch (e) {
-    console.error(e);
+    console.error("error", e);
   }
 
   await browser.close();
