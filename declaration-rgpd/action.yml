@@ -22,7 +22,7 @@ runs:
         cd ${{ github.action_path }}
         yarn
     - name: Get URL HTML
-      uses: socialgouv/dashlord-actions/get-html@lhci
+      uses: socialgouv/dashlord-actions/get-html@v1
       with:
         url: ${{ inputs.url }}
         output: result.html
