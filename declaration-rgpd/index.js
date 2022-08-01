@@ -77,8 +77,9 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
   // todo: fix the locale issue
+  let htmlOutput;
   try {
-    const htmlOutput = execSync(
+    htmlOutput = execSync(
       `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
     );
   } catch (e) {
