@@ -22,4 +22,6 @@ runs:
         cd ${{ github.action_path }}
         yarn
         export LANGUAGE="${{ inputs.language }}"
-        yarn lhci collect --numberOfRuns=1 --url=${{ inputs.url }} --settings.chromeFlags="--no-sandbox --disable-dev-shm-usage --headless"
+        URLS=$(echo ${{ inputs.url }} | sed "s/^/--url=/" | sed "s/,/ --url=/g")
+        echo $URLS
+        yarn lhci collect --numberOfRuns=1 $URLS --settings.chromeFlags="--no-sandbox --disable-dev-shm-usage --headless"
