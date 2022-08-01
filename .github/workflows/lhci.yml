@@ -20,7 +20,6 @@ jobs:
       - uses: ./lhci
         with:
           url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
-          output: result.html
           language: fr
       - shell: bash
         run: |
