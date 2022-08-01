@@ -1,6 +1,6 @@
 # socialgouv/dashlord-actions/lhci
 
-Collect LHCI results for any URL, single-page-app or not
+Collect LHCI results for any URL
 
 ## Usage
 

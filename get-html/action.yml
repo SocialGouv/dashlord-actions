@@ -3,15 +3,15 @@ description: "Get some URL HTML"
 
 inputs:
   url:
-    description: URL to save data for
+    description: URL to read HTML
     required: true
   output:
     description: Path to output file
     default: result.html
     required: false
-  locale:
-    description: Default Playwright context locale
-    default: fr-FR
+  language:
+    description: Default environment LANGUAGE
+    default: fr
     required: false
 
 runs:
@@ -21,8 +21,9 @@ runs:
       with:
         node-version: "14"
     - shell: bash
-      id: scan
+      id: fetch
       run: |
         cd ${{ github.action_path }}
         yarn
-        node index --url=${{ inputs.url }} --load=30000 --locale ${{ inputs.locale }} --output ${{ github.workspace }}/${{ inputs.output }}
+        export LANGUAGE="${{ inputs.language }}"
+        node index ${{ inputs.url }} > ${{ inputs.output }}

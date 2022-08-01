@@ -1,6 +1,6 @@
 # socialgouv/dashlord-actions/get-html
 
-Get HTML from any URL
+Get HTML content from any URL, single-page or not
 
 ## Usage
 
@@ -11,6 +11,8 @@ jobs:
       - uses: "socialgouv/dashlord-actions/get-html@v1"
         with:
           url: ${{ matrix.url }}
+          # optionals
+          language: fr
           output: result.html
       - name: demo
         run: |
