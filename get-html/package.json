@@ -1,7 +1,7 @@
 {
   "name": "@socialgouv/get-html",
   "description": "Get some URL HTML content with puppeteer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "bin",
     "src"
