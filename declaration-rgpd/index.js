@@ -76,16 +76,17 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
 
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
-  // todo: fix the locale issue
+  if (result.declarationUrl.toLowerCase().match(/\.pdf$/)) {
+    // todo: handle PDF
+    return result;
+  }
   let htmlOutput;
   try {
     htmlOutput = execSync(
       `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
     );
   } catch (e) {
-    // happends with pdf urls for example
     console.error(`Error: get-html failed for ${result.declarationUrl}`);
-    //console.error(e);
     return result;
   }
   const htmlString = htmlOutput.toString().toUpperCase();
