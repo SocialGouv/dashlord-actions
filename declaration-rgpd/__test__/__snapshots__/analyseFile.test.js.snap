@@ -7,8 +7,13 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "directeur (ou) directrice",
+      "publication",
+      "hébergeur (ou) hébergement",
+      "éditeur (ou) édité par (ou) editeur (ou) edité par",
+    ],
+    "score": 0,
     "slug": "ml",
   },
   Object {
@@ -16,8 +21,13 @@ Array [
     "maxScore": 4,
     "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de conservation",
+      "sous-traitants (ou) sous traitants",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -30,8 +40,13 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "directeur (ou) directrice",
+      "publication",
+      "hébergeur (ou) hébergement",
+      "éditeur (ou) édité par (ou) editeur (ou) edité par",
+    ],
+    "score": 0,
     "slug": "ml",
   },
   Object {
@@ -39,8 +54,13 @@ Array [
     "maxScore": 4,
     "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de conservation",
+      "sous-traitants (ou) sous traitants",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -53,8 +73,13 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "directeur (ou) directrice",
+      "publication",
+      "hébergeur (ou) hébergement",
+      "éditeur (ou) édité par (ou) editeur (ou) edité par",
+    ],
+    "score": 0,
     "slug": "ml",
   },
   Object {
@@ -62,8 +87,13 @@ Array [
     "maxScore": 4,
     "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de conservation",
+      "sous-traitants (ou) sous traitants",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -112,11 +142,12 @@ Array [
     "mention": "Données personnelles",
     "missingTrackers": Array [],
     "missingWords": Array [
+      "@",
       "finalité",
       "durée de conservation",
       "sous-traitants (ou) sous traitants",
     ],
-    "score": 1,
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -129,8 +160,13 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "directeur (ou) directrice",
+      "publication",
+      "hébergeur (ou) hébergement",
+      "éditeur (ou) édité par (ou) editeur (ou) edité par",
+    ],
+    "score": 0,
     "slug": "ml",
   },
   Object {
@@ -140,8 +176,13 @@ Array [
     "missingTrackers": Array [
       "jQuery",
     ],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de conservation",
+      "sous-traitants (ou) sous traitants",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
