@@ -34,7 +34,7 @@ runs:
         echo $THIRDPARTIES
         THIRDPARTIES_STR="${THIRDPARTIES//'/\'}" # escapes single quotes
         echo $THIRDPARTIES_STR
-        node index ${{ inputs.url }} ${{ github.workspace }}/result.html "'${THIRDPARTIES_STR}'" > ${{ github.workspace }}/${{ inputs.output }}
+        node index ${{ inputs.url }} ${{ github.workspace }}/result.html "${THIRDPARTIES_STR}" > ${{ github.workspace }}/${{ inputs.output }}
         cat ${{ github.workspace }}/result.html
         cat ${{ github.workspace }}/${{ inputs.output }}
       env:
