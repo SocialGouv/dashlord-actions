@@ -30,4 +30,7 @@ runs:
       shell: bash
       run: |
         cd ${{ github.action_path }}
-        node index ${{ inputs.url }} ${{ github.workspace }}/result.html '${{ inputs.thirdparties }}' > ${{ github.workspace }}/${{ inputs.output }}
+        THIRDPARTIES="${THIRDPARTIES//'/\'}" # escapes single quotes
+        node index ${{ inputs.url }} ${{ github.workspace }}/result.html '${THIRDPARTIES}' > ${{ github.workspace }}/${{ inputs.output }}
+      env:
+        THIRDPARTIES: "${{ inputs.thirdparties }}"
