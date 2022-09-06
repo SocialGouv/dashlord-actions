@@ -176,7 +176,7 @@ if (require.main === module) {
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
     .catch((e) => {
-      //console.error(e);
+      console.error(e);
       console.log(JSON.stringify({ declaration: undefined }));
     });
 }

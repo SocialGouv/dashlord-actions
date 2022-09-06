@@ -46,6 +46,28 @@ Array [
 ]
 `;
 
+exports[`lba: should return ml and pc 1`] = `
+Array [
+  Object {
+    "declarationUrl": "https://labonnealternance.apprentissage.beta.gouv.fr/mentions-legales",
+    "maxScore": 4,
+    "mention": "Mentions légales",
+    "missingTrackers": Array [],
+    "missingWords": Array [],
+    "score": 4,
+    "slug": "ml",
+  },
+  Object {
+    "maxScore": 0,
+    "mention": null,
+    "missingTrackers": Array [],
+    "missingWords": Array [],
+    "score": 0,
+    "slug": "pc",
+  },
+]
+`;
+
 exports[`ressourcerie: should return ml and pc 1`] = `
 Array [
   Object {
