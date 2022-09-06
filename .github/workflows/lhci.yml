@@ -10,7 +10,7 @@ on:
 name: Test lhci action
 jobs:
   tests-report:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     name: lhci action
     steps:
       - uses: actions/checkout@v3
