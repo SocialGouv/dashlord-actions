@@ -32,10 +32,13 @@ const analyseDom = async (dom, { url = "" } = {}) => {
       if (fuzzy(bestStatus.needle, a.text) > 0.9) {
         // make URL absolute when possible
         const link = a.getAttribute("href");
-        if (link !== "#") {
+        if (link && link !== "#") {
           const declarationUrl =
             link.charAt(0) === "/" ? `${url || ""}${link}` : link;
           result.declarationUrl = declarationUrl;
+        } else {
+          // no href
+          result.declarationUrl = null;
         }
       }
     });
@@ -45,10 +48,13 @@ const analyseDom = async (dom, { url = "" } = {}) => {
         if (fuzzy("Accessibilité", a.text) > 0.9) {
           // make URL absolute when possible
           const link = a.getAttribute("href");
-          if (link !== "#") {
+          if (link && link !== "#") {
             const declarationUrl =
               link.charAt(0) === "/" ? `${url || ""}${link}` : link;
             result.declarationUrl = declarationUrl;
+          } else {
+            // no href
+            result.declarationUrl = null;
           }
         }
       });
