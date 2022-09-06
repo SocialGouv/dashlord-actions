@@ -34,5 +34,6 @@ runs:
         THIRDPARTIES_STR="${THIRDPARTIES//'/\'}" # escapes single quotes
         node index ${{ inputs.url }} ${{ github.workspace }}/result.html "${THIRDPARTIES_STR}" > ${{ github.workspace }}/${{ inputs.output }}
         cat ${{ github.workspace }}/${{ inputs.output }}
+        [[ $(cat result.json | jq '.[0].score') -eq "4" ]] || (echo "Error: Should score 4" && exit 1)
       env:
         THIRDPARTIES: "${{ inputs.thirdparties }}"
