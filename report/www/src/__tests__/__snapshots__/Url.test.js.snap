@@ -107,7 +107,6 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -146,7 +145,6 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -185,7 +183,6 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -232,7 +229,6 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1478,7 +1474,6 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1517,7 +1512,6 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1556,7 +1550,6 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1603,7 +1596,6 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2849,7 +2841,6 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2888,7 +2879,6 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2927,7 +2917,6 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2974,7 +2963,6 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"

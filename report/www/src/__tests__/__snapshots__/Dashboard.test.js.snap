@@ -1167,7 +1167,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/archifiltre-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -1639,7 +1638,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/index-egapro-travail-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -2121,7 +2119,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/domifa-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -2593,7 +2590,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/www-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -3529,7 +3525,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/tumeplay-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -4031,7 +4026,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/1000jours-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -4513,7 +4507,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/1000jours-blues-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -5017,7 +5010,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/monpsy-sante-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -5452,7 +5444,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/ressourcerie-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -5945,7 +5936,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/admin-domifa-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -6469,7 +6459,6 @@ exports[`Should render full Dashboard 1`] = `
               href="/url/template-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7006,7 +6995,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/archifiltre-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7053,7 +7041,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/index-egapro-travail-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7100,7 +7087,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/domifa-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7147,7 +7133,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/www-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7194,7 +7179,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/pjm-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7241,7 +7225,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/tumeplay-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7288,7 +7271,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/1000jours-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7335,7 +7317,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/1000jours-blues-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7382,7 +7363,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/monpsy-sante-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7429,7 +7409,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/ressourcerie-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7476,7 +7455,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/admin-domifa-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
@@ -7523,7 +7501,6 @@ exports[`Tools config Should render Dashboard with limited tools 1`] = `
               href="/url/template-fabrique-social-gouv-fr"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              onTouchStart={[Function]}
             >
               <svg
                 fill="none"
