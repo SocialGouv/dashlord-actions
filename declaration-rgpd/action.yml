@@ -30,7 +30,10 @@ runs:
       shell: bash
       run: |
         cd ${{ github.action_path }}
-        THIRDPARTIES="${THIRDPARTIES//'/\'}" # escapes single quotes
-        node index ${{ inputs.url }} ${{ github.workspace }}/result.html '${THIRDPARTIES}' > ${{ github.workspace }}/${{ inputs.output }}
+        THIRDPARTIES=$(echo $THIRDPARTIES | jq -c 'del(.endpoints)')
+        echo $THIRDPARTIES
+        THIRDPARTIES_STR="${THIRDPARTIES//'/\'}" # escapes single quotes
+        echo $THIRDPARTIES_STR
+        node index ${{ inputs.url }} ${{ github.workspace }}/result.html '${THIRDPARTIES_STR}' > ${{ github.workspace }}/${{ inputs.output }}
       env:
         THIRDPARTIES: "${{ inputs.thirdparties }}"
