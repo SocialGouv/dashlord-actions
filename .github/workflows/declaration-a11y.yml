@@ -34,4 +34,4 @@ jobs:
         run: |
           ls -la
           cat a11y.json
-          [[ $(cat a11y.json | jq '.mention') -eq "Accessibilité : non conforme" ]] || (echo "Error: Should mention Accessibilité : non conforme" && exit 1)
+          [[ $(cat a11y.json | jq -rc '.mention') == "Accessibilité : non conforme" ]] || (echo "Error: Should mention Accessibilité : non conforme" && exit 1)
