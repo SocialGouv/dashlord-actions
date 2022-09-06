@@ -31,11 +31,8 @@ runs:
       run: |
         cd ${{ github.action_path }}
         THIRDPARTIES=$(echo $THIRDPARTIES | jq -c 'del(.endpoints)')
-        echo $THIRDPARTIES
         THIRDPARTIES_STR="${THIRDPARTIES//'/\'}" # escapes single quotes
-        echo $THIRDPARTIES_STR
         node index ${{ inputs.url }} ${{ github.workspace }}/result.html "${THIRDPARTIES_STR}" > ${{ github.workspace }}/${{ inputs.output }}
-        cat ${{ github.workspace }}/result.html
         cat ${{ github.workspace }}/${{ inputs.output }}
       env:
         THIRDPARTIES: "${{ inputs.thirdparties }}"

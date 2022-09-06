@@ -28,5 +28,4 @@ runs:
       run: |
         cd ${{ github.action_path }}
         node index ${{ inputs.url }} ${{ github.workspace }}/result.html > ${{ github.workspace }}/${{ inputs.output }}
-        cat ${{ github.workspace }}/result.html
         cat ${{ github.workspace }}/${{ inputs.output }}
