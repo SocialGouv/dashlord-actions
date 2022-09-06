@@ -146,7 +146,12 @@ const analyseDom = async (
       result.declarationUrl = getDeclarationUrl(dom, bestMatch, url);
 
       if (result.declarationUrl) {
-        const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
+        let thirdPartiesJson = {};
+        try {
+          thirdPartiesJson = JSON.parse(thirdPartiesOutput);
+        } catch (e) {
+          console.error("Cannot parse thirdparties JSON", e);
+        }
         result = analyseDeclaration(result, search, thirdPartiesJson);
       }
     }
