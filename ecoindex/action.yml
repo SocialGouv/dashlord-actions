@@ -15,5 +15,5 @@ runs:
   steps:
     - shell: bash
       run: |
-        npx eco-index-audit@0.7.1 --url=${{ inputs.url }} --ecoIndex=0 --visits=2000 --output=json > ${{ github.workspace }}/${{ inputs.output }}
+        npx eco-index-audit@0.7.2 --url=${{ inputs.url }} --ecoIndex=0 --visits=2000 --output=json > ${{ github.workspace }}/${{ inputs.output }}
         cat ${{ github.workspace }}/${{ inputs.output }}
