@@ -23,6 +23,7 @@ import { Panel } from "./Panel";
 import { Page } from "./Page";
 import { Betagouv } from "./BetagouvInfo";
 import { GithubRepository } from "./GithubRepository";
+import { EcoIndex } from "./EcoIndex";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -46,6 +47,11 @@ const tabs = [
             url={`${BASE_PATH}/report/${btoa(url)}`}
           />
         ),
+      },
+      {
+        id: "ecoindex",
+        reportKey: "ecoindex",
+        render: (report, url) => <EcoIndex data={report.ecoindex} />,
       },
       {
         id: "thirdparties",

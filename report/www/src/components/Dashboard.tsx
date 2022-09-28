@@ -280,6 +280,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("ecoindex")) {
+    columns.push(
+      getColumn({
+        id: "ecoindex",
+        title: "Eco-index",
+        info: "Note éco-index",
+        hash: "ecoindex",
+        category: "best-practices",
+        gradeKey: "ecoindexGrade",
+      })
+    );
+  }
+
   if (isToolEnabled("lighthouse")) {
     columns = columns.concat([
       lightHouseColumn(
