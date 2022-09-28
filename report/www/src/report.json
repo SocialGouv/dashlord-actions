@@ -1,5 +1,27 @@
 [
   {
+    "ecoindex": [
+      {
+        "label": "EcoIndex",
+        "value": 56
+      },
+      {
+        "label": "Note",
+        "value": "C"
+      },
+      {
+        "label": "GES",
+        "value": 1.88,
+        "unit": "eqCO2",
+        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 42km en voiture (Peugeot 208 5P 1.6 BlueHDi FAP (75ch) BVM5)"
+      },
+      {
+        "label": "Eau",
+        "value": 2.82,
+        "unit": "cl",
+        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 1 douche"
+      }
+    ],
     "404": [
       {
         "url": {
@@ -2776,7 +2798,8 @@
       "statsGrade": "F",
       "declaration-a11y": "C",
       "declaration-rgpd-ml": "A",
-      "declaration-rgpd-pc": "A"
+      "declaration-rgpd-pc": "A",
+      "ecoindexGrade": "C"
     }
   },
   {

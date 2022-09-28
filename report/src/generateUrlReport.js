@@ -154,6 +154,9 @@ const tools = {
   betagouv: {
     data: requireToolData("betagouv.json"),
   },
+  ecoindex: {
+    data: requireToolData("ecoindex.json"),
+  },
 };
 
 //@ts-expect-error

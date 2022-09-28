@@ -33,7 +33,8 @@ type DashlordTool =
   | "betagouv"
   | "github_repository"
   | "declaration-a11y"
-  | "declaration-rgpd";
+  | "declaration-rgpd"
+  | "ecoindex";
 
 type DashlordConfig = {
   title: string;
@@ -392,3 +393,12 @@ interface Vulnerability {
   Title?: string;
   Severity: string;
 }
+
+type EcoIndexReportRow = {
+  label: "EcoIndex" | "Note" | "GES" | "Eau";
+  value: string | number;
+  unit?: string;
+  comment?: string;
+};
+
+type EcoIndexReport = EcoIndexReportRow[];
