@@ -14,7 +14,7 @@ export const EcoIndex: React.FC<EcoIndexProps> = ({ data }) => {
       <Panel
         title="Eco-index"
         info="Score eco-index d'après green-it"
-        url="http://www.ecoindex.fr/quest-ce-que-ecoindex"
+        url="https://www.ecoindex.fr/quest-ce-que-ecoindex"
         urlText="Qu'est-ce que l'éco index ?"
         isExternal={true}
       >

@@ -403,7 +403,7 @@ export const Intro: React.FC = () => (
     {isToolEnabled("ecoindex") && (
       <Panel
         title="Score eco-index"
-        url="http://www.ecoindex.fr/quest-ce-que-ecoindex/"
+        url="https://www.ecoindex.fr/quest-ce-que-ecoindex/"
         urlText="L'écoconception web"
         isExternal
       >
