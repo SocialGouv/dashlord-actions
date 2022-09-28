@@ -780,7 +780,7 @@ exports[`Should render Intro 1`] = `
         Score eco-index
       </h5>
       <a
-        href="http://www.ecoindex.fr/quest-ce-que-ecoindex/"
+        href="https://www.ecoindex.fr/quest-ce-que-ecoindex/"
         rel="noreferrer noopener"
         style="float: right;"
         target="_blank"
