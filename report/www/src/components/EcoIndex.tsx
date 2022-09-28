@@ -1,4 +1,3 @@
-import { features } from "process";
 import * as React from "react";
 
 import { Grade } from "./Grade";
