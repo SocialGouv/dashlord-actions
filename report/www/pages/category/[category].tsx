@@ -9,7 +9,7 @@ const Tag = ({ report, tag }: { report: DashLordReport; tag: string }) => {
   return (
     <>
       <Head>
-        <title>Dashlord - tag {tag}</title>
+        <title>Catégorie {tag} - Dashlord</title>
       </Head>
       <Dashboard report={report} />
     </>
