@@ -131,8 +131,18 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       warning: id === "accessibility" ? <AccessibilityWarnings /> : undefined,
       hash: "lighthouse",
       gradeKey: `lighthouse_${id}Grade`,
-      sort: (a, b) =>
-        a.summary[`lighthouse_${id}`] - b.summary[`lighthouse_${id}`],
+      sort: (a, b) => {
+        if (a.summary[`lighthouse_${id}`] === undefined) {
+          return -1;
+        }
+        if (b.summary[`lighthouse_${id}`] === undefined) {
+          return 1;
+        }
+        return (
+          parseFloat(a.summary[`lighthouse_${id}`]) -
+          parseFloat(b.summary[`lighthouse_${id}`])
+        );
+      },
       gradeLabel: (rowData) =>
         rowData.lhr && percent(rowData.summary[`lighthouse_${id}`]),
     });
@@ -360,7 +370,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "updownio",
         gradeKey: "uptimeGrade",
         category: "disponibilite",
-        sort: (a, b) => a.summary[`uptime`] - b.summary[`uptime`],
+        sort: (a, b) => {
+          if (a.summary[`uptime`] === undefined) {
+            return -1;
+          }
+          if (b.summary[`uptime`] === undefined) {
+            return 1;
+          }
+          return a.summary[`uptime`] - b.summary[`uptime`];
+        },
         gradeLabel: (rowData) =>
           rowData.summary.uptime !== undefined &&
           percent((rowData.summary.uptime || 0) / 100),
@@ -426,6 +444,17 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         title: "Ports ouverts",
         info: "Ports TCP ouverts détectés par nmap",
         category: "securite",
+        sort: (a, b) => {
+          if (a.summary[`nmapOpenPortsCount`] === undefined) {
+            return -1;
+          }
+          if (b.summary[`nmapOpenPortsCount`] === undefined) {
+            return 1;
+          }
+          return (
+            a.summary[`nmapOpenPortsCount`] - b.summary[`nmapOpenPortsCount`]
+          );
+        },
         hash: "nmap",
         gradeKey: "nmapOpenPortsGrade",
         gradeLabel: (rowData) => rowData.summary.nmapOpenPortsCount,
@@ -448,7 +477,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "trackersGrade",
-        sort: (a, b) => a.summary[`trackersCount`] - b.summary[`trackersCount`],
+        sort: (a, b) => {
+          if (a.summary[`trackersCount`] === undefined) {
+            return -1;
+          }
+          if (b.summary[`trackersCount`] === undefined) {
+            return 1;
+          }
+          return a.summary[`trackersCount`] - b.summary[`trackersCount`];
+        },
         gradeLabel: (rowData) => {
           const count = rowData.summary.trackersCount;
           if (count === 0) {
@@ -464,7 +501,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "best-practices",
         hash: "thirdparties",
         gradeKey: "cookiesGrade",
-        sort: (a, b) => a.summary[`cookiesCount`] - b.summary[`cookiesCount`],
+        sort: (a, b) => {
+          if (a.summary[`cookiesCount`] === undefined) {
+            return -1;
+          }
+          if (b.summary[`cookiesCount`] === undefined) {
+            return 1;
+          }
+          return a.summary[`cookiesCount`] - b.summary[`cookiesCount`];
+        },
         gradeLabel: (rowData) => {
           const count = rowData.summary.cookiesCount;
           if (count === 0) {
