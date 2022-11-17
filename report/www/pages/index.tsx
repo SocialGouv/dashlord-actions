@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>
-          Dashlord - tableau de bord des bonnes pratiques techniques
+          DashLord - tableau de bord des bonnes pratiques techniques
         </title>
       </Head>
       <Dashboard report={report} />
