@@ -9,7 +9,7 @@ const PageIntro: NextPage = () => {
   return (
     <>
       <Head>
-        <title>DashLord - evolutions</title>
+        <title>Evolutions - Dashlord</title>
       </Head>
       {/*@ts-ignore*/}
       <Trends trends={trends} />
