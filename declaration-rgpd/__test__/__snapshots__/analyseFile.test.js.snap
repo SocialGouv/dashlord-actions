@@ -39,8 +39,12 @@ Array [
     "maxScore": 4,
     "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "finalité",
+      "durée de conservation",
+      "sous-traitants (ou) sous traitants",
+    ],
+    "score": 1,
     "slug": "pc",
   },
 ]
