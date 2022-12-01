@@ -33,11 +33,15 @@ const analyseDom = async (dom, { url = "" } = {}) => {
         // make URL absolute when possible
         const link = a.getAttribute("href");
         if (link && link !== "#") {
-          const declarationUrl =
-            link.charAt(0) === "/" ? `${url || ""}${link}` : link;
-          result.declarationUrl = declarationUrl;
+          if (link.match(/^https?:\/\//)) {
+            result.declarationUrl = link;
+          } else if (link.charAt(0) === "/") {
+            const host = url.replace(/(https?:\/\/[^/]+).*/, "$1");
+            result.declarationUrl = `${host}${link}`;
+          } else {
+            result.declarationUrl = `${url}/${link}`;
+          }
         } else {
-          // no href
           result.declarationUrl = null;
         }
       }
