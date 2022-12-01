@@ -65,9 +65,11 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
       if (link !== "#") {
         if (link.match(/^https?:\/\//)) {
           declarationUrl = link;
+        } else if (link.charAt(0) === "/") {
+          const host = url.replace(/(https?:\/\/[^/]+).*/, "$1");
+          declarationUrl = `${host}${link}`;
         } else {
-          const separator = link.charAt(0) === "/" ? "" : "/";
-          declarationUrl = `${url.replace(/\/$/, "")}${separator}${link}`;
+          declarationUrl = `${url}/${link}`;
         }
       }
     });

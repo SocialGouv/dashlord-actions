@@ -9,9 +9,9 @@ test("ressourcerie: should return ml and pc", async () => {
   expect(output).toMatchSnapshot();
 });
 
-test("egapro: should return ml and pc", async () => {
+test("egapro with sub-path: should return ml and pc", async () => {
   const output = await analyseFile("./__test__/samples/egapro.html", {
-    url: "https://index-egapro.travail.gouv.fr",
+    url: "https://egapro.travail.gouv.fr/index-egapro",
   });
   expect(output).toMatchSnapshot();
 });
