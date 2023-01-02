@@ -804,32 +804,7 @@ Array [
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <svg
-                        style={
-                          Object {
-                            "width": 60,
-                          }
-                        }
-                        viewBox="0 85.333 512 341.333"
-                      >
-                        <title>
-                          France
-                        </title>
-                        <path
-                          d="M0 85.331h512v341.337H0z"
-                          fill="#FFF"
-                        />
-                        <path
-                          d="M0 85.331h170.663v341.337H0z"
-                          fill="#0052B4"
-                        />
-                        <path
-                          d="M341.337 85.331H512v341.337H341.337z"
-                          fill="#D80027"
-                        />
-                      </svg>
-                    </td>
+                    <td />
                     <td>
                       www.fabrique.social.gouv.fr
                     </td>
@@ -2175,32 +2150,7 @@ Array [
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <svg
-                        style={
-                          Object {
-                            "width": 60,
-                          }
-                        }
-                        viewBox="0 85.333 512 341.333"
-                      >
-                        <title>
-                          France
-                        </title>
-                        <path
-                          d="M0 85.331h512v341.337H0z"
-                          fill="#FFF"
-                        />
-                        <path
-                          d="M0 85.331h170.663v341.337H0z"
-                          fill="#0052B4"
-                        />
-                        <path
-                          d="M341.337 85.331H512v341.337H341.337z"
-                          fill="#D80027"
-                        />
-                      </svg>
-                    </td>
+                    <td />
                     <td>
                       www.fabrique.social.gouv.fr
                     </td>
