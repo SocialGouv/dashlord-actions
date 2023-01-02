@@ -81,7 +81,17 @@ const endPointsColumns = [
       if (endpoint.geoip && endpoint.geoip.country) {
         const Flag = Flags[endpoint.geoip.country.iso_code];
         return (
-          <Flag style={{ width: 60 }} title={endpoint.geoip.country.names.fr} />
+          endpoint.geoip.country.namesendpoint &&
+          endpoint.geoip.country.namesendpoint.geoip &&
+          endpoint.geoip.country.namesendpoint.geoip.country &&
+          endpoint.geoip.country.namesendpoint.geoip.country.names && (
+            <Flag
+              style={{ width: 60 }}
+              title={
+                endpoint.geoip.country.namesendpoint.geoip.country.names.fr
+              }
+            />
+          )
         );
       }
       return null;
@@ -99,7 +109,10 @@ const endPointsColumns = [
     name: "city",
     label: "City",
     render: (endpoint) =>
-      (endpoint.geoip && endpoint.geoip.city && endpoint.geoip.city.names.fr) ||
+      (endpoint.geoip &&
+        endpoint.geoip.city &&
+        endpoint.geoip.city.names &&
+        endpoint.geoip.city.names.fr) ||
       "?",
   },
   {
@@ -108,6 +121,7 @@ const endPointsColumns = [
     render: (endpoint) =>
       (endpoint.geoip &&
         endpoint.geoip.country &&
+        endpoint.geoip.country.names &&
         endpoint.geoip.country.names.fr) ||
       "?",
   },
