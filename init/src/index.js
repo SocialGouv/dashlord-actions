@@ -5,11 +5,11 @@ const YAML = require("yaml");
 const getDashlordConfig = () => {
   let dashlordConfig;
   if (fs.existsSync("./dashlord.yml")) {
-    core.info('----')
+    core.info("----");
     core.info(`load dashlord.yml`);
-    core.info('----')
+    core.info("----");
     const content = fs.readFileSync("./dashlord.yml", "utf8").toString();
-    core.info(content)
+    core.info(content);
     dashlordConfig = YAML.parse(content);
   } else if (fs.existsSync("./dashlord.yaml")) {
     core.info(`load dashlord.yaml`);
@@ -19,16 +19,16 @@ const getDashlordConfig = () => {
     throw new Error("Cannot load dashlord.yml");
   }
 
-  core.info(JSON.stringify(dashlordConfig))
-  return dashlordConfig
-}
+  core.info(JSON.stringify(dashlordConfig));
+  return dashlordConfig;
+};
 
 const getSiteTools = (site) => {
-  core.info(`site=${JSON.stringify(site)}`)
-  core.info(`site.tools=${JSON.stringify(site.tools)}`)
+  core.info(`site=${JSON.stringify(site)}`);
+  core.info(`site.tools=${JSON.stringify(site.tools)}`);
   let dashlordConfig = getDashlordConfig();
   if (!dashlordConfig.tools) {
-    return {}
+    return {};
   }
   if (!site.tools) {
     return dashlordConfig.tools;
@@ -36,7 +36,9 @@ const getSiteTools = (site) => {
   return Object.keys(dashlordConfig.tools).reduce((siteTools, tool) => {
     // tool status can be set at global or site level, if defined at site level and global then site level wins.
     const isToolDisabled =
-      site.tools[tool] === undefined ? dashlordConfig.tools[tool] === false : site.tools[tool] === false;
+      site.tools[tool] === undefined
+        ? dashlordConfig.tools[tool] === false
+        : site.tools[tool] === false;
     return {
       ...siteTools,
       [tool]: !isToolDisabled,
@@ -45,11 +47,15 @@ const getSiteTools = (site) => {
 };
 
 const getSiteSubpages = (site) => {
-  core.info(`site=${JSON.stringify(site)}`)
-  core.info(`site.pages=${JSON.stringify(site.pages)}`)
-  const subpages = [site.url.replace(/\/$/,"")];
+  core.info(`site=${JSON.stringify(site)}`);
+  core.info(`site.pages=${JSON.stringify(site.pages)}`);
+  const subpages = [site.url.replace(/\/$/, "")];
   if (site.pages !== undefined) {
-    subpages.push(...site.pages.map((page) => [site.url.replace(/\/$/,""), page.replace(/^\//,"")].join("/")));
+    subpages.push(
+      ...site.pages.map((page) =>
+        [site.url.replace(/\/$/, ""), page.replace(/^\//, "")].join("/")
+      )
+    );
   }
   return subpages;
 };
@@ -67,15 +73,21 @@ const getOutputs = () => {
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
-  const sites = dashlordConfig.urls
+  let baseSites = dashlordConfig.urls;
+
+  if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
+
+  const sites = baseSites
     .filter(isValid)
     .filter((url) =>
-      urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
+      dashlordConfig.urls && urlsInput && urlsInput.length
+        ? urlsInput.includes(url.url)
+        : true
     )
     .map((site) => ({
       ...site,
       tools: getSiteTools(site),
-      subpages: getSiteSubpages(site)
+      subpages: getSiteSubpages(site),
     }));
   const urls = sites.map((u) => u.url).join("\n");
 
