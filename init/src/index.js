@@ -73,9 +73,9 @@ const getOutputs = () => {
 
   const sites = baseSites
     .filter(isValid)
-    .filter((url) =>
+    .filter((site) =>
       dashlordConfig.urls && urlsInput && urlsInput.length
-        ? urlsInput.includes(url.url)
+        ? urlsInput.includes(site.url)
         : true
     )
     .map((site) => ({
