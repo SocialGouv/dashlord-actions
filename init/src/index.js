@@ -71,6 +71,8 @@ const getOutputs = () => {
 
   if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
 
+  core.info(`baseSites : ${baseSites}`);
+
   const sites = baseSites
     .filter(isValid)
     .filter((site) =>
