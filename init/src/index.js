@@ -67,10 +67,16 @@ const getOutputs = () => {
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
-  const sites = dashlordConfig.urls
+  let baseSites = dashlordConfig.urls;
+
+  if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
+
+  const sites = baseSites
     .filter(isValid)
-    .filter((url) =>
-      urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
+    .filter((site) =>
+      dashlordConfig.urls && urlsInput && urlsInput.length
+        ? urlsInput.includes(site.url)
+        : true
     )
     .map((site) => ({
       ...site,
