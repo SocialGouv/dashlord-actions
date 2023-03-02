@@ -9,7 +9,7 @@ const sampleConfig = jest
 
 jest.mock("fs");
 
-const { getOutputs, getSiteTools } = require("./index");
+const { getOutputs, getSiteTools, getSiteSubpages } = require("./index");
 
 let inputs = {};
 
@@ -66,6 +66,7 @@ describe("should parse dashlord config", () => {
         screenshot: false,
         updownio: false,
         stats: false,
+        budget_page: false,
         testssl: true,
       },
     });
@@ -86,7 +87,41 @@ describe("should parse dashlord config", () => {
       "declaration-a11y": true,
       "declaration-rgpd": true,
       stats: false,
+      budget_page: false,
       404: true,
     });
+  });
+
+  test("and getSiteSubpages https://chez.com match", async () => {
+    inputs.url = "https://chez.com";
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const subpages = getSiteSubpages({
+      url: "https://chez.com",
+      pages: ["login", "profile"],
+      repositories: ["chez/chez-ui", "chez/chez-api"],
+      tools: {
+        screenshot: false,
+        updownio: false,
+        stats: false,
+        budget_page: false,
+        testssl: true,
+      },
+    });
+    core.info(`subpages=${JSON.stringify(subpages)}`);
+    expect(subpages).toEqual(["https://chez.com", "https://chez.com/login", "https://chez.com/profile"]);
+  });
+
+  
+
+  test("and getSiteSubpages https://voila.fr match", async () => {
+    inputs.url = "https://voila.fr";
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const subpages = getSiteSubpages({
+      url: "https://voila.fr",
+    });
+    core.info(`subpages=${JSON.stringify(subpages)}`);
+    expect(subpages).toEqual(["https://voila.fr"]);
   });
 });

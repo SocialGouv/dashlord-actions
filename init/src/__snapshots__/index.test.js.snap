@@ -7,9 +7,13 @@ Array [
       "iliad/free-ui",
       "iliad/free-api",
     ],
+    "subpages": Array [
+      "https://www.free.fr",
+    ],
     "title": "Free",
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
@@ -29,12 +33,22 @@ Array [
     "url": "https://www.free.fr",
   },
   Object {
+    "pages": Array [
+      "/login",
+      "/profile",
+    ],
     "repositories": Array [
       "chez/chez-ui",
       "chez/chez-api",
     ],
+    "subpages": Array [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
@@ -63,9 +77,13 @@ Array [
       "iliad/free-ui",
       "iliad/free-api",
     ],
+    "subpages": Array [
+      "https://www.free.fr",
+    ],
     "title": "Free",
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
@@ -85,12 +103,22 @@ Array [
     "url": "https://www.free.fr",
   },
   Object {
+    "pages": Array [
+      "/login",
+      "/profile",
+    ],
     "repositories": Array [
       "chez/chez-ui",
       "chez/chez-api",
     ],
+    "subpages": Array [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
@@ -110,8 +138,12 @@ Array [
     "url": "http://chez.com",
   },
   Object {
+    "subpages": Array [
+      "https://voila.fr",
+    ],
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
@@ -142,9 +174,13 @@ Array [
       "iliad/free-ui",
       "iliad/free-api",
     ],
+    "subpages": Array [
+      "https://www.free.fr",
+    ],
     "title": "Free",
     "tools": Object {
       "404": true,
+      "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,

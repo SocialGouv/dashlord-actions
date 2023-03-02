@@ -1,22 +1,26 @@
-const {scoreToGrade} = require("../utils");
+const { scoreToGrade } = require("../utils");
 
 // compute a performance score from 0 to 100 from lighthouse report
 /**
- * @param {LighthouseReport} report
+ * @param {LighthouseReport} reportData
  *
  * @returns {number}
  */
-const getPerformanceScore = (report) => {
+const getPerformanceScore = (reportData) => {
+  /* @type {LighthouseReport} */
+  if (!reportData) {
+    return 0;
+  }
   const numRequests =
-    report.audits &&
-    report.audits.diagnostics &&
-    report.audits.diagnostics.details?.items &&
-    report.audits.diagnostics.details?.items[0].numRequests;
+    reportData.audits &&
+    reportData.audits.diagnostics &&
+    reportData.audits.diagnostics.details?.items &&
+    reportData.audits.diagnostics.details?.items[0].numRequests;
   const totalByteWeight =
-    report.audits &&
-    report.audits.diagnostics &&
-    report.audits.diagnostics.details?.items &&
-    report.audits.diagnostics.details?.items[0].totalByteWeight;
+    reportData.audits &&
+    reportData.audits.diagnostics &&
+    reportData.audits.diagnostics.details?.items &&
+    reportData.audits.diagnostics.details?.items[0].totalByteWeight;
 
   const maxRequests = 50;
   const maxByteWeight = 1024 * 1024;
@@ -38,17 +42,17 @@ const getPerformanceScore = (report) => {
   return score;
 };
 
-
 /** @param {LighthouseReport} report */
 const summary = (report) => {
-  if (report && report.categories) {
-    const lhrCategories = report.categories;
+  /* @type {LighthouseReport} */
+  const reportData = (report && Array.isArray(report) && report[0]) || report; // use first lhr report
+  if (reportData && reportData.categories) {
+    const lhrCategories = reportData.categories;
     if (lhrCategories["performance"]) {
-      lhrCategories["performance"].score = getPerformanceScore(report);
+      lhrCategories["performance"].score = getPerformanceScore(reportData);
     }
 
     return Object.keys(lhrCategories).reduce((scores, key) => {
-      //@ts-expect-error
       const score = lhrCategories[key].score;
       return {
         ...scores,

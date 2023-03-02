@@ -3,6 +3,8 @@
 exports[`generateUrlReport should allow empty/invalid reports 1`] = `
 Object {
   "404": null,
+  "betagouv": null,
+  "budget_page": null,
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
@@ -10,6 +12,8 @@ Object {
   "declaration-a11y": null,
   "declaration-rgpd": null,
   "dependabot": null,
+  "ecoindex": null,
+  "github_repository": null,
   "http": null,
   "lhr": null,
   "nmap": null,
@@ -41,6 +45,10 @@ Object {
     2,
     3,
   ],
+  "betagouv": null,
+  "budget_page": Object {
+    "report": "budget_page.json",
+  },
   "codescan": Object {
     "report": "codescanalerts.json",
     "totalCount": 42,
@@ -65,17 +73,23 @@ Object {
   "dependabot": Object {
     "report": "dependabotalerts.json",
   },
+  "ecoindex": null,
+  "github_repository": Object {
+    "report": "github_repository.json",
+  },
   "http": Object {
     "report": "http.json",
   },
-  "lhr": Object {
-    "audits": Object {},
-    "categories": Object {},
-    "fetchTime": undefined,
-    "finalUrl": undefined,
-    "requestedUrl": undefined,
-    "runWarnings": undefined,
-  },
+  "lhr": Array [
+    Object {
+      "audits": Object {},
+      "categories": Object {},
+      "fetchTime": undefined,
+      "finalUrl": undefined,
+      "requestedUrl": undefined,
+      "runWarnings": undefined,
+    },
+  ],
   "nmap": Object {
     "report": "nmap.json",
   },

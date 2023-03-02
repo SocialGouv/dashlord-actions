@@ -1,4 +1,4 @@
-/** @param {StatsReport} report */
+/** @param {PageReport} report */
 const summary = (report) => {
   if (report) {
     const statsGrade = report.grade;

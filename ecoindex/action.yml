@@ -1,0 +1,19 @@
+name: "DashLord eco-index action"
+description: "Save dashlord results"
+
+inputs:
+  url:
+    description: URL to check eco-index
+    required: true
+  output:
+    description: "Path to output file. defaults to ecoindex.json"
+    default: "ecoindex.json"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        npx eco-index-audit@0.7.2 --url=${{ inputs.url }} --ecoIndex=0 --visits=2000 --output=json > ${{ github.workspace }}/${{ inputs.output }}
+        cat ${{ github.workspace }}/${{ inputs.output }}

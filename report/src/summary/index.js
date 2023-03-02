@@ -15,8 +15,12 @@ const tools = {
   thirdparties: (report) => require("./thirdparties")(report),
   /** @param {UpDownReport} report */
   updownio: (report) => require("./updownio")(report),
-  /** @param {StatsReport} report */
+  /** @param {PageReport} report */
   stats: (report) => require("./stats")(report),
+  /** @param {PageReport} report */
+  budget_page: (report) => require("./budgetPage")(report),
+  /** @param {PageReport} report */
+  github_repository: (report) => require("./github_repository")(report),
   /** @param {Wget404Report} report */
   404: (report) => report && { 404: report.length || "A+" },
   /** @param {TrivyReport} report */
@@ -25,6 +29,8 @@ const tools = {
   "declaration-a11y": (report) => require("./declaration-a11y")(report),
   /** @param {DeclarationRgpdReport} report */
   "declaration-rgpd": (report) => require("./declaration-rgpd")(report),
+  /** @param {EcoIndexReport} report */
+  ecoindex: (report) => require("./ecoindex")(report),
 };
 
 /**

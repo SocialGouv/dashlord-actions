@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`code.html 1`] = `
+{
+  "declarationUrl": "https://example.com/accessibilite",
+  "mention": "Accessibilité : partiellement conforme",
+}
+`;
+
+exports[`fabrique.html 1`] = `
+{
+  "declarationUrl": "https://example.com/declaration-accessibilite",
+  "mention": "Accessibilité : non conforme",
+}
+`;
+
+exports[`lba.html 1`] = `
+{
+  "declarationUrl": null,
+  "mention": "Accessibilité : non conforme",
+}
+`;
+
+exports[`msp.html 1`] = `
+{
+  "declarationUrl": null,
+  "mention": "Accessibilité : non conforme",
+}
+`;
+
+exports[`opentermsarchive.org.html 1`] = `
+{
+  "declarationUrl": "https://example.com/fr/accessibility",
+  "mention": "Accessibilité : non conforme",
+}
+`;

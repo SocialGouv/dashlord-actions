@@ -13,13 +13,17 @@ import { UpdownIo } from "./UpdownIo";
 import { Dependabot } from "./Dependabot";
 import { Codescan } from "./Codescan";
 import { Nmap } from "./Nmap";
-import { Stats } from "./Stats";
 import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
 import { DeclarationRgpd } from "./DeclarationRgpd";
 import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
+import { Panel } from "./Panel";
+import { Page } from "./Page";
+import { Betagouv } from "./BetagouvInfo";
+import { GithubRepository } from "./GithubRepository";
+import { EcoIndex } from "./EcoIndex";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -40,17 +44,42 @@ const tabs = [
         render: (report, url) => (
           <LightHouse
             data={report.lhr}
-            url={`${BASE_PATH}/report/${btoa(url)}/lhr.html`}
+            url={`${BASE_PATH}/report/${btoa(url)}`}
           />
         ),
       },
       {
+        id: "ecoindex",
+        reportKey: "ecoindex",
+        render: (report, url) => <EcoIndex data={report.ecoindex} />,
+      },
+      {
         id: "thirdparties",
-        render: (report, url) => <Trackers data={report.thirdparties} />,
+        render: (report) => <Trackers data={report.thirdparties} />,
       },
       {
         id: "stats",
-        render: (report, url) => <Stats data={report.stats} url={url} />,
+        render: (report, url) =>
+          report.stats ? (
+            <Panel
+              title="Page de statistiques"
+              info="Cette page permet de publier vos mesures d'impact"
+            >
+              <Page data={report.stats} url={url} uri="stats" />
+            </Panel>
+          ) : null,
+      },
+      {
+        id: "budget_page",
+        render: (report, url) =>
+          report.budget_page ? (
+            <Panel
+              title="Page de budget"
+              info="Cette page permet de publier votre budget"
+            >
+              <Page data={report.budget_page} url={url} uri="budget" />
+            </Panel>
+          ) : null,
       },
       {
         id: "declaration-a11y",
@@ -67,6 +96,12 @@ const tabs = [
       {
         id: "404",
         render: (report, url) => <Report404 data={report["404"]} />,
+      },
+      {
+        id: "github_repository",
+        render: (report) => (
+          <GithubRepository data={report["github_repository"]} />
+        ),
       },
     ],
   },
@@ -160,7 +195,11 @@ const tabs = [
     items: [
       {
         id: "wappalyzer",
-        render: (report, url) => <Wappalyzer data={report.wappalyzer} />,
+        render: (report) => <Wappalyzer data={report.wappalyzer} />,
+      },
+      {
+        id: "betagouv",
+        render: (report) => <Betagouv data={report.betagouv} />,
       },
     ],
   },

@@ -3,7 +3,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { Alert } from "@dataesr/react-dsfr";
 
 import { Url } from "../../src/components/Url";
-import { slugifyUrl } from "../../src/utils";
+import { smallUrl, slugifyUrl } from "../../src/utils";
 
 const report: DashLordReport = require("../../src/report.json");
 
@@ -22,7 +22,7 @@ const PageUrl = ({
   return (
     <>
       <Head>
-        <title>DashLord - {url}</title>
+        <title>{smallUrl(url)} - DashLord</title>
       </Head>
       <Url url={url} report={report} selectedTab={selectedTab} />
     </>

@@ -1,0 +1,28 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - lhci/**
+      - .github/workflows/lhci.yml
+  pull_request:
+    branches: ["*"]
+
+name: Test lhci action
+jobs:
+  tests-report:
+    runs-on: ubuntu-latest
+    name: lhci action
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./lhci
+        with:
+          url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr
+          language: fr
+      - shell: bash
+        name: test url with french redirection
+        run: |
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://opentermsarchive.org/fr"'
+      - shell: bash
+        name: test second URL
+        run: |
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://domifa.fabrique.social.gouv.fr/"'

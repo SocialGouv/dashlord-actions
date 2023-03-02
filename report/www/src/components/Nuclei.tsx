@@ -38,10 +38,18 @@ const columns = [
     label: "Séverité",
     render: (failure) => <NucleiBadge {...failure} />,
   },
-  { name: "templateID", label: "id" },
   { name: "name", label: "Name", render: ({ info }) => info.name },
-  { name: "matcher_name", label: "Matcher" },
+  {
+    name: "matcher-name",
+    label: "Matcher",
+    render: (data) => (
+      <a href={data["template-url"]} target="_blank" rel="noopener noreferrer">
+        {data["matcher-name"] || data["template-id"]}
+      </a>
+    ),
+  },
 ];
+
 export const Nuclei: React.FC<NucleiProps> = ({ data }) => {
   const rows = data;
   rows.sort(nucleiOrder);

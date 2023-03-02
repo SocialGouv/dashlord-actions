@@ -44,6 +44,16 @@ const getSiteTools = (site) => {
   }, {});
 };
 
+const getSiteSubpages = (site) => {
+  core.info(`site=${JSON.stringify(site)}`)
+  core.info(`site.pages=${JSON.stringify(site.pages)}`)
+  const subpages = [site.url.replace(/\/$/,"")];
+  if (site.pages !== undefined) {
+    subpages.push(...site.pages.map((page) => [site.url.replace(/\/$/,""), page.replace(/^\//,"")].join("/")));
+  }
+  return subpages;
+};
+
 const getOutputs = () => {
   const urlsInput =
     core.getInput("url") &&
@@ -57,14 +67,23 @@ const getOutputs = () => {
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
-  const sites = dashlordConfig.urls
+  let baseSites = dashlordConfig.urls;
+
+  if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
+
+  core.info(`baseSites : ${baseSites}`);
+
+  const sites = baseSites
     .filter(isValid)
-    .filter((url) =>
-      urlsInput && urlsInput.length ? urlsInput.includes(url.url) : true
+    .filter((site) =>
+      dashlordConfig.urls && urlsInput && urlsInput.length
+        ? urlsInput.includes(site.url)
+        : true
     )
     .map((site) => ({
       ...site,
       tools: getSiteTools(site),
+      subpages: getSiteSubpages(site)
     }));
   const urls = sites.map((u) => u.url).join("\n");
 
@@ -90,4 +109,4 @@ if (require.main === module) {
   run();
 }
 
-module.exports = { run, getOutputs, getSiteTools };
+module.exports = { run, getOutputs, getSiteTools, getSiteSubpages };

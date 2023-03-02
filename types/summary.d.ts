@@ -37,4 +37,5 @@ type UrlReportSummary = {
   trivyGrade?: string;
   "declaration-a11y"?: string;
   "declaration-rgpd"?: string;
+  ecoindexGrade?: string;
 };
