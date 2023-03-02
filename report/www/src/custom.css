@@ -32,3 +32,61 @@
   --error: #f60700;
   --blue-france: #518fff;
 }
+
+/* fixes for react-dsfr>2.5 */
+
+/* fixes for alerts */
+[class^=fr-alert]:before {
+  background-color: white !important;
+  content: "" !important;
+}
+
+.fr-alert--success::before {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/fr--success-fill.svg) !important;
+}
+
+.fr-alert--info::before {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/fr--info-fill.svg) !important;
+}
+
+.fr-alert--warning::before {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/fr--warning-fill.svg) !important;
+}
+
+.fr-alert--error::before {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/fr--error-fill.svg) !important;
+}
+
+/* fixes for links */
+a[target=_blank]:after {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/external-link-line.svg) !important;
+  content:"";
+  height: var(--icon-size);
+  background: currentColor;
+}
+
+/* fixes for navitems */
+.fr-nav__btn::after {
+  content: "" !important;
+  background: currentColor !important;
+}
+
+.fr-nav__btn[aria-expanded=false]:after {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/arrow-down-s-line.svg) !important;
+}
+
+.fr-nav__btn[aria-expanded=true]:after {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/arrow-up-s-line.svg) !important;
+}
+
+/* close modal */
+
+.fr-link--close.fr-link::after {
+  mask-image: url(~@gouvfr/dsfr/dist/icons/system/close-line.svg) !important;
+}
+
+.fr-link--close:before {
+  content: "" !important;
+}
+
+

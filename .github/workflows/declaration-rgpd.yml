@@ -1,0 +1,38 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - declaration-rgpd
+  pull_request:
+    branches: ["*"]
+
+name: Test declaration-rgpd
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          cd declaration-rgpd
+          yarn
+          yarn test
+  tests-action:
+    runs-on: ubuntu-latest
+    name: declaration-rgpd action
+    steps:
+      - uses: actions/checkout@v3
+      - shell: bash
+        run: |
+          ls -la
+      - uses: ./declaration-rgpd
+        with:
+          url: https://labonnealternance.apprentissage.beta.gouv.fr
+          thirdparties: '{"trackers":[{"type":"unknown","url":"https://plausible.io/js/plausible.local.outbound-links.js"},{"type":"unknown","url":"https://plausible.io/api/event"}],"cookies":[],"headers":{"cache-control":"s-maxage=31536000,stale-while-revalidate","content-encoding":"gzip","content-type":"text/html;charset=utf-8","date":"Tue,06Sep202210:00:11GMT","etag":"\"34252-Rg+tkwu+qSjfdl/R14jfhbBq4KA\"","server":"nginx","vary":"Accept-Encoding","x-nextjs-cache":"HIT","x-powered-by":"Next.js"}}'
+          output: rgpd.json
+
+      - shell: bash
+        run: |
+          ls -la
+          cat rgpd.json
+          [[ $(cat rgpd.json | jq '.[0].score') -eq "4" ]] || (echo "Error: Should score 4" && exit 1)

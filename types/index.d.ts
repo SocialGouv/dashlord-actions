@@ -1,5 +1,6 @@
 /// <reference path="./summary.d.ts" />
 /// <reference path="./trends.d.ts" />
+/// <reference path="./lighthouse.d.ts" />
 
 type UrlConfig = {
   url: string;
@@ -7,7 +8,10 @@ type UrlConfig = {
   title?: string;
   tags?: string[];
   repositories?: string[];
+  pages?: string[];
 };
+
+type ColorVariant = "info" | "success" | "warning" | "danger";
 
 type DashlordTool =
   | "404"
@@ -23,10 +27,14 @@ type DashlordTool =
   | "codescan"
   | "zap"
   | "stats"
+  | "budget_page"
   | "screenshot"
   | "trivy"
+  | "betagouv"
+  | "github_repository"
   | "declaration-a11y"
-  | "declaration-rgpd";
+  | "declaration-rgpd"
+  | "ecoindex";
 
 type DashlordConfig = {
   title: string;
@@ -39,47 +47,6 @@ type DashlordConfig = {
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
-};
-
-type LighthouseReportCategory = {
-  title: string;
-  id: string;
-  score: number | null;
-  description?: string;
-};
-
-type LighthouseReportCategoryKey =
-  | "performance"
-  | "accessibility"
-  | "best-practices"
-  | "seo"
-  | "pwa";
-
-type LighthouseReportCategories = Record<
-  LighthouseReportCategoryKey,
-  LighthouseReportCategory
->;
-
-type LighthouseReportAudits = {
-  metrics: {
-    details?: {
-      items?: any[];
-    };
-  };
-  diagnostics: {
-    details?: {
-      items?: any[];
-    };
-  };
-};
-
-type LighthouseReport = {
-  requestedUrl: string;
-  finalUrl: string;
-  runWarnings: string[];
-  categories: LighthouseReportCategories;
-  fetchTime: string;
-  audits: LighthouseReportAudits;
 };
 
 type SslTestReportEntry = {
@@ -338,7 +305,7 @@ type UpDownReport = {
 type Wget404Report = string[];
 
 type UrlReport = UrlConfig & {
-  lhr?: LighthouseReport | null;
+  lhr?: LighthouseReport | LighthouseReport[] | null;
   testssl?: SslTestReport | null;
   nmap?: NmapReport | null;
   http?: HttpReport | null;
@@ -351,17 +318,32 @@ type UrlReport = UrlConfig & {
   codescan?: CodescanReport | null;
   screenshot?: boolean | null;
   summary: UrlReportSummary;
-  stats?: StatsReport | null;
+  stats?: PageReport | null;
+  budget_page?: PageReport | null;
   404?: Wget404Report | null;
   trivy?: TrivyReport | null;
   "declaration-a11y"?: DeclarationA11yReport | null;
   "declaration-rgpd"?: DeclarationRgpdReport | null;
+  betagouv?: BetagouvReport;
+};
+
+type BetagouvReportPhase = {
+  name: string;
+  start: string;
+};
+
+type BetagouvReport = {
+  attributes: {
+    repository: string;
+    phases: BetagouvReportPhase[];
+  };
 };
 
 type DashLordReport = UrlReport[];
 
-type StatsReport = {
+type PageReport = {
   grade: string;
+  url: string;
   uri: string;
 };
 
@@ -411,3 +393,12 @@ interface Vulnerability {
   Title?: string;
   Severity: string;
 }
+
+type EcoIndexReportRow = {
+  label: "EcoIndex" | "Note" | "GES" | "Eau";
+  value: string | number;
+  unit?: string;
+  comment?: string;
+};
+
+type EcoIndexReport = EcoIndexReportRow[];

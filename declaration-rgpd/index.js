@@ -1,4 +1,5 @@
 const jsdom = require("jsdom");
+const fs = require("fs");
 const { fuzzy } = require("fast-fuzzy");
 const { execSync } = require("child_process");
 
@@ -56,23 +57,40 @@ const matchInHtml = (htmlString, searchArray) => {
 const getDeclarationUrl = (dom, bestMatch, url) => {
   let declarationUrl;
   // try to find related href if any
-  Array.from(dom.window.document.querySelectorAll("a")).filter((a) => {
-    if (fuzzy(bestMatch.needle, a.text) > 0.9) {
+  Array.from(dom.window.document.querySelectorAll("a"))
+    .filter((a) => fuzzy(bestMatch.needle, a.text) > 0.9)
+    .forEach((a) => {
       // make URL absolute when possible
       const link = a.getAttribute("href");
       if (link !== "#") {
-        declarationUrl = link.charAt(0) === "/" ? `${url || ""}${link}` : link;
+        if (link.match(/^https?:\/\//)) {
+          declarationUrl = link;
+        } else if (link.charAt(0) === "/") {
+          const host = url.replace(/(https?:\/\/[^/]+).*/, "$1");
+          declarationUrl = `${host}${link}`;
+        } else {
+          declarationUrl = `${url}/${link}`;
+        }
       }
-    }
-  });
+    });
   return declarationUrl;
 };
 
 const analyseDeclaration = (result, search, thirdPartiesJson) => {
   // get declaration HTML
-  const htmlOutput = execSync(
-    `npx pwpr --url=${result.declarationUrl} --load=30000`
-  );
+  if (result.declarationUrl.toLowerCase().match(/\.pdf$/)) {
+    // todo: handle PDF
+    return result;
+  }
+  let htmlOutput;
+  try {
+    htmlOutput = execSync(
+      `LANGUAGE=fr npx @socialgouv/get-html ${result.declarationUrl}`
+    );
+  } catch (e) {
+    console.error(`Error: get-html failed for ${result.declarationUrl}`);
+    return result;
+  }
   const htmlString = htmlOutput.toString().toUpperCase();
   result.maxScore = search.mustMatch.length;
 
@@ -104,7 +122,9 @@ const analyseDom = async (
   dom,
   { url = "", thirdPartiesOutput = "{}" } = {}
 ) => {
-  const text = dom.window.document.body.textContent;
+  const text = Array.from(dom.window.document.querySelectorAll("a"))
+    .map((a) => a.text)
+    .join(" ");
   // add an object to result for every searches entry
   return searches.map((search) => {
     // fuzzy find the best match
@@ -128,7 +148,12 @@ const analyseDom = async (
       result.declarationUrl = getDeclarationUrl(dom, bestMatch, url);
 
       if (result.declarationUrl) {
-        const thirdPartiesJson = JSON.parse(thirdPartiesOutput);
+        let thirdPartiesJson = {};
+        try {
+          thirdPartiesJson = JSON.parse(thirdPartiesOutput);
+        } catch (e) {
+          console.error("Cannot parse thirdparties JSON", e);
+        }
         result = analyseDeclaration(result, search, thirdPartiesJson);
       }
     }
@@ -137,7 +162,8 @@ const analyseDom = async (
 };
 
 const analyseFile = async (filePath, { url, thirdPartiesOutput } = {}) => {
-  const dom = await JSDOM.fromFile(filePath);
+  const html = fs.readFileSync(filePath).toString();
+  const dom = await new JSDOM(html);
   return analyseDom(dom, { url, thirdPartiesOutput });
 };
 
@@ -147,7 +173,7 @@ const analyseUrl = async (url) => {
   return analyseDom(dom, { url });
 };
 
-module.exports = { analyseFile, analyseUrl };
+module.exports = { analyseDom, analyseFile, analyseUrl };
 
 if (require.main === module) {
   const url = process.argv[process.argv.length - 3]; // url, to make absolute links
@@ -156,5 +182,8 @@ if (require.main === module) {
 
   analyseFile(filePath, { url, thirdPartiesOutput })
     .then((result) => console.log(JSON.stringify(result)))
-    .catch(() => console.log(JSON.stringify({ declaration: undefined })));
+    .catch((e) => {
+      console.error(e);
+      console.log(JSON.stringify({ declaration: undefined }));
+    });
 }

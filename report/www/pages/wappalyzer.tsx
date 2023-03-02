@@ -9,7 +9,7 @@ const PageWappalyzer: NextPage = () => {
   return (
     <>
       <Head>
-        <title>DashLord - Technologies utilisées</title>
+        <title>Wappalyzer - Technologies - Dashlord</title>
       </Head>
       <WappalyzerDashboard report={report} />
     </>

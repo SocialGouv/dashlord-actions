@@ -61,42 +61,52 @@ const nucleiCleanup = (result, url) =>
 /**
  * Minify Lighthouse JSON data
  *
- * @param {LighthouseReport} result Lighthouse JSON content
+ * @param {UrlReport["lhr"]} result Lighthouse JSON content
  *
- * @returns {LighthouseReport|null} minified JSON content
+ * @returns {LighthouseReport[]|null} minified JSON content
  */
 const lhrCleanup = (result) => {
   if (!result) {
     return null;
   }
-  const { requestedUrl, finalUrl, fetchTime, runWarnings, categories, audits } =
-    result;
+  const lhrItems = Array.isArray(result) ? result : [result];
 
-  /** @type {LighthouseReportCategories} */
-  // @ts-ignore
-  const newCategories =
-    (categories &&
-      Object.keys(categories).reduce(
-        (
-          a,
-          /** @type {LighthouseReportCategoryKey} */
-          key
-        ) => ({
-          ...a,
+  return lhrItems.map((item) => {
+    const {
+      requestedUrl,
+      finalUrl,
+      fetchTime,
+      runWarnings,
+      categories,
+      audits,
+    } = item;
 
-          [key]: omit(categories[key], "auditRefs"),
-        }),
-        {}
-      )) ||
-    {};
-  return {
-    requestedUrl,
-    finalUrl,
-    fetchTime,
-    runWarnings,
-    categories: newCategories,
-    audits: pick(audits, ["metrics", "diagnostics"]),
-  };
+    /** @type {LighthouseReportCategories} */
+    // @ts-ignore
+    const newCategories =
+      (categories &&
+        Object.keys(categories).reduce(
+          (
+            a,
+            /** @type {LighthouseReportCategoryKey} */
+            key
+          ) => ({
+            ...a,
+
+            [key]: omit(categories[key], "auditRefs"),
+          }),
+          {}
+        )) ||
+      {};
+    return {
+      requestedUrl,
+      finalUrl,
+      fetchTime,
+      runWarnings,
+      categories: newCategories,
+      audits: pick(audits, ["metrics", "diagnostics"]),
+    };
+  });
 };
 
 /**
@@ -131,13 +141,21 @@ const tools = {
     data: (basePath) => fs.existsSync(path.join(basePath, "screenshot.jpeg")),
   },
   stats: { data: requireToolData("stats.json") },
+  github_repository: { data: requireToolData("github_repository.json") },
+  budget_page: { data: requireToolData("budget_page.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
   trivy: { data: requireToolData("trivy.json") /*, cleanup: trivyCleanup */ },
   "declaration-a11y": {
     data: requireToolData("declaration-a11y.json"),
   },
- "declaration-rgpd": {
+  "declaration-rgpd": {
     data: requireToolData("declaration-rgpd.json"),
+  },
+  betagouv: {
+    data: requireToolData("betagouv.json"),
+  },
+  ecoindex: {
+    data: requireToolData("ecoindex.json"),
   },
 };
 
@@ -199,7 +217,13 @@ const generateUrlReport = (url) => {
       }
     };
 
-    copyForWebsite("lhr.html");
+    // copy all lhr-.*.html
+    fs.readdirSync(latestFilesPath).forEach((filename) => {
+      if (filename.match(/^lhr-(.*)\.html$/)) {
+        copyForWebsite(filename);
+      }
+    });
+
     copyForWebsite("testssl.html");
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");

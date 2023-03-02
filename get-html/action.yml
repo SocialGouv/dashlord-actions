@@ -3,16 +3,27 @@ description: "Get some URL HTML"
 
 inputs:
   url:
-    description: URL to save data for
+    description: URL to read HTML
     required: true
   output:
     description: Path to output file
     default: result.html
+    required: false
+  language:
+    description: Default environment LANGUAGE
+    default: fr
+    required: false
 
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "14"
     - shell: bash
-      id: scan
+      id: fetch
       run: |
-        npx pwpr --url=${{ inputs.url }} --load=30000 --output ${{ inputs.output }}
+        cd ${{ github.action_path }}
+        yarn
+        export LANGUAGE="${{ inputs.language }}"
+        ./bin/index.js ${{ inputs.url }} > ${{ github.workspace }}/${{ inputs.output }}

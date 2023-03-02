@@ -12,6 +12,7 @@ tools:
   updownio: true
   dependabot: true
   codescan: true
+  budget_page: true
   stats: true
   404: true
   declaration-a11y: true
@@ -27,6 +28,9 @@ urls:
     repositories:
       - chez/chez-ui
       - chez/chez-api
+    pages:
+      - /login
+      - /profile 
     tools:
       screenshot: false
       updownio: false

@@ -83,7 +83,7 @@ export const Intro: React.FC = () => (
           description="Les mesures de performance sont un instantané, donc pas forcément représentatives"
         />
         <Alert
-          type="warning"
+          type="error"
           title=""
           description={
             <span>
@@ -323,8 +323,8 @@ export const Intro: React.FC = () => (
         <li>Vie privée</li>
         <br />
         <Alert
-          title=""
-          type="warning"
+          title="thirdparties"
+          type="error"
           description="Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs"
         />
       </Panel>
@@ -397,6 +397,29 @@ export const Intro: React.FC = () => (
         <br />
         Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.)
         mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
+      </Panel>
+    )}
+
+    {isToolEnabled("ecoindex") && (
+      <Panel
+        title="Score eco-index"
+        url="https://www.ecoindex.fr/quest-ce-que-ecoindex/"
+        urlText="L'écoconception web"
+        isExternal
+      >
+        EcoIndex est un outil communautaire, gratuit et transparent qui, pour
+        une URL donnée, permet d’évaluer :
+        <br /> sa performance environnementale absolue à l’aide d’un score sur
+        100 (higher is better) ;
+        <br /> sa performance environnementale relative à l’aide d’une note de A
+        à G ;
+        <br /> l’empreinte technique de la page (poids, complexité, etc.) ;
+        <br /> l’empreinte environnementale associée (gaz à effet de serre et
+        eau).
+        <br />
+        <br />
+        L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre
+        conscience de l’impact environnemental de l’internet.
       </Panel>
     )}
   </>

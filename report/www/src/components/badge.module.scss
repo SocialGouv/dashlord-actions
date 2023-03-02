@@ -12,18 +12,20 @@
     font-weight: bold;
 }
 
-.success {
-    background-color: var(--success);
+
+
+.success, .success:hover {
+    background-color: var(--success) !important;
 }
 
-.info {
-    background-color: var(--info);
+.info, .info:hover {
+    background-color: var(--info) !important;
 }
 
-.warning {
-    background-color: var(--warning);
+.warning, .warning:hover {
+    background-color: var(--warning) !important;
 }
 
-.danger {
-    background-color: var(--error);
+.danger, .danger:hover {
+    background-color: var(--error) !important;
 }

@@ -11,6 +11,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       "Accessibilité : totalement conforme": (
         <Alert
           type="success"
+          title="conforme"
           description={
             <>La mention a bien été detectée : Totalement conforme</>
           }
@@ -19,6 +20,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       "Accessibilité : partiellement conforme": (
         <Alert
           type="success"
+          title="partiel-conforme"
           description={
             <>La mention a bien été detectée : Partiellement conforme</>
           }
@@ -27,6 +29,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       "Accessibilité : non conforme": (
         <Alert
           type="info"
+          title="non-conforme"
           description={<>La mention a bien été detectée : Non conforme</>}
         />
       ),

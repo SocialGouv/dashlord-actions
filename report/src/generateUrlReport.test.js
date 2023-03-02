@@ -42,6 +42,11 @@ describe("generateUrlReport", () => {
   test(`should generate latest report for a valid url`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => false); // screenshot
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
 
     // mock all required files
     mockJson("codescanalerts.json", {
@@ -50,7 +55,8 @@ describe("generateUrlReport", () => {
     });
     mockJson("dependabotalerts.json", { report: "dependabotalerts.json" });
     mockJson("http.json", { report: "http.json" });
-    mockJson("lhr.json", { report: "lhr.json" });
+    mockJson("lhr.json", ["dsfsdfqdf"]);
+    mockJson("lhr-dsfsdfqdf.json", { report: "lhr-dsfsdfqdf.json" });
     mockJson("nmapvuln.json", { report: "nmap.json" });
     mockJson("nuclei.json", [{ report: "nuclei.json" }]);
     mockJson("testssl.json", [{ report: "testssl.json" }]);
@@ -59,6 +65,8 @@ describe("generateUrlReport", () => {
     mockJson("wappalyzer.json", { report: "wappalyzer.json" });
     mockJson("zap.json", { report: "zap.json" });
     mockJson("stats.json", { report: "stats.json" });
+    mockJson("budget_page.json", { report: "budget_page.json" });
+    mockJson("github_repository.json", { report: "github_repository.json" });
     mockJson("404.json", { broken: [1, 2, 3] });
     mockJson("declaration-a11y.json", {
       mention: "Accessibilité : partiellement conforme",
@@ -89,6 +97,7 @@ describe("generateUrlReport", () => {
     unMockJson("dependabotalerts.json");
     unMockJson("http.json");
     unMockJson("lhr.json");
+    unMockJson("lhr-dsfsdfqdf.json");
     unMockJson("nmapvuln.json");
     unMockJson("nuclei.json", []);
     unMockJson("testssl.json");
@@ -97,6 +106,8 @@ describe("generateUrlReport", () => {
     unMockJson("wappalyzer.json");
     unMockJson("zap.json");
     unMockJson("stats.json");
+    unMockJson("budget_page.json");
+    unMockJson("github_repository.json");
     unMockJson("404.json");
     unMockJson("declaration-a11y.json");
     unMockJson("declaration-rgpd.json");
@@ -104,7 +115,11 @@ describe("generateUrlReport", () => {
   test(`should allow empty/invalid reports`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => false); // screenshot
-
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
     mockJson("codescanalerts.json");
     mockJson("wappalyzer.json");
 
@@ -121,6 +136,12 @@ describe("generateUrlReport", () => {
   test(`should detect screenshot if any`, () => {
     fs.existsSync.mockImplementationOnce(() => true); // check url folder
     fs.existsSync.mockImplementationOnce(() => true); // screenshot
+    fs.readdirSync.mockImplementationOnce(() => [
+      "lhr-xxxx.html",
+      "lhr-yyyy.html",
+      "aaaa.html",
+    ]); // lhr
+
     expect(
       generateUrlReport({
         url: testUrl,

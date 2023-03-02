@@ -77,21 +77,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -110,6 +107,7 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -148,6 +146,7 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -186,6 +185,7 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -232,6 +232,7 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -339,18 +340,6 @@ Array [
                 y2="8"
               />
             </svg>
-            <a
-              href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
-              rel="noreferrer noopener"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-              target="_blank"
-            >
-              Rapport LightHouse
-            </a>
           </div>
           <div
             className="body"
@@ -376,165 +365,231 @@ Array [
               </div>
             </div>
             <div
-              className="fr-grid-row"
+              className="container"
             >
               <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                className="banner"
               >
-                <div
-                  className="card"
+                <h5
+                  className="mainTitle"
                 >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    Accessibility
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    96%
-                  </div>
-                </div>
+                  https://www.fabrique.social.gouv.fr/
+                </h5>
+                <svg
+                  fill="none"
+                  height={20}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                      "marginLeft": 5,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="16"
+                    y2="12"
+                  />
+                  <line
+                    x1="12"
+                    x2="12.01"
+                    y1="8"
+                    y2="8"
+                  />
+                </svg>
+                <a
+                  href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr-aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnIv.html"
+                  rel="noreferrer noopener"
+                  style={
+                    Object {
+                      "float": "right",
+                    }
+                  }
+                  target="_blank"
+                >
+                  Rapport LightHouse
+                </a>
               </div>
               <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                className="body"
               >
                 <div
-                  className="card"
+                  className="fr-grid-row"
                 >
-                  <div>
-                    gauge mock
+                  <div
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Accessibility
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        96%
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    Performance
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Performance
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        30%
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    45%
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        SEO
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        90%
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Best Practices
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        93%
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
                 <div
-                  className="card"
-                >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    SEO
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    90%
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    Best Practices
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    93%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fr-grid-row"
-            >
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
+                  className="fr-grid-row"
                 >
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    First contentful Paint
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        First contentful Paint
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        1.2s
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    1.5s
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div
-                    className="cardTitle"
-                  >
-                    Time to interactive
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    3.4s
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div
-                    className="cardTitle"
-                  >
-                    Total requests
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Time to interactive
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        4.5s
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    51
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Total requests
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        54
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    Total weight
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    7.6Mb
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Total weight
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        7.10Mb
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -749,32 +804,7 @@ Array [
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <svg
-                        style={
-                          Object {
-                            "width": 60,
-                          }
-                        }
-                        viewBox="0 85.333 512 341.333"
-                      >
-                        <title>
-                          France
-                        </title>
-                        <path
-                          d="M0 85.331h512v341.337H0z"
-                          fill="#FFF"
-                        />
-                        <path
-                          d="M0 85.331h170.663v341.337H0z"
-                          fill="#0052B4"
-                        />
-                        <path
-                          d="M341.337 85.331H512v341.337H341.337z"
-                          fill="#D80027"
-                        />
-                      </svg>
-                    </td>
+                    <td />
                     <td>
                       www.fabrique.social.gouv.fr
                     </td>
@@ -807,7 +837,7 @@ Array [
             <h5
               className="mainTitle"
             >
-              Page /stats
+              Page de statistiques
             </h5>
             <svg
               fill="none"
@@ -852,7 +882,6 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -860,7 +889,7 @@ Array [
                 
               </p>
               <p>
-                La page /stats n'a pas été détectée !
+                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
               </p>
             </div>
           </div>
@@ -924,18 +953,18 @@ Array [
           >
             <div
               className="fr-alert fr-alert--info"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                non-conforme
+              </p>
               <p>
                 La mention a bien été detectée : Non conforme
               </p>
             </div>
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -946,12 +975,176 @@ Array [
                 La déclaration est disponible sur :
                  
                 <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  href="https://www.fabrique.social.gouv.fr/declaration-accessibilite"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  https://www.fabrique.social.gouv.fr/accessibilite
+                  https://www.fabrique.social.gouv.fr/declaration-accessibilite
                 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          id="declaration-rgpd"
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Mentions légales
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--success"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                declaration-ok
+              </p>
+              <p>
+                Votre déclaration a bien été détectée sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/mentions-legales/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/mentions-legales/
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Politique de confidentialité
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--error"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                no-declaration
+              </p>
+              <p>
+                Pas de déclaration détectée. 
+              </p>
+            </div>
+            <div
+              className="fr-alert fr-alert--error"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                incomplete-declaration
+              </p>
+              <p>
+                Rendez vous sur
+                 
+                <a
+                  href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                >
+                  https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
+                </a>
+                 
               </p>
             </div>
           </div>
@@ -1046,6 +1239,21 @@ Array [
                   </tr>
                   <tr>
                     <td>
+                      https://www.fabrique.social.gouv.fr/startups/enfants-du-spectacle/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/Domifa/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/transition-collective/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
                       https://www.fabrique.social.gouv.fr/feed.xml
                     </td>
                   </tr>
@@ -1079,12 +1287,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1103,12 +1312,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1127,12 +1337,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -1212,21 +1423,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -1245,6 +1453,7 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1283,6 +1492,7 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1321,6 +1531,7 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1367,6 +1578,7 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -1474,18 +1686,6 @@ Array [
                 y2="8"
               />
             </svg>
-            <a
-              href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr.html"
-              rel="noreferrer noopener"
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
-              target="_blank"
-            >
-              Rapport LightHouse
-            </a>
           </div>
           <div
             className="body"
@@ -1511,165 +1711,231 @@ Array [
               </div>
             </div>
             <div
-              className="fr-grid-row"
+              className="container"
             >
               <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                className="banner"
               >
-                <div
-                  className="card"
+                <h5
+                  className="mainTitle"
                 >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    Accessibility
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    96%
-                  </div>
-                </div>
+                  https://www.fabrique.social.gouv.fr/
+                </h5>
+                <svg
+                  fill="none"
+                  height={20}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                      "marginLeft": 5,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width={20}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="16"
+                    y2="12"
+                  />
+                  <line
+                    x1="12"
+                    x2="12.01"
+                    y1="8"
+                    y2="8"
+                  />
+                </svg>
+                <a
+                  href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr-aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnIv.html"
+                  rel="noreferrer noopener"
+                  style={
+                    Object {
+                      "float": "right",
+                    }
+                  }
+                  target="_blank"
+                >
+                  Rapport LightHouse
+                </a>
               </div>
               <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                className="body"
               >
                 <div
-                  className="card"
+                  className="fr-grid-row"
                 >
-                  <div>
-                    gauge mock
+                  <div
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Accessibility
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        96%
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    Performance
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Performance
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        30%
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    45%
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        SEO
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        90%
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div>
+                        gauge mock
+                      </div>
+                      <div
+                        className="cardTitle"
+                      >
+                        Best Practices
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        93%
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
                 <div
-                  className="card"
-                >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    SEO
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    90%
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div>
-                    gauge mock
-                  </div>
-                  <div
-                    className="cardTitle"
-                  >
-                    Best Practices
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    93%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fr-grid-row"
-            >
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
+                  className="fr-grid-row"
                 >
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    First contentful Paint
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        First contentful Paint
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        1.2s
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    1.5s
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div
-                    className="cardTitle"
-                  >
-                    Time to interactive
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    3.4s
-                  </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
-                  <div
-                    className="cardTitle"
-                  >
-                    Total requests
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Time to interactive
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        4.5s
+                      </div>
+                    </div>
                   </div>
                   <div
-                    className="cardValue"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    51
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Total requests
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        54
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
-              >
-                <div
-                  className="card"
-                >
                   <div
-                    className="cardTitle"
+                    className="fr-col-12 fr-col-sm-12 fr-col-md-6 fr-col-lg-3 fr-mb-2w"
                   >
-                    Total weight
-                  </div>
-                  <div
-                    className="cardValue"
-                  >
-                    7.6Mb
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="cardTitle"
+                      >
+                        Total weight
+                      </div>
+                      <div
+                        className="cardValue"
+                      >
+                        7.10Mb
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1884,32 +2150,7 @@ Array [
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <svg
-                        style={
-                          Object {
-                            "width": 60,
-                          }
-                        }
-                        viewBox="0 85.333 512 341.333"
-                      >
-                        <title>
-                          France
-                        </title>
-                        <path
-                          d="M0 85.331h512v341.337H0z"
-                          fill="#FFF"
-                        />
-                        <path
-                          d="M0 85.331h170.663v341.337H0z"
-                          fill="#0052B4"
-                        />
-                        <path
-                          d="M341.337 85.331H512v341.337H341.337z"
-                          fill="#D80027"
-                        />
-                      </svg>
-                    </td>
+                    <td />
                     <td>
                       www.fabrique.social.gouv.fr
                     </td>
@@ -1942,7 +2183,7 @@ Array [
             <h5
               className="mainTitle"
             >
-              Page /stats
+              Page de statistiques
             </h5>
             <svg
               fill="none"
@@ -1987,7 +2228,6 @@ Array [
           >
             <div
               className="fr-alert fr-alert--error"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -1995,7 +2235,7 @@ Array [
                 
               </p>
               <p>
-                La page /stats n'a pas été détectée !
+                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
               </p>
             </div>
           </div>
@@ -2059,18 +2299,18 @@ Array [
           >
             <div
               className="fr-alert fr-alert--info"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
-              />
+              >
+                non-conforme
+              </p>
               <p>
                 La mention a bien été detectée : Non conforme
               </p>
             </div>
             <div
               className="fr-alert fr-alert--success"
-              role="alert"
             >
               <p
                 className="fr-alert__title"
@@ -2081,12 +2321,176 @@ Array [
                 La déclaration est disponible sur :
                  
                 <a
-                  href="https://www.fabrique.social.gouv.fr/accessibilite"
+                  href="https://www.fabrique.social.gouv.fr/declaration-accessibilite"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  https://www.fabrique.social.gouv.fr/accessibilite
+                  https://www.fabrique.social.gouv.fr/declaration-accessibilite
                 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          id="declaration-rgpd"
+        />
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Mentions légales
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--success"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                declaration-ok
+              </p>
+              <p>
+                Votre déclaration a bien été détectée sur :
+                 
+                <a
+                  href="https://www.fabrique.social.gouv.fr/mentions-legales/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.fabrique.social.gouv.fr/mentions-legales/
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="banner"
+          >
+            <h5
+              className="mainTitle"
+            >
+              Politique de confidentialité
+            </h5>
+            <svg
+              fill="none"
+              height={20}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginLeft": 5,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="16"
+                y2="12"
+              />
+              <line
+                x1="12"
+                x2="12.01"
+                y1="8"
+                y2="8"
+              />
+            </svg>
+          </div>
+          <div
+            className="body"
+          >
+            <div
+              className="fr-alert fr-alert--error"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                no-declaration
+              </p>
+              <p>
+                Pas de déclaration détectée. 
+              </p>
+            </div>
+            <div
+              className="fr-alert fr-alert--error"
+            >
+              <p
+                className="fr-alert__title"
+              >
+                incomplete-declaration
+              </p>
+              <p>
+                Rendez vous sur
+                 
+                <a
+                  href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                >
+                  https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
+                </a>
+                 
               </p>
             </div>
           </div>
@@ -2181,6 +2585,21 @@ Array [
                   </tr>
                   <tr>
                     <td>
+                      https://www.fabrique.social.gouv.fr/startups/enfants-du-spectacle/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/Domifa/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      https://www.fabrique.social.gouv.fr/startups/transition-collective/
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
                       https://www.fabrique.social.gouv.fr/feed.xml
                     </td>
                   </tr>
@@ -2214,12 +2633,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2238,12 +2658,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2262,12 +2683,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2347,21 +2769,18 @@ Array [
       </svg>
       <span
         className="clock"
-        title="2021-09-03T23:52:34.263Z"
+        title="2022-05-22T03:00:18.861Z"
       >
         Mise à jour il y a :
          
-        5 mois
+        environ 1 an
       </span>
     </p>
-    <div
-      className="image"
-    >
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="screenshotImg"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
@@ -2380,6 +2799,7 @@ Array [
           id="fr-tab-0"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2418,6 +2838,7 @@ Array [
           id="fr-tab-1"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2456,6 +2877,7 @@ Array [
           id="fr-tab-2"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2502,6 +2924,7 @@ Array [
           id="fr-tab-3"
           onClick={[Function]}
           onMouseEnter={[Function]}
+          onTouchStart={[Function]}
           role="tab"
           tabIndex={0}
           type="button"
@@ -2558,12 +2981,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2582,12 +3006,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2606,12 +3031,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>
@@ -2630,12 +3056,13 @@ Array [
       tabIndex={0}
     >
       <div
-        className="fr-alert fr-alert--warning"
-        role="alert"
+        className="fr-alert fr-alert--error"
       >
         <p
           className="fr-alert__title"
-        />
+        >
+          warn-no-info
+        </p>
         <p>
           Aucune information trouvée dans cette catégorie
         </p>

@@ -8,6 +8,7 @@ inputs:
   output:
     description: "Path to output file. defaults to declaration-a11y.json"
     default: "declaration-a11y.json"
+    required: true
 outputs:
   url:
     description: "Declaration url"
@@ -36,3 +37,4 @@ runs:
         URL=$($JSON | jq -r '.declarationUrl')
         echo "url=$URL" >> $GITHUB_OUTPUT
         echo $JSON > ${{ github.workspace }}/${{ inputs.output }}
+        cat ${{ github.workspace }}/${{ inputs.output }}
