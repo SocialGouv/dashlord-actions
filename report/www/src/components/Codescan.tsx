@@ -59,7 +59,7 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
   return (
     (alerts.length > 0 && (
       <Panel
-        title="CodeScan"
+        title={`CodeScan ${data.url.replace(/^https?:\/\/[^/]+\/(.*)/, "$1")}`}
         url={`${data.url}/security/code-scanning`}
         urlText="Alertes CodeQL"
         isExternal
