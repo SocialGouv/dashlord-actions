@@ -77,7 +77,10 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
   return (
     (data.vulnerabilityAlerts.totalCount > 0 && (
       <Panel
-        title="Alertes Dependabot"
+        title={`Alertes Dependabot ${data.url.replace(
+          /^https:\/\/github\.com\/(.*)/,
+          "$1"
+        )}`}
         url={`${data.url}/security/dependabot`}
         urlText="Alertes dependabot"
         isExternal={true}
