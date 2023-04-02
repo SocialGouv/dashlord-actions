@@ -53,8 +53,10 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "hébergeur (ou) hébergement",
+    ],
+    "score": 3,
     "slug": "ml",
   },
   Object {
