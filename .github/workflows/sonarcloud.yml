@@ -32,6 +32,6 @@ jobs:
         shell: bash
         run: |
           cat sonar-output.json
-          [[ $(cat sonar-output.json | jq '. | length') -eq "2" ]] || (echo "Error: Should get 2 results" && exit 1)
+          [[ $(cat sonar-output.json | jq -r '. | length') -eq "2" ]] || (echo "Error: Should get 2 results" && exit 1)
           cat sonar-output.json | jq -e '.[0].result.status.vulnerabilities' 
           cat sonar-output.json | jq -e '.[1].result.status.vulnerabilities'
