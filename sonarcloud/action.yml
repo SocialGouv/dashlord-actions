@@ -18,8 +18,10 @@ runs:
     - name: Install
       shell: bash
       run: |
+        cd ${{ github.action_path }}
         yarn
     - name: Fetch data
       shell: bash
       run: |
+        cd ${{ github.action_path }}
         yarn fetch "${{ inputs.repos }}" > "${{ inputs.output }}"
