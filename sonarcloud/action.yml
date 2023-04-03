@@ -24,4 +24,4 @@ runs:
       shell: bash
       run: |
         cd ${{ github.action_path }}
-        yarn fetch "${{ inputs.repos }}" > "${{ github.workspace }}/${{ inputs.output }}"
+        yarn -s fetch "${{ inputs.repos }}" > "${{ github.workspace }}/${{ inputs.output }}"
