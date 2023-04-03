@@ -1,5 +1,3 @@
-const core = require("@actions/core");
-
 const SONARCLOUD_API_ROOT =
   process.env.SONARCLOUD_API_ROOT || "https://sonarcloud.io/api";
 
@@ -42,15 +40,13 @@ const getSonarCloudKey = (repo) => {
  * @returns
  */
 const generateJson = async (repos) => {
-  core.info(`generate sonarcloud.json for ${repos}`);
-
   const queries = await Promise.all(
     repos.map((repo) =>
       sonarApi("project_branches/list", {
         project: getSonarCloudKey(repo),
       }).then((result) => {
         if (result.errors && result.errors.length) {
-          console.log(`Invalid result for ${repo}`);
+          console.error(`Invalid result for ${repo}`);
           return null;
         }
         const mainBranch =
