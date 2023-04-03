@@ -13,8 +13,24 @@ const summary = (report) => {
     report.map((repo) => repo.result.status.vulnerabilities)
   );
   const codeSmells = sum(report.map((repo) => repo.result.status.codeSmells));
+  const gateFailed =
+    report.filter((repo) => repo.result.status?.qualityGateStatus === "ERROR")
+      .length > 0;
+  if (gateFailed || codeSmells > 100 || vulnerabilities > 10 || bugs > 50) {
+    return {
+      sonarcloudGrade: "F",
+    };
+  }
   const grade =
-    vulnerabilities > 0 ? "F" : bugs > 0 ? "C" : codeSmells > 0 ? "B" : "A";
+    vulnerabilities > 0
+      ? "E"
+      : bugs > 10
+      ? "D"
+      : bugs > 0
+      ? "C"
+      : codeSmells > 0
+      ? "B"
+      : "A";
   if (grade) {
     return {
       sonarcloudGrade: grade,
