@@ -430,7 +430,7 @@ export const Intro: React.FC = () => (
         urlText="Site officiel"
         isExternal
       >
-        SonarCloud permet d'analyser le code source des repositories et de
+        SonarCloud permet d&apos;analyser le code source des repositories et de
         détecter des bugs, vulnérabilités, duplications et autres indicateurs de
         qualité.
       </Panel>
