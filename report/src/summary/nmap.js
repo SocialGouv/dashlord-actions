@@ -1,4 +1,4 @@
-/** @param { number} count */
+/** @param {number} count */
 const getGradeOpenPorts = (count) => {
   return count > 2 ? "F" : "A";
 };

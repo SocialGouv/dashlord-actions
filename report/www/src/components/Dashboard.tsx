@@ -588,6 +588,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("sonarcloud")) {
+    columns.push(
+      getColumn({
+        id: "sonarcloud",
+        category: "securite",
+        title: "SonarCloud",
+        info: "Scan de code SonarCloud.io",
+        hash: "sonarcloud",
+        gradeKey: "sonarcloudGrade",
+      })
+    );
+  }
+
   const filterBy = (key) => (item, idx, arr) =>
     !arr.slice(idx + 1).find((r) => item[key] === r[key]);
   return (

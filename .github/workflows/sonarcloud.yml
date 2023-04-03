@@ -1,0 +1,37 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - sonarcloud/**
+      - .github/workflows/sonarcloud.yml
+  pull_request:
+    branches: ["*"]
+
+name: Tests sonarcloud action
+jobs:
+  tests-report:
+    runs-on: ubuntu-latest
+    name: sonarcloud action
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Run JS tests
+        shell: bash
+        run: |
+          cd sonarcloud
+          yarn
+          yarn test
+      - name: Run action
+        uses: ./sonarcloud
+        with:
+          repos: sensgithub/eHospital,zabbix/zabbix
+          output: sonar-output.json
+      - name: Test action results
+        shell: bash
+        run: |
+          cat sonar-output.json
+          [[ $(cat sonar-output.json | jq '. | length') -eq "2" ]] || (echo "Error: Should get 2 results" && exit 1)
+          cat sonar-output.json | jq -e '.[0].result.status.vulnerabilities' 
+          cat sonar-output.json | jq -e '.[1].result.status.vulnerabilities'

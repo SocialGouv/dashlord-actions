@@ -34,7 +34,8 @@ type DashlordTool =
   | "github_repository"
   | "declaration-a11y"
   | "declaration-rgpd"
-  | "ecoindex";
+  | "ecoindex"
+  | "sonarcloud";
 
 type DashlordConfig = {
   title: string;
@@ -402,3 +403,32 @@ type EcoIndexReportRow = {
 };
 
 type EcoIndexReport = EcoIndexReportRow[];
+
+interface SonarCloudRepoReport {
+  repo: string;
+  result: SonarCloudRepoRepoResult;
+}
+
+interface SonarCloudRepoRepoResult {
+  name: string;
+  isMain: boolean;
+  type: string;
+  status: SonarCloudRepoStatus;
+  analysisDate: string;
+  commit: SonarCloudRepoRepoCommit;
+}
+
+interface SonarCloudRepoStatus {
+  bugs: number;
+  vulnerabilities: number;
+  codeSmells: number;
+  qualityGateStatus?: string;
+}
+
+interface SonarCloudRepoRepoCommit {
+  sha: string;
+  date: string;
+  message: string;
+}
+
+type SonarCloudReport = SonarCloudRepoReport[];

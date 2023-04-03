@@ -24,6 +24,7 @@ import { Page } from "./Page";
 import { Betagouv } from "./BetagouvInfo";
 import { GithubRepository } from "./GithubRepository";
 import { EcoIndex } from "./EcoIndex";
+import { SonarCloud } from "./SonarCloud";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -184,6 +185,13 @@ const tabs = [
               data={report["trivy"]}
               url={`${BASE_PATH}/report/${btoa(url)}/trivy.json`}
             />
+          ),
+      },
+      {
+        id: "sonarcloud",
+        render: (report, url) =>
+          report["sonarcloud"].length && (
+            <SonarCloud data={report["sonarcloud"]} />
           ),
       },
     ],

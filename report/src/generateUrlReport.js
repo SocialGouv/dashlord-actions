@@ -157,6 +157,9 @@ const tools = {
   ecoindex: {
     data: requireToolData("ecoindex.json"),
   },
+  sonarcloud: {
+    data: requireToolData("sonarcloud.json"),
+  },
 };
 
 //@ts-expect-error

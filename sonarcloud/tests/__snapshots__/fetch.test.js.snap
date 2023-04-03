@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get results from sonarcloud 1`] = `
+[
+  {
+    "repo": "sensgithub/eHospital",
+    "result": {
+      "analysisDate": "2023-04-03T01:37:49+0200",
+      "commit": {
+        "author": undefined,
+        "date": "2023-04-03T01:37:44+0200",
+        "message": "Delete codeql.yml",
+        "sha": "28f2cf43a343f5215ffa1052d9c659333626a2a4",
+      },
+      "isMain": true,
+      "name": "main",
+      "status": {
+        "bugs": 174,
+        "codeSmells": 2198,
+        "vulnerabilities": 23,
+      },
+      "type": "LONG",
+    },
+  },
+  {
+    "repo": "zabbix/zabbix",
+    "result": {
+      "analysisDate": "2023-04-02T02:17:15+0200",
+      "commit": {
+        "author": undefined,
+        "date": "2023-03-31T21:45:03+0200",
+        "message": ".......... [ZBX-1357] automatic update of translation strings",
+        "sha": "f9d2062ed6560094ad6f4c8772cd82b72328cd83",
+      },
+      "isMain": true,
+      "name": "master",
+      "status": {
+        "bugs": 73,
+        "codeSmells": 13669,
+        "qualityGateStatus": "ERROR",
+        "vulnerabilities": 26,
+      },
+      "type": "LONG",
+    },
+  },
+]
+`;
