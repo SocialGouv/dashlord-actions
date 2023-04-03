@@ -3,7 +3,6 @@ import * as React from "react";
 import { Table } from "@dataesr/react-dsfr";
 
 import { Panel } from "./Panel";
-import Badge from "./Badge";
 import { Grade } from "./Grade";
 
 type SonarCloudReportProps = { data: SonarCloudReport };
