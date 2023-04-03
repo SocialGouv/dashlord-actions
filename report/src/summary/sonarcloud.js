@@ -16,7 +16,7 @@ const summary = (report) => {
   const gateFailed =
     report.filter((repo) => repo.result.status?.qualityGateStatus === "ERROR")
       .length > 0;
-  if (gateFailed || codeSmells > 100 || vulnerabilities > 10 || bugs > 50) {
+  if (gateFailed || vulnerabilities > 10 || bugs > 50) {
     return {
       sonarcloudGrade: "F",
     };
