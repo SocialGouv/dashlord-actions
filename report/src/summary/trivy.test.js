@@ -58,7 +58,7 @@ const tests = [
     ],
     expected: {
       trivy: 3,
-      trivyGrade: "F",
+      trivyGrade: "D",
     },
   },
   {
@@ -91,7 +91,7 @@ const tests = [
     ],
     expected: {
       trivy: 1,
-      trivyGrade: "C",
+      trivyGrade: "B",
     },
   },
 ];

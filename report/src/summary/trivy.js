@@ -25,8 +25,19 @@ const summary = (report) => {
       (vuln) => vuln.Severity === "CRITICAL"
     ).length;
     const high = allVulns.filter((vuln) => vuln.Severity === "HIGH").length;
-    const medium = allVulns.filter((vuln) => vuln.Severity === "MEDIUM").length;
-    const trivyGrade = critical ? "F" : high ? "E" : medium ? "C" : "A";
+    let trivyGrade = "A";
+    if (critical > 10) {
+      trivyGrade = "F";
+    } else if (critical > 5) {
+      trivyGrade = "E";
+    } else if (critical > 0) {
+      trivyGrade = "D";
+    } else {
+      if (high > 10) {
+        trivyGrade = "C";
+      }
+      trivyGrade = "B";
+    }
     return { trivy: vulnsCount, trivyGrade };
   }
 };
