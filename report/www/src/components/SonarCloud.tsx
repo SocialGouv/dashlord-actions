@@ -15,6 +15,8 @@ const columns = [
       if (result.name === "qualityGateStatus") {
         if (result.value === "ERROR") {
           return <Grade grade="F" />;
+        } else if (result.value === "OK") {
+          return <Grade grade="A" />;
         }
         return;
       }
