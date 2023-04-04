@@ -16,11 +16,20 @@ const summary = (report) => {
   const gateFailed =
     report.filter((repo) => repo.result.status?.qualityGateStatus === "ERROR")
       .length > 0;
+  const gateSuccess =
+    report.filter((repo) => repo.result.status?.qualityGateStatus === "OK")
+      .length === report.length;
   if (gateFailed || vulnerabilities > 10 || bugs > 50) {
     return {
       sonarcloudGrade: "F",
     };
   }
+  if (gateSuccess) {
+    return {
+      sonarcloudGrade: "A",
+    };
+  }
+
   const grade =
     vulnerabilities > 0
       ? "E"
