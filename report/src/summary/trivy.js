@@ -25,6 +25,7 @@ const summary = (report) => {
       (vuln) => vuln.Severity === "CRITICAL"
     ).length;
     const high = allVulns.filter((vuln) => vuln.Severity === "HIGH").length;
+    const medium = allVulns.filter((vuln) => vuln.Severity === "MEDIUM").length;
     let trivyGrade = "A";
     if (critical > 10) {
       trivyGrade = "F";
@@ -35,8 +36,9 @@ const summary = (report) => {
     } else {
       if (high > 10) {
         trivyGrade = "C";
+      } else if (high > 0 || medium > 0) {
+        trivyGrade = "B";
       }
-      trivyGrade = "B";
     }
     return { trivy: vulnsCount, trivyGrade };
   }
