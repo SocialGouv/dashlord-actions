@@ -81,16 +81,6 @@ export const TrivyDashboard = ({ report }: TrivyDashboardProps) => {
 
   const severities = ["CRITICAL" /*, "HIGH", "MEDIUM", "LOW", "INFO"*/];
 
-  const criticals = vulnerabilities
-    .filter((vuln) => vuln.severity === "CRITICAL")
-    .reduce((a, vuln) => {
-      if (!a[vuln.target]) {
-        a[vuln.target] = [];
-      }
-      a[vuln.target].push(vuln);
-      return a;
-    }, {});
-
   return (
     <>
       <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -108,10 +98,7 @@ export const TrivyDashboard = ({ report }: TrivyDashboardProps) => {
             return a;
           }, {});
         return Object.entries(images)
-          .sort(
-            ([image1, vulns1], [image2, vulns2]) =>
-              vulns2.length - vulns1.length
-          )
+          .sort(([_, vulns1], [__, vulns2]) => vulns2.length - vulns1.length)
           .map(([image, vulns]) => (
             <Panel
               key={severity}
