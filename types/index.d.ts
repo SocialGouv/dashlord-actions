@@ -394,6 +394,15 @@ interface Vulnerability {
   Title?: string;
   Severity: string;
   FixedVersion?: string;
+  CVSS: {
+    nvd: {
+      V2Score: number;
+      V3Score: number;
+    };
+    redhat: {
+      V3Score: number;
+    };
+  };
 }
 
 type EcoIndexReportRow = {

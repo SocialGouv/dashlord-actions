@@ -6,7 +6,7 @@ import { Panel } from "./Panel";
 
 type TrivyDashboardProps = { report: DashLordReport };
 
-const TrivyBadge = (row: TrivyVulnerability) => {
+const TrivyBadge = (row: TrivyVulnerability & { title: string }) => {
   const severity = row.severity || "";
   const variant =
     severity === "CRITICAL"
@@ -20,7 +20,7 @@ const TrivyBadge = (row: TrivyVulnerability) => {
       : "success";
   return (
     <Badge className="w-100" variant={variant}>
-      {severity}
+      {row.title || severity}
     </Badge>
   );
 };
@@ -29,7 +29,7 @@ const columns = [
   {
     name: "severity",
     label: "Séverité",
-    render: (row) => <TrivyBadge {...row} />,
+    render: (row) => <TrivyBadge {...row} title={row.score} />,
   },
   {
     name: "title",
@@ -42,7 +42,7 @@ const columns = [
   },
   {
     name: "fixable",
-    label: "Fixable",
+    label: "",
     render: (row) => (
       <div style={{ textAlign: "center" }}>
         {row.fixableVersions ? `✅ ${row.fixableVersions}` : "❌"}
@@ -59,6 +59,8 @@ type TrivyVulnerability = {
   fixableVersions: string;
   id: string;
   url: string;
+  score: number;
+  key: string;
 };
 
 const getVulnerabilities = (report: DashLordReport): TrivyVulnerability[] => {
@@ -66,21 +68,27 @@ const getVulnerabilities = (report: DashLordReport): TrivyVulnerability[] => {
     .filter((detail) => detail.trivy && detail.trivy.length)
     .flatMap((detail) => detail.trivy);
 
-  const vulnerabilities = scans.flatMap((scan: TrivyScanResult) =>
-    scan.Results.filter(
-      (result) => result.Vulnerabilities && result.Vulnerabilities.length
-    ).flatMap((result) =>
-      result.Vulnerabilities.map((vuln) => ({
-        image: scan.ArtifactName,
-        target: result.Target,
-        severity: vuln.Severity,
-        title: vuln.Title,
-        fixableVersions: vuln.FixedVersion,
-        id: vuln.VulnerabilityID,
-        url: vuln.PrimaryURL,
-        key: scan.ArtifactName + result.Target + vuln.Severity + vuln.Title,
-      }))
-    )
+  const vulnerabilities: TrivyVulnerability[] = scans.flatMap(
+    (scan: TrivyScanResult) =>
+      scan.Results.filter(
+        (result) => result.Vulnerabilities && result.Vulnerabilities.length
+      ).flatMap((result) =>
+        result.Vulnerabilities.map((vuln) => ({
+          image: scan.ArtifactName,
+          target: result.Target,
+          severity: vuln.Severity,
+          title: vuln.Title,
+          fixableVersions: vuln.FixedVersion,
+          id: vuln.VulnerabilityID,
+          url: vuln.PrimaryURL,
+          key: scan.ArtifactName + result.Target + vuln.Severity + vuln.Title,
+          score: Math.max(
+            vuln.CVSS?.nvd?.V3Score || 0,
+            vuln.CVSS?.nvd?.V2Score || 0,
+            vuln.CVSS?.redhat?.V3Score || 0
+          ),
+        }))
+      )
   );
 
   return uniqBy(vulnerabilities, "key");
@@ -89,8 +97,8 @@ const getVulnerabilities = (report: DashLordReport): TrivyVulnerability[] => {
 export const TrivyDashboard = ({ report }: TrivyDashboardProps) => {
   const vulnerabilities = getVulnerabilities(report);
 
+  // only show criticals
   const severities = ["CRITICAL" /*, "HIGH", "MEDIUM", "LOW", "INFO"*/];
-
   return (
     <>
       <Callout hasInfoIcon={false} className="fr-mb-3w">
@@ -109,18 +117,21 @@ export const TrivyDashboard = ({ report }: TrivyDashboardProps) => {
           }, {});
         return Object.entries(images)
           .sort(([_, vulns1], [__, vulns2]) => vulns2.length - vulns1.length)
-          .map(([image, vulns]) => (
-            <Panel
-              key={severity}
-              title={`${severity} (${vulns.length}) : ${image}`}
-            >
-              <Table
-                rowKey={(args) => args.key}
-                columns={columns}
-                data={vulns}
-              />
-            </Panel>
-          ));
+          .map(([image, vulns]: [string, TrivyVulnerability[]]) => {
+            vulns.sort((v1, v2) => v2.score - v1.score);
+            return (
+              <Panel
+                key={image}
+                title={`${severity} (${vulns.length}) : ${image}`}
+              >
+                <Table
+                  rowKey={(args) => args.key}
+                  columns={columns}
+                  data={vulns}
+                />
+              </Panel>
+            );
+          });
       })}
     </>
   );
