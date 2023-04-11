@@ -422,5 +422,18 @@ export const Intro: React.FC = () => (
         conscience de l’impact environnemental de l’internet.
       </Panel>
     )}
+
+    {isToolEnabled("sonarcloud") && (
+      <Panel
+        title="Score SonarCloud"
+        url="https://sonarcloud.io/"
+        urlText="Site officiel"
+        isExternal
+      >
+        SonarCloud permet d&apos;analyser le code source des repositories et de
+        détecter des bugs, vulnérabilités, duplications et autres indicateurs de
+        qualité.
+      </Panel>
+    )}
   </>
 );

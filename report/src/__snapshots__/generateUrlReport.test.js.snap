@@ -19,6 +19,7 @@ Object {
   "nmap": null,
   "nuclei": null,
   "screenshot": false,
+  "sonarcloud": null,
   "stats": null,
   "summary": Object {
     "codescanCount": 42,
@@ -99,6 +100,47 @@ Object {
     },
   ],
   "screenshot": false,
+  "sonarcloud": Array [
+    Object {
+      "repo": "sensgithub/eHospital",
+      "result": Object {
+        "analysisDate": "2023-04-03T01:37:49+0200",
+        "commit": Object {
+          "date": "2023-04-03T01:37:44+0200",
+          "message": "Delete codeql.yml",
+          "sha": "28f2cf43a343f5215ffa1052d9c659333626a2a4",
+        },
+        "isMain": true,
+        "name": "main",
+        "status": Object {
+          "bugs": 174,
+          "codeSmells": 2198,
+          "vulnerabilities": 23,
+        },
+        "type": "LONG",
+      },
+    },
+    Object {
+      "repo": "zabbix/zabbix",
+      "result": Object {
+        "analysisDate": "2023-04-02T02:17:15+0200",
+        "commit": Object {
+          "date": "2023-03-31T21:45:03+0200",
+          "message": ".......... [ZBX-1357] automatic update of translation strings",
+          "sha": "f9d2062ed6560094ad6f4c8772cd82b72328cd83",
+        },
+        "isMain": true,
+        "name": "master",
+        "status": Object {
+          "bugs": 73,
+          "codeSmells": 13669,
+          "qualityGateStatus": "ERROR",
+          "vulnerabilities": 26,
+        },
+        "type": "LONG",
+      },
+    },
+  ],
   "stats": Object {
     "report": "stats.json",
   },
@@ -109,6 +151,7 @@ Object {
     "declaration-a11y": "F",
     "declaration-rgpd-ml": "D",
     "declaration-rgpd-pc": "D",
+    "sonarcloudGrade": "F",
   },
   "testssl": Array [
     Object {

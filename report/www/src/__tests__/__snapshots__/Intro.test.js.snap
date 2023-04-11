@@ -805,6 +805,32 @@ exports[`Should render Intro 1`] = `
       L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre conscience de l’impact environnemental de l’internet.
     </div>
   </div>
+  <div
+    class="container"
+  >
+    <div
+      class="banner"
+    >
+      <h5
+        class="mainTitle"
+      >
+        Score SonarCloud
+      </h5>
+      <a
+        href="https://sonarcloud.io/"
+        rel="noreferrer noopener"
+        style="float: right;"
+        target="_blank"
+      >
+        Site officiel
+      </a>
+    </div>
+    <div
+      class="body"
+    >
+      SonarCloud permet d'analyser le code source des repositories et de détecter des bugs, vulnérabilités, duplications et autres indicateurs de qualité.
+    </div>
+  </div>
 </div>
 `;
 

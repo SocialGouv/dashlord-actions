@@ -57,7 +57,7 @@ const MAX_ROWS = 10;
 export const Trivy: React.FC<TrivyProps> = ({ data, url }) => {
   return (
     <>
-      {(data.length &&
+      {(data.length > 0 &&
         data
           .filter((image) => image && image.ArtifactName)
           .map((image) => {

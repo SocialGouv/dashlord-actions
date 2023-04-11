@@ -27,7 +27,8 @@
     "declaration-a11y": true,
     "declaration-rgpd": true,
     "betagouv": true,
-    "ecoindex": true
+    "ecoindex": true,
+    "sonarcloud": true
   },
   "urls": [
     {
