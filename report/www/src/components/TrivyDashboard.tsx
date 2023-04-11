@@ -97,7 +97,7 @@ export const TrivyDashboard = ({ report }: TrivyDashboardProps) => {
         <CalloutTitle as="h1">Trivy : analyse des images Docker</CalloutTitle>
       </Callout>
       {severities.map((severity) => {
-        const images = vulnerabilities
+        const images: Record<string, any[]> = vulnerabilities
           .filter((vuln) => vuln.severity === severity)
           .filter((vuln) => vuln.target !== "Node.js")
           .reduce((a, vuln) => {
