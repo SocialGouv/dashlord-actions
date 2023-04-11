@@ -392,6 +392,7 @@ interface Vulnerability {
   PrimaryURL: string;
   Title?: string;
   Severity: string;
+  FixedVersion?: string;
 }
 
 type EcoIndexReportRow = {
