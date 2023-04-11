@@ -40,6 +40,15 @@ const columns = [
       </a>
     ),
   },
+  {
+    name: "fixable",
+    label: "Fixable",
+    render: (row) => (
+      <div style={{ textAlign: "center" }}>
+        {row.fixableVersions ? `✅ ${row.fixableVersions}` : "❌"}
+      </div>
+    ),
+  },
 ];
 
 type TrivyVulnerability = {
@@ -56,6 +65,7 @@ const getVulnerabilities = (report: DashLordReport): TrivyVulnerability[] => {
   const scans = report
     .filter((detail) => detail.trivy && detail.trivy.length)
     .flatMap((detail) => detail.trivy);
+
   const vulnerabilities = scans.flatMap((scan: TrivyScanResult) =>
     scan.Results.filter(
       (result) => result.Vulnerabilities && result.Vulnerabilities.length
