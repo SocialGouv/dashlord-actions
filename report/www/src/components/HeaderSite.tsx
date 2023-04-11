@@ -14,7 +14,7 @@ import {
   NavItem,
   NavSubItem,
 } from "@dataesr/react-dsfr";
-import { smallUrl, slugifyUrl, sortByKey } from "../utils";
+import { smallUrl, slugifyUrl, sortByKey, isToolEnabled } from "../utils";
 
 const dashlordConfig: DashlordConfig = require("../config.json");
 
@@ -130,10 +130,15 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
               />
             ))}
           </NavItem>
-          <NavItem
-            title="Technologies"
-            asLink={<NavLink href="/wappalyzer" />}
-          />
+          {isToolEnabled("wappalyzer") && (
+            <NavItem
+              title="Technologies"
+              asLink={<NavLink href="/wappalyzer" />}
+            />
+          )}
+          {isToolEnabled("trivy") && (
+            <NavItem title="Trivy" asLink={<NavLink href="/trivy" />} />
+          )}
           <NavItem title="Evolutions" asLink={<NavLink href="/trends" />} />
           <NavItem title="A propos" asLink={<NavLink href="/about" />} />
         </HeaderNav>
