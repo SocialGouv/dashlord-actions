@@ -5,15 +5,15 @@ import { TrivyDashboard } from "../src/components/TrivyDashboard";
 
 const report: DashLordReport = require("../src/report.json");
 
-const PageWappalyzer: NextPage = () => {
+const PageTrivy: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Wappalyzer - Technologies - Dashlord</title>
+        <title>Trivy - Images Docjer - Dashlord</title>
       </Head>
       <TrivyDashboard report={report} />
     </>
   );
 };
 
-export default PageWappalyzer;
+export default PageTrivy;
