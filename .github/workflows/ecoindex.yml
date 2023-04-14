@@ -1,0 +1,25 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - ecoindex/**
+      - .github/workflows/ecoindex.yml
+  pull_request:
+    branches: ["*"]
+
+name: Tests ecoindex action
+jobs:
+  tests-trivy:
+    runs-on: ubuntu-latest
+    name: ecoindex action
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run ecoindex scanner
+        uses: ./ecoindex
+        with:
+          url: https://maisondelautisme.gouv.fr
+          output: results.json
+      - shell: bash
+        run: |
+          python -m json.tool < results.json
+          cat results.json
