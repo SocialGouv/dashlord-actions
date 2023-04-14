@@ -95,6 +95,7 @@ const getOutputs = () => {
       tools: toolInput ? { [toolInput]: true } : getSiteTools(site),
       subpages: getSiteSubpages(site),
     }));
+
   const urls = sites.map((u) => u.url).join("\n");
 
   core.info(`urls :${urls}`);
