@@ -6,6 +6,9 @@ on:
       - .github/workflows/init.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - init/**
+      - .github/workflows/init.yml
 
 name: Test init JS
 jobs:

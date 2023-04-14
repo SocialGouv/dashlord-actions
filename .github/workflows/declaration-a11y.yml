@@ -3,8 +3,13 @@ on:
     branches: ["*"]
     paths:
       - declaration-a11y
+      - .github/workflows/declaration-a11y.yml
+
   pull_request:
     branches: ["*"]
+    paths:
+      - declaration-a11y
+      - .github/workflows/declaration-a11y.yml
 
 name: Test declaration-a11y
 jobs:

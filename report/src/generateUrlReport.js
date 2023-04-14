@@ -18,7 +18,7 @@ const requireJson = (jsonPath) => {
   try {
     return require(jsonPath);
   } catch (e) {
-    console.error(`error loading ${jsonPath}`);
+    console.warn(`error loading ${jsonPath}, skip`);
     return null;
   }
 };

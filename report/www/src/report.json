@@ -2,24 +2,19 @@
   {
     "ecoindex": [
       {
-        "label": "EcoIndex",
-        "value": 56
-      },
-      {
-        "label": "Note",
-        "value": "C"
-      },
-      {
-        "label": "GES",
-        "value": 1.88,
-        "unit": "eqCO2",
-        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 42km en voiture (Peugeot 208 5P 1.6 BlueHDi FAP (75ch) BVM5)"
-      },
-      {
-        "label": "Eau",
-        "value": 2.82,
-        "unit": "cl",
-        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 1 douche"
+        "width": 1920,
+        "height": 1080,
+        "url": "https://maisondelautisme.gouv.fr",
+        "size": 2028.599,
+        "nodes": 329,
+        "requests": 69,
+        "grade": "C",
+        "score": 61.0,
+        "ges": 1.78,
+        "water": 2.67,
+        "ecoindex_version": "5.4.2",
+        "date": "2023-04-14 13:00:04.227090",
+        "page_type": null
       }
     ],
     "sonarcloud": [

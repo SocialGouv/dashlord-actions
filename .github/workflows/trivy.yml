@@ -6,6 +6,9 @@ on:
       - .github/workflows/trivy.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - trivy/**
+      - .github/workflows/trivy.yml
 
 name: Tests trivy action
 jobs:

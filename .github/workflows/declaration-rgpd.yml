@@ -3,8 +3,13 @@ on:
     branches: ["*"]
     paths:
       - declaration-rgpd
+      - .github/workflows/declaration-rgpd.yml
+
   pull_request:
     branches: ["*"]
+    paths:
+      - declaration-rgpd
+      - .github/workflows/declaration-rgpd.yml
 
 name: Test declaration-rgpd
 jobs:
