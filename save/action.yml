@@ -43,6 +43,7 @@ runs:
           echo "Cleanup $OUT_PATH"
           rm -rf $OUT_PATH/*
         else
+          # dont cleanup, for example when a single tool is run
           echo "Skip cleanup $OUT_PATH"
         fi
 
