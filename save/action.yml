@@ -5,7 +5,10 @@ inputs:
   url:
     description: URL to save data for
     required: true
-
+  cleanup:
+    description: Cleanup previous data
+    required: false
+    default: "true"
 #
 # this actions copy scanners results to the dashlord repository for versionning
 #
@@ -16,6 +19,7 @@ runs:
     - shell: bash
       run: |
         URL=${{ inputs.url }}
+        CLEANUP=${{ inputs.cleanup }}
         HOSTNAME=$(echo "${{ inputs.url }}" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
         DASHLORD_REPO_PATH=${{ github.workspace }};
         # store results in a folder with then base64 encoded url
@@ -27,14 +31,21 @@ runs:
         echo "HOSTNAME: $HOSTNAME"
         echo "DASHLORD_REPO_PATH: $DASHLORD_REPO_PATH"
         echo "OUT_PATH: $OUT_PATH"
+        echo "CLEANUP: $CLEANUP"
 
         cd $DASHLORD_REPO_PATH
 
         mkdir -p $OUT_PATH || true
 
         # cleanup previous scans results
-        echo "Cleanup $OUT_PATH"
-        rm -rf $OUT_PATH/*
+        if [[ "$CLEANUP" =  "true" ]]
+        then
+          echo "Cleanup $OUT_PATH"
+          rm -rf $OUT_PATH/*
+        else
+          # dont cleanup, for example when a single tool is run
+          echo "Skip cleanup $OUT_PATH"
+        fi
 
         ls -la scans
 
