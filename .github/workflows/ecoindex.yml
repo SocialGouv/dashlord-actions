@@ -6,6 +6,9 @@ on:
       - .github/workflows/ecoindex.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - ecoindex/**
+      - .github/workflows/ecoindex.yml
 
 name: Tests ecoindex action
 jobs:

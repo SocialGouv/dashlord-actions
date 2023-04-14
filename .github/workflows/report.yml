@@ -6,6 +6,9 @@ on:
       - .github/workflows/report.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - report/**
+      - .github/workflows/report.yml
 
 name: Tests report action
 jobs:

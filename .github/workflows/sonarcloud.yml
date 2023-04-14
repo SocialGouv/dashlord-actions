@@ -6,6 +6,9 @@ on:
       - .github/workflows/sonarcloud.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - sonarcloud/**
+      - .github/workflows/sonarcloud.yml
 
 name: Tests sonarcloud action
 jobs:

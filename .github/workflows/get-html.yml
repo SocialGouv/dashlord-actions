@@ -6,6 +6,9 @@ on:
       - .github/workflows/get-html.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - get-html/**
+      - .github/workflows/get-html.yml
 
 name: Test get-html action
 jobs:

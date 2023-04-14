@@ -6,6 +6,9 @@ on:
       - .github/workflows/lhci.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - lhci/**
+      - .github/workflows/lhci.yml
 
 name: Test lhci action
 jobs:

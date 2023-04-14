@@ -6,6 +6,9 @@ on:
       - .github/workflows/init-matrix.yml
   pull_request:
     branches: ["*"]
+    paths:
+      - init/**
+      - .github/workflows/init-matrix.yml
   workflow_dispatch:
     inputs:
       url:
