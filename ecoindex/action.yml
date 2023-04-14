@@ -15,5 +15,6 @@ runs:
   steps:
     - shell: bash
       run: |
-        npx eco-index-audit@0.7.2 --url=${{ inputs.url }} --ecoIndex=0 --visits=2000 --output=json > ${{ github.workspace }}/${{ inputs.output }}
-        cat ${{ github.workspace }}/${{ inputs.output }}
+        docker run --name ecoindex ghcr.io/socialgouv/ecoindex-cli:5.4.2 --url=${{ inputs.url }} --no-interaction --export-format json --output-file /code/out.json
+        docker cp ecoindex:/code/out.json ${{ github.workspace }}/${{ inputs.output }}
+        cat ${{ github.workspace }}/${{ inputs.output }
