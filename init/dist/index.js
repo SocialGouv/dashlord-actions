@@ -7123,7 +7123,10 @@ const getOutputs = () => {
     )
     .map((site) => ({
       ...site,
-      tools: toolInput ? { [toolInput]: true } : getSiteTools(site),
+      tools:
+        toolInput && toolInput !== "all"
+          ? { [toolInput]: true }
+          : getSiteTools(site),
       subpages: getSiteSubpages(site),
     }));
 
