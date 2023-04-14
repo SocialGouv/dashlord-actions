@@ -5,6 +5,10 @@ inputs:
     description: "Single url to scan or scan all urls"
     required: false
     default: ""
+  tool:
+    description: "Tool to run or use all tools"
+    default: ""
+    required: false
 outputs:
   urls:
     description: List of urls to scan as plain text

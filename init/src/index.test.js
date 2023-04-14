@@ -109,10 +109,12 @@ describe("should parse dashlord config", () => {
       },
     });
     core.info(`subpages=${JSON.stringify(subpages)}`);
-    expect(subpages).toEqual(["https://chez.com", "https://chez.com/login", "https://chez.com/profile"]);
+    expect(subpages).toEqual([
+      "https://chez.com",
+      "https://chez.com/login",
+      "https://chez.com/profile",
+    ]);
   });
-
-  
 
   test("and getSiteSubpages https://voila.fr match", async () => {
     inputs.url = "https://voila.fr";
@@ -123,5 +125,14 @@ describe("should parse dashlord config", () => {
     });
     core.info(`subpages=${JSON.stringify(subpages)}`);
     expect(subpages).toEqual(["https://voila.fr"]);
+  });
+
+  test("with inputs.tool", async () => {
+    inputs.url = "https://voila.fr";
+    inputs.tool = "lighthouse";
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const outputs = getOutputs();
+    expect(outputs.sites).toMatchSnapshot();
   });
 });

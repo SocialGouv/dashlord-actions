@@ -201,3 +201,17 @@ Array [
   },
 ]
 `;
+
+exports[`should parse dashlord config with inputs.tool 1`] = `
+Array [
+  Object {
+    "subpages": Array [
+      "https://voila.fr",
+    ],
+    "tools": Object {
+      "lighthouse": true,
+    },
+    "url": "https://voila.fr",
+  },
+]
+`;
