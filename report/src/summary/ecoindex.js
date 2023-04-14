@@ -1,9 +1,9 @@
 /** @param {EcoIndexReport} report */
 const summary = (report) => {
-  const grade = report && report.find((e) => e.label === "Note");
-  if (grade && grade.value) {
+  const result = (report && report.length && report[0]) || null;
+  if (result && result.grade) {
     return {
-      ecoindexGrade: grade.value,
+      ecoindexGrade: result.grade,
     };
   }
 };

@@ -403,20 +403,25 @@ export const Intro: React.FC = () => (
     {isToolEnabled("ecoindex") && (
       <Panel
         title="Score eco-index"
-        url="https://www.ecoindex.fr/quest-ce-que-ecoindex/"
-        urlText="L'écoconception web"
+        url="https://www.ecoindex.fr/comment-ca-marche/"
+        urlText="Comment ça marche"
         isExternal
       >
         EcoIndex est un outil communautaire, gratuit et transparent qui, pour
         une URL donnée, permet d’évaluer :
-        <br /> sa performance environnementale absolue à l’aide d’un score sur
-        100 (higher is better) ;
-        <br /> sa performance environnementale relative à l’aide d’une note de A
-        à G ;
-        <br /> l’empreinte technique de la page (poids, complexité, etc.) ;
-        <br /> l’empreinte environnementale associée (gaz à effet de serre et
-        eau).
         <br />
+        <br />
+        <li>
+          sa performance environnementale absolue à l’aide d’un score sur 100
+          (higher is better)
+        </li>
+        <li>
+          sa performance environnementale relative à l’aide d’une note de A à G
+        </li>
+        <li>l’empreinte technique de la page (poids, complexité, etc.)</li>
+        <li>
+          l’empreinte environnementale associée (gaz à effet de serre et eau).
+        </li>
         <br />
         L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre
         conscience de l’impact environnemental de l’internet.

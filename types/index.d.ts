@@ -406,10 +406,19 @@ interface Vulnerability {
 }
 
 type EcoIndexReportRow = {
-  label: "EcoIndex" | "Note" | "GES" | "Eau";
-  value: string | number;
-  unit?: string;
-  comment?: string;
+  width: number;
+  height: number;
+  url: string;
+  size: number;
+  nodes: number;
+  requests: number;
+  grade: string;
+  score: number;
+  ges: number;
+  water: number;
+  ecoindex_version: string;
+  date: string;
+  page_type: any;
 };
 
 type EcoIndexReport = EcoIndexReportRow[];

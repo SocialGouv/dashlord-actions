@@ -1,5 +1,5 @@
 name: "DashLord eco-index action"
-
+description: "Run ecoindex test and output JSON result"
 inputs:
   url:
     description: URL to check eco-index
