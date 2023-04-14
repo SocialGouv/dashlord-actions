@@ -7110,7 +7110,11 @@ const getOutputs = () => {
 
   if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
 
-  if (toolInput && !Object.keys(dashlordConfig.tools).includes(toolInput)) {
+  if (
+    toolInput &&
+    toolInput !== "all" &&
+    !Object.keys(dashlordConfig.tools).includes(toolInput)
+  ) {
     throw new Error(`Tool not found : ${toolInput}`);
   }
 
