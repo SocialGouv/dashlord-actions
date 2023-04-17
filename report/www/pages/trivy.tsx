@@ -9,7 +9,7 @@ const PageTrivy: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Trivy - Images Docjer - Dashlord</title>
+        <title>Trivy - Images Docker - DashLord</title>
       </Head>
       <TrivyDashboard report={report} />
     </>
