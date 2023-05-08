@@ -14,6 +14,6 @@ runs:
   steps:
     - shell: bash
       run: |
-        docker run --name ecoindex ghcr.io/socialgouv/ecoindex-cli:5.4.2 ecoindex-cli analyze --url="${{ inputs.url }}" --no-interaction --export-format json --output-file /code/out.json
+        docker run --name ecoindex vvatelot/ecoindex-cli:v2.20.1 ecoindex-cli analyze --url="${{ inputs.url }}" --no-interaction --export-format json --output-file /code/out.json
         docker cp ecoindex:/code/out.json "${{ github.workspace }}/${{ inputs.output }}"
         cat "${{ github.workspace }}/${{ inputs.output }}"
