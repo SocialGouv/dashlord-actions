@@ -48,19 +48,17 @@ const columns = [
   {
     name: "vulnerability",
     label: "Vulnérabilités",
-    render: (service) =>
-      service.vulnerabilities.map((vulnerability) => (
-        <div key={vulnerability.id}>
-          <a
-            target="_blank"
-            href={`https://vulners.com/cve/${vulnerability.id}`}
-            rel="noopener noreferrer"
-          >
-            {vulnerability.id}
-          </a>
-          <br />
-        </div>
-      )),
+    render: (service) =>(service.vulnerabilities.length > 0 && <div>
+      { service.vulnerabilities.length} vulnérabilité(s) trouvée(s) :
+      <ul>
+        {service.vulnerabilities.map((vulnerability) => (
+          <li key={vulnerability.id}>
+            1 vulnérabilité de score {vulnerability.cvss}
+          </li>
+        ))}
+      </ul>
+    </div>)
+      
   },
 ];
 
@@ -71,22 +69,6 @@ export const Nmap: React.FC<NmapProps> = ({ data, url }) => {
     (data.open_ports.length > 0 && (
       <Panel
         title="Nmap"
-        url={url}
-        urlText="Rapport détaillé"
-        isExternal
-        info={
-          <span>
-            Scan des vulnérabiliés nmap{" "}
-            <a
-              style={{ color: "white" }}
-              href={`https://${data.host}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {`https://${data.host}`}
-            </a>
-          </span>
-        }
       >
         <h3>
           Scan Summary : <Grade small grade={data.grade} />
