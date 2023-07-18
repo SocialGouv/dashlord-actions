@@ -180,19 +180,21 @@ const tabs = [
       {
         id: "trivy",
         render: (report, url) =>
-          report["trivy"].length && (
+          (report["trivy"].length && (
             <Trivy
               data={report["trivy"]}
               url={`${BASE_PATH}/report/${btoa(url)}/trivy.json`}
             />
-          ),
+          )) ||
+          null,
       },
       {
         id: "sonarcloud",
         render: (report, url) =>
-          report["sonarcloud"].length && (
+          (report["sonarcloud"].length && (
             <SonarCloud data={report["sonarcloud"]} />
-          ),
+          )) ||
+          null,
       },
     ],
   },
