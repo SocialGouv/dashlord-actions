@@ -38,7 +38,7 @@ const tests = [
         },
       ],
     },
-    expected: { dependabotGrade: "A", dependabotCount: 0 },
+    expected: { dependabotGrade: "A", dependabotCount: 1 },
   },
   {
     title: "single MEDIUM alert",

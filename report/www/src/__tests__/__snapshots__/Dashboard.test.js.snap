@@ -759,7 +759,7 @@ exports[`Should render full Dashboard 1`] = `
               className="header"
             >
               <span>
-                CodeQL
+                CodeScan
               </span>
               <br />
               <svg
