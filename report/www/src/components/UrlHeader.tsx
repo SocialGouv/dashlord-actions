@@ -23,7 +23,7 @@ export const UrlHeader = ({
   const updateDate =
     lhrReports && lhrReports.length && lhrReports[0] && lhrReports[0].fetchTime;
   const title = config.urls.find(
-    (url2) => url2.url === url && url2.title
+    (url2) => url2.url === url && url2?.title
   )?.title;
   return (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
