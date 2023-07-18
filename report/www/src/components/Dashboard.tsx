@@ -413,7 +413,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     columns.push(
       getColumn({
         id: "codescan",
-        title: "CodeQL",
+        title: "CodeScan",
         info: "Potentielles vulnérabilités ou erreurs detectées dans les codes sources (codescan)",
         category: "securite",
         hash: "codescan",
