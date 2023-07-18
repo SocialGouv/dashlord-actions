@@ -334,6 +334,7 @@ type BetagouvReportPhase = {
 };
 
 type BetagouvReport = {
+  id: string;
   attributes: {
     repository: string;
     phases: BetagouvReportPhase[];
