@@ -10,11 +10,21 @@ import { btoa } from "../utils";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-export const UrlHeader = ({ report, url }) => {
-  const lhrReports =
-    report.lhr && Array.isArray(report.lhr) ? report.lhr : [report.lhr];
+import config from "../config.json";
+
+export const UrlHeader = ({
+  report,
+  url,
+}: {
+  report: UrlReport;
+  url: string;
+}) => {
+  const lhrReports = Array.isArray(report.lhr) ? report.lhr : [report.lhr];
   const updateDate =
     lhrReports && lhrReports.length && lhrReports[0] && lhrReports[0].fetchTime;
+  const title = config.urls.find(
+    (url2) => url2.url === url && url2.title
+  )?.title;
   return (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
       <CalloutTitle as="h4">
@@ -26,6 +36,7 @@ export const UrlHeader = ({ report, url }) => {
         {report.betagouv?.attributes?.pitch && (
           <div>{report.betagouv?.attributes?.pitch}</div>
         )}
+        {title && <div>{title}</div>}
         {report.category && (
           <Badge
             className={styles.badge}

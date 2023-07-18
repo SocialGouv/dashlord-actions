@@ -34,6 +34,7 @@
     {
       "url": "https://archifiltre.fabrique.social.gouv.fr",
       "category": "fabrique",
+      "title": "Titre secondaire",
       "betaId": "archifiltre",
       "tags": ["unknown"],
       "repositories": [
