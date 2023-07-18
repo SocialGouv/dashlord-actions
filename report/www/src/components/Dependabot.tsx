@@ -71,11 +71,11 @@ const columns = [
 export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
   const nodes =
     data && data.vulnerabilityAlerts.totalCount > 0
-      ? data.vulnerabilityAlerts.nodes
+      ? data.vulnerabilityAlerts.nodes.filter((node) => !node.dismissedAt)
       : [];
-  data.vulnerabilityAlerts.nodes.sort(orderBySeverity);
+  nodes.sort(orderBySeverity);
   return (
-    (data.vulnerabilityAlerts.totalCount > 0 && (
+    (nodes.length > 0 && (
       <Panel
         title={`Alertes Dependabot ${data.url.replace(
           /^https:\/\/github\.com\/(.*)/,
