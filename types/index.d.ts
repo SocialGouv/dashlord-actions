@@ -337,6 +337,7 @@ type BetagouvReport = {
   attributes: {
     repository: string;
     phases: BetagouvReportPhase[];
+    pitch: string;
   };
 };
 
