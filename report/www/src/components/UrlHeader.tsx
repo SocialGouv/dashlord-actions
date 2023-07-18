@@ -22,8 +22,11 @@ export const UrlHeader = ({
   const lhrReports = Array.isArray(report.lhr) ? report.lhr : [report.lhr];
   const updateDate =
     lhrReports && lhrReports.length && lhrReports[0] && lhrReports[0].fetchTime;
+
   const title = config.urls.find(
+    //@ts-ignore
     (url2) => url2.url === url && url2?.title
+    //@ts-ignore
   )?.title;
   return (
     <Callout hasInfoIcon={false} className="fr-mb-3w">
