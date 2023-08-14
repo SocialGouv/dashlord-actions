@@ -24,7 +24,7 @@ runs:
           OUTPUT=trivy-results/$(echo "$IMAGE" | base64).json
           echo "IMAGE: $IMAGE"
           echo "OUTPUT: $OUTPUT"
-          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.39.1 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT" || true
+          docker run --pull=always --rm ghcr.io/aquasecurity/trivy:0.44.1 --quiet image --no-progress --format json --severity MEDIUM,HIGH,CRITICAL "$IMAGE" > "$OUTPUT" || true
         done
         # concatenate results for all images in a single JSON
         jq -s '.' trivy-results/* > "${{ inputs.output }}"
