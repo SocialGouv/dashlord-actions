@@ -63,7 +63,7 @@ const getDeclarationUrl = (dom, bestMatch, url) => {
       // make URL absolute when possible
       const link = a.getAttribute("href");
       if (link !== "#") {
-        if (link.match(/^https?:\/\//)) {
+        if (link.match(/^https?:\/\//) || link.match(/^\/\//) {
           declarationUrl = link;
         } else if (link.charAt(0) === "/") {
           const host = url.replace(/(https?:\/\/[^/]+).*/, "$1");
