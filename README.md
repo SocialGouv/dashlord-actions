@@ -2,7 +2,7 @@
 
 Basic GitHub actions used in [dashlord](https://github.com/socialgouv/dashlord) workflows.
 
-Actions
+## Actions
 
 | Action           | Usage                                             |
 | ---------------- | ------------------------------------------------- |
@@ -11,14 +11,19 @@ Actions
 | report           | build a report.json and website from latest scans |
 | lhci             | LightHouse collector action                       |
 | declaration-a11y | verif mention accessibilité                       |
-| declaration-rgpd | check mentions légales, CGU, et confidentialité   | 
+| declaration-rgpd | check mentions légales, CGU, et confidentialité   |
 | get-html         | get raw HTML of any webpage                       |
 | ecoindex         | Compute webpage ecoscore with green-it            |
 | sonarcloud       | Extract quality metrics from sonarcloud API       |
 | trivy            | Run trivy docker images scanner                   |
 
+## How it works
 
-[![](./workflows.png)](https://excalidraw.com/#json=5097005936279552,BIdgMf7vmfpdFCKoCVegXg)
+DashLord use GitHub Actions to collect data from different tools and store the results in GIT.
+
+Once all URLs have been scanned, the `report` action generates a `report.json` and a web report which are commited to GIT.
+
+[![](./workflows.png)](https://excalidraw.com/#json=XKFW_JEzkaJWdELtg41vY,jnFgZnfFp_0N_i9wlvzp-A)
 
 ## Usage
 
