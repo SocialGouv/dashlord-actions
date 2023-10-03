@@ -15,7 +15,7 @@ runs:
     - name: Scan images
       shell: bash
       run: |
-        sudo apt-get install -y jq
+        if ! [ -x "$(command -v jq)" ]; then sudo apt-get install -y jq; fi
         IFS=',' ;
         mkdir trivy-results || true
         for image in `echo "${{ inputs.images }}"`; do
