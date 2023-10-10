@@ -34,6 +34,7 @@ runs:
         node src
         cd www
         yarn
+        export NODE_OPTIONS=--max-old-space-size=8192 # prevents heap out of memory ?
         CI=false yarn build && yarn export
         # prevent gh-pages jekyll build
         touch out/.nojekyll
