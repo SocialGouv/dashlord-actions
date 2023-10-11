@@ -17,7 +17,7 @@ Object {
   "http": null,
   "lhr": null,
   "nmap": null,
-  "nuclei": null,
+  "nuclei": Array [],
   "screenshot": false,
   "sonarcloud": null,
   "stats": null,
@@ -29,7 +29,6 @@ Object {
   },
   "testssl": null,
   "thirdparties": null,
-  "trivy": null,
   "updownio": null,
   "url": "https://www.test.com",
   "wappalyzer": Object {
@@ -94,11 +93,7 @@ Object {
   "nmap": Object {
     "report": "nmap.json",
   },
-  "nuclei": Array [
-    Object {
-      "report": "nuclei.json",
-    },
-  ],
+  "nuclei": Array [],
   "screenshot": false,
   "sonarcloud": Array [
     Object {
@@ -161,7 +156,6 @@ Object {
   "thirdparties": Object {
     "report": "thirdparties.json",
   },
-  "trivy": null,
   "updownio": Object {
     "report": "updownio.json",
   },
