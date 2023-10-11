@@ -50,13 +50,18 @@ const zapCleanup = (result) =>
 /**
  * Minify nuclei JSON data
  *
- * @param {NucleiReport} result nuclei JSON content
+ * @param {NucleiReport[]} result nuclei JSON content
  * @param {string} url extract only for this url
  *
  * @returns {NucleiReport} minified JSON content
  */
 const nucleiCleanup = (result, url) =>
-  result && result.map && result.map((r) => omit(r, ["request", "response"]));
+  (result &&
+    Array.isArray(result) &&
+    result[0] &&
+    Array.isArray(result[0]) &&
+    result[0].map((r) => omit(r, ["request", "response"]))) ||
+  [];
 
 /**
  * Minify Lighthouse JSON data
@@ -144,7 +149,8 @@ const tools = {
   github_repository: { data: requireToolData("github_repository.json") },
   budget_page: { data: requireToolData("budget_page.json") },
   404: { data: requireToolData("404.json"), cleanup: wget404Cleanup },
-  trivy: { data: requireToolData("trivy.json") /*, cleanup: trivyCleanup */ },
+  // disable trivy
+  // trivy: { data: requireToolData("trivy.json") /*, cleanup: trivyCleanup */ },
   "declaration-a11y": {
     data: requireToolData("declaration-a11y.json"),
   },
@@ -231,7 +237,8 @@ const generateUrlReport = (url) => {
     copyForWebsite("zap.html");
     copyForWebsite("screenshot.jpeg");
     copyForWebsite("nmapvuln.html");
-    copyForWebsite("trivy.json");
+    // disable trivy
+    // copyForWebsite("trivy.json");
 
     return urlData;
   } else {
