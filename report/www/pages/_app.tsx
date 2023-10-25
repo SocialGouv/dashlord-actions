@@ -13,6 +13,7 @@ import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";
 
 import "../src/custom.css";
+import "../src/overrideDSFR.css"
 
 const dashlordConfig: DashlordConfig = require("../src/config.json");
 
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
   }, []);
   return (
-    <div>
+    <div className={(dashlordConfig.marianne ? "" : "nonGovernementalWebsite")}>
       <Head>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta
