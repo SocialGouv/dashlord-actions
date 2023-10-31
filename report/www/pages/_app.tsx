@@ -33,6 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <div className={(dashlordConfig.marianne ? "" : "non-governemental-website")}>
+      { dashlordConfig.customCss &&
+        <link rel="stylesheet" type="text/css" href={dashlordConfig.customCss}/>
+      }
       <Head>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta

@@ -47,6 +47,7 @@ type DashlordConfig = {
   marianne?: boolean;
   logo?: string;
   logoAltTxt?: string;
+  customCss?: string;
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
