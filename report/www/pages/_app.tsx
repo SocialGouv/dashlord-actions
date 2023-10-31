@@ -32,7 +32,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
   }, []);
   return (
-    <div className={(dashlordConfig.marianne ? "" : "nonGovernementalWebsite")}>
+    <div className={(dashlordConfig.marianne ? "" : "non-governemental-website")}>
+      { dashlordConfig.customCss &&
+        <link rel="stylesheet" type="text/css" href={dashlordConfig.customCss}/>
+      }
       <Head>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta
