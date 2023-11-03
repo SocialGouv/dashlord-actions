@@ -57,6 +57,23 @@ const TitleLink = ({
   );
 };
 
+const CustomHeader = () => <div className="custom-header">
+  <img src={dashlordConfig.logo} alt={dashlordConfig.logoAltTxt}/>
+  <div className="custom-title">
+    <h1>{dashlordConfig.title}</h1>
+    <p>{dashlordConfig.description}</p>
+  </div>
+</div>
+
+const MarianneHeader = () => <div>
+  <Marianne asLink={<TitleLink href="/"/>} splitCharacter={10}>{dashlordConfig.entity}</Marianne>
+  <Service
+    asLink={<TitleLink href="/" />}
+    title={dashlordConfig.title}
+    description={dashlordConfig.description}
+  />
+</div>
+
 export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const sortedReport = (report && report.sort(sortByKey("url"))) || [];
   const categories = uniq(
@@ -65,19 +82,12 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   const tags = uniq(
     sortedReport.filter((u) => u.category).flatMap((u) => u.tags)
   ).sort() as string[];
-  const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
+  const ConfigHeader = dashlordConfig.marianne ? MarianneHeader : CustomHeader;
   return (
     <>
       <Header>
         <HeaderBody>
-          <Logo asLink={<TitleLink href="/" />} splitCharacter={10}>
-            {dashlordConfig.entity}
-          </Logo>
-          <Service
-            asLink={<TitleLink href="/" />}
-            title={dashlordConfig.title}
-            description={dashlordConfig.description}
-          />
+          <ConfigHeader/>
           <Tool closeButtonLabel="fermer">
             <ToolItemGroup>
               {dashlordConfig.loginUrl && (

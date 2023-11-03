@@ -45,6 +45,9 @@ type DashlordConfig = {
   tools?: DashlordTool[] | Record<DashlordTool, boolean>;
   urls: UrlConfig[];
   marianne?: boolean;
+  logo?: string;
+  logoAltTxt?: string;
+  customCss?: string;
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
