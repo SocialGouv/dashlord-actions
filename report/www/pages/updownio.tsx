@@ -4,7 +4,7 @@ import report from '@/report.json';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-const PageUpdownio: NextPage = (props) => {
+const PageUpdownio: NextPage = () => {
   return (
     <>
       <Head>

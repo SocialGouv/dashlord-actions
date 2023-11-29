@@ -5,6 +5,7 @@ import uniq from "lodash.uniq";
 import {
   Header,
   HeaderBody,
+  HeaderOperator,
   Logo as Marianne,
   Service,
   Tool,
@@ -15,7 +16,6 @@ import {
   NavSubItem,
 } from "@dataesr/react-dsfr";
 import { smallUrl, slugifyUrl, sortByKey, isToolEnabled } from "../utils";
-import { HeaderOperator } from '@dataesr/react-dsfr';
 import dashlordConfig from '@/config.json';
 
 type HeaderSiteProps = {
