@@ -1,9 +1,7 @@
 import { slugifyUrl, smallUrl } from 'src/utils';
 import { Panel } from './Panel';
 import { UpdownIo } from './UpdownIo';
-import dashlordConfig from '@/config.json';
 import Link from 'next/link';
-import { Alert } from '@dataesr/react-dsfr';
 
 export interface UpdownIoDashboardProps {
     report: DashLordReport;
