@@ -1,4 +1,4 @@
-import { slugifyUrl, smallUrl } from 'src/utils';
+import { slugifyUrl, smallUrl } from '../utils';
 import { Panel } from './Panel';
 import { UpdownIo } from './UpdownIo';
 import Link from 'next/link';

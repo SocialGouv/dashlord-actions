@@ -112,7 +112,7 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url, title }) => {
         title={title || DEFAULT_TITLE}
         info={DEFAULT_INFO}
       >
-        <Alert variant="info" description="Aucune donnée updown.io associée" />
+        <Alert variant="info" title="" description="Aucune donnée updown.io associée" />
       </Panel>
     )
   );
