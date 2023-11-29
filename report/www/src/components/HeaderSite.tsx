@@ -15,8 +15,8 @@ import {
   NavSubItem,
 } from "@dataesr/react-dsfr";
 import { smallUrl, slugifyUrl, sortByKey, isToolEnabled } from "../utils";
-
-const dashlordConfig: DashlordConfig = require("../config.json");
+import { HeaderOperator } from '@dataesr/react-dsfr';
+import dashlordConfig from '@/config.json';
 
 type HeaderSiteProps = {
   report: DashLordReport;
@@ -73,6 +73,15 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           <Logo asLink={<TitleLink href="/" />} splitCharacter={10}>
             {dashlordConfig.entity}
           </Logo>
+          {dashlordConfig.operator && (
+            <HeaderOperator>
+              { typeof dashlordConfig.operator.logo === "string" ? (
+                <img className="fr-responsive-img" style={{width: "3.5rem"}} src={dashlordConfig.operator.logo} alt={dashlordConfig.operator.name} />
+              ) : (
+                <img className="fr-responsive-img" style={dashlordConfig.operator.logo.direction === "vertical" ? { maxWidth: "9.0625rem" } : {width: "3.5rem"}} src={dashlordConfig.operator.logo.src} alt={dashlordConfig.operator.name} />
+              )}
+            </HeaderOperator>
+          )}
           <Service
             asLink={<TitleLink href="/" />}
             title={dashlordConfig.title}
@@ -139,7 +148,10 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           {isToolEnabled("trivy") && (
             <NavItem title="Trivy" asLink={<NavLink href="/trivy" />} />
           )}
-          <NavItem title="Evolutions" asLink={<NavLink href="/trends" />} />
+          <NavItem title="Évolutions" asLink={<NavLink href="/trends" />} />
+          {isToolEnabled("updownio") && (
+            <NavItem title="Disponibilité" asLink={<NavLink href="/updownio" />} />
+          )}
           <NavItem title="A propos" asLink={<NavLink href="/about" />} />
         </HeaderNav>
       </Header>

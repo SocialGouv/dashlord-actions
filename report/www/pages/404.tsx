@@ -1,3 +1,4 @@
+import dashlordConfig from '@/config.json';
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -5,7 +6,7 @@ const PageIntro: NextPage = () => {
   return (
     <>
       <Head>
-        <title>DashLord - à propos</title>
+        <title>{dashlordConfig.title} - Page non trouvée</title>
       </Head>
       <br />
       <br />

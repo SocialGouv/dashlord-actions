@@ -37,7 +37,7 @@ type DashlordTool =
   | "ecoindex"
   | "sonarcloud";
 
-type DashlordConfig = {
+type DashLordConfig = {
   title: string;
   entity: string;
   description: string;
@@ -48,6 +48,14 @@ type DashlordConfig = {
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
+  operator?: Operator;
+  updownioStatusPage?: string;
+};
+
+type Operator = {
+  /** Default direction is horizontal */
+  logo: string | { src: string; direction: "horizontal" | "vertical" };
+  name: string;
 };
 
 type SslTestReportEntry = {

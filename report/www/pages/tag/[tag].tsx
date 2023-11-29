@@ -3,13 +3,14 @@ import Head from "next/head";
 import uniq from "lodash.uniq";
 
 import { Dashboard } from "../../src/components/Dashboard";
+import dashlordConfig from '@/config.json';
 const report: DashLordReport = require("../../src/report.json");
 
 const Tag = ({ report, tag }: { report: DashLordReport; tag: string }) => {
   return (
     <>
       <Head>
-        <title>Tag {tag} - DashLord</title>
+        <title>Tag {tag} - {dashlordConfig.title}</title>
       </Head>
       <Dashboard report={report} />
     </>
