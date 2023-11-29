@@ -30,7 +30,8 @@ const NavLink = ({
   children?: ReactChildren;
 }) => {
   const router = useRouter();
-  const isCurrent = href === router.asPath;
+  const trailingSlash = href.endsWith("/") ? "" : "/";
+  const isCurrent = (href + trailingSlash) === router.asPath;
   return (
     <Link href={href} prefetch={false}>
       <a
