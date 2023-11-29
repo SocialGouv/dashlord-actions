@@ -4,13 +4,13 @@ import {
   Footer,
   FooterLink,
   FooterBody,
+  FooterOperator,
   FooterTop,
   FooterBodyItem,
   Logo as Marianne,
   FooterBottom,
   FooterCopy,
 } from "@dataesr/react-dsfr";
-import { FooterOperator } from '@dataesr/react-dsfr';
 import dashlordConfig from '@/config.json';
 
 
