@@ -2,14 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import { TrivyDashboard } from "../src/components/TrivyDashboard";
-
-const report: DashLordReport = require("../src/report.json");
+import report from '@/report.json';
+import dashlordConfig from '@/config.json';
 
 const PageTrivy: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Trivy - Images Docker - DashLord</title>
+        <title>Trivy - Images Docker - {dashlordConfig.title}</title>
       </Head>
       <TrivyDashboard report={report} />
     </>

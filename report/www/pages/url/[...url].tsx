@@ -4,8 +4,8 @@ import { Alert } from "@dataesr/react-dsfr";
 
 import { Url } from "../../src/components/Url";
 import { smallUrl, slugifyUrl } from "../../src/utils";
-
-const report: DashLordReport = require("../../src/report.json");
+import report from '@/report.json';
+import dashlordConfig from '@/config.json';
 
 const PageUrl = ({
   report,
@@ -22,7 +22,7 @@ const PageUrl = ({
   return (
     <>
       <Head>
-        <title>{smallUrl(url)} - DashLord</title>
+        <title>{smallUrl(url)} - {dashlordConfig.title}</title>
       </Head>
       <Url url={url} report={report} selectedTab={selectedTab} />
     </>

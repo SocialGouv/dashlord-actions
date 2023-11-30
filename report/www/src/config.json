@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/socialgouv/dashlord/main/schema.json",
   "title": "DashLord Fabrique des ministères sociaux",
   "description": "Bonnes pratiques techniques",
   "entity": "Ministères sociaux",
@@ -7,6 +8,11 @@
   "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "matomoId": 62,
   "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
+  "operator": {
+    "logo": "https://raw.githubusercontent.com/incubateur-ademe/.github/main/ademe-logo-2022-1.svg",
+    "name": "Fabrique des ministères sociaux"
+  },
+  "updownioStatusPage": "https://updown.io/p/8c6x8",
   "tools": {
     "404": true,
     "screenshot": true,
@@ -36,7 +42,9 @@
       "category": "fabrique",
       "title": "Titre secondaire",
       "betaId": "archifiltre",
-      "tags": ["unknown"],
+      "tags": [
+        "unknown"
+      ],
       "repositories": [
         "socialgouv/archifiltre-docs",
         "socialgouv/archifiltre-mails",
@@ -49,7 +57,9 @@
       "url": "https://index-egapro.travail.gouv.fr",
       "betaId": "egalite.professionnelle",
       "category": "fabrique",
-      "tags": ["travail"],
+      "tags": [
+        "travail"
+      ],
       "repositories": [
         "socialgouv/egapro",
         "socialgouv/egapro-api",
@@ -60,14 +70,20 @@
       "url": "https://index-egapro.travail.gouv.fr/consulter-index",
       "betaId": "egalite.professionnelle",
       "category": "fabrique",
-      "tags": ["travail"],
-      "repositories": ["socialgouv/egapro-declaration"]
+      "tags": [
+        "travail"
+      ],
+      "repositories": [
+        "socialgouv/egapro-declaration"
+      ]
     },
     {
       "url": "https://code.travail.gouv.fr",
       "betaId": "codedutravail",
       "category": "fabrique",
-      "tags": ["travail"],
+      "tags": [
+        "travail"
+      ],
       "repositories": [
         "socialgouv/code-du-travail-numerique",
         "socialgouv/cdtn-admin"
@@ -81,8 +97,12 @@
       "url": "https://domifa.fabrique.social.gouv.fr",
       "betaId": "domifa",
       "category": "fabrique",
-      "tags": ["social"],
-      "repositories": ["socialgouv/domifa"],
+      "tags": [
+        "social"
+      ],
+      "repositories": [
+        "socialgouv/domifa"
+      ],
       "docker": [
         "ghcr.io/socialgouv/domifa/frontend",
         "ghcr.io/socialgouv/domifa/backend"
@@ -92,46 +112,82 @@
       "url": "https://emjpm.fabrique.social.gouv.fr",
       "betaId": "e-mjpm",
       "category": "fabrique",
-      "tags": ["social"],
-      "repositories": ["socialgouv/emjpm"]
+      "tags": [
+        "social"
+      ],
+      "repositories": [
+        "socialgouv/emjpm"
+      ]
     },
     {
       "url": "https://www.fabrique.social.gouv.fr",
       "category": "fabrique",
-      "tags": ["social", "sante", "travail"],
-      "repositories": ["socialgouv/www"],
-      "docker": ["ghcr.io/socialgouv/www/app"]
+      "tags": [
+        "social",
+        "sante",
+        "travail"
+      ],
+      "repositories": [
+        "socialgouv/www"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/www/app"
+      ]
     },
     {
       "url": "https://monsuivipsy.fabrique.social.gouv.fr",
       "betaId": "monsuivipsy",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/monsuivipsy", "socialgouv/monsuivipsy-site"],
-      "docker": ["ghcr.io/socialgouv/monsuivipsy-site/app"]
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/monsuivipsy",
+        "socialgouv/monsuivipsy-site"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/monsuivipsy-site/app"
+      ]
     },
     {
       "url": "https://ozensemble.fr",
       "betaId": "ozensemble",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/ozensemble", "socialgouv/ozensemble-site"],
-      "docker": ["ghcr.io/socialgouv/ozensemble-site/app"]
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/ozensemble",
+        "socialgouv/ozensemble-site"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/ozensemble-site/app"
+      ]
     },
     {
       "url": "https://pjm.social.gouv.fr",
       "betaId": "e-mjpm",
       "category": "fabrique",
-      "tags": ["social"],
-      "repositories": ["socialgouv/emjpm-portail"],
-      "docker": ["ghcr.io/socialgouv/emjpm-portail/app"]
+      "tags": [
+        "social"
+      ],
+      "repositories": [
+        "socialgouv/emjpm-portail"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/emjpm-portail/app"
+      ]
     },
     {
       "url": "https://tumeplay.fabrique.social.gouv.fr",
       "betaId": "tumeplay",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/tumeplay"],
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/tumeplay"
+      ],
       "docker": [
         "ghcr.io/socialgouv/tumeplay/backend",
         "ghcr.io/socialgouv/tumeplay/frontend-guyane",
@@ -146,14 +202,22 @@
       "url": "https://www.psyenfantado.sante.gouv.fr",
       "betaId": "psyenfantado",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["betagouv/psy-enfant-ado"]
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "betagouv/psy-enfant-ado"
+      ]
     },
     {
       "url": "https://sample-next-app.fabrique.social.gouv.fr",
       "category": "fabrique",
-      "tags": ["demo"],
-      "repositories": ["socialgouv/sample-next-app"],
+      "tags": [
+        "demo"
+      ],
+      "repositories": [
+        "socialgouv/sample-next-app"
+      ],
       "docker": [
         "ghcr.io/socialgouv/sample-next-app/app",
         "ghcr.io/socialgouv/sample-next-app/hasura"
@@ -163,8 +227,12 @@
       "url": "https://1000jours.fabrique.social.gouv.fr",
       "betaId": "1000.jours",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/nos1000jours-landing"],
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/nos1000jours-landing"
+      ],
       "docker": [
         "ghcr.io/socialgouv/1000jours/strapi",
         "ghcr.io/socialgouv/les1000jours-landing/app"
@@ -174,16 +242,26 @@
       "url": "https://1000jours-blues.fabrique.social.gouv.fr",
       "betaId": "1000.jours",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/nos1000jours-blues"],
-      "docker": ["ghcr.io/socialgouv/1000jours-blues/app"]
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/nos1000jours-blues"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/1000jours-blues/app"
+      ]
     },
     {
       "url": "https://carnet-de-bord.fabrique.social.gouv.fr",
       "betaId": "carnet.de.bord",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/carnet-de-bord"],
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/carnet-de-bord"
+      ],
       "docker": [
         "ghcr.io/socialgouv/carnet-de-bord/hasura",
         "ghcr.io/socialgouv/carnet-de-bord/app",
@@ -194,16 +272,26 @@
       "url": "https://enfants-du-spectacle.fabrique.social.gouv.fr",
       "betaId": "enfants-du-spectacle",
       "category": "fabrique",
-      "tags": ["social"],
-      "repositories": ["socialgouv/enfants-du-spectacle"],
-      "docker": ["ghcr.io/socialgouv/enfants-du-spectacle/app"]
+      "tags": [
+        "social"
+      ],
+      "repositories": [
+        "socialgouv/enfants-du-spectacle"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/enfants-du-spectacle/app"
+      ]
     },
     {
       "url": "https://mano-app.fabrique.social.gouv.fr",
       "betaId": "mano",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/mano"],
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/mano"
+      ],
       "docker": [
         "ghcr.io/socialgouv/mano/api",
         "ghcr.io/socialgouv/mano/website",
@@ -213,44 +301,76 @@
     {
       "url": "https://monpsy.sante.gouv.fr",
       "category": "fabrique",
-      "tags": ["sante"],
-      "repositories": ["socialgouv/mon-psy-sante"],
-      "docker": ["ghcr.io/socialgouv/mon-psy-sante/app"]
+      "tags": [
+        "sante"
+      ],
+      "repositories": [
+        "socialgouv/mon-psy-sante"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/mon-psy-sante/app"
+      ]
     },
     {
       "url": "https://ressourcerie.fabrique.social.gouv.fr",
       "category": "fabrique",
-      "tags": ["ressources"],
-      "repositories": ["socialgouv/ressourcerie"],
-      "docker": ["ghcr.io/socialgouv/ressourcerie/app"]
+      "tags": [
+        "ressources"
+      ],
+      "repositories": [
+        "socialgouv/ressourcerie"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/ressourcerie/app"
+      ]
     },
     {
       "url": "https://transitions-collectives.fabrique.social.gouv.fr",
       "category": "fabrique",
-      "tags": ["travail"],
-      "repositories": ["socialgouv/transitions-collectives"],
-      "docker": ["ghcr.io/socialgouv/transitions-collectives/app"]
+      "tags": [
+        "travail"
+      ],
+      "repositories": [
+        "socialgouv/transitions-collectives"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/transitions-collectives/app"
+      ]
     },
     {
       "url": "https://mon-domifa.fabrique.social.gouv.fr",
       "betaId": "domifa",
       "category": "social",
-      "tags": ["social"],
-      "docker": ["ghcr.io/socialgouv/domifa/portail-usagers"]
+      "tags": [
+        "social"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/domifa/portail-usagers"
+      ]
     },
     {
       "url": "https://admin-domifa.fabrique.social.gouv.fr",
       "betaId": "domifa",
       "category": "social",
-      "tags": ["social"],
-      "docker": ["ghcr.io/socialgouv/domifa/portail-admins"]
+      "tags": [
+        "social"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/domifa/portail-admins"
+      ]
     },
     {
       "url": "https://template.fabrique.social.gouv.fr",
       "category": "fabrique",
-      "tags": ["sre"],
-      "repositories": ["socialgouv/template"],
-      "docker": ["ghcr.io/socialgouv/template/app"]
+      "tags": [
+        "sre"
+      ],
+      "repositories": [
+        "socialgouv/template"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/template/app"
+      ]
     }
   ]
 }

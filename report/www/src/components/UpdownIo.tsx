@@ -11,15 +11,18 @@ import Card from "./Card";
 
 import styles from "./updownIo.module.scss";
 
-type UpDownIoProps = { data: UpDownReport; url: string };
+type UpDownIoProps = { data: UpDownReport; url: string; title?: React.ReactNode };
 
-export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
+const DEFAULT_TITLE = "Disponibilité et temps de réponse";
+const DEFAULT_INFO = "Informations collectées par updown.io";
+
+export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url, title }) => {
   const urlUpdownio = (data && `https://updown.io/${data.token}`) || null;
   return (
     (urlUpdownio && smallUrl(data.url) === smallUrl(url) && (
       <Panel
-        title="Disponibilité et temps de réponse"
-        info="Informations collectées par updown.io"
+        title={title || DEFAULT_TITLE}
+        info={DEFAULT_INFO}
         url={urlUpdownio}
         urlText="Statistiques détaillées"
         isExternal
@@ -106,10 +109,10 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url }) => {
       </Panel>
     )) || (
       <Panel
-        title="Temps de réponse"
-        info="Informations collectées par updown.io"
+        title={title || DEFAULT_TITLE}
+        info={DEFAULT_INFO}
       >
-        <Alert variant="success">Aucune donnée updown.io associée</Alert>
+        <Alert variant="info" title="" description="Aucune donnée updown.io associée" />
       </Panel>
     )
   );

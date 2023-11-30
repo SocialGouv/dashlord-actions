@@ -27,7 +27,7 @@ export const sortByKey = (key: string) => (a: any, b: any) => {
 };
 
 export const isToolEnabled = (name: DashlordTool): boolean => {
-  const dashlordConfig: DashlordConfig = require("./config.json");
+  const dashlordConfig: DashLordConfig = require("./config.json");
   if (!dashlordConfig.tools) return true;
   if (Array.isArray(dashlordConfig.tools)) {
     const hasTools = dashlordConfig.tools && dashlordConfig.tools.length;

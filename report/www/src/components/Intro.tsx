@@ -13,8 +13,7 @@ import Link from "next/link";
 import { isToolEnabled } from "../utils";
 
 import { Panel } from "./Panel";
-
-const dashlordConfig: DashlordConfig = require("../config.json");
+import dashlordConfig from '@/config.json';
 
 const REPOSITORY_URL =
   process.env.NEXT_PUBLIC_REPOSITORY_URL ||

@@ -8,7 +8,7 @@ import Link from "next/link";
 import styles from "./panel.module.scss";
 
 type PanelProps = {
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
   info?: string | React.ReactNode;
   url?: string;
