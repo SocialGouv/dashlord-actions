@@ -67,6 +67,7 @@ type GetColumnProps = {
   gradeLabel?: (s: UrlReport) => string | number | undefined;
   gradeStyle?: React.CSSProperties;
   colorVariant?: ColorVariant;
+  getColorVariant?: (s: UrlReport) => ColorVariant;
   warningText?: (s: UrlReportSummary) => string | undefined;
 };
 
@@ -76,6 +77,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     return (summary[grade] && letterGradeValue(summary[grade])) || -1;
   };
 
+  //console.log(report);
   const sortSSLGrades = (a, b) =>
     b.summary.testsslExpireSoon - a.summary.testsslExpireSoon ||
     getSummaryData(a, "testsslGrade") - getSummaryData(b, "testsslGrade") ||
@@ -93,6 +95,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     gradeLabel,
     warningText,
     colorVariant,
+    getColorVariant,
     gradeStyle,
   }: GetColumnProps) => ({
     name: id,
@@ -109,7 +112,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       const { summary } = rowData as UrlReport;
       return (
         <GradeBadge
-          colorVariant={colorVariant}
+          colorVariant={
+            getColorVariant ? getColorVariant(rowData) : colorVariant
+          }
           style={gradeStyle}
           grade={summary[gradeKey]}
           label={gradeLabel && gradeLabel(rowData)}
@@ -307,11 +312,53 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
   if (isToolEnabled("lighthouse")) {
     columns = columns.concat([
-      lightHouseColumn(
-        "accessibility",
-        "Accessibilité",
-        "Bonnes pratiques en matière d'accessibilité web (LightHouse)"
-      ),
+      getColumn({
+        id: "accessibility",
+        title: "Tests auto accessibilité",
+        info: "Bonnes pratiques en matière d'accessibilité web (LightHouse)",
+        category: "best-practices",
+        warning: <AccessibilityWarnings />,
+        hash: "lighthouse",
+        gradeKey: `lighthouse_accessibilityGrade`,
+        sort: (a, b) => {
+          if (a.summary[`lighthouse_accessibility`] === undefined) {
+            return -1;
+          }
+          if (b.summary[`lighthouse_accessibility`] === undefined) {
+            return 1;
+          }
+          return (
+            parseFloat(a.summary[`lighthouse_accessibility`]) -
+            parseFloat(b.summary[`lighthouse_accessibility`])
+          );
+        },
+        getColorVariant: (rowData) => {
+          const value =
+            rowData.lhr && rowData.summary[`lighthouse_accessibility`];
+          if (value >= 1) {
+            return "success";
+          } else if (value >= 0.85) {
+            return "warning";
+          } else if (value >= 0.7) {
+            return "danger";
+          } else {
+            return "danger";
+          }
+        },
+        gradeLabel: (rowData) => {
+          const value =
+            rowData.lhr && rowData.summary[`lighthouse_accessibility`];
+          if (value >= 1) {
+            return "✔";
+          } else if (value >= 0.85) {
+            return "B";
+          } else if (value >= 0.7) {
+            return "C";
+          } else {
+            return "⚠️";
+          }
+        },
+      }),
       lightHouseColumn(
         "performance",
         "Performance",
@@ -404,6 +451,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         hash: "dependabot",
         category: "securite",
         gradeKey: "dependabotGrade",
+        sort: (a, b) =>
+          parseFloat(a.summary.dependabotCount || 0) -
+          parseFloat(b.summary.dependabotCount || 0),
         gradeLabel: (rowData) => rowData.summary.dependabotCount,
       })
     );
@@ -418,6 +468,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         category: "securite",
         hash: "codescan",
         gradeKey: "codescanGrade",
+        sort: (a, b) =>
+          parseFloat(a.summary.codescanCount || 0) -
+          parseFloat(b.summary.codescanCount || 0),
         gradeLabel: (rowData) => {
           const count = rowData.summary.codescanCount;
           if (count === 0) {
