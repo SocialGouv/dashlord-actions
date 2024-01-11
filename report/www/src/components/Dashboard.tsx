@@ -333,8 +333,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           );
         },
         getColorVariant: (rowData) => {
-          const value =
-            rowData.lhr && rowData.summary[`lighthouse_accessibility`];
+          const value = rowData.summary[`lighthouse_accessibility`];
+          if (!value) return null;
           if (value >= 1) {
             return "success";
           } else if (value >= 0.85) {
@@ -346,8 +346,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           }
         },
         gradeLabel: (rowData) => {
-          const value =
-            rowData.lhr && rowData.summary[`lighthouse_accessibility`];
+          const value = rowData.summary[`lighthouse_accessibility`];
+          if (!value) return null;
           if (value >= 1) {
             return "✔";
           } else if (value >= 0.85) {
