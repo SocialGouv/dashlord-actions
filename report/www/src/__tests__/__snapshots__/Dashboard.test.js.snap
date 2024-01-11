@@ -305,7 +305,7 @@ exports[`Should render full Dashboard 1`] = `
               className="header"
             >
               <span>
-                Accessibilité
+                Tests auto accessibilité
               </span>
               <br />
               <svg
@@ -1406,7 +1406,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              ✔
             </button>
           </div>
         </td>
@@ -1938,7 +1938,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              ✔
             </button>
           </div>
         </td>
@@ -2472,11 +2472,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              99 %
+              B
             </button>
           </div>
         </td>
@@ -3031,11 +3031,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              96 %
+              B
             </button>
           </div>
         </td>
@@ -3531,11 +3531,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              98 %
+              B
             </button>
           </div>
         </td>
@@ -4103,7 +4103,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              ✔
             </button>
           </div>
         </td>
@@ -4657,11 +4657,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small info"
+              className="small danger"
               onClick={[Function]}
               type="button"
             >
-              83 %
+              C
             </button>
           </div>
         </td>
@@ -5227,11 +5227,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              95 %
+              B
             </button>
           </div>
         </td>
@@ -5780,7 +5780,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              ✔
             </button>
           </div>
         </td>
@@ -6287,11 +6287,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              91 %
+              B
             </button>
           </div>
         </td>
@@ -6849,7 +6849,7 @@ exports[`Should render full Dashboard 1`] = `
               onClick={[Function]}
               type="button"
             >
-              100 %
+              ✔
             </button>
           </div>
         </td>
@@ -7446,11 +7446,11 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             <button
-              className="small success"
+              className="small warning"
               onClick={[Function]}
               type="button"
             >
-              85 %
+              B
             </button>
           </div>
         </td>
