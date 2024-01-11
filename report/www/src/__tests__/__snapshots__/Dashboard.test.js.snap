@@ -4656,13 +4656,29 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <button
-              className="small danger"
-              onClick={[Function]}
-              type="button"
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
             >
-              C
-            </button>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
         <td>
@@ -4673,13 +4689,29 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <button
-              className="small warning"
-              onClick={[Function]}
-              type="button"
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
             >
-              17 %
-            </button>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
         <td>
@@ -4690,13 +4722,29 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <button
-              className="small success"
-              onClick={[Function]}
-              type="button"
+            <svg
+              fill="none"
+              height={20}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={20}
+              xmlns="http://www.w3.org/2000/svg"
             >
-              87 %
-            </button>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+              />
+              <line
+                x1="4.93"
+                x2="19.07"
+                y1="4.93"
+                y2="19.07"
+              />
+            </svg>
           </div>
         </td>
         <td>
