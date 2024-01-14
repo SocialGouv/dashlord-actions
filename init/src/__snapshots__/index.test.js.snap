@@ -1,23 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should parse dashlord config when multiple urls input 1`] = `
-Array [
-  Object {
-    "repositories": Array [
+[
+  {
+    "repositories": [
       "iliad/free-ui",
       "iliad/free-api",
     ],
-    "subpages": Array [
+    "subpages": [
       "https://www.free.fr",
     ],
     "title": "Free",
-    "tools": Object {
+    "tools": {
       "404": true,
       "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
       "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
       "http": true,
       "lighthouse": true,
       "nmap": true,
@@ -32,27 +34,29 @@ Array [
     },
     "url": "https://www.free.fr",
   },
-  Object {
-    "pages": Array [
+  {
+    "pages": [
       "/login",
       "/profile",
     ],
-    "repositories": Array [
+    "repositories": [
       "chez/chez-ui",
       "chez/chez-api",
     ],
-    "subpages": Array [
+    "subpages": [
       "http://chez.com",
       "http://chez.com/login",
       "http://chez.com/profile",
     ],
-    "tools": Object {
+    "tools": {
       "404": true,
       "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
       "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
       "http": true,
       "lighthouse": true,
       "nmap": true,
@@ -67,87 +71,19 @@ Array [
     },
     "url": "http://chez.com",
   },
-]
-`;
-
-exports[`should parse dashlord config when no input 1`] = `
-Array [
-  Object {
-    "repositories": Array [
-      "iliad/free-ui",
-      "iliad/free-api",
-    ],
-    "subpages": Array [
-      "https://www.free.fr",
-    ],
-    "title": "Free",
-    "tools": Object {
-      "404": true,
-      "budget_page": true,
-      "codescan": true,
-      "declaration-a11y": true,
-      "declaration-rgpd": true,
-      "dependabot": true,
-      "http": true,
-      "lighthouse": true,
-      "nmap": true,
-      "nuclei": false,
-      "screenshot": true,
-      "stats": true,
-      "testssl": false,
-      "thirdparties": true,
-      "updownio": true,
-      "wappalyzer": true,
-      "zap": true,
-    },
-    "url": "https://www.free.fr",
-  },
-  Object {
-    "pages": Array [
-      "/login",
-      "/profile",
-    ],
-    "repositories": Array [
-      "chez/chez-ui",
-      "chez/chez-api",
-    ],
-    "subpages": Array [
-      "http://chez.com",
-      "http://chez.com/login",
-      "http://chez.com/profile",
-    ],
-    "tools": Object {
-      "404": true,
-      "budget_page": true,
-      "codescan": true,
-      "declaration-a11y": true,
-      "declaration-rgpd": true,
-      "dependabot": true,
-      "http": true,
-      "lighthouse": true,
-      "nmap": true,
-      "nuclei": false,
-      "screenshot": false,
-      "stats": false,
-      "testssl": true,
-      "thirdparties": true,
-      "updownio": false,
-      "wappalyzer": true,
-      "zap": true,
-    },
-    "url": "http://chez.com",
-  },
-  Object {
-    "subpages": Array [
+  {
+    "subpages": [
       "https://voila.fr",
     ],
-    "tools": Object {
+    "tools": {
       "404": true,
       "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
       "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
       "http": true,
       "lighthouse": true,
       "nmap": true,
@@ -165,26 +101,26 @@ Array [
 ]
 `;
 
-exports[`should parse dashlord config when single invalid url input 1`] = `Array []`;
-
-exports[`should parse dashlord config when single valid url input 1`] = `
-Array [
-  Object {
-    "repositories": Array [
+exports[`should parse dashlord config when no input 1`] = `
+[
+  {
+    "repositories": [
       "iliad/free-ui",
       "iliad/free-api",
     ],
-    "subpages": Array [
+    "subpages": [
       "https://www.free.fr",
     ],
     "title": "Free",
-    "tools": Object {
+    "tools": {
       "404": true,
       "budget_page": true,
       "codescan": true,
       "declaration-a11y": true,
       "declaration-rgpd": true,
       "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
       "http": true,
       "lighthouse": true,
       "nmap": true,
@@ -199,17 +135,370 @@ Array [
     },
     "url": "https://www.free.fr",
   },
+  {
+    "pages": [
+      "/login",
+      "/profile",
+    ],
+    "repositories": [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "subpages": [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": false,
+      "stats": false,
+      "testssl": true,
+      "thirdparties": true,
+      "updownio": false,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "http://chez.com",
+  },
+  {
+    "subpages": [
+      "https://voila.fr",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://voila.fr",
+  },
+]
+`;
+
+exports[`should parse dashlord config when single invalid url input 1`] = `
+[
+  {
+    "repositories": [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "subpages": [
+      "https://www.free.fr",
+    ],
+    "title": "Free",
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://www.free.fr",
+  },
+  {
+    "pages": [
+      "/login",
+      "/profile",
+    ],
+    "repositories": [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "subpages": [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": false,
+      "stats": false,
+      "testssl": true,
+      "thirdparties": true,
+      "updownio": false,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "http://chez.com",
+  },
+  {
+    "subpages": [
+      "https://voila.fr",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://voila.fr",
+  },
+]
+`;
+
+exports[`should parse dashlord config when single valid url input 1`] = `
+[
+  {
+    "repositories": [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "subpages": [
+      "https://www.free.fr",
+    ],
+    "title": "Free",
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://www.free.fr",
+  },
+  {
+    "pages": [
+      "/login",
+      "/profile",
+    ],
+    "repositories": [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "subpages": [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": false,
+      "stats": false,
+      "testssl": true,
+      "thirdparties": true,
+      "updownio": false,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "http://chez.com",
+  },
+  {
+    "subpages": [
+      "https://voila.fr",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://voila.fr",
+  },
 ]
 `;
 
 exports[`should parse dashlord config with inputs.tool 1`] = `
-Array [
-  Object {
-    "subpages": Array [
+[
+  {
+    "repositories": [
+      "iliad/free-ui",
+      "iliad/free-api",
+    ],
+    "subpages": [
+      "https://www.free.fr",
+    ],
+    "title": "Free",
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "https://www.free.fr",
+  },
+  {
+    "pages": [
+      "/login",
+      "/profile",
+    ],
+    "repositories": [
+      "chez/chez-ui",
+      "chez/chez-api",
+    ],
+    "subpages": [
+      "http://chez.com",
+      "http://chez.com/login",
+      "http://chez.com/profile",
+    ],
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
+      "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": false,
+      "stats": false,
+      "testssl": true,
+      "thirdparties": true,
+      "updownio": false,
+      "wappalyzer": true,
+      "zap": true,
+    },
+    "url": "http://chez.com",
+  },
+  {
+    "subpages": [
       "https://voila.fr",
     ],
-    "tools": Object {
+    "tools": {
+      "404": true,
+      "budget_page": true,
+      "codescan": true,
+      "declaration-a11y": true,
+      "declaration-rgpd": true,
+      "dependabot": true,
+      "dsfr": true,
+      "ecoindex": true,
+      "http": true,
       "lighthouse": true,
+      "nmap": true,
+      "nuclei": false,
+      "screenshot": true,
+      "stats": true,
+      "testssl": false,
+      "thirdparties": true,
+      "updownio": true,
+      "wappalyzer": true,
+      "zap": true,
     },
     "url": "https://voila.fr",
   },
