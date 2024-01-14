@@ -17,6 +17,8 @@ Basic GitHub actions used in [dashlord](https://github.com/socialgouv/dashlord) 
 | sonarcloud       | Extract quality metrics from sonarcloud API       |
 | trivy            | Run trivy docker images scanner                   |
 
+And many more !
+
 ## How it works
 
 DashLord use GitHub Actions to collect data from different tools and store the results in GIT.
@@ -59,5 +61,3 @@ See also the [report README](./report/README.md)
 3. In `report/src/summary`, add compute logic for your scanner score.
 4. Build a new report.json, see above
 5. Run `yarn start` in the `report/www` folder to start adding types from your action and UI for your component
-
-
