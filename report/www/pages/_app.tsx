@@ -13,9 +13,9 @@ import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";
 
 import "../src/custom.css";
-import "../src/overrideDSFR.css"
-import dashlordConfig from '@/config.json';
-import report from '@/report.json';
+import "../src/overrideDSFR.css";
+import dashlordConfig from "@/config.json";
+import report from "@/report.json";
 
 const MATOMO_URL = dashlordConfig.matomoUrl;
 const MATOMO_SITE_ID = dashlordConfig.matomoId;
@@ -25,12 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const fluid =
     router.asPath === "/" ||
     router.asPath.match(/^\/tag\/.+/) ||
-    router.asPath.match(/^\/category\/.+/);
+    router.asPath.match(/^\/category\/.+/) ||
+    router.asPath.match(/^\/startup\/.+/);
   React.useEffect(() => {
     init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
   }, []);
   return (
-    <div className={(dashlordConfig.marianne ? "" : "nonGovernementalWebsite")}>
+    <div className={dashlordConfig.marianne ? "" : "nonGovernementalWebsite"}>
       <Head>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta

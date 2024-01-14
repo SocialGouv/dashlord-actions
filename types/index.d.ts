@@ -9,6 +9,7 @@ type UrlConfig = {
   tags?: string[];
   repositories?: string[];
   pages?: string[];
+  betaId?: string;
 };
 
 type ColorVariant = "info" | "success" | "warning" | "danger";
