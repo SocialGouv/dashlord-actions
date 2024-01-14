@@ -25,6 +25,7 @@ import { Betagouv } from "./BetagouvInfo";
 import { GithubRepository } from "./GithubRepository";
 import { EcoIndex } from "./EcoIndex";
 import { SonarCloud } from "./SonarCloud";
+import { DsFr } from "./DsFr";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -48,6 +49,11 @@ const tabs = [
             url={`${BASE_PATH}/report/${btoa(url)}`}
           />
         ),
+      },
+      {
+        id: "dsfr",
+        reportKey: "dsfr",
+        render: (report, url) => <DsFr data={report.dsfr} url={url} />,
       },
       {
         id: "ecoindex",

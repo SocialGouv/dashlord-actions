@@ -297,6 +297,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     );
   }
 
+  if (isToolEnabled("dsfr")) {
+    columns.push(
+      getColumn({
+        id: "dsfr",
+        title: "DSFR",
+        info: "Détection du design-système de l'état",
+        hash: "dsfr",
+        category: "best-practices",
+        gradeKey: "dsfrGrade",
+      })
+    );
+  }
+
   if (isToolEnabled("ecoindex")) {
     columns.push(
       getColumn({
