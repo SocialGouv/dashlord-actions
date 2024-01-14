@@ -174,7 +174,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           {isToolEnabled("trivy") && (
             <NavItem title="Trivy" asLink={<NavLink href="/trivy" />} />
           )}
-          <NavItem title="Évolutions" asLink={<NavLink href="/trends" />} />
+          {/* <NavItem title="Évolutions" asLink={<NavLink href="/trends" />} /> */}
           {isToolEnabled("updownio") && (
             <NavItem
               title="Disponibilité"
