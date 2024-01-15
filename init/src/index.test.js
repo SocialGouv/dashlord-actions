@@ -7,6 +7,7 @@ const sampleConfig = jest
   .readFileSync(path.join(__dirname, "..", "dashlord.yml"))
   .toString();
 
+//jest.mock("fs");
 jest.mock("fs", () => ({
   promises: {
     access: jest.fn(),

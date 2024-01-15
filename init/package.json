@@ -2,7 +2,7 @@
   "name": "dashlord-init-action",
   "version": "1.0.0",
   "description": "Load the dashlord configuration",
-  "main": "src/index.mjs",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "jest",

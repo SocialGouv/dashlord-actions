@@ -22,4 +22,4 @@ outputs:
 
 runs:
   using: "node20"
-  main: "src/index.mjs"
+  main: "src/index.js"

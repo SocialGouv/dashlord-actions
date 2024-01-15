@@ -1,7 +1,7 @@
-import fs from "fs";
-import core from "@actions/core";
-import YAML from "yaml";
-import { createMissingUpdownEntries } from "./updown.mjs";
+const fs = require("fs");
+const core = require("@actions/core");
+const YAML = require("yaml");
+const { createMissingUpdownEntries } = require("./updown");
 
 const getDashlordConfig = () => {
   let dashlordConfig;
@@ -135,5 +135,10 @@ async function run() {
 if (require.main === module) {
   run();
 }
-
-module.exports = { run, getOutputs, getSiteTools, getSiteSubpages };
+module.exports = {
+  run,
+  getOutputs,
+  getDashlordConfig,
+  getSiteTools,
+  getSiteSubpages,
+};

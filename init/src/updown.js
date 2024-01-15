@@ -65,4 +65,4 @@ const createMissingUpdownEntries = async (dashlordConfig) => {
   });
 };
 
-module.exports = { createMissingUpdownEntries };
+module.export = { createMissingUpdownEntries };
