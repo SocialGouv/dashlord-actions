@@ -166,6 +166,9 @@ const tools = {
   sonarcloud: {
     data: requireToolData("sonarcloud.json"),
   },
+  dsfr: {
+    data: requireToolData("dsfr.json"),
+  },
 };
 
 //@ts-expect-error

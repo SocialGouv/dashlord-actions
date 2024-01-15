@@ -12,6 +12,7 @@ Object {
   "declaration-a11y": null,
   "declaration-rgpd": null,
   "dependabot": null,
+  "dsfr": null,
   "ecoindex": null,
   "github_repository": null,
   "http": null,
@@ -73,6 +74,7 @@ Object {
   "dependabot": Object {
     "report": "dependabotalerts.json",
   },
+  "dsfr": null,
   "ecoindex": null,
   "github_repository": Object {
     "report": "github_repository.json",

@@ -19,6 +19,7 @@ outputs:
   config:
     description: Full dashlord.yaml config
     value: ${{ steps.init.outputs.config }}
+
 runs:
-  using: "node12"
+  using: "node20"
   main: "dist/index.js"

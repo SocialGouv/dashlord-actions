@@ -16,7 +16,7 @@ import {
   NavSubItem,
 } from "@dataesr/react-dsfr";
 import { smallUrl, slugifyUrl, sortByKey, isToolEnabled } from "../utils";
-import dashlordConfig from '@/config.json';
+import dashlordConfig from "@/config.json";
 
 type HeaderSiteProps = {
   report: DashLordReport;
@@ -31,7 +31,7 @@ const NavLink = ({
 }) => {
   const router = useRouter();
   const trailingSlash = href.endsWith("/") ? "" : "/";
-  const isCurrent = (href + trailingSlash) === router.asPath;
+  const isCurrent = href + trailingSlash === router.asPath;
   return (
     <Link href={href} prefetch={false}>
       <a
@@ -76,10 +76,24 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           </Logo>
           {dashlordConfig.operator && (
             <HeaderOperator>
-              { typeof dashlordConfig.operator.logo === "string" ? (
-                <img className="fr-responsive-img" style={{width: "3.5rem"}} src={dashlordConfig.operator.logo} alt={dashlordConfig.operator.name} />
+              {typeof dashlordConfig.operator.logo === "string" ? (
+                <img
+                  className="fr-responsive-img"
+                  style={{ width: "3.5rem" }}
+                  src={dashlordConfig.operator.logo}
+                  alt={dashlordConfig.operator.name}
+                />
               ) : (
-                <img className="fr-responsive-img" style={dashlordConfig.operator.logo.direction === "vertical" ? { maxWidth: "9.0625rem" } : {width: "3.5rem"}} src={dashlordConfig.operator.logo.src} alt={dashlordConfig.operator.name} />
+                <img
+                  className="fr-responsive-img"
+                  style={
+                    dashlordConfig.operator.logo.direction === "vertical"
+                      ? { maxWidth: "9.0625rem" }
+                      : { width: "3.5rem" }
+                  }
+                  src={dashlordConfig.operator.logo.src}
+                  alt={dashlordConfig.operator.name}
+                />
               )}
             </HeaderOperator>
           )}
@@ -127,19 +141,30 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             </NavItem>
           )) ||
             null}
-          <NavItem title="Urls">
-            {sortedReport.map((url) => (
-              <NavSubItem
-                key={url.url}
-                asLink={
-                  <NavLink
-                    href={`/url/${encodeURIComponent(slugifyUrl(url.url))}`}
-                  />
-                }
-                title={smallUrl(url.url)}
-              />
-            ))}
-          </NavItem>
+          {isToolEnabled("betagouv") && (
+            <NavItem title="Startups">
+              {sortedReport
+                .filter((url) => url.betaId)
+                .filter(
+                  (url, i, all) =>
+                    !all
+                      .map((u) => u.betaId)
+                      .slice(i + 1)
+                      .includes(url.betaId)
+                )
+                .map((url) => url.betaId)
+                .sort()
+                .map((id) => {
+                  return (
+                    <NavSubItem
+                      key={id}
+                      asLink={<NavLink href={`/startup/${id}`} />}
+                      title={id}
+                    />
+                  );
+                })}
+            </NavItem>
+          )}
           {isToolEnabled("wappalyzer") && (
             <NavItem
               title="Technologies"
@@ -149,9 +174,12 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           {isToolEnabled("trivy") && (
             <NavItem title="Trivy" asLink={<NavLink href="/trivy" />} />
           )}
-          <NavItem title="Évolutions" asLink={<NavLink href="/trends" />} />
+          {/* <NavItem title="Évolutions" asLink={<NavLink href="/trends" />} /> */}
           {isToolEnabled("updownio") && (
-            <NavItem title="Disponibilité" asLink={<NavLink href="/updownio" />} />
+            <NavItem
+              title="Disponibilité"
+              asLink={<NavLink href="/updownio" />}
+            />
           )}
           <NavItem title="A propos" asLink={<NavLink href="/about" />} />
         </HeaderNav>

@@ -7,7 +7,14 @@ const sampleConfig = jest
   .readFileSync(path.join(__dirname, "..", "dashlord.yml"))
   .toString();
 
-jest.mock("fs");
+//jest.mock("fs");
+jest.mock("fs", () => ({
+  promises: {
+    access: jest.fn(),
+  },
+  existsSync: jest.fn(),
+  readFileSync: jest.fn(),
+}));
 
 const { getOutputs, getSiteTools, getSiteSubpages } = require("./index");
 
@@ -22,6 +29,8 @@ describe("should parse dashlord config", () => {
   });
   beforeEach(() => {
     // Reset inputs
+    jest.resetAllMocks();
+
     inputs = {};
   });
   test("when no input", async () => {
@@ -89,6 +98,8 @@ describe("should parse dashlord config", () => {
       stats: false,
       budget_page: false,
       404: true,
+      dsfr: true,
+      ecoindex: true,
     });
   });
 

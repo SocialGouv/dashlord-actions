@@ -13,7 +13,7 @@ import Link from "next/link";
 import { isToolEnabled } from "../utils";
 
 import { Panel } from "./Panel";
-import dashlordConfig from '@/config.json';
+import dashlordConfig from "@/config.json";
 
 const REPOSITORY_URL =
   process.env.NEXT_PUBLIC_REPOSITORY_URL ||
@@ -437,6 +437,18 @@ export const Intro: React.FC = () => (
         SonarCloud permet d&apos;analyser le code source des repositories et de
         détecter des bugs, vulnérabilités, duplications et autres indicateurs de
         qualité.
+      </Panel>
+    )}
+
+    {isToolEnabled("dsfr") && (
+      <Panel
+        title="Détection du système de design de l'état"
+        url="https://www.systeme-de-design.gouv.fr/"
+        urlText="Site officiel"
+        isExternal
+      >
+        Détection du système de design de l&apos;état avec la balise
+        <code>fr-header__brand</code>
       </Panel>
     )}
   </>

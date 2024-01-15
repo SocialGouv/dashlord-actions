@@ -836,6 +836,35 @@ exports[`Should render Intro 1`] = `
       SonarCloud permet d'analyser le code source des repositories et de détecter des bugs, vulnérabilités, duplications et autres indicateurs de qualité.
     </div>
   </div>
+  <div
+    class="container"
+  >
+    <div
+      class="banner"
+    >
+      <h5
+        class="mainTitle"
+      >
+        Détection du système de design de l'état
+      </h5>
+      <a
+        href="https://www.systeme-de-design.gouv.fr/"
+        rel="noreferrer noopener"
+        style="float: right;"
+        target="_blank"
+      >
+        Site officiel
+      </a>
+    </div>
+    <div
+      class="body"
+    >
+      Détection du système de design de l'état avec la balise
+      <code>
+        fr-header__brand
+      </code>
+    </div>
+  </div>
 </div>
 `;
 

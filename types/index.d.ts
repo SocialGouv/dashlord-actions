@@ -9,6 +9,7 @@ type UrlConfig = {
   tags?: string[];
   repositories?: string[];
   pages?: string[];
+  betaId?: string;
 };
 
 type ColorVariant = "info" | "success" | "warning" | "danger";
@@ -35,6 +36,8 @@ type DashlordTool =
   | "declaration-a11y"
   | "declaration-rgpd"
   | "ecoindex"
+  | "dsfr"
+  | "budget_page"
   | "sonarcloud";
 
 type DashLordConfig = {
@@ -313,6 +316,8 @@ type UpDownReport = {
 
 type Wget404Report = string[];
 
+type DsFrReport = { detected: boolean };
+
 type UrlReport = UrlConfig & {
   lhr?: LighthouseReport | LighthouseReport[] | null;
   testssl?: SslTestReport | null;
@@ -334,6 +339,8 @@ type UrlReport = UrlConfig & {
   "declaration-a11y"?: DeclarationA11yReport | null;
   "declaration-rgpd"?: DeclarationRgpdReport | null;
   betagouv?: BetagouvReport;
+  ecoindex?: EcoIndexReport;
+  dsfr?: DsFrReport;
 };
 
 type BetagouvReportPhase = {

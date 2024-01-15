@@ -39,4 +39,5 @@ type UrlReportSummary = {
   "declaration-rgpd"?: string;
   ecoindexGrade?: string;
   sonarcloudGrade?: string;
+  dsfrGrade?: string;
 };
