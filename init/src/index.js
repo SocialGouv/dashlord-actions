@@ -135,6 +135,7 @@ async function run() {
 if (require.main === module) {
   run();
 }
+
 module.exports = {
   run,
   getOutputs,
