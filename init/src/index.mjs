@@ -1,7 +1,7 @@
-const fs = require("fs");
-const core = require("@actions/core");
-const YAML = require("yaml");
-const { createMissingUpdownEntries } = require("./updown.mjs");
+import fs from "fs";
+import core from "@actions/core";
+import YAML from "yaml";
+import { createMissingUpdownEntries } from "./updown.mjs";
 
 const getDashlordConfig = () => {
   let dashlordConfig;
