@@ -1,8 +1,6 @@
-import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr";
 import * as React from "react";
 import { Alert } from "@dataesr/react-dsfr";
 
-import { Grade } from "./Grade";
 import { Panel } from "./Panel";
 
 type DsFrProps = { data: DsFrReport; url: string };

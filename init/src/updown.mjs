@@ -55,7 +55,7 @@ const createNewUpDownCheck = async (url) => {
  *
  * @param {DashLordConfig} dashlordConfig
  */
-export const createMissingUpdownEntries = async (dashlordConfig) => {
+const createMissingUpdownEntries = async (dashlordConfig) => {
   const urls = dashlordConfig.urls.map((url) => url.url);
   await getInvalidUrls(urls).then((urls) => {
     urls.forEach(async (url) => {
@@ -64,3 +64,5 @@ export const createMissingUpdownEntries = async (dashlordConfig) => {
     });
   });
 };
+
+module.exports = { createMissingUpdownEntries };

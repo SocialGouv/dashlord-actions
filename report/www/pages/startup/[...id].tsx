@@ -5,7 +5,6 @@ import { Alert } from "@dataesr/react-dsfr";
 import { Dashboard } from "../../src/components/Dashboard";
 import report from "@/report.json";
 import dashlordConfig from "@/config.json";
-import { config } from "process";
 import { isToolEnabled } from "src/utils";
 
 const PageStartup = ({ report, id }: { report: UrlReport[]; id: string }) => {
