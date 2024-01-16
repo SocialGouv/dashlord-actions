@@ -12,32 +12,49 @@ on:
 
 name: Tests dsfr action
 jobs:
-  tests-dsfr:
+  tests-dsfr-valid:
     runs-on: ubuntu-latest
     name: dsfr action
+    continue-on-error: true
+    strategy:
+      matrix:
+        url:
+          [
+            "https://talents.ssi.gouv.fr",
+            "https://histologe.beta.gouv.fr/",
+            "https://beta.gouv.fr",
+          ]
     steps:
       - uses: actions/checkout@v3
-      - name: Test DSFR detection on domifa
+      - name: Test DSFR detection on ${{ matrix.url }}
         uses: ./dsfr
         with:
-          url: https://domifa.fabrique.social.gouv.fr
-          output: domifa.json
+          url: ${{ matrix.url }}
+          output: ${{ matrix.url | base64 }}.json
       - shell: bash
         run: |
-          cat domifa.json
-      - name: Test DSFR detection on talents
+          cat ${{ matrix.url | base64 }}.json
+          grep "\"detected\": true" < ${{ matrix.url | base64 }}.json
+  tests-dsfr-invalid:
+    runs-on: ubuntu-latest
+    name: dsfr action
+    continue-on-error: true
+    strategy:
+      matrix:
+        url:
+          [
+            "https://dashlord.incubateur.net/",
+            "https://anais.beta.gouv.fr/",
+            "https://mesevenementsemploi.pole-emploi.fr/",
+          ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test DSFR detection on ${{ matrix.url }}
         uses: ./dsfr
         with:
-          url: https://talents.ssi.gouv.fr/
-          output: talents.json
+          url: ${{ matrix.url }}
+          output: ${{ matrix.url | base64 }}.json
       - shell: bash
         run: |
-          cat talents.json
-      - name: Test DSFR detection on histologe
-        uses: ./dsfr
-        with:
-          url: https://histologe.beta.gouv.fr/
-          output: histologe.json
-      - shell: bash
-        run: |
-          cat histologe.json
+          cat ${{ matrix.url | base64 }}.json
+          grep "\"detected\": false" < ${{ matrix.url | base64 }}.json
