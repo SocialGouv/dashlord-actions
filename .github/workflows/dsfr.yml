@@ -1,0 +1,43 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - dsfr/**
+      - .github/workflows/dsfr.yml
+  pull_request:
+    branches: ["*"]
+    paths:
+      - dsfr/**
+      - .github/workflows/dsfr.yml
+
+name: Tests dsfr action
+jobs:
+  tests-dsfr:
+    runs-on: ubuntu-latest
+    name: dsfr action
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test DSFR detection on domifa
+        uses: ./dsfr
+        with:
+          url: https://domifa.fabrique.social.gouv.fr
+          output: domifa.json
+      - shell: bash
+        run: |
+          cat domifa.json
+      - name: Test DSFR detection on talents
+        uses: ./dsfr
+        with:
+          url: https://talents.ssi.gouv.fr/
+          output: talents.json
+      - shell: bash
+        run: |
+          cat talents.json
+      - name: Test DSFR detection on histologe
+        uses: ./dsfr
+        with:
+          url: https://histologe.beta.gouv.fr/
+          output: histologe.json
+      - shell: bash
+        run: |
+          cat histologe.json
