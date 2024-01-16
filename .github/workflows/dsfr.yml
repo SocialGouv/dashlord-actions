@@ -18,23 +18,24 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        url:
-          [
-            "https://talents.ssi.gouv.fr",
-            "https://histologe.beta.gouv.fr/",
-            "https://beta.gouv.fr",
-          ]
+        item:
+          - name: talents
+            url: "https://talents.ssi.gouv.fr"
+          - name: histologe
+            url: "https://histologe.beta.gouv.fr/"
+          - name: beta
+            url: "https://beta.gouv.fr"
     steps:
       - uses: actions/checkout@v3
-      - name: Test DSFR detection on ${{ matrix.url }}
+      - name: Test DSFR detection on ${{ matrix.item.name }}
         uses: ./dsfr
         with:
-          url: ${{ matrix.url }}
-          output: ${{ matrix.url | base64 }}.json
+          url: ${{ matrix.item.url }}
+          output: ${{ matrix.item.name }}.json
       - shell: bash
         run: |
-          cat ${{ matrix.url | base64 }}.json
-          grep "\"detected\": true" < ${{ matrix.url | base64 }}.json
+          cat ${{ matrix.item.name }}.json
+          grep "\"detected\": true" < ${{ matrix.item.name }}.json
   tests-dsfr-invalid:
     runs-on: ubuntu-latest
     name: dsfr action
@@ -42,19 +43,20 @@ jobs:
     strategy:
       matrix:
         url:
-          [
-            "https://dashlord.incubateur.net/",
-            "https://anais.beta.gouv.fr/",
-            "https://mesevenementsemploi.pole-emploi.fr/",
-          ]
+          - name: dashlord
+            url: "https://dashlord.incubateur.net/"
+          - name: anais
+            url: "https://anais.beta.gouv.fr/"
+          - name: mes-evenements
+            url: "https://mesevenementsemploi.pole-emploi.fr/"
     steps:
       - uses: actions/checkout@v3
-      - name: Test DSFR detection on ${{ matrix.url }}
+      - name: Test DSFR detection on ${{ matrix.item.name }}
         uses: ./dsfr
         with:
-          url: ${{ matrix.url }}
-          output: ${{ matrix.url | base64 }}.json
+          url: ${{ matrix.item.url }}
+          output: ${{ matrix.item.url }}.json
       - shell: bash
         run: |
-          cat ${{ matrix.url | base64 }}.json
-          grep "\"detected\": false" < ${{ matrix.url | base64 }}.json
+          cat ${{ matrix.item.name }}.json
+          grep "\"detected\": false" < ${{ matrix.item.name }}.json
