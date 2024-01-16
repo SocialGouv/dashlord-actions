@@ -20,12 +20,12 @@ runs:
       uses: socialgouv/dashlord-actions/get-html@v1
       with:
         url: ${{ inputs.url }}
-        output: result.html
+        output: dsfr-html.html
     - shell: bash
       run: |
         # this exits 1 when no fr-header__brand or rf-header__brand
         set +e
-        grep -q "\(rf\|fr\)-header__brand" < ./histologe.html
+        grep -q "\(rf\|fr\)-header__brand" < ./dsfr-html.html
         if [ $? -eq 0 ]
         then
             JSON="{\"detected\": true}"
