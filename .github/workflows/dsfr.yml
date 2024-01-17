@@ -54,7 +54,7 @@ jobs:
         uses: ./dsfr
         with:
           url: ${{ matrix.item.url }}
-          output: ${{ matrix.item.url }}.json
+          output: ${{ matrix.item.name }}.json
       - shell: bash
         run: |
           grep "\"detected\": false" < ${{ matrix.item.name }}.json
