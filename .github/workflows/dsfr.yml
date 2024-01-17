@@ -14,7 +14,7 @@ name: Tests dsfr action
 jobs:
   tests-dsfr-valid:
     runs-on: ubuntu-latest
-    name: dsfr action
+    name: dsfr valid
     continue-on-error: true
     strategy:
       matrix:
@@ -38,11 +38,11 @@ jobs:
           grep "\"detected\": true" < ${{ matrix.item.name }}.json
   tests-dsfr-invalid:
     runs-on: ubuntu-latest
-    name: dsfr action
+    name: dsfr invalid
     continue-on-error: true
     strategy:
       matrix:
-        url:
+        item:
           - name: dashlord
             url: "https://dashlord.incubateur.net/"
           - name: anais
