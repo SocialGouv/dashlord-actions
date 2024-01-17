@@ -1,0 +1,58 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - dsfr/**
+      - .github/workflows/dsfr.yml
+  pull_request:
+    branches: ["*"]
+    paths:
+      - dsfr/**
+      - .github/workflows/dsfr.yml
+
+name: Tests dsfr action
+jobs:
+  tests-dsfr-valid:
+    runs-on: ubuntu-latest
+    name: dsfr valid
+    continue-on-error: true
+    strategy:
+      matrix:
+        item:
+          - name: talents
+            url: "https://talents.ssi.gouv.fr"
+          - name: histologe
+            url: "https://histologe.beta.gouv.fr/"
+          - name: beta
+            url: "https://beta.gouv.fr"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test DSFR detection on ${{ matrix.item.name }}
+        uses: ./dsfr
+        with:
+          url: ${{ matrix.item.url }}
+          output: ${{ matrix.item.name }}.json
+      - shell: bash
+        run: |
+          grep "\"detected\": true" < ${{ matrix.item.name }}.json
+  tests-dsfr-invalid:
+    runs-on: ubuntu-latest
+    name: dsfr invalid
+    continue-on-error: true
+    strategy:
+      matrix:
+        item:
+          - name: anais
+            url: "https://anais.beta.gouv.fr/"
+          - name: mes-evenements
+            url: "https://mesevenementsemploi.pole-emploi.fr/"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test DSFR detection on ${{ matrix.item.name }}
+        uses: ./dsfr
+        with:
+          url: ${{ matrix.item.url }}
+          output: ${{ matrix.item.name }}.json
+      - shell: bash
+        run: |
+          grep "\"detected\": false" < ${{ matrix.item.name }}.json
