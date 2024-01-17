@@ -34,7 +34,6 @@ jobs:
           output: ${{ matrix.item.name }}.json
       - shell: bash
         run: |
-          cat ${{ matrix.item.name }}.json
           grep "\"detected\": true" < ${{ matrix.item.name }}.json
   tests-dsfr-invalid:
     runs-on: ubuntu-latest
@@ -58,5 +57,4 @@ jobs:
           output: ${{ matrix.item.url }}.json
       - shell: bash
         run: |
-          cat ${{ matrix.item.name }}.json
           grep "\"detected\": false" < ${{ matrix.item.name }}.json
