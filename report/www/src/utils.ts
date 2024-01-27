@@ -1,4 +1,5 @@
 export const smallUrl = (url: string): string =>
+  url &&
   url
     .toLowerCase()
     .replace(/^https?:\/\//, "")
@@ -26,17 +27,28 @@ export const sortByKey = (key: string) => (a: any, b: any) => {
   return 0;
 };
 
-export const isToolEnabled = (name: DashlordTool): boolean => {
+export const isToolEnabled = (
+  name: DashlordTool,
+  url: string = null
+): boolean => {
   const dashlordConfig: DashLordConfig = require("./config.json");
   if (!dashlordConfig.tools) return true;
-  if (Array.isArray(dashlordConfig.tools)) {
-    const hasTools = dashlordConfig.tools && dashlordConfig.tools.length;
-    return (
-      !hasTools ||
-      !!(dashlordConfig.tools && dashlordConfig.tools.includes(name))
-    );
+  let enabledGlobally = false;
+  const hasTools = !!dashlordConfig.tools;
+  // retro-compat array format
+  if (hasTools) {
+    if (Array.isArray(dashlordConfig.tools)) {
+      enabledGlobally = dashlordConfig.tools.includes(name);
+    } else {
+      enabledGlobally = dashlordConfig.tools[name] === true;
+    }
   }
-  return dashlordConfig.tools[name] === true;
+  const urlConfig = dashlordConfig.urls.find((url2) => url2.url === url);
+  const hasUrlTools =
+    urlConfig && urlConfig.tools && urlConfig.tools[name] !== undefined;
+  const disabledForUrl = hasUrlTools ? urlConfig.tools[name] === false : false;
+
+  return enabledGlobally && !disabledForUrl;
 };
 
 export const letterGradeValue = (grade: string): number =>
@@ -62,3 +74,17 @@ export const letterGradeValue = (grade: string): number =>
   }[grade] || 0);
 
 export const btoa = (b: any) => Buffer.from(b).toString("base64");
+
+const lettersSeverities = {
+  A: "success",
+  B: "info",
+  C: "warning",
+  D: "warning",
+  E: "error",
+  F: "error",
+  G: "error",
+};
+export const letterToSeverity = (letter: string) => {
+  const firstLetter = letter.trim().substring(0, 1).toUpperCase();
+  return lettersSeverities[firstLetter] || "info";
+};

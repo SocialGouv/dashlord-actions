@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Row, Col } from "@dataesr/react-dsfr";
 
 import { btoa } from "../utils";
 import { Gauge } from "./Gauge";
@@ -8,7 +7,32 @@ import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 
 import styles from "./lightHouse.module.scss";
-import Card from "./Card";
+import { fr } from "@codegouvfr/react-dsfr";
+
+type CardProps = {
+  title?: string | React.ReactNode;
+  value?: string | React.ReactNode;
+  children?: any;
+};
+
+const Card: React.FC<CardProps> = ({ children, title, value }) => (
+  <div style={{ textAlign: "center" }}>
+    {children}
+    {title && (
+      <div className={fr.cx("fr-text--lead")} style={{ fontSize: "1.2em" }}>
+        {title}
+      </div>
+    )}
+    {value && (
+      <div
+        className={fr.cx("fr-mt-1w", "fr-text--heavy")}
+        style={{ fontSize: "2em" }}
+      >
+        {value}
+      </div>
+    )}
+  </div>
+);
 
 const toTime = (ms: number) => {
   let minutes = 0;
@@ -64,11 +88,12 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       title="LightHouse"
       info="Informations collectées par l'outil Google LightHouse"
     >
-      <Row>
-        <Col>
+      <div className={fr.cx("fr-grid-row")}>
+        <div className={fr.cx("fr-col-12")}>
           <AccessibilityWarnings className={styles.accesibility} />
-        </Col>
-      </Row>
+        </div>
+      </div>
+
       {audits.map((audit) => {
         // use custom performance scoring
         audit.categories.performance.score = getPerformanceScore(audit);
@@ -98,52 +123,66 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
         const auditUrl = `${url}/lhr-${btoa(audit.requestedUrl)}.html`;
         return (
           <Panel
-            title={audit.requestedUrl}
+            title={
+              <div className={fr.cx("fr-mb-4w")}>{audit.requestedUrl}</div>
+            }
             info="Informations collectées par l'outil Google LightHouse"
             urlText="Rapport LightHouse"
             url={auditUrl}
             isExternal
             key={audit.requestedUrl}
           >
-            <Row>
+            <div className={fr.cx("fr-grid-row")}>
               {order.map((key) => {
                 const category =
                   audit.categories[key as LighthouseReportCategoryKey];
                 const score = category.score as number;
                 return (
                   (!Number.isNaN(score) && (
-                    <Col
-                      key={category.id}
-                      n="12 sm-12 md-6 lg-3"
-                      className="fr-mb-2w"
+                    <div
+                      className={fr.cx(
+                        "fr-col-sm-12",
+                        "fr-col-md-6",
+                        "fr-col-lg-3",
+                        "fr-mb-2w"
+                      )}
                     >
                       <Card
                         title={category.title}
                         value={`${(score * 100).toFixed()}%`}
                       >
                         <Gauge
-                          width={180}
-                          height={120}
+                          width={200}
+                          height={140}
                           value={score * 100}
+                          style={{ margin: 10 }}
                           minValue={0}
                           maxValue={100}
                           segments={3}
                           currentValueText=""
                         />
                       </Card>
-                    </Col>
+                    </div>
                   )) ||
                   null
                 );
               })}
-            </Row>
-            <Row>
+            </div>
+            <div className={fr.cx("fr-grid-row")}>
               {Object.keys(highlights).map((label) => (
-                <Col n="12 sm-12 md-6 lg-3" key={label} className="fr-mb-2w">
+                <div
+                  key={label}
+                  className={fr.cx(
+                    "fr-col-sm-12",
+                    "fr-col-md-6",
+                    "fr-col-lg-3",
+                    "fr-mb-2w"
+                  )}
+                >
                   <Card title={label} value={highlights[label]} />
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           </Panel>
         );
       })}

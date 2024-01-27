@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Table } from "@dataesr/react-dsfr";
-import Badge from "./Badge";
+import Table from "@codegouvfr/react-dsfr/Table";
+import Badge from "@codegouvfr/react-dsfr/Badge";
 
 import { smallUrl } from "../utils";
 import { Panel } from "./Panel";
-import { Grade } from "./Grade";
+import { GradeBadge } from "./GradeBadge";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type HTTPProps = { data: HttpReport };
 
@@ -12,16 +13,20 @@ const HttpRowBadge = (row: HttpTestReport) => {
   const scoreModifier = row.score_modifier;
   const variant =
     scoreModifier < -50
-      ? "danger"
+      ? "error"
       : scoreModifier < -30
-      ? "danger"
+      ? "error"
       : scoreModifier < -20
       ? "warning"
       : scoreModifier < -10
       ? "info"
       : "success";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge
+      style={{ width: 100, textAlign: "center", display: "block" }}
+      noIcon
+      severity={variant}
+    >
       {scoreModifier}
     </Badge>
   );
@@ -147,10 +152,19 @@ export const HTTP = ({ data }: HTTPProps) => {
         data.url.replace(/^(https?:\/\/[^/]+).*/, "$1")
       )}`) ||
     null;
-  const failures = Object.keys(data.details)
+  const sortedVulns = Object.keys(data.details)
     .filter((key) => !data.details[key].pass)
-    .map((key) => data.details[key]);
-  failures.sort((a, b) => a.score_modifier - b.score_modifier);
+    .sort(
+      (a, b) => data.details[a].score_modifier - data.details[b].score_modifier
+    );
+  const tableData = [
+    columns.map((col) => col.label),
+    ...sortedVulns.map((key) =>
+      columns.map((col) =>
+        col.render ? col.render(data.details[key]) : col[key]
+      )
+    ),
+  ];
 
   return url ? (
     <Panel
@@ -159,13 +173,11 @@ export const HTTP = ({ data }: HTTPProps) => {
       urlText="Rapport détaillé"
       isExternal
     >
-      <h3>
-        Scan Summary : <Grade small grade={data.grade} />
-      </h3>
-      {(failures.length && (
-        <Table rowKey="name" columns={columns} data={failures} />
-      )) ||
-        null}
+      <div className={fr.cx("fr-text--bold")}>
+        Scan Summary : <GradeBadge label={data.grade} />
+      </div>
+
+      {(tableData.length > 1 && <Table data={tableData} />) || null}
     </Panel>
   ) : (
     <></>

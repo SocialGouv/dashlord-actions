@@ -34,7 +34,7 @@ export const Gauge: React.FC<GaugeProps> = (props) => {
   return (
     <div
       style={{
-        background: "#FFF",
+        background: "var(--background-contrast-grey)",
       }}
     >
       <ReactSpeedometer

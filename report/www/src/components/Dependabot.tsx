@@ -1,11 +1,14 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
 import { getLastUrlSegment } from "../utils";
 
-import Badge from "./Badge";
+import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Panel } from "./Panel";
 import { Grade } from "./Grade";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import { fr } from "@codegouvfr/react-dsfr";
+import { GradeBadge } from "./GradeBadge";
 
 const orderBySeverity = (a: DependabotNode, b: DependabotNode) => {
   // high criticity first
@@ -28,12 +31,12 @@ const DependabotBadge = (node: DependabotNode) => {
       : severity === "MODERATE"
       ? "warning"
       : severity === "HIGH"
-      ? "danger"
+      ? "error"
       : severity === "CRITICAL"
-      ? "danger"
+      ? "error"
       : "info";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge className="w-100" severity={variant}>
       {severity}
     </Badge>
   );
@@ -91,12 +94,12 @@ export const Dependabot: React.FC<DependabotProps> = ({ data, url }) => {
           </span>
         }
       >
-        <h3>
-          Scan Summary : <Grade small grade={data.grade} />
-        </h3>
-        <Table columns={columns} data={nodes} rowKey="createdAt" />
+        <div className={fr.cx("fr-text--bold")}>
+          Scan Summary : <GradeBadge label={data.grade} />
+        </div>
+        <Table data={[]} />
       </Panel>
     )) ||
-    null
+    null //<Alert severity="success" title="Aucune alerte dependabot" />
   );
 };

@@ -1,7 +1,11 @@
 import * as React from "react";
-import { Info, Zap, ThumbsUp, Lock } from "react-feather";
+import { useMemo } from "react";
+import { useRouter } from "next/router";
 
-import { isToolEnabled, slugifyUrl, btoa } from "../utils";
+import Tabs from "@codegouvfr/react-dsfr/Tabs";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import { FrIconClassName, fr } from "@codegouvfr/react-dsfr";
+
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
 import { Nuclei } from "./Nuclei";
@@ -17,7 +21,6 @@ import { Report404 } from "./404";
 import { Trivy } from "./Trivy";
 import { DeclarationA11y } from "./DeclarationA11y";
 import { DeclarationRgpd } from "./DeclarationRgpd";
-import { Tab, TabContent } from "./UrlTabs";
 import { UrlHeader } from "./UrlHeader";
 import { Panel } from "./Panel";
 import { Page } from "./Page";
@@ -27,6 +30,7 @@ import { EcoIndex } from "./EcoIndex";
 import { SonarCloud } from "./SonarCloud";
 import { DsFr } from "./DsFr";
 
+import { isToolEnabled, slugifyUrl, btoa } from "../utils";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 type UrlDetailProps = { url: string; report: UrlReport; selectedTab?: string };
@@ -34,11 +38,16 @@ type UrlDetailProps = { url: string; report: UrlReport; selectedTab?: string };
 const Anchor = ({ id }: { id: string }) => <div id={id} />;
 
 // define tabs structure
-const tabs = [
+const tabs: {
+  label: string;
+  id: string;
+  icon: FrIconClassName;
+  items: { id: string; reportKey?: string; render: any }[];
+}[] = [
   {
     label: "Bonnes pratiques",
     id: "best-practices",
-    icon: <ThumbsUp size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    icon: "fr-icon-thumb-up-line",
     items: [
       {
         id: "lighthouse",
@@ -68,10 +77,9 @@ const tabs = [
         id: "stats",
         render: (report, url) =>
           report.stats ? (
-            <Panel
-              title="Page de statistiques"
-              info="Cette page permet de publier vos mesures d'impact"
-            >
+            <Panel title="Page de statistiques">
+              <p>Cette page permet de publier vos mesures d&apos;impact</p>
+              <br />
               <Page data={report.stats} url={url} uri="stats" />
             </Panel>
           ) : null,
@@ -80,10 +88,9 @@ const tabs = [
         id: "budget_page",
         render: (report, url) =>
           report.budget_page ? (
-            <Panel
-              title="Page de budget"
-              info="Cette page permet de publier votre budget"
-            >
+            <Panel title="Page de budget">
+              <p>Cette page permet de publier votre budget</p>
+              <br />
               <Page data={report.budget_page} url={url} uri="budget" />
             </Panel>
           ) : null,
@@ -115,7 +122,7 @@ const tabs = [
   {
     label: "Disponibilité",
     id: "disponibilite",
-    icon: <Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    icon: "fr-icon-time-line", //<Zap size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
     items: [
       {
         id: "updownio",
@@ -126,7 +133,7 @@ const tabs = [
   {
     label: "Sécurité",
     id: "securite",
-    icon: <Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    icon: "fr-icon-lock-line", //<Lock size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
     items: [
       {
         id: "nmap",
@@ -207,7 +214,7 @@ const tabs = [
   {
     label: "Informations",
     id: "informations",
-    icon: <Info size={16} style={{ marginRight: 5, marginBottom: -2 }} />,
+    icon: "fr-icon-info-line",
     items: [
       {
         id: "wappalyzer",
@@ -221,7 +228,12 @@ const tabs = [
   },
 ];
 
-export const Url: React.FC<UrlDetailProps> = ({ url, report, selectedTab }) => {
+export const Url: React.FC<UrlDetailProps> = ({
+  url,
+  report,
+  selectedTab = "best-practices",
+}) => {
+  const router = useRouter();
   React.useEffect(() => {
     const hash = document.location.hash.split("#");
     if (hash.length === 3) {
@@ -233,42 +245,14 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, selectedTab }) => {
     }
   }, [report]);
 
-  if (!report) {
-    return (
-      <div>
-        No data available for
-        {url}
-      </div>
-    );
-  }
-
-  const selectedTabIndex: number = Math.max(
-    0,
-    tabs.findIndex((tab) => selectedTab === tab.id)
-  );
-
-  const selectedTabDefinition = tabs[selectedTabIndex];
-
-  return (
-    <>
-      <UrlHeader report={report} url={url} />
-
-      {/* custom DSFR Tabs renderer because of some react-dsfr issue */}
-      <div className="fr-tabs">
-        <ul className="fr-tabs__list" role="tablist">
-          {tabs.map((tab, tabIndex) => (
-            <Tab
-              key={tab.id}
-              selected={selectedTabDefinition.id === tab.id}
-              index={tabIndex}
-              href={`/url/${slugifyUrl(url)}/${tab.id}`}
-              {...tab}
-            />
-          ))}
-        </ul>
-        {tabs.map((tab, tabIndex) => {
-          // filter out invalid items
-          const items = tab.items
+  const tabsContent = useMemo(
+    () =>
+      tabs.map((tab) => {
+        const isSelected = selectedTab === tab.id;
+        // find all applicable items
+        const items =
+          isSelected &&
+          tab.items
             .filter(
               (item) =>
                 !!report[item.reportKey || item.id] &&
@@ -280,18 +264,55 @@ export const Url: React.FC<UrlDetailProps> = ({ url, report, selectedTab }) => {
                 {item.render(report, url)}
               </div>
             ));
+        return {
+          tabId: tab.id,
+          label: tab.label,
+          //<Link href={`/url/${slugifyUrl(url)}/${tab.id}`}>{tab.label}</Link>
+          iconId: tab.icon,
+          content:
+            items && items.length ? (
+              items
+            ) : (
+              <Alert
+                severity="error"
+                title="warn-no-info"
+                description={
+                  <>Aucune information trouvée dans cette catégorie</>
+                }
+              />
+            ),
+          isDefault: isSelected,
+        };
+      }),
+    [selectedTab, url]
+  );
 
-          return (
-            <TabContent
-              {...tab}
-              key={tab.id}
-              tabIndex={tabIndex}
-              selected={selectedTabDefinition.id === tab.id}
-              items={items}
-            />
-          );
-        })}
+  if (!report) {
+    return (
+      <div>
+        No data available for
+        {url}
       </div>
+    );
+  }
+
+  const tabContent = tabsContent.find(
+    (tab) => tab.tabId === selectedTab
+  ).content;
+
+  return (
+    <>
+      <UrlHeader report={report} url={url} />
+
+      <Tabs
+        selectedTabId={selectedTab}
+        onTabChange={(id) => {
+          router.push(`/url/${slugifyUrl(url)}/${id}`);
+        }}
+        tabs={tabsContent}
+      >
+        {tabContent}
+      </Tabs>
     </>
   );
 };

@@ -1,22 +1,45 @@
 import React from "react";
 
-import {
-  Footer,
-  FooterLink,
-  FooterBody,
-  FooterOperator,
-  FooterTop,
-  FooterBodyItem,
-  Logo as Marianne,
-  FooterBottom,
-  FooterCopy,
-} from "@dataesr/react-dsfr";
-import dashlordConfig from '@/config.json';
+import { Footer } from "@codegouvfr/react-dsfr/Footer";
+import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 
+import dashlordConfig from "@/config.json";
 
 export const FooterSite: React.FC = () => {
-  const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
+  //const Logo = dashlordConfig.marianne ? Marianne : () => <div />;
   return (
+    <Footer
+      classes={{
+        brand: (!!dashlordConfig.marianne && "auto") || "hidden",
+      }}
+      brandTop={dashlordConfig.entity}
+      homeLinkProps={{
+        href: "/",
+        title: "plop",
+        className: "hidden",
+      }}
+      operatorLogo={
+        dashlordConfig.operator &&
+        (typeof dashlordConfig.operator.logo === "string"
+          ? {
+              orientation: "horizontal",
+              imgUrl: dashlordConfig.operator.logo,
+              alt: `Logo ${dashlordConfig.operator.name}`,
+            }
+          : {
+              orientation: dashlordConfig.operator.logo.direction,
+              imgUrl: dashlordConfig.operator.logo.src,
+              alt: `Logo ${dashlordConfig.operator.name}`,
+            })
+      }
+      accessibility="non compliant"
+      bottomItems={[headerFooterDisplayItem]}
+      contentDescription={dashlordConfig.footer}
+      license={dashlordConfig.marianne ? undefined : false}
+    />
+  );
+
+  /*
     <Footer>
       <FooterTop></FooterTop>
       <FooterBody description="">
@@ -45,5 +68,5 @@ export const FooterSite: React.FC = () => {
         <FooterCopy href="#"></FooterCopy>
       </FooterBottom>
     </Footer>
-  );
+  */
 };

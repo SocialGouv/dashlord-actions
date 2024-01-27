@@ -10,6 +10,7 @@ type UrlConfig = {
   repositories?: string[];
   pages?: string[];
   betaId?: string;
+  tools?: Record<DashlordTool, boolean>;
 };
 
 type ColorVariant = "info" | "success" | "warning" | "danger";
@@ -171,6 +172,7 @@ type DependabotReport = {
 };
 
 type CodescanRule = {
+  id: string;
   severity: string;
   name: string;
   description: string;
@@ -314,7 +316,7 @@ type UpDownReport = {
   apdexGrade: string;
 };
 
-type Wget404Report = string[];
+type Wget404Report = { link: string }[];
 
 type DsFrReport = { detected: boolean };
 

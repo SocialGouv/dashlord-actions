@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Panel } from "./Panel";
-import { Grade } from "./Grade";
-import { Alert } from "@dataesr/react-dsfr";
+import { Alert } from "@codegouvfr/react-dsfr/Alert";
 
 type DeclarationA11yProps = { data: DeclarationA11yReport };
 
@@ -10,7 +9,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
     mention: {
       "Accessibilité : totalement conforme": (
         <Alert
-          type="success"
+          severity="success"
           title="conforme"
           description={
             <>La mention a bien été detectée : Totalement conforme</>
@@ -19,7 +18,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       ),
       "Accessibilité : partiellement conforme": (
         <Alert
-          type="success"
+          severity="success"
           title="partiel-conforme"
           description={
             <>La mention a bien été detectée : Partiellement conforme</>
@@ -28,14 +27,14 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       ),
       "Accessibilité : non conforme": (
         <Alert
-          type="info"
+          severity="info"
           title="non-conforme"
           description={<>La mention a bien été detectée : Non conforme</>}
         />
       ),
       null: (
         <Alert
-          type="error"
+          severity="error"
           title=""
           description={
             <>
@@ -49,7 +48,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
     declaration: {
       true: (
         <Alert
-          type="success"
+          severity="success"
           title=""
           description={
             <>
@@ -67,7 +66,7 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
       ),
       false: (
         <Alert
-          type="error"
+          severity="error"
           title=""
           description={
             <>
@@ -88,10 +87,13 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
   };
   return (
     (data && (
-      <Panel
-        title="Déclaration de mise en accessibilité"
-        info="Une mention de conformité pointant sur une déclaration d'accessibilité est obligatoire sur les sites et applications de l'état"
-      >
+      <Panel title="Déclaration de mise en accessibilité">
+        <p>
+          Une mention de conformité pointant sur une déclaration
+          d&apos;accessibilité est obligatoire sur les sites et applications de
+          l&apos;état
+        </p>
+        <br />
         {alerts.mention[data.mention || "null"]}
         {alerts.declaration["" + !!data.declarationUrl]}
       </Panel>

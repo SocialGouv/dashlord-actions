@@ -1,9 +1,14 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript, DocumentProps } from "next/document";
+import { augmentDocumentWithEmotionCache, dsfrDocumentApi } from "./_app";
+import dashlordConfig from "@/config.json";
 
-export default function Document() {
+const { getColorSchemeHtmlAttributes, augmentDocumentForDsfr } =
+  dsfrDocumentApi;
+
+export default function Document(props: DocumentProps) {
   return (
-    <Html data-fr-scheme="light" data-fr-theme="light">
-      <Head />
+    <Html {...getColorSchemeHtmlAttributes(props)}>
+      <Head title={dashlordConfig.title} />
       <body>
         <Main />
         <NextScript />
@@ -11,3 +16,7 @@ export default function Document() {
     </Html>
   );
 }
+
+augmentDocumentForDsfr(Document);
+
+augmentDocumentWithEmotionCache(Document);

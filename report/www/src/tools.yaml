@@ -1,0 +1,284 @@
+# yaml-language-server: $$schema=./tools.schema.json
+
+lighthouse:
+  label: Google LightHouse
+  url: https://developers.google.com/web/tools/lighthouse
+  tags:
+    - accessibility
+    - best-practices
+    - seo
+    - performance
+  description: |
+    Permet un audit automatique de page web :
+    - Performances de chargement
+    - Bonnes pratiques SEO (référencement)
+    - Bonnes pratiques accessibilité (moteur Axe)
+    - Bonnes pratiques web
+  warning: |
+    Les mesures de performance sont un instantané, donc pas forcément représentatives.
+
+    Les mesures d'accessibilité n'abordent pas du tout [le RGAA](https://accessibilite.numerique.gouv.fr/)
+  info: |
+    L'audit complet avec les recommandations de correction est disponible pour chaque URL
+
+dependabot:
+  label: Dependabot
+  url: https://dependabot.com
+  tags:
+    - security
+  description: |
+    Scan des vulnérabilités des dépendances sur les dépôts de code GitHub
+
+    cf https://docs.github.com/en/code-security/supply-chain-security/about-alerts-for-vulnerable-dependencies
+  warning: ""
+  info: |
+    Nécessite d'avoir activé Dependabot sur les repositories GitHub et indiqué le champ `repositories` dans `dashlord.yaml`.
+
+codescan:
+  label: CodeQL
+  url: https://docs.github.com/en/code-security/secure-coding/about-code-scanning
+  tags:
+    - security
+  description: |
+    Recense les potentielles vulnérabilités dans le code source.
+
+     - Analyse statique du code sur le dépôt Github du code
+     - Possibilité de configurer dans le repository
+
+  warning: ""
+  info: |
+    Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ `repositories` dans `dashlord.yaml`.
+
+nmap:
+  label: Nmap
+  url: https://nmap.org
+  tags:
+    - security
+  description: |
+    Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine.
+
+    Scan des ports ouverts avec vulnérabilités grâce au script [vulners](https://nmap.org/nsedoc/scripts/vulners.html).
+
+  warning: |
+    Ce scanner peut exposer des vulnérabilités exploitables.
+
+  info: |
+    Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ `repositories` dans `dashlord.yaml`.
+
+zap:
+  label: OWASP Zed Attack Proxy
+  url: https://www.zaproxy.org/docs/docker/baseline-scan/
+  tags:
+    - security
+  description: |
+    Scan de vulnérabilités passif ZAP OWASP "baseline" qui permet de détecter des risques de sécurité de base.
+  warning: |
+
+  info: |
+    L'audit complet avec les recommandations de correction est disponible pour chaque URL
+
+testssl:
+  label: testssl.sh
+  url: https://testssl.sh
+  tags:
+    - security
+  description: |
+    Évalue le niveau de confiance d'un certificat SSL
+
+    - Bonnes pratiques de configuration
+    - Protocoles disponibles
+    - Compatibilité navigateurs
+    - Solidité des clés de chiffrement
+
+  warning: |
+
+  info: |
+    L'audit complet avec les recommandations de correction est disponible pour chaque URL
+
+http:
+  label: Mozilla HTTP observatory
+  url: https://observatory.mozilla.org/
+  tags:
+    - security
+  description: |
+    Évalue le niveau de qualité/sécurité de la page web et de son serveur
+
+    - Bonnes pratiques de configuration
+    - Bonnes pratiques web
+    - Solidité des clés de chiffrement
+
+    Voir la [méthodologie](https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/scoring.md)
+  warning: |
+
+  info: |
+
+upwdownio:
+  label: Updown.io
+  url: https://updown.io
+  tags:
+    - performance
+  description: |
+    Évalue la qualité de service rendue par le serveur
+
+    - Temps de réponse
+    - Disponibilité
+    - Indice de performance : [APDEX](https://updown.uservoice.com/knowledgebase/articles/915588-what-is-apdex)
+    - Validité des certificats TLS
+
+  warning: |
+
+  info: |
+    Vous devez disposer d'un compte updown.io et d'une clé API
+
+nuclei:
+  label: Nucléi
+  url: https://nuclei.projectdiscovery.io/
+  tags:
+    - security
+  description: |
+    Détecte plus de 700 erreurs de configuration courantes sur les
+       applications webs.
+     
+       - Sécurité
+       - Bonnes pratiques web
+  warning: |
+    Ce teste peut prendre de 5 à 10 minutes par URL
+  info: |
+
+thirdparties:
+  label: Third-parties (scripts externes)
+  url: https://github.com/SocialGouv/thirdparties
+  tags:
+    - privacy
+  description: |
+    Liste tous les scripts externes chargés par une URL et qui peuvent avoir un impact sur :
+    - Performances web
+    - Sécurité
+    - Vie privée
+  warning: |
+    Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs
+  info: |
+
+wappalyzer:
+  label: Wappalyzer
+  url: https://www.wappalyzer.com/
+  tags:
+    - technologies
+  description: |
+    Wappalyzer reconnait +1500 technologies web, Javascript, CMS, outillage...
+
+    - Stack technique
+    - Obsolescence
+    - Parc
+  warning: |
+
+  info: |
+
+stats:
+  label: Statistiques
+  tags:
+    - standards-betagouv
+  description: |
+    Vérifie si la page /stats existe
+  warning: |
+
+  info: |
+
+page_budget:
+  label: Budget
+  tags:
+    - standards-betagouv
+  description: |
+    Vérifie si la page /budget existe
+  warning: |
+
+  info: |
+
+404:
+  label: Erreurs 404
+  tags:
+    - standards-betagouv
+  description: |
+    Détecte les erreurs 404 sur un site web.
+  warning: |
+
+  info: |
+
+trivy:
+  label: Vulnérabilités Trivy
+  url: https://aquasecurity.github.io/trivy/
+  tags:
+    - security
+  description: |
+    Trivy permet de scanner les containers docker à la recherche de vulnérabilités connues.
+       
+    Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.) mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
+  warning: |
+
+  info: |
+    Vous devez saisir les urls des images à scanner dans le champ `docker` de votre url dans `dashlord.yaml`.
+
+ecoindex:
+  label: Score eco-index
+  url: https://www.ecoindex.fr/comment-ca-marche/
+  tags:
+    - ecoconception
+
+  description: |
+    EcoIndex green-it est un outil communautaire, gratuit et transparent qui, pour une URL donnée, permet d’évaluer :
+
+    - sa performance environnementale absolue à l’aide d’un score sur 100 (higher is better)
+    - sa performance environnementale relative à l’aide d’une note de A à G
+    - l’empreinte technique de la page (poids, complexité, etc.)
+    - l’empreinte environnementale associée (gaz à effet de serre et eau)
+
+    L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre conscience de l’impact environnemental de l’internet.
+  warning: |
+
+  info: |
+
+sonarcloud:
+  label: Score SonarCloud
+  url: https://sonarcloud.io/
+  tags:
+    - quality
+    - security
+  description: |
+    SonarCloud permet d&apos;analyser le code source des repositories et de détecter des bugs, vulnérabilités, duplications et autres indicateurs de qualité.
+  warning: |
+
+  info: |
+
+dsfr:
+  label: Détection du système de design de l'état
+  url: https://www.systeme-de-design.gouv.fr/
+  tags:
+    - standards-betagouv
+  description: |
+    Détection du [système de design de l'état](https://www.systeme-de-design.gouv.fr/) avec la balise `fr-header__brand`
+
+  warning: |
+
+  info: |
+
+declaration-a11y:
+  label: Détection de la déclaration d'accessibilité
+  tags:
+    - standards-betagouv
+  description: |
+    Détection de la mention de déclaration d'accessibilité et de la page liée.
+
+  warning: |
+
+  info: |
+
+declaration-rgpd:
+  label: Détection des mentions RGPD
+  tags:
+    - standards-betagouv
+  description: |
+    Détection des pages de mentions légales et politique de confidentialité
+
+  warning: |
+
+  info: |

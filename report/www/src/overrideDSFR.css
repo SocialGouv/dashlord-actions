@@ -1,45 +1,82 @@
-:root {
-    --background-default-green-non-france: rgb(217, 238, 225);
-    --main-green-non-france: rgb(4, 170, 109);
-    --lighter-green-non-france: rgb(76, 167, 114);
+.nonGovernementalWebsite {
+  /* most crucial change, remove use of the Marianne protected font */
+  font-family: Comic sans ms, monospace;
 
+  /* custom colors used the custom classes below */
+  --background-default-green-non-france: rgb(217, 238, 225);
+  --main-green-non-france: rgb(107, 173, 149);
+  --lighter-green-non-france: rgb(114, 171, 138);
+
+  /* override some defaults colors */
+  --text-inverted-blue-france: #111;
+  --text-action-high-blue-france: #111;
+  --text-active-blue-france: #111;
+  --background-active-blue-france: #111;
+  --background-active-blue-france-hover: #555;
+  --background-active-blue-france-active: #555;
+  --border-plain-blue-france: #555;
+
+  /* alerts and badges defaults colors */
+  --text-default-success: white;
+  --background-contrast-success: #4caf50;
+  --background-contrast-success-hover: #4caf50;
+  --background-contrast-success-active: #4caf50;
+  --text-default-info: white;
+  --background-contrast-info: #2196f3;
+  --background-contrast-info-hover: #2196f3;
+  --background-contrast-info-active: #2196f3;
+  --text-default-warning: black;
+  --background-contrast-warning: orange;
+  --background-contrast-warning-hover: orange;
+  --background-contrast-warning-active: orange;
+  --text-default-error: white;
+  --background-contrast-error: #e91e63;
+  --background-contrast-error-hover: #e91e63;
+  --background-contrast-error-active: #e91e63;
+
+  /* optionnal change to ensure a distinct identity */
+  .fr-nav__btn[aria-current],
+  .fr-nav__link[aria-current] {
+    color: var(--text-action-high-grey);
+    font-weight: bold;
   }
 
-.nonGovernementalWebsite {
-    /* most crucial change, remove use of the Marianne protected font */
-    font-family: Helvetica, Arial, sans-serif;
+  .fr-nav__link[aria-current]::before {
+    background-color: var(--main-green-non-france);
+  }
 
-    /* optionnal change to ensure a distinct identity */
-    .fr-nav__btn[aria-current], .fr-nav__link[aria-current] {
-        color: var(--text-action-high-grey);
-        font-weight: bold;
+  .fr-footer {
+    box-shadow: var(--main-green-non-france) 0px -2px 0px 0px,
+      rgb(229, 229, 229) 0px -1px 0px 0px inset;
+  }
+
+  .fr-callout {
+    box-shadow: var(--background-default-green-non-france) 4px 0px 0px 0px inset;
+  }
+
+  .fr-btn {
+    background-color: var(--main-green-non-france);
+    &:hover {
+      background-color: var(--lighter-green-non-france);
     }
+  }
 
-    .fr-nav__link[aria-current]::before {
-        background-color: var( --main-green-non-france);
-    }
+  .fr-nav__btn[aria-expanded="true"] {
+    --hover: var(--main-green-non-france);
+    --active: var(--lighter-green-non-france);
+    background-color: var(--background-default-green-non-france);
+    color: var(--text-action-high-grey);
+    font-weight: bold;
+  }
 
-    .fr-footer {
-        box-shadow: var(--main-green-non-france) 0px -2px 0px 0px, rgb(229, 229, 229) 0px -1px 0px 0px inset;
-    }
+  .fr-badge {
+    border-radius: 0;
+  }
 
-    .fr-callout {
-        box-shadow: var(--background-default-green-non-france) 4px 0px 0px 0px inset
-    }
-
-    .fr-btn {
-        background-color: var(--main-green-non-france);
-        &:hover {
-            background-color: var(--lighter-green-non-france);
-        }
-    }
-
-    .fr-nav__btn[aria-expanded=true] {
-        --hover:var(--main-green-non-france);
-        --active:var(--lighter-green-non-france);
-        background-color:var(--background-default-green-non-france);
-        color:var(--text-action-high-grey);
-        font-weight: bold;
-      }
+  .fr-header {
+    background-color: none;
+  }
+  .fr-header .fr-header__menu {
+    box-shadow: none;
+  }
 }
-

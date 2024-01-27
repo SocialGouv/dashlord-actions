@@ -1,16 +1,19 @@
 import * as React from "react";
-import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr";
+import Badge from "@codegouvfr/react-dsfr/Badge";
+import CallOut from "@codegouvfr/react-dsfr/CallOut";
+
 import { Clock } from "react-feather";
 import { formatDistanceToNow } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 
-import Badge from "./Badge";
 import styles from "./url.module.scss";
-import { btoa } from "../utils";
+import { btoa, isToolEnabled } from "../utils";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 import config from "../config.json";
+import Link from "next/link";
+import { fr } from "@codegouvfr/react-dsfr";
 
 export const UrlHeader = ({
   report,
@@ -29,66 +32,77 @@ export const UrlHeader = ({
     //@ts-ignore
   )?.title;
   return (
-    <Callout hasInfoIcon={false} className="fr-mb-3w">
-      <CalloutTitle as="h4">
+    <CallOut
+      className="fr-mb-3w"
+      title={
         <a href={url} rel="noreferrer noopener" target="_blank">
           {url}
         </a>
-      </CalloutTitle>
-      <CalloutText>
-        {report.betagouv?.attributes?.pitch && (
-          <div>{report.betagouv?.attributes?.pitch}</div>
-        )}
-        {title && <div>{title}</div>}
-        {report.category && (
+      }
+    >
+      {report.betagouv?.attributes?.pitch && (
+        <div>{report.betagouv?.attributes?.pitch}</div>
+      )}
+      {title && <div>{title}</div>}
+      <div className={fr.cx("fr-mt-1w")}>
+        {updateDate && (
           <Badge
-            className={styles.badge}
-            variant="success"
-            to={`/category/${report.category}`}
+            severity="warning"
+            noIcon
+            as="span"
+            style={{ verticalAlign: "top" }}
           >
-            {report.category}
+            <i
+              className={fr.cx("fr-icon-time-fill", "fr-icon--sm", "fr-mr-1v")}
+              title={`Mis à jour il y a ${formatDistanceToNow(
+                new Date(updateDate),
+                {
+                  locale: frLocale,
+                }
+              )}`}
+            />
+            {formatDistanceToNow(new Date(updateDate), {
+              locale: frLocale,
+            })}
           </Badge>
+        )}
+        {report.category && (
+          <Link
+            href={`/category/${report.category}`}
+            className="link-discreet"
+            title={`Voir toutes les URLs de la catégorie ${report.category}`}
+          >
+            <Badge severity="success">{report.category}</Badge>
+          </Link>
         )}
         {report.tags &&
           report.tags.map((tag: string) => (
-            <Badge
-              className={styles.badge}
-              variant="info"
+            <Link
+              href={`/tag/${tag}`}
               key={tag}
-              to={`/tag/${tag}`}
+              className="link-discreet"
+              title={`Voir toutes les URLs du tag ${tag}`}
             >
-              {tag}
-            </Badge>
+              <Badge severity="info">{tag}</Badge>
+            </Link>
           ))}
         {report.betagouv?.id && (
-          <Badge
-            className={styles.badge}
-            variant="info"
-            external={true}
-            to={`https://beta.gouv.fr/startups/${report.betagouv?.id}.html`}
+          <Link
+            href={`https://beta.gouv.fr/startups/${report.betagouv?.id}.html`}
+            className="link-discreet"
+            title={`Accéder à la fiche beta.gouv.fr de ${report.betagouv?.id}`}
           >
-            fiche beta.gouv.fr
-          </Badge>
+            <Badge severity="info">fiche beta.gouv.fr</Badge>
+          </Link>
         )}
-        {updateDate && (
-          <>
-            <Clock size={16} className={styles.clockIcon} />
-            <span title={updateDate} className={styles.clock}>
-              Mise à jour il y a :{" "}
-              {formatDistanceToNow(new Date(updateDate), {
-                locale: frLocale,
-              })}
-            </span>
-          </>
-        )}
-      </CalloutText>
-      {report.screenshot && (
+      </div>
+      {isToolEnabled("screenshot", report.url) && report.screenshot && (
         <img
           className={styles.screenshotImg}
           alt={`Copie d'écran de ${url}`}
           src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
         />
       )}
-    </Callout>
+    </CallOut>
   );
 };

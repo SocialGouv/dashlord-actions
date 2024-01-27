@@ -41,7 +41,7 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
   const sortedPhases = data.attributes.phases.sort(sortPhases);
   return (
     <Panel title="Phases de la SE">
-      <VerticalTimeline lineColor="var(--blue-france-113)">
+      <VerticalTimeline lineColor="var(--text-action-high-blue-france)">
         {sortedPhases.map((phase) => {
           const phaseData = getPhase(phase.name);
           return (
@@ -49,27 +49,28 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
               key={phase.name}
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: "var(--grey-950)",
-                color: "#fff",
+                background: "var(--background-default-grey)",
+                color: "var(--text-default-grey)",
               }}
               contentArrowStyle={{
-                borderRight: "7px solid  var(--grey-950)",
+                borderRight:
+                  "7px solid  var(--background-default-moutarde-active)",
               }}
               iconStyle={{
-                background: "var(--grey-950)",
-                color: "var(--blue-france-113)",
+                background: "var(--background-default-grey)",
+                color: "var(--text-action-high-blue-france)",
               }}
               icon={<phaseData.icon />}
             >
               <h3
                 className="vertical-timeline-element-title"
-                style={{ color: "var(--blue-france-113)" }}
+                style={{ color: "var(--text-action-high-blue-france)" }}
               >
                 {phaseData.label}
               </h3>
               <h6
                 className="vertical-timeline-element-subtitle"
-                style={{ color: "var(--blue-france-113)" }}
+                style={{ color: "var(--text-action-high-blue-france)" }}
               >
                 {phase.start &&
                   format(new Date(phase.start), "PPP", {
@@ -77,7 +78,7 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
                   })}
               </h6>
 
-              <p style={{ color: "var(--blue-france-113)" }}>
+              <p style={{ color: "var(--text-action-high-blue-france)" }}>
                 {phaseData.description}
               </p>
             </VerticalTimelineElement>

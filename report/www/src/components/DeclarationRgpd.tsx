@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Panel } from "./Panel";
-import { Alert, Table } from "@dataesr/react-dsfr";
+import { Alert } from "@codegouvfr/react-dsfr/Alert";
+import { Table } from "@codegouvfr/react-dsfr/Table";
 
 type DeclarationRgpdProps = { data: DeclarationRgpdReport };
 
@@ -31,46 +32,44 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
   };
 
   const getMissingTrackersTable = (itemData: DeclarationRgpdItem) => {
+    const columns = [
+      { name: "word", label: "Tracker manquant" },
+      { name: "resolution", label: "Remédiation" },
+    ];
+    const tableData = [
+      columns.map((col) => col.name),
+      ...itemData.missingTrackers.map((word: string, index: number) => [
+        word,
+        <>
+          Vous devez impérativement mentionner le tracker <b>{word}</b> dans
+          votre politique de confidentialité.
+        </>,
+      ]),
+    ];
     return (
       <div style={{ display: "flex" }}>
-        <Table
-          columns={[
-            { name: "word", label: "Tracker manquant" },
-            { name: "resolution", label: "Remédiation" },
-          ]}
-          data={itemData.missingTrackers.map((word: string, index: number) => ({
-            key: index,
-            resolution: (
-              <>
-                Vous devez impérativement mentionner le tracker <b>{word}</b>{" "}
-                dans votre politique de confidentialité.
-              </>
-            ),
-            word,
-          }))}
-          rowKey={"key"}
-        />
+        <Table data={tableData} />
       </div>
     );
   };
 
   const getMissingWordsTable = (itemData: DeclarationRgpdItem, slug) => {
     const resolution = getMissingWordsResolution(slug);
-    const rows = itemData.missingWords.map((word: string, index: number) => ({
-      key: index,
-      word,
-      resolution,
-    }));
+
+    const columns = [
+      { name: "word", label: "Mot manquant" },
+      { name: "resolution" },
+    ];
+    const tableData = [
+      columns.map((col) => col.name),
+      ...itemData.missingWords.map((word: string, index: number) => [
+        word,
+        resolution,
+      ]),
+    ];
     return (
       <div style={{ display: "flex" }}>
-        <Table
-          columns={[
-            { name: "word", label: "Mot manquant" },
-            { name: "resolution" },
-          ]}
-          data={rows}
-          rowKey={"key"}
-        />
+        <Table data={tableData} />
       </div>
     );
   };
@@ -80,12 +79,12 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <>
           <Alert
-            type="error"
+            severity="error"
             title="no-declaration"
             description={<>Pas de déclaration détectée. </>}
           />
           <Alert
-            type="error"
+            severity="error"
             title="incomplete-declaration"
             description={<>{getMissingWordsResolution(slug)} </>}
           />
@@ -94,7 +93,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
     } else if (!itemData.declarationUrl) {
       return (
         <Alert
-          type="error"
+          severity="error"
           title="mention-no-declaration"
           description={<>Mention présente mais pas de déclaration détectée</>}
         />
@@ -103,7 +102,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <>
           <Alert
-            type="info"
+            severity="info"
             title="declaration-ok-incomplete"
             description={
               <>
@@ -137,7 +136,7 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
     } else {
       return (
         <Alert
-          type="success"
+          severity="success"
           title="declaration-ok"
           description={
             <>
@@ -158,16 +157,20 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
 
   return (
     <>
-      <Panel
-        title="Mentions légales"
-        info="Les mentions légales sont une page obligatoire qui présente les personnes chargées de la plateforme"
-      >
+      <Panel title="Mentions légales">
+        <p>
+          Les mentions légales sont une page obligatoire qui présente les
+          personnes chargées de la plateforme
+        </p>
+        <br />
         {getPresenceAlerts(mlData, "ml")}
       </Panel>
-      <Panel
-        title="Politique de confidentialité"
-        info="La politique de confidentialité est une page présentant aux utilisateurs les traitements de données personnelles et les éventuelles trackers"
-      >
+      <Panel title="Politique de confidentialité" info="">
+        <p>
+          La politique de confidentialité présente aux utilisateurs les
+          traitements de données personnelles et les éventuelles trackers
+        </p>
+        <br />
         {getPresenceAlerts(pcData, "pc")}
       </Panel>
     </>

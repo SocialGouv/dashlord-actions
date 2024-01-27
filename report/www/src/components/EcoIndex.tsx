@@ -1,8 +1,9 @@
-import { Callout, CalloutTitle, CalloutText } from "@dataesr/react-dsfr";
+import CallOut from "@codegouvfr/react-dsfr/CallOut";
 import * as React from "react";
 
-import { Grade } from "./Grade";
+import { GradeBadge } from "./GradeBadge";
 import { Panel } from "./Panel";
+import { letterToSeverity } from "../utils";
 
 type EcoIndexProps = { data: EcoIndexReport };
 
@@ -22,24 +23,21 @@ const Interpretation = ({ ges, h2o, visits = 1000 }) => {
     1
   )} kilomètres`;
   return (
-    <Callout>
-      <CalloutTitle as="h3">Ça veut dire quoi ?</CalloutTitle>
-      <CalloutText>
-        Pour vous donner une idée, 1 kg CO2e équivaut à un trajet d’environ 3 km
-        en voiture. Une douche consomme en moyenne 6 litres d’eau à la minute.
-        <br />
-        <br />
-        Si votre page émet {ges}g CO2e et consomme {h2o}cl d’eau, cela signifie
-        que pour {visits} visites mensuelles de cette page, l’empreinte sera de{" "}
-        {footprintCo2} kg(s) de CO2e et {footPrintH2o} litre(s) d’eau par mois
-        <br />
-        <br />
-        <strong>
-          Soit pour {visits} visites : un trajet de {equivalentTransport} en
-          voiture ou {equivalentMinuteDouche} de douche.
-        </strong>
-      </CalloutText>
-    </Callout>
+    <CallOut title="Ça veut dire quoi ?">
+      Pour vous donner une idée, 1 kg CO2e équivaut à un trajet d’environ 3 km
+      en voiture. Une douche consomme en moyenne 6 litres d’eau à la minute.
+      <br />
+      <br />
+      Si votre page émet {ges}g CO2e et consomme {h2o}cl d’eau, cela signifie
+      que pour {visits} visites mensuelles de cette page, l’empreinte sera de{" "}
+      {footprintCo2} kg(s) de CO2e et {footPrintH2o} litre(s) d’eau par mois
+      <br />
+      <br />
+      <strong>
+        Soit pour {visits} visites : un trajet de {equivalentTransport} en
+        voiture ou {equivalentMinuteDouche} de douche.
+      </strong>
+    </CallOut>
   );
 };
 
@@ -59,9 +57,12 @@ export const EcoIndex: React.FC<EcoIndexProps> = ({ data }) => {
         urlText="Qu'est-ce que l'éco index ?"
         isExternal={true}
       >
-        <Grade grade={report.grade}></Grade>
+        <GradeBadge label={report.grade}></GradeBadge>
         &nbsp;
-        <Grade grade={report.grade} label={`${report.score}/100`}></Grade>
+        <GradeBadge
+          severity={letterToSeverity(report.grade)}
+          label={`${report.score}/100`}
+        ></GradeBadge>
         <br />
         <br />
         <h5>GES: {ges} gramme(s) par visite</h5>

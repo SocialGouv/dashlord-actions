@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["label", "description", "tags"],
+    "properties": {
+      "label": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "warning": {
+        "type": "string"
+      },
+      "info": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    }
+  }
+}

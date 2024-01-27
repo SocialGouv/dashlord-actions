@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { Alert, Table } from "@dataesr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import Table from "@codegouvfr/react-dsfr/Table";
+
 import Flags from "country-flag-icons/react/3x2";
 
 import { smallUrl } from "../utils";
@@ -29,11 +31,19 @@ const cookiesColumns = [
     render: ({ secure }) => (secure ? "✔️" : "❌"),
   },
 ];
-const CookiesTable: React.FC<CookiesTableProps> = ({ cookies }) =>
-  (cookies && cookies.length && (
-    <Table rowKey="name" columns={cookiesColumns} data={cookies} />
-  )) ||
-  null;
+const CookiesTable: React.FC<CookiesTableProps> = ({ cookies }) => {
+  const tableData = [
+    cookiesColumns.map((col) => col.name),
+    ...((cookies &&
+      cookies.map((cookie) => {
+        return cookiesColumns.map((col) =>
+          col.render ? col.render(cookie) : cookie[col.name]
+        );
+      })) ||
+      []),
+  ];
+  return (cookies && cookies.length && <Table data={tableData} />) || null;
+};
 
 const smallLinkify = (url: string) => (
   <a href={url}>{`${smallUrl(url).substring(0, 25)}...`}</a>
@@ -53,24 +63,24 @@ const trackersColumns = [
   {
     name: "details",
     label: "Remédiation",
-    render: ({ details }) => details && details.message,
+    render: ({ details = {} }: { details?: any }) => details && details.message,
   },
 ];
-const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) =>
-  (trackers && trackers.length && (
-    <Table
-      columns={trackersColumns}
-      data={trackers.filter(
-        filterByKey(
-          // group by type except for "unknown" trackers
-          (t: ThirdPartyTracker, idx) => (t.type !== "unknown" && t.type) || idx
-        )
-      )}
-      rowKey={(row) => row.type + row.url}
-    />
-  )) ||
-  null;
 
+const TrackersTable: React.FC<TrackersTableProps> = ({ trackers }) => {
+  const tableData = [
+    trackersColumns.map((col) => col.name),
+    ...((trackers &&
+      trackers.map((tracker) => {
+        return trackersColumns.map((col) =>
+          col.render ? col.render(tracker) : tracker[col.name]
+        );
+      })) ||
+      []),
+  ];
+
+  return (trackers && trackers.length && <Table data={tableData} />) || null;
+};
 type EndPointsTableProps = { endpoints: ThirdPartiesReportEndpoints };
 
 const endPointsColumns = [
@@ -78,24 +88,23 @@ const endPointsColumns = [
     name: "flag",
     label: "Flag",
     render: (endpoint) => {
-      if (endpoint.geoip && endpoint.geoip.country) {
+      if (endpoint.geoip?.country) {
         const Flag = Flags[endpoint.geoip.country.iso_code];
-        return (
-          endpoint.geoip.country.namesendpoint &&
-          endpoint.geoip.country.namesendpoint.geoip &&
-          endpoint.geoip.country.namesendpoint.geoip.country &&
-          endpoint.geoip.country.namesendpoint.geoip.country.names && (
-            <Flag
-              style={{ width: 60 }}
-              title={
-                endpoint.geoip.country.namesendpoint.geoip.country.names.fr
-              }
-            />
-          )
-        );
+        const title = endpoint.geoip.country.names.fr;
+        return <Flag style={{ width: 60 }} title={title} />;
       }
       return null;
     },
+  },
+  {
+    name: "country",
+    label: "Country",
+    render: (endpoint) =>
+      (endpoint.geoip &&
+        endpoint.geoip.country &&
+        endpoint.geoip.country.names &&
+        endpoint.geoip.country.names.fr) ||
+      "?",
   },
   {
     name: "hostname",
@@ -115,29 +124,23 @@ const endPointsColumns = [
         endpoint.geoip.city.names.fr) ||
       "?",
   },
-  {
-    name: "country",
-    label: "Country",
-    render: (endpoint) =>
-      (endpoint.geoip &&
-        endpoint.geoip.country &&
-        endpoint.geoip.country.names &&
-        endpoint.geoip.country.names.fr) ||
-      "?",
-  },
 ];
 
-const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) =>
-  (endpoints && endpoints.length && (
-    <Table
-      columns={endPointsColumns}
-      data={endpoints.sort(
-        sortBy((point) => point.geoip?.country?.names?.fr || "")
-      )}
-      rowKey="ip"
-    />
-  )) ||
-  null;
+const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) => {
+  const tableData = [
+    endPointsColumns.map((col) => col.name),
+    ...((endpoints &&
+      endpoints.map((endpoint) => {
+        return endPointsColumns.map((col) =>
+          col.render ? col.render(endpoint) : endpoint[col.name]
+        );
+      })) ||
+      []),
+  ];
+
+  //sortBy((point) => point.geoip?.country?.names?.fr || "");
+  return (endpoints && endpoints.length && <Table data={tableData} />) || null;
+};
 
 export const Trackers: React.FC<TrackersProps> = ({ data }) => {
   const hasIssues: (ThirdPartyCookie | ThirdPartyTracker)[] = [];
@@ -163,7 +166,7 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
         info="Scripts tiers embarqués dans la page web"
       >
         <Alert
-          type="success"
+          severity="success"
           title=""
           description="Aucun script third-party detecté"
         />

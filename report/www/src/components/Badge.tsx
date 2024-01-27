@@ -3,7 +3,6 @@ import React, { CSSProperties } from "react";
 import { useRouter } from "next/router";
 
 import styles from "./badge.module.scss";
-import { flattenOnKeys } from "react-base-table";
 
 type BadgeProps = {
   variant: string;
@@ -11,6 +10,7 @@ type BadgeProps = {
   to?: string;
   style?: CSSProperties;
   external?: boolean;
+  children: any;
 };
 
 const Badge: React.FC<BadgeProps> = ({

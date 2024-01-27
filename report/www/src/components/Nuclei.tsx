@@ -1,24 +1,24 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
+import Badge from "@codegouvfr/react-dsfr/Badge";
 
-import Badge from "./Badge";
 import { Panel } from "./Panel";
 
 const NucleiBadge = (row: NucleiReportEntry) => {
   const severity = (row.info && row.info.severity) || "critical";
   const variant =
     severity === "critical"
-      ? "danger"
+      ? "error"
       : severity === "high"
-      ? "danger"
+      ? "error"
       : severity === "medium"
       ? "warning"
       : severity === "low"
       ? "info"
       : "success";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge className="w-100" severity={variant}>
       {severity}
     </Badge>
   );
@@ -53,17 +53,17 @@ const columns = [
 export const Nuclei: React.FC<NucleiProps> = ({ data }) => {
   const rows = data;
   rows.sort(nucleiOrder);
+  const tableData = [
+    columns.map((col) => col.label),
+    ...rows.map((row) => columns.map((col) => col.render(row))),
+  ];
   return (
     (rows.length && (
       <Panel
         title="Nuclei"
         info="Détection d'erreurs de configuration et vulnérabilités"
       >
-        <Table
-          rowKey={(args) => args.templateID + args.matcher_name}
-          columns={columns}
-          data={rows}
-        />
+        <Table data={tableData} />
       </Panel>
     )) ||
     null
