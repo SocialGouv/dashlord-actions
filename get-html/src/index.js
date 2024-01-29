@@ -16,6 +16,7 @@ const getHTML = async (url) => {
   try {
     const page = await browser.newPage();
     await page.goto(url);
+    await page.waitForTimeout(5000); // wait some time, some SPA may load asynchronously (ex: angular)
     const frame = await page.mainFrame();
     html = await frame.content();
   } catch (e) {
