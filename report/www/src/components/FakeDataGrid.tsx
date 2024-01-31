@@ -47,3 +47,5 @@ export const FakeDataGrid = ({
     </table>
   );
 };
+
+export default FakeDataGrid;

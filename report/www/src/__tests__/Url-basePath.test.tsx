@@ -3,6 +3,7 @@ import path from "path";
 
 import React from "react";
 import * as renderer from "react-test-renderer";
+import { vi } from "vitest";
 
 const date = new Date(2021, 3, 6);
 

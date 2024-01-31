@@ -11,7 +11,7 @@ import { btoa, isToolEnabled } from "../utils";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-import config from "../config.json";
+import config from "@/config.json";
 import Link from "next/link";
 import { fr } from "@codegouvfr/react-dsfr";
 
@@ -25,12 +25,13 @@ export const UrlHeader = ({
   const lhrReports = Array.isArray(report.lhr) ? report.lhr : [report.lhr];
   const updateDate =
     lhrReports && lhrReports.length && lhrReports[0] && lhrReports[0].fetchTime;
-
-  const title = config.urls.find(
-    //@ts-ignore
-    (url2) => url2.url === url && url2?.title
-    //@ts-ignore
-  )?.title;
+  const title =
+    config.urls &&
+    config.urls.find(
+      //@ts-ignore
+      (url2) => url2.url === url && url2?.title
+      //@ts-ignore
+    )?.title;
   return (
     <CallOut
       className="fr-mb-3w"

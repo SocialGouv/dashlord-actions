@@ -1,0 +1,199 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tools config > Should render Url with limited tools 1`] = `
+[
+  <div
+    className="fr-callout fr-mb-3w"
+    id="fr-callout-:r0:"
+  >
+    <h3
+      className="fr-callout__title"
+    >
+      <a
+        href="https://www.fabrique.social.gouv.fr"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        https://www.fabrique.social.gouv.fr
+      </a>
+    </h3>
+    <p
+      className="fr-callout__text"
+    >
+       
+      <div
+        className="fr-mt-1w"
+      >
+        <span
+          className="fr-badge fr-badge--warning fr-badge--no-icon"
+          id="fr-badge-:r1:"
+          style={
+            {
+              "verticalAlign": "top",
+            }
+          }
+        >
+          <i
+            className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour il y a environ 1 an"
+          />
+          environ 1 an
+        </span>
+        <a
+          className="link-discreet"
+          href="/category/fabrique"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir toutes les URLs de la catégorie fabrique"
+        >
+          <p
+            className="fr-badge fr-badge--success"
+            id="fr-badge-:r2:"
+          >
+            fabrique
+          </p>
+        </a>
+        <a
+          className="link-discreet"
+          href="/tag/social"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir toutes les URLs du tag social"
+        >
+          <p
+            className="fr-badge fr-badge--info"
+            id="fr-badge-:r3:"
+          >
+            social
+          </p>
+        </a>
+        <a
+          className="link-discreet"
+          href="/tag/sante"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir toutes les URLs du tag sante"
+        >
+          <p
+            className="fr-badge fr-badge--info"
+            id="fr-badge-:r4:"
+          >
+            sante
+          </p>
+        </a>
+        <a
+          className="link-discreet"
+          href="/tag/travail"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir toutes les URLs du tag travail"
+        >
+          <p
+            className="fr-badge fr-badge--info"
+            id="fr-badge-:r5:"
+          >
+            travail
+          </p>
+        </a>
+      </div>
+       
+    </p>
+  </div>,
+  <div
+    className="fr-tabs"
+    id="fr-tabs-:r6:"
+  >
+    <ul
+      className="fr-tabs__list"
+      onKeyDownCapture={[Function]}
+      role="tablist"
+    >
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r7:-0-panel"
+          aria-selected={true}
+          className="fr-tabs__tab fr-icon-thumb-up-line fr-tabs__tab--icon-left"
+          id="tabpanel-:r7:-0"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={0}
+        >
+          Bonnes pratiques
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r7:-1-panel"
+          aria-selected={false}
+          className="fr-tabs__tab fr-icon-time-line fr-tabs__tab--icon-left"
+          id="tabpanel-:r7:-1"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={-1}
+        >
+          Disponibilité
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r7:-2-panel"
+          aria-selected={false}
+          className="fr-tabs__tab fr-icon-lock-line fr-tabs__tab--icon-left"
+          id="tabpanel-:r7:-2"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={-1}
+        >
+          Sécurité
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-controls="tabpanel-:r7:-3-panel"
+          aria-selected={false}
+          className="fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left"
+          id="tabpanel-:r7:-3"
+          onClick={[Function]}
+          role="tab"
+          tabIndex={-1}
+        >
+          Informations
+        </button>
+      </li>
+    </ul>
+    <div
+      aria-labelledby="tabpanel-:r7:-0"
+      className="fr-tabs__panel fr-tabs__panel--selected"
+      id="tabpanel-:r7:-0-panel"
+      role="tabpanel"
+      tabIndex={0}
+    >
+      <div
+        className="fr-alert fr-alert--error"
+        id="fr-alert-:r8:"
+      >
+        <h3
+          className="fr-alert__title"
+        >
+          warn-no-info
+        </h3>
+        <div>
+          Aucune information trouvée dans cette catégorie
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

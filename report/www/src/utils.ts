@@ -1,3 +1,5 @@
+import dashlordConfig from "@/config.json";
+
 export const smallUrl = (url: string): string =>
   url &&
   url
@@ -32,8 +34,8 @@ export const isToolEnabled = (
   name: DashlordTool,
   url: string = null
 ): boolean => {
-  const dashlordConfig: DashLordConfig = require("./config.json");
   if (!dashlordConfig.tools) return true;
+  if (!dashlordConfig.urls) return true;
   let enabledGlobally = false;
   const hasTools = !!dashlordConfig.tools;
   // retro-compat array format

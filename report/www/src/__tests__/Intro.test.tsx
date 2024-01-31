@@ -1,7 +1,9 @@
+import fs from "fs";
 import path from "path";
 import * as React from "react";
 import { render } from "@testing-library/react";
 import Intro from "../../pages/intro";
+import { vi } from "vitest";
 
 it("Should render Intro", () => {
   const { container } = render(<Intro />);
@@ -10,13 +12,13 @@ it("Should render Intro", () => {
 
 describe("Tools config", () => {
   beforeEach(() => {
-    vi.mock("../../config.json", async (importOriginal) => {
-      const config = fs
-        .readFileSync(path.join(__dirname, "config.json"))
-        .toString();
+    vi.mock("@/config.json", async (importOriginal) => {
+      const config = await importOriginal();
       return {
-        ...config,
-        tools: { http: false, zap: true, lighthouse: false },
+        default: {
+          ...config,
+          tools: { http: false, zap: true, lighthouse: false },
+        },
       };
     });
   });
