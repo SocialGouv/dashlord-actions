@@ -24,10 +24,11 @@ export const Panel: React.FC<PanelProps> = ({
       url && {
         children: urlText || "En savoir plus",
         linkProps:
-          {
+          (url && {
             href: url,
             target,
-          } || undefined,
+          }) ||
+          undefined,
       }
     }
     title={title}

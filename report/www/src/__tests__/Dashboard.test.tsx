@@ -1,13 +1,8 @@
-import path from "path";
-import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import fs from "fs";
-import { vi } from "vitest";
+import { Dashboard } from "@/components/Dashboard";
 
-import { Dashboard } from "../components/Dashboard";
-
-import report from "../report.json";
+import report from "@/report.json";
 
 it("Should render empty Dashboard", () => {
   const props = {};

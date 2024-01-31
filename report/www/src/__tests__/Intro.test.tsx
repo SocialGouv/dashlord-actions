@@ -1,6 +1,3 @@
-import fs from "fs";
-import path from "path";
-import * as React from "react";
 import { render } from "@testing-library/react";
 import Intro from "../../pages/intro";
 import { vi } from "vitest";

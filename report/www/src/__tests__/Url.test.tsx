@@ -1,5 +1,3 @@
-import React from "react";
-import path from "path";
 import * as renderer from "react-test-renderer";
 
 import { Url } from "../components/Url";
