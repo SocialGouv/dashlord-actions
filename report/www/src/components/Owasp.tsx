@@ -4,8 +4,6 @@ import Table from "@codegouvfr/react-dsfr/Table";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 
 import { Panel } from "./Panel";
-import { GradeBadge } from "./GradeBadge";
-import { fr } from "@codegouvfr/react-dsfr";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first

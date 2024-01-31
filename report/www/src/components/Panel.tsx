@@ -15,8 +15,8 @@ type PanelProps = {
 export const Panel: React.FC<PanelProps> = ({
   title,
   children,
-  url,
-  urlText,
+  url = null,
+  urlText = null,
   target = "_blank",
 }) => (
   <CallOut

@@ -1,6 +1,5 @@
 import { fr } from "@codegouvfr/react-dsfr";
 import { slugifyUrl, smallUrl } from "../utils";
-import { Panel } from "./Panel";
 import { UpdownIo } from "./UpdownIo";
 import Link from "next/link";
 

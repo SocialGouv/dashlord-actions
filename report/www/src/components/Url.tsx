@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Tabs from "@codegouvfr/react-dsfr/Tabs";
 import Alert from "@codegouvfr/react-dsfr/Alert";
-import { FrIconClassName, fr } from "@codegouvfr/react-dsfr";
+import { FrIconClassName } from "@codegouvfr/react-dsfr";
 
 import { HTTP } from "./HTTP";
 import { LightHouse } from "./LightHouse";
