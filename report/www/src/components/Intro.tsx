@@ -55,6 +55,7 @@ export const Intro: React.FC = () => {
       </CallOut>
       <h2>Les outils utilisés dans DashLord</h2>
       {Object.entries(tools).map(
+        // @ts-ignore TODO with JSON import / JSON schema
         ([id, data]: [
           id: DashlordTool,
           data: {
