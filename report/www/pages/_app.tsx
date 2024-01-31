@@ -1,14 +1,10 @@
 import type { AppProps } from "next/app";
 import { createNextDsfrIntegrationApi } from "@codegouvfr/react-dsfr/next-pagesdir";
-import { Header } from "@codegouvfr/react-dsfr/Header";
-import { Footer } from "@codegouvfr/react-dsfr/Footer";
-import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
 import { fr } from "@codegouvfr/react-dsfr";
 import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { createMuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 
 import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";

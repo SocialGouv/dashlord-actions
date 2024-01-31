@@ -895,7 +895,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       description: "Vulnérabilités Trivy",
       type: "number",
       valueGetter: (params) => {
-        const count = params.row.summary.trivyGrade;
+        return params.row.summary.trivyGrade;
       },
       renderCell: (params) => {
         if (!isToolEnabled("trivy", params.row.url)) return <IconUnknown />;
@@ -927,8 +927,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       description: "Scan de code SonarCloud.io",
       type: "number",
       valueGetter: (params) => {
-        const count = params.row.summary.sonarcloudGrade;
-        return count;
+        return params.row.summary.sonarcloudGrade;
       },
       renderCell: (params) => {
         if (!isToolEnabled("sonarcloud", params.row.url))

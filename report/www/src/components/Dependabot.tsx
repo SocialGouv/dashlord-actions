@@ -5,8 +5,6 @@ import { getLastUrlSegment } from "../utils";
 
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Panel } from "./Panel";
-import { Grade } from "./Grade";
-import Alert from "@codegouvfr/react-dsfr/Alert";
 import { fr } from "@codegouvfr/react-dsfr";
 import { GradeBadge } from "./GradeBadge";
 
