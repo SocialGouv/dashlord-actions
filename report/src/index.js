@@ -5,7 +5,7 @@ const core = require("@actions/core");
 
 const { getUrls, writeFile, getConfig } = require("./utils");
 const generateUrlReport = require("./generateUrlReport");
-const generateTrends = require("./trends");
+//const generateTrends = require("./trends");
 
 const DASHLORD_REPO_PATH = process.env.DASHLORD_REPO_PATH || ".";
 
@@ -43,15 +43,15 @@ const generateJsons = async () => {
     JSON.stringify(report, null, 2)
   );
 
-  core.info(`generate trends.json`);
-  const trends = await generateTrends(DASHLORD_REPO_PATH, report);
+  // core.info(`generate trends.json`);
+  // const trends = await generateTrends(DASHLORD_REPO_PATH, report);
 
-  core.info(`write trends.json`);
-  // copy dashlord trends.json for the website
-  writeFile(
-    path.join(__dirname, "..", "www", "src", "trends.json"),
-    JSON.stringify(trends, null, 2)
-  );
+  // core.info(`write trends.json`);
+  // // copy dashlord trends.json for the website
+  // writeFile(
+  //   path.join(__dirname, "..", "www", "src", "trends.json"),
+  //   JSON.stringify(trends, null, 2)
+  // );
 };
 
 module.exports = {
