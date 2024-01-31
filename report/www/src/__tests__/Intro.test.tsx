@@ -1,14 +1,7 @@
 import path from "path";
 import * as React from "react";
 import { render } from "@testing-library/react";
-import Intro from "@/pages/intro";
-
-const mockSampleConfig = JSON.parse(
-  jest
-    .requireActual("fs")
-    .readFileSync(path.join(__dirname, "config.json"))
-    .toString()
-);
+import Intro from "../../pages/intro";
 
 it("Should render Intro", () => {
   const { container } = render(<Intro />);
@@ -17,15 +10,13 @@ it("Should render Intro", () => {
 
 describe("Tools config", () => {
   beforeEach(() => {
-    jest.mock("../config.json", () => {
+    vi.mock("../../config.json", async (importOriginal) => {
+      const config = fs
+        .readFileSync(path.join(__dirname, "config.json"))
+        .toString();
       return {
-        ...mockSampleConfig,
-        tools: {
-          ...mockSampleConfig.tools,
-          http: false,
-          zap: true,
-          lighthouse: false,
-        },
+        ...config,
+        tools: { http: false, zap: true, lighthouse: false },
       };
     });
   });

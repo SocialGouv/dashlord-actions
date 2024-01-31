@@ -5,8 +5,9 @@ export const smallUrl = (url: string): string =>
     .replace(/^https?:\/\//, "")
     .replace(/\/$/, "");
 
-export const slugifyUrl = (url: string): string =>
-  smallUrl(url).replace(/[\W_]+/g, "-");
+export const slugifyUrl = (url: string): string => {
+  return smallUrl(url).replace(/[\W_]+/g, "-");
+};
 
 export const getHostName = (url: string): string =>
   url

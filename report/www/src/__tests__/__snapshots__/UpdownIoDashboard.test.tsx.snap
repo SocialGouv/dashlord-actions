@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Should render UpdownIo 1`] = `
 <div>
@@ -37,59 +37,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             666ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -182,59 +176,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             578ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -294,59 +282,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             0.995
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             607ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -406,59 +388,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             0.91
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             839ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -518,59 +494,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             65ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -630,59 +600,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             53ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -742,59 +706,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             99.818%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             66ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -854,59 +812,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             99.843%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             71ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -966,59 +918,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             62ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1078,59 +1024,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             99.993%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             135ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1190,59 +1130,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             72ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1302,59 +1236,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             80ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1414,59 +1342,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             100%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             68ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1526,59 +1448,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             99.767%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             71ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"
@@ -1671,59 +1587,53 @@ exports[`Should render UpdownIo 1`] = `
         class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
       >
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Taux de disponibilité sur un mois glissant
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             99.915%
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             APDEX: Application Performance Index
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             1
           </div>
         </div>
         <div
-          class="metric fr-col-4"
+          class="_metric_dd33f8 fr-col-4"
         >
-          <div>
-            gauge mock
-          </div>
+          <div />
           <div
-            class="metricTitle"
+            class="_metricTitle_dd33f8"
           >
             Temps de réponse
           </div>
           <div
-            class="metricValue"
+            class="_metricValue_dd33f8"
           >
             71ms
           </div>
         </div>
       </div>
       <div
-        class="left"
+        class="_left_dd33f8"
       >
         <div
           class="fr-mb-3w"

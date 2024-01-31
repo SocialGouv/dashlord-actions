@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const withYaml = require("next-plugin-yaml");
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -21,4 +20,4 @@ const nextConfig = {
   transpilePackages: ["@codegouvfr/react-dsfr", "tss-react"],
 };
 
-module.exports = withYaml(nextConfig);
+module.exports = nextConfig;

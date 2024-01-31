@@ -255,6 +255,7 @@ export const Url: React.FC<UrlDetailProps> = ({
           tab.items
             .filter(
               (item) =>
+                report &&
                 !!report[item.reportKey || item.id] &&
                 isToolEnabled(item.id as DashlordTool)
             )

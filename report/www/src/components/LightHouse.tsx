@@ -140,6 +140,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                 return (
                   (!Number.isNaN(score) && (
                     <div
+                      key={category.id}
                       className={fr.cx(
                         "fr-col-sm-12",
                         "fr-col-md-6",

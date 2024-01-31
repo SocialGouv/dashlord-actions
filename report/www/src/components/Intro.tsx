@@ -17,9 +17,7 @@ const REPOSITORY_URL =
   process.env.NEXT_PUBLIC_REPOSITORY_URL ||
   "https://github.com/socialgouv/dashlord";
 
-// todo: typings from json schema
-// @ts-ignore
-import tools from "../tools.yaml";
+import tools from "../tools.json";
 
 export const Intro: React.FC = () => {
   return (
@@ -71,6 +69,7 @@ export const Intro: React.FC = () => {
           return (
             isToolEnabled(id) && (
               <Panel
+                key={id}
                 title={
                   <>
                     {data.label}

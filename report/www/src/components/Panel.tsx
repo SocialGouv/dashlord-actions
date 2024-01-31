@@ -7,6 +7,7 @@ type PanelProps = {
   info?: string | React.ReactNode;
   url?: string;
   urlText?: string;
+  target?: string;
   className?: string;
   isExternal?: boolean;
 };
@@ -16,6 +17,7 @@ export const Panel: React.FC<PanelProps> = ({
   children,
   url,
   urlText,
+  target = "_blank",
 }) => (
   <CallOut
     buttonProps={
@@ -24,7 +26,7 @@ export const Panel: React.FC<PanelProps> = ({
         linkProps:
           {
             href: url,
-            target: "_blank",
+            target,
           } || undefined,
       }
     }

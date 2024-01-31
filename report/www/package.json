@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
+    "test": "vitest",
     "predev": "only-include-used-icons",
     "prebuild": "only-include-used-icons"
   },
@@ -22,7 +22,6 @@
     "@mui/material": "^5.15.6",
     "@mui/x-data-grid": "^6.19.2",
     "@socialgouv/matomo-next": "^1.8.0",
-    "@testing-library/user-event": "^13.5.0",
     "country-flag-icons": "^1.5.9",
     "date-fns": "^2.28.0",
     "lodash.orderby": "^4.6.0",
@@ -42,19 +41,23 @@
     "tss-react": "^4.9.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@types/lodash.orderby": "^4.6.6",
-    "@types/lodash.uniq": "^4.5.6",
-    "@types/node": "^20.11.7",
+    "-": "^0.0.1",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/lodash.orderby": "^4.6.9",
+    "@types/lodash.uniq": "^4.5.9",
+    "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^1.2.2",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
-    "eslint-plugin-testing-library": "^5.0.5",
-    "jest": "^27.4.7",
-    "next-plugin-yaml": "^1.0.1",
-    "react-test-renderer": "^17.0.2",
-    "typescript": "5.3.3"
+    "eslint-plugin-testing-library": "^6.2.0",
+    "next-router-mock": "^0.9.11",
+    "react-test-renderer": "^18.2.0",
+    "typescript": "5.3.3",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.2"
   },
   "version": "1.1.0"
 }

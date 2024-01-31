@@ -1,0 +1,2175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render Intro 1`] = `
+<div>
+  <div
+    class="fr-callout fr-mb-3w"
+    id="fr-callout-:r0:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      DashLord compile les données techniques issues de différents outils open-source.
+      <br />
+      Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
+      <br />
+      Vous pouvez
+       
+      <a
+        href="https://github.com/socialgouv/dashlord/issues/new"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        soumettre de nouvelles URLs, proposer des corrections
+      </a>
+       
+      ou
+       
+      <a
+        href="https://github.com/orgs/SocialGouv/projects/13"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        consulter la roadmap
+      </a>
+      .
+      <br />
+      <br />
+      <button
+        class="fr-btn"
+        id="fr-button-:r1:"
+      >
+        <a
+          href="/"
+        >
+          Accéder au tableau de bord
+        </a>
+      </button>
+       
+    </p>
+  </div>
+  <h2>
+    Les outils utilisés dans DashLord
+  </h2>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Erreurs 404
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détecte les erreurs 404 sur un site web.
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r4:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Google LightHouse
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r5:"
+      >
+        accessibility
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r6:"
+      >
+        best-practices
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r7:"
+      >
+        seo
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r8:"
+      >
+        performance
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Permet un audit automatique de page web :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Performances de chargement
+        </li>
+        
+
+        <li>
+          Bonnes pratiques SEO (référencement)
+        </li>
+        
+
+        <li>
+          Bonnes pratiques accessibilité (moteur Axe)
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r9:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Les mesures de performance sont un instantané, donc pas forcément représentatives.
+          </p>
+          
+
+          <p>
+            Les mesures d'accessibilité n'abordent pas du tout 
+            <a
+              href="https://accessibilite.numerique.gouv.fr/"
+            >
+              le RGAA
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:ra:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://developers.google.com/web/tools/lighthouse"
+      id="fr-button-:rb:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rc:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Dependabot
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:rd:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan des vulnérabilités des dépendances sur les dépôts de code GitHub
+      </p>
+      
+
+      <p>
+        cf https://docs.github.com/en/code-security/supply-chain-security/about-alerts-for-vulnerable-dependencies
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:re:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé Dependabot sur les repositories GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://dependabot.com"
+      id="fr-button-:rf:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rg:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      CodeQL
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:rh:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Recense les potentielles vulnérabilités dans le code source.
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Analyse statique du code sur le dépôt Github du code
+        </li>
+        
+
+        <li>
+          Possibilité de configurer dans le repository
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:ri:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://docs.github.com/en/code-security/secure-coding/about-code-scanning"
+      id="fr-button-:rj:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rk:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Nmap
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:rl:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine.
+      </p>
+      
+
+      <p>
+        Scan des ports ouverts avec vulnérabilités grâce au script 
+        <a
+          href="https://nmap.org/nsedoc/scripts/vulners.html"
+        >
+          vulners
+        </a>
+        .
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:rm:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Ce scanner peut exposer des vulnérabilités exploitables.
+          </p>
+        </div>
+      </div>
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:rn:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://nmap.org"
+      id="fr-button-:ro:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rp:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      OWASP Zed Attack Proxy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:rq:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan de vulnérabilités passif ZAP OWASP "baseline" qui permet de détecter des risques de sécurité de base.
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:rr:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.zaproxy.org/docs/docker/baseline-scan/"
+      id="fr-button-:rs:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rt:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      testssl.sh
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:ru:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Évalue le niveau de confiance d'un certificat SSL
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Bonnes pratiques de configuration
+        </li>
+        
+
+        <li>
+          Protocoles disponibles
+        </li>
+        
+
+        <li>
+          Compatibilité navigateurs
+        </li>
+        
+
+        <li>
+          Solidité des clés de chiffrement
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:rv:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://testssl.sh"
+      id="fr-button-:r10:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r11:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Mozilla HTTP observatory
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r12:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Évalue le niveau de qualité/sécurité de la page web et de son serveur
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Bonnes pratiques de configuration
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+        <li>
+          Solidité des clés de chiffrement
+        </li>
+        
+
+      </ul>
+      
+
+      <p>
+        Voir la 
+        <a
+          href="https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/scoring.md"
+        >
+          méthodologie
+        </a>
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://observatory.mozilla.org/"
+      id="fr-button-:r13:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r14:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Nucléi
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r15:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détecte plus de 700 erreurs de configuration courantes sur les
+applications webs.
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Sécurité
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r16:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Ce teste peut prendre de 5 à 10 minutes par URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://nuclei.projectdiscovery.io/"
+      id="fr-button-:r17:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r18:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Third-parties (scripts externes)
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r19:"
+      >
+        privacy
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Liste tous les scripts externes chargés par une URL et qui peuvent avoir un impact sur :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Performances web
+        </li>
+        
+
+        <li>
+          Sécurité
+        </li>
+        
+
+        <li>
+          Vie privée
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r1a:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://github.com/SocialGouv/thirdparties"
+      id="fr-button-:r1b:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1c:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Wappalyzer
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1d:"
+      >
+        technologies
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Wappalyzer reconnait +1500 technologies web, Javascript, CMS, outillage...
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Stack technique
+        </li>
+        
+
+        <li>
+          Obsolescence
+        </li>
+        
+
+        <li>
+          Parc
+        </li>
+        
+
+      </ul>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.wappalyzer.com/"
+      id="fr-button-:r1e:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1f:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Statistiques
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1g:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Vérifie si la page /stats existe
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1h:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Vulnérabilités Trivy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1i:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Trivy permet de scanner les containers docker à la recherche de vulnérabilités connues.
+      </p>
+      
+
+      <p>
+        Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.) mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r1j:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Vous devez saisir les urls des images à scanner dans le champ 
+            <code>
+              docker
+            </code>
+             de votre url dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://aquasecurity.github.io/trivy/"
+      id="fr-button-:r1k:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1l:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Score eco-index
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1m:"
+      >
+        ecoconception
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        EcoIndex green-it est un outil communautaire, gratuit et transparent qui, pour une URL donnée, permet d’évaluer :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          sa performance environnementale absolue à l’aide d’un score sur 100 (higher is better)
+        </li>
+        
+
+        <li>
+          sa performance environnementale relative à l’aide d’une note de A à G
+        </li>
+        
+
+        <li>
+          l’empreinte technique de la page (poids, complexité, etc.)
+        </li>
+        
+
+        <li>
+          l’empreinte environnementale associée (gaz à effet de serre et eau)
+        </li>
+        
+
+      </ul>
+      
+
+      <p>
+        L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre conscience de l’impact environnemental de l’internet.
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.ecoindex.fr/comment-ca-marche/"
+      id="fr-button-:r1n:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1o:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Score SonarCloud
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1p:"
+      >
+        quality
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1q:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        SonarCloud permet d'analyser le code source des repositories et de détecter des bugs, vulnérabilités, duplications et autres indicateurs de qualité.
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://sonarcloud.io/"
+      id="fr-button-:r1r:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1s:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection du système de design de l'état
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r1t:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection du 
+        <a
+          href="https://www.systeme-de-design.gouv.fr/"
+        >
+          système de design de l'état
+        </a>
+         avec la balise 
+        <code>
+          fr-header__brand
+        </code>
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.systeme-de-design.gouv.fr/"
+      id="fr-button-:r1u:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1v:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection de la déclaration d'accessibilité
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r20:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection de la mention de déclaration d'accessibilité et de la page liée.
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r21:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection des mentions RGPD
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r22:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection des pages de mentions légales et politique de confidentialité
+      </p>
+      <br />
+       
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Tools config > Should render Intro with limited tools 1`] = `
+<div>
+  <div
+    class="fr-callout fr-mb-3w"
+    id="fr-callout-:r23:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      DashLord compile les données techniques issues de différents outils open-source.
+      <br />
+      Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
+      <br />
+      Vous pouvez
+       
+      <a
+        href="https://github.com/socialgouv/dashlord/issues/new"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        soumettre de nouvelles URLs, proposer des corrections
+      </a>
+       
+      ou
+       
+      <a
+        href="https://github.com/orgs/SocialGouv/projects/13"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        consulter la roadmap
+      </a>
+      .
+      <br />
+      <br />
+      <button
+        class="fr-btn"
+        id="fr-button-:r24:"
+      >
+        <a
+          href="/"
+        >
+          Accéder au tableau de bord
+        </a>
+      </button>
+       
+    </p>
+  </div>
+  <h2>
+    Les outils utilisés dans DashLord
+  </h2>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r25:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Erreurs 404
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r26:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détecte les erreurs 404 sur un site web.
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r27:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Google LightHouse
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r28:"
+      >
+        accessibility
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r29:"
+      >
+        best-practices
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2a:"
+      >
+        seo
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2b:"
+      >
+        performance
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Permet un audit automatique de page web :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Performances de chargement
+        </li>
+        
+
+        <li>
+          Bonnes pratiques SEO (référencement)
+        </li>
+        
+
+        <li>
+          Bonnes pratiques accessibilité (moteur Axe)
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r2c:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Les mesures de performance sont un instantané, donc pas forcément représentatives.
+          </p>
+          
+
+          <p>
+            Les mesures d'accessibilité n'abordent pas du tout 
+            <a
+              href="https://accessibilite.numerique.gouv.fr/"
+            >
+              le RGAA
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r2d:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://developers.google.com/web/tools/lighthouse"
+      id="fr-button-:r2e:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2f:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Dependabot
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2g:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan des vulnérabilités des dépendances sur les dépôts de code GitHub
+      </p>
+      
+
+      <p>
+        cf https://docs.github.com/en/code-security/supply-chain-security/about-alerts-for-vulnerable-dependencies
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r2h:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé Dependabot sur les repositories GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://dependabot.com"
+      id="fr-button-:r2i:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2j:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      CodeQL
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2k:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Recense les potentielles vulnérabilités dans le code source.
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Analyse statique du code sur le dépôt Github du code
+        </li>
+        
+
+        <li>
+          Possibilité de configurer dans le repository
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r2l:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://docs.github.com/en/code-security/secure-coding/about-code-scanning"
+      id="fr-button-:r2m:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2n:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Nmap
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2o:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Nmap scan les vulnérabilités d'une machine (IP) associée à un domaine.
+      </p>
+      
+
+      <p>
+        Scan des ports ouverts avec vulnérabilités grâce au script 
+        <a
+          href="https://nmap.org/nsedoc/scripts/vulners.html"
+        >
+          vulners
+        </a>
+        .
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r2p:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Ce scanner peut exposer des vulnérabilités exploitables.
+          </p>
+        </div>
+      </div>
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r2q:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Nécessite d'avoir activé CodeQL sur les repository GitHub et indiqué le champ 
+            <code>
+              repositories
+            </code>
+             dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://nmap.org"
+      id="fr-button-:r2r:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2s:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      OWASP Zed Attack Proxy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r2t:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan de vulnérabilités passif ZAP OWASP "baseline" qui permet de détecter des risques de sécurité de base.
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r2u:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.zaproxy.org/docs/docker/baseline-scan/"
+      id="fr-button-:r2v:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r30:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      testssl.sh
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r31:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Évalue le niveau de confiance d'un certificat SSL
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Bonnes pratiques de configuration
+        </li>
+        
+
+        <li>
+          Protocoles disponibles
+        </li>
+        
+
+        <li>
+          Compatibilité navigateurs
+        </li>
+        
+
+        <li>
+          Solidité des clés de chiffrement
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r32:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://testssl.sh"
+      id="fr-button-:r33:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r34:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Mozilla HTTP observatory
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r35:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Évalue le niveau de qualité/sécurité de la page web et de son serveur
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Bonnes pratiques de configuration
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+        <li>
+          Solidité des clés de chiffrement
+        </li>
+        
+
+      </ul>
+      
+
+      <p>
+        Voir la 
+        <a
+          href="https://github.com/mozilla/http-observatory/blob/master/httpobs/docs/scoring.md"
+        >
+          méthodologie
+        </a>
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://observatory.mozilla.org/"
+      id="fr-button-:r36:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r37:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Nucléi
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r38:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détecte plus de 700 erreurs de configuration courantes sur les
+applications webs.
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Sécurité
+        </li>
+        
+
+        <li>
+          Bonnes pratiques web
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r39:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Ce teste peut prendre de 5 à 10 minutes par URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://nuclei.projectdiscovery.io/"
+      id="fr-button-:r3a:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3b:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Third-parties (scripts externes)
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3c:"
+      >
+        privacy
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Liste tous les scripts externes chargés par une URL et qui peuvent avoir un impact sur :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Performances web
+        </li>
+        
+
+        <li>
+          Sécurité
+        </li>
+        
+
+        <li>
+          Vie privée
+        </li>
+        
+
+      </ul>
+      <br />
+      <div
+        class="fr-alert fr-alert--warning fr-mb-3w"
+        id="fr-alert-:r3d:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Certains script légitimes peuvent apparaitre dans cette catégorie s'ils sont hébergés sur d'autres serveurs
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://github.com/SocialGouv/thirdparties"
+      id="fr-button-:r3e:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3f:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Wappalyzer
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3g:"
+      >
+        technologies
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Wappalyzer reconnait +1500 technologies web, Javascript, CMS, outillage...
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          Stack technique
+        </li>
+        
+
+        <li>
+          Obsolescence
+        </li>
+        
+
+        <li>
+          Parc
+        </li>
+        
+
+      </ul>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.wappalyzer.com/"
+      id="fr-button-:r3h:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3i:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Statistiques
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3j:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Vérifie si la page /stats existe
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3k:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Vulnérabilités Trivy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3l:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Trivy permet de scanner les containers docker à la recherche de vulnérabilités connues.
+      </p>
+      
+
+      <p>
+        Trivy détecte les vulnérabilités niveau OS (Alpine, RHEL, CentOS, etc.) mais aussi niveau packages (Bundler, Composer, npm, yarn, etc.).
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r3m:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            Vous devez saisir les urls des images à scanner dans le champ 
+            <code>
+              docker
+            </code>
+             de votre url dans 
+            <code>
+              dashlord.yaml
+            </code>
+            .
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://aquasecurity.github.io/trivy/"
+      id="fr-button-:r3n:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3o:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Score eco-index
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3p:"
+      >
+        ecoconception
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        EcoIndex green-it est un outil communautaire, gratuit et transparent qui, pour une URL donnée, permet d’évaluer :
+      </p>
+      
+
+      <ul>
+        
+
+        <li>
+          sa performance environnementale absolue à l’aide d’un score sur 100 (higher is better)
+        </li>
+        
+
+        <li>
+          sa performance environnementale relative à l’aide d’une note de A à G
+        </li>
+        
+
+        <li>
+          l’empreinte technique de la page (poids, complexité, etc.)
+        </li>
+        
+
+        <li>
+          l’empreinte environnementale associée (gaz à effet de serre et eau)
+        </li>
+        
+
+      </ul>
+      
+
+      <p>
+        L’objectif d’EcoIndex est d’aider le plus grand nombre à prendre conscience de l’impact environnemental de l’internet.
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.ecoindex.fr/comment-ca-marche/"
+      id="fr-button-:r3q:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3r:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Score SonarCloud
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3s:"
+      >
+        quality
+      </p>
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3t:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        SonarCloud permet d'analyser le code source des repositories et de détecter des bugs, vulnérabilités, duplications et autres indicateurs de qualité.
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://sonarcloud.io/"
+      id="fr-button-:r3u:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r3v:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection du système de design de l'état
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r40:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection du 
+        <a
+          href="https://www.systeme-de-design.gouv.fr/"
+        >
+          système de design de l'état
+        </a>
+         avec la balise 
+        <code>
+          fr-header__brand
+        </code>
+      </p>
+      <br />
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.systeme-de-design.gouv.fr/"
+      id="fr-button-:r41:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r42:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection de la déclaration d'accessibilité
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r43:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection de la mention de déclaration d'accessibilité et de la page liée.
+      </p>
+      <br />
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r44:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      Détection des mentions RGPD
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r45:"
+      >
+        standards-betagouv
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Détection des pages de mentions légales et politique de confidentialité
+      </p>
+      <br />
+       
+    </p>
+  </div>
+</div>
+`;

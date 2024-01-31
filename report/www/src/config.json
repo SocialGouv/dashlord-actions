@@ -1,12 +1,20 @@
 {
-  "title": "DashLord beta.gouv.fr",
+  "$schema": "https://raw.githubusercontent.com/socialgouv/dashlord/main/schema.json",
+  "title": "DashLord Fabrique des ministères sociaux",
   "description": "Bonnes pratiques techniques",
-  "entity": "République Française",
-  "footer": "Powered by BetaGouv",
+  "entity": "Ministères sociaux",
+  "footer": "Un produit de la fabrique numérique des ministères sociaux, de la communauté beta.gouv.fr",
   "marianne": true,
-  "matomoId": 234,
-  "matomoUrl": "https://stats.data.gouv.fr",
+  "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
+  "matomoId": 62,
+  "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
+  "operator": {
+    "logo": "https://raw.githubusercontent.com/incubateur-ademe/.github/main/ademe-logo-2022-1.svg",
+    "name": "Fabrique des ministères sociaux"
+  },
+  "updownioStatusPage": "https://updown.io/p/8c6x8",
   "tools": {
+    "404": true,
     "screenshot": true,
     "lighthouse": true,
     "testssl": true,
@@ -19,761 +27,36 @@
     "updownio": true,
     "http": true,
     "nmap": true,
-    "declaration-a11y": true,
-    "declaration-rgpd": true,
     "stats": true,
     "trivy": true,
-    "budget_page": true,
-    "dsfr": true,
-    "ecoindex": true,
+    "declaration-a11y": true,
+    "declaration-rgpd": true,
     "betagouv": true,
-    "github_repository": true,
+    "ecoindex": true,
     "sonarcloud": true,
-    "404": true
+    "dsfr": true,
+    "budget_page": true,
+    "github_repository": true
   },
   "urls": [
     {
-      "url": "https://domifa.fabrique.social.gouv.fr",
-      "category": "sgmas",
-      "betaId": "domifa",
-      "repositories": ["socialgouv/domifa"]
-    },
-    {
-      "url": "https://annuaire-entreprises.data.gouv.fr",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "annuaire-entreprises",
-      "repositories": ["etalab/annuaire-entreprises-site"]
-    },
-    {
-      "url": "https://acceslibre.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "acceslibre"
-    },
-    {
-      "url": "https://aidantsconnect.beta.gouv.fr",
-      "category": "anct",
-      "betaId": "aidantsconnect"
-    },
-    {
-      "url": "https://aides-territoires.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "aides-territoires"
-    },
-    {
-      "url": "https://aplus.beta.gouv.fr",
-      "category": "anct",
-      "repositories": ["betagouv/aplus"],
-      "betaId": "aplus"
-    },
-    {
-      "url": "https://app.pix.fr",
-      "category": "dinum",
-      "betaId": "pix"
-    },
-    {
-      "url": "https://audioconf.numerique.gouv.fr",
-      "category": "dinum"
-    },
-    {
-      "url": "https://beta.gouv.fr",
-      "category": "betagouv"
-    },
-    {
-      "url": "https://blog.beta.gouv.fr",
-      "category": "betagouv"
-    },
-    {
-      "url": "https://camino.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "camino"
-    },
-    {
-      "url": "https://carbure.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "carbure"
-    },
-    {
-      "url": "https://cartobio.agencebio.org",
-      "category": "dinum",
-      "betaId": "cartobio",
-      "repositories": ["AgenceBio/cartobio-api", "AgenceBio/cartobio-front"],
-      "tags": ["agriculture"]
-    },
-    {
-      "url": "https://catalogue.apprentissage.beta.gouv.fr",
-      "category": "mission-apprentissage",
-      "betaId": "catalogue-apprentissage",
-      "tags": ["apprentissage"]
-    },
-    {
-      "url": "https://connect.inclusion.beta.gouv.fr",
-      "betaId": "inclusion.connect",
-      "category": "gip-inclusion"
-    },
-    {
-      "url": "https://contrat.apprentissage.beta.gouv.fr",
-      "betaId": "dematapprentissage",
-      "category": "mission-apprentissage",
-      "tags": ["apprentissage"]
-    },
-    {
-      "url": "https://chauffage-urbain.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "chauffage-urbain"
-    },
-    {
-      "url": "https://classe-a-12.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "classe-a-12"
-    },
-    {
-      "url": "https://competencevalidee.pole-emploi.fr",
-      "category": "pole-emploi",
-      "betaId": "competence.validee"
-    },
-    {
-      "url": "https://communaute.inclusion.beta.gouv.fr",
-      "category": "gip-inclusion",
-      "tags": ["itou"],
-      "betaId": "la.communaute.de.linclusion"
-    },
-    {
-      "url": "https://covoiturage.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "preuve-de-covoiturage"
-    },
-    {
-      "url": "https://app.covoiturage.beta.gouv.fr/login",
-      "category": "mtes",
-      "betaId": "preuve-de-covoiturage"
-    },
-    {
-      "url": "https://datapass.api.gouv.fr",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "datapass",
-      "repositories": ["betagouv/datapass"]
-    },
-    {
-      "url": "https://deveco.incubateur.anct.gouv.fr",
-      "title": "Deveco (prod)",
-      "category": "anct",
-      "betaId": "deveco",
-      "tags": ["deveco", "prod"]
-    },
-    {
-      "url": "https://dossierfacile.fr",
-      "category": "mtes",
-      "betaId": "locatio"
-    },
-    {
-      "url": "https://emplois.inclusion.beta.gouv.fr",
-      "tags": ["itou"],
-      "category": "gip-inclusion",
-      "betaId": "itou"
-    },
-    {
-      "url": "https://entreprise.api.gouv.fr",
-      "title": "API Entreprise",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "api-entreprise",
-      "tags": ["api"],
-      "repositories": [
-        "etalab/admin_api_entreprise",
-        "etalab/entreprise.api.gouv.fr"
-      ]
-    },
-    {
-      "url": "https://eva.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "eva"
-    },
-    {
-      "url": "https://forum.inclusion.beta.gouv.fr",
-      "tags": ["itou"],
-      "category": "gip-inclusion",
-      "betaId": "la.communaute.de.linclusion"
-    },
-    {
-      "url": "https://histologe.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "histologe"
-    },
-    {
-      "url": "https://immersion-facile.beta.gouv.fr",
-      "category": "gip-inclusion",
-      "betaId": "l-immersion-facile"
-    },
-    {
-      "url": "https://portail-rse.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "portail-rse"
-    },
-    {
-      "url": "https://impactco2.fr",
-      "category": "ademe",
-      "betaId": "impact.co2",
-      "tags": ["production", "ADEME"],
-      "repositories": ["incubateur-ademe/impactco2"]
-    },
-    {
-      "url": "https://lemarche.inclusion.beta.gouv.fr",
-      "tags": ["itou"],
-      "category": "gip-inclusion",
-      "betaId": "place-de-marche-inclusion"
-    },
-    {
-      "url": "https://ma-cantine.agriculture.gouv.fr",
-      "category": "dinum",
-      "betaId": "ma-cantine-egalim"
-    },
-    {
-      "url": "https://mediature.beta.gouv.fr",
-      "title": "Médiature (prod)",
-      "category": "anct",
-      "betaId": "mediature",
-      "repositories": ["inclusion-numerique/mediature"],
-      "tags": ["mediature", "app", "production"]
-    },
-    {
-      "url": "https://mediature.incubateur.net",
-      "title": "Médiature (préprod)",
-      "category": "anct",
-      "betaId": "mediature",
-      "repositories": ["inclusion-numerique/mediature"],
-      "tags": ["mediature", "app", "staging"]
-    },
-    {
-      "url": "https://mesevenementsemploi.pole-emploi.fr",
-      "category": "pole-emploi",
-      "betaId": "mes-evenements-emploi"
-    },
-    {
-      "url": "https://mobilic.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "mobilic"
-    },
-    {
-      "url": "https://app.moncomptepro.beta.gouv.fr",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "moncomptepro",
-      "repositories": ["betagouv/moncomptepro"]
-    },
-    {
-      "url": "https://mon-entreprise.urssaf.fr",
-      "category": "dinum",
-      "repositories": ["betagouv/mon-entreprise"],
-      "betaId": "mon-entreprise"
-    },
-    {
-      "url": "https://mrs.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "mrs"
-    },
-    {
-      "url": "https://nosgestesclimat.fr",
-      "category": "ademe",
-      "betaId": "nosgestesclimat",
-      "tags": ["production", "ADEME"],
-      "repositories": [
-        "incubateur-ademe/nosgestesclimat-site-nextjs",
-        "incubateur-ademe/nosgestesclimat"
-      ]
-    },
-    {
-      "url": "https://longuevieauxobjets.ademe.fr",
-      "category": "ademe",
-      "betaId": "longuevieauxobjets",
-      "tags": ["production", "ADEME"],
-      "repositories": ["incubateur-ademe/longuevieauxobjets"]
-    },
-    {
-      "url": "https://openfisca.mes-aides.1jeune1solution.beta.gouv.fr",
-      "category": "startup"
-    },
-    {
-      "url": "https://pad.incubateur.net",
-      "category": "betagouv"
-    },
-    {
-      "url": "https://partaj.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "partaj"
-    },
-    {
-      "url": "https://passculture.app",
-      "category": "dinum",
-      "repositories": ["pass-culture/pass-culture-app-native"],
-      "betaId": "pass-culture"
-    },
-    {
-      "url": "https://backend.passculture.pro",
-      "category": "dinum",
-      "repositories": ["pass-culture/pass-culture-main"],
-      "betaId": "pass-culture"
-    },
-    {
-      "url": "https://passculture.pro",
-      "category": "dinum",
-      "repositories": ["pass-culture/pass-culture-main"],
-      "betaId": "pass-culture"
-    },
-    {
-      "url": "https://pilotage.inclusion.beta.gouv.fr",
-      "tags": ["itou"],
-      "category": "gip-inclusion",
-      "betaId": "pilotage.de.linclusion"
-    },
-    {
-      "url": "https://pix.fr",
-      "category": "dinum",
-      "betaId": "pix"
-    },
-    {
-      "url": "https://place-des-entreprises.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "place-des-entreprises"
-    },
-    {
-      "url": "https://plusfraichemaville.fr",
-      "category": "startup",
-      "betaId": "rafraichir.les.villes",
-      "tags": ["production", "ADEME"]
-    },
-    {
-      "url": "https://mission-transition-ecologique.beta.gouv.fr",
-      "category": "ademe",
-      "betaId": "transition-ecologique-des-entreprises",
-      "tags": ["production", "ADEME"],
-      "repositories": ["betagouv/transition-ecologique-entreprises-widget"],
-      "pages": ["/annuaire"]
-    },
-    {
-      "url": "https://potentiel.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "potentiel"
-    },
-    {
-      "url": "https://recosante.beta.gouv.fr",
-      "category": "sgmas",
-      "betaId": "recosante"
-    },
-    {
-      "url": "https://resorption-bidonvilles.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "resorption-bidonvilles"
-    },
-    {
-      "url": "https://santepsy.etudiant.gouv.fr",
-      "category": "dinum",
-      "betaId": "sante-psy-etudiant"
-    },
-    {
-      "url": "https://espace-membre.incubateur.net",
-      "category": "betagouv"
-    },
-    {
-      "url": "https://trackdechets.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "trackdechets"
-    },
-    {
-      "url": "https://transport.data.gouv.fr",
-      "category": "mtes",
-      "betaId": "transport"
-    },
-    {
-      "url": "https://webinaire.numerique.gouv.fr",
-      "category": "dinum"
-    },
-    {
-      "url": "https://www.rdv-solidarites.fr",
-      "category": "anct",
-      "betaId": "rdv-service-public"
-    },
-    {
-      "url": "https://osmose.numerique.gouv.fr",
-      "category": "dinum"
-    },
-    {
-      "url": "https://www.data.gouv.fr",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "data.gouv.fr"
-    },
-    {
-      "url": "https://anais.beta.gouv.fr",
-      "category": "fabnumdef",
-      "betaId": "anais"
-    },
-    {
-      "url": "https://www.demarches-simplifiees.fr",
-      "repositories": ["betagouv/demarches-simplifiees.fr"],
-      "category": "dinum_produits_interministeriels",
-      "betaId": "demarches-simplifiees.fr"
-    },
-    {
-      "url": "https://www.snu.gouv.fr",
-      "category": "engagement_civique",
-      "betaId": "snu"
-    },
-    {
-      "url": "https://moncompte.snu.gouv.fr",
-      "category": "engagement_civique",
-      "betaId": "snu"
-    },
-    {
-      "url": "https://admin.snu.gouv.fr",
-      "category": "engagement_civique",
-      "betaId": "snu"
-    },
-    {
-      "url": "https://www.jeveuxaider.gouv.fr",
-      "category": "engagement_civique",
-      "betaId": "jeveuxaider"
-    },
-    {
-      "url": "https://www.monstagedetroisieme.fr",
-      "category": "anct",
-      "betaId": "monstage"
-    },
-    {
-      "url": "https://civilsdeladefense.fabnum.fr/",
-      "repositories": ["betagouv/civilsdeladefense"],
-      "category": "fabnumdef",
-      "betaId": "civils-de-la-defense"
-    },
-    {
-      "url": "https://echauffeur.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "e-chauffeur"
-    },
-    {
-      "url": "https://sepia.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "sepia"
-    },
-    {
-      "url": "https://sepia.defense.gouv.fr/",
-      "category": "fabnumdef",
-      "betaId": "sepia"
-    },
-    {
-      "url": "https://talents.ssi.gouv.fr/",
-      "category": "fabnum"
-    },
-    {
-      "url": "https://metiis.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "metiis"
-    },
-    {
-      "url": "https://stargate.igloo.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "stargate"
-    },
-    {
-      "url": "https://chatbot.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "usine-chatbots"
-    },
-    {
-      "url": "https://cassiopee.igloo.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "cassiopee"
-    },
-    {
-      "url": "https://cassiopee.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "cassiopee"
-    },
-    {
-      "url": "https://mes-adresses.data.gouv.fr/",
-      "category": "fab-geocommuns",
-      "betaId": "ban"
-    },
-    {
-      "url": "https://adresse.data.gouv.fr/",
-      "category": "fab-geocommuns",
-      "betaId": "ban"
-    },
-    {
-      "url": "https://my.fabnum.fr/",
-      "category": "fabnum"
-    },
-    {
-      "url": "https://octopus.igloo.fabnum.fr/",
-      "category": "fabnumdef",
-      "betaId": "octopus"
-    },
-    {
-      "url": "https://inclusion.beta.gouv.fr/",
-      "tags": ["itou"],
-      "category": "gip-inclusion",
-      "betaId": "itou"
-    },
-    {
-      "url": "https://dora.incubateur.net",
-      "title": "Frontend DORA (préprod)",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-front"],
-      "tags": ["dora", "staging"],
-      "tools": {
-        "stats": false
-      },
-      "betaId": "dora"
-    },
-    {
-      "url": "https://dora.fabrique.social.gouv.fr",
-      "title": "Frontend DORA",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-front"],
-      "tags": ["dora", "production"],
-      "betaId": "dora"
-    },
-    {
-      "url": "https://app.eva.beta.gouv.fr",
-      "category": "dinum",
-      "repositories": ["betagouv/eva"],
-      "betaId": "eva"
-    },
-    {
-      "url": "https://disinfo.quaidorsay.fr",
-      "category": "latelier.numerique.du.ministere.de.leurope.et.des.affaires.etrangeres",
-      "betaId": "disinfo"
-    },
-    {
-      "url": "https://opentermsarchive.org",
-      "category": "latelier.numerique.du.ministere.de.leurope.et.des.affaires.etrangeres",
-      "betaId": "open-terms-archive"
-    },
-    {
-      "url": "https://open-collectivites.fr"
-    },
-    {
-      "url": "https://mon-suivi-justice.beta.gouv.fr",
-      "category": "startup",
-      "repositories": ["betagouv/mon-suivi-justice"],
-      "betaId": "justif"
-    },
-    {
-      "url": "https://ellesfontlaculture.beta.gouv.fr",
-      "category": "culture",
-      "betaId": "ellesfontlaculture"
-    },
-    {
-      "url": "https://moana.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "sndv_maritime"
-    },
-    {
-      "url": "https://collectif-objets.beta.gouv.fr",
-      "category": "culture",
-      "repositories": ["betagouv/collectif-objets"],
-      "betaId": "collectif_objets"
-    },
-    {
-      "url": "https://rdv-insertion.fr",
-      "category": "startup",
-      "repositories": ["betagouv/rdv-insertion"],
-      "betaId": "data.insertion"
-    },
-    {
-      "url": "https://territoiresentransitions.fr",
-      "category": "ademe",
-      "betaId": "territoires-en-transitions",
-      "tags": ["homepage", "production", "ADEME"],
-      "repositories": ["betagouv/territoires-en-transitions"]
-    },
-    {
-      "url": "https://app.territoiresentransitions.fr",
-      "category": "ademe",
-      "betaId": "territoires-en-transitions",
-      "tags": ["app", "production", "ADEME"],
-      "repositories": ["betagouv/territoires-en-transitions"]
-    },
-    {
-      "url": "https://candidat.pole-emploi.fr/simucalculreprise",
-      "category": "pole-emploi",
-      "betaId": "estime"
-    },
-    {
-      "url": "https://candidat.pole-emploi.fr/simulation-ressources-formation",
-      "category": "pole-emploi",
-      "betaId": "estime.formation"
-    },
-    {
-      "url": "https://mobiville.pole-emploi.fr",
-      "category": "pole-emploi",
-      "betaId": "mobiville"
-    },
-    {
-      "url": "https://www.monservicesecurise.ssi.gouv.fr",
-      "category": "lab-innov-anssi",
-      "betaId": "homologation",
-      "repositories": ["betagouv/mon-service-securise"]
-    },
-    {
-      "url": "https://sparte.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "sparte",
-      "tags": ["app", "production"],
-      "repositories": ["MTES-MCT/sparte"]
-    },
-    {
-      "url": "https://signaux-faibles.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "signaux-faibles",
-      "tags": ["app", "production"],
-      "repositories": ["signaux-faibles/signauxfaibles-web"]
-    },
-    {
-      "url": "https://zerologementvacant.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "zero-logement-vacant",
-      "repositories": ["MTES-MCT/zero-logement-vacant"]
-    },
-    {
-      "url": "https://labonnealternance.apprentissage.beta.gouv.fr",
-      "category": "mission-apprentissage",
-      "betaId": "la-bonne-alternance",
-      "repositories": ["mission-apprentissage/labonnealternance"]
-    },
-    {
-      "url": "https://labonneboite.pole-emploi.fr",
-      "category": "pole-emploi",
-      "betaId": "la-bonne-boite"
-    },
-    {
-      "url": "https://cfas.apprentissage.beta.gouv.fr",
-      "category": "mission-apprentissage",
-      "betaId": "tdb-apprentissage",
-      "repositories": ["mission-apprentissage/flux-retour-cfas"]
-    },
-    {
-      "url": "https://conseil-refondation.fr",
-      "category": "dinum",
-      "betaId": "cnr",
-      "repositories": ["betagouv/CNR"],
-      "tags": ["production"]
-    },
-    {
-      "url": "https://donnees.incubateur.anct.gouv.fr",
-      "category": "anct",
-      "betaId": "données-et-territoires"
-    },
-    {
-      "url": "https://mes-aides.pole-emploi.fr",
-      "category": "pole-emploi",
-      "betaId": "mes.aides"
-    },
-    {
-      "url": "https://mon.franceconnect.gouv.fr",
-      "category": "startup"
-    },
-    {
-      "url": "https://mfc-web-dev.osc-secnum-fr1.scalingo.io",
-      "category": "startup"
-    },
-    {
-      "url": "https://collectivite.fr",
-      "category": "startup",
-      "repositories": [
-        "https://gitlab.com/incubateur-territoires/startups/annuaire-des-collectivites"
-      ],
-      "tags": ["production", "annuaire-collectivites", "anct"]
-    },
-    {
-      "url": "https://marcenais-33620.collectivite.fr",
-      "category": "startup",
-      "repositories": [
-        "https://gitlab.com/incubateur-territoires/startups/annuaire-des-collectivites"
-      ],
-      "tags": ["production", "annuaire-collectivites", "anct"]
-    },
-    {
-      "url": "https://a-just.beta.gouv.fr",
-      "category": "justice",
-      "betaId": "a-just"
-    },
-    {
-      "url": "https://dotations.incubateur.anct.gouv.fr",
-      "category": "anct",
-      "betaId": "dotations-locales",
-      "repositories": [
-        "https://gitlab.com/incubateur-territoires/startups/dotations-locales"
-      ],
-      "tags": ["anct", "dotations-locales", "production"]
-    },
-    {
-      "url": "https://front-datasubvention-preprod.osc-secnum-fr1.scalingo.io",
-      "title": "Frontend data-subvention (préprod)",
-      "category": "dinum",
-      "repositories": ["betagouv/api-subventions-asso"],
-      "tags": ["data-subvention", "staging"],
-      "betaId": "data-subvention"
-    },
-    {
-      "url": "https://app.datasubvention.beta.gouv.fr",
-      "title": "Frontend data-subvention",
-      "category": "dinum",
-      "repositories": ["betagouv/api-subventions-asso"],
-      "tags": ["data-subvention", "production"],
-      "betaId": "data-subvention"
-    },
-    {
-      "url": "https://datasubvention.beta.gouv.fr",
-      "title": "Landing page data-subvention",
-      "category": "dinum",
-      "repositories": ["betagouv/api-subventions-asso"],
-      "tags": ["data-subvention"],
-      "betaId": "data-subvention"
-    },
-    {
-      "url": "https://cje.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "pass.engagement.jeune"
-    },
-    {
-      "url": "https://aplypro.beta.gouv.fr",
-      "category": "dinum",
-      "betaId": "valorisation.des.stages.pro"
-    },
-    {
-      "url": "https://anssi-mac-prod.osc-secnum-fr1.scalingo.io/",
-      "category": "lab-innov-anssi",
-      "betaId": "MonAideCyber"
-    },
-    {
-      "url": "https://vae.gouv.fr",
-      "category": "sgmas",
-      "betaId": "reva"
-    },
-    {
-      "url": "https://selexpert.anje-justice.fr",
-      "category": "justice",
-      "betaId": "experts"
-    },
-    {
-      "url": "https://element.preprod.eimis.incubateur.net/",
-      "category": "dinum_produits_interministeriels",
-      "repositories": ["eimis-ans/eimis-synapse"],
-      "tags": ["staging", "ans"],
-      "betaId": "eimis"
-    },
-    {
-      "url": "https://world.openfoodfacts.org/",
-      "category": "startup"
-    },
-    {
       "url": "https://api.gouv.fr",
-      "category": "dinum_produits_interministeriels",
-      "betaId": "api.gouv.fr",
-      "repositories": ["betagouv/api.gouv.fr"]
+      "category": "beta",
+      "tools": {
+        "lighthouse": false,
+        "thirdparties": false,
+        "declaration-rgpd": false,
+        "declaration-a11y": false,
+        "stats": false,
+        "budget_page": false,
+        "dsfr": false,
+        "ecoindex": false,
+        "screenshot": false
+      }
     },
     {
       "url": "https://api.trackdechets.beta.gouv.fr",
-      "category": "mtes",
-      "betaId": "trackdechets",
-      "tags": ["api"],
+      "category": "beta",
       "tools": {
         "lighthouse": false,
         "thirdparties": false,
@@ -787,135 +70,237 @@
       }
     },
     {
-      "url": "https://api.dora.incubateur.net/ping/",
-      "title": "Backend DORA (préprod)",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-back"],
-      "tags": ["dora", "staging", "api"],
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      },
-      "betaId": "dora"
+      "url": "https://annuaire-entreprises.data.gouv.fr",
+      "category": "beta"
     },
     {
-      "url": "https://api.dora.fabrique.social.gouv.fr/ping/",
-      "title": "Backend DORA",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-back"],
-      "tags": ["dora", "production", "api"],
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false
-      },
-      "betaId": "dora"
+      "url": "https://acceslibre.beta.gouv.fr",
+      "category": "beta"
     },
     {
-      "url": "https://pdf.dora.incubateur.net/ping",
-      "title": "Générateur de PDFs DORA (préprod)",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-pdf"],
-      "tags": ["dora", "staging", "api"],
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      },
-      "betaId": "dora"
+      "url": "https://aidantsconnect.beta.gouv.fr",
+      "category": "beta"
     },
     {
-      "url": "https://pdf.dora.fabrique.social.gouv.fr/ping",
-      "title": "Générateur de PDFs DORA",
-      "category": "gip-inclusion",
-      "repositories": ["betagouv/dora-pdf"],
-      "tags": ["dora", "production", "api"],
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      },
-      "betaId": "dora"
+      "url": "https://archifiltre.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "title": "Titre secondaire",
+      "betaId": "archifiltre",
+      "tags": ["unknown"],
+      "repositories": [
+        "socialgouv/archifiltre-docs",
+        "socialgouv/archifiltre-mails",
+        "socialgouv/archifiltre-site",
+        "socialgouv/archifiltre-site-v2",
+        "socialgouv/archifiltre-statistics"
+      ]
     },
     {
-      "url": "https://api.app.eva.beta.gouv.fr",
-      "category": "dinum",
-      "repositories": ["betagouv/eva-serveur"],
-      "betaId": "eva",
-      "tags": ["api"],
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      }
+      "url": "https://index-egapro.travail.gouv.fr",
+      "betaId": "egalite.professionnelle",
+      "category": "fabrique",
+      "tags": ["travail"],
+      "repositories": [
+        "socialgouv/egapro",
+        "socialgouv/egapro-api",
+        "socialgouv/egapro-next"
+      ]
     },
     {
-      "url": "https://api-datasubvention-preprod.osc-secnum-fr1.scalingo.io",
-      "title": "Backend data-subvention (préprod)",
-      "category": "dinum",
-      "repositories": ["betagouv/api-subventions-asso"],
-      "tags": ["data-subvention", "staging", "api"],
-      "betaId": "data-subvention",
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      }
+      "url": "https://index-egapro.travail.gouv.fr/consulter-index",
+      "betaId": "egalite.professionnelle",
+      "category": "fabrique",
+      "tags": ["travail"],
+      "repositories": ["socialgouv/egapro-declaration"]
     },
     {
-      "url": "http://api.datasubvention.beta.gouv.fr",
-      "title": "Backend data-subvention",
-      "category": "dinum",
-      "repositories": ["betagouv/api-subventions-asso"],
-      "tags": ["data-subvention", "production", "api"],
-      "betaId": "data-subvention",
-      "tools": {
-        "lighthouse": false,
-        "thirdparties": false,
-        "declaration-rgpd": false,
-        "declaration-a11y": false,
-        "stats": false,
-        "budget_page": false,
-        "dsfr": false,
-        "ecoindex": false,
-        "screenshot": false
-      }
+      "url": "https://code.travail.gouv.fr",
+      "betaId": "codedutravail",
+      "category": "fabrique",
+      "tags": ["travail"],
+      "repositories": [
+        "socialgouv/code-du-travail-numerique",
+        "socialgouv/cdtn-admin"
+      ],
+      "docker": [
+        "ghcr.io/socialgouv/cdtn/code-du-travail-api",
+        "ghcr.io/socialgouv/cdtn/code-du-travail-frontend"
+      ]
+    },
+    {
+      "url": "https://domifa.fabrique.social.gouv.fr",
+      "betaId": "domifa",
+      "category": "fabrique",
+      "tags": ["social"],
+      "repositories": ["socialgouv/domifa"],
+      "docker": [
+        "ghcr.io/socialgouv/domifa/frontend",
+        "ghcr.io/socialgouv/domifa/backend"
+      ]
+    },
+    {
+      "url": "https://emjpm.fabrique.social.gouv.fr",
+      "betaId": "e-mjpm",
+      "category": "fabrique",
+      "tags": ["social"],
+      "repositories": ["socialgouv/emjpm"]
+    },
+    {
+      "url": "https://www.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "tags": ["social", "sante", "travail"],
+      "repositories": ["socialgouv/www"],
+      "docker": ["ghcr.io/socialgouv/www/app"]
+    },
+    {
+      "url": "https://monsuivipsy.fabrique.social.gouv.fr",
+      "betaId": "monsuivipsy",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/monsuivipsy", "socialgouv/monsuivipsy-site"],
+      "docker": ["ghcr.io/socialgouv/monsuivipsy-site/app"]
+    },
+    {
+      "url": "https://ozensemble.fr",
+      "betaId": "ozensemble",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/ozensemble", "socialgouv/ozensemble-site"],
+      "docker": ["ghcr.io/socialgouv/ozensemble-site/app"]
+    },
+    {
+      "url": "https://pjm.social.gouv.fr",
+      "betaId": "e-mjpm",
+      "category": "fabrique",
+      "tags": ["social"],
+      "repositories": ["socialgouv/emjpm-portail"],
+      "docker": ["ghcr.io/socialgouv/emjpm-portail/app"]
+    },
+    {
+      "url": "https://tumeplay.fabrique.social.gouv.fr",
+      "betaId": "tumeplay",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/tumeplay"],
+      "docker": [
+        "ghcr.io/socialgouv/tumeplay/backend",
+        "ghcr.io/socialgouv/tumeplay/frontend-guyane",
+        "ghcr.io/socialgouv/tumeplay/frontend-metropole",
+        "ghcr.io/socialgouv/tumeplay/dashboard",
+        "ghcr.io/socialgouv/tumeplay/tumeplay-app-guyane",
+        "ghcr.io/socialgouv/tumeplay/tumeplay-app-metropole",
+        "ghcr.io/socialgouv/tumeplay/tumeplay-strapi"
+      ]
+    },
+    {
+      "url": "https://www.psyenfantado.sante.gouv.fr",
+      "betaId": "psyenfantado",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["betagouv/psy-enfant-ado"]
+    },
+    {
+      "url": "https://sample-next-app.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "tags": ["demo"],
+      "repositories": ["socialgouv/sample-next-app"],
+      "docker": [
+        "ghcr.io/socialgouv/sample-next-app/app",
+        "ghcr.io/socialgouv/sample-next-app/hasura"
+      ]
+    },
+    {
+      "url": "https://1000jours.fabrique.social.gouv.fr",
+      "betaId": "1000.jours",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/nos1000jours-landing"],
+      "docker": [
+        "ghcr.io/socialgouv/1000jours/strapi",
+        "ghcr.io/socialgouv/les1000jours-landing/app"
+      ]
+    },
+    {
+      "url": "https://1000jours-blues.fabrique.social.gouv.fr",
+      "betaId": "1000.jours",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/nos1000jours-blues"],
+      "docker": ["ghcr.io/socialgouv/1000jours-blues/app"]
+    },
+    {
+      "url": "https://carnet-de-bord.fabrique.social.gouv.fr",
+      "betaId": "carnet.de.bord",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/carnet-de-bord"],
+      "docker": [
+        "ghcr.io/socialgouv/carnet-de-bord/hasura",
+        "ghcr.io/socialgouv/carnet-de-bord/app",
+        "ghcr.io/socialgouv/carnet-de-bord/backend"
+      ]
+    },
+    {
+      "url": "https://enfants-du-spectacle.fabrique.social.gouv.fr",
+      "betaId": "enfants-du-spectacle",
+      "category": "fabrique",
+      "tags": ["social"],
+      "repositories": ["socialgouv/enfants-du-spectacle"],
+      "docker": ["ghcr.io/socialgouv/enfants-du-spectacle/app"]
+    },
+    {
+      "url": "https://mano-app.fabrique.social.gouv.fr",
+      "betaId": "mano",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/mano"],
+      "docker": [
+        "ghcr.io/socialgouv/mano/api",
+        "ghcr.io/socialgouv/mano/website",
+        "ghcr.io/socialgouv/mano/dashboard"
+      ]
+    },
+    {
+      "url": "https://monpsy.sante.gouv.fr",
+      "category": "fabrique",
+      "tags": ["sante"],
+      "repositories": ["socialgouv/mon-psy-sante"],
+      "docker": ["ghcr.io/socialgouv/mon-psy-sante/app"]
+    },
+    {
+      "url": "https://ressourcerie.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "tags": ["ressources"],
+      "repositories": ["socialgouv/ressourcerie"],
+      "docker": ["ghcr.io/socialgouv/ressourcerie/app"]
+    },
+    {
+      "url": "https://transitions-collectives.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "tags": ["travail"],
+      "repositories": ["socialgouv/transitions-collectives"],
+      "docker": ["ghcr.io/socialgouv/transitions-collectives/app"]
+    },
+    {
+      "url": "https://mon-domifa.fabrique.social.gouv.fr",
+      "betaId": "domifa",
+      "category": "social",
+      "tags": ["social"],
+      "docker": ["ghcr.io/socialgouv/domifa/portail-usagers"]
+    },
+    {
+      "url": "https://admin-domifa.fabrique.social.gouv.fr",
+      "betaId": "domifa",
+      "category": "social",
+      "tags": ["social"],
+      "docker": ["ghcr.io/socialgouv/domifa/portail-admins"]
+    },
+    {
+      "url": "https://template.fabrique.social.gouv.fr",
+      "category": "fabrique",
+      "tags": ["sre"],
+      "repositories": ["socialgouv/template"],
+      "docker": ["ghcr.io/socialgouv/template/app"]
     }
   ]
 }

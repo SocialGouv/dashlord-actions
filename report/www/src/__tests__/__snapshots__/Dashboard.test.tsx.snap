@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render empty Dashboard 1`] = `null`;
+
+exports[`Should render full Dashboard 1`] = `
+<div>
+  empty dashboard
+</div>
+`;
+
+exports[`Tools config > Should render Dashboard with limited tools 1`] = `
+<div>
+  empty dashboard
+</div>
+`;

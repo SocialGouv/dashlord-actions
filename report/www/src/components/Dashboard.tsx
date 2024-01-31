@@ -956,23 +956,31 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
   const filterBy = (key) => (item, idx, arr) =>
     !arr.slice(idx + 1).find((r) => item[key] === r[key]);
 
-  const tableData = report.filter(filterBy("url")).map((report) => {
-    return {
-      id: report.url,
-      ...report,
-    };
-  });
+  const tableData =
+    (report &&
+      report.filter(filterBy("url")).map((report) => {
+        return {
+          id: report.url,
+          ...report,
+        };
+      })) ||
+    [];
 
   const ROWS_COUNT = 100;
+
+  const tableProps = {
+    rows: tableData,
+    columns,
+  };
   return (
     (report && (
       <DataGrid
-        rows={tableData}
-        columns={columns}
+        {...tableProps}
         autoHeight={true}
         disableVirtualization
-        rowSelection={false}
         disableColumnMenu={true}
+        disableDensitySelector={true}
+        rowSelection={false}
         hideFooterPagination={false}
         hideFooter={tableData.length < ROWS_COUNT}
         paginationModel={{ page: 0, pageSize: ROWS_COUNT }} // license limitation ;(
