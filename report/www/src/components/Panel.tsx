@@ -21,15 +21,14 @@ export const Panel: React.FC<PanelProps> = ({
 }) => (
   <CallOut
     buttonProps={
-      url && {
+      (url && {
         children: urlText || "En savoir plus",
-        linkProps:
-          (url && {
-            href: url,
-            target,
-          }) ||
-          undefined,
-      }
+        linkProps: {
+          href: url,
+          target,
+        },
+      }) ||
+      undefined
     }
     title={title}
   >
