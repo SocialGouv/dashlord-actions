@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { createNextDsfrIntegrationApi } from "@codegouvfr/react-dsfr/next-pagesdir";
-import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
-import { fr } from "@codegouvfr/react-dsfr";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import Head from "next/head";
+
+import { init } from "@socialgouv/matomo-next";
+
+import { fr } from "@codegouvfr/react-dsfr";
+import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
+import { createNextDsfrIntegrationApi } from "@codegouvfr/react-dsfr/next-pagesdir";
+import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 
 import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";
@@ -12,10 +17,11 @@ import { FooterSite } from "../src/components/FooterSite";
 import dashlordConfig from "@/config.json";
 import report from "@/report.json";
 
-import Head from "next/head";
-
 import "../src/dirty.css";
 import "../src/overrideDSFR.css";
+
+const MATOMO_URL = dashlordConfig.matomoUrl;
+const MATOMO_SITE_ID = dashlordConfig.matomoId;
 
 declare module "@codegouvfr/react-dsfr/next-pagesdir" {
   interface RegisterLink {
@@ -61,6 +67,12 @@ function App({ Component, pageProps }: AppProps) {
     router.asPath.startsWith("/tag/") ||
     router.asPath.startsWith("/category/") ||
     router.asPath.startsWith("/startup/");
+
+  useEffect(() => {
+    if (MATOMO_URL && MATOMO_SITE_ID) {
+      init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
+    }
+  }, []);
   return (
     <>
       <Head>
