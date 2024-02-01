@@ -10,13 +10,12 @@ export const FooterSite: React.FC = () => {
   return (
     <Footer
       classes={{
-        brand: (!!dashlordConfig.marianne && "auto") || "hidden",
+        logo: (!!dashlordConfig.marianne && "auto") || "hidden",
       }}
       brandTop={dashlordConfig.entity}
       homeLinkProps={{
         href: "/",
-        title: "plop",
-        className: "hidden",
+        title: "Accueil",
       }}
       operatorLogo={
         dashlordConfig.operator &&
