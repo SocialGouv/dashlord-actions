@@ -1,6 +1,6 @@
 .nonGovernementalWebsite {
   /* most crucial change, remove use of the Marianne protected font */
-  font-family: Comic sans ms, monospace;
+  font-family: monospace !important;
 
   /* custom colors used the custom classes below */
   --background-default-green-non-france: rgb(217, 238, 225);
@@ -79,4 +79,8 @@
   .fr-header .fr-header__menu {
     box-shadow: none;
   }
+}
+
+.nonGovernementalWebsite * {
+  font-family: monospace !important;
 }

@@ -1,19 +1,18 @@
 import * as React from "react";
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+
+import frLocale from "date-fns/locale/fr";
+
+import { fr } from "@codegouvfr/react-dsfr";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import CallOut from "@codegouvfr/react-dsfr/CallOut";
 
-import { Clock } from "react-feather";
-import { formatDistanceToNow } from "date-fns";
-import frLocale from "date-fns/locale/fr";
-
 import styles from "./url.module.scss";
 import { btoa, isToolEnabled } from "../utils";
+import config from "@/config.json";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
-import config from "@/config.json";
-import Link from "next/link";
-import { fr } from "@codegouvfr/react-dsfr";
 
 export const UrlHeader = ({
   report,

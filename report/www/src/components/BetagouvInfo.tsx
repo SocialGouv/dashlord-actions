@@ -7,12 +7,9 @@ import "react-vertical-timeline-component/style.min.css";
 import {
   Crosshair,
   FastForward,
-  Star,
   Settings,
   ThumbsUp,
-  Globe,
   Heart,
-  Radio,
   XCircle,
 } from "react-feather";
 import format from "date-fns/format";
