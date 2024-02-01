@@ -982,7 +982,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         rowSelection={false}
         hideFooterPagination={false}
         hideFooter={tableData.length < ROWS_COUNT}
-        paginationModel={{ page: 0, pageSize: ROWS_COUNT }} // license limitation ;(
         localeText={{
           MuiTablePagination: { labelRowsPerPage: "Lignes par page" },
         }}
