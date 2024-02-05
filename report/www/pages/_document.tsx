@@ -7,7 +7,7 @@ const { getColorSchemeHtmlAttributes, augmentDocumentForDsfr } =
 
 export default function Document(props: DocumentProps) {
   return (
-    <Html {...getColorSchemeHtmlAttributes(props)}>
+    <Html {...getColorSchemeHtmlAttributes(props)} lang="fr">
       <Head title={dashlordConfig.title} />
       <body>
         <Main />

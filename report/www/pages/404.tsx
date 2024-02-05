@@ -7,7 +7,7 @@ const Page404: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{dashlordConfig.title} - Page non trouvée</title>
+        <title>Page non trouvée - {dashlordConfig.title}</title>
       </Head>
       <br />
       <br />

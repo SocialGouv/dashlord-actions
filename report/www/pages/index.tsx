@@ -9,10 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          {dashlordConfig.title} - tableau de bord des bonnes pratiques
-          techniques
-        </title>
+        <title>{dashlordConfig.title}</title>
       </Head>
       <Dashboard report={report} />
     </>

@@ -8,7 +8,7 @@ const PageIntro: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{dashlordConfig.title} - introduction</title>
+        <title>Introduction - {dashlordConfig.title}</title>
       </Head>
       <Intro />
     </>
