@@ -958,7 +958,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       field: "zap",
       headerName: `Owasp`,
       description: "Scan de code ZaProxy baseline",
-      type: "number",
       valueGetter: (params) => {
         return params.row.summary.zapGrade;
       },
