@@ -10,8 +10,8 @@ export const DsFr: React.FC<DsFrProps> = ({ data, url }) => {
   return (
     <Panel title="Système de design de l'état">
       <p>
-        Détection du système de design de l'état avec la balise
-        'fr-header__brand'{" "}
+        Détection du système de design de l&apos;état avec la balise
+        &apos;fr-header__brand&apos;{" "}
       </p>
       <br />
       {data.detected === true && (
@@ -20,7 +20,7 @@ export const DsFr: React.FC<DsFrProps> = ({ data, url }) => {
           title=""
           description={
             <>
-              Le système de design de l'état a bien été détecté sur{" "}
+              Le système de design de l&apos;état a bien été détecté sur{" "}
               <a href={url} target="_blank">
                 {url}
               </a>
