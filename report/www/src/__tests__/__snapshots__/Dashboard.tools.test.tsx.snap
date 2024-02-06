@@ -8,6 +8,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
         URL (17)
         <br />
       </th>
+      <th>
+        Owasp
+        <br />
+        Scan de code ZaProxy baseline
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -38,6 +43,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -65,6 +75,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             api.trackdechets.beta.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -94,6 +109,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -121,6 +141,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             acceslibre.beta.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -150,6 +175,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -177,6 +207,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             archifiltre.fabrique.social.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -206,6 +241,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -233,6 +273,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             domifa.fabrique.social.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -262,6 +307,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -289,6 +339,31 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             pjm.social.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/securite#zap"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails owaps pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r0:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            12
+          </p>
+        </a>
       </td>
     </tr>
     <tr>
@@ -318,6 +393,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -345,6 +425,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             1000jours.fabrique.social.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -374,6 +459,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -401,6 +491,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             monpsy.sante.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
     <tr>
@@ -430,6 +525,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -458,6 +558,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
           </a>
         </div>
       </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
     </tr>
     <tr>
       <td>
@@ -485,6 +590,11 @@ exports[`Tools config > Should render Dashboard with limited tools 1`] = `
             template.fabrique.social.gouv.fr
           </a>
         </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
     </tr>
   </tbody>

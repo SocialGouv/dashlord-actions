@@ -7,6 +7,7 @@ import Flags from "country-flag-icons/react/3x2";
 
 import { smallUrl } from "../utils";
 import { Panel } from "./Panel";
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 
 type TrackersProps = { data: ThirdPartiesReport };
 
@@ -143,34 +144,55 @@ const EndPointsTable: React.FC<EndPointsTableProps> = ({ endpoints }) => {
 };
 
 export const Trackers: React.FC<TrackersProps> = ({ data }) => {
-  const hasIssues: (ThirdPartyCookie | ThirdPartyTracker)[] = [];
-  if (data.cookies && data.cookies.length) {
-    hasIssues.push(...data.cookies);
-  }
-  if (data.trackers && data.trackers.length) {
-    hasIssues.push(...data.trackers);
-  }
   return (
-    (hasIssues.length && (
+    <>
       <Panel
-        title="Scripts tiers et cookies"
-        info="Scripts tiers embarqués dans la page web"
+        title={
+          <div>
+            Cookies
+            <BadgeUpdatedAt
+              date={data.headers && data.headers.date}
+              style={{ verticalAlign: "middle", paddingLeft: 10 }}
+            />
+          </div>
+        }
       >
-        <CookiesTable cookies={data.cookies} />
-        <TrackersTable trackers={data.trackers} />
-        <EndPointsTable endpoints={data.endpoints} />
+        <p>Cookies déposés par le site web au chargement de la page</p>
+        <br />
+        {(data.cookies.length && <CookiesTable cookies={data.cookies} />) || (
+          <Alert
+            severity="success"
+            title=""
+            description="Aucun cookie detecté"
+          />
+        )}
       </Panel>
-    )) || (
       <Panel
-        title="Third parties"
-        info="Scripts tiers embarqués dans la page web"
+        title={
+          <div>
+            Scripts tiers
+            <BadgeUpdatedAt
+              date={data.headers && data.headers.date}
+              style={{ verticalAlign: "middle", paddingLeft: 10 }}
+            />
+          </div>
+        }
       >
-        <Alert
-          severity="success"
-          title=""
-          description="Aucun script third-party detecté"
-        />
+        <p>Scripts tiers chargés par la page</p>
+        <br />
+        {(data.cookies.length && (
+          <>
+            <TrackersTable trackers={data.trackers} />
+            <EndPointsTable endpoints={data.endpoints} />
+          </>
+        )) || (
+          <Alert
+            severity="success"
+            title=""
+            description="Aucun script tiers detecté"
+          />
+        )}
       </Panel>
-    )
+    </>
   );
 };

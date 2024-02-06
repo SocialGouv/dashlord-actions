@@ -952,6 +952,52 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
+  if (isToolEnabled("zap")) {
+    columns.push({
+      ...defaultColumnsProps,
+      field: "zap",
+      headerName: `Owasp`,
+      description: "Scan de code ZaProxy baseline",
+      type: "number",
+      valueGetter: (params) => {
+        return params.row.summary.zapGrade;
+      },
+      renderCell: (params) => {
+        if (!isToolEnabled("zap", params.row.url)) return <IconUnknown />;
+        const grade = params.value;
+        console.log("zap", params);
+        if (grade) {
+          return (
+            <GradeBadge
+              title={`Voir les détails owaps pour l'url ${slugifyUrl(
+                params.row.url
+              )}`}
+              showCheckOnSuccess
+              label={
+                params.row.summary.zapGrade === "A"
+                  ? "A"
+                  : params.row.summary.zapCount
+              }
+              severity={
+                params.row.summary.zapGrade === "B"
+                  ? "info"
+                  : params.row.summary.zapGrade === "D"
+                  ? "warning"
+                  : params.row.summary.zapGrade === "F"
+                  ? "error"
+                  : "success"
+              }
+              linkProps={{
+                href: `/url/${slugifyUrl(params.row.url)}/securite/#zap`,
+              }}
+            />
+          );
+        }
+        return <IconUnknown />;
+      },
+    });
+  }
+
   const filterBy = (key) => (item, idx, arr) =>
     !arr.slice(idx + 1).find((r) => item[key] === r[key]);
 

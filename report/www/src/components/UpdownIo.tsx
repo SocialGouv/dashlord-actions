@@ -11,6 +11,7 @@ import { smallUrl } from "../utils";
 import styles from "./updownIo.module.scss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ReactNode } from "react";
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 
 type UpDownIoProps = {
   data: UpDownReport;
@@ -40,7 +41,15 @@ export const UpdownIo: React.FC<UpDownIoProps> = ({ data, url, title }) => {
   return (
     (urlUpdownio && smallUrl(data.url) === smallUrl(url) && (
       <Panel
-        title={title || DEFAULT_TITLE}
+        title={
+          <div>
+            {title || DEFAULT_TITLE}
+            <BadgeUpdatedAt
+              date={data.last_check_at}
+              style={{ verticalAlign: "middle", paddingLeft: 10 }}
+            />
+          </div>
+        }
         info={DEFAULT_INFO}
         url={urlUpdownio}
         urlText="Statistiques détaillées"

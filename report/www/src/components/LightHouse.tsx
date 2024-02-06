@@ -1,13 +1,13 @@
 import * as React from "react";
+import { fr } from "@codegouvfr/react-dsfr";
 
 import { btoa } from "../utils";
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
 import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-
 import styles from "./lightHouse.module.scss";
-import { fr } from "@codegouvfr/react-dsfr";
 
 type CardProps = {
   title?: string | React.ReactNode;
@@ -124,7 +124,13 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
         return (
           <Panel
             title={
-              <div className={fr.cx("fr-mb-4w")}>{audit.requestedUrl}</div>
+              <div className={fr.cx("fr-mb-4w")}>
+                {audit.requestedUrl}
+                <BadgeUpdatedAt
+                  date={audit.fetchTime}
+                  style={{ verticalAlign: "middle", paddingLeft: 10 }}
+                />
+              </div>
             }
             info="Informations collectées par l'outil Google LightHouse"
             urlText="Rapport LightHouse"

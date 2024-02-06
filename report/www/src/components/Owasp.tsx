@@ -4,6 +4,7 @@ import Table from "@codegouvfr/react-dsfr/Table";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 
 import { Panel } from "./Panel";
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first
@@ -61,7 +62,15 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
     (alerts.length && (
       <Panel
         isExternal
-        title="Scan OWASP"
+        title={
+          <div>
+            Scan OWASP
+            <BadgeUpdatedAt
+              date={data["@generated"]}
+              style={{ verticalAlign: "middle", paddingLeft: 10 }}
+            />
+          </div>
+        }
         url={url}
         urlText="Rapport détaillé"
         info="Scan passif de vulnérabiliés ZAP OWASP baseline"

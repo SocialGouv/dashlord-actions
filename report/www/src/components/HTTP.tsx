@@ -7,6 +7,8 @@ import { Panel } from "./Panel";
 import { GradeBadge } from "./GradeBadge";
 import { fr } from "@codegouvfr/react-dsfr";
 
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
+
 type HTTPProps = { data: HttpReport };
 
 const HttpRowBadge = (row: HttpTestReport) => {
@@ -168,13 +170,21 @@ export const HTTP = ({ data }: HTTPProps) => {
 
   return url ? (
     <Panel
-      title="Mozilla HTTP observatory"
       url={url}
       urlText="Rapport détaillé"
       isExternal
+      title={
+        <div>
+          Mozilla HTTP observatory
+          <BadgeUpdatedAt
+            date={data.start_time}
+            style={{ verticalAlign: "middle", paddingLeft: 10 }}
+          />
+        </div>
+      }
     >
       <div className={fr.cx("fr-text--bold")}>
-        Scan Summary : <GradeBadge label={data.grade} />
+        Scan Summary : <GradeBadge label={data.grade} />{" "}
       </div>
 
       {(tableData.length > 1 && <Table data={tableData} />) || null}

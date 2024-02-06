@@ -35,6 +35,8 @@ const tools = {
   sonarcloud: (report) => require("./sonarcloud")(report),
   /** @param {DsFrReport} report */
   dsfr: (report) => require("./dsfr")(report),
+  /** @param {ZapReport} report */
+  zap: (report) => require("./zap")(report),
 };
 
 /**

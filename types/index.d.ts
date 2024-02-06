@@ -83,6 +83,7 @@ type HttpReport = {
   details: Record<any, HttpTestReport>;
   url: string;
   grade: string;
+  start_time: string;
 };
 
 type ZapReportSiteAlert = {
@@ -120,6 +121,7 @@ type NucleiReportEntry = {
   matched: string;
   templateID: string;
   matcher_name?: string;
+  timestamp?: string;
 };
 
 type NucleiReport = NucleiReportEntry[];
@@ -272,6 +274,7 @@ type ThirdPartiesReport = {
   cookies: ThirdPartiesReportCookies;
   trackers: ThirdPartiesReportTrackers;
   endpoints: ThirdPartiesReportEndpoints;
+  headers: Record<string, any>;
 };
 
 type WappalyzerCategory = {
@@ -314,6 +317,7 @@ type UpDownReport = {
   };
   uptimeGrade: string;
   apdexGrade: string;
+  last_check_at: string;
 };
 
 type Wget404Report = { link: string }[];
