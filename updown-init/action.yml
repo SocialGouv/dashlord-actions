@@ -1,0 +1,15 @@
+name: "updown init action"
+description: "Create missing entries in updown.io"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "14"
+    - shell: bash
+      id: fetch
+      run: |
+        cd ${{ github.action_path }}
+        yarn
+        node ./src/index.js

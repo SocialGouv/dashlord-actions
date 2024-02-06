@@ -40,6 +40,7 @@ type DashlordTool =
   | "budget_page"
   | "sonarcloud";
 
+// this should be maintained in https://github.com/SocialGouv/dashlord/blob/main/schema.json
 type DashLordConfig = {
   title: string;
   entity: string;
@@ -53,6 +54,7 @@ type DashLordConfig = {
   matomoUrl?: string;
   operator?: Operator;
   updownioStatusPage?: string;
+  updownioRecipients?: string[];
 };
 
 type Operator = {
