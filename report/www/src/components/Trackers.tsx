@@ -159,7 +159,9 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
       >
         <p>Cookies déposés par le site web au chargement de la page</p>
         <br />
-        {(data.cookies.length && <CookiesTable cookies={data.cookies} />) || (
+        {(data.cookies && data.cookies.length && (
+          <CookiesTable cookies={data.cookies} />
+        )) || (
           <Alert
             severity="success"
             title=""
@@ -180,7 +182,7 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
       >
         <p>Scripts tiers chargés par la page</p>
         <br />
-        {(data.cookies.length && (
+        {(data.trackers && data.trackers.length && (
           <>
             <TrackersTable trackers={data.trackers} />
             <EndPointsTable endpoints={data.endpoints} />
