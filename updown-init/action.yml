@@ -10,7 +10,5 @@ runs:
     - shell: bash
       id: fetch
       run: |
-        ls -la .
-        ls -la ${{ github.action_path }}
         yarn --cwd ${{ github.action_path }}
         node ${{ github.action_path }}/src/index.js
