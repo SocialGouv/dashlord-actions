@@ -14,7 +14,10 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <>
           Appliquer le modèle suivant :{" "}
-          <a href="https://github.com/betagouv/juridiques/blob/main/Mentions-l%C3%A9gales.md">
+          <a
+            href="https://github.com/betagouv/juridiques/blob/main/Mentions-l%C3%A9gales.md"
+            target="_blank"
+          >
             https://github.com/betagouv/juridiques/blob/main/Mentions-légales.md
           </a>
         </>
@@ -23,7 +26,10 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
       return (
         <>
           Rendez vous sur{" "}
-          <a href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique">
+          <a
+            href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+            target="_blank"
+          >
             https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
           </a>
         </>
@@ -80,12 +86,12 @@ export const DeclarationRgpd: React.FC<DeclarationRgpdProps> = ({ data }) => {
         <>
           <Alert
             severity="error"
-            title="no-declaration"
+            title="Erreur"
             description={<>Pas de déclaration détectée. </>}
           />
           <Alert
             severity="error"
-            title="incomplete-declaration"
+            title="Déclaration incomplète"
             description={<>{getMissingWordsResolution(slug)} </>}
           />
         </>

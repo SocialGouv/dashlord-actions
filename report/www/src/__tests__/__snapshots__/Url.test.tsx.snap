@@ -926,7 +926,7 @@ exports[`Url > Should render full Url 1`] = `
               <h3
                 className="fr-alert__title"
               >
-                no-declaration
+                Erreur
               </h3>
               <div>
                 Pas de déclaration détectée. 
@@ -939,13 +939,14 @@ exports[`Url > Should render full Url 1`] = `
               <h3
                 className="fr-alert__title"
               >
-                incomplete-declaration
+                Déclaration incomplète
               </h3>
               <div>
                 Rendez vous sur
                  
                 <a
                   href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                  target="_blank"
                 >
                   https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
                 </a>
@@ -1960,7 +1961,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               <h3
                 className="fr-alert__title"
               >
-                no-declaration
+                Erreur
               </h3>
               <div>
                 Pas de déclaration détectée. 
@@ -1973,13 +1974,14 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               <h3
                 className="fr-alert__title"
               >
-                incomplete-declaration
+                Déclaration incomplète
               </h3>
               <div>
                 Rendez vous sur
                  
                 <a
                   href="https://mattermost.incubateur.net/betagouv/channels/domaine-juridique"
+                  target="_blank"
                 >
                   https://mattermost.incubateur.net/betagouv/channels/domaine-juridique
                 </a>
