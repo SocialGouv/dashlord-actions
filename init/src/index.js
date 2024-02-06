@@ -1,7 +1,6 @@
 const fs = require("fs");
 const core = require("@actions/core");
 const YAML = require("yaml");
-const { createMissingUpdownEntries } = require("./updown");
 
 const getDashlordConfig = () => {
   let dashlordConfig;
@@ -119,14 +118,6 @@ async function run() {
     core.setOutput("urls", outputs.urls); // legacy ?
     core.setOutput("sites", JSON.stringify(outputs.sites)); // useful for matrix jobs
     core.setOutput("config", JSON.stringify(outputs.config)); // full dashloard config
-
-    if (
-      outputs.config.tools.updownio === true &&
-      process.env.UPDOWNIO_API_KEY
-    ) {
-      console.log("init: create missing updown.io entries");
-      await createMissingUpdownEntries(outputs.config);
-    }
   } catch (error) {
     core.setFailed(error.message);
   }

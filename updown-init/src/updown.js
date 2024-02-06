@@ -12,7 +12,7 @@ const API_HTTP = "https://updown.io/api";
  */
 const getInvalidUrls = async (urls) => {
   const apiUrl = encodeURI(`${API_HTTP}/checks?api-key=${apiKey}`);
-  /** @type {{url}[]} */
+  /** @type {{url:string}[]}  */
   const checks = await fetch(apiUrl)
     .then((r) => r.json())
     .then((json) => {
@@ -38,12 +38,21 @@ const getInvalidUrls = async (urls) => {
   return urls.filter((url) => !hasUrl(url));
 };
 
-const createNewUpDownCheck = async (url) => {
+/**
+ *
+ * @param {string} url
+ * @param {string[]} recipients
+ */
+const createNewUpDownCheck = async (url, recipients) => {
   const apiUrl = encodeURI(`${API_HTTP}/checks?api-key=${apiKey}`);
   const result = await fetch(apiUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ url, published: true }),
+    body: JSON.stringify({
+      url,
+      recipients,
+      published: true,
+    }),
   }).then((r) => r.json());
   if (result.error) {
     throw new Error(result.error);
@@ -57,10 +66,11 @@ const createNewUpDownCheck = async (url) => {
  */
 const createMissingUpdownEntries = async (dashlordConfig) => {
   const urls = dashlordConfig.urls.map((url) => url.url);
+  const recipients = dashlordConfig.updownioRecipients || [];
   await getInvalidUrls(urls).then((urls) => {
     urls.forEach(async (url) => {
       console.log(`create new updown check for ${url}`);
-      await createNewUpDownCheck(url);
+      await createNewUpDownCheck(url, recipients);
     });
   });
 };
