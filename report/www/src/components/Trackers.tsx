@@ -182,10 +182,17 @@ export const Trackers: React.FC<TrackersProps> = ({ data }) => {
       >
         <p>Scripts tiers chargés par la page</p>
         <br />
-        {(data.trackers && data.trackers.length && (
+        {(((data.trackers && data.trackers.length) ||
+          (data.endpoints && data.endpoints.length)) && (
           <>
-            <TrackersTable trackers={data.trackers} />
-            <EndPointsTable endpoints={data.endpoints} />
+            {(data.trackers && data.trackers.length && (
+              <TrackersTable trackers={data.trackers} />
+            )) ||
+              null}
+            {(data.endpoints && data.endpoints.length && (
+              <EndPointsTable endpoints={data.endpoints} />
+            )) ||
+              null}
           </>
         )) || (
           <Alert

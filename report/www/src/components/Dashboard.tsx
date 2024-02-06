@@ -964,7 +964,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       renderCell: (params) => {
         if (!isToolEnabled("zap", params.row.url)) return <IconUnknown />;
         const grade = params.value;
-        console.log("zap", params);
         if (grade) {
           return (
             <GradeBadge
