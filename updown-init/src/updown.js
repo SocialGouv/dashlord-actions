@@ -55,7 +55,8 @@ const createNewUpDownCheck = async (url, recipients) => {
     }),
   }).then((r) => r.json());
   if (result.error) {
-    throw new Error(result.error);
+    console.error(`Error for ${url}`);
+    console.error(result.error);
   }
   console.log(JSON.stringify(result, null, 2));
 };
