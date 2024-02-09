@@ -38,7 +38,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 21/1/2024"
           />
-          16 jours
+          presque 3 ans
         </span>
       </div>
     </h3>
@@ -190,7 +190,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 21/1/2024"
           />
-          16 jours
+          presque 3 ans
         </span>
       </div>
     </h3>
@@ -309,7 +309,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 21/1/2024"
           />
-          16 jours
+          presque 3 ans
         </span>
       </div>
     </h3>
@@ -428,7 +428,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 21/1/2024"
           />
-          16 jours
+          presque 3 ans
         </span>
       </div>
     </h3>
@@ -539,7 +539,7 @@ exports[`Should render UpdownIo 1`] = `
           archifiltre.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:rj:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -547,7 +547,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -658,7 +658,7 @@ exports[`Should render UpdownIo 1`] = `
           index-egapro.travail.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:rn:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -666,7 +666,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -777,7 +777,7 @@ exports[`Should render UpdownIo 1`] = `
           domifa.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:rr:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -785,7 +785,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -896,7 +896,7 @@ exports[`Should render UpdownIo 1`] = `
           www.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:rv:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -904,7 +904,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1015,7 +1015,7 @@ exports[`Should render UpdownIo 1`] = `
           pjm.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r13:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1023,7 +1023,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1134,7 +1134,7 @@ exports[`Should render UpdownIo 1`] = `
           tumeplay.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r17:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1142,7 +1142,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1253,7 +1253,7 @@ exports[`Should render UpdownIo 1`] = `
           1000jours.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r1b:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1261,7 +1261,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1372,7 +1372,7 @@ exports[`Should render UpdownIo 1`] = `
           1000jours-blues.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r1f:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1380,7 +1380,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 25/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1491,7 +1491,7 @@ exports[`Should render UpdownIo 1`] = `
           monpsy.sante.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r1j:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1499,7 +1499,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1610,7 +1610,7 @@ exports[`Should render UpdownIo 1`] = `
           ressourcerie.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r1n:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1618,7 +1618,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
@@ -1762,7 +1762,7 @@ exports[`Should render UpdownIo 1`] = `
           template.fabrique.social.gouv.fr
         </a>
         <span
-          class="fr-badge fr-badge--error fr-badge--no-icon"
+          class="fr-badge fr-badge--info fr-badge--no-icon"
           id="fr-badge-:r1t:"
           style="vertical-align: middle; padding-left: 10px;"
         >
@@ -1770,7 +1770,7 @@ exports[`Should render UpdownIo 1`] = `
             class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
             title="Mis à jour le 22/5/2022"
           />
-          plus d’un an
+          environ 1 an
         </span>
       </div>
     </h3>
