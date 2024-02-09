@@ -1,38 +1,82 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-import * as React from "react";
-import { Container } from "@dataesr/react-dsfr";
+import Link from "next/link";
 import Head from "next/head";
+
 import { init } from "@socialgouv/matomo-next";
 
-import "@gouvfr/dsfr/dist/utility/utility.main.min.css";
-import "@gouvfr/dsfr/dist/dsfr/dsfr.main.min.css";
-import "rc-tooltip/assets/bootstrap.css";
+import { fr } from "@codegouvfr/react-dsfr";
+import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
+import { createNextDsfrIntegrationApi } from "@codegouvfr/react-dsfr/next-pagesdir";
+import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 
 import { HeaderSite } from "../src/components/HeaderSite";
 import { FooterSite } from "../src/components/FooterSite";
 
-import "../src/custom.css";
-import "../src/overrideDSFR.css";
 import dashlordConfig from "@/config.json";
 import report from "@/report.json";
+
+import "../src/dirty.css";
+import "../src/overrideDSFR.css";
 
 const MATOMO_URL = dashlordConfig.matomoUrl;
 const MATOMO_SITE_ID = dashlordConfig.matomoId;
 
-function MyApp({ Component, pageProps }: AppProps) {
+declare module "@codegouvfr/react-dsfr/next-pagesdir" {
+  interface RegisterLink {
+    Link: typeof Link;
+  }
+}
+
+const { withDsfr, dsfrDocumentApi } = createNextDsfrIntegrationApi({
+  defaultColorScheme: "system",
+  Link,
+  useLang: () => {
+    const { locale = "fr" } = useRouter();
+    return locale;
+  },
+  preloadFonts: !!dashlordConfig.marianne && [
+    //"Marianne-Light",
+    //"Marianne-Light_Italic",
+    "Marianne-Regular",
+    //"Marianne-Regular_Italic",
+    "Marianne-Medium",
+    //"Marianne-Medium_Italic",
+    "Marianne-Bold",
+    //"Marianne-Bold_Italic",
+    //"Spectral-Regular",
+    //"Spectral-ExtraBold"
+  ],
+});
+
+export { dsfrDocumentApi };
+
+const { withAppEmotionCache, augmentDocumentWithEmotionCache } =
+  createEmotionSsrAdvancedApproach({
+    key: "css",
+  });
+
+export { augmentDocumentWithEmotionCache };
+
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const fluid =
+  // dashboard views
+  const isFluid =
     router.asPath === "/" ||
-    router.asPath.match(/^\/tag\/.+/) ||
-    router.asPath.match(/^\/category\/.+/) ||
-    router.asPath.match(/^\/startup\/.+/);
-  React.useEffect(() => {
-    init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
+    router.asPath.startsWith("/tag/") ||
+    router.asPath.startsWith("/category/") ||
+    router.asPath.startsWith("/startup/");
+
+  useEffect(() => {
+    if (MATOMO_URL && MATOMO_SITE_ID) {
+      init({ url: MATOMO_URL, siteId: "" + MATOMO_SITE_ID });
+    }
   }, []);
   return (
-    <div className={dashlordConfig.marianne ? "" : "nonGovernementalWebsite"}>
+    <>
       <Head>
+        <title>{dashlordConfig.title.trim()}</title>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta
           name="viewport"
@@ -40,17 +84,39 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="description" content="Dashboard des applications" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <title>{dashlordConfig.title}</title>
       </Head>
-      <HeaderSite report={report} />
-      <Container fluid={fluid}>
-        <div role="main" className="fr-my-4w">
-          <Component {...pageProps} />
-        </div>
-      </Container>
-      <FooterSite />
-    </div>
+
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+        className={dashlordConfig.marianne ? "" : "nonGovernementalWebsite"}
+      >
+        <MuiDsfrThemeProvider>
+          <HeaderSite report={report} />
+
+          <div
+            className={fr.cx(
+              "fr-container",
+              (isFluid && ["fr-container-xl--fluid", "fr-px-4w"]) || null
+            )}
+            style={{
+              flex: 1,
+              ...fr.spacing("padding", {
+                topBottom: "10v",
+              }),
+            }}
+          >
+            <Component {...pageProps} />
+          </div>
+
+          <FooterSite />
+        </MuiDsfrThemeProvider>
+      </div>
+    </>
   );
 }
 
-export default MyApp;
+export default withDsfr(withAppEmotionCache(App));

@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Alert } from "@dataesr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
 import { Url } from "../../src/components/Url";
 import { smallUrl, slugifyUrl } from "../../src/utils";
-import report from '@/report.json';
-import dashlordConfig from '@/config.json';
+import report from "@/report.json";
+import dashlordConfig from "@/config.json";
 
 const PageUrl = ({
   report,
@@ -17,12 +17,16 @@ const PageUrl = ({
   selectedTab: string;
 }) => {
   if (!report) {
-    return <Alert type="error" title={`Impossible de trouver le rapport`} />;
+    return (
+      <Alert severity="error" title={`Impossible de trouver le rapport`} />
+    );
   }
   return (
     <>
       <Head>
-        <title>{smallUrl(url)} - {dashlordConfig.title}</title>
+        <title>
+          {smallUrl(url)} - {dashlordConfig.title}
+        </title>
       </Head>
       <Url url={url} report={report} selectedTab={selectedTab} />
     </>
@@ -34,7 +38,7 @@ const tabs = ["best-practices", "disponibilite", "securite", "informations"];
 
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  let selectedTab = "";
+  let selectedTab = tabs[0];
   if (Array.isArray(params.url)) {
     let fullUrl = decodeURIComponent((params.url as []).join(""));
     if (params.url.length > 1) {
@@ -71,4 +75,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
+
 export default PageUrl;

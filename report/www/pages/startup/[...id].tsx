@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Alert } from "@dataesr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
 import { Dashboard } from "../../src/components/Dashboard";
 import report from "@/report.json";
@@ -11,7 +11,7 @@ const PageStartup = ({ report, id }: { report: UrlReport[]; id: string }) => {
   if (!report || report.length === 0) {
     return (
       <Alert
-        type="error"
+        severity="error"
         title={`Impossible de trouver le rapport pour "${id}"`}
       />
     );

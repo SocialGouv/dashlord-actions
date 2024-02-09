@@ -1,0 +1,18 @@
+:root {
+  --background-contrast-warning: var(--background-contrast-yellow-moutarde);
+}
+
+/* reduce operator logo height */
+.fr-header__operator img.fr-responsive-img {
+  max-height: 4rem;
+}
+
+/* hide the logo */
+.hidden {
+  display: none;
+}
+
+a.link-discreet {
+  text-decoration: none !important;
+  background-image: none !important;
+}

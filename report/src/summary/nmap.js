@@ -3,6 +3,8 @@ const getGradeOpenPorts = (count) => {
   return count > 2 ? "F" : "A";
 };
 
+//todo: improve
+
 /** @param {NmapReport} report */
 const summary = (report) => {
   if (report) {

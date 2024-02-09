@@ -1,9 +1,11 @@
 import * as React from "react";
 
-import { Row, Col, Alert } from "@dataesr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 import { format } from "date-fns";
 import { Panel } from "./Panel";
 import { Grade } from "./Grade";
+import { fr } from "@codegouvfr/react-dsfr";
+import { GradeBadge } from "./GradeBadge";
 
 const sortByKey = (key: string) => (a: any, b: any) => {
   if (a[key] > b[key]) {
@@ -67,24 +69,37 @@ export const TestSSL: React.FC<SSLProps> = ({ data, url }) => {
         urlText="Rapport détaillé"
         isExternal
       >
-        <Row>
-          <Col>
-            <h3>
-              Scan Summary : <Grade small grade={grade} />
-            </h3>
+        <div className={fr.cx("fr-grid-row")}>
+          <div className={fr.cx("fr-col")}>
+            <div className={fr.cx("fr-text--bold")}>
+              Scan Summary : <GradeBadge label={expiresSoon ? "F" : grade} />
+            </div>
+
             {capReasons.length > 0 && <br />}
             {capReasons.filter(filterByKey("finding")).map((reason: any) => (
-              <Alert key={reason.finding} type="info" title={reason.finding} />
+              <Alert
+                key={reason.finding}
+                severity="info"
+                title={reason.finding}
+              />
             ))}
             {expirationDate && (
               <h4>
                 <br />
                 Expiration : {format(expirationDate, "dd/MM/yyyy")}
-                {expiresSoon && " ⚠️"}
+                {expiresSoon && (
+                  <i
+                    className={fr.cx("fr-ml-1w", "fr-icon-warning-line")}
+                    title={`Le SSL arrive à expiration le ${format(
+                      expirationDate,
+                      "dd/MM/yyyy"
+                    )}`}
+                  />
+                )}
               </h4>
             )}
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Panel>
     )) ||
     null

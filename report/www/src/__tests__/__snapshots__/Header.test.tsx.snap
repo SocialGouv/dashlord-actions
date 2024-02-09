@@ -1,0 +1,486 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render HeaderSite 1`] = `
+<div>
+  <button
+    aria-controls="fr-theme-modal"
+    aria-hidden="true"
+    class="fr-btn fr-hidden"
+    data-fr-opened="false"
+    id="fr-theme-modal-hidden-control-button"
+    tabindex="-1"
+    type="button"
+  >
+     
+  </button>
+  <dialog
+    aria-labelledby="fr-modal-title-fr-theme-modal"
+    class="fr-modal"
+    data-fr-concealing-backdrop="true"
+    id="fr-theme-modal"
+    role="dialog"
+  >
+    <div
+      class="fr-container fr-container--fluid fr-container-md"
+    >
+      <div
+        class="fr-grid-row fr-grid-row--center"
+      >
+        <div
+          class="fr-col-12 fr-col-md-6 fr-col-lg-4"
+        >
+          <div
+            class="fr-modal__body"
+          >
+            <div
+              class="fr-modal__header"
+            >
+              <button
+                aria-controls="fr-theme-modal"
+                class="fr-btn--close fr-btn"
+                title="Fermer"
+                type="button"
+              >
+                Fermer
+              </button>
+            </div>
+            <div
+              class="fr-modal__content"
+            >
+              <h1
+                class="fr-modal__title"
+                id="fr-modal-title-fr-theme-modal"
+              >
+                Paramètres d'affichage
+              </h1>
+              <div
+                class="fr-display"
+              >
+                <div
+                  class="fr-form-group"
+                >
+                  <fieldset
+                    class="fr-fieldset"
+                  >
+                    <legend
+                      class="fr-fieldset__legend fr-text--regular"
+                    >
+                      Choisissez un thème pour personnaliser l'apparence du site.
+                    </legend>
+                    <div
+                      class="fr-fieldset__content"
+                    >
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-light"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="light"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-light"
+                        >
+                          Thème clair
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-dark"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="dark"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-dark"
+                        >
+                          Thème sombre
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        class="fr-radio-group fr-radio-rich"
+                      >
+                        <input
+                          id=":r0:-system"
+                          name="fr-radios-theme"
+                          type="radio"
+                          value="system"
+                        />
+                        <label
+                          class="fr-label"
+                          for=":r0:-system"
+                        >
+                          Système.
+                          <span
+                            class="fr-hint-text"
+                          >
+                            Utilise les paramètres système.
+                          </span>
+                        </label>
+                        <div
+                          class="fr-radio-rich__img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            height="80px"
+                            viewBox="0 0 80 80"
+                            width="80px"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <use
+                              class="fr-artwork-decorative"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-decorative"
+                            />
+                            <use
+                              class="fr-artwork-minor"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-minor"
+                            />
+                            <use
+                              class="fr-artwork-major"
+                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-major"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <header
+    class="fr-header"
+    id="fr-header"
+    role="banner"
+  >
+    <div
+      class="fr-header__body"
+    >
+      <div
+        class="fr-container"
+      >
+        <div
+          class="fr-header__body-row"
+        >
+          <div
+            class="fr-header__brand fr-enlarge-link"
+          >
+            <div
+              class="fr-header__brand-top"
+            >
+              <div
+                class="fr-header__logo auto"
+              >
+                <p
+                  class="fr-logo"
+                >
+                  Ministères sociaux
+                </p>
+              </div>
+              <div
+                class="fr-header__operator"
+              >
+                <a
+                  href="/"
+                  title="DashLord Fabrique des ministères sociaux"
+                >
+                  <img
+                    alt="Logo Fabrique des ministères sociaux"
+                    class="fr-responsive-img"
+                    src="https://avatars.githubusercontent.com/u/35456799?s=400"
+                    style="max-width: 9.0625rem;"
+                  />
+                </a>
+              </div>
+              <div
+                class="fr-header__navbar"
+              >
+                <button
+                  aria-controls="header-menu-modal-fr-header"
+                  aria-haspopup="menu"
+                  class="fr-btn--menu fr-btn"
+                  data-fr-opened="false"
+                  id="fr-header-menu-button"
+                  title="Menu"
+                >
+                  Menu
+                </button>
+              </div>
+            </div>
+            <div
+              class="fr-header__service"
+            >
+              <a
+                href="/"
+                title="DashLord Fabrique des ministères sociaux"
+              >
+                <p
+                  class="fr-header__service-title"
+                >
+                  DashLord Fabrique des ministères sociaux
+                </p>
+              </a>
+              <p
+                class="fr-header__service-tagline"
+              >
+                Bonnes pratiques techniques
+              </p>
+            </div>
+          </div>
+          <div
+            class="fr-header__tools"
+          >
+            <div
+              class="fr-header__tools-links"
+            >
+              <ul
+                class="fr-btns-group"
+              >
+                <li>
+                  <a
+                    class="fr-btn fr-icon-lock-fill"
+                    href="https://dashlord-full.fabrique.social.gouv.fr"
+                    id="fr-header-quick-access-item--Seconnecter-0"
+                  >
+                    Se connecter
+                  </a>
+                </li>
+                <li>
+                  <button
+                    aria-controls="fr-theme-modal"
+                    class="fr-btn fr-icon-theme-fill"
+                    data-fr-opened="false"
+                    id="fr-header-quick-access-item--_objectObject_-1"
+                  >
+                    Paramètres d'affichage
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-labelledby="fr-header-menu-button"
+      class="fr-header__menu fr-modal"
+      id="header-menu-modal-fr-header"
+    >
+      <div
+        class="fr-container"
+      >
+        <button
+          aria-controls="header-menu-modal-fr-header"
+          class="fr-btn--close fr-btn"
+          id="fr-header-mobile-overlay-button-close"
+          title="Fermer"
+        >
+          Fermer
+        </button>
+        <div
+          class="fr-header__menu-links"
+        >
+          <ul
+            class="fr-btns-group"
+          >
+            <li>
+              <a
+                class="fr-btn fr-icon-lock-fill"
+                href="https://dashlord-full.fabrique.social.gouv.fr"
+                id="fr-header-quick-access-item--Seconnecter_mobile-0"
+              >
+                Se connecter
+              </a>
+            </li>
+            <li>
+              <button
+                aria-controls="fr-theme-modal"
+                class="fr-btn fr-icon-theme-fill"
+                data-fr-opened="false"
+                id="fr-header-quick-access-item--_objectObject__mobile-1"
+              >
+                Paramètres d'affichage
+              </button>
+            </li>
+          </ul>
+        </div>
+        <nav
+          aria-label="Menu principal"
+          class="fr-nav"
+          id="fr-header-main-navigation"
+          role="navigation"
+        >
+          <ul
+            class="fr-nav__list"
+          >
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/intro"
+                id="fr-header-main-navigation-link-0"
+              >
+                Introduction
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                aria-current="page"
+                class="fr-nav__link"
+                href="/"
+                id="fr-header-main-navigation-link-1"
+              >
+                Tableau de bord
+              </a>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <button
+                aria-controls="fr-header-main-navigation-menu-2"
+                aria-expanded="false"
+                class="fr-nav__btn"
+                id="fr-header-main-navigation-button-2"
+              >
+                Incubateurs
+              </button>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <button
+                aria-controls="fr-header-main-navigation-menu-3"
+                aria-expanded="false"
+                class="fr-nav__btn"
+                id="fr-header-main-navigation-button-3"
+              />
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <button
+                aria-controls="fr-header-main-navigation-menu-4"
+                aria-expanded="false"
+                class="fr-nav__btn"
+                id="fr-header-main-navigation-button-4"
+              >
+                Startups
+              </button>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <button
+                aria-controls="fr-header-main-navigation-menu-5"
+                aria-expanded="false"
+                class="fr-nav__btn"
+                id="fr-header-main-navigation-button-5"
+              >
+                Vues
+              </button>
+              <div
+                class="fr-menu fr-collapse"
+                id="fr-header-main-navigation-menu-5"
+              >
+                <ul
+                  class="fr-menu__list"
+                >
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/wappalyzer"
+                      id="fr-header-main-navigation-menu-5-link-Technologies_wappalyzer_-0"
+                    >
+                      Technologies (wappalyzer)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/updownio"
+                      id="fr-header-main-navigation-menu-5-link-Disponibilit__updown_io_-1"
+                    >
+                      Disponibilité (updown.io)
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li
+              class="fr-nav__item"
+            >
+              <a
+                class="fr-nav__link"
+                href="/about"
+                id="fr-header-main-navigation-link-6"
+              >
+                A propos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
+`;

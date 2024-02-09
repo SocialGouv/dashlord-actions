@@ -1,0 +1,602 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tools config > Should render Dashboard with limited tools 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        URL (17)
+        <br />
+      </th>
+      <th>
+        Owasp
+        <br />
+        Scan de code ZaProxy baseline
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/api-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url api-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            api.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/api-trackdechets-beta-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url api-trackdechets-beta-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            api.trackdechets.beta.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/annuaire-entreprises-data-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url annuaire-entreprises-data-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            annuaire-entreprises.data.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/acceslibre-beta-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url acceslibre-beta-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            acceslibre.beta.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/aidantsconnect-beta-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url aidantsconnect-beta-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            aidantsconnect.beta.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/archifiltre-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url archifiltre-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            archifiltre.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/index-egapro-travail-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url index-egapro-travail-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            index-egapro.travail.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/domifa-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url domifa-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            domifa.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/www-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url www-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            www.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/pjm-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url pjm-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            pjm.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/securite#zap"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails owaps pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r0:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            12
+          </p>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/tumeplay-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url tumeplay-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            tumeplay.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/1000jours-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url 1000jours-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            1000jours.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/1000jours-blues-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url 1000jours-blues-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            1000jours-blues.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/monpsy-sante-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url monpsy-sante-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            monpsy.sante.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/ressourcerie-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url ressourcerie-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            ressourcerie.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/admin-domifa-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url admin-domifa-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            admin-domifa.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div
+          style={
+            {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+              "whiteSpace": "nowrap",
+              "width": "95%",
+            }
+          }
+        >
+          <a
+            href="/url/template-fabrique-social-gouv-fr"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            title="Voir les détails de l'url template-fabrique-social-gouv-fr"
+          >
+            <i
+              className="fr-icon-search-line fr-icon--sm"
+            />
+             
+            template.fabrique.social.gouv.fr
+          </a>
+        </div>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

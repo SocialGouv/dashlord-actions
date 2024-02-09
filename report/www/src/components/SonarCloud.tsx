@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
 
 import { Panel } from "./Panel";
-import { Grade } from "./Grade";
+import { GradeBadge } from "./GradeBadge";
 
 type SonarCloudReportProps = { data: SonarCloudReport };
 
@@ -14,30 +14,30 @@ const columns = [
     render: (result) => {
       if (result.name === "qualityGateStatus") {
         if (result.value === "ERROR") {
-          return <Grade grade="F" />;
+          return <GradeBadge label="F" />;
         } else if (result.value === "OK") {
-          return <Grade grade="A" />;
+          return <GradeBadge label="A" />;
         }
         return;
       }
       if (result.name === "vulnerabilities") {
         if (result.value > 10) {
-          return <Grade grade="F" />;
+          return <GradeBadge label="F" />;
         } else if (result.value > 5) {
-          return <Grade grade="C" />;
+          return <GradeBadge label="C" />;
         } else if (result.value > 1) {
-          return <Grade grade="B" />;
+          return <GradeBadge label="B" />;
         }
-        return <Grade grade="A" />;
+        return <GradeBadge label="A" />;
       }
       if (result.value > 100) {
-        return <Grade grade="F" />;
+        return <GradeBadge label="F" />;
       } else if (result.value > 50) {
-        return <Grade grade="D" />;
+        return <GradeBadge label="D" />;
       } else if (result.value > 0) {
-        return <Grade grade="B" />;
+        return <GradeBadge label="B" />;
       }
-      return <Grade grade="A" />;
+      return <GradeBadge label="A" />;
     },
   },
   {
@@ -59,6 +59,14 @@ export const SonarCloud: React.FC<SonarCloudReportProps> = ({ data }) => (
           ([key, value]) => ({ name: key, value }),
           []
         );
+        const tableData = [
+          columns.map((col) => col.name),
+          ...repoData.map((repo) => {
+            return columns.map((col) =>
+              col.render ? col.render(repo) : repo[col.name]
+            );
+          }),
+        ];
         return (
           <Panel
             key={report.repo}
@@ -70,7 +78,7 @@ export const SonarCloud: React.FC<SonarCloudReportProps> = ({ data }) => (
             urlText="Rapport détaillé"
             isExternal
           >
-            <Table columns={columns} data={repoData} rowKey="repo" />
+            <Table data={tableData} />
           </Panel>
         );
       })) ||

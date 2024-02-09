@@ -1,0 +1,219 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render Intro 1`] = `
+<div>
+  <div
+    class="fr-callout fr-mb-3w"
+    id="fr-callout-:r0:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      DashLord compile les données techniques issues de différents outils open-source.
+      <br />
+      Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
+      <br />
+      Vous pouvez
+       
+      <a
+        href="https://github.com/socialgouv/dashlord/issues/new"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        soumettre de nouvelles URLs, proposer des corrections
+      </a>
+       
+      ou
+       
+      <a
+        href="https://github.com/orgs/SocialGouv/projects/13"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        consulter la roadmap
+      </a>
+      .
+      <br />
+      <br />
+      <button
+        class="fr-btn"
+        id="fr-button-:r1:"
+      >
+        <a
+          href="/"
+        >
+          Accéder au tableau de bord
+        </a>
+      </button>
+       
+    </p>
+  </div>
+  <h2>
+    Les outils utilisés dans DashLord
+  </h2>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r2:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      OWASP Zed Attack Proxy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r3:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan de vulnérabilités passif ZAP OWASP "baseline" qui permet de détecter des risques de sécurité de base.
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:r4:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.zaproxy.org/docs/docker/baseline-scan/"
+      id="fr-button-:r5:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tools config > Should render Intro with limited tools 1`] = `
+<div>
+  <div
+    class="fr-callout fr-mb-3w"
+    id="fr-callout-:r6:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      DashLord compile les données techniques issues de différents outils open-source.
+      <br />
+      Cette évaluation ne remplace en aucun cas une expertise manuelle, et seule la page d'accueil du site est ici évaluée.
+      <br />
+      Vous pouvez
+       
+      <a
+        href="https://github.com/socialgouv/dashlord/issues/new"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        soumettre de nouvelles URLs, proposer des corrections
+      </a>
+       
+      ou
+       
+      <a
+        href="https://github.com/orgs/SocialGouv/projects/13"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        consulter la roadmap
+      </a>
+      .
+      <br />
+      <br />
+      <button
+        class="fr-btn"
+        id="fr-button-:r7:"
+      >
+        <a
+          href="/"
+        >
+          Accéder au tableau de bord
+        </a>
+      </button>
+       
+    </p>
+  </div>
+  <h2>
+    Les outils utilisés dans DashLord
+  </h2>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r8:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      OWASP Zed Attack Proxy
+      <p
+        class="fr-badge fr-badge--success fr-ml-1w"
+        id="fr-badge-:r9:"
+      >
+        security
+      </p>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <br />
+      <p>
+        Scan de vulnérabilités passif ZAP OWASP "baseline" qui permet de détecter des risques de sécurité de base.
+      </p>
+      <br />
+      <div
+        class="fr-alert fr-alert--info fr-mb-3w"
+        id="fr-alert-:ra:"
+      >
+        <h3
+          class="fr-alert__title"
+        />
+        <div>
+          <p>
+            L'audit complet avec les recommandations de correction est disponible pour chaque URL
+          </p>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://www.zaproxy.org/docs/docker/baseline-scan/"
+      id="fr-button-:rb:"
+      target="_blank"
+    >
+      En savoir plus
+    </a>
+  </div>
+</div>
+`;

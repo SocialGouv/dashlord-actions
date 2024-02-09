@@ -9,7 +9,6 @@ import {
   Legend,
 } from "recharts";
 
-import { Callout, CalloutTitle } from "@dataesr/react-dsfr";
 import uniq from "lodash.uniq";
 
 import Link from "next/link";
@@ -22,11 +21,11 @@ type UsageChartProps = { data: any };
 
 const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
   <BarChart
-    width={300}
-    height={200}
+    width={600}
+    height={300}
     data={data}
     margin={{
-      top: 5,
+      top: 30,
       right: 30,
       left: 20,
       bottom: 5,
@@ -37,7 +36,7 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => (
     <YAxis />
     <Tooltip />
     <Legend />
-    <Bar dataKey="count" fill="var(--blue-france)" />
+    <Bar dataKey="count" fill="var(--artwork-major-blue-ecume)" />
   </BarChart>
 );
 
@@ -116,9 +115,7 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
   const categories = getCategoriesByUrl(report);
   return (
     <>
-      <Callout hasInfoIcon={false} className="fr-mb-3w">
-        <CalloutTitle as="h1">Wappalyzer : technologies détectées</CalloutTitle>
-      </Callout>
+      <h1>Wappalyzer : technologies détectées</h1>
       <div className={styles.columns}>
         {categories.map((category) => (
           <Panel key={category.name} title={category.name}>

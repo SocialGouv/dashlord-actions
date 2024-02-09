@@ -1,10 +1,12 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
 
-import Badge from "./Badge";
+import Badge from "@codegouvfr/react-dsfr/Badge";
 import { Panel } from "./Panel";
 import { Grade } from "./Grade";
+import { GradeBadge } from "./GradeBadge";
+import { fr } from "@codegouvfr/react-dsfr";
 
 const orderBySeverity = (a: CodescanAlert, b: CodescanAlert) => {
   // high criticity first
@@ -20,10 +22,10 @@ const CodescanBadge = (alert: CodescanAlert) => {
     severity === "warning"
       ? "warning"
       : severity === "error"
-      ? "danger"
+      ? "error"
       : "info";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge className="w-100" severity={variant}>
       {severity}
     </Badge>
   );
@@ -56,6 +58,18 @@ const columns = [
 export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
   const alerts = data && data.alerts.length > 0 ? data.alerts : [];
   alerts.sort(orderBySeverity);
+
+  const tableData = [
+    columns.map((col) => col.name),
+    ...alerts
+      .filter(
+        (alert, i, all) =>
+          !all.slice(i + 1).find((a) => a.rule.id === alert.rule.id)
+      )
+      .map((alert) => {
+        return columns.map((col) => col.render(alert));
+      }),
+  ];
   return (
     (alerts.length > 0 && (
       <Panel
@@ -70,10 +84,10 @@ export const Codescan: React.FC<CodescanProps> = ({ data, url }) => {
           </span>
         }
       >
-        <h3>
-          Scan Summary : <Grade small grade={data.grade} />
-        </h3>
-        <Table columns={columns} data={alerts} rowKey="rule" />
+        <div className={fr.cx("fr-text--bold")}>
+          Scan Summary : <GradeBadge label={data.grade} />
+        </div>
+        <Table data={tableData} />
       </Panel>
     )) ||
     null

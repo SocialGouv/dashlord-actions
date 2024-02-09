@@ -1,7 +1,9 @@
 import * as React from "react";
 
-import { Alert, Table } from "@dataesr/react-dsfr";
-import Badge from "./Badge";
+import Table from "@codegouvfr/react-dsfr/Table";
+import Alert from "@codegouvfr/react-dsfr/Alert";
+import Badge from "@codegouvfr/react-dsfr/Badge";
+
 import { Panel } from "./Panel";
 
 const levels = "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL".split(",");
@@ -20,10 +22,10 @@ const TrivyBadge = (vuln: Vulnerability) => {
       : severity === "HIGH"
       ? "warning"
       : severity === "CRITICAL"
-      ? "danger"
+      ? "error"
       : "info";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge className="w-100" severity={variant}>
       {vuln.Severity}
     </Badge>
   );
@@ -81,39 +83,47 @@ export const Trivy: React.FC<TrivyProps> = ({ data, url }) => {
                 >
                   <h5>{image.Target}</h5>
                   {vulnsCount ? (
-                    image.Results.map(
-                      (result) =>
+                    image.Results.map((result) => {
+                      if (
                         result.Vulnerabilities &&
-                        result.Vulnerabilities.length && (
+                        result.Vulnerabilities.length
+                      ) {
+                        const vulns = result.Vulnerabilities?.sort(
+                          orderBySeverity
+                        )
+                          .filter(filterByKey("VulnerabilityID"))
+                          .slice(0, MAX_ROWS);
+                        const tableData = [
+                          columns.map((col) => col.name),
+                          ...vulns.map((vuln) => {
+                            return columns.map((col) =>
+                              col.render ? col.render(vuln) : vuln[col.name]
+                            );
+                          }),
+                        ];
+                        return (
                           <div key={result.Target}>
                             <h6>
                               {result.Target} ({result.Type})
                             </h6>
                             {result.Vulnerabilities.length > MAX_ROWS && (
                               <Alert
-                                type="error"
+                                severity="error"
                                 title=""
                                 description={`Plus de ${MAX_ROWS} vulnérabilités détectées, vérifiez le rapport Trivy`}
                               />
                             )}
-                            <Table
-                              columns={columns}
-                              data={result.Vulnerabilities?.sort(
-                                orderBySeverity
-                              )
-                                .filter(filterByKey("VulnerabilityID"))
-                                .slice(0, MAX_ROWS)}
-                              rowKey="VulnerabilityID"
-                            />
+                            <Table data={tableData} />
                             <br />
                             <br />
                             <hr />
                           </div>
-                        )
-                    )
+                        );
+                      }
+                    })
                   ) : (
                     <Alert
-                      type="success"
+                      severity="success"
                       title=""
                       description="Aucune vulnérabilité détectée par Trivy"
                     />

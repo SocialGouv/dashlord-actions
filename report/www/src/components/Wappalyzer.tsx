@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
 
 import { Panel } from "./Panel";
 
@@ -25,10 +25,19 @@ const columns = [
   },
 ];
 
-export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) =>
-  (data && data.technologies && data.technologies.length && (
-    <Panel title="Wappalyzer" info="Détection des technologies utilisées">
-      <Table rowKey="name" columns={columns} data={data.technologies} />
-    </Panel>
-  )) ||
-  null;
+export const Wappalyzer: React.FC<WappalyzerProps> = ({ data }) => {
+  const tableData = [
+    columns.map((col) => col.name),
+    ...data.technologies.map((tech) =>
+      columns.map((col) => (col.render ? col.render(tech) : tech[col.name]))
+    ),
+  ];
+  return (
+    (data && data.technologies && data.technologies.length && (
+      <Panel title="Wappalyzer" info="Détection des technologies utilisées">
+        <Table data={tableData} />
+      </Panel>
+    )) ||
+    null
+  );
+};

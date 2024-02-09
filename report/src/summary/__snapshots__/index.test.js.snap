@@ -30,5 +30,7 @@ Object {
   "trackersGrade": "A",
   "uptime": 99.909,
   "uptimeGrade": "A",
+  "zapCount": 7,
+  "zapGrade": "D",
 }
 `;

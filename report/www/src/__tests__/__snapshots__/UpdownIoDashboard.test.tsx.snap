@@ -1,0 +1,1871 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render UpdownIo 1`] = `
+<div>
+  <h1>
+    Disponibilité et temps de réponse
+  </h1>
+  Consulter le tableau de bord updown.io :
+   
+  <a
+    class="fr-link"
+    href="https://updown.io/p/8c6x8"
+    target="_blank"
+  >
+    https://updown.io/p/8c6x8
+  </a>
+  <br />
+  <br />
+  <div
+    class="fr-callout"
+    id="fr-callout-:r0:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/api-gouv-fr"
+        >
+          api.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--info fr-badge--no-icon"
+          id="fr-badge-:r1:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 21/1/2024"
+          />
+          16 jours
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            666ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r2:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              29/03/2024
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/z6jn"
+      id="fr-button-:r3:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r4:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <a
+        href="/url/api-trackdechets-beta-gouv-fr"
+      >
+        api.trackdechets.beta.gouv.fr
+      </a>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-alert fr-alert--info fr-mt-3w"
+        id="fr-alert-:r5:"
+      >
+        <h3
+          class="fr-alert__title"
+        >
+          Données absentes
+        </h3>
+        <p>
+          Aucune donnée updown.io associée
+        </p>
+      </div>
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r6:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/annuaire-entreprises-data-gouv-fr"
+        >
+          annuaire-entreprises.data.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--info fr-badge--no-icon"
+          id="fr-badge-:r7:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 21/1/2024"
+          />
+          16 jours
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            578ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r8:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              06/04/2024
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/futp"
+      id="fr-button-:r9:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:ra:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/acceslibre-beta-gouv-fr"
+        >
+          acceslibre.beta.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--info fr-badge--no-icon"
+          id="fr-badge-:rb:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 21/1/2024"
+          />
+          16 jours
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            0.995
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            607ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:rc:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              10/03/2024
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/by0u"
+      id="fr-button-:rd:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:re:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/aidantsconnect-beta-gouv-fr"
+        >
+          aidantsconnect.beta.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--info fr-badge--no-icon"
+          id="fr-badge-:rf:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 21/1/2024"
+          />
+          16 jours
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            0.91
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            839ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:rg:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              07/03/2024
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/tnjw"
+      id="fr-button-:rh:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:ri:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/archifiltre-fabrique-social-gouv-fr"
+        >
+          archifiltre.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:rj:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            65ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:rk:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              05/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/egg2"
+      id="fr-button-:rl:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rm:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/index-egapro-travail-gouv-fr"
+        >
+          index-egapro.travail.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:rn:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            53ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:ro:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              01/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/5o23"
+      id="fr-button-:rp:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:rq:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/domifa-fabrique-social-gouv-fr"
+        >
+          domifa.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:rr:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            99.818%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            66ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:rs:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              01/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/t6x4"
+      id="fr-button-:rt:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:ru:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/www-fabrique-social-gouv-fr"
+        >
+          www.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:rv:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            99.843%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            71ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r10:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              18/07/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/rt57"
+      id="fr-button-:r11:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r12:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/pjm-social-gouv-fr"
+        >
+          pjm.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r13:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            62ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r14:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              21/06/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/bv33"
+      id="fr-button-:r15:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r16:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/tumeplay-fabrique-social-gouv-fr"
+        >
+          tumeplay.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r17:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            99.993%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            135ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r18:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              21/06/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/yp6o"
+      id="fr-button-:r19:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1a:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/1000jours-fabrique-social-gouv-fr"
+        >
+          1000jours.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r1b:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            72ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r1c:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              04/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/3g81"
+      id="fr-button-:r1d:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1e:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/1000jours-blues-fabrique-social-gouv-fr"
+        >
+          1000jours-blues.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r1f:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 25/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            80ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r1g:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              11/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/k3d1"
+      id="fr-button-:r1h:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1i:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/monpsy-sante-gouv-fr"
+        >
+          monpsy.sante.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r1j:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            100%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            68ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r1k:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              18/07/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/na4t"
+      id="fr-button-:r1l:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1m:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/ressourcerie-fabrique-social-gouv-fr"
+        >
+          ressourcerie.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r1n:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            99.767%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            71ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r1o:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              10/08/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/ko71"
+      id="fr-button-:r1p:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1q:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <a
+        href="/url/admin-domifa-fabrique-social-gouv-fr"
+      >
+        admin-domifa.fabrique.social.gouv.fr
+      </a>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-alert fr-alert--info fr-mt-3w"
+        id="fr-alert-:r1r:"
+      >
+        <h3
+          class="fr-alert__title"
+        >
+          Données absentes
+        </h3>
+        <p>
+          Aucune donnée updown.io associée
+        </p>
+      </div>
+       
+    </p>
+  </div>
+  <div
+    class="fr-callout"
+    id="fr-callout-:r1s:"
+  >
+    <h3
+      class="fr-callout__title"
+    >
+      <div>
+        <a
+          href="/url/template-fabrique-social-gouv-fr"
+        >
+          template.fabrique.social.gouv.fr
+        </a>
+        <span
+          class="fr-badge fr-badge--error fr-badge--no-icon"
+          id="fr-badge-:r1t:"
+          style="vertical-align: middle; padding-left: 10px;"
+        >
+          <i
+            class="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+            title="Mis à jour le 22/5/2022"
+          />
+          plus d’un an
+        </span>
+      </div>
+    </h3>
+    <p
+      class="fr-callout__text"
+    >
+       
+      <div
+        class="fr-grid-row fr-grid-row--gutters fr-mt-3w"
+      >
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Taux de disponibilité sur un mois glissant
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            99.915%
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            APDEX: Application Performance Index
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            1
+          </div>
+        </div>
+        <div
+          class="_metric_dd33f8 fr-col-4"
+        >
+          <div />
+          <div
+            class="_metricTitle_dd33f8"
+          >
+            Temps de réponse
+          </div>
+          <div
+            class="_metricValue_dd33f8"
+          >
+            71ms
+          </div>
+        </div>
+      </div>
+      <div
+        class="_left_dd33f8"
+      >
+        <div
+          class="fr-mb-3w"
+        >
+          <div
+            style="padding: 10px;"
+          >
+            <br />
+            <br />
+            Le certificat SSL est
+             
+            <p
+              class="fr-badge fr-badge--success fr-badge--no-icon"
+              id="fr-badge-:r1u:"
+              style="font-size: 1em; width: 100px; text-align: center; display: inline-block;"
+            >
+              valide
+            </p>
+             
+            et expire le
+             
+            <strong>
+              27/06/2022
+            </strong>
+          </div>
+        </div>
+      </div>
+       
+    </p>
+    <a
+      class="fr-btn"
+      href="https://updown.io/4h15"
+      id="fr-button-:r1v:"
+      target="_blank"
+    >
+      Statistiques détaillées
+    </a>
+  </div>
+</div>
+`;

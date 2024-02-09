@@ -1,17 +1,22 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
+import Table from "@codegouvfr/react-dsfr/Table";
 
 import { Panel } from "./Panel";
 
 type Report404Props = { data: Wget404Report };
 
-const columns = [{ name: "link", label: "URL" }];
-
-export const Report404: React.FC<Report404Props> = ({ data }) =>
-  (data && data.length && (
-    <Panel title="Erreurs 404" info="Pages introuvables">
-      <Table rowKey="link" columns={columns} data={data} />
-    </Panel>
-  )) ||
-  null;
+export const Report404: React.FC<Report404Props> = ({ data }) => {
+  const tableData = data && [
+    ["destination"],
+    ...data.map((url2) => [url2.link]),
+  ];
+  return (
+    (data && data.length && (
+      <Panel title="Erreurs 404" info="Pages introuvables">
+        <Table data={tableData} />
+      </Panel>
+    )) ||
+    null
+  );
+};

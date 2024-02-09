@@ -11,7 +11,7 @@ runs:
   steps:
     - uses: actions/setup-node@v3
       with:
-        node-version: "14"
+        node-version: "20"
     - name: Build
       id: build
       shell: bash
@@ -35,7 +35,7 @@ runs:
         cd www
         yarn
         export NODE_OPTIONS=--max-old-space-size=8192 # prevents heap out of memory ?
-        CI=false yarn build && yarn export
+        CI=false yarn build
         # prevent gh-pages jekyll build
         touch out/.nojekyll
         # save report in workspace for artifact

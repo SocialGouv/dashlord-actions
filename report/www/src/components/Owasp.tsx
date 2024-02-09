@@ -1,8 +1,10 @@
 import * as React from "react";
 
-import { Table } from "@dataesr/react-dsfr";
-import Badge from "./Badge";
+import Table from "@codegouvfr/react-dsfr/Table";
+import Badge from "@codegouvfr/react-dsfr/Badge";
+
 import { Panel } from "./Panel";
+import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 
 const orderBySeverity = (a: ZapReportSiteAlert, b: ZapReportSiteAlert) => {
   // high criticity first
@@ -24,10 +26,10 @@ const OwaspBadge = (row: ZapReportSiteAlert) => {
       : severity === "2"
       ? "warning"
       : severity === "3"
-      ? "danger"
+      ? "error"
       : "info";
   return (
-    <Badge className="w-100" variant={variant}>
+    <Badge className="w-100" severity={variant}>
       {row.riskdesc}
     </Badge>
   );
@@ -48,16 +50,32 @@ export const Owasp: React.FC<OwaspProps> = ({ data, url }) => {
   const alerts =
     (data && data.site && data.site.flatMap((site) => site.alerts)) || [];
   alerts.sort(orderBySeverity);
+  const tableData = [
+    columns.map((col) => col.name),
+    ...alerts.map((alert) => {
+      return columns.map((col) =>
+        col.render ? col.render(alert) : alert[col.name]
+      );
+    }),
+  ];
   return (
     (alerts.length && (
       <Panel
         isExternal
-        title="Scan OWASP"
+        title={
+          <div>
+            Scan OWASP
+            <BadgeUpdatedAt
+              date={data["@generated"]}
+              style={{ verticalAlign: "middle", paddingLeft: 10 }}
+            />
+          </div>
+        }
         url={url}
         urlText="Rapport détaillé"
         info="Scan passif de vulnérabiliés ZAP OWASP baseline"
       >
-        <Table columns={columns} data={alerts} rowKey="name" />
+        <Table data={tableData} />
       </Panel>
     )) ||
     null

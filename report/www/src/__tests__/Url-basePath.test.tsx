@@ -1,12 +1,10 @@
-import React from "react";
-import path from "path";
 import * as renderer from "react-test-renderer";
+import { vi } from "vitest";
 
-jest.mock("../components/Gauge", () => ({
-  Gauge: () => <div>gauge mock</div>,
-}));
-jest.useFakeTimers("modern");
-jest.setSystemTime(new Date("2021-04-06").getTime());
+const date = new Date(2021, 3, 6);
+
+vi.useFakeTimers();
+vi.setSystemTime(date);
 
 const TEST_URL = "https://www.fabrique.social.gouv.fr";
 
@@ -20,11 +18,7 @@ afterAll(() => {
 });
 
 it("Should render Url with NEXT_PUBLIC_BASE_PATH", async () => {
-  const report2 = {
-    ...report,
-    screenshot: true,
-  };
-  const props = { report: report2, url: TEST_URL };
+  const props = { report, url: TEST_URL };
   const { Url } = await import("../components/Url");
   const tree = renderer.create(<Url {...props} />);
   const img = tree.root.findByType("img");

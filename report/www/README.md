@@ -1,6 +1,6 @@
 # dashlord report website
 
-This is a Next.js static website that produces the Dashlord report based on some input data.
+This is a Next.js static website that produces the DashLord report based on some input data.
 
 The data is generated with the `@socialgouv/dashlord-actions/report` action.
 

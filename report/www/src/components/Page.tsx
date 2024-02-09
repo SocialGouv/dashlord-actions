@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Alert } from "@dataesr/react-dsfr";
+import Alert from "@codegouvfr/react-dsfr/Alert";
 
 type PageProps = { data: PageReport; url: string; uri?: string };
 
@@ -15,7 +15,7 @@ export const Page: React.FC<PageProps> = ({ data, url, uri }) => {
   if (!gradeMessage) {
     return (
       <Alert
-        type="error"
+        severity="error"
         title=""
         description={`La page n'a pas été détectée! Ajoutez-la sur ${url}/${
           data.uri || uri
@@ -26,7 +26,7 @@ export const Page: React.FC<PageProps> = ({ data, url, uri }) => {
 
   return (
     <Alert
-      type="success"
+      severity="success"
       title=""
       description={
         <>

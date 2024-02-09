@@ -1,12 +1,13 @@
-import dashlordConfig from '@/config.json';
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const PageIntro: NextPage = () => {
+import dashlordConfig from "@/config.json";
+
+const Page404: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{dashlordConfig.title} - Page non trouvée</title>
+        <title>Page non trouvée - {dashlordConfig.title}</title>
       </Head>
       <br />
       <br />
@@ -23,4 +24,4 @@ const PageIntro: NextPage = () => {
   );
 };
 
-export default PageIntro;
+export default Page404;

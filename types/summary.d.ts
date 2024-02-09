@@ -40,4 +40,6 @@ type UrlReportSummary = {
   ecoindexGrade?: string;
   sonarcloudGrade?: string;
   dsfrGrade?: string;
+  zapCount?: number;
+  zapGrade?: string;
 };
