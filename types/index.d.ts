@@ -48,6 +48,7 @@ type DashLordConfig = {
   description: string;
   footer: string;
   tools?: DashlordTool[] | Record<DashlordTool, boolean>;
+  columns?: Record<DashlordTool, boolean>;
   urls: UrlConfig[];
   marianne?: boolean;
   loginUrl?: string;

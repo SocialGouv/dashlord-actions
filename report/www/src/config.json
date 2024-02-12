@@ -38,6 +38,9 @@
     "budget_page": true,
     "github_repository": true
   },
+  "columns": {
+    "zap": false
+  },
   "urls": [
     {
       "url": "https://api.gouv.fr",
