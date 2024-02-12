@@ -10,6 +10,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { isToolEnabled, smallUrl, slugifyUrl } from "../utils";
 import { getLatestPhase } from "./BetagouvInfo";
 import { GradeBadge, IconUnknown } from "./GradeBadge";
+import dashlordConfig from "@/config.json";
 
 type DashboardProps = { report: DashLordReport };
 
@@ -53,6 +54,15 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     },
   ];
 
+  const isColumnEnabled = (tool: DashlordTool) => {
+    const isColumnDisabled =
+      dashlordConfig.columns &&
+      typeof dashlordConfig.columns[tool] !== "undefined"
+        ? dashlordConfig.columns[tool] === false
+        : false;
+    return isToolEnabled(tool) && !isColumnDisabled;
+  };
+
   const phaseSeverities = {
     accélération: "info",
     construction: "warning",
@@ -61,7 +71,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     succès: "success",
   };
 
-  if (isToolEnabled("betagouv")) {
+  if (isColumnEnabled("betagouv")) {
     columns.push({
       ...defaultColumnsProps,
       field: "beta-phase",
@@ -96,7 +106,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
       },
     });
 
-    if (isToolEnabled("declaration-a11y")) {
+    if (isColumnEnabled("declaration-a11y")) {
       columns.push({
         ...defaultColumnsProps,
         field: "declaration-a11y",
@@ -133,7 +143,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     }
   }
 
-  if (isToolEnabled("github_repository")) {
+  if (isColumnEnabled("github_repository")) {
     columns.push({
       ...defaultColumnsProps,
       field: "github_repository",
@@ -157,7 +167,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("declaration-rgpd")) {
+  if (isColumnEnabled("declaration-rgpd")) {
     columns.push({
       ...defaultColumnsProps,
       field: "declaration-rgpd-ml",
@@ -243,7 +253,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("dsfr")) {
+  if (isColumnEnabled("dsfr")) {
     columns.push({
       ...defaultColumnsProps,
       field: "dsfr",
@@ -275,7 +285,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("ecoindex")) {
+  if (isColumnEnabled("ecoindex")) {
     columns.push({
       ...defaultColumnsProps,
       field: "ecoindex",
@@ -307,7 +317,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("lighthouse")) {
+  if (isColumnEnabled("lighthouse")) {
     columns = columns.concat([
       {
         ...defaultColumnsProps,
@@ -416,7 +426,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     ]);
   }
 
-  if (isToolEnabled("testssl")) {
+  if (isColumnEnabled("testssl")) {
     columns.push({
       ...defaultColumnsProps,
       field: "testssl",
@@ -466,7 +476,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("http")) {
+  if (isColumnEnabled("http")) {
     columns.push({
       ...defaultColumnsProps,
       field: "http",
@@ -503,7 +513,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("updownio")) {
+  if (isColumnEnabled("updownio")) {
     columns.push({
       ...defaultColumnsProps,
       field: "updownio",
@@ -567,7 +577,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("nuclei")) {
+  if (isColumnEnabled("nuclei")) {
     columns.push({
       ...defaultColumnsProps,
       field: "nuclei",
@@ -595,7 +605,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("dependabot")) {
+  if (isColumnEnabled("dependabot")) {
     columns.push({
       ...defaultColumnsProps,
       field: "dependabot",
@@ -625,7 +635,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("codescan")) {
+  if (isColumnEnabled("codescan")) {
     columns.push({
       ...defaultColumnsProps,
       field: "codescan",
@@ -654,7 +664,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("nmap")) {
+  if (isColumnEnabled("nmap")) {
     columns.push({
       ...defaultColumnsProps,
       field: "nmap",
@@ -715,7 +725,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("thirdparties")) {
+  if (isColumnEnabled("thirdparties")) {
     columns.push({
       ...defaultColumnsProps,
       field: "thirdparties",
@@ -783,7 +793,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("stats")) {
+  if (isColumnEnabled("stats")) {
     columns.push({
       ...defaultColumnsProps,
       field: "stats",
@@ -818,7 +828,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("budget_page")) {
+  if (isColumnEnabled("budget_page")) {
     columns.push({
       ...defaultColumnsProps,
       field: "budget",
@@ -854,7 +864,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("404")) {
+  if (isColumnEnabled("404")) {
     columns.push({
       ...defaultColumnsProps,
       field: "404",
@@ -887,7 +897,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("trivy")) {
+  if (isColumnEnabled("trivy")) {
     columns.push({
       ...defaultColumnsProps,
       field: "trivy",
@@ -919,7 +929,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("sonarcloud")) {
+  if (isColumnEnabled("sonarcloud")) {
     columns.push({
       ...defaultColumnsProps,
       field: "sonarcloud",
@@ -952,7 +962,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
     });
   }
 
-  if (isToolEnabled("zap")) {
+  if (isColumnEnabled("zap")) {
     columns.push({
       ...defaultColumnsProps,
       field: "zap",
