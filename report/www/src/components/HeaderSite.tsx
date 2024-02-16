@@ -26,6 +26,38 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
 
   const { t } = useTranslation();
 
+  const betaStartups =
+    (isToolEnabled("betagouv") &&
+      sortedReport
+        .filter((url) => url.betaId)
+        .filter(
+          (url, i, all) =>
+            !all
+              .map((u) => u.betaId)
+              .slice(i + 1)
+              .includes(url.betaId)
+        )
+        .map((url) => url.betaId)
+        .sort()) ||
+    [];
+
+  const views = [
+    isToolEnabled("wappalyzer") && {
+      linkProps: {
+        href: "/wappalyzer",
+      },
+      text: t("wappalyzer"),
+      isActive: router.asPath === "/wappalyzer/",
+    },
+    isToolEnabled("updownio") && {
+      linkProps: {
+        href: "/updownio",
+      },
+      text: t("updownio"),
+      isActive: router.asPath === "/updownio/",
+    },
+  ].filter(Boolean);
+
   return (
     <>
       <Header
@@ -76,7 +108,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             },
             isActive: router.asPath === "/",
           },
-          {
+          categories.length > 1 && {
             text: t("categories"),
             menuLinks: [
               ...categories.map((category) => ({
@@ -102,53 +134,21 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             ],
             isActive: router.asPath.startsWith("/tag/"),
           },
-          isToolEnabled("betagouv") && {
+          betaStartups.length > 1 && {
             text: t("startups"),
-            menuLinks: [
-              ...sortedReport
-                .filter((url) => url.betaId)
-                .filter(
-                  (url, i, all) =>
-                    !all
-                      .map((u) => u.betaId)
-                      .slice(i + 1)
-                      .includes(url.betaId)
-                )
-                .map((url) => url.betaId)
-                .sort()
-                .map((startup) => {
-                  return {
-                    linkProps: {
-                      href: `/startup/${startup}`,
-                    },
-                    text: startup,
-                    isActive: router.asPath === `/startup/${startup}`,
-                  };
-                }),
-            ],
+            menuLinks: betaStartups.map((startup) => ({
+              linkProps: {
+                href: `/startup/${startup}`,
+              },
+              text: startup,
+              isActive: router.asPath === `/startup/${startup}`,
+            })),
             isActive: router.asPath.startsWith("/startup/"),
           },
-
-          {
+          views.length && {
             text: "Vues",
-            menuLinks: [
-              isToolEnabled("wappalyzer") && {
-                linkProps: {
-                  href: "/wappalyzer",
-                },
-                text: t("wappalyzer"),
-                isActive: router.asPath === "/wappalyzer/",
-              },
-              isToolEnabled("updownio") && {
-                linkProps: {
-                  href: "/updownio",
-                },
-                text: t("updownio"),
-                isActive: router.asPath === "/updownio/",
-              },
-            ],
+            menuLinks: views,
           },
-
           {
             text: t("about"),
             linkProps: {
@@ -156,7 +156,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
             },
             isActive: router.asPath === "/about/",
           },
-        ]}
+        ].filter(Boolean)}
         serviceTagline={dashlordConfig.description}
         serviceTitle={dashlordConfig.title}
       />
