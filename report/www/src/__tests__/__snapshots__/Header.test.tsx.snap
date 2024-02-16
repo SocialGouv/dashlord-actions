@@ -402,45 +402,11 @@ exports[`Should render HeaderSite 1`] = `
                 class="fr-nav__btn"
                 id="fr-header-main-navigation-button-2"
               >
-                Incubateurs
-              </button>
-            </li>
-            <li
-              class="fr-nav__item"
-            >
-              <button
-                aria-controls="fr-header-main-navigation-menu-3"
-                aria-expanded="false"
-                class="fr-nav__btn"
-                id="fr-header-main-navigation-button-3"
-              />
-            </li>
-            <li
-              class="fr-nav__item"
-            >
-              <button
-                aria-controls="fr-header-main-navigation-menu-4"
-                aria-expanded="false"
-                class="fr-nav__btn"
-                id="fr-header-main-navigation-button-4"
-              >
-                Startups
-              </button>
-            </li>
-            <li
-              class="fr-nav__item"
-            >
-              <button
-                aria-controls="fr-header-main-navigation-menu-5"
-                aria-expanded="false"
-                class="fr-nav__btn"
-                id="fr-header-main-navigation-button-5"
-              >
                 Vues
               </button>
               <div
                 class="fr-menu fr-collapse"
-                id="fr-header-main-navigation-menu-5"
+                id="fr-header-main-navigation-menu-2"
               >
                 <ul
                   class="fr-menu__list"
@@ -449,7 +415,7 @@ exports[`Should render HeaderSite 1`] = `
                     <a
                       class="fr-nav__link"
                       href="/wappalyzer"
-                      id="fr-header-main-navigation-menu-5-link-Technologies_wappalyzer_-0"
+                      id="fr-header-main-navigation-menu-2-link-Technologies_wappalyzer_-0"
                     >
                       Technologies (wappalyzer)
                     </a>
@@ -458,7 +424,7 @@ exports[`Should render HeaderSite 1`] = `
                     <a
                       class="fr-nav__link"
                       href="/updownio"
-                      id="fr-header-main-navigation-menu-5-link-Disponibilit__updown_io_-1"
+                      id="fr-header-main-navigation-menu-2-link-Disponibilit__updown_io_-1"
                     >
                       Disponibilité (updown.io)
                     </a>
@@ -472,7 +438,7 @@ exports[`Should render HeaderSite 1`] = `
               <a
                 class="fr-nav__link"
                 href="/about"
-                id="fr-header-main-navigation-link-6"
+                id="fr-header-main-navigation-link-3"
               >
                 A propos
               </a>
