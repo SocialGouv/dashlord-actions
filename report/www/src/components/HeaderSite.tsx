@@ -9,6 +9,7 @@ import { createComponentI18nApi } from "@codegouvfr/react-dsfr/i18n";
 
 import dashlordConfig from "@/config.json";
 import { sortByKey, isToolEnabled } from "../utils";
+import { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation";
 
 type HeaderSiteProps = {
   report: DashLordReport;
@@ -58,6 +59,72 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
     },
   ].filter(Boolean);
 
+  // @ts-ignore ??? TODO
+  const navigation: MainNavigationProps.Item[] = [
+    {
+      text: t("introduction"),
+      linkProps: {
+        href: "/intro",
+      },
+      isActive: router.asPath === "/intro/",
+    },
+    {
+      text: t("dashboard"),
+      linkProps: {
+        href: "/",
+      },
+      isActive: router.asPath === "/",
+    },
+    categories.length > 1 && {
+      text: t("categories"),
+      menuLinks: [
+        ...categories.map((category) => ({
+          linkProps: {
+            href: `/category/${category}`,
+          },
+          text: category,
+          isActive: router.asPath === `/category/${category}`,
+        })),
+      ],
+      isActive: router.asPath.startsWith("/category/"),
+    },
+    tags.length > 1 && {
+      text: t("tags"),
+      menuLinks: [
+        ...tags.map((tag) => ({
+          linkProps: {
+            href: `/tag/${tag}`,
+          },
+          text: tag,
+          isActive: router.asPath === `/tag/${tag}`,
+        })),
+      ],
+      isActive: router.asPath.startsWith("/tag/"),
+    },
+    betaStartups.length > 1 && {
+      text: t("startups"),
+      menuLinks: betaStartups.map((startup) => ({
+        linkProps: {
+          href: `/startup/${startup}`,
+        },
+        text: startup,
+        isActive: router.asPath === `/startup/${startup}`,
+      })),
+      isActive: router.asPath.startsWith("/startup/"),
+    },
+    views.length && {
+      text: "Vues",
+      menuLinks: views,
+    },
+    {
+      text: t("about"),
+      linkProps: {
+        href: "/about",
+      },
+      isActive: router.asPath === "/about/",
+    },
+  ].filter(Boolean);
+
   return (
     <>
       <Header
@@ -93,70 +160,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
           },
           headerFooterDisplayItem,
         ]}
-        navigation={[
-          {
-            text: t("introduction"),
-            linkProps: {
-              href: "/intro",
-            },
-            isActive: router.asPath === "/intro/",
-          },
-          {
-            text: t("dashboard"),
-            linkProps: {
-              href: "/",
-            },
-            isActive: router.asPath === "/",
-          },
-          categories.length > 1 && {
-            text: t("categories"),
-            menuLinks: [
-              ...categories.map((category) => ({
-                linkProps: {
-                  href: `/category/${category}`,
-                },
-                text: category,
-                isActive: router.asPath === `/category/${category}`,
-              })),
-            ],
-            isActive: router.asPath.startsWith("/category/"),
-          },
-          tags.length > 1 && {
-            text: t("tags"),
-            menuLinks: [
-              ...tags.map((tag) => ({
-                linkProps: {
-                  href: `/tag/${tag}`,
-                },
-                text: tag,
-                isActive: router.asPath === `/tag/${tag}`,
-              })),
-            ],
-            isActive: router.asPath.startsWith("/tag/"),
-          },
-          betaStartups.length > 1 && {
-            text: t("startups"),
-            menuLinks: betaStartups.map((startup) => ({
-              linkProps: {
-                href: `/startup/${startup}`,
-              },
-              text: startup,
-              isActive: router.asPath === `/startup/${startup}`,
-            })),
-            isActive: router.asPath.startsWith("/startup/"),
-          },
-          views.length && {
-            text: "Vues",
-            menuLinks: views,
-          },
-          {
-            text: t("about"),
-            linkProps: {
-              href: "/about",
-            },
-            isActive: router.asPath === "/about/",
-          },
-        ].filter(Boolean)}
+        navigation={navigation}
         serviceTagline={dashlordConfig.description}
         serviceTitle={dashlordConfig.title}
       />
