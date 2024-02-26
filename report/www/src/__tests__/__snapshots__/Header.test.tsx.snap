@@ -237,17 +237,12 @@ exports[`Should render HeaderSite 1`] = `
               <div
                 class="fr-header__operator"
               >
-                <a
-                  href="/"
-                  title="DashLord Fabrique des ministères sociaux"
-                >
-                  <img
-                    alt="Logo Fabrique des ministères sociaux"
-                    class="fr-responsive-img"
-                    src="https://avatars.githubusercontent.com/u/35456799?s=400"
-                    style="max-width: 9.0625rem;"
-                  />
-                </a>
+                <img
+                  alt="Logo Fabrique des ministères sociaux"
+                  class="fr-responsive-img"
+                  src="https://avatars.githubusercontent.com/u/35456799?s=400"
+                  style="max-width: 9.0625rem;"
+                />
               </div>
               <div
                 class="fr-header__navbar"

@@ -36,18 +36,20 @@ const { withDsfr, dsfrDocumentApi } = createNextDsfrIntegrationApi({
     const { locale = "fr" } = useRouter();
     return locale;
   },
-  preloadFonts: !!dashlordConfig.marianne && [
-    //"Marianne-Light",
-    //"Marianne-Light_Italic",
-    "Marianne-Regular",
-    //"Marianne-Regular_Italic",
-    "Marianne-Medium",
-    //"Marianne-Medium_Italic",
-    "Marianne-Bold",
-    //"Marianne-Bold_Italic",
-    //"Spectral-Regular",
-    //"Spectral-ExtraBold"
-  ],
+  preloadFonts:
+    (!!dashlordConfig.marianne && [
+      //"Marianne-Light",
+      //"Marianne-Light_Italic",
+      "Marianne-Regular",
+      //"Marianne-Regular_Italic",
+      "Marianne-Medium",
+      //"Marianne-Medium_Italic",
+      "Marianne-Bold",
+      //"Marianne-Bold_Italic",
+      //"Spectral-Regular",
+      //"Spectral-ExtraBold"
+    ]) ||
+    [],
 });
 
 export { dsfrDocumentApi };
