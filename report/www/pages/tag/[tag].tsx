@@ -3,14 +3,16 @@ import Head from "next/head";
 import uniq from "lodash.uniq";
 
 import { Dashboard } from "../../src/components/Dashboard";
-import dashlordConfig from '@/config.json';
+import dashlordConfig from "@/config.json";
 const report: DashLordReport = require("../../src/report.json");
 
 const Tag = ({ report, tag }: { report: DashLordReport; tag: string }) => {
   return (
     <>
       <Head>
-        <title>Tag {tag} - {dashlordConfig.title}</title>
+        <title>
+          Tag {tag} - {dashlordConfig.title}
+        </title>
       </Head>
       <Dashboard report={report} />
     </>
@@ -30,7 +32,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // return list of urls to generate
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: uniq(report.flatMap((u: UrlReport) => u.tags)).map(
+  paths: uniq(report.flatMap((u: UrlReport) => u.tags).filter(Boolean)).map(
     (tag) => `/tag/${tag}`
   ),
   fallback: false,
