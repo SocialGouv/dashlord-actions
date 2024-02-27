@@ -10,6 +10,7 @@ const PageIntro: NextPage = () => {
       <Head>
         <title>À propos - {dashlordConfig.title}</title>
       </Head>
+      <h1>À propos</h1>
       <About />
     </>
   );

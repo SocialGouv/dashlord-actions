@@ -10,11 +10,10 @@ exports[`Url > Should render empty Url 1`] = `
 exports[`Url > Should render full Url 1`] = `
 [
   <div
-    className="fr-callout fr-mb-3w"
-    id="fr-callout-:r0:"
+    className="fr-mb-5w"
   >
-    <h3
-      className="fr-callout__title"
+    <h1
+      className="fr-mb-2w"
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
@@ -23,96 +22,120 @@ exports[`Url > Should render full Url 1`] = `
       >
         https://www.fabrique.social.gouv.fr
       </a>
-    </h3>
-    <p
-      className="fr-callout__text"
+    </h1>
+    <div
+      className="fr-mt-1w"
+      style={
+        {
+          "position": "relative",
+        }
+      }
     >
-       
-      <div
-        className="fr-mt-1w"
+      <span
+        className="fr-badge fr-badge--warning fr-badge--no-icon"
+        id="fr-badge-:r0:"
+        style={
+          {
+            "marginRight": 10,
+            "verticalAlign": "top",
+          }
+        }
       >
-        <span
-          className="fr-badge fr-badge--warning fr-badge--no-icon"
+        <i
+          className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+          title="Mis à jour il y a environ 1 an"
+        />
+        environ 1 an
+      </span>
+      <a
+        className="link-discreet"
+        href="/category/fabrique"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs de la catégorie fabrique"
+      >
+        <p
+          className="fr-badge fr-badge--success"
           id="fr-badge-:r1:"
           style={
             {
+              "marginRight": 10,
               "verticalAlign": "top",
             }
           }
         >
-          <i
-            className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
-            title="Mis à jour il y a environ 1 an"
-          />
-          environ 1 an
-        </span>
-        <a
-          className="link-discreet"
-          href="/category/fabrique"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs de la catégorie fabrique"
+          fabrique
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/social"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag social"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r2:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--success"
-            id="fr-badge-:r2:"
-          >
-            fabrique
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/social"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag social"
+          social
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/sante"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag sante"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r3:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r3:"
-          >
-            social
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/sante"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag sante"
+          sante
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/travail"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag travail"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r4:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r4:"
-          >
-            sante
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/travail"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag travail"
-        >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r5:"
-          >
-            travail
-          </p>
-        </a>
-      </div>
-       
-    </p>
+          travail
+        </p>
+      </a>
+    </div>
   </div>,
   <div
     className="fr-tabs"
-    id="fr-tabs-:r6:"
+    id="fr-tabs-:r5:"
   >
     <ul
       className="fr-tabs__list"
@@ -123,10 +146,10 @@ exports[`Url > Should render full Url 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-0-panel"
+          aria-controls="tabpanel-:r6:-0-panel"
           aria-selected={true}
           className="fr-tabs__tab fr-icon-thumb-up-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-0"
+          id="tabpanel-:r6:-0"
           onClick={[Function]}
           role="tab"
           tabIndex={0}
@@ -138,10 +161,10 @@ exports[`Url > Should render full Url 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-1-panel"
+          aria-controls="tabpanel-:r6:-1-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-time-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-1"
+          id="tabpanel-:r6:-1"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -153,10 +176,10 @@ exports[`Url > Should render full Url 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-2-panel"
+          aria-controls="tabpanel-:r6:-2-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-lock-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-2"
+          id="tabpanel-:r6:-2"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -168,10 +191,10 @@ exports[`Url > Should render full Url 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-3-panel"
+          aria-controls="tabpanel-:r6:-3-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-3"
+          id="tabpanel-:r6:-3"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -181,9 +204,9 @@ exports[`Url > Should render full Url 1`] = `
       </li>
     </ul>
     <div
-      aria-labelledby="tabpanel-:r7:-0"
+      aria-labelledby="tabpanel-:r6:-0"
       className="fr-tabs__panel fr-tabs__panel--selected"
-      id="tabpanel-:r7:-0-panel"
+      id="tabpanel-:r6:-0-panel"
       role="tabpanel"
       tabIndex={0}
     >
@@ -193,13 +216,13 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r8:"
+          id="fr-callout-:r7:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             LightHouse
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -226,10 +249,10 @@ exports[`Url > Should render full Url 1`] = `
             </div>
             <div
               className="fr-callout"
-              id="fr-callout-:r9:"
+              id="fr-callout-:r8:"
             >
               <h3
-                className="fr-callout__title"
+                className="fr-card__title"
               >
                 <div
                   className="fr-mb-4w"
@@ -237,7 +260,7 @@ exports[`Url > Should render full Url 1`] = `
                   https://www.fabrique.social.gouv.fr/
                   <span
                     className="fr-badge fr-badge--info fr-badge--no-icon"
-                    id="fr-badge-:ra:"
+                    id="fr-badge-:r9:"
                     style={
                       {
                         "paddingLeft": 10,
@@ -554,7 +577,7 @@ exports[`Url > Should render full Url 1`] = `
               <a
                 className="fr-btn"
                 href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr-aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnIv.html"
-                id="fr-button-:rb:"
+                id="fr-button-:ra:"
                 style={{}}
                 target="_blank"
               >
@@ -571,16 +594,16 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rc:"
+          id="fr-callout-:rb:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Cookies
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:rd:"
+                id="fr-badge-:rc:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -595,7 +618,7 @@ exports[`Url > Should render full Url 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -606,7 +629,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:re:"
+              id="fr-table-:rd:"
             >
               <table>
                 <tbody>
@@ -660,16 +683,16 @@ exports[`Url > Should render full Url 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:rf:"
+          id="fr-callout-:re:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Scripts tiers
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:rg:"
+                id="fr-badge-:rf:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -684,7 +707,7 @@ exports[`Url > Should render full Url 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -695,7 +718,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:rh:"
+              id="fr-table-:rg:"
             >
               <table>
                 <tbody>
@@ -770,13 +793,13 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:ri:"
+          id="fr-callout-:rh:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Page de statistiques
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -787,7 +810,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:rj:"
+              id="fr-alert-:ri:"
             >
               <h3
                 className="fr-alert__title"
@@ -806,13 +829,13 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rk:"
+          id="fr-callout-:rj:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Déclaration de mise en accessibilité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -823,7 +846,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--info"
-              id="fr-alert-:rl:"
+              id="fr-alert-:rk:"
             >
               <h3
                 className="fr-alert__title"
@@ -836,7 +859,7 @@ exports[`Url > Should render full Url 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:rm:"
+              id="fr-alert-:rl:"
             >
               <h3
                 className="fr-alert__title"
@@ -863,13 +886,13 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rn:"
+          id="fr-callout-:rm:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Mentions légales
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -880,7 +903,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:ro:"
+              id="fr-alert-:rn:"
             >
               <h3
                 className="fr-alert__title"
@@ -904,13 +927,13 @@ exports[`Url > Should render full Url 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:rp:"
+          id="fr-callout-:ro:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Politique de confidentialité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -921,7 +944,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:rq:"
+              id="fr-alert-:rp:"
             >
               <h3
                 className="fr-alert__title"
@@ -934,7 +957,7 @@ exports[`Url > Should render full Url 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:rr:"
+              id="fr-alert-:rq:"
             >
               <h3
                 className="fr-alert__title"
@@ -963,20 +986,20 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rs:"
+          id="fr-callout-:rr:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Erreurs 404
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
              
             <div
               className="fr-table"
-              id="fr-table-:rt:"
+              id="fr-table-:rs:"
             >
               <table>
                 <tbody>
@@ -1040,11 +1063,10 @@ exports[`Url > Should render full Url 1`] = `
 exports[`Url > Should render full Url with screenshot 1`] = `
 [
   <div
-    className="fr-callout fr-mb-3w"
-    id="fr-callout-:ru:"
+    className="fr-mb-5w"
   >
-    <h3
-      className="fr-callout__title"
+    <h1
+      className="fr-mb-2w"
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
@@ -1053,101 +1075,125 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       >
         https://www.fabrique.social.gouv.fr
       </a>
-    </h3>
-    <p
-      className="fr-callout__text"
+    </h1>
+    <div
+      className="fr-mt-1w"
+      style={
+        {
+          "position": "relative",
+        }
+      }
     >
-       
-      <div
-        className="fr-mt-1w"
+      <span
+        className="fr-badge fr-badge--warning fr-badge--no-icon"
+        id="fr-badge-:rt:"
+        style={
+          {
+            "marginRight": 10,
+            "verticalAlign": "top",
+          }
+        }
       >
-        <span
-          className="fr-badge fr-badge--warning fr-badge--no-icon"
-          id="fr-badge-:rv:"
+        <i
+          className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+          title="Mis à jour il y a environ 1 an"
+        />
+        environ 1 an
+      </span>
+      <a
+        className="link-discreet"
+        href="/category/fabrique"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs de la catégorie fabrique"
+      >
+        <p
+          className="fr-badge fr-badge--success"
+          id="fr-badge-:ru:"
           style={
             {
+              "marginRight": 10,
               "verticalAlign": "top",
             }
           }
         >
-          <i
-            className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
-            title="Mis à jour il y a environ 1 an"
-          />
-          environ 1 an
-        </span>
-        <a
-          className="link-discreet"
-          href="/category/fabrique"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs de la catégorie fabrique"
+          fabrique
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/social"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag social"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:rv:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--success"
-            id="fr-badge-:r10:"
-          >
-            fabrique
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/social"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag social"
+          social
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/sante"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag sante"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r10:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r11:"
-          >
-            social
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/sante"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag sante"
+          sante
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/travail"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag travail"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r11:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r12:"
-          >
-            sante
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/travail"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag travail"
-        >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r13:"
-          >
-            travail
-          </p>
-        </a>
-      </div>
-      <img
-        alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
-        className="_screenshotImg_195a1c"
-        src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
-      />
-       
-    </p>
+          travail
+        </p>
+      </a>
+    </div>
+    <img
+      alt="Copie d'écran de https://www.fabrique.social.gouv.fr"
+      className="_screenshotImg_195a1c"
+      src="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/screenshot.jpeg"
+    />
   </div>,
   <div
     className="fr-tabs"
-    id="fr-tabs-:r14:"
+    id="fr-tabs-:r12:"
   >
     <ul
       className="fr-tabs__list"
@@ -1158,10 +1204,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r15:-0-panel"
+          aria-controls="tabpanel-:r13:-0-panel"
           aria-selected={true}
           className="fr-tabs__tab fr-icon-thumb-up-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r15:-0"
+          id="tabpanel-:r13:-0"
           onClick={[Function]}
           role="tab"
           tabIndex={0}
@@ -1173,10 +1219,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r15:-1-panel"
+          aria-controls="tabpanel-:r13:-1-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-time-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r15:-1"
+          id="tabpanel-:r13:-1"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1188,10 +1234,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r15:-2-panel"
+          aria-controls="tabpanel-:r13:-2-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-lock-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r15:-2"
+          id="tabpanel-:r13:-2"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1203,10 +1249,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r15:-3-panel"
+          aria-controls="tabpanel-:r13:-3-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r15:-3"
+          id="tabpanel-:r13:-3"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1216,9 +1262,9 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       </li>
     </ul>
     <div
-      aria-labelledby="tabpanel-:r15:-0"
+      aria-labelledby="tabpanel-:r13:-0"
       className="fr-tabs__panel fr-tabs__panel--selected"
-      id="tabpanel-:r15:-0-panel"
+      id="tabpanel-:r13:-0-panel"
       role="tabpanel"
       tabIndex={0}
     >
@@ -1228,13 +1274,13 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r16:"
+          id="fr-callout-:r14:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             LightHouse
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1261,10 +1307,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-callout"
-              id="fr-callout-:r17:"
+              id="fr-callout-:r15:"
             >
               <h3
-                className="fr-callout__title"
+                className="fr-card__title"
               >
                 <div
                   className="fr-mb-4w"
@@ -1272,7 +1318,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                   https://www.fabrique.social.gouv.fr/
                   <span
                     className="fr-badge fr-badge--info fr-badge--no-icon"
-                    id="fr-badge-:r18:"
+                    id="fr-badge-:r16:"
                     style={
                       {
                         "paddingLeft": 10,
@@ -1589,7 +1635,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               <a
                 className="fr-btn"
                 href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr-aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnIv.html"
-                id="fr-button-:r19:"
+                id="fr-button-:r17:"
                 style={{}}
                 target="_blank"
               >
@@ -1606,16 +1652,16 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1a:"
+          id="fr-callout-:r18:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Cookies
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:r1b:"
+                id="fr-badge-:r19:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -1630,7 +1676,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1641,7 +1687,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:r1c:"
+              id="fr-table-:r1a:"
             >
               <table>
                 <tbody>
@@ -1695,16 +1741,16 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:r1d:"
+          id="fr-callout-:r1b:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Scripts tiers
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:r1e:"
+                id="fr-badge-:r1c:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -1719,7 +1765,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1730,7 +1776,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:r1f:"
+              id="fr-table-:r1d:"
             >
               <table>
                 <tbody>
@@ -1805,13 +1851,13 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1g:"
+          id="fr-callout-:r1e:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Page de statistiques
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1822,7 +1868,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:r1h:"
+              id="fr-alert-:r1f:"
             >
               <h3
                 className="fr-alert__title"
@@ -1841,13 +1887,13 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1i:"
+          id="fr-callout-:r1g:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Déclaration de mise en accessibilité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1858,7 +1904,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--info"
-              id="fr-alert-:r1j:"
+              id="fr-alert-:r1h:"
             >
               <h3
                 className="fr-alert__title"
@@ -1871,7 +1917,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:r1k:"
+              id="fr-alert-:r1i:"
             >
               <h3
                 className="fr-alert__title"
@@ -1898,13 +1944,13 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1l:"
+          id="fr-callout-:r1j:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Mentions légales
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1915,7 +1961,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:r1m:"
+              id="fr-alert-:r1k:"
             >
               <h3
                 className="fr-alert__title"
@@ -1939,13 +1985,13 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:r1n:"
+          id="fr-callout-:r1l:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Politique de confidentialité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1956,7 +2002,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:r1o:"
+              id="fr-alert-:r1m:"
             >
               <h3
                 className="fr-alert__title"
@@ -1969,7 +2015,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:r1p:"
+              id="fr-alert-:r1n:"
             >
               <h3
                 className="fr-alert__title"
@@ -1998,20 +2044,20 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1q:"
+          id="fr-callout-:r1o:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Erreurs 404
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
              
             <div
               className="fr-table"
-              id="fr-table-:r1r:"
+              id="fr-table-:r1p:"
             >
               <table>
                 <tbody>

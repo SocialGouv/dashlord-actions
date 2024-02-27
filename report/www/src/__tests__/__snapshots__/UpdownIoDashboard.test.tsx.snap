@@ -20,8 +20,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r0:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -41,7 +41,7 @@ exports[`Should render UpdownIo 1`] = `
           presque 3 ans
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -139,15 +139,15 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r4:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <a
         href="/url/api-trackdechets-beta-gouv-fr"
       >
         api.trackdechets.beta.gouv.fr
       </a>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -172,8 +172,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r6:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -193,7 +193,7 @@ exports[`Should render UpdownIo 1`] = `
           presque 3 ans
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -291,8 +291,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:ra:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -312,7 +312,7 @@ exports[`Should render UpdownIo 1`] = `
           presque 3 ans
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -410,8 +410,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:re:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -431,7 +431,7 @@ exports[`Should render UpdownIo 1`] = `
           presque 3 ans
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -529,8 +529,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:ri:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -550,7 +550,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -648,8 +648,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:rm:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -669,7 +669,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -767,8 +767,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:rq:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -788,7 +788,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -886,8 +886,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:ru:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -907,7 +907,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1005,8 +1005,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r12:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1026,7 +1026,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1124,8 +1124,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r16:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1145,7 +1145,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1243,8 +1243,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1a:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1264,7 +1264,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1362,8 +1362,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1e:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1383,7 +1383,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1481,8 +1481,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1i:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1502,7 +1502,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1600,8 +1600,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1m:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1621,7 +1621,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1719,15 +1719,15 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1q:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <a
         href="/url/admin-domifa-fabrique-social-gouv-fr"
       >
         admin-domifa.fabrique.social.gouv.fr
       </a>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >
@@ -1752,8 +1752,8 @@ exports[`Should render UpdownIo 1`] = `
     class="fr-callout"
     id="fr-callout-:r1s:"
   >
-    <h3
-      class="fr-callout__title"
+    <h2
+      class="fr-card__title"
     >
       <div>
         <a
@@ -1773,7 +1773,7 @@ exports[`Should render UpdownIo 1`] = `
           environ 1 an
         </span>
       </div>
-    </h3>
+    </h2>
     <p
       class="fr-callout__text"
     >

@@ -3,7 +3,7 @@ import * as React from "react";
 import CallOut from "@codegouvfr/react-dsfr/CallOut";
 
 export const About: React.FC = () => (
-  <CallOut className="fr-mb-3w" title="À propos">
+  <CallOut className="fr-mb-3w">
     DashLord est <strong>100% open source</strong>, vous pouvez y contribuer en
     créant de la documentation, en proposant du code, ou encore en partageant
     vos questions{" "}

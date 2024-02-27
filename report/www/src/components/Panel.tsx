@@ -3,6 +3,7 @@ import CallOut from "@codegouvfr/react-dsfr/CallOut";
 
 type PanelProps = {
   title: React.ReactNode;
+  titleAs?: "h2" | "h3" | "h4" | "h5" | "h6" | "p";
   children: React.ReactNode;
   info?: string | React.ReactNode;
   url?: string;
@@ -17,6 +18,7 @@ export const Panel: React.FC<PanelProps> = ({
   children,
   url = null,
   urlText = null,
+  titleAs = "h2",
   target = "_blank",
 }) => (
   <CallOut
@@ -31,6 +33,7 @@ export const Panel: React.FC<PanelProps> = ({
       undefined
     }
     title={title}
+    titleAs={titleAs}
   >
     {children}
   </CallOut>

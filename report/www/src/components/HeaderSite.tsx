@@ -195,7 +195,7 @@ const { useTranslation, addHeaderSiteTranslations } = createComponentI18nApi({
     tags: "Tags",
     wappalyzer: "Technologies (wappalyzer)",
     updownio: "Disponibilité (updown.io)",
-    about: "A propos",
+    about: "À propos",
     "summary-accessibility": "Récap accessiblité",
     "summary-stats": "Récap Stats",
     "summary-budget": "Récap budget",
