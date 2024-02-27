@@ -132,6 +132,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                 />
               </div>
             }
+            titleAs="h3"
             info="Informations collectées par l'outil Google LightHouse"
             urlText="Rapport LightHouse"
             url={auditUrl}
