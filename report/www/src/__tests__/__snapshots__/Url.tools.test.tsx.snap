@@ -3,11 +3,10 @@
 exports[`Tools config > Should render Url with limited tools 1`] = `
 [
   <div
-    className="fr-callout fr-mb-3w"
-    id="fr-callout-:r0:"
+    className="fr-mb-5w"
   >
-    <h3
-      className="fr-callout__title"
+    <h1
+      className="fr-mb-2w"
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
@@ -16,96 +15,120 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
       >
         https://www.fabrique.social.gouv.fr
       </a>
-    </h3>
-    <p
-      className="fr-callout__text"
+    </h1>
+    <div
+      className="fr-mt-1w"
+      style={
+        {
+          "position": "relative",
+        }
+      }
     >
-       
-      <div
-        className="fr-mt-1w"
+      <span
+        className="fr-badge fr-badge--warning fr-badge--no-icon"
+        id="fr-badge-:r0:"
+        style={
+          {
+            "marginRight": 10,
+            "verticalAlign": "top",
+          }
+        }
       >
-        <span
-          className="fr-badge fr-badge--warning fr-badge--no-icon"
+        <i
+          className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
+          title="Mis à jour il y a environ 1 an"
+        />
+        environ 1 an
+      </span>
+      <a
+        className="link-discreet"
+        href="/category/fabrique"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs de la catégorie fabrique"
+      >
+        <p
+          className="fr-badge fr-badge--success"
           id="fr-badge-:r1:"
           style={
             {
+              "marginRight": 10,
               "verticalAlign": "top",
             }
           }
         >
-          <i
-            className="fr-icon-time-fill fr-icon--sm fr-mr-1v"
-            title="Mis à jour il y a environ 1 an"
-          />
-          environ 1 an
-        </span>
-        <a
-          className="link-discreet"
-          href="/category/fabrique"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs de la catégorie fabrique"
+          fabrique
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/social"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag social"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r2:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--success"
-            id="fr-badge-:r2:"
-          >
-            fabrique
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/social"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag social"
+          social
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/sante"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag sante"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r3:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r3:"
-          >
-            social
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/sante"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag sante"
+          sante
+        </p>
+      </a>
+      <a
+        className="link-discreet"
+        href="/tag/travail"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        title="Voir toutes les URLs du tag travail"
+      >
+        <p
+          className="fr-badge fr-badge--info"
+          id="fr-badge-:r4:"
+          style={
+            {
+              "marginRight": 10,
+              "verticalAlign": "top",
+            }
+          }
         >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r4:"
-          >
-            sante
-          </p>
-        </a>
-        <a
-          className="link-discreet"
-          href="/tag/travail"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir toutes les URLs du tag travail"
-        >
-          <p
-            className="fr-badge fr-badge--info"
-            id="fr-badge-:r5:"
-          >
-            travail
-          </p>
-        </a>
-      </div>
-       
-    </p>
+          travail
+        </p>
+      </a>
+    </div>
   </div>,
   <div
     className="fr-tabs"
-    id="fr-tabs-:r6:"
+    id="fr-tabs-:r5:"
   >
     <ul
       className="fr-tabs__list"
@@ -116,10 +139,10 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-0-panel"
+          aria-controls="tabpanel-:r6:-0-panel"
           aria-selected={true}
           className="fr-tabs__tab fr-icon-thumb-up-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-0"
+          id="tabpanel-:r6:-0"
           onClick={[Function]}
           role="tab"
           tabIndex={0}
@@ -131,10 +154,10 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-1-panel"
+          aria-controls="tabpanel-:r6:-1-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-time-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-1"
+          id="tabpanel-:r6:-1"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -146,10 +169,10 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-2-panel"
+          aria-controls="tabpanel-:r6:-2-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-lock-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-2"
+          id="tabpanel-:r6:-2"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -161,10 +184,10 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r7:-3-panel"
+          aria-controls="tabpanel-:r6:-3-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r7:-3"
+          id="tabpanel-:r6:-3"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -174,15 +197,15 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
       </li>
     </ul>
     <div
-      aria-labelledby="tabpanel-:r7:-0"
+      aria-labelledby="tabpanel-:r6:-0"
       className="fr-tabs__panel fr-tabs__panel--selected"
-      id="tabpanel-:r7:-0-panel"
+      id="tabpanel-:r6:-0-panel"
       role="tabpanel"
       tabIndex={0}
     >
       <div
         className="fr-alert fr-alert--error"
-        id="fr-alert-:r8:"
+        id="fr-alert-:r7:"
       >
         <h3
           className="fr-alert__title"
