@@ -57,6 +57,27 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
       text: t("updownio"),
       isActive: router.asPath === "/updownio/",
     },
+    isToolEnabled("declaration-a11y") && {
+      linkProps: {
+        href: "/summary/accessibility",
+      },
+      text: t("summary-accessibility"),
+      isActive: router.asPath === "/summary/accessibility/",
+    },
+    isToolEnabled("stats") && {
+      linkProps: {
+        href: "/summary/stats",
+      },
+      text: t("summary-stats"),
+      isActive: router.asPath === "/summary/stats/",
+    },
+    isToolEnabled("budget_page") && {
+      linkProps: {
+        href: "/summary/budget",
+      },
+      text: t("summary-budget"),
+      isActive: router.asPath === "/summary/budget/",
+    },
   ].filter(Boolean);
 
   // @ts-ignore ??? TODO
@@ -181,6 +202,9 @@ const { useTranslation, addHeaderSiteTranslations } = createComponentI18nApi({
     wappalyzer: "Technologies (wappalyzer)",
     updownio: "Disponibilité (updown.io)",
     about: "A propos",
+    "summary-accessibility": "Récap accessiblité",
+    "summary-stats": "Récap Stats",
+    "summary-budget": "Récap budget",
   },
 });
 

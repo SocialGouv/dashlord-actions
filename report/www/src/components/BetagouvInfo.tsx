@@ -27,14 +27,14 @@ type BetagouvPhase = {
 };
 
 // return latest phase augmented data if any
-const getLatestPhase = (phases: BetagouvReportPhase[]) => {
+export const getLatestPhase = (phases: BetagouvReportPhase[]) => {
   const sortedPhases = phases.sort(sortPhases);
   return sortedPhases.length
     ? getPhase(sortedPhases[sortedPhases.length - 1].name)
     : { label: "-", index: 0 }; // fallback
 };
 
-const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
+export const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
   const sortedPhases = data.attributes.phases.sort(sortPhases);
   return (
     <Panel title="Phases de la SE">
@@ -86,8 +86,6 @@ const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
   );
 };
 
-export { Betagouv, getLatestPhase };
-
 // index is used when we have similar timestamps for different phases
 const phases = [
   {
@@ -124,6 +122,14 @@ const phases = [
   },
   { id: "alumni", label: "Partenariat terminé", icon: XCircle, index: 6 },
 ] as BetagouvPhase[];
+
+export const phaseSeverities = {
+  accélération: "info",
+  construction: "warning",
+  "partenariat terminé": "error",
+  transfert: "success",
+  succès: "success",
+};
 
 const getPhase = (phase: string) => phases.find((f) => f.id === phase);
 
