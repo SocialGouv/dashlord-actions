@@ -218,11 +218,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:r7:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             LightHouse
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -252,7 +252,7 @@ exports[`Url > Should render full Url 1`] = `
               id="fr-callout-:r8:"
             >
               <h3
-                className="fr-callout__title"
+                className="fr-card__title"
               >
                 <div
                   className="fr-mb-4w"
@@ -596,8 +596,8 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:rb:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Cookies
@@ -618,7 +618,7 @@ exports[`Url > Should render full Url 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -685,8 +685,8 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:re:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Scripts tiers
@@ -707,7 +707,7 @@ exports[`Url > Should render full Url 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -795,11 +795,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:rh:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Page de statistiques
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -831,11 +831,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:rj:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Déclaration de mise en accessibilité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -888,11 +888,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:rm:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Mentions légales
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -929,11 +929,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:ro:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Politique de confidentialité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -988,11 +988,11 @@ exports[`Url > Should render full Url 1`] = `
           className="fr-callout"
           id="fr-callout-:rr:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Erreurs 404
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1276,11 +1276,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r14:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             LightHouse
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1310,7 +1310,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               id="fr-callout-:r15:"
             >
               <h3
-                className="fr-callout__title"
+                className="fr-card__title"
               >
                 <div
                   className="fr-mb-4w"
@@ -1654,8 +1654,8 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r18:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Cookies
@@ -1676,7 +1676,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1743,8 +1743,8 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1b:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             <div>
               Scripts tiers
@@ -1765,7 +1765,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                 environ 1 an
               </span>
             </div>
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1853,11 +1853,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1e:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Page de statistiques
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1889,11 +1889,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1g:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Déclaration de mise en accessibilité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1946,11 +1946,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1j:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Mentions légales
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -1987,11 +1987,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1l:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Politique de confidentialité
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >
@@ -2046,11 +2046,11 @@ exports[`Url > Should render full Url with screenshot 1`] = `
           className="fr-callout"
           id="fr-callout-:r1o:"
         >
-          <h3
-            className="fr-callout__title"
+          <h2
+            className="fr-card__title"
           >
             Erreurs 404
-          </h3>
+          </h2>
           <p
             className="fr-callout__text"
           >

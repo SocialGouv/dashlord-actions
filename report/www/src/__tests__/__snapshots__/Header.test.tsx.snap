@@ -462,7 +462,7 @@ exports[`Should render HeaderSite 1`] = `
                 href="/about"
                 id="fr-header-main-navigation-link-3"
               >
-                A propos
+                À propos
               </a>
             </li>
           </ul>

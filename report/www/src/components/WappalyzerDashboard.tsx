@@ -115,10 +115,9 @@ export const WappalyzerDashboard = ({ report }: WappalyzerDashboardProps) => {
   const categories = getCategoriesByUrl(report);
   return (
     <>
-      <h1>Wappalyzer : technologies détectées</h1>
       <div className={styles.columns}>
         {categories.map((category) => (
-          <Panel key={category.name} title={category.name}>
+          <Panel key={category.name} title={category.name} titleAs="h2">
             <UsageChart data={toChartData(category)} />
             <br />
             {category.items.map((item) => (

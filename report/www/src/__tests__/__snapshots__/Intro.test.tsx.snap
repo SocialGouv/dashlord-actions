@@ -2,15 +2,13 @@
 
 exports[`Should render Intro 1`] = `
 <div>
+  <h1>
+    DashLord Fabrique des ministères sociaux
+  </h1>
   <div
     class="fr-callout fr-mb-3w"
     id="fr-callout-:r0:"
   >
-    <h3
-      class="fr-callout__title"
-    >
-      DashLord Fabrique des ministères sociaux
-    </h3>
     <p
       class="fr-callout__text"
     >
@@ -63,7 +61,7 @@ exports[`Should render Intro 1`] = `
     id="fr-callout-:r2:"
   >
     <h3
-      class="fr-callout__title"
+      class="fr-card__title"
     >
       OWASP Zed Attack Proxy
       <p
@@ -111,15 +109,13 @@ exports[`Should render Intro 1`] = `
 
 exports[`Tools config > Should render Intro with limited tools 1`] = `
 <div>
+  <h1>
+    DashLord Fabrique des ministères sociaux
+  </h1>
   <div
     class="fr-callout fr-mb-3w"
     id="fr-callout-:r6:"
   >
-    <h3
-      class="fr-callout__title"
-    >
-      DashLord Fabrique des ministères sociaux
-    </h3>
     <p
       class="fr-callout__text"
     >
@@ -172,7 +168,7 @@ exports[`Tools config > Should render Intro with limited tools 1`] = `
     id="fr-callout-:r8:"
   >
     <h3
-      class="fr-callout__title"
+      class="fr-card__title"
     >
       OWASP Zed Attack Proxy
       <p

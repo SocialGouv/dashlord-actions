@@ -22,7 +22,8 @@ import tools from "../tools.json";
 export const Intro: React.FC = () => {
   return (
     <>
-      <CallOut className="fr-mb-3w" title={dashlordConfig.title || "DashLord"}>
+      <h1>{dashlordConfig.title || "DashLord"}</h1>
+      <CallOut className="fr-mb-3w">
         <br />
         DashLord compile les données techniques issues de différents outils
         open-source.
@@ -71,6 +72,7 @@ export const Intro: React.FC = () => {
             isToolEnabled(id) && (
               <Panel
                 key={id}
+                titleAs="h3"
                 title={
                   <>
                     {data.label}
