@@ -9,6 +9,14 @@ exports[`Should render Intro 1`] = `
     class="fr-callout fr-mb-3w"
     id="fr-callout-:r0:"
   >
+<<<<<<< Updated upstream
+=======
+    <h3
+      class="fr-card__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+>>>>>>> Stashed changes
     <p
       class="fr-callout__text"
     >
@@ -116,6 +124,14 @@ exports[`Tools config > Should render Intro with limited tools 1`] = `
     class="fr-callout fr-mb-3w"
     id="fr-callout-:r6:"
   >
+<<<<<<< Updated upstream
+=======
+    <h3
+      class="fr-card__title"
+    >
+      DashLord Fabrique des ministères sociaux
+    </h3>
+>>>>>>> Stashed changes
     <p
       class="fr-callout__text"
     >

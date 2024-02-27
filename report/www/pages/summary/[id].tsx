@@ -127,7 +127,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
                 href={params.row.stats.url + "/" + params.row.stats.uri}
                 target="_blank"
               >
-                /{params.row.stats.uri}
+                {params.row.stats.uri}
               </Link>
             );
           }
@@ -175,7 +175,7 @@ const Summary = ({ id }: { id: string }) => {
   const summaryConfig = summaryConfigs[id];
   const categories = Array.from(
     new Set(report.map((url) => url.category).filter(Boolean))
-  );
+  ).sort();
 
   const tableData = category
     ? report.filter((url) => url.category === category)
@@ -239,7 +239,6 @@ const Summary = ({ id }: { id: string }) => {
       <DataGrid
         rows={tableData}
         columns={columns}
-        sortModel={[{ field: "phase", sort: "desc" }]}
         autoHeight={true}
         getRowId={(row) => row.url}
         disableVirtualization
@@ -248,6 +247,11 @@ const Summary = ({ id }: { id: string }) => {
         rowSelection={false}
         hideFooterPagination={false}
         hideFooter={tableData.length < ROWS_COUNT}
+        initialState={{
+          sorting: {
+            sortModel: [{ field: "phase", sort: "desc" }],
+          },
+        }}
         localeText={{
           MuiTablePagination: { labelRowsPerPage: "Lignes par page" },
         }}

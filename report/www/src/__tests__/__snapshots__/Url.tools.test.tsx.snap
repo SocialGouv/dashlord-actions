@@ -5,8 +5,13 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
   <div
     className="fr-mb-5w"
   >
+<<<<<<< Updated upstream
     <h1
       className="fr-mb-2w"
+=======
+    <h3
+      className="fr-card__title"
+>>>>>>> Stashed changes
     >
       <a
         href="https://www.fabrique.social.gouv.fr"
