@@ -32,25 +32,23 @@ export const UrlHeader = ({
       //@ts-ignore
     )?.title;
   return (
-    <CallOut
-      className="fr-mb-3w"
-      title={
+    <div className={fr.cx("fr-mb-5w")}>
+      <h1 className={fr.cx("fr-mb-2w")}>
         <a href={url} rel="noreferrer noopener" target="_blank">
           {url}
         </a>
-      }
-    >
+      </h1>
       {report.betagouv?.attributes?.pitch && (
         <div>{report.betagouv?.attributes?.pitch}</div>
       )}
       {title && <div>{title}</div>}
-      <div className={fr.cx("fr-mt-1w")}>
+      <div className={fr.cx("fr-mt-1w")} style={{ position: "relative" }}>
         {updateDate && (
           <Badge
             severity="warning"
             noIcon
             as="span"
-            style={{ verticalAlign: "top" }}
+            style={{ verticalAlign: "top", marginRight: 10 }}
           >
             <i
               className={fr.cx("fr-icon-time-fill", "fr-icon--sm", "fr-mr-1v")}
@@ -72,7 +70,12 @@ export const UrlHeader = ({
             className="link-discreet"
             title={`Voir toutes les URLs de la catégorie ${report.category}`}
           >
-            <Badge severity="success">{report.category}</Badge>
+            <Badge
+              severity="success"
+              style={{ verticalAlign: "top", marginRight: 10 }}
+            >
+              {report.category}
+            </Badge>
           </Link>
         )}
         {report.tags &&
@@ -83,7 +86,12 @@ export const UrlHeader = ({
               className="link-discreet"
               title={`Voir toutes les URLs du tag ${tag}`}
             >
-              <Badge severity="info">{tag}</Badge>
+              <Badge
+                severity="info"
+                style={{ verticalAlign: "top", marginRight: 10 }}
+              >
+                {tag}
+              </Badge>
             </Link>
           ))}
         {report.betagouv?.id && (
@@ -92,7 +100,12 @@ export const UrlHeader = ({
             className="link-discreet"
             title={`Accéder à la fiche beta.gouv.fr de ${report.betagouv?.id}`}
           >
-            <Badge severity="info">fiche beta.gouv.fr</Badge>
+            <Badge
+              severity="info"
+              style={{ verticalAlign: "top", marginRight: 10 }}
+            >
+              fiche beta.gouv.fr
+            </Badge>
           </Link>
         )}
       </div>
@@ -103,6 +116,6 @@ export const UrlHeader = ({
           src={`${BASE_PATH}/report/${btoa(url)}/screenshot.jpeg`}
         />
       )}
-    </CallOut>
+    </div>
   );
 };
