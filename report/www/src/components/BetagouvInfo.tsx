@@ -27,8 +27,8 @@ type BetagouvPhase = {
 };
 
 // return latest phase augmented data if any
-export const getLatestPhase = (phases: BetagouvReportPhase[]) => {
-  const sortedPhases = phases.sort(sortPhases);
+export const getLatestPhase = (allphases: BetagouvReportPhase[]) => {
+  const sortedPhases = allphases.sort(sortPhases);
   return sortedPhases.length
     ? getPhase(sortedPhases[sortedPhases.length - 1].name)
     : { label: "-", index: 0 }; // fallback

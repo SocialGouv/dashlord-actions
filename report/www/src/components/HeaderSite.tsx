@@ -29,17 +29,11 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
 
   const betaStartups =
     (isToolEnabled("betagouv") &&
-      sortedReport
-        .filter((url) => url.betaId)
-        .filter(
-          (url, i, all) =>
-            !all
-              .map((u) => u.betaId)
-              .slice(i + 1)
-              .includes(url.betaId)
+      Array.from(
+        new Set(
+          sortedReport.filter((url) => url.betaId).map((url) => url.betaId)
         )
-        .map((url) => url.betaId)
-        .sort()) ||
+      ).sort()) ||
     [];
 
   const views = [

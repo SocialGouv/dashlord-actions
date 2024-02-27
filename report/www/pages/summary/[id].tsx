@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 
 import Badge from "@codegouvfr/react-dsfr/Badge";
@@ -8,7 +8,6 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import dashlordConfig from "@/config.json";
-import { config } from "process";
 import { isToolEnabled, smallUrl, slugifyUrl } from "../../src/utils";
 import Link from "next/link";
 import { GradeBadge, IconUnknown } from "../../src/components/GradeBadge";
@@ -171,12 +170,12 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   },
 };
 
-const Summary = ({ report, id }: { report: DashLordReport; id: string }) => {
+const Summary = ({ id }: { id: string }) => {
   const [category, setCategory] = useState(null);
   const summaryConfig = summaryConfigs[id];
   const categories = Array.from(
     new Set(report.map((url) => url.category).filter(Boolean))
-  ).sort();
+  );
 
   const tableData = category
     ? report.filter((url) => url.category === category)
@@ -188,7 +187,7 @@ const Summary = ({ report, id }: { report: DashLordReport; id: string }) => {
     {
       ...defaultColumnsProps,
       field: "url",
-      headerName: `URL ${report && `(${report.length})`}`,
+      headerName: `URL`,
       width: 400,
       renderCell: (params) => (
         <div
@@ -261,9 +260,8 @@ const Summary = ({ report, id }: { report: DashLordReport; id: string }) => {
 // will be passed to the page component as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = params && (params.id as string);
-
   return {
-    props: { id, report },
+    props: { id },
   };
 };
 

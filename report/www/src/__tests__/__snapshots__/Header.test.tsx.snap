@@ -424,6 +424,33 @@ exports[`Should render HeaderSite 1`] = `
                       Disponibilité (updown.io)
                     </a>
                   </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/summary/accessibility"
+                      id="fr-header-main-navigation-menu-2-link-R_capaccessiblit_-2"
+                    >
+                      Récap accessiblité
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/summary/stats"
+                      id="fr-header-main-navigation-menu-2-link-R_capStats-3"
+                    >
+                      Récap Stats
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="fr-nav__link"
+                      href="/summary/budget"
+                      id="fr-header-main-navigation-menu-2-link-R_capbudget-4"
+                    >
+                      Récap budget
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
