@@ -29,17 +29,11 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
 
   const betaStartups =
     (isToolEnabled("betagouv") &&
-      sortedReport
-        .filter((url) => url.betaId)
-        .filter(
-          (url, i, all) =>
-            !all
-              .map((u) => u.betaId)
-              .slice(i + 1)
-              .includes(url.betaId)
+      Array.from(
+        new Set(
+          sortedReport.filter((url) => url.betaId).map((url) => url.betaId)
         )
-        .map((url) => url.betaId)
-        .sort()) ||
+      ).sort()) ||
     [];
 
   const views = [
@@ -56,6 +50,27 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
       },
       text: t("updownio"),
       isActive: router.asPath === "/updownio/",
+    },
+    isToolEnabled("declaration-a11y") && {
+      linkProps: {
+        href: "/summary/accessibility",
+      },
+      text: t("summary-accessibility"),
+      isActive: router.asPath === "/summary/accessibility/",
+    },
+    isToolEnabled("stats") && {
+      linkProps: {
+        href: "/summary/stats",
+      },
+      text: t("summary-stats"),
+      isActive: router.asPath === "/summary/stats/",
+    },
+    isToolEnabled("budget_page") && {
+      linkProps: {
+        href: "/summary/budget",
+      },
+      text: t("summary-budget"),
+      isActive: router.asPath === "/summary/budget/",
     },
   ].filter(Boolean);
 
@@ -181,6 +196,9 @@ const { useTranslation, addHeaderSiteTranslations } = createComponentI18nApi({
     wappalyzer: "Technologies (wappalyzer)",
     updownio: "Disponibilité (updown.io)",
     about: "A propos",
+    "summary-accessibility": "Récap accessiblité",
+    "summary-stats": "Récap Stats",
+    "summary-budget": "Récap budget",
   },
 });
 

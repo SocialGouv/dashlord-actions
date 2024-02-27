@@ -8,7 +8,7 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { fr } from "@codegouvfr/react-dsfr";
 
 import { isToolEnabled, smallUrl, slugifyUrl } from "../utils";
-import { getLatestPhase } from "./BetagouvInfo";
+import { getLatestPhase, phaseSeverities } from "./BetagouvInfo";
 import { GradeBadge, IconUnknown } from "./GradeBadge";
 import dashlordConfig from "@/config.json";
 
@@ -61,14 +61,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         ? dashlordConfig.columns[tool] === false
         : false;
     return isToolEnabled(tool) && !isColumnDisabled;
-  };
-
-  const phaseSeverities = {
-    accélération: "info",
-    construction: "warning",
-    "partenariat terminé": "error",
-    transfert: "success",
-    succès: "success",
   };
 
   if (isColumnEnabled("betagouv")) {
@@ -1021,14 +1013,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
 
   const ROWS_COUNT = 100;
 
-  const tableProps = {
-    rows: tableData,
-    columns,
-  };
   return (
     (report && (
       <DataGrid
-        {...tableProps}
+        rows={tableData}
+        columns={columns}
         autoHeight={true}
         disableVirtualization
         disableColumnMenu={true}
