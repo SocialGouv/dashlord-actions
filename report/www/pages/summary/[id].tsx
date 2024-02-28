@@ -122,16 +122,18 @@ const summaryConfigs: Record<string, SummaryConfig> = {
         renderCell: (params) => {
           if (params.value === "A") {
             return (
-              <Link
-                prefetch={false}
-                title={`Voir la page de stats de l'url ${slugifyUrl(
-                  params.row.url
-                )}`}
-                href={params.row.stats.url + "/" + params.row.stats.uri}
-                target="_blank"
-              >
-                {params.row.stats.uri}
-              </Link>
+              params.row.betagouv && (
+                <Link
+                  prefetch={false}
+                  title={`Voir la page de stats de l'url ${slugifyUrl(
+                    params.row.url
+                  )}`}
+                  href={params.row.stats.url + "/" + params.row.stats.uri}
+                  target="_blank"
+                >
+                  {params.row.betagouv.attributes.stats_url}
+                </Link>
+              )
             );
           }
           return <GradeBadge showWarningOnError label="F" />;
@@ -155,16 +157,18 @@ const summaryConfigs: Record<string, SummaryConfig> = {
         renderCell: (params) => {
           if (params.value === "A") {
             return (
-              <Link
-                prefetch={false}
-                title={`Voir la page de budget de l'url ${slugifyUrl(
-                  params.row.url
-                )}`}
-                href={params.row.budget.url + "/" + params.row.budget.uri}
-                target="_blank"
-              >
-                /{params.row.budget.uri}
-              </Link>
+              params.row.betagouv && (
+                <Link
+                  prefetch={false}
+                  title={`Voir la page de budget de l'url ${slugifyUrl(
+                    params.row.url
+                  )}`}
+                  href={params.row.budget.url + "/" + params.row.budget.uri}
+                  target="_blank"
+                >
+                  /{params.row.betagouv.attributes.budget_url}
+                </Link>
+              )
             );
           }
           return <GradeBadge showWarningOnError label="F" />;
