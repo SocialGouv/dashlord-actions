@@ -6,14 +6,15 @@ Basic GitHub actions used in [dashlord](https://github.com/socialgouv/dashlord) 
 
 | Action           | Usage                                             |
 | ---------------- | ------------------------------------------------- |
-| init             | read dashloard.yml                                |
-| save             | save a single url scan result for dashlord        |
-| report           | build a report.json and website from latest scans |
-| lhci             | LightHouse collector action                       |
+| check-url        | Check the existence of given URL                  |
 | declaration-a11y | verif mention accessibilité                       |
 | declaration-rgpd | check mentions légales, CGU, et confidentialité   |
-| get-html         | get raw HTML of any webpage                       |
 | ecoindex         | Compute webpage ecoscore with green-it            |
+| get-html         | get raw HTML of any webpage                       |
+| init             | read dashloard.yml                                |
+| lhci             | LightHouse collector action                       |
+| report           | build a report.json and website from latest scans |
+| save             | save a single url scan result for dashlord        |
 | sonarcloud       | Extract quality metrics from sonarcloud API       |
 | trivy            | Run trivy docker images scanner                   |
 

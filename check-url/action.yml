@@ -1,0 +1,31 @@
+name: "Checks URL status"
+description: "Checks page status from url"
+branding:
+  icon: "activity"
+  color: "green"
+inputs:
+  url:
+    description: "The URL to check"
+    required: true
+  output:
+    description: "Filename for stats reports"
+    default: "url_status.json"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        set +e
+
+        echo "testing URL $1"
+
+        wget -q -S --no-check-certificate "${INPUT_URL}"
+
+        if ! [ "$?" -ne 0 ];
+        then
+            echo '{ "grade": "A" }' > ${INPUT_OUTPUT}
+        else
+            echo '{ "grade": "F" }' > ${INPUT_OUTPUT}
+        fi
