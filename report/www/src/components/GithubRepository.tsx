@@ -2,10 +2,9 @@ import * as React from "react";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 import { Panel } from "./Panel";
 
-type BetagouvProps = { data: PageReport };
+type BetagouvProps = { url: string; data: PageReport };
 
-const GithubRepository: React.FC<BetagouvProps> = ({ data }) => {
-  const url = data.url + "/" + data.uri;
+const GithubRepository: React.FC<BetagouvProps> = ({ url, data }) => {
   return (
     <Panel title="Ouverture du code source">
       <p>Publication du code-source du produit.</p>

@@ -1,15 +1,15 @@
 import * as React from "react";
 import Alert from "@codegouvfr/react-dsfr/Alert";
 
-type PageProps = { data: PageReport; url: string; uri?: string };
+type PageProps = { data: PageReport; url: string };
 
 const grades = {
-  A: "La page a bien été détectée à l'adresse standard : ",
-  B: "La page a bien été détectée à une adresse conforme : ",
-  C: "La page a bien été détectée, mais l'URL n'est pas conforme : ",
+  A: "La page a bien été détectée : ",
+  B: "La page a bien été détectée : ",
+  C: "La page a bien été détectée : ",
 };
 
-export const Page: React.FC<PageProps> = ({ data, url, uri }) => {
+export const Page: React.FC<PageProps> = ({ data, url }) => {
   const gradeMessage = grades[data.grade];
 
   if (!gradeMessage) {
@@ -17,9 +17,7 @@ export const Page: React.FC<PageProps> = ({ data, url, uri }) => {
       <Alert
         severity="error"
         title=""
-        description={`La page n'a pas été détectée! Ajoutez-la sur ${url}/${
-          data.uri || uri
-        }`}
+        description={`La page n'a pas été détectée! Ajoutez-la sur ${url}`}
       />
     );
   }
@@ -31,9 +29,7 @@ export const Page: React.FC<PageProps> = ({ data, url, uri }) => {
       description={
         <>
           {gradeMessage}
-          <a href={`${url}/${data.uri}`}>
-            {url}/{data.uri}
-          </a>
+          <a href={url}>{url}</a>
         </>
       }
     />

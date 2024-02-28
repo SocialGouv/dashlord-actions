@@ -343,6 +343,7 @@ type UrlReport = UrlConfig & {
   summary: UrlReportSummary;
   stats?: PageReport | null;
   budget_page?: PageReport | null;
+  github_repository?: PageReport | null;
   404?: Wget404Report | null;
   trivy?: TrivyReport | null;
   "declaration-a11y"?: DeclarationA11yReport | null;
@@ -361,6 +362,8 @@ type BetagouvReport = {
   id: string;
   attributes: {
     repository: string;
+    stats_url: string;
+    budget_url: string;
     phases: BetagouvReportPhase[];
     pitch: string;
   };
@@ -370,8 +373,6 @@ type DashLordReport = UrlReport[];
 
 type PageReport = {
   grade: string;
-  url: string;
-  uri: string;
 };
 
 type DeclarationA11yReport = {
