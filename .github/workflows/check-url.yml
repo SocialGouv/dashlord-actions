@@ -21,6 +21,11 @@ jobs:
       - name: test output
         run: |
           echo $(cat stats.json)
+          grade=$(echo $(cat stats.json | jq '.grade'))
+          echo "grade=$grade"
+          if [[ -z "$grade" || "$grade" != "\"A\"" ]]; then
+            exit 1
+          fi
       - name: checks https://beta.gouv.fr/invalid
         uses: ./check-url
         with:
@@ -29,6 +34,11 @@ jobs:
       - name: test output
         run: |
           echo $(cat stats3.json)
+          grade=$(echo $(cat stats3.json | jq '.grade'))
+          echo "grade=$grade"
+          if [[ -z "$grade" || "$grade" != "\"F\"" ]]; then
+            exit 1
+          fi
       - name: checks https://mon-entreprise.urssaf.fr/stats
         uses: ./check-url
         with:
@@ -37,3 +47,8 @@ jobs:
       - name: test output
         run: |
           echo $(cat stats2.json)
+          grade=$(echo $(cat stats2.json | jq '.grade'))
+          echo "grade=$grade"
+          if [[ -z "$grade" || "$grade" != "\"A\"" ]]; then
+            exit 1
+          fi
