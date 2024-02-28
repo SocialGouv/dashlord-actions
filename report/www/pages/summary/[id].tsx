@@ -128,7 +128,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
                   title={`Voir la page de stats de l'url ${slugifyUrl(
                     params.row.url
                   )}`}
-                  href={params.row.stats.url + "/" + params.row.stats.uri}
+                  href={params.row.betagouv.attributes.stats_url}
                   target="_blank"
                 >
                   {params.row.betagouv.attributes.stats_url}
@@ -153,7 +153,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
         headerName: `Page de budget`,
         width: 400,
         valueGetter: (params) =>
-          (params.row.budget && params.row.budget.grade) || "F",
+          (params.row.budget_page && params.row.budget_page.grade) || "F",
         renderCell: (params) => {
           if (params.value === "A") {
             return (
@@ -163,7 +163,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
                   title={`Voir la page de budget de l'url ${slugifyUrl(
                     params.row.url
                   )}`}
-                  href={params.row.budget.url + "/" + params.row.budget.uri}
+                  href={params.row.betagouv.attributes.budget_url}
                   target="_blank"
                 >
                   /{params.row.betagouv.attributes.budget_url}
