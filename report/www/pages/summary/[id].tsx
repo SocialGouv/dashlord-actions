@@ -20,6 +20,7 @@ const report: DashLordReport = require("../../src/report.json");
 
 type SummaryConfig = {
   title: string;
+  neededTool: DashlordTool;
   columns: GridColDef[];
 };
 
@@ -68,6 +69,7 @@ const getPhaseColumn = (): GridColDef => ({
 const summaryConfigs: Record<string, SummaryConfig> = {
   accessibility: {
     title: "Accessibilité",
+    neededTool: "declaration-a11y",
     columns: [
       {
         ...defaultColumnsProps,
@@ -106,6 +108,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   },
   stats: {
     title: "Page de stats",
+    neededTool: "stats",
     columns: [
       {
         ...defaultColumnsProps,
@@ -138,6 +141,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   },
   budget: {
     title: "Publication du budget",
+    neededTool: "budget_page",
     columns: [
       {
         ...defaultColumnsProps,
@@ -177,9 +181,13 @@ const Summary = ({ id }: { id: string }) => {
     new Set(report.map((url) => url.category).filter(Boolean))
   ).sort();
 
-  const tableData = category
-    ? report.filter((url) => url.category === category)
-    : report;
+  const tableData = (
+    category ? report.filter((url) => url.category === category) : report
+  ).filter((url) =>
+    summaryConfig.neededTool
+      ? isToolEnabled(summaryConfig.neededTool, url.url)
+      : true
+  );
 
   const ROWS_COUNT = 100;
 
