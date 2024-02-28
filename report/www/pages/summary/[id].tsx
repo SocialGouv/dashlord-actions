@@ -20,6 +20,7 @@ const report: DashLordReport = require("../../src/report.json");
 
 type SummaryConfig = {
   title: string;
+  neededTool: DashlordTool;
   columns: GridColDef[];
 };
 
@@ -68,6 +69,7 @@ const getPhaseColumn = (): GridColDef => ({
 const summaryConfigs: Record<string, SummaryConfig> = {
   accessibility: {
     title: "Accessibilité",
+    neededTool: "declaration-a11y",
     columns: [
       {
         ...defaultColumnsProps,
@@ -106,6 +108,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   },
   stats: {
     title: "Page de stats",
+    neededTool: "stats",
     columns: [
       {
         ...defaultColumnsProps,
@@ -127,7 +130,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
                 href={params.row.stats.url + "/" + params.row.stats.uri}
                 target="_blank"
               >
-                /{params.row.stats.uri}
+                {params.row.stats.uri}
               </Link>
             );
           }
@@ -138,6 +141,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   },
   budget: {
     title: "Publication du budget",
+    neededTool: "budget_page",
     columns: [
       {
         ...defaultColumnsProps,
@@ -175,11 +179,15 @@ const Summary = ({ id }: { id: string }) => {
   const summaryConfig = summaryConfigs[id];
   const categories = Array.from(
     new Set(report.map((url) => url.category).filter(Boolean))
-  );
+  ).sort();
 
-  const tableData = category
-    ? report.filter((url) => url.category === category)
-    : report;
+  const tableData = (
+    category ? report.filter((url) => url.category === category) : report
+  ).filter((url) =>
+    summaryConfig.neededTool
+      ? isToolEnabled(summaryConfig.neededTool, url.url)
+      : true
+  );
 
   const ROWS_COUNT = 100;
 
@@ -239,7 +247,6 @@ const Summary = ({ id }: { id: string }) => {
       <DataGrid
         rows={tableData}
         columns={columns}
-        sortModel={[{ field: "phase", sort: "desc" }]}
         autoHeight={true}
         getRowId={(row) => row.url}
         disableVirtualization
@@ -248,6 +255,11 @@ const Summary = ({ id }: { id: string }) => {
         rowSelection={false}
         hideFooterPagination={false}
         hideFooter={tableData.length < ROWS_COUNT}
+        initialState={{
+          sorting: {
+            sortModel: [{ field: "phase", sort: "desc" }],
+          },
+        }}
         localeText={{
           MuiTablePagination: { labelRowsPerPage: "Lignes par page" },
         }}
