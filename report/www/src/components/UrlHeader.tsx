@@ -32,7 +32,7 @@ export const UrlHeader = ({
       //@ts-ignore
     )?.title;
   return (
-    <div className={fr.cx("fr-mb-5w")}>
+    <div className={fr.cx("fr-mb-5w")} style={{ position: "relative" }}>
       <h1 className={fr.cx("fr-mb-2w")}>
         <a href={url} rel="noreferrer noopener" target="_blank">
           {url}
@@ -42,7 +42,7 @@ export const UrlHeader = ({
         <div>{report.betagouv?.attributes?.pitch}</div>
       )}
       {title && <div>{title}</div>}
-      <div className={fr.cx("fr-mt-1w")} style={{ position: "relative" }}>
+      <div className={fr.cx("fr-mt-1w")}>
         {updateDate && (
           <Badge
             severity="warning"

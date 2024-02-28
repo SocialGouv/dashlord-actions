@@ -4,6 +4,11 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
 [
   <div
     className="fr-mb-5w"
+    style={
+      {
+        "position": "relative",
+      }
+    }
   >
     <h1
       className="fr-mb-2w"
@@ -18,11 +23,6 @@ exports[`Tools config > Should render Url with limited tools 1`] = `
     </h1>
     <div
       className="fr-mt-1w"
-      style={
-        {
-          "position": "relative",
-        }
-      }
     >
       <span
         className="fr-badge fr-badge--warning fr-badge--no-icon"
