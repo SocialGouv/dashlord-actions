@@ -1,0 +1,39 @@
+name: "tests check-url"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  # test action works running from the graph
+  action:
+    name: Test check-url
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Locally
+        uses: actions/checkout@v4
+      - name: checks https://beta.gouv.fr/stats
+        uses: ./check-url
+        with:
+          url: https://beta.gouv.fr/stats
+          output: stats.json
+      - name: test output
+        run: |
+          echo $(cat stats.json)
+      - name: checks https://beta.gouv.fr/invalid
+        uses: ./check-url
+        with:
+          url: https://beta.gouv.fr/invalid
+          output: stats3.json
+      - name: test output
+        run: |
+          echo $(cat stats3.json)
+      - name: checks https://mon-entreprise.urssaf.fr/stats
+        uses: ./check-url
+        with:
+          url: https://mon-entreprise.urssaf.fr/stats
+          output: stats2.json
+      - name: test output
+        run: |
+          echo $(cat stats2.json)
