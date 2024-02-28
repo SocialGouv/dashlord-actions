@@ -791,37 +791,6 @@ exports[`Url > Should render full Url 1`] = `
         <div
           id="stats"
         />
-        <div
-          className="fr-callout"
-          id="fr-callout-:rh:"
-        >
-          <h2
-            className="fr-card__title"
-          >
-            Page de statistiques
-          </h2>
-          <p
-            className="fr-callout__text"
-          >
-             
-            <p>
-              Cette page permet de publier vos mesures d'impact
-            </p>
-            <br />
-            <div
-              className="fr-alert fr-alert--error"
-              id="fr-alert-:ri:"
-            >
-              <h3
-                className="fr-alert__title"
-              />
-              <p>
-                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
-              </p>
-            </div>
-             
-          </p>
-        </div>
       </div>
       <div>
         <div
@@ -829,7 +798,7 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rj:"
+          id="fr-callout-:rh:"
         >
           <h2
             className="fr-card__title"
@@ -846,7 +815,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--info"
-              id="fr-alert-:rk:"
+              id="fr-alert-:ri:"
             >
               <h3
                 className="fr-alert__title"
@@ -859,7 +828,7 @@ exports[`Url > Should render full Url 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:rl:"
+              id="fr-alert-:rj:"
             >
               <h3
                 className="fr-alert__title"
@@ -886,7 +855,7 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rm:"
+          id="fr-callout-:rk:"
         >
           <h2
             className="fr-card__title"
@@ -903,7 +872,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:rn:"
+              id="fr-alert-:rl:"
             >
               <h3
                 className="fr-alert__title"
@@ -927,7 +896,7 @@ exports[`Url > Should render full Url 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:ro:"
+          id="fr-callout-:rm:"
         >
           <h2
             className="fr-card__title"
@@ -944,7 +913,7 @@ exports[`Url > Should render full Url 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:rp:"
+              id="fr-alert-:rn:"
             >
               <h3
                 className="fr-alert__title"
@@ -957,7 +926,7 @@ exports[`Url > Should render full Url 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:rq:"
+              id="fr-alert-:ro:"
             >
               <h3
                 className="fr-alert__title"
@@ -986,7 +955,7 @@ exports[`Url > Should render full Url 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:rr:"
+          id="fr-callout-:rp:"
         >
           <h2
             className="fr-card__title"
@@ -999,7 +968,7 @@ exports[`Url > Should render full Url 1`] = `
              
             <div
               className="fr-table"
-              id="fr-table-:rs:"
+              id="fr-table-:rq:"
             >
               <table>
                 <tbody>
@@ -1086,7 +1055,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
     >
       <span
         className="fr-badge fr-badge--warning fr-badge--no-icon"
-        id="fr-badge-:rt:"
+        id="fr-badge-:rr:"
         style={
           {
             "marginRight": 10,
@@ -1110,7 +1079,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       >
         <p
           className="fr-badge fr-badge--success"
-          id="fr-badge-:ru:"
+          id="fr-badge-:rs:"
           style={
             {
               "marginRight": 10,
@@ -1131,7 +1100,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       >
         <p
           className="fr-badge fr-badge--info"
-          id="fr-badge-:rv:"
+          id="fr-badge-:rt:"
           style={
             {
               "marginRight": 10,
@@ -1152,7 +1121,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       >
         <p
           className="fr-badge fr-badge--info"
-          id="fr-badge-:r10:"
+          id="fr-badge-:ru:"
           style={
             {
               "marginRight": 10,
@@ -1173,7 +1142,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       >
         <p
           className="fr-badge fr-badge--info"
-          id="fr-badge-:r11:"
+          id="fr-badge-:rv:"
           style={
             {
               "marginRight": 10,
@@ -1193,7 +1162,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
   </div>,
   <div
     className="fr-tabs"
-    id="fr-tabs-:r12:"
+    id="fr-tabs-:r10:"
   >
     <ul
       className="fr-tabs__list"
@@ -1204,10 +1173,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r13:-0-panel"
+          aria-controls="tabpanel-:r11:-0-panel"
           aria-selected={true}
           className="fr-tabs__tab fr-icon-thumb-up-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r13:-0"
+          id="tabpanel-:r11:-0"
           onClick={[Function]}
           role="tab"
           tabIndex={0}
@@ -1219,10 +1188,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r13:-1-panel"
+          aria-controls="tabpanel-:r11:-1-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-time-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r13:-1"
+          id="tabpanel-:r11:-1"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1234,10 +1203,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r13:-2-panel"
+          aria-controls="tabpanel-:r11:-2-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-lock-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r13:-2"
+          id="tabpanel-:r11:-2"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1249,10 +1218,10 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         role="presentation"
       >
         <button
-          aria-controls="tabpanel-:r13:-3-panel"
+          aria-controls="tabpanel-:r11:-3-panel"
           aria-selected={false}
           className="fr-tabs__tab fr-icon-info-line fr-tabs__tab--icon-left"
-          id="tabpanel-:r13:-3"
+          id="tabpanel-:r11:-3"
           onClick={[Function]}
           role="tab"
           tabIndex={-1}
@@ -1262,9 +1231,9 @@ exports[`Url > Should render full Url with screenshot 1`] = `
       </li>
     </ul>
     <div
-      aria-labelledby="tabpanel-:r13:-0"
+      aria-labelledby="tabpanel-:r11:-0"
       className="fr-tabs__panel fr-tabs__panel--selected"
-      id="tabpanel-:r13:-0-panel"
+      id="tabpanel-:r11:-0-panel"
       role="tabpanel"
       tabIndex={0}
     >
@@ -1274,7 +1243,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r14:"
+          id="fr-callout-:r12:"
         >
           <h2
             className="fr-card__title"
@@ -1307,7 +1276,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-callout"
-              id="fr-callout-:r15:"
+              id="fr-callout-:r13:"
             >
               <h3
                 className="fr-card__title"
@@ -1318,7 +1287,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
                   https://www.fabrique.social.gouv.fr/
                   <span
                     className="fr-badge fr-badge--info fr-badge--no-icon"
-                    id="fr-badge-:r16:"
+                    id="fr-badge-:r14:"
                     style={
                       {
                         "paddingLeft": 10,
@@ -1635,7 +1604,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               <a
                 className="fr-btn"
                 href="/report/aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnI=/lhr-aHR0cHM6Ly93d3cuZmFicmlxdWUuc29jaWFsLmdvdXYuZnIv.html"
-                id="fr-button-:r17:"
+                id="fr-button-:r15:"
                 style={{}}
                 target="_blank"
               >
@@ -1652,7 +1621,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r18:"
+          id="fr-callout-:r16:"
         >
           <h2
             className="fr-card__title"
@@ -1661,7 +1630,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               Cookies
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:r19:"
+                id="fr-badge-:r17:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -1687,7 +1656,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:r1a:"
+              id="fr-table-:r18:"
             >
               <table>
                 <tbody>
@@ -1741,7 +1710,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:r1b:"
+          id="fr-callout-:r19:"
         >
           <h2
             className="fr-card__title"
@@ -1750,7 +1719,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
               Scripts tiers
               <span
                 className="fr-badge fr-badge--info fr-badge--no-icon"
-                id="fr-badge-:r1c:"
+                id="fr-badge-:r1a:"
                 style={
                   {
                     "paddingLeft": 10,
@@ -1776,7 +1745,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-table"
-              id="fr-table-:r1d:"
+              id="fr-table-:r1b:"
             >
               <table>
                 <tbody>
@@ -1849,37 +1818,6 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         <div
           id="stats"
         />
-        <div
-          className="fr-callout"
-          id="fr-callout-:r1e:"
-        >
-          <h2
-            className="fr-card__title"
-          >
-            Page de statistiques
-          </h2>
-          <p
-            className="fr-callout__text"
-          >
-             
-            <p>
-              Cette page permet de publier vos mesures d'impact
-            </p>
-            <br />
-            <div
-              className="fr-alert fr-alert--error"
-              id="fr-alert-:r1f:"
-            >
-              <h3
-                className="fr-alert__title"
-              />
-              <p>
-                La page n'a pas été détectée! Ajoutez-la sur https://www.fabrique.social.gouv.fr/stats
-              </p>
-            </div>
-             
-          </p>
-        </div>
       </div>
       <div>
         <div
@@ -1887,7 +1825,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1g:"
+          id="fr-callout-:r1c:"
         >
           <h2
             className="fr-card__title"
@@ -1904,7 +1842,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--info"
-              id="fr-alert-:r1h:"
+              id="fr-alert-:r1d:"
             >
               <h3
                 className="fr-alert__title"
@@ -1917,7 +1855,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:r1i:"
+              id="fr-alert-:r1e:"
             >
               <h3
                 className="fr-alert__title"
@@ -1944,7 +1882,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1j:"
+          id="fr-callout-:r1f:"
         >
           <h2
             className="fr-card__title"
@@ -1961,7 +1899,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--success"
-              id="fr-alert-:r1k:"
+              id="fr-alert-:r1g:"
             >
               <h3
                 className="fr-alert__title"
@@ -1985,7 +1923,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         </div>
         <div
           className="fr-callout"
-          id="fr-callout-:r1l:"
+          id="fr-callout-:r1h:"
         >
           <h2
             className="fr-card__title"
@@ -2002,7 +1940,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             <br />
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:r1m:"
+              id="fr-alert-:r1i:"
             >
               <h3
                 className="fr-alert__title"
@@ -2015,7 +1953,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
             </div>
             <div
               className="fr-alert fr-alert--error"
-              id="fr-alert-:r1n:"
+              id="fr-alert-:r1j:"
             >
               <h3
                 className="fr-alert__title"
@@ -2044,7 +1982,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
         />
         <div
           className="fr-callout"
-          id="fr-callout-:r1o:"
+          id="fr-callout-:r1k:"
         >
           <h2
             className="fr-card__title"
@@ -2057,7 +1995,7 @@ exports[`Url > Should render full Url with screenshot 1`] = `
              
             <div
               className="fr-table"
-              id="fr-table-:r1p:"
+              id="fr-table-:r1l:"
             >
               <table>
                 <tbody>

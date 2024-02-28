@@ -76,23 +76,29 @@ const tabs: {
       },
       {
         id: "stats",
-        render: (report, url) =>
-          report.stats ? (
+        render: (report: UrlReport, url) =>
+          report.stats && report.betagouv ? (
             <Panel title="Page de statistiques">
               <p>Cette page permet de publier vos mesures d&apos;impact</p>
               <br />
-              <Page data={report.stats} url={url} uri="stats" />
+              <Page
+                data={report.stats}
+                url={report.betagouv.attributes.stats_url}
+              />
             </Panel>
           ) : null,
       },
       {
         id: "budget_page",
-        render: (report, url) =>
-          report.budget_page ? (
+        render: (report: UrlReport, url) =>
+          report.budget_page && report.betagouv ? (
             <Panel title="Page de budget">
               <p>Cette page permet de publier votre budget</p>
               <br />
-              <Page data={report.budget_page} url={url} uri="budget" />
+              <Page
+                data={report.budget_page}
+                url={report.betagouv.attributes.budget_url}
+              />
             </Panel>
           ) : null,
       },
@@ -114,9 +120,14 @@ const tabs: {
       },
       {
         id: "github_repository",
-        render: (report) => (
-          <GithubRepository data={report["github_repository"]} />
-        ),
+        render: (report: UrlReport) =>
+          report.github_repository &&
+          report.betagouv && (
+            <GithubRepository
+              url={report.betagouv.attributes.repository}
+              data={report.github_repository}
+            />
+          ),
       },
     ],
   },
