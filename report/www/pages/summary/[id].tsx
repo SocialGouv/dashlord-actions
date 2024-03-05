@@ -12,16 +12,23 @@ import { isToolEnabled, smallUrl, slugifyUrl } from "../../src/utils";
 import Link from "next/link";
 import { GradeBadge, IconUnknown } from "../../src/components/GradeBadge";
 import {
+  phases,
   getLatestPhase,
   phaseSeverities,
 } from "../../src/components/BetagouvInfo";
 
 const report: DashLordReport = require("../../src/report.json");
 
+type StatDef = {
+  title: string;
+  value: (any) => number;
+};
+
 type SummaryConfig = {
   title: string;
   neededTool: DashlordTool;
   columns: GridColDef[];
+  stats: StatDef[];
 };
 
 const defaultColumnsProps = {
@@ -70,6 +77,23 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   accessibility: {
     title: "Accessibilité",
     neededTool: "declaration-a11y",
+    stats: [
+      {
+        title: "Déclaration présente",
+        value: (rows) =>
+          rows.filter(
+            (row) => row["declaration-a11y"] && row["declaration-a11y"].mention
+          ).length,
+      },
+      {
+        title: "Déclaration absente",
+        value: (rows) =>
+          rows.filter(
+            (row) =>
+              !(row["declaration-a11y"] && row["declaration-a11y"].mention)
+          ).length,
+      },
+    ],
     columns: [
       {
         ...defaultColumnsProps,
@@ -109,6 +133,18 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   stats: {
     title: "Page de stats",
     neededTool: "stats",
+    stats: [
+      {
+        title: "Stats publiées",
+        value: (rows) =>
+          rows.filter((row) => row.stats && row.stats.grade === "A").length,
+      },
+      {
+        title: "Stats non publiées",
+        value: (rows) =>
+          rows.filter((row) => row.stats && row.stats.grade === "F").length,
+      },
+    ],
     columns: [
       {
         ...defaultColumnsProps,
@@ -145,6 +181,23 @@ const summaryConfigs: Record<string, SummaryConfig> = {
   budget: {
     title: "Publication du budget",
     neededTool: "budget_page",
+    stats: [
+      {
+        title: "Budget publié",
+        value: (rows) =>
+          rows.filter((row) => row.budget_page && row.budget_page.grade === "A")
+            .length,
+      },
+      {
+        title: "Budget non publié",
+        value: (rows) =>
+          rows.filter(
+            (row) =>
+              !row.budget_page ||
+              (row.budget_page && row.budget_page.grade === "F")
+          ).length,
+      },
+    ],
     columns: [
       {
         ...defaultColumnsProps,
@@ -182,13 +235,24 @@ const summaryConfigs: Record<string, SummaryConfig> = {
 
 const Summary = ({ id }: { id: string }) => {
   const [category, setCategory] = useState(null);
+  const [phase, setPhase] = useState(null);
   const summaryConfig = summaryConfigs[id];
   const categories = Array.from(
     new Set(report.map((url) => url.category).filter(Boolean))
   ).sort();
 
   const tableData = (
-    category ? report.filter((url) => url.category === category) : report
+    category || phase
+      ? report.filter((url) => {
+          let matchCategory = category ? url.category === category : true;
+          let matchPhase = phase
+            ? url.betagouv &&
+              url.betagouv.attributes &&
+              getLatestPhase(url.betagouv.attributes.phases).id === phase
+            : true;
+          return matchCategory && matchPhase;
+        })
+      : report
   ).filter((url) =>
     summaryConfig.neededTool
       ? isToolEnabled(summaryConfig.neededTool, url.url)
@@ -228,6 +292,8 @@ const Summary = ({ id }: { id: string }) => {
     isToolEnabled("betagouv") && getPhaseColumn(),
     ...summaryConfig.columns,
   ].filter(Boolean);
+
+  // console.log(phases, report);
   return (
     <>
       <Head>
@@ -236,21 +302,61 @@ const Summary = ({ id }: { id: string }) => {
         </title>
       </Head>
       <h1>{summaryConfig.title}</h1>
-      {categories.length > 1 && (
-        <Select
-          label={null}
-          nativeSelectProps={{
-            onChange: (event) => setCategory(event.target.value),
-          }}
-        >
-          <option value="">tous les incubateurs</option>
-          {categories.map((cat) => (
-            <option value={cat} key={cat}>
-              {cat}
-            </option>
-          ))}
-        </Select>
-      )}
+
+      <div className={fr.cx("fr-grid-row", "fr-grid-row--gutters", "fr-mb-3w")}>
+        {summaryConfig.stats.map((stat) => {
+          const value = stat.value(tableData);
+          return (
+            <div
+              className={fr.cx("fr-col-3", "fr-m-1w", "fr-p-3w")}
+              style={{ textAlign: "center", border: "1px solid #ccc" }}
+            >
+              <div className={fr.cx("fr-text--lead", "fr-text--heavy")}>
+                {stat.title}
+              </div>
+              <div
+                className={fr.cx("fr-text--heavy")}
+                style={{ fontSize: "2rem" }}
+              >
+                {value}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className={fr.cx("fr-grid-row")}>
+        {categories.length > 1 && (
+          <Select
+            label={null}
+            nativeSelectProps={{
+              onChange: (event) => setCategory(event.target.value),
+            }}
+          >
+            <option value="">tous les incubateurs</option>
+            {categories.map((cat) => (
+              <option value={cat} key={cat}>
+                {cat}
+              </option>
+            ))}
+          </Select>
+        )}
+        {isToolEnabled("betagouv") && (
+          <Select
+            className={fr.cx("fr-ml-1w")}
+            label={null}
+            nativeSelectProps={{
+              onChange: (event) => setPhase(event.target.value),
+            }}
+          >
+            <option value="">toutes les phases</option>
+            {phases.map((phase) => (
+              <option value={phase.id} key={phase.id}>
+                {phase.label}
+              </option>
+            ))}
+          </Select>
+        )}
+      </div>
       <DataGrid
         rows={tableData}
         columns={columns}
