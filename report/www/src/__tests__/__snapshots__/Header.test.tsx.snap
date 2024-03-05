@@ -2,6 +2,45 @@
 
 exports[`Should render HeaderSite 1`] = `
 <div>
+  <div
+    class="fr-skiplinks fr-mt-9v"
+    id="fr-skiplinks-:r0:"
+  >
+    <nav
+      aria-label="Accès rapide"
+      class="fr-container"
+      role="navigation"
+    >
+      <ul
+        class="fr-skiplinks__list"
+      >
+        <li>
+          <a
+            class="fr-link"
+            href="#fr-header-main-navigation"
+          >
+            Menu
+          </a>
+        </li>
+        <li>
+          <a
+            class="fr-link"
+            href="#content"
+          >
+            Contenu
+          </a>
+        </li>
+        <li>
+          <a
+            class="fr-link"
+            href="#fr-footer"
+          >
+            Pied de page
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <button
     aria-controls="fr-theme-modal"
     aria-hidden="true"
@@ -74,14 +113,14 @@ exports[`Should render HeaderSite 1`] = `
                         class="fr-radio-group fr-radio-rich"
                       >
                         <input
-                          id=":r0:-light"
+                          id=":r1:-light"
                           name="fr-radios-theme"
                           type="radio"
                           value="light"
                         />
                         <label
                           class="fr-label"
-                          for=":r0:-light"
+                          for=":r1:-light"
                         >
                           Thème clair
                         </label>
@@ -114,14 +153,14 @@ exports[`Should render HeaderSite 1`] = `
                         class="fr-radio-group fr-radio-rich"
                       >
                         <input
-                          id=":r0:-dark"
+                          id=":r1:-dark"
                           name="fr-radios-theme"
                           type="radio"
                           value="dark"
                         />
                         <label
                           class="fr-label"
-                          for=":r0:-dark"
+                          for=":r1:-dark"
                         >
                           Thème sombre
                         </label>
@@ -154,14 +193,14 @@ exports[`Should render HeaderSite 1`] = `
                         class="fr-radio-group fr-radio-rich"
                       >
                         <input
-                          id=":r0:-system"
+                          id=":r1:-system"
                           name="fr-radios-theme"
                           type="radio"
                           value="system"
                         />
                         <label
                           class="fr-label"
-                          for=":r0:-system"
+                          for=":r1:-system"
                         >
                           Système.
                           <span

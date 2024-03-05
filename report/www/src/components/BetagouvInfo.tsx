@@ -31,7 +31,7 @@ export const getLatestPhase = (allphases: BetagouvReportPhase[]) => {
   const sortedPhases = allphases.sort(sortPhases);
   return sortedPhases.length
     ? getPhase(sortedPhases[sortedPhases.length - 1].name)
-    : { label: "-", index: 0 }; // fallback
+    : { id: "-", label: "-", index: 0 }; // fallback
 };
 
 export const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
@@ -87,7 +87,7 @@ export const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
 };
 
 // index is used when we have similar timestamps for different phases
-const phases = [
+export const phases = [
   {
     id: "investigation",
     label: "Investigation",
