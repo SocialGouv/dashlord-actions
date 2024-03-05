@@ -1267,7 +1267,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url annuaire-entreprises-data-gouv-fr"
+          title="Voir la détection des stats pour l'url annuaire-entreprises-data-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -1295,11 +1295,11 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
-          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#budget"
+          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#budget_page"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url annuaire-entreprises-data-gouv-fr"
+          title="Voir la détection du budget pour l'url annuaire-entreprises-data-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -1869,7 +1869,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url acceslibre-beta-gouv-fr"
+          title="Voir la détection des stats pour l'url acceslibre-beta-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -1892,11 +1892,11 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
-          href="/url/acceslibre-beta-gouv-fr/best-practices#budget"
+          href="/url/acceslibre-beta-gouv-fr/best-practices#budget_page"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url acceslibre-beta-gouv-fr"
+          title="Voir la détection du budget pour l'url acceslibre-beta-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -2458,7 +2458,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url aidantsconnect-beta-gouv-fr"
+          title="Voir la détection des stats pour l'url aidantsconnect-beta-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -2486,11 +2486,11 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
-          href="/url/aidantsconnect-beta-gouv-fr/best-practices#budget"
+          href="/url/aidantsconnect-beta-gouv-fr/best-practices#budget_page"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url aidantsconnect-beta-gouv-fr"
+          title="Voir la détection du budget pour l'url aidantsconnect-beta-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -2993,7 +2993,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url archifiltre-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url archifiltre-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -3505,7 +3505,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url index-egapro-travail-gouv-fr"
+          title="Voir la détection des stats pour l'url index-egapro-travail-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -4013,7 +4013,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url domifa-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url domifa-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -4539,7 +4539,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url www-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url www-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -5055,7 +5055,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url pjm-social-gouv-fr"
+          title="Voir la détection des stats pour l'url pjm-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -5561,7 +5561,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url tumeplay-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url tumeplay-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -5982,7 +5982,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url 1000jours-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url 1000jours-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6417,7 +6417,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url 1000jours-blues-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url 1000jours-blues-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6941,7 +6941,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url monpsy-sante-gouv-fr"
+          title="Voir la détection des stats pour l'url monpsy-sante-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
@@ -7448,7 +7448,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url ressourcerie-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url ressourcerie-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -7899,7 +7899,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url admin-domifa-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url admin-domifa-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -8389,7 +8389,7 @@ exports[`Should render full Dashboard 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails des standards pour l'url template-fabrique-social-gouv-fr"
+          title="Voir la détection des stats pour l'url template-fabrique-social-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"

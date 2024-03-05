@@ -122,7 +122,8 @@ const summaryConfigs: Record<string, SummaryConfig> = {
         renderCell: (params) => {
           if (params.value === "A") {
             return (
-              params.row.betagouv && (
+              params.row.betagouv &&
+              params.row.betagouv.attributes.stats_url && (
                 <Link
                   prefetch={false}
                   title={`Voir la page de stats de l'url ${slugifyUrl(
@@ -157,7 +158,8 @@ const summaryConfigs: Record<string, SummaryConfig> = {
         renderCell: (params) => {
           if (params.value === "A") {
             return (
-              params.row.betagouv && (
+              params.row.betagouv &&
+              params.row.betagouv.attributes.budget_url && (
                 <Link
                   prefetch={false}
                   title={`Voir la page de budget de l'url ${slugifyUrl(
@@ -166,7 +168,7 @@ const summaryConfigs: Record<string, SummaryConfig> = {
                   href={params.row.betagouv.attributes.budget_url}
                   target="_blank"
                 >
-                  /{params.row.betagouv.attributes.budget_url}
+                  {params.row.betagouv.attributes.budget_url}
                 </Link>
               )
             );
@@ -201,26 +203,27 @@ const Summary = ({ id }: { id: string }) => {
       field: "url",
       headerName: `URL`,
       width: 400,
-      renderCell: (params) => (
-        <div
-          style={{
-            width: "95%",
-            overflow: "hidden",
-            whiteSpace: "nowrap",
-            textOverflow: "ellipsis",
-          }}
-        >
-          <Link
-            prefetch={false}
-            title={`Voir les détails de l'url ${slugifyUrl(params.value)}`}
-            href={`/url/${encodeURIComponent(slugifyUrl(params.value))}`}
+      renderCell: (params) =>
+        params.value && (
+          <div
+            style={{
+              width: "95%",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+            }}
           >
-            <i className={fr.cx("fr-icon-search-line", "fr-icon--sm")} />
-            &nbsp;
-            {smallUrl(params.value)}
-          </Link>
-        </div>
-      ),
+            <Link
+              prefetch={false}
+              title={`Voir les détails de l'url ${slugifyUrl(params.value)}`}
+              href={`/url/${encodeURIComponent(slugifyUrl(params.value))}`}
+            >
+              <i className={fr.cx("fr-icon-search-line", "fr-icon--sm")} />
+              &nbsp;
+              {smallUrl(params.value)}
+            </Link>
+          </div>
+        ),
     },
     isToolEnabled("betagouv") && getPhaseColumn(),
     ...summaryConfig.columns,

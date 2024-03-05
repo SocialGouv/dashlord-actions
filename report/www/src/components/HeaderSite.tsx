@@ -1,15 +1,16 @@
 import React from "react";
 import { useRouter } from "next/router";
-import uniq from "lodash.uniq";
-import { Header } from "@codegouvfr/react-dsfr/Header";
 import { symToStr } from "tsafe/symToStr";
+import uniq from "lodash.uniq";
 
+import { Header } from "@codegouvfr/react-dsfr/Header";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
+import { SkipLinks } from "@codegouvfr/react-dsfr/SkipLinks";
+import { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation";
 import { createComponentI18nApi } from "@codegouvfr/react-dsfr/i18n";
 
 import dashlordConfig from "@/config.json";
 import { sortByKey, isToolEnabled } from "../utils";
-import { MainNavigationProps } from "@codegouvfr/react-dsfr/MainNavigation";
 
 type HeaderSiteProps = {
   report: DashLordReport;
@@ -142,6 +143,25 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
 
   return (
     <>
+      <SkipLinks
+        classes={{
+          root: "fr-mt-9v",
+        }}
+        links={[
+          {
+            anchor: "#fr-header-main-navigation",
+            label: "Menu",
+          },
+          {
+            anchor: "#content",
+            label: "Contenu",
+          },
+          {
+            anchor: "#fr-footer",
+            label: "Pied de page",
+          },
+        ]}
+      />
       <Header
         classes={{
           logo: (!!dashlordConfig.marianne && "auto") || "hidden",

@@ -834,7 +834,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         if (grade) {
           return (
             <GradeBadge
-              title={`Voir les détails des standards pour l'url ${slugifyUrl(
+              title={`Voir la détection des stats pour l'url ${slugifyUrl(
                 params.row.url
               )}`}
               showCheckOnSuccess
@@ -870,7 +870,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         if (grade) {
           return (
             <GradeBadge
-              title={`Voir les détails des standards pour l'url ${slugifyUrl(
+              title={`Voir la détection du budget pour l'url ${slugifyUrl(
                 params.row.url
               )}`}
               showCheckOnSuccess
@@ -879,7 +879,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
               linkProps={{
                 href: `/url/${slugifyUrl(
                   params.row.url
-                )}/best-practices/#budget`,
+                )}/best-practices/#budget_page`,
               }}
             />
           );

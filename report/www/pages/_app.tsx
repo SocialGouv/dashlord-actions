@@ -110,6 +110,7 @@ function App({ Component, pageProps }: AppProps) {
                 topBottom: "10v",
               }),
             }}
+            id="content"
           >
             <Component {...pageProps} />
           </div>
