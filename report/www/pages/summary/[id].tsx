@@ -310,6 +310,7 @@ const Summary = ({ id }: { id: string }) => {
             <div
               className={fr.cx("fr-col-3", "fr-m-1w", "fr-p-3w")}
               style={{ textAlign: "center", border: "1px solid #ccc" }}
+              key={stat.title}
             >
               <div className={fr.cx("fr-text--lead", "fr-text--heavy")}>
                 {stat.title}
