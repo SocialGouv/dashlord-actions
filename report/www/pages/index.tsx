@@ -11,6 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{dashlordConfig.title}</title>
       </Head>
+      <h1>Tableau de bord</h1>
       <Dashboard report={report} />
     </>
   );

@@ -23,6 +23,7 @@ const PageStartup = ({ report, id }: { report: UrlReport[]; id: string }) => {
           {id} - {dashlordConfig.title}
         </title>
       </Head>
+      <h1>Tableau de bord : {id}</h1>
       <Dashboard report={report} />
     </>
   );

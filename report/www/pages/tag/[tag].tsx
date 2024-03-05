@@ -14,6 +14,7 @@ const Tag = ({ report, tag }: { report: DashLordReport; tag: string }) => {
           Tag {tag} - {dashlordConfig.title}
         </title>
       </Head>
+      <h1>Tableau de bord : {tag}</h1>
       <Dashboard report={report} />
     </>
   );

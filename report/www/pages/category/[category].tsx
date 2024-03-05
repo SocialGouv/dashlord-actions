@@ -3,15 +3,24 @@ import Head from "next/head";
 import uniq from "lodash.uniq";
 
 import { Dashboard } from "../../src/components/Dashboard";
-import report from '@/report.json';
-import dashlordConfig from '@/config.json';
+import report from "@/report.json";
+import dashlordConfig from "@/config.json";
 
-const Tag = ({ report, tag }: { report: DashLordReport; tag: string }) => {
+const Category = ({
+  report,
+  category,
+}: {
+  report: DashLordReport;
+  category: string;
+}) => {
   return (
     <>
       <Head>
-        <title>Catégorie {tag} - {dashlordConfig.title}</title>
+        <title>
+          Catégorie {category} - {dashlordConfig.title}
+        </title>
       </Head>
+      <h1>Tableau de bord : {category}</h1>
       <Dashboard report={report} />
     </>
   );
@@ -34,4 +43,4 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-export default Tag;
+export default Category;
