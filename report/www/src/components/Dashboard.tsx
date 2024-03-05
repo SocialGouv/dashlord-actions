@@ -732,7 +732,23 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         if (!isToolEnabled("thirdparties", params.row.url))
           return <IconUnknown />;
         const grade = params.value;
-        if (grade) {
+        if (typeof grade !== "undefined") {
+          if (params.row.summary.trackersCount === 0) {
+            return (
+              <GradeBadge
+                title={`Voir les détails des trackers pour l'url ${slugifyUrl(
+                  params.row.url
+                )}`}
+                showCheckOnSuccess
+                label="A"
+                linkProps={{
+                  href: `/url/${slugifyUrl(
+                    params.row.url
+                  )}/best-practices/#thirdparties`,
+                }}
+              />
+            );
+          }
           return (
             <GradeBadge
               title={`Voir les détails des trackers pour l'url ${slugifyUrl(
@@ -764,7 +780,24 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         if (!isToolEnabled("thirdparties", params.row.url))
           return <IconUnknown />;
         const grade = params.value;
-        if (grade) {
+        if (typeof grade !== "undefined") {
+          if (params.row.summary.cookiesCount === 0) {
+            return (
+              <GradeBadge
+                title={`Voir les détails des cookies pour l'url ${slugifyUrl(
+                  params.row.url
+                )}`}
+                showCheckOnSuccess
+                label="A"
+                linkProps={{
+                  href: `/url/${slugifyUrl(
+                    params.row.url
+                  )}/best-practices/#cookies`,
+                }}
+              />
+            );
+          }
+
           return (
             <GradeBadge
               title={`Voir les détails des cookies pour l'url ${slugifyUrl(
