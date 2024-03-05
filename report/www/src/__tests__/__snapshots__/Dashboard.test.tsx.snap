@@ -2425,9 +2425,31 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/aidantsconnect-beta-gouv-fr/best-practices#cookies"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des cookies pour l'url aidantsconnect-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2c:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -2440,7 +2462,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2c:"
+            id="fr-badge-:r2d:"
             style={
               {
                 "display": "inline-block",
@@ -2472,7 +2494,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2d:"
+            id="fr-badge-:r2e:"
             style={
               {
                 "display": "inline-block",
@@ -2539,7 +2561,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--warning fr-badge--no-icon"
-          id="fr-badge-:r2e:"
+          id="fr-badge-:r2f:"
         >
           Construction
         </p>
@@ -2555,7 +2577,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r2f:"
+            id="fr-badge-:r2g:"
             style={
               {
                 "display": "inline-block",
@@ -2573,33 +2595,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#declaration-rgpd"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails de la conformité juridique pour l'url archifiltre-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2g:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -2631,6 +2626,33 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#declaration-rgpd"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails de la conformité juridique pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2i:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
           href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#dsfr"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -2639,7 +2661,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2i:"
+            id="fr-badge-:r2j:"
             style={
               {
                 "display": "inline-block",
@@ -2666,31 +2688,6 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r2j:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:r2k:"
             style={
               {
@@ -2701,9 +2698,7 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <i
-              className="fr-icon-check-line"
-            />
+            C
           </p>
         </a>
       </td>
@@ -2764,6 +2759,33 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2n:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
           href="/url/archifiltre-fabrique-social-gouv-fr/securite#testssl"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -2772,7 +2794,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2n:"
+            id="fr-badge-:r2o:"
             style={
               {
                 "display": "inline-block",
@@ -2799,7 +2821,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r2o:"
+            id="fr-badge-:r2p:"
             style={
               {
                 "display": "inline-block",
@@ -2824,7 +2846,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2p:"
+            id="fr-badge-:r2q:"
             style={
               {
                 "display": "inline-block",
@@ -2851,7 +2873,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2q:"
+            id="fr-badge-:r2r:"
             style={
               {
                 "display": "inline-block",
@@ -2878,7 +2900,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2r:"
+            id="fr-badge-:r2s:"
             style={
               {
                 "display": "inline-block",
@@ -2913,9 +2935,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2t:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -2928,7 +2972,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2s:"
+            id="fr-badge-:r2u:"
             style={
               {
                 "display": "inline-block",
@@ -2953,7 +2997,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2t:"
+            id="fr-badge-:r2v:"
             style={
               {
                 "display": "inline-block",
@@ -2990,7 +3034,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2u:"
+            id="fr-badge-:r30:"
             style={
               {
                 "display": "inline-block",
@@ -3020,7 +3064,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r2v:"
+            id="fr-badge-:r31:"
             style={
               {
                 "display": "inline-block",
@@ -3065,7 +3109,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--error fr-badge--no-icon"
-          id="fr-badge-:r30:"
+          id="fr-badge-:r32:"
         >
           Partenariat terminé
         </p>
@@ -3081,7 +3125,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r31:"
+            id="fr-badge-:r33:"
             style={
               {
                 "display": "inline-block",
@@ -3111,7 +3155,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r32:"
+            id="fr-badge-:r34:"
             style={
               {
                 "display": "inline-block",
@@ -3138,7 +3182,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r33:"
+            id="fr-badge-:r35:"
             style={
               {
                 "display": "inline-block",
@@ -3181,61 +3225,61 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r34:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r35:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:r36:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r37:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r38:"
             style={
               {
                 "display": "inline-block",
@@ -3262,7 +3306,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r37:"
+            id="fr-badge-:r39:"
             style={
               {
                 "display": "inline-block",
@@ -3289,7 +3333,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r38:"
+            id="fr-badge-:r3a:"
             style={
               {
                 "display": "inline-block",
@@ -3314,7 +3358,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r39:"
+            id="fr-badge-:r3b:"
             style={
               {
                 "display": "inline-block",
@@ -3341,7 +3385,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3a:"
+            id="fr-badge-:r3c:"
             style={
               {
                 "display": "inline-block",
@@ -3368,7 +3412,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3b:"
+            id="fr-badge-:r3d:"
             style={
               {
                 "display": "inline-block",
@@ -3403,9 +3447,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r3e:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -3418,7 +3484,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3c:"
+            id="fr-badge-:r3f:"
             style={
               {
                 "display": "inline-block",
@@ -3443,7 +3509,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3d:"
+            id="fr-badge-:r3g:"
             style={
               {
                 "display": "inline-block",
@@ -3475,7 +3541,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3e:"
+            id="fr-badge-:r3h:"
             style={
               {
                 "display": "inline-block",
@@ -3532,7 +3598,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--info fr-badge--no-icon"
-          id="fr-badge-:r3f:"
+          id="fr-badge-:r3i:"
         >
           Accélération
         </p>
@@ -3548,7 +3614,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r3g:"
+            id="fr-badge-:r3j:"
             style={
               {
                 "display": "inline-block",
@@ -3578,7 +3644,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3h:"
+            id="fr-badge-:r3k:"
             style={
               {
                 "display": "inline-block",
@@ -3605,7 +3671,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3i:"
+            id="fr-badge-:r3l:"
             style={
               {
                 "display": "inline-block",
@@ -3632,7 +3698,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3j:"
+            id="fr-badge-:r3m:"
             style={
               {
                 "display": "inline-block",
@@ -3669,7 +3735,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r3k:"
+            id="fr-badge-:r3n:"
             style={
               {
                 "display": "inline-block",
@@ -3694,7 +3760,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3l:"
+            id="fr-badge-:r3o:"
             style={
               {
                 "display": "inline-block",
@@ -3721,7 +3787,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3m:"
+            id="fr-badge-:r3p:"
             style={
               {
                 "display": "inline-block",
@@ -3748,7 +3814,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3n:"
+            id="fr-badge-:r3q:"
             style={
               {
                 "display": "inline-block",
@@ -3775,7 +3841,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r3o:"
+            id="fr-badge-:r3r:"
             style={
               {
                 "display": "inline-block",
@@ -3800,7 +3866,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3p:"
+            id="fr-badge-:r3s:"
             style={
               {
                 "display": "inline-block",
@@ -3827,7 +3893,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3q:"
+            id="fr-badge-:r3t:"
             style={
               {
                 "display": "inline-block",
@@ -3854,7 +3920,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3r:"
+            id="fr-badge-:r3u:"
             style={
               {
                 "display": "inline-block",
@@ -3889,9 +3955,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/domifa-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r3v:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -3904,7 +3992,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3s:"
+            id="fr-badge-:r40:"
             style={
               {
                 "display": "inline-block",
@@ -3929,7 +4017,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3t:"
+            id="fr-badge-:r41:"
             style={
               {
                 "display": "inline-block",
@@ -3961,7 +4049,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3u:"
+            id="fr-badge-:r42:"
             style={
               {
                 "display": "inline-block",
@@ -4031,7 +4119,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r3v:"
+            id="fr-badge-:r43:"
             style={
               {
                 "display": "inline-block",
@@ -4061,7 +4149,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r40:"
+            id="fr-badge-:r44:"
             style={
               {
                 "display": "inline-block",
@@ -4088,7 +4176,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r41:"
+            id="fr-badge-:r45:"
             style={
               {
                 "display": "inline-block",
@@ -4131,7 +4219,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r42:"
+            id="fr-badge-:r46:"
             style={
               {
                 "display": "inline-block",
@@ -4156,7 +4244,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r43:"
+            id="fr-badge-:r47:"
             style={
               {
                 "display": "inline-block",
@@ -4181,7 +4269,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r44:"
+            id="fr-badge-:r48:"
             style={
               {
                 "display": "inline-block",
@@ -4208,7 +4296,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r45:"
+            id="fr-badge-:r49:"
             style={
               {
                 "display": "inline-block",
@@ -4235,7 +4323,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r46:"
+            id="fr-badge-:r4a:"
             style={
               {
                 "display": "inline-block",
@@ -4262,7 +4350,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r47:"
+            id="fr-badge-:r4b:"
             style={
               {
                 "display": "inline-block",
@@ -4289,7 +4377,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r48:"
+            id="fr-badge-:r4c:"
             style={
               {
                 "display": "inline-block",
@@ -4316,7 +4404,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r49:"
+            id="fr-badge-:r4d:"
             style={
               {
                 "display": "inline-block",
@@ -4341,7 +4429,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4a:"
+            id="fr-badge-:r4e:"
             style={
               {
                 "display": "inline-block",
@@ -4366,7 +4454,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4b:"
+            id="fr-badge-:r4f:"
             style={
               {
                 "display": "inline-block",
@@ -4393,9 +4481,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/www-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url www-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r4g:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -4408,7 +4518,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4c:"
+            id="fr-badge-:r4h:"
             style={
               {
                 "display": "inline-block",
@@ -4433,7 +4543,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4d:"
+            id="fr-badge-:r4i:"
             style={
               {
                 "display": "inline-block",
@@ -4470,7 +4580,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4e:"
+            id="fr-badge-:r4j:"
             style={
               {
                 "display": "inline-block",
@@ -4495,7 +4605,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4f:"
+            id="fr-badge-:r4k:"
             style={
               {
                 "display": "inline-block",
@@ -4545,7 +4655,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--info fr-badge--no-icon"
-          id="fr-badge-:r4g:"
+          id="fr-badge-:r4l:"
         >
           Accélération
         </p>
@@ -4561,7 +4671,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4h:"
+            id="fr-badge-:r4m:"
             style={
               {
                 "display": "inline-block",
@@ -4591,7 +4701,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4i:"
+            id="fr-badge-:r4n:"
             style={
               {
                 "display": "inline-block",
@@ -4618,7 +4728,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4j:"
+            id="fr-badge-:r4o:"
             style={
               {
                 "display": "inline-block",
@@ -4661,7 +4771,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4k:"
+            id="fr-badge-:r4p:"
             style={
               {
                 "display": "inline-block",
@@ -4686,7 +4796,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4l:"
+            id="fr-badge-:r4q:"
             style={
               {
                 "display": "inline-block",
@@ -4713,7 +4823,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4m:"
+            id="fr-badge-:r4r:"
             style={
               {
                 "display": "inline-block",
@@ -4740,7 +4850,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4n:"
+            id="fr-badge-:r4s:"
             style={
               {
                 "display": "inline-block",
@@ -4773,7 +4883,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r4o:"
+            id="fr-badge-:r4t:"
             style={
               {
                 "display": "inline-block",
@@ -4798,7 +4908,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4p:"
+            id="fr-badge-:r4u:"
             style={
               {
                 "display": "inline-block",
@@ -4825,7 +4935,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4q:"
+            id="fr-badge-:r4v:"
             style={
               {
                 "display": "inline-block",
@@ -4852,7 +4962,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4r:"
+            id="fr-badge-:r50:"
             style={
               {
                 "display": "inline-block",
@@ -4897,7 +5007,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4s:"
+            id="fr-badge-:r51:"
             style={
               {
                 "display": "inline-block",
@@ -4912,9 +5022,31 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/best-practices#cookies"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des cookies pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r52:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -4927,7 +5059,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r4t:"
+            id="fr-badge-:r53:"
             style={
               {
                 "display": "inline-block",
@@ -4964,7 +5096,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4u:"
+            id="fr-badge-:r54:"
             style={
               {
                 "display": "inline-block",
@@ -5021,7 +5153,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--info fr-badge--no-icon"
-          id="fr-badge-:r4v:"
+          id="fr-badge-:r55:"
         >
           Accélération
         </p>
@@ -5037,7 +5169,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r50:"
+            id="fr-badge-:r56:"
             style={
               {
                 "display": "inline-block",
@@ -5067,7 +5199,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r51:"
+            id="fr-badge-:r57:"
             style={
               {
                 "display": "inline-block",
@@ -5100,7 +5232,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r52:"
+            id="fr-badge-:r58:"
             style={
               {
                 "display": "inline-block",
@@ -5143,7 +5275,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r53:"
+            id="fr-badge-:r59:"
             style={
               {
                 "display": "inline-block",
@@ -5170,7 +5302,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r54:"
+            id="fr-badge-:r5a:"
             style={
               {
                 "display": "inline-block",
@@ -5197,7 +5329,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r55:"
+            id="fr-badge-:r5b:"
             style={
               {
                 "display": "inline-block",
@@ -5224,7 +5356,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r56:"
+            id="fr-badge-:r5c:"
             style={
               {
                 "display": "inline-block",
@@ -5257,7 +5389,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r57:"
+            id="fr-badge-:r5d:"
             style={
               {
                 "display": "inline-block",
@@ -5282,7 +5414,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r58:"
+            id="fr-badge-:r5e:"
             style={
               {
                 "display": "inline-block",
@@ -5309,7 +5441,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r59:"
+            id="fr-badge-:r5f:"
             style={
               {
                 "display": "inline-block",
@@ -5336,7 +5468,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5a:"
+            id="fr-badge-:r5g:"
             style={
               {
                 "display": "inline-block",
@@ -5371,9 +5503,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url tumeplay-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r5h:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -5386,7 +5540,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5b:"
+            id="fr-badge-:r5i:"
             style={
               {
                 "display": "inline-block",
@@ -5411,7 +5565,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5c:"
+            id="fr-badge-:r5j:"
             style={
               {
                 "display": "inline-block",
@@ -5443,7 +5597,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5d:"
+            id="fr-badge-:r5k:"
             style={
               {
                 "display": "inline-block",
@@ -5500,7 +5654,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--warning fr-badge--no-icon"
-          id="fr-badge-:r5e:"
+          id="fr-badge-:r5l:"
         >
           Construction
         </p>
@@ -5516,7 +5670,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r5f:"
+            id="fr-badge-:r5m:"
             style={
               {
                 "display": "inline-block",
@@ -5546,7 +5700,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5g:"
+            id="fr-badge-:r5n:"
             style={
               {
                 "display": "inline-block",
@@ -5573,7 +5727,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r5h:"
+            id="fr-badge-:r5o:"
             style={
               {
                 "display": "inline-block",
@@ -5631,7 +5785,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5i:"
+            id="fr-badge-:r5p:"
             style={
               {
                 "display": "inline-block",
@@ -5658,7 +5812,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r5j:"
+            id="fr-badge-:r5q:"
             style={
               {
                 "display": "inline-block",
@@ -5683,7 +5837,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5k:"
+            id="fr-badge-:r5r:"
             style={
               {
                 "display": "inline-block",
@@ -5710,7 +5864,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5l:"
+            id="fr-badge-:r5s:"
             style={
               {
                 "display": "inline-block",
@@ -5737,7 +5891,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5m:"
+            id="fr-badge-:r5t:"
             style={
               {
                 "display": "inline-block",
@@ -5782,7 +5936,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5n:"
+            id="fr-badge-:r5u:"
             style={
               {
                 "display": "inline-block",
@@ -5807,7 +5961,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5o:"
+            id="fr-badge-:r5v:"
             style={
               {
                 "display": "inline-block",
@@ -5832,7 +5986,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5p:"
+            id="fr-badge-:r60:"
             style={
               {
                 "display": "inline-block",
@@ -5864,7 +6018,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5q:"
+            id="fr-badge-:r61:"
             style={
               {
                 "display": "inline-block",
@@ -5919,7 +6073,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--info fr-badge--no-icon"
-          id="fr-badge-:r5r:"
+          id="fr-badge-:r62:"
         >
           Accélération
         </p>
@@ -5935,7 +6089,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r5s:"
+            id="fr-badge-:r63:"
             style={
               {
                 "display": "inline-block",
@@ -5985,7 +6139,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r5t:"
+            id="fr-badge-:r64:"
             style={
               {
                 "display": "inline-block",
@@ -6010,7 +6164,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5u:"
+            id="fr-badge-:r65:"
             style={
               {
                 "display": "inline-block",
@@ -6037,7 +6191,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5v:"
+            id="fr-badge-:r66:"
             style={
               {
                 "display": "inline-block",
@@ -6064,7 +6218,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r60:"
+            id="fr-badge-:r67:"
             style={
               {
                 "display": "inline-block",
@@ -6091,7 +6245,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r61:"
+            id="fr-badge-:r68:"
             style={
               {
                 "display": "inline-block",
@@ -6116,7 +6270,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r62:"
+            id="fr-badge-:r69:"
             style={
               {
                 "display": "inline-block",
@@ -6143,7 +6297,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r63:"
+            id="fr-badge-:r6a:"
             style={
               {
                 "display": "inline-block",
@@ -6170,7 +6324,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r64:"
+            id="fr-badge-:r6b:"
             style={
               {
                 "display": "inline-block",
@@ -6205,9 +6359,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/1000jours-blues-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url 1000jours-blues-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r6c:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -6220,7 +6396,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r65:"
+            id="fr-badge-:r6d:"
             style={
               {
                 "display": "inline-block",
@@ -6245,7 +6421,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r66:"
+            id="fr-badge-:r6e:"
             style={
               {
                 "display": "inline-block",
@@ -6277,7 +6453,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r67:"
+            id="fr-badge-:r6f:"
             style={
               {
                 "display": "inline-block",
@@ -6347,7 +6523,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r68:"
+            id="fr-badge-:r6g:"
             style={
               {
                 "display": "inline-block",
@@ -6377,7 +6553,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r69:"
+            id="fr-badge-:r6h:"
             style={
               {
                 "display": "inline-block",
@@ -6404,7 +6580,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6a:"
+            id="fr-badge-:r6i:"
             style={
               {
                 "display": "inline-block",
@@ -6441,7 +6617,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6b:"
+            id="fr-badge-:r6j:"
             style={
               {
                 "display": "inline-block",
@@ -6468,7 +6644,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6c:"
+            id="fr-badge-:r6k:"
             style={
               {
                 "display": "inline-block",
@@ -6495,7 +6671,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6d:"
+            id="fr-badge-:r6l:"
             style={
               {
                 "display": "inline-block",
@@ -6522,7 +6698,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6e:"
+            id="fr-badge-:r6m:"
             style={
               {
                 "display": "inline-block",
@@ -6549,7 +6725,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r6f:"
+            id="fr-badge-:r6n:"
             style={
               {
                 "display": "inline-block",
@@ -6574,7 +6750,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6g:"
+            id="fr-badge-:r6o:"
             style={
               {
                 "display": "inline-block",
@@ -6601,7 +6777,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6h:"
+            id="fr-badge-:r6p:"
             style={
               {
                 "display": "inline-block",
@@ -6628,7 +6804,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6i:"
+            id="fr-badge-:r6q:"
             style={
               {
                 "display": "inline-block",
@@ -6653,7 +6829,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6j:"
+            id="fr-badge-:r6r:"
             style={
               {
                 "display": "inline-block",
@@ -6680,7 +6856,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6k:"
+            id="fr-badge-:r6s:"
             style={
               {
                 "display": "inline-block",
@@ -6707,9 +6883,31 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/monpsy-sante-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url monpsy-sante-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r6t:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -6722,7 +6920,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6l:"
+            id="fr-badge-:r6u:"
             style={
               {
                 "display": "inline-block",
@@ -6747,7 +6945,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6m:"
+            id="fr-badge-:r6v:"
             style={
               {
                 "display": "inline-block",
@@ -6784,7 +6982,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6n:"
+            id="fr-badge-:r70:"
             style={
               {
                 "display": "inline-block",
@@ -6809,7 +7007,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r6o:"
+            id="fr-badge-:r71:"
             style={
               {
                 "display": "inline-block",
@@ -6872,7 +7070,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6p:"
+            id="fr-badge-:r72:"
             style={
               {
                 "display": "inline-block",
@@ -6902,7 +7100,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6q:"
+            id="fr-badge-:r73:"
             style={
               {
                 "display": "inline-block",
@@ -6929,7 +7127,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r6r:"
+            id="fr-badge-:r74:"
             style={
               {
                 "display": "inline-block",
@@ -6972,7 +7170,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r6s:"
+            id="fr-badge-:r75:"
             style={
               {
                 "display": "inline-block",
@@ -6997,7 +7195,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6t:"
+            id="fr-badge-:r76:"
             style={
               {
                 "display": "inline-block",
@@ -7024,7 +7222,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6u:"
+            id="fr-badge-:r77:"
             style={
               {
                 "display": "inline-block",
@@ -7051,7 +7249,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r6v:"
+            id="fr-badge-:r78:"
             style={
               {
                 "display": "inline-block",
@@ -7078,7 +7276,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r70:"
+            id="fr-badge-:r79:"
             style={
               {
                 "display": "inline-block",
@@ -7103,7 +7301,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r71:"
+            id="fr-badge-:r7a:"
             style={
               {
                 "display": "inline-block",
@@ -7130,7 +7328,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r72:"
+            id="fr-badge-:r7b:"
             style={
               {
                 "display": "inline-block",
@@ -7157,7 +7355,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r73:"
+            id="fr-badge-:r7c:"
             style={
               {
                 "display": "inline-block",
@@ -7202,7 +7400,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r74:"
+            id="fr-badge-:r7d:"
             style={
               {
                 "display": "inline-block",
@@ -7217,9 +7415,31 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#cookies"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des cookies pour l'url ressourcerie-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7e:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -7232,7 +7452,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r75:"
+            id="fr-badge-:r7f:"
             style={
               {
                 "display": "inline-block",
@@ -7264,7 +7484,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r76:"
+            id="fr-badge-:r7g:"
             style={
               {
                 "display": "inline-block",
@@ -7319,7 +7539,7 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <p
           className="fr-badge fr-badge--info fr-badge--no-icon"
-          id="fr-badge-:r77:"
+          id="fr-badge-:r7h:"
         >
           Accélération
         </p>
@@ -7335,7 +7555,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r78:"
+            id="fr-badge-:r7i:"
             style={
               {
                 "display": "inline-block",
@@ -7365,7 +7585,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r79:"
+            id="fr-badge-:r7j:"
             style={
               {
                 "display": "inline-block",
@@ -7398,7 +7618,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7a:"
+            id="fr-badge-:r7k:"
             style={
               {
                 "display": "inline-block",
@@ -7441,7 +7661,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7b:"
+            id="fr-badge-:r7l:"
             style={
               {
                 "display": "inline-block",
@@ -7468,7 +7688,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7c:"
+            id="fr-badge-:r7m:"
             style={
               {
                 "display": "inline-block",
@@ -7495,7 +7715,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7d:"
+            id="fr-badge-:r7n:"
             style={
               {
                 "display": "inline-block",
@@ -7522,7 +7742,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7e:"
+            id="fr-badge-:r7o:"
             style={
               {
                 "display": "inline-block",
@@ -7549,7 +7769,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r7f:"
+            id="fr-badge-:r7p:"
             style={
               {
                 "display": "inline-block",
@@ -7584,7 +7804,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7g:"
+            id="fr-badge-:r7q:"
             style={
               {
                 "display": "inline-block",
@@ -7619,14 +7839,58 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#thirdparties"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des trackers pour l'url admin-domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7r:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
+        <a
+          className="link-discreet"
+          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#cookies"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails des cookies pour l'url admin-domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7s:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
       </td>
       <td>
         <a
@@ -7639,7 +7903,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7h:"
+            id="fr-badge-:r7t:"
             style={
               {
                 "display": "inline-block",
@@ -7671,7 +7935,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7i:"
+            id="fr-badge-:r7u:"
             style={
               {
                 "display": "inline-block",
@@ -7741,7 +8005,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r7j:"
+            id="fr-badge-:r7v:"
             style={
               {
                 "display": "inline-block",
@@ -7771,7 +8035,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r7k:"
+            id="fr-badge-:r80:"
             style={
               {
                 "display": "inline-block",
@@ -7804,7 +8068,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r7l:"
+            id="fr-badge-:r81:"
             style={
               {
                 "display": "inline-block",
@@ -7847,7 +8111,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r7m:"
+            id="fr-badge-:r82:"
             style={
               {
                 "display": "inline-block",
@@ -7872,7 +8136,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7n:"
+            id="fr-badge-:r83:"
             style={
               {
                 "display": "inline-block",
@@ -7899,7 +8163,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7o:"
+            id="fr-badge-:r84:"
             style={
               {
                 "display": "inline-block",
@@ -7926,7 +8190,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7p:"
+            id="fr-badge-:r85:"
             style={
               {
                 "display": "inline-block",
@@ -7953,7 +8217,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7q:"
+            id="fr-badge-:r86:"
             style={
               {
                 "display": "inline-block",
@@ -7980,7 +8244,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7r:"
+            id="fr-badge-:r87:"
             style={
               {
                 "display": "inline-block",
@@ -8007,7 +8271,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7s:"
+            id="fr-badge-:r88:"
             style={
               {
                 "display": "inline-block",
@@ -8034,7 +8298,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7t:"
+            id="fr-badge-:r89:"
             style={
               {
                 "display": "inline-block",
@@ -8079,7 +8343,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7u:"
+            id="fr-badge-:r8a:"
             style={
               {
                 "display": "inline-block",
@@ -8104,7 +8368,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7v:"
+            id="fr-badge-:r8b:"
             style={
               {
                 "display": "inline-block",
@@ -8129,7 +8393,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r80:"
+            id="fr-badge-:r8c:"
             style={
               {
                 "display": "inline-block",
@@ -8161,7 +8425,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r81:"
+            id="fr-badge-:r8d:"
             style={
               {
                 "display": "inline-block",
