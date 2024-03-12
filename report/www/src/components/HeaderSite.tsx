@@ -144,9 +144,6 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
   return (
     <>
       <SkipLinks
-        classes={{
-          root: "fr-mt-9v",
-        }}
         links={[
           {
             anchor: "#fr-header-main-navigation",

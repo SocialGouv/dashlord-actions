@@ -3,7 +3,7 @@
 exports[`Should render HeaderSite 1`] = `
 <div>
   <div
-    class="fr-skiplinks fr-mt-9v"
+    class="fr-skiplinks"
     id="fr-skiplinks-:r0:"
   >
     <nav
