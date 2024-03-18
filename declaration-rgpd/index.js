@@ -27,6 +27,7 @@ const searches = [
       ["@"],
       ["finalité"],
       ["durée de conservation"],
+      ["durée de la conservation"],
       ["sous-traitants", "sous traitants"],
     ],
   },
