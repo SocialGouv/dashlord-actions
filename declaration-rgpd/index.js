@@ -26,9 +26,8 @@ const searches = [
     mustMatch: [
       ["@"],
       ["finalité"],
-      ["durée de conservation"],
-      ["durée de la conservation"],
-      ["sous-traitants", "sous traitants"],
+      ["durée de la conservation", "durée de conservation"],
+      ["sous-traitant", "sous traitant"],
     ],
   },
 ];

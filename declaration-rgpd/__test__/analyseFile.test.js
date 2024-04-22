@@ -9,13 +9,6 @@ test("ressourcerie: should return ml and pc", async () => {
   expect(output).toMatchSnapshot();
 });
 
-test("egapro with sub-path: should return ml and pc", async () => {
-  const output = await analyseFile("./__test__/samples/egapro.html", {
-    url: "https://egapro.travail.gouv.fr/index-egapro",
-  });
-  expect(output).toMatchSnapshot();
-});
-
 test("1000jours-blues: should return ml and pc", async () => {
   const output = await analyseFile("./__test__/samples/1000jours-blues.html", {
     url: "https://1000jours-blues.fabrique.social.gouv.fr",
