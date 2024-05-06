@@ -5,7 +5,6 @@ import { btoa } from "../utils";
 import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
-import { getPerformanceScore } from "../lib/lighthouse/getPerformanceScore";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
 import styles from "./lightHouse.module.scss";
 
@@ -95,9 +94,6 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       </div>
 
       {audits.map((audit) => {
-        // use custom performance scoring
-        audit.categories.performance.score = getPerformanceScore(audit);
-
         const highlights = {
           "First contentful Paint":
             audit.audits.metrics.details &&

@@ -35,7 +35,7 @@ const tests = [
     report: {
       categories: {
         performance: {
-          score: 42,
+          score: 1,
         },
         seo: {
           score: 0.5,
@@ -71,7 +71,7 @@ const tests = [
     report: {
       categories: {
         performance: {
-          score: 42,
+          score: 0.1,
         },
         seo: {
           score: 0.1,
@@ -94,8 +94,8 @@ const tests = [
       },
     },
     expected: {
-      lighthouse_performance: 0.3,
-      lighthouse_performanceGrade: "E",
+      lighthouse_performance: 0.1,
+      lighthouse_performanceGrade: "F",
       lighthouse_seo: 0.1,
       lighthouse_seoGrade: "F",
       lighthouse_stuff: 0,
