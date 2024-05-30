@@ -11,10 +11,11 @@ const getHTML = async (url) => {
       `--lang=${LANGUAGE}`,
     ],
   });
-
+  const userAgent = await browser.userAgent();
   let html = "";
   try {
     const page = await browser.newPage();
+    await page.setUserAgent(`${userAgent} - dashlord`);
     await page.goto(url);
     await page.waitForTimeout(5000); // wait some time, some SPA may load asynchronously (ex: angular)
     const frame = await page.mainFrame();
