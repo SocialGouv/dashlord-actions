@@ -21,9 +21,18 @@ jobs:
         run: |
           ls -la
       - uses: ./get-html
+        name: test some URL
         with:
           url: https://opentermsarchive.org
           output: result.html
       - shell: bash
         run: |
           cat result.html | grep Accessibilité
+      - uses: ./get-html
+        name: test user-agent
+        with:
+          url: https://httpbin.org/user-agent
+          output: user-agent.html
+      - shell: bash
+        run: |
+          cat user-agent.html | grep dashlord
