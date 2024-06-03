@@ -12,7 +12,7 @@ const searches = [
     mustMatch: [
       ["directeur", "directrice"],
       ["publication"],
-      ["hébergeur", "hébergement"],
+      ["hébergeur", "hébergement", "hebergeur", "hebergement"],
       ["éditeur", "édité par", "editeur", "edité par"],
     ],
   },

@@ -16,31 +16,40 @@ Array [
     "maxScore": 4,
     "mention": "Politique de confidentialité",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "durée de la conservation (ou) durée de conservation",
+    ],
+    "score": 3,
     "slug": "pc",
   },
 ]
 `;
 
-exports[`egapro with sub-path: should return ml and pc 1`] = `
+exports[`beta: should return ml and pc 1`] = `
 Array [
   Object {
-    "declarationUrl": "https://egapro.travail.gouv.fr/index-egapro/mentions-legales",
+    "declarationUrl": "https://beta.gouv.fr/apropos/",
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "hébergeur (ou) hébergement (ou) hebergeur (ou) hebergement",
+    ],
+    "score": 3,
     "slug": "ml",
   },
   Object {
-    "declarationUrl": "https://egapro.travail.gouv.fr/index-egapro/politique-confidentialite",
+    "declarationUrl": "https://beta.gouv.fr/suivi/",
     "maxScore": 4,
-    "mention": "Politique de confidentialité",
+    "mention": "Données personnelles",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de la conservation (ou) durée de conservation",
+      "sous-traitant (ou) sous traitant",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -53,10 +62,8 @@ Array [
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [
-      "hébergeur (ou) hébergement",
-    ],
-    "score": 3,
+    "missingWords": Array [],
+    "score": 4,
     "slug": "ml",
   },
   Object {
@@ -70,40 +77,17 @@ Array [
 ]
 `;
 
-exports[`ressourcerie: should return ml and pc 1`] = `
-Array [
-  Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/mentions-legales",
-    "maxScore": 4,
-    "mention": "Mentions légales",
-    "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
-    "slug": "ml",
-  },
-  Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/politique-confidentialite",
-    "maxScore": 4,
-    "mention": "Politique de confidentialité",
-    "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
-    "slug": "pc",
-  },
-]
-`;
-
 exports[`should detect ml : mentions légales 1`] = `
 Array [
   Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/mentions",
+    "declarationUrl": "https://beta.gouv.fr/mentions",
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
     "missingWords": Array [
       "directeur (ou) directrice",
       "publication",
-      "hébergeur (ou) hébergement",
+      "hébergeur (ou) hébergement (ou) hebergeur (ou) hebergement",
       "éditeur (ou) édité par (ou) editeur (ou) edité par",
     ],
     "score": 0,
@@ -131,16 +115,17 @@ Array [
     "slug": "ml",
   },
   Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/some",
+    "declarationUrl": "https://beta.gouv.fr/some",
     "maxScore": 4,
     "mention": "Données personnelles",
     "missingTrackers": Array [],
     "missingWords": Array [
+      "@",
       "finalité",
-      "durée de conservation",
-      "sous-traitants (ou) sous traitants",
+      "durée de la conservation (ou) durée de conservation",
+      "sous-traitant (ou) sous traitant",
     ],
-    "score": 1,
+    "score": 0,
     "slug": "pc",
   },
 ]
@@ -149,23 +134,30 @@ Array [
 exports[`should return ml and pc and thirdparties data 1`] = `
 Array [
   Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/mentions-legales",
+    "declarationUrl": "https://beta.gouv.fr/apropos/",
     "maxScore": 4,
     "mention": "Mentions légales",
     "missingTrackers": Array [],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "hébergeur (ou) hébergement (ou) hebergeur (ou) hebergement",
+    ],
+    "score": 3,
     "slug": "ml",
   },
   Object {
-    "declarationUrl": "https://ressourcerie.fabrique.social.gouv.fr/politique-confidentialite",
+    "declarationUrl": "https://beta.gouv.fr/suivi/",
     "maxScore": 5,
-    "mention": "Politique de confidentialité",
+    "mention": "Données personnelles",
     "missingTrackers": Array [
       "jQuery",
     ],
-    "missingWords": Array [],
-    "score": 4,
+    "missingWords": Array [
+      "@",
+      "finalité",
+      "durée de la conservation (ou) durée de conservation",
+      "sous-traitant (ou) sous traitant",
+    ],
+    "score": 0,
     "slug": "pc",
   },
 ]
