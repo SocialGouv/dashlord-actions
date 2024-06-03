@@ -39,7 +39,7 @@ jobs:
         run: |
           ls -la
           cat rgpd.json
-          [[ $(cat rgpd.json | jq '.[0].score') -eq "3" ]] || (echo "Error: Should score 3" && exit 1)
+          [[ $(cat rgpd.json | jq '.[0].score') -eq "4" ]] || (echo "Error: Should score 4" && exit 1)
       - uses: ./declaration-rgpd
         with:
           url: https://conseillers-entreprises.service-public.fr
