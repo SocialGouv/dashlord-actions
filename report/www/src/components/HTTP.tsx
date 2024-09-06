@@ -150,7 +150,7 @@ export const HTTP = ({ data }: HTTPProps) => {
   }
   const url =
     (data &&
-      `https://observatory.mozilla.org/analyze/${smallUrl(
+      `https://developer.mozilla.org/fr/observatory/analyze?host=${smallUrl(
         data.url.replace(/^(https?:\/\/[^/]+).*/, "$1")
       )}`) ||
     null;
