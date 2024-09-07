@@ -64,7 +64,7 @@
   },
   "http": {
     "label": "Mozilla HTTP observatory",
-    "url": "https://observatory.mozilla.org/",
+    "url": "https://developer.mozilla.org/fr/observatory",
     "tags": [
       "security"
     ],
