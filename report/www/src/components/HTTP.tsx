@@ -136,7 +136,7 @@ const columns = [
     label: "Impact",
     render: (failure) => <HttpRowBadge {...failure} />,
   },
-  { name: "score_description", label: "Description" },
+  { name: "score_description", label: "Description", render:({score_description})=> score_description},
   {
     name: "documentation",
     label: "Documentation",
