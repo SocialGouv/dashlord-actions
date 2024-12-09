@@ -24,8 +24,10 @@ jobs:
       - shell: bash
         name: test url with french redirection
         run: |
-          cat .lighthouseci/*.json | grep '"finalUrl": "https://opentermsarchive.org/fr"'
+          ls .lighthouseci
+          cat .lighthouseci/*.json | grep '"finalUrl": "https://opentermsarchive.org/fr/"'
       - shell: bash
         name: test second URL
         run: |
+          ls .lighthouseci
           cat .lighthouseci/*.json | grep '"finalUrl": "https://domifa.fabrique.social.gouv.fr/"'

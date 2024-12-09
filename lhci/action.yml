@@ -15,7 +15,7 @@ inputs:
     required: false
   chromeFlags:
     description: "Chrome flags, see https://peter.sh/experiments/chromium-command-line-switches"
-    default: "--no-sandbox --disable-dev-shm-usage --headless"
+    default: "--no-sandbox --disable-dev-shm-usage --headless --user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0 - dashlord'"
     required: false
 
 runs:
