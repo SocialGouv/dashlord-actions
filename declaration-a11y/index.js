@@ -74,7 +74,12 @@ const analyseFile = async (filePath, { url } = {}) => {
 
 // warn: this wont work for SPA applications
 const analyseUrl = async (url) => {
-  const dom = await JSDOM.fromURL(url);
+  const resourceLoader = new jsdom.ResourceLoader({
+    strictSSL: false,
+    userAgent:
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0 - dashlord",
+  });
+  const dom = await JSDOM.fromURL(url, { resources: resourceLoader });
   return analyseDom(dom, { url });
 };
 
