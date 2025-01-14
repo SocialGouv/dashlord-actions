@@ -19,7 +19,7 @@ jobs:
           token-bureau-url: https://token-bureau.fabrique.social.gouv.fr
           audience: socialgouv
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "14.x"
       - name: Semantic Release
