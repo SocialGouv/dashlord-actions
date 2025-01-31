@@ -45,9 +45,18 @@ jobs:
           url: https://conseillers-entreprises.service-public.fr
           thirdparties: '{"trackers":[],"cookies":[],"headers":{"cache-control":"s-maxage=31536000,stale-while-revalidate","content-encoding":"gzip","content-type":"text/html;charset=utf-8","date":"Tue,06Sep202210:00:11GMT","etag":"\"34252-Rg+tkwu+qSjfdl/R14jfhbBq4KA\"","server":"nginx","vary":"Accept-Encoding","x-nextjs-cache":"HIT","x-powered-by":"Next.js"}}'
           output: rgpd2.json
-
       - shell: bash
         run: |
           ls -la
           cat rgpd2.json
           [[ $(cat rgpd2.json | jq '.[0].score') -eq "4" ]] || (echo "Error: Should score 4" && exit 1)
+      - uses: ./declaration-rgpd
+        with:
+          url: https://recommandations-collaboratives.beta.gouv.fr/
+          thirdparties: '{"trackers":[],"cookies":[],"headers":{"cache-control":"s-maxage=31536000,stale-while-revalidate","content-encoding":"gzip","content-type":"text/html;charset=utf-8","date":"Tue,06Sep202210:00:11GMT","etag":"\"34252-Rg+tkwu+qSjfdl/R14jfhbBq4KA\"","server":"nginx","vary":"Accept-Encoding","x-nextjs-cache":"HIT","x-powered-by":"Next.js"}}'
+          output: rgpd3.json
+      - shell: bash
+        run: |
+          ls -la
+          cat rgpd3.json
+          [[ $(cat rgpd3.json | jq '.[0].score') -eq "4" ]] || (echo "Error: Should score 4" && exit 1)
