@@ -61,4 +61,4 @@ jobs:
           cat rgpd3.json
           [[ $(cat rgpd3.json | jq '.[0].score') -eq "4" ]] || (echo "Error: ml Should score 4" && exit 1)
           [[ $(cat rgpd3.json | jq '.[1].score') -eq "4" ]] || (echo "Error: pc Should score 4" && exit 1)
-          [[ $(cat rgpd3.json | jq '.[1].declarationUrl') -eq "\"https://recommandations-collaboratives.beta.gouv.fr/confidentialite/\"" ]] || (echo "Error: pc invalid declaration URL" && exit 1)
+          [[ $(cat rgpd3.json | jq '.[1].declarationUrl') = "\"https://recommandations-collaboratives.beta.gouv.fr/confidentialite/\"" ]] || (echo "Error: pc invalid declaration URL" && exit 1)
