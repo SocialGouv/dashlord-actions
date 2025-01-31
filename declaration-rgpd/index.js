@@ -23,6 +23,7 @@ const searches = [
       "Privacy Policy",
       "Données personnelles",
       "Mentions d'information",
+      "Confidentialité"
     ],
     mustMatch: [
       ["@"],
