@@ -60,7 +60,27 @@ const getSiteSubpages = (site) => {
   return subpages;
 };
 
-const getOutputs = () => {
+const getStartupsFromApi = async (id) => {
+  const allStartups = await fetch("https://beta.gouv.fr/api/v2.6/startups.json")
+    .then((r) => r.json())
+    .then((r) => r.data);
+  return fetch("https://beta.gouv.fr/api/v2.6/incubators.json")
+    .then((r) => r.json())
+    .then((r) =>
+      r[id].startups
+        .map((se) => allStartups.find((s) => s.id === se.id))
+        .filter(Boolean)
+    )
+    .then((se) =>
+      se.map((s) => ({
+        link: s.attributes.link,
+        repository: s.attributes.repository,
+        id: s.id,
+      }))
+    );
+};
+
+const getOutputs = async () => {
   const urlsInput =
     core.getInput("url") &&
     core
@@ -69,13 +89,33 @@ const getOutputs = () => {
       .map((s) => s.trim())
       .filter(Boolean);
   const toolInput = core.getInput("tool") && core.getInput("tool").trim();
+  const incubator = core.getInput("incubator");
 
+  core.info(`incubator:${incubator}`);
   core.info(`urlsInput: ${urlsInput}`);
   core.info(`toolInput: ${toolInput}`);
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
   let baseSites = dashlordConfig.urls;
+
+  if (incubator) {
+    const incubatorProducts = await getStartupsFromApi(incubator);
+    core.info(`incubatorProducts: ${incubatorProducts.length}`);
+    const dashlordBetaIds = baseSites.map((b) => b.betaId);
+    const dashlordUrls = baseSites.map((b) => b.url);
+    core.info(`dashlordBetaIds: ${dashlordBetaIds}`);
+    // add urls from API
+    incubatorProducts
+      // if not detected as betaId
+      .filter((p) => !dashlordBetaIds.includes(p.id))
+      // if not detected as URL
+      .filter((p) => !dashlordUrls.includes(p.link))
+      .forEach((p) => {
+        const url = p.link.replace(/(\/)$/, "");
+        baseSites.push({ url, betaId: p.id, repositories: [p.repository] });
+      });
+  }
 
   if (!baseSites && urlsInput) baseSites = urlsInput.map((url) => ({ url }));
 
@@ -90,9 +130,7 @@ const getOutputs = () => {
   const sites = baseSites
     .filter(isValid)
     .filter((site) =>
-      dashlordConfig.urls && urlsInput && urlsInput.length
-        ? urlsInput.includes(site.url)
-        : true
+      urlsInput && urlsInput.length ? urlsInput.includes(site.url) : true
     )
     .map((site) => ({
       ...site,
@@ -114,7 +152,7 @@ const getOutputs = () => {
 
 async function run() {
   try {
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     core.setOutput("urls", outputs.urls); // legacy ?
     core.setOutput("sites", JSON.stringify(outputs.sites)); // useful for matrix jobs
     core.setOutput("config", JSON.stringify(outputs.config)); // full dashloard config

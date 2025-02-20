@@ -9,6 +9,10 @@ inputs:
     description: "Tool to run or use all tools"
     default: ""
     required: false
+  incubator:
+    description: "betagouv ID of the related incubator to fetch additionnal urls"
+    default: ""
+    required: false
 outputs:
   urls:
     description: List of urls to scan as plain text

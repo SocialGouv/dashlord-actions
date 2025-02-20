@@ -6,6 +6,8 @@ Parse a `dashlord.yaml` or `urls.txt` file to generate a list of urls to use in 
 
 See how `needs.init.outputs.sites` is used in the matrix definition
 
+if `with.incubator` is an existing [beta.gouv incubator id](https://beta.gouv.fr/api/v2.6/incubators.json) then the URLS from the API will be merged with the local dashlord.yml entries.
+
 ```yaml
 jobs:
   init:
@@ -16,7 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: init
-        uses: "socialgouv/dashlord-actions/init@main"
+        uses: "socialgouv/dashlord-actions/init@v1"
+        with: # optional
+          url: https://beta.gouv.fr # optional
+          tool: lighthouse # optional
+          incubator: sgmas # optional
 
   scans:
     runs-on: ubuntu-latest
@@ -38,42 +44,9 @@ jobs:
           output: "scans/http.json"
 ```
 
-### Expected dashlord.yaml
+See a working workflow : https://github.com/betagouv/dashlord/blob/main/.github/workflows/scans.yml
 
-```yml
-title: Test 1
-tools:
-  screenshot: true
-  nmap: true
-  zap: true
-  wappalyzer: true
-  http: true
-  testssl: true
-  lighthouse: true
-  thirdparties: true
-  nuclei: false
-  updownio: true
-  dependabot: true
-  codescan: true
-  stats: true
-  budget_page: true
-  404: true
-urls:
-  - url: https://www.free.fr
-    title: Free
-    repositories:
-      - iliad/free-ui
-      - iliad/free-api
-  - url: invalid-url
-  - url: http://chez.com
-    repositories:
-      - chez/chez-ui
-      - chez/chez-api
-    tools:
-      screenshot: false
-      updownio: false
-  - url: https://voila.fr
-```
+And a sample dashlord.yml : https://github.com/betagouv/dashlord/blob/main/dashlord.yml
 
 ## Hacking
 
