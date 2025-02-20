@@ -40,4 +40,4 @@ jobs:
         git config user.email "${{ secrets.SOCIALGROOVYBOT_EMAIL }}"
         git tag -d v1
         git tag v1
-        git push --tags -f
+        git push origin v1
