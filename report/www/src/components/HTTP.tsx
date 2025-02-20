@@ -957,6 +957,9 @@ const docLinks: [
   ],
 ];
 
+const fixMozLinks = (str) =>
+  str.replace(/href="\/en-US/g, 'href="https://developer.mozilla.org/en-US');
+
 const columns = [
   {
     name: "impact",
@@ -971,7 +974,9 @@ const columns = [
       if (!docLink) return "-";
       const [key, values] = docLink;
       return docLink ? (
-        <div dangerouslySetInnerHTML={{ __html: values.description }}></div>
+        <div
+          dangerouslySetInnerHTML={{ __html: fixMozLinks(values.description) }}
+        ></div>
       ) : (
         "-"
       );
@@ -996,7 +1001,7 @@ const columns = [
       ) : (
         <div
           dangerouslySetInnerHTML={{
-            __html: values.recommendation || values.description,
+            __html: fixMozLinks(values.recommendation || values.description),
           }}
         ></div>
       );
