@@ -76,60 +76,43 @@ type SslTestReportEntry = {
 type SslTestReport = SslTestReportEntry[];
 
 type HttpReport = {
-  history: HttpReportHistory[];
   scan: HttpReportScan;
   tests: Record<string, HttpReportTestResult>;
 };
 
-type HttpReportHistory = {
-  id: number;
-  scanned_at: string;
-  grade: string;
-  score: number;
-};
-
 type HttpReportScan = {
-  id: number;
-  algorithm_version: number;
-  scanned_at: string;
-  error: any;
+  algorithmVersion: number;
   grade: string;
-  response_headers: ResponseHeaders;
+  error: any;
   score: number;
-  status_code: number;
-  tests_failed: number;
-  tests_passed: number;
-  tests_quantity: number;
+  statusCode: number;
+  testsFailed: number;
+  testsPassed: number;
+  testsQuantity: number;
+  responseHeaders: ResponseHeaders;
 };
 
 type ResponseHeaders = {
   date: string;
-  etag: string;
-  server: string;
-  connection: string;
   "content-type": string;
-  "last-modified": string;
-  "x-frame-options": string;
-  "x-xss-protection": string;
   "transfer-encoding": string;
-  "x-content-type-options": string;
+  connection: string;
+  "x-request-id": string;
+  "last-modified": string;
+  etag: string;
+  "strict-transport-security": string;
 };
 
 type HttpReportTestResult = {
   expectation: string;
-  name: string;
-  link: string;
-  title: string;
   pass: boolean;
   result: string;
-  score_description: string;
-  recommendation: string;
-  score_modifier: number;
+  scoreModifier: number;
   data: any;
   http: boolean;
   meta: boolean;
   policy: any;
-  num_policies: number;
+  numPolicies: number;
 };
 
 type ZapReportSiteAlert = {
