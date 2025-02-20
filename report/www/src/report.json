@@ -16,187 +16,208 @@
       "ecoindex": false
     },
     "http": {
-      "url": "https://api.gouv.fr",
-      "algorithm_version": 2,
-      "end_time": "Sun, 21 Jan 2024 01:23:31 GMT",
-      "grade": "F",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Cache-Control": "s-maxage=31536000, stale-while-revalidate",
-        "Connection": "keep-alive",
-        "Content-Encoding": "gzip",
-        "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 21 Jan 2024 01:23:29 GMT",
-        "ETag": "\"oknvj3udeo17ik\"",
-        "Server": "nginx/1.18.0 (Ubuntu)",
-        "Transfer-Encoding": "chunked",
-        "Vary": "Accept-Encoding",
-        "X-Powered-By": "Next.js",
-        "x-nextjs-cache": "HIT"
+      "history": [
+        {
+          "id": 3207,
+          "scanned_at": "2016-04-11T12:36:59.679Z",
+          "grade": "F",
+          "score": 0
+        },
+        {
+          "id": 8150669,
+          "scanned_at": "2018-08-06T19:59:46.545Z",
+          "grade": "F",
+          "score": 20
+        },
+        {
+          "id": 10143526,
+          "scanned_at": "2019-03-03T11:13:49.794Z",
+          "grade": "F",
+          "score": 0
+        },
+        {
+          "id": 11741296,
+          "scanned_at": "2019-08-22T10:36:53.618Z",
+          "grade": "F",
+          "score": 15
+        },
+        {
+          "id": 12778528,
+          "scanned_at": "2019-12-26T15:25:03.471Z",
+          "grade": "F",
+          "score": 20
+        },
+        {
+          "id": 19405194,
+          "scanned_at": "2021-05-30T07:45:58.842Z",
+          "grade": "C",
+          "score": 50
+        }
+      ],
+      "scan": {
+        "id": 57950609,
+        "algorithm_version": 4,
+        "scanned_at": "2025-02-20T16:04:25.341Z",
+        "error": null,
+        "grade": "C",
+        "response_headers": {
+          "date": "Thu, 20 Feb 2025 16:04:26 GMT",
+          "etag": "W/\"67b66720-2122c\"",
+          "server": "nginx/1.22.1",
+          "connection": "close",
+          "content-type": "text/html",
+          "last-modified": "Wed, 19 Feb 2025 23:20:00 GMT",
+          "x-frame-options": "SAMEORIGIN",
+          "x-xss-protection": "1; mode=block",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff"
+        },
+        "score": 50,
+        "status_code": 200,
+        "tests_failed": 3,
+        "tests_passed": 7,
+        "tests_quantity": 10
       },
-      "scan_id": 46790941,
-      "score": 20,
-      "start_time": "Sun, 21 Jan 2024 01:23:26 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 5,
-      "tests_passed": 7,
-      "tests_quantity": 12,
-      "details": {
+      "tests": {
         "content-security-policy": {
           "expectation": "csp-implemented-with-no-unsafe",
           "name": "content-security-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false,
-            "numPolicies": 0,
-            "policy": null
-          },
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/CSP",
+          "title": "Content Security Policy (CSP)",
           "pass": false,
           "result": "csp-not-implemented",
-          "score_description": "Content Security Policy (CSP) header not implemented",
-          "score_modifier": -25
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
+          "score_description": "<p>\n      Content Security Policy (CSP) header not implemented\n      </p>",
+          "recommendation": "<p>\n      Implement one, see <a href=\"/en-US/docs/Web/HTTP/CSP\">MDN's Content Security Policy (CSP) documentation</a>.\n      </p>",
+          "score_modifier": -25,
+          "data": null,
+          "http": false,
+          "meta": false,
+          "policy": null,
+          "num_policies": 0
         },
         "cookies": {
           "expectation": "cookies-secure-with-httponly-sessions",
           "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/Cookies",
+          "title": "Cookies",
+          "pass": null,
           "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
+          "score_description": "<p>\n      No cookies detected\n      </p>",
+          "recommendation": "",
+          "score_modifier": 0,
+          "data": null,
+          "same_site": false
         },
         "cross-origin-resource-sharing": {
           "expectation": "cross-origin-resource-sharing-not-implemented",
           "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/CORS",
+          "title": "Cross Origin Resource Sharing (CORS)",
           "pass": true,
           "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
+          "score_description": "<p>\n      Content is not visible via cross-origin resource sharing (CORS) files or headers.\n      </p>",
+          "recommendation": "",
+          "score_modifier": 0,
+          "data": null
         },
         "redirection": {
           "expectation": "redirection-to-https",
           "name": "redirection",
-          "output": {
-            "destination": "https://api.gouv.fr/",
-            "redirects": true,
-            "route": ["http://api.gouv.fr/", "https://api.gouv.fr/"],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_redirections",
+          "title": "Redirection",
+          "pass": false,
+          "result": "redirection-off-host-from-http",
+          "score_description": "<p>\n      Initial redirection from HTTP to HTTPS is to a different host, preventing HSTS.\n      </p>",
+          "recommendation": "<p>\n      HSTS headers aren't recognized when set over HTTP, so redirect to the same host on HTTPS first, then redirect to the final host.\n      </p>",
+          "score_modifier": -5,
+          "route": [
+            "http://free.fr/",
+            "https://www.free.fr/",
+            "https://www.free.fr/freebox/"
+          ],
+          "redirects": true,
+          "status_code": 200,
+          "destination": "https://www.free.fr/freebox/"
         },
         "referrer-policy": {
           "expectation": "referrer-policy-private",
           "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/Referrer_policy",
+          "title": "Referrer Policy",
+          "pass": null,
           "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
+          "score_description": "<p>\n      <code>Referrer-Policy</code> header not implemented.\n      </p>",
+          "recommendation": "<p>\n      Set to <code>strict-origin-when-cross-origin</code> at a minimum.\n      </p>",
+          "score_modifier": 0,
+          "data": null,
+          "http": false,
+          "meta": false
         },
         "strict-transport-security": {
           "expectation": "hsts-implemented-max-age-at-least-six-months",
           "name": "strict-transport-security",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "preload": false,
-            "preloaded": false
-          },
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security_implementation",
+          "title": "Strict Transport Security (HSTS)",
           "pass": false,
           "result": "hsts-not-implemented",
-          "score_description": "HTTP Strict Transport Security (HSTS) header not implemented",
-          "score_modifier": -20
+          "score_description": "<p>\n      <code>Strict-Transport-Security</code> header not implemented.\n      </p>",
+          "recommendation": "<p>\n      Add HSTS. Consider rolling out with shorter periods first (as suggested on <a href=\"https://hstspreload.org/#deployment-recommendations\" target=\"_blank\" rel=\"noreferrer\" class=\"external\">https://hstspreload.org/</a>).\n      </p>",
+          "score_modifier": -20,
+          "data": null,
+          "max_age": null,
+          "preload": false,
+          "preloaded": false,
+          "include_sub_domains": false
         },
         "subresource-integrity": {
           "expectation": "sri-implemented-and-external-scripts-loaded-securely",
           "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
+          "link": "/en-US/docs/Web/Security/Subresource_Integrity",
+          "title": "Subresource Integrity",
+          "pass": null,
           "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
+          "score_description": "<p>\n      Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin.\n      </p>",
+          "recommendation": "<p>\n      Add SRI for bonus points.\n      </p>",
+          "score_modifier": 0,
+          "data": {}
         },
         "x-content-type-options": {
           "expectation": "x-content-type-options-nosniff",
           "name": "x-content-type-options",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-content-type-options-not-implemented",
-          "score_description": "X-Content-Type-Options header not implemented",
-          "score_modifier": -5
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types",
+          "title": "X-Content-Type-Options",
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "<p>\n      <code>X-Content-Type-Options</code> header set to <code>nosniff</code>.\n      </p>",
+          "recommendation": "",
+          "score_modifier": 0,
+          "data": "nosniff"
         },
         "x-frame-options": {
           "expectation": "x-frame-options-sameorigin-or-deny",
           "name": "x-frame-options",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-frame-options-not-implemented",
-          "score_description": "X-Frame-Options (XFO) header not implemented",
-          "score_modifier": -20
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking",
+          "title": "X-Frame-Options",
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "<p>\n      <code>X-Frame-Options</code> (XFO) header set to <code>SAMEORIGIN</code> or <code>DENY</code>.\n      </p>",
+          "recommendation": "<p>\n      Implement frame-ancestors CSP.\n      </p>",
+          "score_modifier": 0,
+          "data": "SAMEORIGIN"
         },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-xss-protection-not-implemented",
-          "score_description": "X-XSS-Protection header not implemented",
-          "score_modifier": -10
+        "cross-origin-resource-policy": {
+          "expectation": "corp-implemented-with-same-site",
+          "name": "cross-origin-resource-policy",
+          "link": "/en-US/docs/Web/Security/Practical_implementation_guides/CORP",
+          "title": "Cross Origin Resource Policy",
+          "pass": null,
+          "result": "corp-not-implemented",
+          "score_description": "<p>\n      Cross Origin Resource Policy (CORP) is not implemented (defaults to <code>cross-origin</code>).\n      </p>",
+          "recommendation": "",
+          "score_modifier": 0,
+          "data": null,
+          "http": false,
+          "meta": false
         }
       }
     },
