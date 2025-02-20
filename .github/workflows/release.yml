@@ -33,6 +33,8 @@ jobs:
         author-email: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       
     - name: Create tag v1
+      env:
+        GITHUB_TOKEN: "${{ steps.token.outputs.token }}"
       run: |
         git config user.name "${{ secrets.SOCIALGROOVYBOT_NAME }}"
         git config user.email "${{ secrets.SOCIALGROOVYBOT_EMAIL }}"
