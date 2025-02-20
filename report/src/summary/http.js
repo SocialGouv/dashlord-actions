@@ -6,7 +6,7 @@ const summary = (report) => {
       // @ts-ignore use legacy value
       httpGrade: report.grade,
     };
-  } else if (report && report.scan.grade) {
+  } else if (report && report.scan && report.scan.grade) {
     return {
       httpGrade: report.scan.grade,
     };
