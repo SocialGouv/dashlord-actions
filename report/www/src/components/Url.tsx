@@ -158,7 +158,7 @@ const tabs: {
       },
       {
         id: "http",
-        render: (report, url) => <HTTP data={report.http} />,
+        render: (report, url) => <HTTP data={report.http} url={url} />,
       },
       {
         id: "testssl",

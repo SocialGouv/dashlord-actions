@@ -24,9 +24,7 @@ const PageUrl = ({
   return (
     <>
       <Head>
-        <title>
-          {smallUrl(url)} - {dashlordConfig.title}
-        </title>
+        <title>{`${smallUrl(url)} - ${dashlordConfig.title}`}</title>
       </Head>
       <Url url={url} report={report} selectedTab={selectedTab} />
     </>
