@@ -13,6 +13,12 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+
+    - name: Checkout this repo
+      uses: actions/checkout@v4
+      with:
+        ref: main
+
     - name: Get GitHub App Token
       id: token
       uses: SocialGouv/token-bureau@main
@@ -25,3 +31,11 @@ jobs:
         github-token: ${{ steps.token.outputs.token }}
         author-name: ${{ secrets.SOCIALGROOVYBOT_NAME }}
         author-email: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
+      
+    - name: Create tag v1
+      run: |
+        git config user.name "${{ secrets.SOCIALGROOVYBOT_NAME }}"
+        git config user.email "${{ secrets.SOCIALGROOVYBOT_EMAIL }}"
+        git tag -d v1
+        git tag v1
+        git push --tags -f
