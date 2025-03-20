@@ -27,19 +27,16 @@ jobs:
       config: ${{ steps.init.outputs.config }}
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          cd init
       - id: init
         uses: "./init-from-txt"
         with:
           txtPath: ".github/test_urls.txt"
       - id: test
         run: |
-          echo "${{ steps.init.outputs.sites }}"
-          # EXPECTED="[{url:https://www.free.fr,title:Free,repositories:[iliad/free-ui,iliad/free-api],tools:{screenshot:true,nmap:true,zap:true,wappalyzer:true,http:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true,stats:true,budget_page:true,declaration-a11y:true,declaration-rgpd:true,betagouv:true},subpages:[https://www.free.fr]},{url:http://chez.com,repositories:[chez/chez-ui,chez/chez-api],pages:[/login,/profile],tools:{screenshot:false,nmap:true,zap:true,wappalyzer:true,http:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:false,dependabot:true,codescan:true,stats:false,budget_page:true,declaration-a11y:true,declaration-rgpd:true,betagouv:true},subpages:[http://chez.com,http://chez.com/login,http://chez.com/profile]},{url:https://voila.fr,tools:{screenshot:true,nmap:true,zap:true,wappalyzer:true,http:true,testssl:true,lighthouse:true,thirdparties:true,nuclei:true,updownio:true,dependabot:true,codescan:true,stats:true,budget_page:true,declaration-a11y:true,declaration-rgpd:true,betagouv:true},subpages:[https://voila.fr]}]"
-          # RESULT="${{ steps.init.outputs.sites }}"
-          # echo "RESULT=$RESULT"
-          # [[ "$EXPECTED" == "$RESULT" ]]
+          EXPECTED="[{url: https://row1.com}, {url: https://row2.com}, {url: https://row3.com}, {url: https://row4.com}, {url: https://row5.com}, {url: https://row6.com}, {url: https://row7.com}, {url: https://row8.com}, {url: https://row9.com}]"
+          RESULT="${{ steps.init.outputs.sites }}"
+          echo "RESULT=$RESULT"
+          [[ "$EXPECTED" == "$RESULT" ]]
 
   scans:
     runs-on: ubuntu-latest
