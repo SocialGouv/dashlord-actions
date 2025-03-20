@@ -22,9 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Prepare full scan
     outputs:
-      urls: ${{ steps.init.outputs.urls }}
       sites: ${{ steps.init.outputs.sites }}
-      config: ${{ steps.init.outputs.config }}
     steps:
       - uses: actions/checkout@v4
       - id: init
