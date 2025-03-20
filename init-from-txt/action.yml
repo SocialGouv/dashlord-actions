@@ -35,7 +35,7 @@ runs:
       id: init
       env:
         CACHE_PATH: ${{ inputs.cachePath || './results' }}
-        TXT_PATH: ${{ inputs.txtPath || 'urls.txt' }}
+        TXT_PATH: ${{ inputs.txtPath || 'xxx.txt' }}
         MATRIX_MAX_COUNT: ${{ inputs.count || 10 }}
       run: |
         # Create a Python script to process URLs
