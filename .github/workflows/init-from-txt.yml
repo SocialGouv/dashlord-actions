@@ -2,12 +2,12 @@ on:
   push:
     branches: ["*"]
     paths:
-      - init/**
+      - init-from-txt/**
       - .github/workflows/init-from-txt.yml
   pull_request:
     branches: ["*"]
     paths:
-      - init/**
+      - init-from-txt/**
       - .github/workflows/init-from-txt.yml
   workflow_dispatch:
     inputs:
