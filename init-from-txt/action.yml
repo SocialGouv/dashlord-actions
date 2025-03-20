@@ -9,7 +9,7 @@ inputs:
     description: "Max number of URLs to return"
     required: false
     default: "10"
-  txtFile:
+  txtPath:
     description: "Path to the txt urls list file"
     required: false
     default: "urls.txt"
@@ -35,7 +35,7 @@ runs:
       id: init
       env:
         CACHE_PATH: ${{ inputs.cachePath || './results' }}
-        TXT_PATH: "urls.txt"
+        TXT_PATH: ${{ inputs.txtPath || 'urls.txt' }}
         MATRIX_MAX_COUNT: ${{ inputs.count || 10 }}
       run: |
         # Create a Python script to process URLs
