@@ -92,5 +92,3 @@ runs:
 
         # todo: handle single url
         python process_urls.py ${{ env.MATRIX_MAX_COUNT }}
-
-        env
