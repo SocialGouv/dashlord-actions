@@ -1,0 +1,51 @@
+on:
+  push:
+    branches: ["*"]
+    paths:
+      - init-from-txt/**
+      - .github/workflows/init-from-txt.yml
+  pull_request:
+    branches: ["*"]
+    paths:
+      - init-from-txt/**
+      - .github/workflows/init-from-txt.yml
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Single url to scan or scan all urls"
+        required: false
+        default: ""
+
+name: Test init matrix from txt
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    name: Prepare full scan
+    outputs:
+      sites: ${{ steps.init.outputs.sites }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: init
+        uses: "./init-from-txt"
+        with:
+          txtPath: ".github/test_urls.txt"
+      - id: test
+        run: |
+          EXPECTED="[{url: https://row1.com}, {url: https://row2.com}, {url: https://row3.com}, {url: https://row4.com}, {url: https://row5.com}, {url: https://row6.com}, {url: https://row7.com}, {url: https://row8.com}, {url: https://row9.com}]"
+          RESULT="${{ steps.init.outputs.sites }}"
+          echo "RESULT=$RESULT"
+          [[ "$EXPECTED" == "$RESULT" ]]
+
+  scans:
+    runs-on: ubuntu-latest
+    name: Scan
+    needs: test1
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        sites: ${{ fromJson(needs.test1.outputs.sites) }}
+    steps:
+      - run: |
+          echo "${{ matrix.sites.url }}"

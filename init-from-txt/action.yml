@@ -1,0 +1,94 @@
+name: "DashLord init action"
+description: "Parse dashlord txt config files and return some urls to scan"
+inputs:
+  cachePath:
+    description: "Where urls results are stored"
+    required: false
+    default: "./results"
+  count:
+    description: "Max number of URLs to return"
+    required: false
+    default: "10"
+  txtPath:
+    description: "Path to the txt urls list file"
+    required: false
+    default: "urls.txt"
+outputs:
+  sites:
+    description: List of urls to scan as plain text
+    value: ${{ steps.init.outputs.sites }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+
+    - name: Process URL list
+      shell: bash
+      id: init
+      env:
+        CACHE_PATH: ${{ inputs.cachePath || './results' }}
+        TXT_PATH: ${{ inputs.txtPath || 'xxx.txt' }}
+        MATRIX_MAX_COUNT: ${{ inputs.count || 10 }}
+      run: |
+        # Create a Python script to process URLs
+        cat << 'EOF' > process_urls.py
+        import os
+        import base64
+        import json
+        import sys
+        import subprocess
+        from datetime import datetime
+
+        def get_b64_path(url):
+            return os.path.join(os.environ.get("CACHE_PATH"), base64.b64encode(url.encode()).decode())
+
+        def get_git_last_modified(path):
+            try:
+                # Get the last commit date for the file
+                result = subprocess.run(
+                    ['git', 'log', '-1', '--format=%at', '--', path],
+                    capture_output=True,
+                    text=True
+                )
+                print(result)
+                if result.stdout.strip():
+                    return float(result.stdout.strip())
+                return float('-inf')  # File doesn't exist in git history
+            except Exception:
+                print("error")
+                return float('-inf')  # Error running git command
+
+
+        # Read URLs from file
+        with open(os.environ.get("TXT_PATH"), 'r') as f:
+            urls = [line.strip() for line in f if line.strip()]
+
+        # Sort URLs based on existence and modification time
+        sorted_urls = sorted(
+            urls,
+            key=lambda url: (
+                os.path.exists(get_b64_path(url)),
+                get_git_last_modified(get_b64_path(url))
+            )
+        )
+
+        # Take only the first N URLs (from input)
+        matrix_count = int(sys.argv[1])
+        matrix_urls = sorted_urls[:matrix_count]
+
+        # Output the matrix JSON to GITHUB_OUTPUT
+        urls_json = json.dumps([{"url": url} for url in matrix_urls])
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+            fh.write(f"sites={urls_json}")
+        EOF
+
+        # todo: handle single url
+        python process_urls.py ${{ env.MATRIX_MAX_COUNT }}
