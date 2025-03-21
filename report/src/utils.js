@@ -76,6 +76,10 @@ const getConfig = () => {
     dashlordConfig = YAML.parse(
       readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))
     );
+  } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "urls.txt"))) {
+    dashlordConfig = {
+      urls: readFile(path.join(DASHLORD_REPO_PATH, "urls.txt")).split("\n"),
+    };
   }
   return dashlordConfig;
 };
