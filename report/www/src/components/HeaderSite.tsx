@@ -163,7 +163,7 @@ export const HeaderSite: React.FC<HeaderSiteProps> = ({ report }) => {
         classes={{
           logo: (!!dashlordConfig.marianne && "auto") || "hidden",
         }}
-        brandTop={dashlordConfig.entity}
+        brandTop={dashlordConfig.entity || ""}
         operatorLogo={
           dashlordConfig.operator &&
           (typeof dashlordConfig.operator.logo === "string"
