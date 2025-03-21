@@ -9,4 +9,7 @@ beforeAll(() => {
     default: FakeDataGrid,
     DataGrid: FakeDataGrid,
   }));
+  vi.mock("react-d3-speedometer", (props) => ({
+    default: () => null,
+  }));
 });

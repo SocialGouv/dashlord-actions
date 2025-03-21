@@ -26,8 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: init
-        uses: "./init-from-txt"
+        uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
         with:
+          count: 100
           txtPath: ".github/test_urls.txt"
       - id: test
         run: |
