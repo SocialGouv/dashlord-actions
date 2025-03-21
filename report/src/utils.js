@@ -57,9 +57,10 @@ const getUrls = () => {
  * Get dashlord config
  *
  *
- * @returns {DashlordConfig} full dashlord config
+ * @returns {DashLordConfig} full dashlord config
  */
 const getConfig = () => {
+  /** @type {DashLordConfig} */
   let dashlordConfig = {
     title: "DashLord report",
     urls: [],
@@ -77,9 +78,9 @@ const getConfig = () => {
       readFile(path.join(DASHLORD_REPO_PATH, "dashlord.yml"))
     );
   } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "urls.txt"))) {
-    dashlordConfig = {
-      urls: readFile(path.join(DASHLORD_REPO_PATH, "urls.txt")).split("\n"),
-    };
+    dashlordConfig.urls = readFile(path.join(DASHLORD_REPO_PATH, "urls.txt"))
+      .split("\n")
+      .map((url) => ({ url }));
   }
   return dashlordConfig;
 };
