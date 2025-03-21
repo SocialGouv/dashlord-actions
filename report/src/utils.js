@@ -80,6 +80,7 @@ const getConfig = () => {
   } else if (fs.existsSync(path.join(DASHLORD_REPO_PATH, "urls.txt"))) {
     dashlordConfig.urls = readFile(path.join(DASHLORD_REPO_PATH, "urls.txt"))
       .split("\n")
+      .filter(Boolean)
       .map((url) => ({ url }));
   }
   return dashlordConfig;
