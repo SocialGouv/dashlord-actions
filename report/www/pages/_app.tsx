@@ -78,7 +78,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{dashlordConfig.title.trim()}</title>
+        <title>{dashlordConfig.title?.trim()}</title>
         <meta charSet="utf-8" lang="FR-fr" />
         <meta
           name="viewport"
