@@ -1,3 +1,4 @@
+//@ts-check
 const fs = require("fs");
 const path = require("path");
 const core = require("@actions/core");
@@ -7,7 +8,6 @@ const sampleConfig = jest
   .readFileSync(path.join(__dirname, "..", "dashlord.yml"))
   .toString();
 
-//jest.mock("fs");
 jest.mock("fs", () => ({
   promises: {
     access: jest.fn(),
@@ -18,54 +18,46 @@ jest.mock("fs", () => ({
 
 const { getOutputs, getSiteTools, getSiteSubpages } = require("./index");
 
-let inputs = {};
-
 describe("should parse dashlord config", () => {
-  beforeAll(() => {
-    // Mock getInput
-    jest.spyOn(core, "getInput").mockImplementation((name) => {
-      return inputs[name];
-    });
-  });
   beforeEach(() => {
-    // Reset inputs
-    jest.resetAllMocks();
-
-    inputs = {};
+    core.__resetInputsObject();
   });
+
   test("when no input", async () => {
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single invalid url input", async () => {
-    inputs.url = "zfzef";
+    core.__setInputsObject({ url: "zfzef" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when single valid url input", async () => {
-    inputs.url = "https://www.free.fr";
+    core.__setInputsObject({ url: "https://www.free.fr" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     expect(outputs.sites).toMatchSnapshot();
   });
 
   test("when multiple urls input", async () => {
-    inputs.url = "https://www.free.fr,pouet,http://chez.com";
+    core.__setInputsObject({
+      url: "https://www.free.fr,pouet,http://chez.com",
+    });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     expect(outputs.sites).toMatchSnapshot();
   });
 
   test("and getSiteTools https://chez.com match", async () => {
-    inputs.url = "https://chez.com";
+    core.__setInputsObject({ url: "https://chez.com" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const tools = getSiteTools({
@@ -104,7 +96,7 @@ describe("should parse dashlord config", () => {
   });
 
   test("and getSiteSubpages https://chez.com match", async () => {
-    inputs.url = "https://chez.com";
+    core.__setInputsObject({ url: "https://chez.com" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const subpages = getSiteSubpages({
@@ -128,7 +120,7 @@ describe("should parse dashlord config", () => {
   });
 
   test("and getSiteSubpages https://voila.fr match", async () => {
-    inputs.url = "https://voila.fr";
+    core.__setInputsObject({ url: "https://voila.fr" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
     const subpages = getSiteSubpages({
@@ -139,11 +131,59 @@ describe("should parse dashlord config", () => {
   });
 
   test("with inputs.tool", async () => {
-    inputs.url = "https://voila.fr";
-    inputs.tool = "lighthouse";
+    core.__setInputsObject({ url: "https://voila.fr", tool: "lighthouse" });
     fs.existsSync.mockReturnValue(true);
     fs.readFileSync.mockReturnValue(sampleConfig);
-    const outputs = getOutputs();
+    const outputs = await getOutputs();
     expect(outputs.sites).toMatchSnapshot();
+  });
+});
+
+describe("inputs.incubator: fetch urls from beta API", () => {
+  test("should add unknown URLS", async () => {
+    // test if we get API entries
+    core.__setInputsObject({ incubator: "sgmas" });
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(`
+tools:
+  lighthouse: true
+  nmap: false
+urls: []
+`);
+    const outputs = await getOutputs();
+    expect(outputs.urls).toMatch(/https:\/\/code.travail.gouv.fr/);
+    expect(outputs.sites.length).toBeGreaterThan(1);
+    expect(outputs.sites.find((s) => s.betaId === "codedutravail")).toEqual({
+      betaId: "codedutravail",
+      subpages: ["https://code.travail.gouv.fr"],
+      repositories: ["https://github.com/SocialGouv/code-du-travail-numerique"],
+      tools: { lighthouse: true, nmap: false },
+      url: "https://code.travail.gouv.fr",
+    });
+  });
+
+  test("should use existing config if already exist", async () => {
+    // test if API entries dont overwrite local configs
+    core.__setInputsObject({ incubator: "sgmas" });
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(`
+tools:
+  lighthouse: true
+  nmap: false
+urls:
+  - url: "https://test.com"
+    betaId: "codedutravail"
+    tools:
+      nmap: true
+`);
+    const outputs = await getOutputs();
+    expect(outputs.urls).toMatch(/^https:\/\/test.com/);
+    expect(outputs.sites.length).toBeGreaterThan(1);
+    expect(outputs.sites[0]).toEqual({
+      betaId: "codedutravail",
+      subpages: ["https://test.com"],
+      tools: { lighthouse: true, nmap: true },
+      url: "https://test.com",
+    });
   });
 });
