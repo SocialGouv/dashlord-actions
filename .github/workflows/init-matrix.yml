@@ -26,7 +26,7 @@ jobs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           cd init
       - id: init
@@ -49,7 +49,7 @@ jobs:
       matrix:
         sites: ${{ fromJson(needs.test1.outputs.sites) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           echo "${{ matrix.sites.url }}"
           echo "${{ join(matrix.sites.repositories) }}"
@@ -61,7 +61,7 @@ jobs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           cd init
       - id: init
@@ -87,7 +87,7 @@ jobs:
       matrix:
         sites: ${{ fromJson(needs.test2.outputs.sites) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           echo "${{ matrix.sites.url }}"
           echo "${{ join(matrix.sites.repositories) }}"
