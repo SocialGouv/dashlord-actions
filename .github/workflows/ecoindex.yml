@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: ecoindex action
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run ecoindex scanner
         uses: ./ecoindex
         with:

@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           cd declaration-a11y
           yarn
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     name: declaration-a11y action
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - shell: bash
         run: |
           ls -la

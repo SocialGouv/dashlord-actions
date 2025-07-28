@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: lhci action
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./lhci
         with:
           url: https://opentermsarchive.org,https://domifa.fabrique.social.gouv.fr

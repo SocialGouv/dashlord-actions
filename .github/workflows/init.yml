@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test sh
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           cd init
           npm i
