@@ -24708,7 +24708,6 @@ exports["default"] = _default;
 const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(2186);
 const YAML = __nccwpck_require__(4603);
-const { createMissingUpdownEntries } = __nccwpck_require__(1764);
 
 const getDashlordConfig = () => {
   let dashlordConfig;
@@ -24777,9 +24776,17 @@ const getOutputs = () => {
       .map((s) => s.trim())
       .filter(Boolean);
   const toolInput = core.getInput("tool") && core.getInput("tool").trim();
+  const tagsInput = 
+    core.getInput("tags") &&
+    core
+      .getInput("tags")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
 
   core.info(`urlsInput: ${urlsInput}`);
   core.info(`toolInput: ${toolInput}`);
+  core.info(`tagsInput: ${tagsInput}`);
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
@@ -24800,6 +24807,11 @@ const getOutputs = () => {
     .filter((site) =>
       dashlordConfig.urls && urlsInput && urlsInput.length
         ? urlsInput.includes(site.url)
+        : true
+    )
+    .filter((site) =>
+      dashlordConfig.tags && tagsInput && tagsInput.length
+        ? site.tags && site.tags.some((t) => tagsInput.includes(t))
         : true
     )
     .map((site) => ({
@@ -24826,14 +24838,6 @@ async function run() {
     core.setOutput("urls", outputs.urls); // legacy ?
     core.setOutput("sites", JSON.stringify(outputs.sites)); // useful for matrix jobs
     core.setOutput("config", JSON.stringify(outputs.config)); // full dashloard config
-
-    if (
-      outputs.config.tools.updownio === true &&
-      process.env.UPDOWNIO_API_KEY
-    ) {
-      console.log("init: create missing updown.io entries");
-      await createMissingUpdownEntries(outputs.config);
-    }
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -24850,81 +24854,6 @@ module.exports = {
   getSiteTools,
   getSiteSubpages,
 };
-
-
-/***/ }),
-
-/***/ 1764:
-/***/ ((module) => {
-
-// need write API key to create missing urls
-
-const apiKey = process.env.UPDOWNIO_API_KEY;
-
-const API_HTTP = "https://updown.io/api";
-
-/**
- * compare given urls to updown API
- * @function
- * @param {string[]} urls - urls to check
- * @returns {Promise<string[]>} - invalid urls
- */
-const getInvalidUrls = async (urls) => {
-  const apiUrl = encodeURI(`${API_HTTP}/checks?api-key=${apiKey}`);
-  /** @type {{url}[]} */
-  const checks = await fetch(apiUrl)
-    .then((r) => r.json())
-    .then((json) => {
-      if (json.error) {
-        console.error("e", json.error);
-        throw new Error(json.error);
-      }
-      return json;
-    });
-
-  /**
-   *
-   * @param {string} url
-   * @returns boolean
-   */
-  const hasUrl = (url) =>
-    !!checks.find(
-      (item) =>
-        item.url.toLowerCase().replace(/\/$/, "") ===
-        url.toLowerCase().replace(/\/$/, "")
-    );
-
-  return urls.filter((url) => !hasUrl(url));
-};
-
-const createNewUpDownCheck = async (url) => {
-  const apiUrl = encodeURI(`${API_HTTP}/checks?api-key=${apiKey}`);
-  const result = await fetch(apiUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ url, published: true }),
-  }).then((r) => r.json());
-  if (result.error) {
-    throw new Error(result.error);
-  }
-  console.log(JSON.stringify(result, null, 2));
-};
-
-/**
- *
- * @param {DashLordConfig} dashlordConfig
- */
-const createMissingUpdownEntries = async (dashlordConfig) => {
-  const urls = dashlordConfig.urls.map((url) => url.url);
-  await getInvalidUrls(urls).then((urls) => {
-    urls.forEach(async (url) => {
-      console.log(`create new updown check for ${url}`);
-      await createNewUpDownCheck(url);
-    });
-  });
-};
-
-module.exports = { createMissingUpdownEntries };
 
 
 /***/ }),
