@@ -9,6 +9,10 @@ inputs:
     description: "Tool to run or use all tools"
     default: ""
     required: false
+  tags:
+    description: "Filter by tags (comma separated)"
+    required: false
+    default: ""
 outputs:
   urls:
     description: List of urls to scan as plain text
