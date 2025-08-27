@@ -69,9 +69,17 @@ const getOutputs = () => {
       .map((s) => s.trim())
       .filter(Boolean);
   const toolInput = core.getInput("tool") && core.getInput("tool").trim();
+  const tagsInput = 
+    core.getInput("tags") &&
+    core
+      .getInput("tags")
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
 
   core.info(`urlsInput: ${urlsInput}`);
   core.info(`toolInput: ${toolInput}`);
+  core.info(`tagsInput: ${tagsInput}`);
 
   const isValid = (u) => u.url.match(/^https?:\/\//);
   let dashlordConfig = getDashlordConfig();
@@ -92,6 +100,11 @@ const getOutputs = () => {
     .filter((site) =>
       dashlordConfig.urls && urlsInput && urlsInput.length
         ? urlsInput.includes(site.url)
+        : true
+    )
+    .filter((site) =>
+      dashlordConfig.tags && tagsInput && tagsInput.length
+        ? site.tags && site.tags.some((t) => tagsInput.includes(t))
         : true
     )
     .map((site) => ({

@@ -64,6 +64,22 @@ describe("should parse dashlord config", () => {
     expect(outputs.sites).toMatchSnapshot();
   });
 
+  test("when single valid tag input", async () => {
+    inputs.tags = "tag1";
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const outputs = getOutputs();
+    expect(outputs.sites).toMatchSnapshot();
+  });
+
+  test("when multiple urls input", async () => {
+    inputs.tags = "tag1,tag2";
+    fs.existsSync.mockReturnValue(true);
+    fs.readFileSync.mockReturnValue(sampleConfig);
+    const outputs = getOutputs();
+    expect(outputs.sites).toMatchSnapshot();
+  });
+
   test("and getSiteTools https://chez.com match", async () => {
     inputs.url = "https://chez.com";
     fs.existsSync.mockReturnValue(true);

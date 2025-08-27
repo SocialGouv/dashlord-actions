@@ -25,6 +25,9 @@ urls:
     repositories:
       - iliad/free-ui
       - iliad/free-api
+    tags:
+      - tag1
+      - tag2
   - url: invalid-url
   - url: http://chez.com
     repositories:
@@ -33,6 +36,8 @@ urls:
     pages:
       - /login
       - /profile
+    tags:
+      - tag2
     tools:
       screenshot: false
       updownio: false
