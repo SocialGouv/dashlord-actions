@@ -24810,7 +24810,7 @@ const getOutputs = () => {
         : true
     )
     .filter((site) =>
-      dashlordConfig.tags && tagsInput && tagsInput.length
+      tagsInput && tagsInput.length
         ? site.tags && site.tags.some((t) => tagsInput.includes(t))
         : true
     )
