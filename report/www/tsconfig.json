@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -20,8 +21,9 @@
       "@/trends.json": ["src/trends.json"],
       "@/report.json": ["src/report.json"],
       "@/components/*": ["src/components/*"]
-    }
+    },
+    "plugins": [{ "name": "next" }]
   },
-  "include": ["../../types/index.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["../../types/index.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"],
 }

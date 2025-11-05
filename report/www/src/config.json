@@ -5,6 +5,7 @@
   "entity": "Ministères sociaux",
   "footer": "Un produit de la fabrique numérique des ministères sociaux, de la communauté beta.gouv.fr",
   "marianne": true,
+  "seo": false,
   "loginUrl": "https://dashlord-full.fabrique.social.gouv.fr",
   "matomoId": 62,
   "matomoUrl": "https://matomo.fabrique.social.gouv.fr",
