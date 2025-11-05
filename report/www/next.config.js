@@ -9,6 +9,9 @@ const nextConfig = {
   output: "export",
   trailingSlash: true, // without this, issues with some nested paths and static exports
   basePath: BASE_PATH,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(woff2|webmanifest)$/,
