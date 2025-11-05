@@ -84,6 +84,7 @@ function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        {!dashlordConfig.seo && <meta name="robots" content="noindex, nofollow" />}
         <meta name="description" content="Dashboard des applications" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
       </Head>

@@ -51,6 +51,7 @@ type DashLordConfig = {
   columns?: Record<DashlordTool, boolean>;
   urls: UrlConfig[];
   marianne?: boolean;
+  seo?: boolean;
   loginUrl?: string;
   matomoId?: number;
   matomoUrl?: string;
