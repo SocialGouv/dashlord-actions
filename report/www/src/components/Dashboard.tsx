@@ -2,7 +2,6 @@ import * as React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 
-import { AlertProps } from "@codegouvfr/react-dsfr/Alert";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -325,21 +324,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         renderCell: (params) => {
           if (!isToolEnabled("ecoindex", params.row.url))
             return <IconUnknown />;
-          let grade = "F";
-          let severity: AlertProps.Severity = "error";
           const value = params.row.summary[`lighthouse_accessibility`];
           if (!value) return <IconUnknown />;
 
-          if (value >= 1) {
-            grade = "A";
-            severity = "success";
-          } else if (value >= 0.85) {
-            grade = "C";
-            severity = "warning";
-          } else if (value >= 0.7) {
-            grade = "F";
-            severity = "error";
-          }
+          const grade = (value >= 1) ? "A" : "F";
+          const severity =  (value >= 1) ? "success" : "error";
 
           return (
             <GradeBadge
@@ -347,8 +336,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 params.row.url
               )}`}
               showCheckOnSuccess
-              label={grade}
+              showWarningOnError
               severity={severity}
+              label={grade}
               linkProps={{
                 href: `/url/${slugifyUrl(
                   params.row.url

@@ -6,15 +6,15 @@ import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
-import styles from "./lightHouse.module.scss";
 
 type CardProps = {
   title?: string | React.ReactNode;
   value?: string | React.ReactNode;
   children?: any;
+  subtext?: string | React.ReactNode;
 };
 
-const Card: React.FC<CardProps> = ({ children, title, value }) => (
+const Card: React.FC<CardProps> = ({ children, title, subtext, value }) => (
   <div style={{ textAlign: "center" }}>
     {children}
     {title && (
@@ -28,6 +28,11 @@ const Card: React.FC<CardProps> = ({ children, title, value }) => (
         style={{ fontSize: "2em" }}
       >
         {value}
+      </div>
+    )}
+    {subtext && (
+      <div className={fr.cx("fr-mt-2w")}>
+        {subtext}
       </div>
     )}
   </div>
@@ -87,12 +92,6 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
       title="LightHouse"
       info="Informations collectées par l'outil Google LightHouse"
     >
-      <div className={fr.cx("fr-grid-row")}>
-        <div className={fr.cx("fr-col-12")}>
-          <AccessibilityWarnings className={styles.accesibility} />
-        </div>
-      </div>
-
       {audits.map((audit) => {
         const highlights = {
           "First contentful Paint":
@@ -135,7 +134,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
             isExternal
             key={audit.requestedUrl}
           >
-            <div className={fr.cx("fr-grid-row")}>
+            <div className={fr.cx("fr-grid-row")} style={{ borderBottom: "2px solid grey" }}>
               {order.map((key) => {
                 const category =
                   audit.categories[key as LighthouseReportCategoryKey];
@@ -154,6 +153,7 @@ export const LightHouse: React.FC<LighthouseProps> = ({ data, url }) => {
                       <Card
                         title={category.title}
                         value={`${(score * 100).toFixed()}%`}
+                        subtext={category.title === "Accessibility" ? <AccessibilityWarnings/> : undefined}
                       >
                         <Gauge
                           width={200}

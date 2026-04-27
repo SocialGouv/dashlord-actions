@@ -8,12 +8,9 @@ export const AccessibilityWarnings = ({
   className,
 }: AccessibilityWarningProps) => (
   <div className={className}>
-    Moins de 25% des critères d&apos;accessibilité peuvent être testés
-    automatiquement, <strong>une expertise manuelle est requise</strong>
-    .
-    <br />
-    <br />
-    Ce score ne représente pas le score RGAA mais une partie des bonnes
-    pratiques de base à appliquer.
+    <p className="fr-text--xs">
+      Moins de 25 % des tests d&apos;accessibilité sont automatisables, <strong>une expertise manuelle reste nécessaire</strong>.
+      Ce score ne reflète pas la conformité RGAA, mais une partie des bonnes pratiques de base.
+    </p>
   </div>
 );
