@@ -1,5 +1,6 @@
 const jsdom = require("jsdom");
 const { fuzzy } = require("fast-fuzzy");
+const { getHTML } = require("../get-html/src/index");
 
 const { JSDOM } = jsdom;
 
@@ -69,6 +70,8 @@ function findMostRecentDate(html) {
     }
   }
 
+  console.log("###### CANDIDATES : ", candidates)
+
   const validDates = [];
   for (const candidate of candidates) {
     const date = parseDate(candidate);
@@ -77,6 +80,8 @@ function findMostRecentDate(html) {
     }
   }
 
+  console.log("###### VALID DATES : ", validDates);
+
   if (validDates.length === 0) return ({ found: false });
 
   validDates.sort((a, b) => b.date - a.date);
@@ -84,6 +89,8 @@ function findMostRecentDate(html) {
   const threeYearsAgo = new Date()
   threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
   const isLessThan3Years = mostRecent.date >= threeYearsAgo;
+
+  console.log("###### MOST RECENT DATE : ", mostRecent.date);
 
   return ({
     found: true,
@@ -94,8 +101,35 @@ function findMostRecentDate(html) {
   })
 }
 
+async function loadPageTextContent(url) {
+  const resourceLoader = new jsdom.ResourceLoader({
+    strictSSL: false,
+    userAgent:
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0 - dashlord",
+  });
+
+  let declarationPageText;
+  JSDOM.fromURL(url, {
+    resources: resourceLoader,
+    runScripts: 'dangerously',
+  }).then((dom) => {
+    return new Promise((resolve) => {
+      if (dom.window.onload !== null) {
+        dom.window.addEventListener("load", () => {
+          declarationPageText = dom.window.document.body.textContent;
+          resolve(declarationPageText)
+        });
+      } else {
+        declarationPageText = dom.window.document.body.textContent;
+        resolve(declarationPageText)
+      }
+    });
+  })
+}
+
 const analyseDom = async (dom, { url = "" } = {}) => {
   const text = dom.window.document.body.textContent;
+
   // fuzzy find the best match
   const status = mandatoryAccessibilityRate
     .map(({ needle }) => ({ needle, score: fuzzy(needle, text) }))
@@ -144,21 +178,19 @@ const analyseDom = async (dom, { url = "" } = {}) => {
     }
 
     if (result.declarationUrl) {
-      const resourceLoader = new jsdom.ResourceLoader({
-        strictSSL: false,
-        userAgent:
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0 - dashlord",
-      });
-      const declarationPageDom = await JSDOM.fromURL(result.declarationUrl, { resources: resourceLoader });
-      const declarationPageText = declarationPageDom.window.document.body.textContent;
+      const declarationPageText = await getHTML(result.declarationUrl);
+
+      console.log("####### HTML TEXT CONTENT : ", declarationPageText);
 
       const declarationDate = findMostRecentDate(declarationPageText);
 
+      console.log("###### DECLARATION DATE : ", declarationDate);
+
       if (declarationDate.found) {
-        result.declarationDateFound = true;
+        result.declarationDate = declarationDate.mostRecentDate.toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' });
         result.declarationIsUpToDate = declarationDate.isLessThan3Years;
       } else {
-        result.declarationDateFound = false;
+        result.declarationDate = undefined;
       }
     }
   }

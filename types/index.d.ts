@@ -405,7 +405,7 @@ type PageReport = {
 type DeclarationA11yReport = {
   mention: string | null;
   declarationUrl?: string;
-  declarationDateFound?: boolean;
+  declarationDate?: Date | undefined;
   declarationIsUpToDate?: boolean;
 };
 

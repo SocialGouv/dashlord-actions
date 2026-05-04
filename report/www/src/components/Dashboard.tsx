@@ -121,6 +121,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                   params.row.url
                 )}`}
                 label={grade}
+                warning={grade === "D" ? "La déclaration n'est pas à jour" : ""}
                 hideLabelOnWarning
                 severity={severity}
                 showCheckOnSuccess
