@@ -103,7 +103,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         field: "declaration-a11y",
         headerName: `Déclaration d'accessibilité`,
         description:
-          "Présence de la mention de conformité et de la déclaration",
+          "Présence de la mention de conformité et déclaration à jour",
         width: 150,
         valueGetter: (params) => {
           return params.row.summary["declaration-a11y"] || "";
@@ -112,6 +112,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           if (!isToolEnabled("declaration-a11y", params.row.url))
             return <IconUnknown />;
           const grade = params.row.summary["declaration-a11y"];
+          const severity = grade === "A" ? "success" : grade === "F" ? "error" : "warning"
+
           if (grade) {
             return (
               <GradeBadge
@@ -120,6 +122,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 )}`}
                 label={grade}
                 hideLabelOnWarning
+                severity={severity}
+                showCheckOnSuccess
+                showWarningOnError
                 linkProps={{
                   href: `/url/${slugifyUrl(
                     params.row.url

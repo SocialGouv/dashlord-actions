@@ -62,15 +62,12 @@ function parseDate(dateString) {
 }
 
 function findMostRecentDate(html) {
-  console.log("###### INSIDE FIND MOST RECENT DATE")
   const candidates = new Set();
   for (const pattern of DATE_PATTERNS) {
     for (const match of html.matchAll(pattern)) {
       candidates.add(match[1] || match[0]);
     }
   }
-
-  console.log("###### CANDIDATES : ", candidates)
 
   const validDates = [];
   for (const candidate of candidates) {
@@ -88,7 +85,6 @@ function findMostRecentDate(html) {
   threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
   const isLessThan3Years = mostRecent.date >= threeYearsAgo;
 
-  // TODO: For test purposes, remove useless data
   return ({
     found: true,
     mostRecentDate: mostRecent.date,
@@ -148,8 +144,6 @@ const analyseDom = async (dom, { url = "" } = {}) => {
     }
 
     if (result.declarationUrl) {
-      console.log("##### DECLARATION URL INSIDE IF : ", result.declarationUrl);
-
       const resourceLoader = new jsdom.ResourceLoader({
         strictSSL: false,
         userAgent:
@@ -159,8 +153,6 @@ const analyseDom = async (dom, { url = "" } = {}) => {
       const declarationPageText = declarationPageDom.window.document.body.textContent;
 
       const declarationDate = findMostRecentDate(declarationPageText);
-
-      console.log("###### DECLARATION DATE FOUND : ", declarationDate)
 
       if (declarationDate.found) {
         result.declarationDateFound = true;

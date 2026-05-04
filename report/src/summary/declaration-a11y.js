@@ -13,22 +13,16 @@ const summary = (report) => {
       "declaration-a11y": undefined,
     };
   }
-  const mentionIndex = report.mention
-    ? Object.values(grades).indexOf(report.mention)
-    : -1;
 
-  if (report.mention === null) {
-    // not detected
+  const isMentionPresent = Boolean(report.mention && report.mention.length > 1)
+  const isDeclarationPresent = Boolean(report.declarationUrl && report.declarationUrl.length > 1)
+
+  if (!isMentionPresent || !isDeclarationPresent) {
     grade = "F";
-  } else if (mentionIndex > -1) {
-    if (report.declarationUrl) {
-      // @ts-ignore
-      grade = Object.keys(grades)[mentionIndex];
-    } else if (report.mention === "Accessibilité : non conforme") {
-      grade = "D";
-    } else {
-      grade = "F";
-    }
+  } else if (report.declarationIsUpToDate) {
+    grade = "A";
+  } else {
+    grade = "D";
   }
 
   return {
