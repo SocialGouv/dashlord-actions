@@ -1,9 +1,3 @@
-const grades = {
-  A: "Accessibilité : totalement conforme",
-  B: "Accessibilité : partiellement conforme",
-  C: "Accessibilité : non conforme",
-};
-
 /** @param {DeclarationA11yReport} report */
 const summary = (report) => {
   // not known

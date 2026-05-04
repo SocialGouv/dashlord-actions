@@ -2,47 +2,46 @@ const summary = require("./declaration-a11y");
 
 const tests = [
   {
-    mention: undefined,
-    expected: { "declaration-a11y": undefined },
-  },
-  {
     mention: null,
-    expected: { "declaration-a11y": "F" },
-  },
-  {
-    mention: "Accessibilité : totalement conforme",
+    declarationUrl : "https://declaration.url",
+    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "F" },
   },
   {
     mention: "Accessibilité : partiellement conforme",
+    declarationUrl : "",
+    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "F" },
   },
   {
-    mention: "Accessibilité : non conforme",
-    expected: { "declaration-a11y": "D" },
-  },
-  {
-    mention: "Accessibilité : totalement conforme",
-    declarationUrl: "https://declaration.url",
+    mention: "Accessibilité : partiellement conforme",
+    declarationUrl : "https://declaration.url",
+    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "A" },
   },
   {
     mention: "Accessibilité : partiellement conforme",
-    declarationUrl: "https://declaration.url",
-    expected: { "declaration-a11y": "B" },
+    declarationUrl : "https://declaration.url",
+    declarationIsUpToDate: false,
+    expected: { "declaration-a11y": "D" },
   },
   {
-    mention: "Accessibilité : non conforme",
-    declarationUrl: "https://declaration.url",
-    expected: { "declaration-a11y": "C" },
-  },
+    mention: "Accessibilité : totalement conforme",
+    declarationUrl : "https://declaration.url",
+    declarationIsUpToDate: false,
+    expected: { "declaration-a11y": "D" },
+  }
 ];
 
 describe("declaration-a11y", () => {
   tests.forEach((t) => {
-    test(`${t.mention} should return ${JSON.stringify(t.expected)}`, () => {
-      //@ts-expect-error
+    test(`Mention: "${t.mention}" & url: "${t.declarationUrl}" & declaration recent update: ${t.declarationIsUpToDate} should return ${JSON.stringify(t.expected)}`, () => {
       expect(summary(t)).toEqual(t.expected);
     });
   });
+
+  test('A missing report should return not return a grade', () => {
+    //@ts-expect-error
+    expect(summary(undefined)).toEqual({"declaration-a11y": undefined});
+  })
 });
