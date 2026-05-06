@@ -48,8 +48,8 @@ This will add `report.json`, `config.json`, `trends.json` in `report/www/src`
 based on the content of `DASHLORD_REPO_PATH` :
 
 ```sh
-DASHLORD_URLS=http://test1.com,http://test1.com  \ # optional
-DASHLORD_REPO_PATH=/path/to/some/dashlord-repo \ #optional
+export DASHLORD_URLS=http://test1.com,http://test1.com # optional
+export DASHLORD_REPO_PATH=/path/to/some/dashlord-repo # optional
 node report/src # this will create fresh config.json, report.json and trends.json for the website
 ```
 
