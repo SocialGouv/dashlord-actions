@@ -6,6 +6,7 @@ import { BadgeUpdatedAt } from "./BadgeUpdatedAt";
 import { Gauge } from "./Gauge";
 import { Panel } from "./Panel";
 import { AccessibilityWarnings } from "../lib/lighthouse/AccessibilityWarnings";
+import styles from "./lightHouse.module.scss";
 
 type CardProps = {
   title?: string | React.ReactNode;

@@ -84,22 +84,6 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
         ></Alert>
       ),
     },
-    declarationUpToDate: {
-      true: (
-        <Alert
-          severity="success"
-          title=""
-          description={`La déclaration est à jour (moins de 3 ans) : ${data.declarationDate}`}
-        ></Alert>
-      ),
-      false: (
-        <Alert
-          severity="warning"
-          title=""
-          description={`La déclaration n'est pas à jour (plus de 3 ans) ou sa date n'a pas été détectée : ${data.declarationDate ?? "non trouvée"}`}
-        ></Alert>
-      ),
-    },
   };
   return (
     (data && (
@@ -112,7 +96,6 @@ export const DeclarationA11y: React.FC<DeclarationA11yProps> = ({ data }) => {
         <br />
         {alerts.mention[data.mention || "null"]}
         {alerts.declaration["" + !!data.declarationUrl]}
-        {alerts.declarationUpToDate["" + !!data.declarationIsUpToDate]}
       </Panel>
     )) ||
     null

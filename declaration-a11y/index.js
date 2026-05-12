@@ -1,10 +1,9 @@
 const jsdom = require("jsdom");
 const { fuzzy } = require("fast-fuzzy");
-const { getHTML } = require("../get-html/src/index");
 
 const { JSDOM } = jsdom;
 
-const mandatoryAccessibilityRate = [
+const searches = [
   {
     needle: "Accessibilité : non conforme",
   },
@@ -16,122 +15,10 @@ const mandatoryAccessibilityRate = [
   },
 ];
 
-const DATE_PATTERNS = [
-  // European formats: 15/04/2023, 15-04-2023, 15.04.2023
-  /\b(\d{2}[\/\-\.]\d{2}[\/\-\.]\d{4})\b/g,
-  // Month-year european formats: 04/2023, 04-2023, 04.2023
-  /\b(\d{2}[\/\-\.]\d{4})\b/g,
-  // Literal French format: 15 avril 2023, 15 avr. 2023
-  /\b(\d{1,2}\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre|janv?\.?|févr?\.?|avr?\.?|juil?\.?|sept?\.?|oct?\.?|nov?\.?|déc?\.?)\s+\d{4})\b/gi,
-]
-
-const FR_MONTHS = {
-  janvier: 0, janv: 0,
-  février: 1, févr: 1,
-  mars: 2,
-  avril: 3, avr: 3,
-  mai: 4,
-  juin: 5,
-  juillet: 6, juil: 6,
-  août: 7, aout: 7,
-  septembre: 8, sept: 8,
-  octobre: 9, oct: 9,
-  novembre: 10, nov: 10,
-  décembre: 11, déc: 11
-}
-
-function frenchMonthMapper(monthString) {
-  return FR_MONTHS[monthString.toLowerCase().replace('.', '')]
-}
-
-function parseDate(dateString) {
-  dateString = dateString.trim()
-
-  let splitDate = dateString.split(/[.\/-]/)
-  if (splitDate.length === 3) {
-    return new Date(splitDate[2], splitDate[1] - 1, splitDate[0]);
-  } else if (splitDate.length === 2) {
-    return new Date(splitDate[1], splitDate[0] - 1);
-  }
-
-  splitDate = dateString.split(" ")
-  if (splitDate.length === 3) {
-    return new Date(splitDate[2], frenchMonthMapper(splitDate[1]), splitDate[0]);
-  } else if (splitDate.length === 2) {
-    return new Date(splitDate[1], frenchMonthMapper(splitDate[0]));
-  }
-}
-
-function findMostRecentDate(html) {
-  const candidates = new Set();
-  for (const pattern of DATE_PATTERNS) {
-    for (const match of html.matchAll(pattern)) {
-      candidates.add(match[1] || match[0]);
-    }
-  }
-
-  console.log("###### CANDIDATES : ", candidates)
-
-  const validDates = [];
-  for (const candidate of candidates) {
-    const date = parseDate(candidate);
-    if (date && date <+ new Date()) {
-      validDates.push({ raw: candidate, date});
-    }
-  }
-
-  console.log("###### VALID DATES : ", validDates);
-
-  if (validDates.length === 0) return ({ found: false });
-
-  validDates.sort((a, b) => b.date - a.date);
-  const mostRecent = validDates[0];
-  const threeYearsAgo = new Date()
-  threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
-  const isLessThan3Years = mostRecent.date >= threeYearsAgo;
-
-  console.log("###### MOST RECENT DATE : ", mostRecent.date);
-
-  return ({
-    found: true,
-    mostRecentDate: mostRecent.date,
-    rawString: mostRecent.raw,
-    isLessThan3Years,
-    allDatesFound: validDates
-  })
-}
-
-async function loadPageTextContent(url) {
-  const resourceLoader = new jsdom.ResourceLoader({
-    strictSSL: false,
-    userAgent:
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0 - dashlord",
-  });
-
-  let declarationPageText;
-  JSDOM.fromURL(url, {
-    resources: resourceLoader,
-    runScripts: 'dangerously',
-  }).then((dom) => {
-    return new Promise((resolve) => {
-      if (dom.window.onload !== null) {
-        dom.window.addEventListener("load", () => {
-          declarationPageText = dom.window.document.body.textContent;
-          resolve(declarationPageText)
-        });
-      } else {
-        declarationPageText = dom.window.document.body.textContent;
-        resolve(declarationPageText)
-      }
-    });
-  })
-}
-
 const analyseDom = async (dom, { url = "" } = {}) => {
   const text = dom.window.document.body.textContent;
-
   // fuzzy find the best match
-  const status = mandatoryAccessibilityRate
+  const status = searches
     .map(({ needle }) => ({ needle, score: fuzzy(needle, text) }))
     .sort((a, b) => a.score - b.score)
     .reverse();
@@ -175,23 +62,6 @@ const analyseDom = async (dom, { url = "" } = {}) => {
           }
         }
       });
-    }
-
-    if (result.declarationUrl) {
-      const declarationPageText = await getHTML(result.declarationUrl);
-
-      console.log("####### HTML TEXT CONTENT : ", declarationPageText);
-
-      const declarationDate = findMostRecentDate(declarationPageText);
-
-      console.log("###### DECLARATION DATE : ", declarationDate);
-
-      if (declarationDate.found) {
-        result.declarationDate = declarationDate.mostRecentDate.toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' });
-        result.declarationIsUpToDate = declarationDate.isLessThan3Years;
-      } else {
-        result.declarationDate = undefined;
-      }
     }
   }
   return result;

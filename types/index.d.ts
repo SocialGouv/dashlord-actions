@@ -405,8 +405,6 @@ type PageReport = {
 type DeclarationA11yReport = {
   mention: string | null;
   declarationUrl?: string;
-  declarationDate?: Date | undefined;
-  declarationIsUpToDate?: boolean;
 };
 
 type DeclarationRgpdItem = {

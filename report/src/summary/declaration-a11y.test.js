@@ -4,38 +4,23 @@ const tests = [
   {
     mention: null,
     declarationUrl : "https://declaration.url",
-    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "F" },
   },
   {
     mention: "Accessibilité : partiellement conforme",
     declarationUrl : "",
-    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "F" },
   },
   {
     mention: "Accessibilité : partiellement conforme",
     declarationUrl : "https://declaration.url",
-    declarationIsUpToDate: true,
     expected: { "declaration-a11y": "A" },
-  },
-  {
-    mention: "Accessibilité : partiellement conforme",
-    declarationUrl : "https://declaration.url",
-    declarationIsUpToDate: false,
-    expected: { "declaration-a11y": "D" },
-  },
-  {
-    mention: "Accessibilité : totalement conforme",
-    declarationUrl : "https://declaration.url",
-    declarationIsUpToDate: false,
-    expected: { "declaration-a11y": "D" },
   }
 ];
 
 describe("declaration-a11y", () => {
   tests.forEach((t) => {
-    test(`Mention: "${t.mention}" & url: "${t.declarationUrl}" & declaration recent update: ${t.declarationIsUpToDate} should return ${JSON.stringify(t.expected)}`, () => {
+    test(`Mention: "${t.mention}" & url: "${t.declarationUrl}" should return ${JSON.stringify(t.expected)}`, () => {
       expect(summary(t)).toEqual(t.expected);
     });
   });
