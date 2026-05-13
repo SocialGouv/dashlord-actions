@@ -120,6 +120,11 @@ export const phases = [
     icon: ThumbsUp,
     index: 5,
   },
+  { id: "perennisation", label: "En pérennisation", icon: FastForward, index: 6 },
+  { id: "opere", label: "Opéré au sein du réseau beta.gouv.fr", icon: Heart, index: 6 },
+  { id: "transfere", label: "Transféré", icon: ThumbsUp, index: 6 },
+  { id: "abandon", label: "Service arrêté", icon: XCircle, index: 6 },
+  { id: "abandon-investigation", label: "Investigation non concluante", icon: XCircle, index: 6 },
   { id: "alumni", label: "Partenariat terminé", icon: XCircle, index: 6 },
 ] as BetagouvPhase[];
 
@@ -129,6 +134,11 @@ export const phaseSeverities = {
   "partenariat terminé": "error",
   transfert: "success",
   succès: "success",
+  opere: "success",
+  transfere: "success",
+  perennisation: "success",
+  abandon: "error",
+  "abandon-investigation": "error",
 };
 
 const getPhase = (phase: string) => phases.find((f) => f.id === phase);
