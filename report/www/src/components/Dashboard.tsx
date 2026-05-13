@@ -153,7 +153,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           return params.row.summary.lighthouse_accessibility || 0;
         },
         renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
+          if (!isToolEnabled("lighthouse", params.row.url))
             return <IconUnknown />;
           const value = params.row.summary[`lighthouse_accessibility`];
           if (!value) return <IconUnknown />;
@@ -189,7 +189,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           return params.row.summary.lighthouse_performance;
         },
         renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
+          if (!isToolEnabled("lighthouse", params.row.url))
             return <IconUnknown />;
           return (
             <GradeBadge
@@ -218,7 +218,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           return params.row.summary.lighthouse_seo || 0;
         },
         renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
+          if (!isToolEnabled("lighthouse", params.row.url))
             return <IconUnknown />;
           return (
             <GradeBadge
