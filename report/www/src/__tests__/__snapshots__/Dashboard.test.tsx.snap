@@ -20,6 +20,21 @@ exports[`Should render full Dashboard 1`] = `
         Présence de la mention de conformité et de la déclaration
       </th>
       <th>
+        Tests auto accessibilité
+        <br />
+        Bonnes pratiques en matière d'accessibilité web...... ⚠️ Ne couvre que ~20% des critères du RGAA
+      </th>
+      <th>
+        WebPerf
+        <br />
+        Performances de chargement des pages web (LightHouse)
+      </th>
+      <th>
+        SEO
+        <br />
+        Bonnes pratiques en matière de référencement naturel (LightHouse)
+      </th>
+      <th>
         OpenSource
         <br />
       </th>
@@ -40,21 +55,6 @@ exports[`Should render full Dashboard 1`] = `
       <th>
         Eco-index
         <br />
-      </th>
-      <th>
-        Tests auto accessibilité
-        <br />
-        Bonnes pratiques en matière d'accessibilité web...... ⚠️ Ne couvre que ~20% des critères du RGAA
-      </th>
-      <th>
-        WebPerf
-        <br />
-        Performances de chargement des pages web (LightHouse)
-      </th>
-      <th>
-        SEO
-        <br />
-        Bonnes pratiques en matière de référencement naturel (LightHouse)
       </th>
       <th>
         SSL
@@ -179,6 +179,21 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
         <p
           className="fr-badge fr-badge--success fr-badge--no-icon"
           id="fr-badge-:r1:"
@@ -195,21 +210,6 @@ exports[`Should render full Dashboard 1`] = `
             className="fr-icon-check-line"
           />
         </p>
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
       </td>
       <td>
         <i
@@ -499,6 +499,21 @@ exports[`Should render full Dashboard 1`] = `
         />
       </td>
       <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
         <p
           className="fr-badge fr-badge--success fr-badge--no-icon"
           id="fr-badge-:ra:"
@@ -515,21 +530,6 @@ exports[`Should render full Dashboard 1`] = `
             className="fr-icon-check-line"
           />
         </p>
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
       </td>
       <td>
         <i
@@ -785,7 +785,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url annuaire-entreprises-data-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:rh:"
             style={
               {
@@ -801,9 +801,95 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
+        <a
+          className="link-discreet"
+          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:ri:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:rj:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:rk:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
         <p
           className="fr-badge fr-badge--success fr-badge--no-icon"
-          id="fr-badge-:ri:"
+          id="fr-badge-:rl:"
           style={
             {
               "display": "inline-block",
@@ -829,7 +915,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:rj:"
+            id="fr-badge-:rm:"
             style={
               {
                 "display": "inline-block",
@@ -862,7 +948,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:rk:"
+            id="fr-badge-:rn:"
             style={
               {
                 "display": "inline-block",
@@ -895,7 +981,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:rl:"
+            id="fr-badge-:ro:"
             style={
               {
                 "display": "inline-block",
@@ -922,83 +1008,6 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:rm:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            B
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:rn:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:ro:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/annuaire-entreprises-data-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url annuaire-entreprises-data-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:rp:"
             style={
               {
@@ -1009,9 +1018,7 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <i
-              className="fr-icon-check-line"
-            />
+            B
           </p>
         </a>
       </td>
@@ -1385,7 +1392,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url acceslibre-beta-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r16:"
             style={
               {
@@ -1401,9 +1408,90 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
+        <a
+          className="link-discreet"
+          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r17:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r18:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r19:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
         <p
           className="fr-badge fr-badge--success fr-badge--no-icon"
-          id="fr-badge-:r17:"
+          id="fr-badge-:r1a:"
           style={
             {
               "display": "inline-block",
@@ -1429,7 +1517,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r18:"
+            id="fr-badge-:r1b:"
             style={
               {
                 "display": "inline-block",
@@ -1462,7 +1550,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r19:"
+            id="fr-badge-:r1c:"
             style={
               {
                 "display": "inline-block",
@@ -1495,7 +1583,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r1a:"
+            id="fr-badge-:r1d:"
             style={
               {
                 "display": "inline-block",
@@ -1522,85 +1610,6 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r1b:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            B
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r1c:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r1d:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/acceslibre-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url acceslibre-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:r1e:"
             style={
               {
@@ -1611,9 +1620,7 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <i
-              className="fr-icon-check-line"
-            />
+            B
           </p>
         </a>
       </td>
@@ -1982,7 +1989,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url aidantsconnect-beta-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r1r:"
             style={
               {
@@ -1998,9 +2005,95 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
+        <a
+          className="link-discreet"
+          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r1s:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r1t:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r1u:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
         <p
           className="fr-badge fr-badge--success fr-badge--no-icon"
-          id="fr-badge-:r1s:"
+          id="fr-badge-:r1v:"
           style={
             {
               "display": "inline-block",
@@ -2026,7 +2119,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r1t:"
+            id="fr-badge-:r20:"
             style={
               {
                 "display": "inline-block",
@@ -2053,7 +2146,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r1u:"
+            id="fr-badge-:r21:"
             style={
               {
                 "display": "inline-block",
@@ -2086,7 +2179,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r1v:"
+            id="fr-badge-:r22:"
             style={
               {
                 "display": "inline-block",
@@ -2113,83 +2206,6 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r20:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            B
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r21:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r22:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/aidantsconnect-beta-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url aidantsconnect-beta-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:r23:"
             style={
               {
@@ -2200,9 +2216,7 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <i
-              className="fr-icon-check-line"
-            />
+            B
           </p>
         </a>
       </td>
@@ -2576,7 +2590,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url archifiltre-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r2g:"
             style={
               {
@@ -2588,6 +2602,87 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             C
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2h:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2i:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r2j:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -2607,7 +2702,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2h:"
+            id="fr-badge-:r2k:"
             style={
               {
                 "display": "inline-block",
@@ -2634,7 +2729,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2i:"
+            id="fr-badge-:r2l:"
             style={
               {
                 "display": "inline-block",
@@ -2661,7 +2756,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2j:"
+            id="fr-badge-:r2m:"
             style={
               {
                 "display": "inline-block",
@@ -2688,85 +2783,6 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--info fr-badge--no-icon"
-            id="fr-badge-:r2k:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2l:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r2m:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/archifiltre-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url archifiltre-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
             id="fr-badge-:r2n:"
             style={
               {
@@ -2777,9 +2793,7 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            <i
-              className="fr-icon-check-line"
-            />
+            C
           </p>
         </a>
       </td>
@@ -3124,7 +3138,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url index-egapro-travail-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r33:"
             style={
               {
@@ -3136,6 +3150,87 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             B
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r34:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r35:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r36:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -3155,7 +3250,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r34:"
+            id="fr-badge-:r37:"
             style={
               {
                 "display": "inline-block",
@@ -3182,7 +3277,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r35:"
+            id="fr-badge-:r38:"
             style={
               {
                 "display": "inline-block",
@@ -3213,87 +3308,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r36:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r37:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/index-egapro-travail-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url index-egapro-travail-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r38:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -3613,7 +3627,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url domifa-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r3j:"
             style={
               {
@@ -3625,6 +3639,92 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             C
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r3k:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r3l:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r3m:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -3644,7 +3744,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3k:"
+            id="fr-badge-:r3n:"
             style={
               {
                 "display": "inline-block",
@@ -3671,7 +3771,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3l:"
+            id="fr-badge-:r3o:"
             style={
               {
                 "display": "inline-block",
@@ -3698,7 +3798,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r3m:"
+            id="fr-badge-:r3p:"
             style={
               {
                 "display": "inline-block",
@@ -3723,85 +3823,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r3n:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3o:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r3p:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -4118,7 +4139,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url www-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r43:"
             style={
               {
@@ -4130,6 +4151,90 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             C
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r44:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--warning fr-badge--no-icon"
+            id="fr-badge-:r45:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            E
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r46:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -4149,7 +4254,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r44:"
+            id="fr-badge-:r47:"
             style={
               {
                 "display": "inline-block",
@@ -4176,7 +4281,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r45:"
+            id="fr-badge-:r48:"
             style={
               {
                 "display": "inline-block",
@@ -4207,83 +4312,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r46:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r47:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            E
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/www-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url www-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r48:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -4670,7 +4698,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url pjm-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r4m:"
             style={
               {
@@ -4682,6 +4710,92 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             D
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r4n:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r4o:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r4p:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -4701,7 +4815,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4n:"
+            id="fr-badge-:r4q:"
             style={
               {
                 "display": "inline-block",
@@ -4728,7 +4842,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4o:"
+            id="fr-badge-:r4r:"
             style={
               {
                 "display": "inline-block",
@@ -4759,85 +4873,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r4p:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4q:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/pjm-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url pjm-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r4r:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -5179,7 +5214,95 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            F
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r57:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r58:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r59:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -5199,7 +5322,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r57:"
+            id="fr-badge-:r5a:"
             style={
               {
                 "display": "inline-block",
@@ -5232,7 +5355,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r58:"
+            id="fr-badge-:r5b:"
             style={
               {
                 "display": "inline-block",
@@ -5263,87 +5386,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r59:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5a:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/tumeplay-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url tumeplay-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r5b:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -5669,7 +5711,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url 1000jours-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r5m:"
             style={
               {
@@ -5683,6 +5725,21 @@ exports[`Should render full Dashboard 1`] = `
             C
           </p>
         </a>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
       <td>
         <i
@@ -5748,21 +5805,6 @@ exports[`Should render full Dashboard 1`] = `
             />
           </p>
         </a>
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
       </td>
       <td>
         <i
@@ -6099,34 +6141,16 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            F
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
           </p>
         </a>
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
       </td>
       <td>
         <a
@@ -6138,7 +6162,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails lighthouse pour l'url 1000jours-blues-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r64:"
             style={
               {
@@ -6149,7 +6173,14 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            C
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
           </p>
         </a>
       </td>
@@ -6206,6 +6237,31 @@ exports[`Should render full Dashboard 1`] = `
             />
           </p>
         </a>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
       <td>
         <a
@@ -6522,7 +6578,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url monpsy-sante-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r6g:"
             style={
               {
@@ -6538,18 +6594,13 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
         <a
           className="link-discreet"
-          href="/url/monpsy-sante-gouv-fr/best-practices#declaration-rgpd"
+          href="/url/monpsy-sante-gouv-fr/best-practices#lighthouse"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails de la conformité juridique pour l'url monpsy-sante-gouv-fr"
+          title="Voir les détails lighthouse pour l'url monpsy-sante-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6572,11 +6623,11 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
-          href="/url/monpsy-sante-gouv-fr/best-practices#declaration-rgpd"
+          href="/url/monpsy-sante-gouv-fr/best-practices#lighthouse"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails de la conformité juridique pour l'url monpsy-sante-gouv-fr"
+          title="Voir les détails lighthouse pour l'url monpsy-sante-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6595,16 +6646,6 @@ exports[`Should render full Dashboard 1`] = `
             />
           </p>
         </a>
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
-      </td>
-      <td>
-        <i
-          className="ri-forbid-2-line"
-        />
       </td>
       <td>
         <a
@@ -6634,13 +6675,18 @@ exports[`Should render full Dashboard 1`] = `
         </a>
       </td>
       <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
         <a
           className="link-discreet"
-          href="/url/monpsy-sante-gouv-fr/best-practices#lighthouse"
+          href="/url/monpsy-sante-gouv-fr/best-practices#declaration-rgpd"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url monpsy-sante-gouv-fr"
+          title="Voir les détails de la conformité juridique pour l'url monpsy-sante-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6663,11 +6709,11 @@ exports[`Should render full Dashboard 1`] = `
       <td>
         <a
           className="link-discreet"
-          href="/url/monpsy-sante-gouv-fr/best-practices#lighthouse"
+          href="/url/monpsy-sante-gouv-fr/best-practices#declaration-rgpd"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url monpsy-sante-gouv-fr"
+          title="Voir les détails de la conformité juridique pour l'url monpsy-sante-gouv-fr"
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
@@ -6686,6 +6732,16 @@ exports[`Should render full Dashboard 1`] = `
             />
           </p>
         </a>
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
+      </td>
+      <td>
+        <i
+          className="ri-forbid-2-line"
+        />
       </td>
       <td>
         <a
@@ -7080,7 +7136,100 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            F
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r73:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r74:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r75:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -7100,7 +7249,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r73:"
+            id="fr-badge-:r76:"
             style={
               {
                 "display": "inline-block",
@@ -7127,7 +7276,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r74:"
+            id="fr-badge-:r77:"
             style={
               {
                 "display": "inline-block",
@@ -7158,85 +7307,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r75:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r76:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/ressourcerie-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url ressourcerie-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r77:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -7565,7 +7635,95 @@ exports[`Should render full Dashboard 1`] = `
               }
             }
           >
-            F
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7j:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7k:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r7l:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -7585,7 +7743,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7j:"
+            id="fr-badge-:r7m:"
             style={
               {
                 "display": "inline-block",
@@ -7618,7 +7776,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--error fr-badge--no-icon"
-            id="fr-badge-:r7k:"
+            id="fr-badge-:r7n:"
             style={
               {
                 "display": "inline-block",
@@ -7649,87 +7807,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7l:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7m:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/admin-domifa-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url admin-domifa-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r7n:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a
@@ -8004,7 +8081,7 @@ exports[`Should render full Dashboard 1`] = `
           title="Voir les détails de la déclaration d'accessibiilité pour l'url template-fabrique-social-gouv-fr"
         >
           <p
-            className="fr-badge fr-badge--info fr-badge--no-icon"
+            className="fr-badge fr-badge--error fr-badge--no-icon"
             id="fr-badge-:r7v:"
             style={
               {
@@ -8016,6 +8093,92 @@ exports[`Should render full Dashboard 1`] = `
             }
           >
             C
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--error fr-badge--no-icon"
+            id="fr-badge-:r80:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-warning-line"
+              style={
+                {
+                  "cursor": "pointer",
+                }
+              }
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r81:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
+          </p>
+        </a>
+      </td>
+      <td>
+        <a
+          className="link-discreet"
+          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
+        >
+          <p
+            className="fr-badge fr-badge--success fr-badge--no-icon"
+            id="fr-badge-:r82:"
+            style={
+              {
+                "display": "inline-block",
+                "fontSize": "1em",
+                "textAlign": "center",
+                "width": 100,
+              }
+            }
+          >
+            <i
+              className="fr-icon-check-line"
+            />
           </p>
         </a>
       </td>
@@ -8035,7 +8198,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r80:"
+            id="fr-badge-:r83:"
             style={
               {
                 "display": "inline-block",
@@ -8068,7 +8231,7 @@ exports[`Should render full Dashboard 1`] = `
         >
           <p
             className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r81:"
+            id="fr-badge-:r84:"
             style={
               {
                 "display": "inline-block",
@@ -8099,85 +8262,6 @@ exports[`Should render full Dashboard 1`] = `
         <i
           className="ri-forbid-2-line"
         />
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--warning fr-badge--no-icon"
-            id="fr-badge-:r82:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            C
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r83:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
-      </td>
-      <td>
-        <a
-          className="link-discreet"
-          href="/url/template-fabrique-social-gouv-fr/best-practices#lighthouse"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          onTouchStart={[Function]}
-          title="Voir les détails lighthouse pour l'url template-fabrique-social-gouv-fr"
-        >
-          <p
-            className="fr-badge fr-badge--success fr-badge--no-icon"
-            id="fr-badge-:r84:"
-            style={
-              {
-                "display": "inline-block",
-                "fontSize": "1em",
-                "textAlign": "center",
-                "width": 100,
-              }
-            }
-          >
-            <i
-              className="fr-icon-check-line"
-            />
-          </p>
-        </a>
       </td>
       <td>
         <a

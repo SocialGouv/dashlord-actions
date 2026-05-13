@@ -2,7 +2,6 @@ import * as React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 
-import { AlertProps } from "@codegouvfr/react-dsfr/Alert";
 import Badge from "@codegouvfr/react-dsfr/Badge";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { fr } from "@codegouvfr/react-dsfr";
@@ -113,6 +112,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
           if (!isToolEnabled("declaration-a11y", params.row.url))
             return <IconUnknown />;
           const grade = params.row.summary["declaration-a11y"];
+          const severity = grade === "A" ? "success" : "error"
+
           if (grade) {
             return (
               <GradeBadge
@@ -121,6 +122,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
                 )}`}
                 label={grade}
                 hideLabelOnWarning
+                severity={severity}
+                showCheckOnSuccess
+                showWarningOnError
                 linkProps={{
                   href: `/url/${slugifyUrl(
                     params.row.url
@@ -133,6 +137,106 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         },
       });
     }
+  }
+
+  if (isColumnEnabled("lighthouse")) {
+    columns = columns.concat([
+      {
+        ...defaultColumnsProps,
+        field: "accessibility",
+        type: "number",
+        headerName: `Tests auto accessibilité`,
+        description:
+          "Bonnes pratiques en matière d'accessibilité web...... ⚠️ Ne couvre que ~20% des critères du RGAA",
+        width: 150,
+        valueGetter: (params) => {
+          return params.row.summary.lighthouse_accessibility || 0;
+        },
+        renderCell: (params) => {
+          if (!isToolEnabled("lighthouse", params.row.url))
+            return <IconUnknown />;
+          const value = params.row.summary[`lighthouse_accessibility`];
+          if (!value) return <IconUnknown />;
+
+          const grade = (value >= 1) ? "A" : "F";
+          const severity =  (value >= 1) ? "success" : "error";
+
+          return (
+            <GradeBadge
+              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
+                params.row.url
+              )}`}
+              showCheckOnSuccess
+              showWarningOnError
+              severity={severity}
+              label={grade}
+              linkProps={{
+                href: `/url/${slugifyUrl(
+                  params.row.url
+                )}/best-practices/#lighthouse`,
+              }}
+            />
+          );
+        },
+      },
+      {
+        ...defaultColumnsProps,
+        field: "performance",
+        type: "number",
+        headerName: `WebPerf`,
+        description: "Performances de chargement des pages web (LightHouse)",
+        valueGetter: (params) => {
+          return params.row.summary.lighthouse_performance;
+        },
+        renderCell: (params) => {
+          if (!isToolEnabled("lighthouse", params.row.url))
+            return <IconUnknown />;
+          return (
+            <GradeBadge
+              showCheckOnSuccess
+              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
+                params.row.url
+              )}`}
+              label={params.row.summary["lighthouse_performanceGrade"]}
+              linkProps={{
+                href: `/url/${slugifyUrl(
+                  params.row.url
+                )}/best-practices/#lighthouse`,
+              }}
+            />
+          );
+        },
+      },
+      {
+        ...defaultColumnsProps,
+        field: "seo",
+        type: "number",
+        headerName: `SEO`,
+        description:
+          "Bonnes pratiques en matière de référencement naturel (LightHouse)",
+        valueGetter: (params) => {
+          return params.row.summary.lighthouse_seo || 0;
+        },
+        renderCell: (params) => {
+          if (!isToolEnabled("lighthouse", params.row.url))
+            return <IconUnknown />;
+          return (
+            <GradeBadge
+              showCheckOnSuccess
+              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
+                params.row.url
+              )}`}
+              label={params.row.summary["lighthouse_seoGrade"]}
+              linkProps={{
+                href: `/url/${slugifyUrl(
+                  params.row.url
+                )}/best-practices/#lighthouse`,
+              }}
+            />
+          );
+        },
+      },
+    ]);
   }
 
   if (isColumnEnabled("github_repository")) {
@@ -307,115 +411,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ report }) => {
         return <IconUnknown />;
       },
     });
-  }
-
-  if (isColumnEnabled("lighthouse")) {
-    columns = columns.concat([
-      {
-        ...defaultColumnsProps,
-        field: "accessibility",
-        type: "number",
-        headerName: `Tests auto accessibilité`,
-        description:
-          "Bonnes pratiques en matière d'accessibilité web...... ⚠️ Ne couvre que ~20% des critères du RGAA",
-        width: 150,
-        valueGetter: (params) => {
-          return params.row.summary.lighthouse_accessibility || 0;
-        },
-        renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
-            return <IconUnknown />;
-          let grade = "F";
-          let severity: AlertProps.Severity = "error";
-          const value = params.row.summary[`lighthouse_accessibility`];
-          if (!value) return <IconUnknown />;
-
-          if (value >= 1) {
-            grade = "A";
-            severity = "success";
-          } else if (value >= 0.85) {
-            grade = "C";
-            severity = "warning";
-          } else if (value >= 0.7) {
-            grade = "F";
-            severity = "error";
-          }
-
-          return (
-            <GradeBadge
-              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
-                params.row.url
-              )}`}
-              showCheckOnSuccess
-              label={grade}
-              severity={severity}
-              linkProps={{
-                href: `/url/${slugifyUrl(
-                  params.row.url
-                )}/best-practices/#lighthouse`,
-              }}
-            />
-          );
-        },
-      },
-      {
-        ...defaultColumnsProps,
-        field: "performance",
-        type: "number",
-        headerName: `WebPerf`,
-        description: "Performances de chargement des pages web (LightHouse)",
-        valueGetter: (params) => {
-          return params.row.summary.lighthouse_performance;
-        },
-        renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
-            return <IconUnknown />;
-          return (
-            <GradeBadge
-              showCheckOnSuccess
-              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
-                params.row.url
-              )}`}
-              label={params.row.summary["lighthouse_performanceGrade"]}
-              linkProps={{
-                href: `/url/${slugifyUrl(
-                  params.row.url
-                )}/best-practices/#lighthouse`,
-              }}
-            />
-          );
-        },
-      },
-      {
-        ...defaultColumnsProps,
-        field: "seo",
-        type: "number",
-        headerName: `SEO`,
-        description:
-          "Bonnes pratiques en matière de référencement naturel (LightHouse)",
-        valueGetter: (params) => {
-          return params.row.summary.lighthouse_seo || 0;
-        },
-        renderCell: (params) => {
-          if (!isToolEnabled("ecoindex", params.row.url))
-            return <IconUnknown />;
-          return (
-            <GradeBadge
-              showCheckOnSuccess
-              title={`Voir les détails lighthouse pour l'url ${slugifyUrl(
-                params.row.url
-              )}`}
-              label={params.row.summary["lighthouse_seoGrade"]}
-              linkProps={{
-                href: `/url/${slugifyUrl(
-                  params.row.url
-                )}/best-practices/#lighthouse`,
-              }}
-            />
-          );
-        },
-      },
-    ]);
   }
 
   if (isColumnEnabled("testssl")) {
