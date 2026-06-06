@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import {
+  Anchor,
   Crosshair,
   FastForward,
   Settings,
@@ -26,12 +27,16 @@ type BetagouvPhase = {
   index: number;
 };
 
+const unknownPhase = { id: "-", label: "-", index: 0 };
+
 // return latest phase augmented data if any
 export const getLatestPhase = (allphases: BetagouvReportPhase[]) => {
   const sortedPhases = allphases.sort(sortPhases);
-  return sortedPhases.length
-    ? getPhase(sortedPhases[sortedPhases.length - 1].name)
-    : { id: "-", label: "-", index: 0 }; // fallback
+  if (!sortedPhases.length) {
+    return unknownPhase; // no phase at all
+  }
+  // the API may return a phase not yet referenced in `phases` below
+  return getPhase(sortedPhases[sortedPhases.length - 1].name) || unknownPhase;
 };
 
 export const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
@@ -41,6 +46,10 @@ export const Betagouv: React.FC<BetagouvProps> = ({ data }) => {
       <VerticalTimeline lineColor="var(--text-action-high-blue-france)">
         {sortedPhases.map((phase) => {
           const phaseData = getPhase(phase.name);
+          if (!phaseData) {
+            // phase not referenced in `phases` yet — skip rather than crash
+            return null;
+          }
           return (
             <VerticalTimelineElement
               key={phase.name}
@@ -111,6 +120,14 @@ export const phases = [
     icon: FastForward,
     index: 3,
   },
+  {
+    id: "consolidation",
+    label: "Consolidation",
+    description:
+      "Aider le service numérique à trouver sa place dans un écosystème plus pérenne (succès en cours).",
+    icon: Anchor,
+    index: 4,
+  },
   { id: "success", label: "Succès", icon: Heart, index: 4 },
   {
     id: "transfer",
@@ -130,6 +147,7 @@ export const phases = [
 
 export const phaseSeverities = {
   accélération: "info",
+  consolidation: "info",
   construction: "warning",
   "partenariat terminé": "error",
   transfert: "success",
@@ -146,10 +164,10 @@ const getPhase = (phase: string) => phases.find((f) => f.id === phase);
 // sort some input phases
 const sortPhases = (a: BetagouvReportPhase, b: BetagouvReportPhase) => {
   if (a.start === b.start) {
-    // order dictated by phases definitions
+    // order dictated by phases definitions ; a phase might not be referenced yet
     return (
-      phases.find((p) => p.id === a.name).index -
-      phases.find((p) => p.id === b.name).index
+      (phases.find((p) => p.id === a.name)?.index ?? 0) -
+      (phases.find((p) => p.id === b.name)?.index ?? 0)
     );
   }
   // order dictated by date
